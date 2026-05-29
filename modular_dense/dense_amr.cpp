@@ -130,8 +130,8 @@ double face_average(const DenseAmr &amr,
                     int w,
                     int direction,
                     double fallback) {
-    std::vector<int> seen;
     double sum = 0.0;
+    int count = 0;
 
     for (int s = 0; s < w; ++s) {
         int ni = i;
@@ -156,22 +156,20 @@ double face_average(const DenseAmr &amr,
         }
 
         const int q = amr.owner[static_cast<std::size_t>(index2d(ni, nj, amr.fine_n))];
-        if (q < 0 || q == self || std::find(seen.begin(), seen.end(), q) != seen.end()) {
+        if (q < 0 || q == self) {
             continue;
         }
 
-        seen.push_back(q);
         sum += amr.value[static_cast<std::size_t>(q)];
+        ++count;
     }
 
-    return seen.empty() ? fallback : sum / static_cast<double>(seen.size());
+    return count == 0 ? fallback : sum / static_cast<double>(count);
 }
 
 }  // namespace
 
-void update_from_neighbors(DenseAmr &amr, double weight) {
-    rebuild_owner(amr);
-
+void diffuse_one_step(DenseAmr &amr, double diffusion, double dt) {
 #pragma omp parallel for schedule(static)
     for (int j = 0; j < amr.fine_n; ++j) {
         for (int i = 0; i < amr.fine_n; ++i) {
@@ -182,12 +180,13 @@ void update_from_neighbors(DenseAmr &amr, double weight) {
 
             const int w = cell_width(amr.level[static_cast<std::size_t>(p)], amr.max_level);
             const double center = amr.value[static_cast<std::size_t>(p)];
-            const double neighbor_average =
-                0.25 * (face_average(amr, p, i, j, w, 0, center) +
-                        face_average(amr, p, i, j, w, 1, center) +
-                        face_average(amr, p, i, j, w, 2, center) +
-                        face_average(amr, p, i, j, w, 3, center));
-            amr.next_value[static_cast<std::size_t>(p)] = center + weight * (neighbor_average - center);
+            const double left = face_average(amr, p, i, j, w, 0, center);
+            const double right = face_average(amr, p, i, j, w, 1, center);
+            const double bottom = face_average(amr, p, i, j, w, 2, center);
+            const double top = face_average(amr, p, i, j, w, 3, center);
+            const double dx = static_cast<double>(w) / static_cast<double>(amr.fine_n);
+            const double laplacian = (left + right + bottom + top - 4.0 * center) / (dx * dx);
+            amr.next_value[static_cast<std::size_t>(p)] = center + dt * diffusion * laplacian;
         }
     }
 
@@ -202,14 +201,24 @@ void update_from_neighbors(DenseAmr &amr, double weight) {
     }
 }
 
-void compute_importance(DenseAmr &amr) {
+void compute_gradient_importance(DenseAmr &amr) {
 #pragma omp parallel for schedule(static)
     for (int j = 0; j < amr.fine_n; ++j) {
         for (int i = 0; i < amr.fine_n; ++i) {
             const int p = index2d(i, j, amr.fine_n);
-            if (amr.active[static_cast<std::size_t>(p)]) {
-                amr.importance[static_cast<std::size_t>(p)] = std::abs(amr.value[static_cast<std::size_t>(p)]);
+            if (!amr.active[static_cast<std::size_t>(p)]) {
+                continue;
             }
+
+            const int w = cell_width(amr.level[static_cast<std::size_t>(p)], amr.max_level);
+            const double center = amr.value[static_cast<std::size_t>(p)];
+            const double left = face_average(amr, p, i, j, w, 0, center);
+            const double right = face_average(amr, p, i, j, w, 1, center);
+            const double bottom = face_average(amr, p, i, j, w, 2, center);
+            const double top = face_average(amr, p, i, j, w, 3, center);
+            const double jump_x = std::max(std::abs(right - center), std::abs(left - center));
+            const double jump_y = std::max(std::abs(top - center), std::abs(bottom - center));
+            amr.importance[static_cast<std::size_t>(p)] = std::max(jump_x, jump_y);
         }
     }
 }
@@ -275,4 +284,20 @@ int count_leaves(const DenseAmr &amr) {
         }
     }
     return leaves;
+}
+
+double heat_mass(const DenseAmr &amr) {
+    double mass = 0.0;
+    for (int j = 0; j < amr.fine_n; ++j) {
+        for (int i = 0; i < amr.fine_n; ++i) {
+            const int p = index2d(i, j, amr.fine_n);
+            if (!amr.active[static_cast<std::size_t>(p)]) {
+                continue;
+            }
+            const int w = cell_width(amr.level[static_cast<std::size_t>(p)], amr.max_level);
+            const double cell_size = static_cast<double>(w) / static_cast<double>(amr.fine_n);
+            mass += amr.value[static_cast<std::size_t>(p)] * cell_size * cell_size;
+        }
+    }
+    return mass;
 }

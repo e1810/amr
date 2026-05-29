@@ -30,7 +30,8 @@ int owner_part_from_fine_row(int fine_row, int width, int coarse_n, int parts, i
 DenseAmr make_dense_amr(int coarse_n, int parts, int max_level);
 void initialize_circle_field(DenseAmr &amr, double radius);
 void rebuild_owner(DenseAmr &amr);
-void update_from_neighbors(DenseAmr &amr, double weight);
-void compute_importance(DenseAmr &amr);
+void diffuse_one_step(DenseAmr &amr, double diffusion, double dt);
+void compute_gradient_importance(DenseAmr &amr);
 int refine_once(DenseAmr &amr, double threshold);
 int count_leaves(const DenseAmr &amr);
+double heat_mass(const DenseAmr &amr);

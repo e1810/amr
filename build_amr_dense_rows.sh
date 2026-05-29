@@ -20,3 +20,6 @@ esac
 
 "$CXX" -std=c++17 -O2 -Wall -Wextra -pedantic "$OMP_FLAG" \
     amr_dense_rows.cpp -o amr_dense_rows
+
+"$CXX" -std=c++17 -O2 -Wall -Wextra -pedantic \
+    render_amr_snapshot.cpp -o render_amr_snapshot

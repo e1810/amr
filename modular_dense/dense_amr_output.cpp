@@ -1,8 +1,9 @@
 #include "dense_amr_output.hpp"
 
+#include <algorithm>
+#include <cmath>
 #include <fstream>
 #include <iomanip>
-#include <iostream>
 #include <stdexcept>
 
 namespace {
@@ -55,12 +56,40 @@ void write_output(const DenseAmr &amr, const std::string &path) {
         for (int c = 0; c < leaves; ++c) {
             out << "9\n";
         }
+        out << "CELL_DATA " << leaves << '\n';
+        out << "SCALARS value double 1\n";
+        out << "LOOKUP_TABLE default\n";
+        for (int j = 0; j < amr.fine_n; ++j) {
+            for (int i = 0; i < amr.fine_n; ++i) {
+                const int p = index2d(i, j, amr.fine_n);
+                if (amr.active[static_cast<std::size_t>(p)]) {
+                    out << amr.value[static_cast<std::size_t>(p)] << '\n';
+                }
+            }
+        }
+        out << "SCALARS level int 1\n";
+        out << "LOOKUP_TABLE default\n";
+        for (int j = 0; j < amr.fine_n; ++j) {
+            for (int i = 0; i < amr.fine_n; ++i) {
+                const int p = index2d(i, j, amr.fine_n);
+                if (amr.active[static_cast<std::size_t>(p)]) {
+                    out << static_cast<int>(amr.level[static_cast<std::size_t>(p)]) << '\n';
+                }
+            }
+        }
+        out << "SCALARS importance double 1\n";
+        out << "LOOKUP_TABLE default\n";
+        for (int j = 0; j < amr.fine_n; ++j) {
+            for (int i = 0; i < amr.fine_n; ++i) {
+                const int p = index2d(i, j, amr.fine_n);
+                if (amr.active[static_cast<std::size_t>(p)]) {
+                    out << amr.importance[static_cast<std::size_t>(p)] << '\n';
+                }
+            }
+        }
         return;
     }
 
-    const char *colors[] = {
-        "#f8fafc", "#dbeafe", "#bbf7d0", "#fde68a",
-        "#fca5a5", "#ddd6fe", "#bae6fd", "#fecdd3"};
     constexpr double margin = 24.0;
     constexpr double scale = 952.0;
 
@@ -82,16 +111,21 @@ void write_output(const DenseAmr &amr, const std::string &path) {
             const double y = margin + (1.0 - static_cast<double>(j + w) / static_cast<double>(amr.fine_n)) * scale;
             const double size = static_cast<double>(w) / static_cast<double>(amr.fine_n) * scale;
             const int part = owner_part_from_fine_row(j, w, amr.coarse_n, amr.parts, amr.fine_n);
+            const double t = std::max(0.0, std::min(1.0, amr.value[static_cast<std::size_t>(p)]));
+            const int red = static_cast<int>(std::round(239.0 + (220.0 - 239.0) * t));
+            const int green = static_cast<int>(std::round(246.0 + (38.0 - 246.0) * t));
+            const int blue = static_cast<int>(std::round(255.0 + (38.0 - 255.0) * t));
 
             out << "<rect x=\"" << x
                 << "\" y=\"" << y
                 << "\" width=\"" << size
                 << "\" height=\"" << size
-                << "\" fill=\"" << colors[lev % 8]
+                << "\" fill=\"rgb(" << red << "," << green << "," << blue << ")"
                 << "\"><title>fine(" << i << ", " << j << ")"
                 << ", row_part " << part
                 << ", level " << lev
                 << ", value " << amr.value[static_cast<std::size_t>(p)]
+                << ", importance " << amr.importance[static_cast<std::size_t>(p)]
                 << "</title></rect>\n";
         }
     }

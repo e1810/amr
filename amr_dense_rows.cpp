@@ -1,10 +1,13 @@
 #include <algorithm>
 #include <cmath>
 #include <cstdlib>
+#include <filesystem>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <sstream>
 #include <string>
+#include <system_error>
 #include <vector>
 
 #include <omp.h>
@@ -44,6 +47,81 @@ bool ends_with(const std::string &text, const std::string &suffix) {
            text.compare(text.size() - suffix.size(), suffix.size(), suffix) == 0;
 }
 
+std::string snapshot_path(const std::string &prefix, int step) {
+    std::ostringstream path;
+    path << prefix << '_' << std::setw(6) << std::setfill('0') << step << ".txt";
+    return path.str();
+}
+
+void prepare_parent_directory(const std::string &path) {
+    const std::filesystem::path output_path(path);
+    if (!output_path.has_parent_path()) {
+        return;
+    }
+
+    std::error_code error;
+    std::filesystem::create_directories(output_path.parent_path(), error);
+    if (error) {
+        std::cerr << "failed to create directory: "
+                  << output_path.parent_path().string() << '\n';
+    }
+}
+
+void write_snapshot_text(const std::string &path,
+                         int step,
+                         double time,
+                         int coarse_n,
+                         int parts,
+                         int max_level,
+                         int fine_n,
+                         const std::string &initial_pattern,
+                         double initial_scale,
+                         const std::vector<unsigned char> &active,
+                         const std::vector<unsigned char> &level,
+                         const std::vector<double> &value,
+                         const std::vector<double> &importance) {
+    int leaves = 0;
+    for (unsigned char is_active : active) {
+        if (is_active) {
+            ++leaves;
+        }
+    }
+
+    prepare_parent_directory(path);
+    std::ofstream out(path);
+    if (!out) {
+        std::cerr << "failed to open snapshot: " << path << '\n';
+        return;
+    }
+
+    out << "# amr_dense_snapshot_v1\n";
+    out << "# step " << step << "\n";
+    out << "# time " << std::setprecision(17) << time << "\n";
+    out << "# coarse_n " << coarse_n << "\n";
+    out << "# parts " << parts << "\n";
+    out << "# max_level " << max_level << "\n";
+    out << "# fine_n " << fine_n << "\n";
+    out << "# initial_pattern " << initial_pattern << "\n";
+    out << "# initial_scale " << std::setprecision(17) << initial_scale << "\n";
+    out << "# leaves " << leaves << "\n";
+    out << "# columns i j level value importance\n";
+
+    out << std::setprecision(17);
+    for (int j = 0; j < fine_n; ++j) {
+        for (int i = 0; i < fine_n; ++i) {
+            const int p = index2d(i, j, fine_n);
+            if (!active[static_cast<std::size_t>(p)]) {
+                continue;
+            }
+            out << i << ' '
+                << j << ' '
+                << static_cast<int>(level[static_cast<std::size_t>(p)]) << ' '
+                << value[static_cast<std::size_t>(p)] << ' '
+                << importance[static_cast<std::size_t>(p)] << '\n';
+        }
+    }
+}
+
 void rebuild_owner(const std::vector<unsigned char> &active,
                    const std::vector<unsigned char> &level,
                    std::vector<int> &owner,
@@ -77,8 +155,8 @@ double face_average(const std::vector<int> &owner,
                     int w,
                     int direction,
                     double fallback) {
-    std::vector<int> seen;
     double sum = 0.0;
+    int count = 0;
 
     for (int s = 0; s < w; ++s) {
         int ni = i;
@@ -103,15 +181,15 @@ double face_average(const std::vector<int> &owner,
         }
 
         const int q = owner[static_cast<std::size_t>(index2d(ni, nj, fine_n))];
-        if (q < 0 || q == self || std::find(seen.begin(), seen.end(), q) != seen.end()) {
+        if (q < 0 || q == self) {
             continue;
         }
 
-        seen.push_back(q);
         sum += value[static_cast<std::size_t>(q)];
+        ++count;
     }
 
-    return seen.empty() ? fallback : sum / static_cast<double>(seen.size());
+    return count == 0 ? fallback : sum / static_cast<double>(count);
 }
 
 int main(int argc, char **argv) {
@@ -128,14 +206,27 @@ int main(int argc, char **argv) {
     const int coarse_n = argc > 1 ? std::atoi(argv[1]) : 16;
     const int parts = argc > 2 ? std::atoi(argv[2]) : 4;
     const int max_level = argc > 3 ? std::atoi(argv[3]) : 3;
-    const double radius = argc > 4 ? std::atof(argv[4]) : 0.28;
-    const std::string output = argc > 5 ? argv[5] : "amr_dense.svg";
+    const double initial_scale = argc > 4 ? std::atof(argv[4]) : 0.25;
+    const int steps = argc > 5 ? std::atoi(argv[5]) : 100;
+    const double diffusion = argc > 6 ? std::atof(argv[6]) : 0.01;
+    const std::string output = argc > 7 ? argv[7] : "amr_dense.svg";
+    const int snapshot_interval = argc > 8 ? std::atoi(argv[8]) : 0;
+    const std::string snapshot_prefix = argc > 9 ? argv[9] : "snapshots/amr_step";
+    const std::string initial_pattern = argc > 10 ? argv[10] : "checker";
+    const bool known_initial_pattern =
+        initial_pattern == "checker" ||
+        initial_pattern == "stripe" ||
+        initial_pattern == "square" ||
+        initial_pattern == "circle";
 
     if (coarse_n < 1 || parts < 1 || parts > coarse_n || max_level < 0 || max_level > 10 ||
-        radius <= 0.0) {
+        initial_scale <= 0.0 || steps < 0 || diffusion <= 0.0 || snapshot_interval < 0 ||
+        !known_initial_pattern) {
         std::cerr << "usage: " << argv[0]
                   << " [coarse_n>=1] [parts in 1..coarse_n] [max_level 0..10]"
-                  << " [radius>0] [output.svg|output.vtk]\n";
+                  << " [initial_scale>0] [steps>=0] [diffusion>0] [output.svg|output.vtk]"
+                  << " [snapshot_interval>=0] [snapshot_prefix]"
+                  << " [initial_pattern: checker|stripe|square|circle]\n";
         return 2;
     }
 
@@ -148,6 +239,9 @@ int main(int argc, char **argv) {
     const int fine_n = coarse_n * refine_factor;
     const int coarse_width = refine_factor;
     const int array_size = fine_n * fine_n;
+    const double dx_min = 1.0 / static_cast<double>(fine_n);
+    const double dt = 0.20 * dx_min * dx_min / diffusion;
+    const double refine_threshold = 0.05;
 
     std::vector<unsigned char> active(static_cast<std::size_t>(array_size), 0);
     std::vector<unsigned char> level(static_cast<std::size_t>(array_size), 0);
@@ -174,6 +268,16 @@ int main(int argc, char **argv) {
     std::cout << "initial: coarse_grid=" << coarse_n << "x" << coarse_n
               << ", fine_grid=" << fine_n << "x" << fine_n
               << ", row_parts=" << parts << '\n';
+    std::cout << "heat diffusion: steps=" << steps
+              << ", diffusion=" << diffusion
+              << ", dt=" << dt
+              << ", refine_threshold=" << refine_threshold << '\n';
+    std::cout << "initial condition: pattern=" << initial_pattern
+              << ", scale=" << initial_scale << '\n';
+    if (snapshot_interval > 0) {
+        std::cout << "snapshots: every " << snapshot_interval
+                  << " steps, prefix=" << snapshot_prefix << '\n';
+    }
     for (int part = 0; part < parts; ++part) {
         std::cout << "static part " << part << ": coarse rows ["
                   << row_begin(coarse_n, parts, part) << ", "
@@ -197,24 +301,73 @@ int main(int argc, char **argv) {
                 const double size = static_cast<double>(w) / static_cast<double>(fine_n);
                 const double x1 = x0 + size;
                 const double y1 = y0 + size;
-                const double nearest_x = std::max(x0, std::min(0.5, x1));
-                const double nearest_y = std::max(y0, std::min(0.5, y1));
-                const double dx = nearest_x - 0.5;
-                const double dy = nearest_y - 0.5;
-                value[static_cast<std::size_t>(p)] = (dx * dx + dy * dy <= radius * radius) ? 1.0 : 0.0;
+                const double x = 0.5 * (x0 + x1);
+                const double y = 0.5 * (y0 + y1);
+
+                if (initial_pattern == "checker") {
+                    const int blocks = std::max(2, static_cast<int>(std::round(1.0 / initial_scale)));
+                    const int block_i = std::min(blocks - 1, static_cast<int>(x * blocks));
+                    const int block_j = std::min(blocks - 1, static_cast<int>(y * blocks));
+                    value[static_cast<std::size_t>(p)] = ((block_i + block_j) % 2 == 0) ? 1.0 : 0.0;
+                } else if (initial_pattern == "stripe") {
+                    value[static_cast<std::size_t>(p)] = (std::abs(x - 0.5) <= 0.5 * initial_scale) ? 1.0 : 0.0;
+                } else if (initial_pattern == "square") {
+                    value[static_cast<std::size_t>(p)] =
+                        (std::abs(x - 0.5) <= 0.5 * initial_scale &&
+                         std::abs(y - 0.5) <= 0.5 * initial_scale) ? 1.0 : 0.0;
+                } else {
+                    const double nearest_x = std::max(x0, std::min(0.5, x1));
+                    const double nearest_y = std::max(y0, std::min(0.5, y1));
+                    const double dx = nearest_x - 0.5;
+                    const double dy = nearest_y - 0.5;
+                    value[static_cast<std::size_t>(p)] =
+                        (dx * dx + dy * dy <= initial_scale * initial_scale) ? 1.0 : 0.0;
+                }
+        }
+    }
+
+    if (snapshot_interval > 0) {
+        write_snapshot_text(snapshot_path(snapshot_prefix, 0),
+                            0,
+                            0.0,
+                            coarse_n,
+                            parts,
+                            max_level,
+                            fine_n,
+                            initial_pattern,
+                            initial_scale,
+                            active,
+                            level,
+                            value,
+                            importance);
+    }
+
+    double initial_heat = 0.0;
+    for (int j = 0; j < fine_n; ++j) {
+        for (int i = 0; i < fine_n; ++i) {
+            const int p = index2d(i, j, fine_n);
+            if (!active[static_cast<std::size_t>(p)]) {
+                continue;
+            }
+            const int w = cell_width(level[static_cast<std::size_t>(p)], max_level);
+            const double cell_size = static_cast<double>(w) / static_cast<double>(fine_n);
+            initial_heat += value[static_cast<std::size_t>(p)] * cell_size * cell_size;
         }
     }
 
     // ------------------------------------------------------------------
-    // 1b. Dummy update using actual neighbors.
+    // 1b, 2, 3, 4. Time stepping with heat diffusion and AMR.
+    //
     // owner[q] tells which active AMR cell owns each finest-grid location.
-    // For each active cell, sample the owners touching its four faces.
+    // face_average() samples values touching one face. Outside the domain it
+    // returns the cell's own value, which is a simple zero-flux boundary.
     // ------------------------------------------------------------------
-    rebuild_owner(active, level, owner, fine_n, max_level);
+    for (int step = 1; step <= steps; ++step) {
+        rebuild_owner(active, level, owner, fine_n, max_level);
 
 #pragma omp parallel for schedule(static)
-    for (int j = 0; j < fine_n; ++j) {
-        for (int i = 0; i < fine_n; ++i) {
+        for (int j = 0; j < fine_n; ++j) {
+            for (int i = 0; i < fine_n; ++i) {
                 const int p = index2d(i, j, fine_n);
                 if (!active[static_cast<std::size_t>(p)]) {
                     continue;
@@ -222,105 +375,124 @@ int main(int argc, char **argv) {
 
                 const int w = cell_width(level[static_cast<std::size_t>(p)], max_level);
                 const double center = value[static_cast<std::size_t>(p)];
-                const double neighbor_average =
-                    0.25 * (face_average(owner, value, fine_n, p, i, j, w, 0, center) +
-                            face_average(owner, value, fine_n, p, i, j, w, 1, center) +
-                            face_average(owner, value, fine_n, p, i, j, w, 2, center) +
-                            face_average(owner, value, fine_n, p, i, j, w, 3, center));
-                next_value[static_cast<std::size_t>(p)] = center + 0.02 * (neighbor_average - center);
+                const double left = face_average(owner, value, fine_n, p, i, j, w, 0, center);
+                const double right = face_average(owner, value, fine_n, p, i, j, w, 1, center);
+                const double bottom = face_average(owner, value, fine_n, p, i, j, w, 2, center);
+                const double top = face_average(owner, value, fine_n, p, i, j, w, 3, center);
+                const double dx = static_cast<double>(w) / static_cast<double>(fine_n);
+                const double laplacian = (left + right + bottom + top - 4.0 * center) / (dx * dx);
+                next_value[static_cast<std::size_t>(p)] = center + dt * diffusion * laplacian;
+            }
         }
-    }
 
 #pragma omp parallel for schedule(static)
-    for (int j = 0; j < fine_n; ++j) {
-        for (int i = 0; i < fine_n; ++i) {
+        for (int j = 0; j < fine_n; ++j) {
+            for (int i = 0; i < fine_n; ++i) {
                 const int p = index2d(i, j, fine_n);
                 if (active[static_cast<std::size_t>(p)]) {
                     value[static_cast<std::size_t>(p)] = next_value[static_cast<std::size_t>(p)];
                 }
+            }
         }
-    }
 
-    // ------------------------------------------------------------------
-    // 2. Importance. Deliberately simple: importance = abs(value).
-    // ------------------------------------------------------------------
 #pragma omp parallel for schedule(static)
-    for (int j = 0; j < fine_n; ++j) {
-        for (int i = 0; i < fine_n; ++i) {
+        for (int j = 0; j < fine_n; ++j) {
+            for (int i = 0; i < fine_n; ++i) {
                 const int p = index2d(i, j, fine_n);
-                if (active[static_cast<std::size_t>(p)]) {
-                    importance[static_cast<std::size_t>(p)] = std::abs(value[static_cast<std::size_t>(p)]);
+                if (!active[static_cast<std::size_t>(p)]) {
+                    continue;
                 }
-        }
-    }
 
-    // ------------------------------------------------------------------
-    // 3 and 4. AMR.
-    // ------------------------------------------------------------------
-    for (int pass = 1; pass <= max_level; ++pass) {
+                const int w = cell_width(level[static_cast<std::size_t>(p)], max_level);
+                const double center = value[static_cast<std::size_t>(p)];
+                const double left = face_average(owner, value, fine_n, p, i, j, w, 0, center);
+                const double right = face_average(owner, value, fine_n, p, i, j, w, 1, center);
+                const double bottom = face_average(owner, value, fine_n, p, i, j, w, 2, center);
+                const double top = face_average(owner, value, fine_n, p, i, j, w, 3, center);
+                const double jump_x = std::max(std::abs(right - center), std::abs(left - center));
+                const double jump_y = std::max(std::abs(top - center), std::abs(bottom - center));
+                importance[static_cast<std::size_t>(p)] = std::max(jump_x, jump_y);
+            }
+        }
+
         std::fill(refine_mark.begin(), refine_mark.end(), 0);
         int requested = 0;
 
 #pragma omp parallel for schedule(static) reduction(+:requested)
         for (int j = 0; j < fine_n; ++j) {
             for (int i = 0; i < fine_n; ++i) {
+                const int p = index2d(i, j, fine_n);
+                if (!active[static_cast<std::size_t>(p)]) {
+                    continue;
+                }
+                if (level[static_cast<std::size_t>(p)] < max_level &&
+                    importance[static_cast<std::size_t>(p)] >= refine_threshold) {
+                    refine_mark[static_cast<std::size_t>(p)] = 1;
+                    ++requested;
+                }
+            }
+        }
+
+        if (requested > 0) {
+            for (int j = 0; j < fine_n; ++j) {
+                for (int i = 0; i < fine_n; ++i) {
                     const int p = index2d(i, j, fine_n);
-                    if (!active[static_cast<std::size_t>(p)]) {
+                    if (!refine_mark[static_cast<std::size_t>(p)]) {
                         continue;
                     }
-                    if (level[static_cast<std::size_t>(p)] < max_level &&
-                        importance[static_cast<std::size_t>(p)] >= 0.5) {
-                        refine_mark[static_cast<std::size_t>(p)] = 1;
-                        ++requested;
+
+                    const int parent_level = level[static_cast<std::size_t>(p)];
+                    const int w = cell_width(parent_level, max_level);
+                    const int half = w / 2;
+                    if (half < 1) {
+                        continue;
                     }
-            }
-        }
 
-        if (requested == 0) {
-            break;
-        }
+                    const double parent_value = value[static_cast<std::size_t>(p)];
+                    const double parent_importance = importance[static_cast<std::size_t>(p)];
+                    const int child_level = parent_level + 1;
 
-        for (int j = 0; j < fine_n; ++j) {
-            for (int i = 0; i < fine_n; ++i) {
-                const int p = index2d(i, j, fine_n);
-                if (!refine_mark[static_cast<std::size_t>(p)]) {
-                    continue;
-                }
-
-                const int parent_level = level[static_cast<std::size_t>(p)];
-                const int w = cell_width(parent_level, max_level);
-                const int half = w / 2;
-                if (half < 1) {
-                    continue;
-                }
-
-                const double parent_value = value[static_cast<std::size_t>(p)];
-                const double parent_importance = importance[static_cast<std::size_t>(p)];
-                const int child_level = parent_level + 1;
-
-                const int child_i[4] = {i, i + half, i, i + half};
-                const int child_j[4] = {j, j, j + half, j + half};
-                for (int c = 0; c < 4; ++c) {
-                    const int q = index2d(child_i[c], child_j[c], fine_n);
-                    active[static_cast<std::size_t>(q)] = 1;
-                    level[static_cast<std::size_t>(q)] = static_cast<unsigned char>(child_level);
-                    value[static_cast<std::size_t>(q)] = parent_value;
-                    next_value[static_cast<std::size_t>(q)] = parent_value;
-                    importance[static_cast<std::size_t>(q)] = parent_importance;
+                    const int child_i[4] = {i, i + half, i, i + half};
+                    const int child_j[4] = {j, j, j + half, j + half};
+                    for (int c = 0; c < 4; ++c) {
+                        const int q = index2d(child_i[c], child_j[c], fine_n);
+                        active[static_cast<std::size_t>(q)] = 1;
+                        level[static_cast<std::size_t>(q)] = static_cast<unsigned char>(child_level);
+                        value[static_cast<std::size_t>(q)] = parent_value;
+                        next_value[static_cast<std::size_t>(q)] = parent_value;
+                        importance[static_cast<std::size_t>(q)] = parent_importance;
+                    }
                 }
             }
-        }
 
-        int leaves = 0;
-        for (int p = 0; p < array_size; ++p) {
-            if (active[static_cast<std::size_t>(p)]) {
-                ++leaves;
+            int leaves = 0;
+            for (int p = 0; p < array_size; ++p) {
+                if (active[static_cast<std::size_t>(p)]) {
+                    ++leaves;
+                }
             }
+
+            std::cout << "step " << step
+                      << ": refined=" << requested
+                      << ", leaves=" << leaves << '\n';
         }
 
-        std::cout << "pass " << pass
-                  << ": requested=" << requested
-                  << ", leaves=" << leaves << '\n';
+        if (snapshot_interval > 0 &&
+            (step % snapshot_interval == 0 || step == steps)) {
+            write_snapshot_text(snapshot_path(snapshot_prefix, step),
+                                step,
+                                step * dt,
+                                coarse_n,
+                                parts,
+                                max_level,
+                                fine_n,
+                                initial_pattern,
+                                initial_scale,
+                                active,
+                                level,
+                                value,
+                                importance);
+        }
     }
 
     // ------------------------------------------------------------------
@@ -332,6 +504,22 @@ int main(int argc, char **argv) {
             ++leaves;
         }
     }
+
+    double final_heat = 0.0;
+    for (int j = 0; j < fine_n; ++j) {
+        for (int i = 0; i < fine_n; ++i) {
+            const int p = index2d(i, j, fine_n);
+            if (!active[static_cast<std::size_t>(p)]) {
+                continue;
+            }
+            const int w = cell_width(level[static_cast<std::size_t>(p)], max_level);
+            const double cell_size = static_cast<double>(w) / static_cast<double>(fine_n);
+            final_heat += value[static_cast<std::size_t>(p)] * cell_size * cell_size;
+        }
+    }
+    std::cout << "heat: initial=" << initial_heat
+              << ", final=" << final_heat
+              << ", difference=" << final_heat - initial_heat << '\n';
 
     std::ofstream out(output);
     if (!out) {
@@ -373,10 +561,38 @@ int main(int argc, char **argv) {
         for (int c = 0; c < leaves; ++c) {
             out << "9\n";
         }
+        out << "CELL_DATA " << leaves << '\n';
+        out << "SCALARS value double 1\n";
+        out << "LOOKUP_TABLE default\n";
+        for (int j = 0; j < fine_n; ++j) {
+            for (int i = 0; i < fine_n; ++i) {
+                const int p = index2d(i, j, fine_n);
+                if (active[static_cast<std::size_t>(p)]) {
+                    out << value[static_cast<std::size_t>(p)] << '\n';
+                }
+            }
+        }
+        out << "SCALARS level int 1\n";
+        out << "LOOKUP_TABLE default\n";
+        for (int j = 0; j < fine_n; ++j) {
+            for (int i = 0; i < fine_n; ++i) {
+                const int p = index2d(i, j, fine_n);
+                if (active[static_cast<std::size_t>(p)]) {
+                    out << static_cast<int>(level[static_cast<std::size_t>(p)]) << '\n';
+                }
+            }
+        }
+        out << "SCALARS importance double 1\n";
+        out << "LOOKUP_TABLE default\n";
+        for (int j = 0; j < fine_n; ++j) {
+            for (int i = 0; i < fine_n; ++i) {
+                const int p = index2d(i, j, fine_n);
+                if (active[static_cast<std::size_t>(p)]) {
+                    out << importance[static_cast<std::size_t>(p)] << '\n';
+                }
+            }
+        }
     } else {
-        const char *colors[] = {
-            "#f8fafc", "#dbeafe", "#bbf7d0", "#fde68a",
-            "#fca5a5", "#ddd6fe", "#bae6fd", "#fecdd3"};
         constexpr double canvas = 1000.0;
         constexpr double margin = 24.0;
         constexpr double scale = canvas - 2.0 * margin;
@@ -398,16 +614,21 @@ int main(int argc, char **argv) {
                 const double y = margin + (1.0 - static_cast<double>(j + w) / static_cast<double>(fine_n)) * scale;
                 const double size = static_cast<double>(w) / static_cast<double>(fine_n) * scale;
                 const int part = owner_part_from_fine_row(j, w, coarse_n, parts, fine_n);
+                const double t = std::max(0.0, std::min(1.0, value[static_cast<std::size_t>(p)]));
+                const int red = static_cast<int>(std::round(239.0 + (220.0 - 239.0) * t));
+                const int green = static_cast<int>(std::round(246.0 + (38.0 - 246.0) * t));
+                const int blue = static_cast<int>(std::round(255.0 + (38.0 - 255.0) * t));
 
                 out << "<rect x=\"" << x
                     << "\" y=\"" << y
                     << "\" width=\"" << size
                     << "\" height=\"" << size
-                    << "\" fill=\"" << colors[lev % 8]
+                    << "\" fill=\"rgb(" << red << "," << green << "," << blue << ")"
                     << "\"><title>fine(" << i << ", " << j << ")"
                     << ", row_part " << part
                     << ", level " << lev
                     << ", value " << value[static_cast<std::size_t>(p)]
+                    << ", importance " << importance[static_cast<std::size_t>(p)]
                     << "</title></rect>\n";
             }
         }
