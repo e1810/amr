@@ -242,10 +242,14 @@ int main(int argc, char **argv) {
     const double dx_min = 1.0 / static_cast<double>(fine_n);
     const double dt = 0.20 * dx_min * dx_min / diffusion;
     const double refine_threshold = 0.05;
+    const double coarsen_threshold = 0.015;
+    const double coarsen_value_tolerance = 0.03;
+    const int amr_log_interval = snapshot_interval > 0 ? snapshot_interval : 100;
 
     std::vector<unsigned char> active(static_cast<std::size_t>(array_size), 0);
     std::vector<unsigned char> level(static_cast<std::size_t>(array_size), 0);
     std::vector<unsigned char> refine_mark(static_cast<std::size_t>(array_size), 0);
+    std::vector<unsigned char> coarsen_mark(static_cast<std::size_t>(array_size), 0);
     std::vector<int> owner(static_cast<std::size_t>(array_size), -1);
     std::vector<double> value(static_cast<std::size_t>(array_size), 0.0);
     std::vector<double> next_value(static_cast<std::size_t>(array_size), 0.0);
@@ -271,7 +275,9 @@ int main(int argc, char **argv) {
     std::cout << "heat diffusion: steps=" << steps
               << ", diffusion=" << diffusion
               << ", dt=" << dt
-              << ", refine_threshold=" << refine_threshold << '\n';
+              << ", refine_threshold=" << refine_threshold
+              << ", coarsen_threshold=" << coarsen_threshold
+              << ", coarsen_value_tolerance=" << coarsen_value_tolerance << '\n';
     std::cout << "initial condition: pattern=" << initial_pattern
               << ", scale=" << initial_scale << '\n';
     if (snapshot_interval > 0) {
@@ -416,7 +422,9 @@ int main(int argc, char **argv) {
         }
 
         std::fill(refine_mark.begin(), refine_mark.end(), 0);
+        std::fill(coarsen_mark.begin(), coarsen_mark.end(), 0);
         int requested = 0;
+        int coarsen_requested = 0;
 
 #pragma omp parallel for schedule(static) reduction(+:requested)
         for (int j = 0; j < fine_n; ++j) {
@@ -433,11 +441,110 @@ int main(int argc, char **argv) {
             }
         }
 
+        // Coarsen only complete sibling groups. The lower-left child has the
+        // same fine-grid anchor as the parent, so coarsening can reuse that slot.
+#pragma omp parallel for schedule(static) reduction(+:coarsen_requested)
+        for (int j = 0; j < fine_n; ++j) {
+            for (int i = 0; i < fine_n; ++i) {
+                const int p00 = index2d(i, j, fine_n);
+                if (!active[static_cast<std::size_t>(p00)]) {
+                    continue;
+                }
+
+                const int child_level = level[static_cast<std::size_t>(p00)];
+                if (child_level == 0) {
+                    continue;
+                }
+
+                const int child_w = cell_width(child_level, max_level);
+                const int parent_w = 2 * child_w;
+                if (i % parent_w != 0 || j % parent_w != 0 ||
+                    i + child_w >= fine_n || j + child_w >= fine_n) {
+                    continue;
+                }
+
+                const int p10 = index2d(i + child_w, j, fine_n);
+                const int p01 = index2d(i, j + child_w, fine_n);
+                const int p11 = index2d(i + child_w, j + child_w, fine_n);
+                const int child[4] = {p00, p10, p01, p11};
+
+                bool can_coarsen = true;
+                double min_value = value[static_cast<std::size_t>(p00)];
+                double max_value = min_value;
+                for (int c = 0; c < 4; ++c) {
+                    const int q = child[c];
+                    if (!active[static_cast<std::size_t>(q)] ||
+                        level[static_cast<std::size_t>(q)] != child_level ||
+                        refine_mark[static_cast<std::size_t>(q)] ||
+                        importance[static_cast<std::size_t>(q)] >= coarsen_threshold) {
+                        can_coarsen = false;
+                        break;
+                    }
+
+                    min_value = std::min(min_value, value[static_cast<std::size_t>(q)]);
+                    max_value = std::max(max_value, value[static_cast<std::size_t>(q)]);
+                }
+
+                if (can_coarsen && max_value - min_value <= coarsen_value_tolerance) {
+                    coarsen_mark[static_cast<std::size_t>(p00)] = 1;
+                    ++coarsen_requested;
+                }
+            }
+        }
+
+        int coarsened = 0;
+        if (coarsen_requested > 0) {
+            for (int j = 0; j < fine_n; ++j) {
+                for (int i = 0; i < fine_n; ++i) {
+                    const int p00 = index2d(i, j, fine_n);
+                    if (!coarsen_mark[static_cast<std::size_t>(p00)]) {
+                        continue;
+                    }
+
+                    const int child_level = level[static_cast<std::size_t>(p00)];
+                    const int child_w = cell_width(child_level, max_level);
+                    const int p10 = index2d(i + child_w, j, fine_n);
+                    const int p01 = index2d(i, j + child_w, fine_n);
+                    const int p11 = index2d(i + child_w, j + child_w, fine_n);
+                    const int child[4] = {p00, p10, p01, p11};
+
+                    double parent_value = 0.0;
+                    double parent_importance = 0.0;
+                    for (int c = 0; c < 4; ++c) {
+                        const int q = child[c];
+                        parent_value += 0.25 * value[static_cast<std::size_t>(q)];
+                        parent_importance = std::max(parent_importance,
+                                                     importance[static_cast<std::size_t>(q)]);
+                    }
+
+                    active[static_cast<std::size_t>(p00)] = 1;
+                    level[static_cast<std::size_t>(p00)] = static_cast<unsigned char>(child_level - 1);
+                    value[static_cast<std::size_t>(p00)] = parent_value;
+                    next_value[static_cast<std::size_t>(p00)] = parent_value;
+                    importance[static_cast<std::size_t>(p00)] = parent_importance;
+                    refine_mark[static_cast<std::size_t>(p00)] = 0;
+
+                    for (int c = 1; c < 4; ++c) {
+                        const int q = child[c];
+                        active[static_cast<std::size_t>(q)] = 0;
+                        level[static_cast<std::size_t>(q)] = 0;
+                        refine_mark[static_cast<std::size_t>(q)] = 0;
+                        value[static_cast<std::size_t>(q)] = 0.0;
+                        next_value[static_cast<std::size_t>(q)] = 0.0;
+                        importance[static_cast<std::size_t>(q)] = 0.0;
+                    }
+                    ++coarsened;
+                }
+            }
+        }
+
+        int refined = 0;
         if (requested > 0) {
             for (int j = 0; j < fine_n; ++j) {
                 for (int i = 0; i < fine_n; ++i) {
                     const int p = index2d(i, j, fine_n);
-                    if (!refine_mark[static_cast<std::size_t>(p)]) {
+                    if (!refine_mark[static_cast<std::size_t>(p)] ||
+                        !active[static_cast<std::size_t>(p)]) {
                         continue;
                     }
 
@@ -462,9 +569,13 @@ int main(int argc, char **argv) {
                         next_value[static_cast<std::size_t>(q)] = parent_value;
                         importance[static_cast<std::size_t>(q)] = parent_importance;
                     }
+                    ++refined;
                 }
             }
+        }
 
+        if ((refined > 0 || coarsened > 0) &&
+            (refined > 0 || step % amr_log_interval == 0 || step == steps)) {
             int leaves = 0;
             for (int p = 0; p < array_size; ++p) {
                 if (active[static_cast<std::size_t>(p)]) {
@@ -473,7 +584,8 @@ int main(int argc, char **argv) {
             }
 
             std::cout << "step " << step
-                      << ": refined=" << requested
+                      << ": refined=" << refined
+                      << ", coarsened=" << coarsened
                       << ", leaves=" << leaves << '\n';
         }
 
