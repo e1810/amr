@@ -43,9 +43,24 @@ std::vector<std::string> split_csv_line(const std::string &line) {
     return fields;
 }
 
+std::string amr_region_label(int region_id) {
+    switch (region_id) {
+        case 1: return "init_field";
+        case 2: return "heat_update";
+        case 3: return "importance";
+        case 4: return "mark_refine";
+        case 5: return "mark_coarsen";
+        default: return "region_" + std::to_string(region_id);
+    }
+}
+
+bool should_render_region(const std::string &label) {
+    return label == "heat_update" || label == "importance";
+}
+
 int main(int argc, char **argv) {
     if (argc < 3 || argc > 4) {
-        std::cerr << "usage: " << argv[0] << " ompt_regions.csv output.svg [step_interval]\n";
+        std::cerr << "usage: " << argv[0] << " ompt_regions.csv output.svg [exec_interval]\n";
         return 2;
     }
 
@@ -71,21 +86,22 @@ int main(int argc, char **argv) {
             continue;
         }
         const auto f = split_csv_line(line);
-        if (f.size() < 11) {
+        if (f.size() < 10) {
             continue;
         }
 
         TimingRow row;
         row.parallel_id = std::strtoull(f[0].c_str(), nullptr, 10);
         row.region_id = std::atoi(f[1].c_str());
-        row.region_label = f[2];
-        row.region_exec = std::strtoull(f[3].c_str(), nullptr, 10);
-        row.step = std::atoi(f[4].c_str());
-        row.thread_id = std::atoi(f[5].c_str());
-        row.team_size = std::atoi(f[6].c_str());
-        row.elapsed_ms = std::atof(f[10].c_str());
+        row.region_exec = std::strtoull(f[2].c_str(), nullptr, 10);
+        row.step = static_cast<int>(row.region_exec);
+        row.thread_id = std::atoi(f[3].c_str());
+        row.team_size = std::atoi(f[4].c_str());
+        row.elapsed_ms = std::atof(f[8].c_str());
+        row.region_label = amr_region_label(row.region_id);
 
-        if (row.step != 0 && row.step % step_interval != 0) {
+        if (!should_render_region(row.region_label) ||
+            (row.step != 0 && row.step % step_interval != 0)) {
             continue;
         }
 

@@ -9,7 +9,6 @@
 #include <fstream>
 #include <iomanip>
 #include <mutex>
-#include <string>
 #include <unordered_map>
 #include <vector>
 
@@ -19,13 +18,11 @@ using Clock = std::chrono::steady_clock;
 
 struct RegionInfo {
     int id = 0;
-    std::string label;
     unsigned long long executions = 0;
 };
 
 struct ParallelEvent {
     int region_id = 0;
-    std::string region_label;
     unsigned long long region_exec = 0;
     unsigned long long parallel_id = 0;
     const void *codeptr = nullptr;
@@ -45,18 +42,7 @@ std::unordered_map<const void *, RegionInfo> region_by_codeptr;
 std::atomic<unsigned long long> next_parallel_id{1};
 Clock::time_point tool_start;
 std::ofstream output;
-int output_step_interval = 1;
-
-std::string default_region_label(int id) {
-    switch (id) {
-        case 1: return "init_field";
-        case 2: return "heat_update";
-        case 3: return "importance";
-        case 4: return "mark_refine";
-        case 5: return "mark_coarsen";
-        default: return "region_" + std::to_string(id);
-    }
-}
+int output_exec_interval = 1;
 
 double now_ms() {
     const auto now = Clock::now();
@@ -91,25 +77,13 @@ void record_thread_end(ParallelEvent *event, unsigned int thread_num) {
 }
 
 void write_header() {
-    output << "parallel_id,region_id,region_label,region_exec,step,thread_id,team_size,"
+    output << "parallel_id,region_id,region_exec,thread_id,team_size,"
            << "requested_threads,start_ms,end_ms,elapsed_ms,codeptr\n";
 }
 
-int step_from_event(const ParallelEvent &event) {
-    if (event.region_id <= 1) {
-        return 0;
-    }
-    return static_cast<int>(event.region_exec);
-}
-
-bool should_write_region(const ParallelEvent &event) {
-    return event.region_label == "heat_update" ||
-           event.region_label == "importance";
-}
-
-bool should_write_step(int step) {
-    return output_step_interval <= 1 ||
-           (step > 0 && step % output_step_interval == 0);
+bool should_write_execution(const ParallelEvent &event) {
+    return output_exec_interval <= 1 ||
+           (event.region_exec > 0 && event.region_exec % output_exec_interval == 0);
 }
 
 }  // namespace
@@ -139,14 +113,12 @@ void on_parallel_begin(ompt_data_t *encountering_task_data,
         if (iter == region_by_codeptr.end()) {
             RegionInfo info;
             info.id = static_cast<int>(region_by_codeptr.size()) + 1;
-            info.label = default_region_label(info.id);
             iter = region_by_codeptr.emplace(codeptr_ra, info).first;
         }
 
         RegionInfo &info = iter->second;
         info.executions += 1;
         event->region_id = info.id;
-        event->region_label = info.label;
         event->region_exec = info.executions;
     }
 
@@ -161,28 +133,6 @@ void on_parallel_begin(ompt_data_t *encountering_task_data,
     event->work_started.assign(slots, 0);
 
     parallel_data->ptr = event;
-}
-
-void on_implicit_task(ompt_scope_endpoint_t endpoint,
-                      ompt_data_t *parallel_data,
-                      ompt_data_t *task_data,
-                      unsigned int team_size,
-                      unsigned int thread_num,
-                      int flags) {
-    (void)task_data;
-    (void)flags;
-
-    if (!parallel_data || !parallel_data->ptr) {
-        return;
-    }
-
-    auto *event = static_cast<ParallelEvent *>(parallel_data->ptr);
-    event->team_size.store(static_cast<int>(team_size), std::memory_order_relaxed);
-    if (!has_thread_slot(event, thread_num)) {
-        return;
-    }
-
-    (void)endpoint;
 }
 
 void on_work(ompt_work_t work_type,
@@ -233,8 +183,7 @@ void on_parallel_end(ompt_data_t *parallel_data,
     }
 
     auto *event = static_cast<ParallelEvent *>(parallel_data->ptr);
-    const int step = step_from_event(*event);
-    if (!should_write_region(*event) || !should_write_step(step)) {
+    if (!should_write_execution(*event)) {
         delete event;
         parallel_data->ptr = nullptr;
         return;
@@ -256,9 +205,7 @@ void on_parallel_end(ompt_data_t *parallel_data,
 
                 output << event->parallel_id << ','
                        << event->region_id << ','
-                       << event->region_label << ','
                        << event->region_exec << ','
-                       << step << ','
                        << tid << ','
                        << team_size << ','
                        << event->requested_threads << ','
@@ -286,9 +233,9 @@ int ompt_initialize(ompt_function_lookup_t lookup,
 
     tool_start = Clock::now();
 
-    const char *interval_text = std::getenv("AMR_OMPT_STEP_INTERVAL");
+    const char *interval_text = std::getenv("AMR_OMPT_EXEC_INTERVAL");
     if (interval_text) {
-        output_step_interval = std::max(1, std::atoi(interval_text));
+        output_exec_interval = std::max(1, std::atoi(interval_text));
     }
 
     const char *output_path = std::getenv("AMR_OMPT_OUT");
@@ -309,14 +256,12 @@ int ompt_initialize(ompt_function_lookup_t lookup,
                  reinterpret_cast<ompt_callback_t>(&on_parallel_begin));
     set_callback(ompt_callback_parallel_end,
                  reinterpret_cast<ompt_callback_t>(&on_parallel_end));
-    set_callback(ompt_callback_implicit_task,
-                 reinterpret_cast<ompt_callback_t>(&on_implicit_task));
     set_callback(ompt_callback_work,
                  reinterpret_cast<ompt_callback_t>(&on_work));
 
-    std::fprintf(stderr, "[AMR-OMPT] enabled, writing %s every %d step(s)\n",
+    std::fprintf(stderr, "[AMR-OMPT] enabled, writing %s every %d execution(s) per region\n",
                  output_path ? output_path : "ompt/ompt_regions.csv",
-                 output_step_interval);
+                 output_exec_interval);
     return 1;
 }
 

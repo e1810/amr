@@ -31,7 +31,7 @@ SNAPSHOT_PREFIX=${SNAPSHOT_PREFIX:-snapshots/checker_heavy}
 export OMP_TOOL=enabled
 export OMP_TOOL_LIBRARIES=${OMP_TOOL_LIBRARIES:-$PWD/ompt/libamr_ompt_tool.so}
 export AMR_OMPT_OUT=$TIMING_CSV
-export AMR_OMPT_STEP_INTERVAL=$STEP_INTERVAL
+export AMR_OMPT_EXEC_INTERVAL=$STEP_INTERVAL
 export OMP_PROC_BIND=${OMP_PROC_BIND:-true}
 export OMP_PLACES=${OMP_PLACES:-cores}
 
