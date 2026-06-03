@@ -17,6 +17,48 @@ struct Cell {
     double importance = 0.0;
 };
 
+struct Rgb {
+    int red = 0;
+    int green = 0;
+    int blue = 0;
+};
+
+Rgb lerp_color(const Rgb &a, const Rgb &b, double u) {
+    return {
+        static_cast<int>(std::round(static_cast<double>(a.red) +
+                                    (static_cast<double>(b.red) - static_cast<double>(a.red)) * u)),
+        static_cast<int>(std::round(static_cast<double>(a.green) +
+                                    (static_cast<double>(b.green) - static_cast<double>(a.green)) * u)),
+        static_cast<int>(std::round(static_cast<double>(a.blue) +
+                                    (static_cast<double>(b.blue) - static_cast<double>(a.blue)) * u)),
+    };
+}
+
+Rgb temperature_color(double value) {
+    const double t = std::max(0.0, std::min(1.0, value));
+
+    // Visible-spectrum style palette:
+    // cold deep blue -> blue -> cyan -> green -> yellow -> orange -> hot red.
+    constexpr int stops = 7;
+    const double position[stops] = {0.00, 0.16, 0.32, 0.50, 0.68, 0.84, 1.00};
+    const Rgb color[stops] = {
+        {8, 22, 120},
+        {37, 99, 235},
+        {6, 182, 212},
+        {34, 197, 94},
+        {250, 204, 21},
+        {249, 115, 22},
+        {220, 38, 38},
+    };
+
+    for (int k = 0; k < stops - 1; ++k) {
+        if (t <= position[k + 1]) {
+            const double u = (t - position[k]) / (position[k + 1] - position[k]);
+            return lerp_color(color[k], color[k + 1], u);
+        }
+    }
+    return color[stops - 1];
+}
 int row_begin(int coarse_n, int parts, int part) {
     return coarse_n * part / parts;
 }
@@ -147,16 +189,13 @@ int main(int argc, char **argv) {
         const double y = margin + (1.0 - static_cast<double>(cell.j + w) / static_cast<double>(fine_n)) * scale;
         const double size = static_cast<double>(w) / static_cast<double>(fine_n) * scale;
         const int part = owner_part_from_fine_row(cell.j, w, coarse_n, parts, fine_n);
-        const double t = std::max(0.0, std::min(1.0, cell.value));
-        const int red = static_cast<int>(std::round(239.0 + (220.0 - 239.0) * t));
-        const int green = static_cast<int>(std::round(246.0 + (38.0 - 246.0) * t));
-        const int blue = static_cast<int>(std::round(255.0 + (38.0 - 255.0) * t));
+        const Rgb color = temperature_color(cell.value);
 
         out << "<rect x=\"" << x
             << "\" y=\"" << y
             << "\" width=\"" << size
             << "\" height=\"" << size
-            << "\" fill=\"rgb(" << red << "," << green << "," << blue << ")"
+            << "\" fill=\"rgb(" << color.red << "," << color.green << "," << color.blue << ")"
             << "\"><title>step " << step
             << ", fine(" << cell.i << ", " << cell.j << ")"
             << ", row_part " << part

@@ -216,7 +216,7 @@ int main(int argc, char **argv) {
     // coarse_n:      number of cells per side in the initial mesh.
     // max_level:     maximum AMR depth; fine_n = coarse_n * 2^max_level.
     // parts:         OpenMP thread count and row-part guide for output.
-    // initial_scale: size parameter for checker/stripe/square/circle data.
+    // initial_scale: size parameter for checker/stripe/square/circle/hotspot data.
     // steps:         number of explicit heat-diffusion time steps.
     // ------------------------------------------------------------------
     const int coarse_n = argc > 1 ? std::atoi(argv[1]) : 16;
@@ -234,7 +234,8 @@ int main(int argc, char **argv) {
         initial_pattern == "checker" ||
         initial_pattern == "stripe" ||
         initial_pattern == "square" ||
-        initial_pattern == "circle";
+        initial_pattern == "circle" ||
+        initial_pattern == "hotspot";
 
     if (coarse_n < 1 || parts < 1 || parts > coarse_n || max_level < 0 || max_level > 10 ||
         initial_scale <= 0.0 || steps < 0 || diffusion <= 0.0 || snapshot_interval < 0 ||
@@ -243,7 +244,7 @@ int main(int argc, char **argv) {
                   << " [coarse_n>=1] [parts in 1..coarse_n] [max_level 0..10]"
                   << " [initial_scale>0] [steps>=0] [diffusion>0] [output.svg|output.vtk]"
                   << " [snapshot_interval>=0] [snapshot_prefix]"
-                  << " [initial_pattern: checker|stripe|square|circle]"
+                  << " [initial_pattern: checker|stripe|square|circle|hotspot]"
                   << " [diffusion_substeps>=1]\n";
         return 2;
     }
@@ -350,6 +351,15 @@ int main(int argc, char **argv) {
                     value[static_cast<std::size_t>(p)] =
                         (std::abs(x - 0.5) <= 0.5 * initial_scale &&
                          std::abs(y - 0.5) <= 0.5 * initial_scale) ? 1.0 : 0.0;
+                } else if (initial_pattern == "hotspot") {
+                    const double hotspot_x = 0.35;
+                    const double hotspot_y = 0.35;
+                    const double nearest_x = std::max(x0, std::min(hotspot_x, x1));
+                    const double nearest_y = std::max(y0, std::min(hotspot_y, y1));
+                    const double dx = nearest_x - hotspot_x;
+                    const double dy = nearest_y - hotspot_y;
+                    value[static_cast<std::size_t>(p)] =
+                        (dx * dx + dy * dy <= initial_scale * initial_scale) ? 1.0 : 0.0;
                 } else {
                     const double nearest_x = std::max(x0, std::min(0.5, x1));
                     const double nearest_y = std::max(y0, std::min(0.5, y1));
