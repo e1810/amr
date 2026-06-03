@@ -25,7 +25,13 @@ esac
     render_amr_snapshot.cpp -o render_amr_snapshot
 
 "$CXX" -std=c++17 -O2 -Wall -Wextra -pedantic -fPIC -shared "$OMP_FLAG" \
-    ompt/amr_ompt_tool.cpp -o ompt/libamr_ompt_tool.so
+    ompt_measure/ompt_measure.cpp -o ompt_measure/libompt_measure.so
 
 "$CXX" -std=c++17 -O2 -Wall -Wextra -pedantic \
-    ompt/render_ompt_timing.cpp -o ompt/render_ompt_timing
+    ompt_measure/render_ompt_timing.cpp -o ompt_measure/render_ompt_timing
+
+"$CXX" -std=c++17 -O2 -Wall -Wextra -pedantic -fPIC -shared "$OMP_FLAG" \
+    ompt_resctrl/ompt_resctrl.cpp -o ompt_resctrl/libompt_resctrl.so
+
+"$CXX" -std=c++17 -O2 -Wall -Wextra -pedantic \
+    ompt_resctrl/render_ompt_timing.cpp -o ompt_resctrl/render_ompt_timing

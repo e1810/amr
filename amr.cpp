@@ -45,25 +45,6 @@ int cell_width(int level, int max_level) {
     return 1 << (max_level - level);
 }
 
-int owner_part_from_fine_row(int fine_row, int width, int coarse_n, int parts, int fine_n) {
-    const int center_fine_row = fine_row + width / 2;
-    int coarse_row = center_fine_row * coarse_n / fine_n;
-    coarse_row = std::max(0, std::min(coarse_row, coarse_n - 1));
-
-    for (int part = 0; part < parts; ++part) {
-        if (row_begin(coarse_n, parts, part) <= coarse_row &&
-            coarse_row < row_end(coarse_n, parts, part)) {
-            return part;
-        }
-    }
-    return parts - 1;
-}
-
-bool ends_with(const std::string &text, const std::string &suffix) {
-    return text.size() >= suffix.size() &&
-           text.compare(text.size() - suffix.size(), suffix.size(), suffix) == 0;
-}
-
 std::string snapshot_path(const std::string &prefix, int step) {
     std::ostringstream path;
     path << prefix << '_' << std::setw(6) << std::setfill('0') << step << ".txt";
@@ -215,7 +196,7 @@ int main(int argc, char **argv) {
     //
     // coarse_n:      number of cells per side in the initial mesh.
     // max_level:     maximum AMR depth; fine_n = coarse_n * 2^max_level.
-    // parts:         OpenMP thread count and row-part guide for output.
+    // parts:         OpenMP thread count and row-part guide for logs.
     // initial_scale: size parameter for checker/stripe/square/circle/hotspot data.
     // steps:         number of explicit heat-diffusion time steps.
     // ------------------------------------------------------------------
@@ -225,11 +206,10 @@ int main(int argc, char **argv) {
     const double initial_scale = argc > 4 ? std::atof(argv[4]) : 0.25;
     const int steps = argc > 5 ? std::atoi(argv[5]) : 100;
     const double diffusion = argc > 6 ? std::atof(argv[6]) : 0.01;
-    const std::string output = argc > 7 ? argv[7] : "amr_dense.svg";
-    const int snapshot_interval = argc > 8 ? std::atoi(argv[8]) : 0;
-    const std::string snapshot_prefix = argc > 9 ? argv[9] : "snapshots/amr_step";
-    const std::string initial_pattern = argc > 10 ? argv[10] : "checker";
-    const int diffusion_substeps = argc > 11 ? std::atoi(argv[11]) : 1;
+    const int snapshot_interval = argc > 7 ? std::atoi(argv[7]) : 0;
+    const std::string snapshot_prefix = argc > 8 ? argv[8] : "snapshots/amr_step";
+    const std::string initial_pattern = argc > 9 ? argv[9] : "checker";
+    const int diffusion_substeps = argc > 10 ? std::atoi(argv[10]) : 1;
     const bool known_initial_pattern =
         initial_pattern == "checker" ||
         initial_pattern == "stripe" ||
@@ -242,7 +222,7 @@ int main(int argc, char **argv) {
         diffusion_substeps < 1 || !known_initial_pattern) {
         std::cerr << "usage: " << argv[0]
                   << " [coarse_n>=1] [parts in 1..coarse_n] [max_level 0..10]"
-                  << " [initial_scale>0] [steps>=0] [diffusion>0] [output.svg|output.vtk]"
+                  << " [initial_scale>0] [steps>=0] [diffusion>0]"
                   << " [snapshot_interval>=0] [snapshot_prefix]"
                   << " [initial_pattern: checker|stripe|square|circle|hotspot]"
                   << " [diffusion_substeps>=1]\n";
@@ -690,17 +670,9 @@ int main(int argc, char **argv) {
     }
 
     // ------------------------------------------------------------------
-    // Final output.
-    //
-    // The mesh is still represented by dense arrays here. Output simply scans
-    // the fine-grid canvas and emits entries where active[p] is true.
+    // Final summary. Visualization is handled by render_amr_snapshot using
+    // the text snapshots written above.
     // ------------------------------------------------------------------
-    int leaves = 0;
-    for (int p = 0; p < array_size; ++p) {
-        if (active[static_cast<std::size_t>(p)]) {
-            ++leaves;
-        }
-    }
 
     // Recompute integrated heat after the final mesh update.
     double final_heat = 0.0;
@@ -719,141 +691,5 @@ int main(int argc, char **argv) {
               << ", final=" << final_heat
               << ", difference=" << final_heat - initial_heat << '\n';
 
-    std::ofstream out(output);
-    if (!out) {
-        std::cerr << "failed to open output: " << output << '\n';
-        return 1;
-    }
-
-    // VTK output for ParaView-like tools. Cell data carries value, level,
-    // and importance so the AMR decision can be inspected after the run.
-    if (ends_with(output, ".vtk")) {
-        out << "# vtk DataFile Version 3.0\n";
-        out << "dense fine-grid AMR\n";
-        out << "ASCII\n";
-        out << "DATASET UNSTRUCTURED_GRID\n";
-        out << "POINTS " << leaves * 4 << " double\n";
-        out << std::setprecision(17);
-
-        for (int j = 0; j < fine_n; ++j) {
-            for (int i = 0; i < fine_n; ++i) {
-                const int p = index2d(i, j, fine_n);
-                if (!active[static_cast<std::size_t>(p)]) {
-                    continue;
-                }
-                const int w = cell_width(level[static_cast<std::size_t>(p)], max_level);
-                const double x0 = static_cast<double>(i) / static_cast<double>(fine_n);
-                const double y0 = static_cast<double>(j) / static_cast<double>(fine_n);
-                const double size = static_cast<double>(w) / static_cast<double>(fine_n);
-                out << x0 << ' ' << y0 << " 0\n";
-                out << x0 + size << ' ' << y0 << " 0\n";
-                out << x0 + size << ' ' << y0 + size << " 0\n";
-                out << x0 << ' ' << y0 + size << " 0\n";
-            }
-        }
-
-        out << "CELLS " << leaves << ' ' << leaves * 5 << '\n';
-        for (int c = 0; c < leaves; ++c) {
-            const int p = c * 4;
-            out << "4 " << p << ' ' << p + 1 << ' ' << p + 2 << ' ' << p + 3 << '\n';
-        }
-        out << "CELL_TYPES " << leaves << '\n';
-        for (int c = 0; c < leaves; ++c) {
-            out << "9\n";
-        }
-        out << "CELL_DATA " << leaves << '\n';
-        out << "SCALARS value double 1\n";
-        out << "LOOKUP_TABLE default\n";
-        for (int j = 0; j < fine_n; ++j) {
-            for (int i = 0; i < fine_n; ++i) {
-                const int p = index2d(i, j, fine_n);
-                if (active[static_cast<std::size_t>(p)]) {
-                    out << value[static_cast<std::size_t>(p)] << '\n';
-                }
-            }
-        }
-        out << "SCALARS level int 1\n";
-        out << "LOOKUP_TABLE default\n";
-        for (int j = 0; j < fine_n; ++j) {
-            for (int i = 0; i < fine_n; ++i) {
-                const int p = index2d(i, j, fine_n);
-                if (active[static_cast<std::size_t>(p)]) {
-                    out << static_cast<int>(level[static_cast<std::size_t>(p)]) << '\n';
-                }
-            }
-        }
-        out << "SCALARS importance double 1\n";
-        out << "LOOKUP_TABLE default\n";
-        for (int j = 0; j < fine_n; ++j) {
-            for (int i = 0; i < fine_n; ++i) {
-                const int p = index2d(i, j, fine_n);
-                if (active[static_cast<std::size_t>(p)]) {
-                    out << importance[static_cast<std::size_t>(p)] << '\n';
-                }
-            }
-        }
-    } else {
-        // SVG output for quick inspection in a browser. Fill color encodes
-        // the scalar value; stroke outlines show the current leaf mesh.
-        constexpr double canvas = 1000.0;
-        constexpr double margin = 24.0;
-        constexpr double scale = canvas - 2.0 * margin;
-
-        out << "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1000 1000\">\n";
-        out << "<rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n";
-        out << std::fixed << std::setprecision(3);
-        out << "<g stroke=\"#1f2937\" stroke-width=\"0.55\" vector-effect=\"non-scaling-stroke\">\n";
-
-        for (int j = 0; j < fine_n; ++j) {
-            for (int i = 0; i < fine_n; ++i) {
-                const int p = index2d(i, j, fine_n);
-                if (!active[static_cast<std::size_t>(p)]) {
-                    continue;
-                }
-                const int lev = level[static_cast<std::size_t>(p)];
-                const int w = cell_width(lev, max_level);
-                const double x = margin + static_cast<double>(i) / static_cast<double>(fine_n) * scale;
-                const double y = margin + (1.0 - static_cast<double>(j + w) / static_cast<double>(fine_n)) * scale;
-                const double size = static_cast<double>(w) / static_cast<double>(fine_n) * scale;
-                const int part = owner_part_from_fine_row(j, w, coarse_n, parts, fine_n);
-                const double t = std::max(0.0, std::min(1.0, value[static_cast<std::size_t>(p)]));
-                const int red = static_cast<int>(std::round(239.0 + (220.0 - 239.0) * t));
-                const int green = static_cast<int>(std::round(246.0 + (38.0 - 246.0) * t));
-                const int blue = static_cast<int>(std::round(255.0 + (38.0 - 255.0) * t));
-
-                out << "<rect x=\"" << x
-                    << "\" y=\"" << y
-                    << "\" width=\"" << size
-                    << "\" height=\"" << size
-                    << "\" fill=\"rgb(" << red << "," << green << "," << blue << ")"
-                    << "\"><title>fine(" << i << ", " << j << ")"
-                    << ", row_part " << part
-                    << ", level " << lev
-                    << ", value " << value[static_cast<std::size_t>(p)]
-                    << ", importance " << importance[static_cast<std::size_t>(p)]
-                    << "</title></rect>\n";
-            }
-        }
-        out << "</g>\n";
-
-        out << "<g stroke=\"#0f172a\" stroke-width=\"2.0\" vector-effect=\"non-scaling-stroke\">\n";
-        out << "<rect x=\"" << margin << "\" y=\"" << margin
-            << "\" width=\"" << scale << "\" height=\"" << scale
-            << "\" fill=\"none\"/>\n";
-        for (int part = 1; part < parts; ++part) {
-            const double y_data = static_cast<double>(row_begin(coarse_n, parts, part)) /
-                                  static_cast<double>(coarse_n);
-            const double y = margin + (1.0 - y_data) * scale;
-            out << "<line x1=\"" << margin
-                << "\" y1=\"" << y
-                << "\" x2=\"" << margin + scale
-                << "\" y2=\"" << y
-                << "\"><title>row-part boundary " << part << "</title></line>\n";
-        }
-        out << "</g>\n";
-        out << "</svg>\n";
-    }
-
-    std::cout << "wrote " << output << '\n';
     return 0;
 }
