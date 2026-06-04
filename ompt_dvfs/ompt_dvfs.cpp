@@ -1,9 +1,12 @@
 #include <omp-tools.h>
 #include <omp.h>
 
+#include "msr_freq.hpp"
+
 #include <algorithm>
 #include <atomic>
 #include <chrono>
+#include <cstdint>
 #include <cstdio>
 #include <cstdlib>
 #include <fstream>
@@ -12,32 +15,8 @@
 #include <unordered_map>
 #include <vector>
 
-#ifdef __linux__
-#include <sched.h>
-#endif
-
-#if __has_include("../msr_freq.hpp")
-#include "../msr_freq.hpp"
-#define AMR_RESCTRL_HAS_MSR 1
-#else
-#define AMR_RESCTRL_HAS_MSR 0
-namespace msr {
-void msr_init() {}
-void reset_freq_all() {}
-int current_cpu() {
-#ifdef __linux__
-    return sched_getcpu();
-#else
-    return -1;
-#endif
-}
-void set_freq_on_cpu(int cpu, double mhz, int percent) {
-    (void)cpu;
-    (void)mhz;
-    (void)percent;
-}
-}  // namespace msr
-#endif
+#include <fcntl.h>
+#include <unistd.h>
 
 namespace {
 
@@ -76,7 +55,9 @@ Clock::time_point tool_start;
 std::ofstream output;
 int output_exec_interval = 1;
 double max_mhz = 4800.0;
-double min_mhz = 0.0;
+double min_mhz = 800.0;
+bool debug = false;
+bool msr_control_enabled = false;
 
 double now_ms() {
     const auto now = Clock::now();
@@ -104,6 +85,32 @@ double env_double(const char *name, double fallback) {
     char *end = nullptr;
     const double value = std::strtod(text, &end);
     return end != text ? value : fallback;
+}
+
+bool env_bool(const char *name, bool fallback) {
+    const char *text = std::getenv(name);
+    if (!text) {
+        return fallback;
+    }
+
+    return std::atoi(text) != 0;
+}
+
+bool can_open_current_msr_for_write() {
+    const int cpu = msr::current_cpu();
+    if (cpu < 0) {
+        return false;
+    }
+
+    char path[64];
+    std::snprintf(path, sizeof(path), "/dev/cpu/%d/msr", cpu);
+    const int fd = open(path, O_WRONLY);
+    if (fd < 0) {
+        return false;
+    }
+
+    close(fd);
+    return true;
 }
 
 void record_thread_end(ParallelEvent *event, unsigned int thread_num) {
@@ -168,17 +175,50 @@ int event_team_size(const ParallelEvent &event) {
                : static_cast<int>(event.elapsed_ms.size());
 }
 
+void apply_target_to_thread(ParallelEvent *event, unsigned int thread_num) {
+    if (!has_thread_slot(event, thread_num)) {
+        return;
+    }
+
+    const std::size_t slot = static_cast<std::size_t>(thread_num);
+    const int cpu = msr::current_cpu();
+    event->cpu_id[slot] = cpu;
+    if (cpu < 0) {
+        return;
+    }
+
+    if (!msr_control_enabled) {
+        return;
+    }
+
+    const bool applied = msr::set_freq_on_cpu(cpu, event->target_mhz[slot], 100.0);
+    event->resource_applied[slot] = applied ? 1 : 0;
+
+    if (debug) {
+        std::fprintf(stderr,
+                     "[AMR-DVFS] region=%d exec=%llu thread=%u cpu=%d target=%.0fMHz %s\n",
+                     event->region_id,
+                     event->region_exec,
+                     thread_num,
+                     cpu,
+                     event->target_mhz[slot],
+                     applied ? "applied" : "failed");
+    }
+}
+
 void reset_touched_resources(const ParallelEvent &event, int team_size) {
     std::vector<int> reset_cpus;
     for (int tid = 0; tid < team_size; ++tid) {
         const std::size_t index = static_cast<std::size_t>(tid);
-        if (index >= event.cpu_id.size() || event.cpu_id[index] < 0) {
+        if (index >= event.cpu_id.size() || index >= event.resource_applied.size() ||
+            !event.resource_applied[index] || event.cpu_id[index] < 0) {
             continue;
         }
+
         const int cpu = event.cpu_id[index];
         if (std::find(reset_cpus.begin(), reset_cpus.end(), cpu) == reset_cpus.end()) {
             reset_cpus.push_back(cpu);
-            msr::set_freq_on_cpu(cpu, 0.0, 100);
+            msr::set_freq_on_cpu(cpu, 0.0, 100.0);
         }
     }
 }
@@ -303,18 +343,7 @@ void on_implicit_task(ompt_scope_endpoint_t endpoint,
 
     auto *event = static_cast<ParallelEvent *>(parallel_data->ptr);
     event->team_size.store(static_cast<int>(team_size), std::memory_order_relaxed);
-    if (!has_thread_slot(event, thread_num)) {
-        return;
-    }
-
-    const std::size_t slot = static_cast<std::size_t>(thread_num);
-    const int cpu = msr::current_cpu();
-    event->cpu_id[slot] = cpu;
-
-    if (cpu >= 0) {
-        msr::set_freq_on_cpu(cpu, event->target_mhz[slot], 100);
-        event->resource_applied[slot] = AMR_RESCTRL_HAS_MSR ? 1 : 0;
-    }
+    apply_target_to_thread(event, thread_num);
 }
 
 void on_work(ompt_work_t work_type,
@@ -390,8 +419,12 @@ int ompt_initialize(ompt_function_lookup_t lookup,
     }
 
     tool_start = Clock::now();
-    max_mhz = env_double("AMR_RESCTRL_MAX_MHZ", max_mhz);
-    min_mhz = env_double("AMR_RESCTRL_MIN_MHZ", min_mhz);
+    max_mhz = env_double("AMR_DVFS_MAX_MHZ", env_double("AMR_RESCTRL_MAX_MHZ", max_mhz));
+    min_mhz = env_double("AMR_DVFS_MIN_MHZ", env_double("AMR_RESCTRL_MIN_MHZ", min_mhz));
+    if (min_mhz > max_mhz) {
+        std::swap(min_mhz, max_mhz);
+    }
+    debug = env_bool("AMR_DVFS_DEBUG", debug);
 
     const char *interval_text = std::getenv("AMR_OMPT_EXEC_INTERVAL");
     if (interval_text) {
@@ -399,16 +432,16 @@ int ompt_initialize(ompt_function_lookup_t lookup,
     }
 
     const char *output_path = std::getenv("AMR_OMPT_OUT");
-    output.open(output_path ? output_path : "ompt_resctrl/ompt_regions.csv");
+    output.open(output_path ? output_path : "ompt_dvfs/ompt_regions.csv");
     if (!output) {
-        std::fprintf(stderr, "[AMR-RESCTRL] failed to open output CSV\n");
+        std::fprintf(stderr, "[AMR-DVFS] failed to open output CSV\n");
         return 0;
     }
     write_header();
 
     auto set_callback = reinterpret_cast<ompt_set_callback_t>(lookup("ompt_set_callback"));
     if (!set_callback) {
-        std::fprintf(stderr, "[AMR-RESCTRL] ompt_set_callback is unavailable\n");
+        std::fprintf(stderr, "[AMR-DVFS] ompt_set_callback is unavailable\n");
         return 0;
     }
 
@@ -421,21 +454,31 @@ int ompt_initialize(ompt_function_lookup_t lookup,
     set_callback(ompt_callback_work,
                  reinterpret_cast<ompt_callback_t>(&on_work));
 
-    msr::msr_init();
-    msr::reset_freq_all();
+    msr_control_enabled = can_open_current_msr_for_write();
+    if (msr_control_enabled) {
+        msr::msr_init();
+        msr::reset_freq_all();
+    } else {
+        std::fprintf(stderr,
+                     "[AMR-DVFS] MSR write unavailable; recording timing and planned targets only\n");
+    }
 
     std::fprintf(stderr,
-                 "[AMR-RESCTRL] enabled, writing %s every %d execution(s) per region, "
-                 "MSR control %s\n",
-                 output_path ? output_path : "ompt_resctrl/ompt_regions.csv",
+                 "[AMR-DVFS] enabled, writing %s every %d execution(s) per region, "
+                 "target range %.0f-%.0f MHz, MSR control %s\n",
+                 output_path ? output_path : "ompt_dvfs/ompt_regions.csv",
                  output_exec_interval,
-                 AMR_RESCTRL_HAS_MSR ? "enabled" : "unavailable");
+                 min_mhz,
+                 max_mhz,
+                 msr_control_enabled ? "enabled" : "disabled");
     return 1;
 }
 
 void ompt_finalize(ompt_data_t *tool_data) {
     (void)tool_data;
-    msr::reset_freq_all();
+    if (msr_control_enabled) {
+        msr::reset_freq_all();
+    }
 
     std::lock_guard<std::mutex> lock(output_mutex);
     if (output) {

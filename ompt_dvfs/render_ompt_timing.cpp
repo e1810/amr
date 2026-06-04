@@ -154,7 +154,7 @@ int main(int argc, char **argv) {
         << width << ' ' << height << "\">\n";
     out << "<rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n";
     out << "<style>text{font-family:monospace;font-size:11px}.small{font-size:9px}</style>\n";
-    out << "<text x=\"12\" y=\"20\">OMPT resctrl timing, max="
+    out << "<text x=\"12\" y=\"20\">OMPT DVFS timing, max="
         << std::fixed << std::setprecision(3) << max_elapsed
         << " ms, max_target=" << std::setprecision(0) << max_target << " MHz</text>\n";
 

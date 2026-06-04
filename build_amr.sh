@@ -31,7 +31,7 @@ esac
     ompt_measure/render_ompt_timing.cpp -o ompt_measure/render_ompt_timing
 
 "$CXX" -std=c++17 -O2 -Wall -Wextra -pedantic -fPIC -shared "$OMP_FLAG" \
-    ompt_resctrl/ompt_resctrl.cpp -o ompt_resctrl/libompt_resctrl.so
+    ompt_dvfs/ompt_dvfs.cpp ompt_dvfs/msr_freq.cpp -o ompt_dvfs/libompt_dvfs.so
 
 "$CXX" -std=c++17 -O2 -Wall -Wextra -pedantic \
-    ompt_resctrl/render_ompt_timing.cpp -o ompt_resctrl/render_ompt_timing
+    ompt_dvfs/render_ompt_timing.cpp -o ompt_dvfs/render_ompt_timing
