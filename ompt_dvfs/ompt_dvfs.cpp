@@ -29,6 +29,7 @@ struct RegionState {
     double last_region_wall_ms = 0.0;
     std::vector<double> last_elapsed_ms;
     std::vector<double> last_target_mhz;
+    std::vector<double> last_measured_mhz;
 };
 
 struct ParallelEvent {
@@ -225,25 +226,26 @@ std::vector<double> plan_targets(const RegionState &region, std::size_t slots) {
         return targets;
     }
 
-    double max_work = 0.0;
+    constexpr double target_elapsed_fraction = 0.95;
+    std::vector<double> work_estimates(slots, 0.0);
+    double critical_elapsed_ms = 0.0;
     for (std::size_t i = 0; i < slots && i < region.last_elapsed_ms.size(); ++i) {
-        const double previous_target =
-            i < region.last_target_mhz.size() && region.last_target_mhz[i] > 0.0
-                ? region.last_target_mhz[i]
-                : max_mhz;
-        max_work = std::max(max_work, region.last_elapsed_ms[i] * previous_target);
+        const double previous_mhz =
+            i < region.last_measured_mhz.size() && region.last_measured_mhz[i] > 0.0
+                ? region.last_measured_mhz[i]
+                : (i < region.last_target_mhz.size() && region.last_target_mhz[i] > 0.0
+                       ? region.last_target_mhz[i]
+                       : max_mhz);
+        work_estimates[i] = region.last_elapsed_ms[i] * previous_mhz;
+        critical_elapsed_ms = std::max(critical_elapsed_ms, region.last_elapsed_ms[i]);
     }
-    if (max_work <= 0.0) {
+    const double target_elapsed_ms = critical_elapsed_ms * target_elapsed_fraction;
+    if (target_elapsed_ms <= 0.0) {
         return targets;
     }
 
     for (std::size_t i = 0; i < slots && i < region.last_elapsed_ms.size(); ++i) {
-        const double previous_target =
-            i < region.last_target_mhz.size() && region.last_target_mhz[i] > 0.0
-                ? region.last_target_mhz[i]
-                : max_mhz;
-        const double work = region.last_elapsed_ms[i] * previous_target;
-        targets[i] = std::clamp(max_mhz * (work / max_work), min_mhz, max_mhz);
+        targets[i] = std::clamp(work_estimates[i] / target_elapsed_ms, min_mhz, max_mhz);
     }
     return targets;
 }
@@ -350,12 +352,14 @@ void update_region_history(const ParallelEvent &event, int team_size) {
     RegionState &region = iter->second;
     region.last_elapsed_ms.assign(static_cast<std::size_t>(team_size), 0.0);
     region.last_target_mhz.assign(static_cast<std::size_t>(team_size), max_mhz);
+    region.last_measured_mhz.assign(static_cast<std::size_t>(team_size), -1.0);
     for (int tid = 0; tid < team_size; ++tid) {
         const std::size_t index = static_cast<std::size_t>(tid);
         region.last_elapsed_ms[index] =
             index < event.elapsed_ms.size() ? event.elapsed_ms[index] : 0.0;
         region.last_target_mhz[index] =
             index < event.target_mhz.size() ? event.target_mhz[index] : max_mhz;
+        region.last_measured_mhz[index] = measured_mhz_for_thread(event, index);
     }
 
     region.last_region_wall_ms = event.region_wall_ms;
