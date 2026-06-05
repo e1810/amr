@@ -41,9 +41,14 @@ struct ParallelEvent {
     std::vector<double> end_ms;
     std::vector<double> elapsed_ms;
     std::vector<double> target_mhz;
+    std::vector<msr::CounterSample> current_sample;
+    std::vector<std::uint64_t> aperf_delta;
+    std::vector<std::uint64_t> mperf_delta;
     std::vector<int> cpu_id;
+    std::vector<int> sample_cpu_id;
     std::vector<unsigned char> has_started;
     std::vector<unsigned char> work_started;
+    std::vector<unsigned char> sample_started;
     std::vector<unsigned char> resource_applied;
 };
 
@@ -56,8 +61,11 @@ std::ofstream output;
 int output_exec_interval = 1;
 double max_mhz = 4800.0;
 double min_mhz = 800.0;
+double bus_mhz = 100.0;
+double reference_mhz = 0.0;
 bool debug = false;
 bool msr_control_enabled = false;
+bool msr_counter_enabled = false;
 
 double now_ms() {
     const auto now = Clock::now();
@@ -96,7 +104,7 @@ bool env_bool(const char *name, bool fallback) {
     return std::atoi(text) != 0;
 }
 
-bool can_open_current_msr_for_write() {
+bool can_open_current_msr(int flags) {
     const int cpu = msr::current_cpu();
     if (cpu < 0) {
         return false;
@@ -104,13 +112,86 @@ bool can_open_current_msr_for_write() {
 
     char path[64];
     std::snprintf(path, sizeof(path), "/dev/cpu/%d/msr", cpu);
-    const int fd = open(path, O_WRONLY);
+    const int fd = open(path, flags);
     if (fd < 0) {
         return false;
     }
 
     close(fd);
     return true;
+}
+
+bool can_open_current_msr_for_read() {
+    return can_open_current_msr(O_RDONLY);
+}
+
+bool can_open_current_msr_for_write() {
+    return can_open_current_msr(O_WRONLY);
+}
+
+bool valid_counter_sample(const msr::CounterSample &sample) {
+    return sample.aperf != 0ULL && sample.mperf != 0ULL;
+}
+
+double reference_mhz_for_cpu(int cpu) {
+    if (reference_mhz > 0.0) {
+        return reference_mhz;
+    }
+    return msr::platform_base_mhz_on_cpu(cpu, bus_mhz);
+}
+
+void begin_thread_sample(ParallelEvent *event, std::size_t slot, int cpu) {
+    if (!msr_counter_enabled || cpu < 0 || slot >= event->current_sample.size()) {
+        return;
+    }
+
+    const msr::CounterSample sample = msr::sample_on_cpu(cpu);
+    if (!valid_counter_sample(sample)) {
+        return;
+    }
+
+    event->current_sample[slot] = sample;
+    event->sample_cpu_id[slot] = cpu;
+    event->sample_started[slot] = 1;
+}
+
+void end_thread_sample(ParallelEvent *event, std::size_t slot) {
+    if (!msr_counter_enabled || slot >= event->sample_started.size() ||
+        !event->sample_started[slot]) {
+        return;
+    }
+
+    event->sample_started[slot] = 0;
+    const int cpu = msr::current_cpu();
+    if (slot >= event->sample_cpu_id.size() || cpu != event->sample_cpu_id[slot]) {
+        return;
+    }
+
+    const msr::CounterSample first = event->current_sample[slot];
+    const msr::CounterSample second = msr::sample_on_cpu(cpu);
+    if (second.aperf <= first.aperf || second.mperf <= first.mperf) {
+        return;
+    }
+
+    event->aperf_delta[slot] += second.aperf - first.aperf;
+    event->mperf_delta[slot] += second.mperf - first.mperf;
+}
+
+double measured_mhz_for_thread(const ParallelEvent &event, std::size_t slot) {
+    if (slot >= event.aperf_delta.size() || slot >= event.mperf_delta.size() ||
+        event.aperf_delta[slot] == 0ULL || event.mperf_delta[slot] == 0ULL) {
+        return -1.0;
+    }
+
+    const int cpu = slot < event.sample_cpu_id.size() ? event.sample_cpu_id[slot] : -1;
+    const double base_mhz = reference_mhz_for_cpu(cpu);
+    if (base_mhz <= 0.0) {
+        return -1.0;
+    }
+
+    const msr::CounterSample first{0ULL, 0ULL};
+    const msr::CounterSample second{event.aperf_delta[slot], event.mperf_delta[slot]};
+    return msr::compute_freq_mhz(base_mhz, first, second);
 }
 
 void record_thread_end(ParallelEvent *event, unsigned int thread_num) {
@@ -125,11 +206,13 @@ void record_thread_end(ParallelEvent *event, unsigned int thread_num) {
 
     event->end_ms[slot] = now_ms();
     event->elapsed_ms[slot] += event->end_ms[slot] - event->current_start_ms[slot];
+    end_thread_sample(event, slot);
     event->work_started[slot] = 0;
 }
 
 std::vector<double> plan_targets(const RegionState &region, std::size_t slots) {
     std::vector<double> targets(slots, max_mhz);
+    return targets;
     if (region.executions <= 1 || region.last_elapsed_ms.empty()) {
         return targets;
     }
@@ -160,7 +243,7 @@ std::vector<double> plan_targets(const RegionState &region, std::size_t slots) {
 void write_header() {
     output << "parallel_id,region_id,region_exec,thread_id,team_size,"
            << "requested_threads,start_ms,end_ms,elapsed_ms,codeptr,"
-           << "cpu_id,target_mhz,resource_applied\n";
+           << "cpu_id,target_mhz,measured_mhz,resource_applied\n";
 }
 
 bool should_write_execution(const ParallelEvent &event) {
@@ -255,6 +338,7 @@ void write_event_csv(const ParallelEvent &event, int team_size) {
         const double elapsed = index < event.elapsed_ms.size() ? event.elapsed_ms[index] : 0.0;
         const int cpu = index < event.cpu_id.size() ? event.cpu_id[index] : -1;
         const double target = index < event.target_mhz.size() ? event.target_mhz[index] : max_mhz;
+        const double measured = measured_mhz_for_thread(event, index);
         const int applied =
             index < event.resource_applied.size() ? static_cast<int>(event.resource_applied[index]) : 0;
 
@@ -271,6 +355,7 @@ void write_event_csv(const ParallelEvent &event, int team_size) {
                << event.codeptr << ','
                << cpu << ','
                << target << ','
+               << measured << ','
                << applied << '\n';
     }
     output.flush();
@@ -304,9 +389,14 @@ void on_parallel_begin(ompt_data_t *encountering_task_data,
     event->current_start_ms.assign(slots, 0.0);
     event->end_ms.assign(slots, 0.0);
     event->elapsed_ms.assign(slots, 0.0);
+    event->current_sample.assign(slots, msr::CounterSample{0ULL, 0ULL});
+    event->aperf_delta.assign(slots, 0ULL);
+    event->mperf_delta.assign(slots, 0ULL);
     event->cpu_id.assign(slots, -1);
+    event->sample_cpu_id.assign(slots, -1);
     event->has_started.assign(slots, 0);
     event->work_started.assign(slots, 0);
+    event->sample_started.assign(slots, 0);
     event->resource_applied.assign(slots, 0);
 
     {
@@ -376,6 +466,7 @@ void on_work(ompt_work_t work_type,
         }
         event->current_start_ms[slot] = start;
         event->work_started[slot] = 1;
+        begin_thread_sample(event, slot, msr::current_cpu());
     } else if (endpoint == ompt_scope_end) {
         record_thread_end(event, thread_num);
     }
@@ -421,6 +512,8 @@ int ompt_initialize(ompt_function_lookup_t lookup,
     tool_start = Clock::now();
     max_mhz = env_double("AMR_DVFS_MAX_MHZ", env_double("AMR_RESCTRL_MAX_MHZ", max_mhz));
     min_mhz = env_double("AMR_DVFS_MIN_MHZ", env_double("AMR_RESCTRL_MIN_MHZ", min_mhz));
+    bus_mhz = env_double("AMR_DVFS_BUS_MHZ", bus_mhz);
+    reference_mhz = env_double("AMR_DVFS_BASE_MHZ", reference_mhz);
     if (min_mhz > max_mhz) {
         std::swap(min_mhz, max_mhz);
     }
@@ -454,23 +547,36 @@ int ompt_initialize(ompt_function_lookup_t lookup,
     set_callback(ompt_callback_work,
                  reinterpret_cast<ompt_callback_t>(&on_work));
 
+    msr_counter_enabled = can_open_current_msr_for_read();
     msr_control_enabled = can_open_current_msr_for_write();
-    if (msr_control_enabled) {
+    if (msr_counter_enabled || msr_control_enabled) {
         msr::msr_init();
+    }
+    if (msr_counter_enabled && reference_mhz <= 0.0) {
+        reference_mhz = msr::platform_base_mhz_on_cpu(msr::current_cpu(), bus_mhz);
+    }
+    if (msr_control_enabled) {
         msr::reset_freq_all();
     } else {
         std::fprintf(stderr,
                      "[AMR-DVFS] MSR write unavailable; recording timing and planned targets only\n");
     }
+    if (msr_counter_enabled && reference_mhz <= 0.0) {
+        std::fprintf(stderr,
+                     "[AMR-DVFS] MSR counters available, but base MHz is unknown; "
+                     "set AMR_DVFS_BASE_MHZ to enable measured_mhz\n");
+    }
 
     std::fprintf(stderr,
                  "[AMR-DVFS] enabled, writing %s every %d execution(s) per region, "
-                 "target range %.0f-%.0f MHz, MSR control %s\n",
+                 "target range %.0f-%.0f MHz, MSR control %s, counters %s, base %.0f MHz\n",
                  output_path ? output_path : "ompt_dvfs/ompt_regions.csv",
                  output_exec_interval,
                  min_mhz,
                  max_mhz,
-                 msr_control_enabled ? "enabled" : "disabled");
+                 msr_control_enabled ? "enabled" : "disabled",
+                 msr_counter_enabled ? "enabled" : "disabled",
+                 reference_mhz > 0.0 ? reference_mhz : 0.0);
     return 1;
 }
 

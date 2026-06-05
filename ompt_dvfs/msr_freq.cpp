@@ -125,6 +125,16 @@ double compute_freq_mhz(double base_mhz,
     return base_mhz * ratio;
 }
 
+double platform_base_mhz_on_cpu(int cpu, double bus_mhz) {
+    std::uint64_t platform_info = 0;
+    if (read_msr_on_cpu(cpu, 0xCE, &platform_info) != 0) return -1.0;
+
+    const int max_non_turbo_ratio = static_cast<int>((platform_info >> 8) & 0xFFULL);
+    if (max_non_turbo_ratio <= 0 || bus_mhz <= 0.0) return -1.0;
+
+    return static_cast<double>(max_non_turbo_ratio) * bus_mhz;
+}
+
 bool set_freq_on_cpu(int cpu, double freq_mhz, double bus_mhz) {
     (void)bus_mhz;
 

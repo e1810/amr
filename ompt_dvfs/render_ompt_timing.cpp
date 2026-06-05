@@ -21,6 +21,7 @@ struct TimingRow {
     double elapsed_ms = 0.0;
     int cpu_id = -1;
     double target_mhz = 0.0;
+    double measured_mhz = -1.0;
     bool resource_applied = false;
 };
 
@@ -61,6 +62,16 @@ bool should_render_region(const std::string &label) {
     return label == "heat_update" || label == "importance";
 }
 
+std::string mhz_text(double mhz) {
+    if (mhz <= 0.0) {
+        return "?";
+    }
+
+    std::ostringstream out;
+    out << std::fixed << std::setprecision(0) << mhz;
+    return out.str();
+}
+
 int main(int argc, char **argv) {
     if (argc < 3 || argc > 4) {
         std::cerr << "usage: " << argv[0] << " ompt_regions.csv output.svg [exec_interval]\n";
@@ -84,6 +95,7 @@ int main(int argc, char **argv) {
     int max_thread = 0;
     double max_elapsed = 0.0;
     double max_target = 0.0;
+    double max_measured = 0.0;
 
     while (std::getline(in, line)) {
         if (line.empty()) {
@@ -109,7 +121,10 @@ int main(int argc, char **argv) {
         if (f.size() > 11) {
             row.target_mhz = std::atof(f[11].c_str());
         }
-        if (f.size() > 12) {
+        if (f.size() > 13) {
+            row.measured_mhz = std::atof(f[12].c_str());
+            row.resource_applied = std::atoi(f[13].c_str()) != 0;
+        } else if (f.size() > 12) {
             row.resource_applied = std::atoi(f[12].c_str()) != 0;
         }
 
@@ -128,6 +143,7 @@ int main(int argc, char **argv) {
         max_thread = std::max(max_thread, row.thread_id);
         max_elapsed = std::max(max_elapsed, row.elapsed_ms);
         max_target = std::max(max_target, row.target_mhz);
+        max_measured = std::max(max_measured, row.measured_mhz);
     }
 
     if (events.empty()) {
@@ -137,7 +153,7 @@ int main(int argc, char **argv) {
 
     constexpr double left = 190.0;
     constexpr double top = 42.0;
-    constexpr double cell_w = 74.0;
+    constexpr double cell_w = 96.0;
     constexpr double row_h = 30.0;
     constexpr double right_pad = 32.0;
     constexpr double bottom_pad = 32.0;
@@ -156,7 +172,11 @@ int main(int argc, char **argv) {
     out << "<style>text{font-family:monospace;font-size:11px}.small{font-size:9px}</style>\n";
     out << "<text x=\"12\" y=\"20\">OMPT DVFS timing, max="
         << std::fixed << std::setprecision(3) << max_elapsed
-        << " ms, max_target=" << std::setprecision(0) << max_target << " MHz</text>\n";
+        << " ms, max_target=" << std::setprecision(0) << max_target << " MHz";
+    if (max_measured > 0.0) {
+        out << ", max_measured=" << std::setprecision(0) << max_measured << " MHz";
+    }
+    out << "</text>\n";
 
     for (int tid = 0; tid <= max_thread; ++tid) {
         const double x = left + cell_w * static_cast<double>(tid) + cell_w * 0.5;
@@ -191,6 +211,7 @@ int main(int argc, char **argv) {
                 << ", thread " << row.thread_id
                 << ", cpu " << row.cpu_id
                 << ", target " << std::fixed << std::setprecision(0) << row.target_mhz << " MHz"
+                << ", measured " << mhz_text(row.measured_mhz) << " MHz"
                 << ", elapsed " << std::setprecision(6) << row.elapsed_ms << " ms"
                 << ", applied " << (row.resource_applied ? "yes" : "no")
                 << "</title></rect>\n";
@@ -203,7 +224,8 @@ int main(int argc, char **argv) {
             out << "<text class=\"small\" x=\"" << x + 0.5 * (cell_w - 3.0)
                 << "\" y=\"" << y + 23.0
                 << "\" text-anchor=\"middle\">c" << row.cpu_id
-                << ' ' << std::fixed << std::setprecision(0) << row.target_mhz << "M</text>\n";
+                << ' ' << mhz_text(row.target_mhz) << '/' << mhz_text(row.measured_mhz)
+                << "M</text>\n";
         }
         ++row_index;
     }
