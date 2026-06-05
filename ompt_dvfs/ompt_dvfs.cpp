@@ -212,7 +212,7 @@ void record_thread_end(ParallelEvent *event, unsigned int thread_num) {
 
 std::vector<double> plan_targets(const RegionState &region, std::size_t slots) {
     std::vector<double> targets(slots, max_mhz);
-    return targets;
+    //return targets; // set all max
     if (region.executions <= 1 || region.last_elapsed_ms.empty()) {
         return targets;
     }

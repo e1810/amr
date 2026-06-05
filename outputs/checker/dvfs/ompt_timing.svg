@@ -1,529 +1,289 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 606 1274">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 674">
 <rect width="100%" height="100%" fill="white"/>
 <style>text{font-family:monospace;font-size:11px}.small{font-size:9px}</style>
-<text x="12" y="20">OMPT DVFS timing, max=4.222 ms, max_target=4800 MHz, max_measured=4600 MHz</text>
-<text class="small" x="238" y="34" text-anchor="middle">t0</text>
-<text class="small" x="334" y="34" text-anchor="middle">t1</text>
-<text class="small" x="430" y="34" text-anchor="middle">t2</text>
-<text class="small" x="526" y="34" text-anchor="middle">t3</text>
-<text x="8" y="60">s100 heat_update</text>
-<rect x="190" y="42" width="93" height="27" fill="rgb(222,60,61)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4236 MHz, elapsed 3.769583 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="53.000000" text-anchor="middle">3.77 ms</text>
-<text class="small" x="236.50" y="65.00" text-anchor="middle">c32 4800/4236M</text>
-<rect x="286.00" y="42.00" width="93.00" height="27.00" fill="rgb(220,38,38)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4235 MHz, elapsed 4.221815 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="53.000000" text-anchor="middle">4.22 ms</text>
-<text class="small" x="332.50" y="65.00" text-anchor="middle">c40 4800/4235M</text>
-<rect x="382.00" y="42.00" width="93.00" height="27.00" fill="rgb(220,39,39)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4235 MHz, elapsed 4.200271 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="53.000000" text-anchor="middle">4.20 ms</text>
-<text class="small" x="428.50" y="65.00" text-anchor="middle">c16 4800/4235M</text>
-<rect x="478.00" y="42.00" width="93.00" height="27.00" fill="rgb(223,65,67)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4236 MHz, elapsed 3.665363 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="53.000000" text-anchor="middle">3.67 ms</text>
-<text class="small" x="524.50" y="65.00" text-anchor="middle">c56 4800/4236M</text>
-<text x="8" y="90.00">s100 importance</text>
-<rect x="190.00" y="72.00" width="93.00" height="27.00" fill="rgb(238,235,244)" stroke="#334155" stroke-width="0.35"><title>step 100, importance, thread 0, cpu 32, target 4800 MHz, measured 4200 MHz, elapsed 0.222554 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="83.000000" text-anchor="middle">0.22 ms</text>
-<text class="small" x="236.50" y="95.00" text-anchor="middle">c32 4800/4200M</text>
-<rect x="286.00" y="72.00" width="93.00" height="27.00" fill="rgb(238,234,242)" stroke="#334155" stroke-width="0.35"><title>step 100, importance, thread 1, cpu 40, target 4800 MHz, measured 4200 MHz, elapsed 0.244608 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="83.000000" text-anchor="middle">0.24 ms</text>
-<text class="small" x="332.50" y="95.00" text-anchor="middle">c40 4800/4200M</text>
-<rect x="382.00" y="72.00" width="93.00" height="27.00" fill="rgb(238,234,243)" stroke="#334155" stroke-width="0.35"><title>step 100, importance, thread 2, cpu 16, target 4800 MHz, measured 4200 MHz, elapsed 0.242952 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="83.000000" text-anchor="middle">0.24 ms</text>
-<text class="small" x="428.50" y="95.00" text-anchor="middle">c16 4800/4200M</text>
-<rect x="478.00" y="72.00" width="93.00" height="27.00" fill="rgb(238,236,244)" stroke="#334155" stroke-width="0.35"><title>step 100, importance, thread 3, cpu 56, target 4800 MHz, measured 4200 MHz, elapsed 0.210647 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="83.000000" text-anchor="middle">0.21 ms</text>
-<text class="small" x="524.50" y="95.00" text-anchor="middle">c56 4800/4200M</text>
-<text x="8" y="120.00">s200 heat_update</text>
-<rect x="190.00" y="102.00" width="93.00" height="27.00" fill="rgb(223,74,75)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4600 MHz, elapsed 3.499693 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="113.000000" text-anchor="middle">3.50 ms</text>
-<text class="small" x="236.50" y="125.00" text-anchor="middle">c32 4800/4600M</text>
-<rect x="286.00" y="102.00" width="93.00" height="27.00" fill="rgb(222,58,58)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4599 MHz, elapsed 3.824412 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="113.000000" text-anchor="middle">3.82 ms</text>
-<text class="small" x="332.50" y="125.00" text-anchor="middle">c40 4800/4599M</text>
-<rect x="382.00" y="102.00" width="93.00" height="27.00" fill="rgb(222,57,58)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4600 MHz, elapsed 3.836834 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="113.000000" text-anchor="middle">3.84 ms</text>
-<text class="small" x="428.50" y="125.00" text-anchor="middle">c16 4800/4600M</text>
-<rect x="478.00" y="102.00" width="93.00" height="27.00" fill="rgb(224,82,84)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4600 MHz, elapsed 3.333487 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="113.000000" text-anchor="middle">3.33 ms</text>
-<text class="small" x="524.50" y="125.00" text-anchor="middle">c56 4800/4600M</text>
-<text x="8" y="150.00">s200 importance</text>
-<rect x="190.00" y="132.00" width="93.00" height="27.00" fill="rgb(238,236,244)" stroke="#334155" stroke-width="0.35"><title>step 200, importance, thread 0, cpu 32, target 4800 MHz, measured 4376 MHz, elapsed 0.211670 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="143.000000" text-anchor="middle">0.21 ms</text>
-<text class="small" x="236.50" y="155.00" text-anchor="middle">c32 4800/4376M</text>
-<rect x="286.00" y="132.00" width="93.00" height="27.00" fill="rgb(238,235,243)" stroke="#334155" stroke-width="0.35"><title>step 200, importance, thread 1, cpu 40, target 4800 MHz, measured 4367 MHz, elapsed 0.232656 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="143.000000" text-anchor="middle">0.23 ms</text>
-<text class="small" x="332.50" y="155.00" text-anchor="middle">c40 4800/4367M</text>
-<rect x="382.00" y="132.00" width="93.00" height="27.00" fill="rgb(238,235,243)" stroke="#334155" stroke-width="0.35"><title>step 200, importance, thread 2, cpu 16, target 4800 MHz, measured 4368 MHz, elapsed 0.231681 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="143.000000" text-anchor="middle">0.23 ms</text>
-<text class="small" x="428.50" y="155.00" text-anchor="middle">c16 4800/4368M</text>
-<rect x="478.00" y="132.00" width="93.00" height="27.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 200, importance, thread 3, cpu 56, target 4800 MHz, measured 4380 MHz, elapsed 0.201868 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="143.000000" text-anchor="middle">0.20 ms</text>
-<text class="small" x="524.50" y="155.00" text-anchor="middle">c56 4800/4380M</text>
-<text x="8" y="180.00">s300 heat_update</text>
-<rect x="190.00" y="162.00" width="93.00" height="27.00" fill="rgb(223,67,68)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4338 MHz, elapsed 3.638075 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="173.000000" text-anchor="middle">3.64 ms</text>
-<text class="small" x="236.50" y="185.00" text-anchor="middle">c32 4800/4338M</text>
-<rect x="286.00" y="162.00" width="93.00" height="27.00" fill="rgb(221,47,47)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4339 MHz, elapsed 4.043407 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="173.000000" text-anchor="middle">4.04 ms</text>
-<text class="small" x="332.50" y="185.00" text-anchor="middle">c40 4800/4339M</text>
-<rect x="382.00" y="162.00" width="93.00" height="27.00" fill="rgb(221,46,47)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4338 MHz, elapsed 4.051717 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="173.000000" text-anchor="middle">4.05 ms</text>
-<text class="small" x="428.50" y="185.00" text-anchor="middle">c16 4800/4338M</text>
-<rect x="478.00" y="162.00" width="93.00" height="27.00" fill="rgb(223,71,73)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4339 MHz, elapsed 3.550435 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="173.000000" text-anchor="middle">3.55 ms</text>
-<text class="small" x="524.50" y="185.00" text-anchor="middle">c56 4800/4339M</text>
-<text x="8" y="210.00">s300 importance</text>
-<rect x="190.00" y="192.00" width="93.00" height="27.00" fill="rgb(238,235,244)" stroke="#334155" stroke-width="0.35"><title>step 300, importance, thread 0, cpu 32, target 4800 MHz, measured 4300 MHz, elapsed 0.214005 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="203.000000" text-anchor="middle">0.21 ms</text>
-<text class="small" x="236.50" y="215.00" text-anchor="middle">c32 4800/4300M</text>
-<rect x="286.00" y="192.00" width="93.00" height="27.00" fill="rgb(238,234,243)" stroke="#334155" stroke-width="0.35"><title>step 300, importance, thread 1, cpu 40, target 4800 MHz, measured 4300 MHz, elapsed 0.234809 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="203.000000" text-anchor="middle">0.23 ms</text>
-<text class="small" x="332.50" y="215.00" text-anchor="middle">c40 4800/4300M</text>
-<rect x="382.00" y="192.00" width="93.00" height="27.00" fill="rgb(238,234,243)" stroke="#334155" stroke-width="0.35"><title>step 300, importance, thread 2, cpu 16, target 4800 MHz, measured 4300 MHz, elapsed 0.235549 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="203.000000" text-anchor="middle">0.24 ms</text>
-<text class="small" x="428.50" y="215.00" text-anchor="middle">c16 4800/4300M</text>
-<rect x="478.00" y="192.00" width="93.00" height="27.00" fill="rgb(238,236,244)" stroke="#334155" stroke-width="0.35"><title>step 300, importance, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 0.204487 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="203.000000" text-anchor="middle">0.20 ms</text>
-<text class="small" x="524.50" y="215.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="240.00">s400 heat_update</text>
-<rect x="190.00" y="222.00" width="93.00" height="27.00" fill="rgb(222,61,62)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4300 MHz, elapsed 3.750619 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="233.000000" text-anchor="middle">3.75 ms</text>
-<text class="small" x="236.50" y="245.00" text-anchor="middle">c32 4800/4300M</text>
-<rect x="286.00" y="222.00" width="93.00" height="27.00" fill="rgb(221,45,46)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4300 MHz, elapsed 4.072256 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="233.000000" text-anchor="middle">4.07 ms</text>
-<text class="small" x="332.50" y="245.00" text-anchor="middle">c40 4800/4300M</text>
-<rect x="382.00" y="222.00" width="93.00" height="27.00" fill="rgb(221,46,46)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4300 MHz, elapsed 4.066034 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="233.000000" text-anchor="middle">4.07 ms</text>
-<text class="small" x="428.50" y="245.00" text-anchor="middle">c16 4800/4300M</text>
-<rect x="478.00" y="222.00" width="93.00" height="27.00" fill="rgb(223,71,72)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 3.551926 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="233.000000" text-anchor="middle">3.55 ms</text>
-<text class="small" x="524.50" y="245.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="270.00">s400 importance</text>
-<rect x="190.00" y="252.00" width="93.00" height="27.00" fill="rgb(238,236,244)" stroke="#334155" stroke-width="0.35"><title>step 400, importance, thread 0, cpu 32, target 4800 MHz, measured 4300 MHz, elapsed 0.211510 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="263.000000" text-anchor="middle">0.21 ms</text>
-<text class="small" x="236.50" y="275.00" text-anchor="middle">c32 4800/4300M</text>
-<rect x="286.00" y="252.00" width="93.00" height="27.00" fill="rgb(238,235,243)" stroke="#334155" stroke-width="0.35"><title>step 400, importance, thread 1, cpu 40, target 4800 MHz, measured 4300 MHz, elapsed 0.231703 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="263.000000" text-anchor="middle">0.23 ms</text>
-<text class="small" x="332.50" y="275.00" text-anchor="middle">c40 4800/4300M</text>
-<rect x="382.00" y="252.00" width="93.00" height="27.00" fill="rgb(238,234,243)" stroke="#334155" stroke-width="0.35"><title>step 400, importance, thread 2, cpu 16, target 4800 MHz, measured 4300 MHz, elapsed 0.234076 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="263.000000" text-anchor="middle">0.23 ms</text>
-<text class="small" x="428.50" y="275.00" text-anchor="middle">c16 4800/4300M</text>
-<rect x="478.00" y="252.00" width="93.00" height="27.00" fill="rgb(238,236,244)" stroke="#334155" stroke-width="0.35"><title>step 400, importance, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 0.205360 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="263.000000" text-anchor="middle">0.21 ms</text>
-<text class="small" x="524.50" y="275.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="300.00">s500 heat_update</text>
-<rect x="190.00" y="282.00" width="93.00" height="27.00" fill="rgb(223,68,69)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4374 MHz, elapsed 3.616464 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="293.000000" text-anchor="middle">3.62 ms</text>
-<text class="small" x="236.50" y="305.00" text-anchor="middle">c32 4800/4374M</text>
-<rect x="286.00" y="282.00" width="93.00" height="27.00" fill="rgb(221,53,53)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4374 MHz, elapsed 3.923802 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="293.000000" text-anchor="middle">3.92 ms</text>
-<text class="small" x="332.50" y="305.00" text-anchor="middle">c40 4800/4374M</text>
-<rect x="382.00" y="282.00" width="93.00" height="27.00" fill="rgb(221,52,52)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4374 MHz, elapsed 3.940280 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="293.000000" text-anchor="middle">3.94 ms</text>
-<text class="small" x="428.50" y="305.00" text-anchor="middle">c16 4800/4374M</text>
-<rect x="478.00" y="282.00" width="93.00" height="27.00" fill="rgb(223,75,76)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4374 MHz, elapsed 3.476896 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="293.000000" text-anchor="middle">3.48 ms</text>
-<text class="small" x="524.50" y="305.00" text-anchor="middle">c56 4800/4374M</text>
-<text x="8" y="330.00">s500 importance</text>
-<rect x="190.00" y="312.00" width="93.00" height="27.00" fill="rgb(238,235,244)" stroke="#334155" stroke-width="0.35"><title>step 500, importance, thread 0, cpu 32, target 4800 MHz, measured 4300 MHz, elapsed 0.214075 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="323.000000" text-anchor="middle">0.21 ms</text>
-<text class="small" x="236.50" y="335.00" text-anchor="middle">c32 4800/4300M</text>
-<rect x="286.00" y="312.00" width="93.00" height="27.00" fill="rgb(238,235,243)" stroke="#334155" stroke-width="0.35"><title>step 500, importance, thread 1, cpu 40, target 4800 MHz, measured 4299 MHz, elapsed 0.231179 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="323.000000" text-anchor="middle">0.23 ms</text>
-<text class="small" x="332.50" y="335.00" text-anchor="middle">c40 4800/4299M</text>
-<rect x="382.00" y="312.00" width="93.00" height="27.00" fill="rgb(238,235,243)" stroke="#334155" stroke-width="0.35"><title>step 500, importance, thread 2, cpu 16, target 4800 MHz, measured 4300 MHz, elapsed 0.231385 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="323.000000" text-anchor="middle">0.23 ms</text>
-<text class="small" x="428.50" y="335.00" text-anchor="middle">c16 4800/4300M</text>
-<rect x="478.00" y="312.00" width="93.00" height="27.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 500, importance, thread 3, cpu 56, target 4800 MHz, measured 4299 MHz, elapsed 0.203170 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="323.000000" text-anchor="middle">0.20 ms</text>
-<text class="small" x="524.50" y="335.00" text-anchor="middle">c56 4800/4299M</text>
-<text x="8" y="360.00">s600 heat_update</text>
-<rect x="190.00" y="342.00" width="93.00" height="27.00" fill="rgb(223,68,70)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4383 MHz, elapsed 3.607786 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="353.000000" text-anchor="middle">3.61 ms</text>
-<text class="small" x="236.50" y="365.00" text-anchor="middle">c32 4800/4383M</text>
-<rect x="286.00" y="342.00" width="93.00" height="27.00" fill="rgb(222,55,56)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4383 MHz, elapsed 3.873936 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="353.000000" text-anchor="middle">3.87 ms</text>
-<text class="small" x="332.50" y="365.00" text-anchor="middle">c40 4800/4383M</text>
-<rect x="382.00" y="342.00" width="93.00" height="27.00" fill="rgb(222,55,56)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4384 MHz, elapsed 3.874016 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="353.000000" text-anchor="middle">3.87 ms</text>
-<text class="small" x="428.50" y="365.00" text-anchor="middle">c16 4800/4384M</text>
-<rect x="478.00" y="342.00" width="93.00" height="27.00" fill="rgb(224,77,79)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4382 MHz, elapsed 3.433647 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="353.000000" text-anchor="middle">3.43 ms</text>
-<text class="small" x="524.50" y="365.00" text-anchor="middle">c56 4800/4382M</text>
-<text x="8" y="390.00">s600 importance</text>
-<rect x="190.00" y="372.00" width="93.00" height="27.00" fill="rgb(238,236,244)" stroke="#334155" stroke-width="0.35"><title>step 600, importance, thread 0, cpu 32, target 4800 MHz, measured 4378 MHz, elapsed 0.208133 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="383.000000" text-anchor="middle">0.21 ms</text>
-<text class="small" x="236.50" y="395.00" text-anchor="middle">c32 4800/4378M</text>
-<rect x="286.00" y="372.00" width="93.00" height="27.00" fill="rgb(238,235,243)" stroke="#334155" stroke-width="0.35"><title>step 600, importance, thread 1, cpu 40, target 4800 MHz, measured 4372 MHz, elapsed 0.224022 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="383.000000" text-anchor="middle">0.22 ms</text>
-<text class="small" x="332.50" y="395.00" text-anchor="middle">c40 4800/4372M</text>
-<rect x="382.00" y="372.00" width="93.00" height="27.00" fill="rgb(238,235,244)" stroke="#334155" stroke-width="0.35"><title>step 600, importance, thread 2, cpu 16, target 4800 MHz, measured 4372 MHz, elapsed 0.223628 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="383.000000" text-anchor="middle">0.22 ms</text>
-<text class="small" x="428.50" y="395.00" text-anchor="middle">c16 4800/4372M</text>
-<rect x="478.00" y="372.00" width="93.00" height="27.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 600, importance, thread 3, cpu 56, target 4800 MHz, measured 4381 MHz, elapsed 0.197747 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="383.000000" text-anchor="middle">0.20 ms</text>
-<text class="small" x="524.50" y="395.00" text-anchor="middle">c56 4800/4381M</text>
-<text x="8" y="420.00">s700 heat_update</text>
-<rect x="190.00" y="402.00" width="93.00" height="27.00" fill="rgb(223,68,70)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4300 MHz, elapsed 3.607472 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="413.000000" text-anchor="middle">3.61 ms</text>
-<text class="small" x="236.50" y="425.00" text-anchor="middle">c32 4800/4300M</text>
-<rect x="286.00" y="402.00" width="93.00" height="27.00" fill="rgb(221,54,55)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4300 MHz, elapsed 3.889949 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="413.000000" text-anchor="middle">3.89 ms</text>
-<text class="small" x="332.50" y="425.00" text-anchor="middle">c40 4800/4300M</text>
-<rect x="382.00" y="402.00" width="93.00" height="27.00" fill="rgb(222,54,55)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4299 MHz, elapsed 3.887286 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="413.000000" text-anchor="middle">3.89 ms</text>
-<text class="small" x="428.50" y="425.00" text-anchor="middle">c16 4800/4299M</text>
-<rect x="478.00" y="402.00" width="93.00" height="27.00" fill="rgb(223,75,76)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 3.480765 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="413.000000" text-anchor="middle">3.48 ms</text>
-<text class="small" x="524.50" y="425.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="450.00">s700 importance</text>
-<rect x="190.00" y="432.00" width="93.00" height="27.00" fill="rgb(238,236,244)" stroke="#334155" stroke-width="0.35"><title>step 700, importance, thread 0, cpu 32, target 4800 MHz, measured 4300 MHz, elapsed 0.206283 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="443.000000" text-anchor="middle">0.21 ms</text>
-<text class="small" x="236.50" y="455.00" text-anchor="middle">c32 4800/4300M</text>
-<rect x="286.00" y="432.00" width="93.00" height="27.00" fill="rgb(238,235,243)" stroke="#334155" stroke-width="0.35"><title>step 700, importance, thread 1, cpu 40, target 4800 MHz, measured 4300 MHz, elapsed 0.223912 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="443.000000" text-anchor="middle">0.22 ms</text>
-<text class="small" x="332.50" y="455.00" text-anchor="middle">c40 4800/4300M</text>
-<rect x="382.00" y="432.00" width="93.00" height="27.00" fill="rgb(238,235,243)" stroke="#334155" stroke-width="0.35"><title>step 700, importance, thread 2, cpu 16, target 4800 MHz, measured 4300 MHz, elapsed 0.224073 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="443.000000" text-anchor="middle">0.22 ms</text>
-<text class="small" x="428.50" y="455.00" text-anchor="middle">c16 4800/4300M</text>
-<rect x="478.00" y="432.00" width="93.00" height="27.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 700, importance, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 0.200051 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="443.000000" text-anchor="middle">0.20 ms</text>
-<text class="small" x="524.50" y="455.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="480.00">s800 heat_update</text>
-<rect x="190.00" y="462.00" width="93.00" height="27.00" fill="rgb(223,68,69)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4300 MHz, elapsed 3.611805 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="473.000000" text-anchor="middle">3.61 ms</text>
-<text class="small" x="236.50" y="485.00" text-anchor="middle">c32 4800/4300M</text>
-<rect x="286.00" y="462.00" width="93.00" height="27.00" fill="rgb(222,60,61)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4300 MHz, elapsed 3.771996 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="473.000000" text-anchor="middle">3.77 ms</text>
-<text class="small" x="332.50" y="485.00" text-anchor="middle">c40 4800/4300M</text>
-<rect x="382.00" y="462.00" width="93.00" height="27.00" fill="rgb(222,61,62)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4300 MHz, elapsed 3.752845 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="473.000000" text-anchor="middle">3.75 ms</text>
-<text class="small" x="428.50" y="485.00" text-anchor="middle">c16 4800/4300M</text>
-<rect x="478.00" y="462.00" width="93.00" height="27.00" fill="rgb(223,75,77)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 3.461388 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="473.000000" text-anchor="middle">3.46 ms</text>
-<text class="small" x="524.50" y="485.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="510.00">s800 importance</text>
-<rect x="190.00" y="492.00" width="93.00" height="27.00" fill="rgb(238,236,244)" stroke="#334155" stroke-width="0.35"><title>step 800, importance, thread 0, cpu 32, target 4800 MHz, measured 4300 MHz, elapsed 0.207359 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="503.000000" text-anchor="middle">0.21 ms</text>
-<text class="small" x="236.50" y="515.00" text-anchor="middle">c32 4800/4300M</text>
-<rect x="286.00" y="492.00" width="93.00" height="27.00" fill="rgb(238,235,244)" stroke="#334155" stroke-width="0.35"><title>step 800, importance, thread 1, cpu 40, target 4800 MHz, measured 4300 MHz, elapsed 0.214382 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="503.000000" text-anchor="middle">0.21 ms</text>
-<text class="small" x="332.50" y="515.00" text-anchor="middle">c40 4800/4300M</text>
-<rect x="382.00" y="492.00" width="93.00" height="27.00" fill="rgb(238,235,244)" stroke="#334155" stroke-width="0.35"><title>step 800, importance, thread 2, cpu 16, target 4800 MHz, measured 4300 MHz, elapsed 0.214209 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="503.000000" text-anchor="middle">0.21 ms</text>
-<text class="small" x="428.50" y="515.00" text-anchor="middle">c16 4800/4300M</text>
-<rect x="478.00" y="492.00" width="93.00" height="27.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 800, importance, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 0.198494 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="503.000000" text-anchor="middle">0.20 ms</text>
-<text class="small" x="524.50" y="515.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="540.00">s900 heat_update</text>
-<rect x="190.00" y="522.00" width="93.00" height="27.00" fill="rgb(223,72,73)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4325 MHz, elapsed 3.539627 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="533.000000" text-anchor="middle">3.54 ms</text>
-<text class="small" x="236.50" y="545.00" text-anchor="middle">c32 4800/4325M</text>
-<rect x="286.00" y="522.00" width="93.00" height="27.00" fill="rgb(224,84,86)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4599 MHz, elapsed 3.291864 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="533.000000" text-anchor="middle">3.29 ms</text>
-<text class="small" x="332.50" y="545.00" text-anchor="middle">c40 4800/4599M</text>
-<rect x="382.00" y="522.00" width="93.00" height="27.00" fill="rgb(224,84,86)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4600 MHz, elapsed 3.283555 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="533.000000" text-anchor="middle">3.28 ms</text>
-<text class="small" x="428.50" y="545.00" text-anchor="middle">c16 4800/4600M</text>
-<rect x="478.00" y="522.00" width="93.00" height="27.00" fill="rgb(225,88,90)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4600 MHz, elapsed 3.201085 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="533.000000" text-anchor="middle">3.20 ms</text>
-<text class="small" x="524.50" y="545.00" text-anchor="middle">c56 4800/4600M</text>
-<text x="8" y="570.00">s900 importance</text>
-<rect x="190.00" y="552.00" width="93.00" height="27.00" fill="rgb(238,236,244)" stroke="#334155" stroke-width="0.35"><title>step 900, importance, thread 0, cpu 32, target 4800 MHz, measured 4125 MHz, elapsed 0.211454 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="563.000000" text-anchor="middle">0.21 ms</text>
-<text class="small" x="236.50" y="575.00" text-anchor="middle">c32 4800/4125M</text>
-<rect x="286.00" y="552.00" width="93.00" height="27.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 900, importance, thread 1, cpu 40, target 4800 MHz, measured 4380 MHz, elapsed 0.198995 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="563.000000" text-anchor="middle">0.20 ms</text>
-<text class="small" x="332.50" y="575.00" text-anchor="middle">c40 4800/4380M</text>
-<rect x="382.00" y="552.00" width="93.00" height="27.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 900, importance, thread 2, cpu 16, target 4800 MHz, measured 4380 MHz, elapsed 0.198580 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="563.000000" text-anchor="middle">0.20 ms</text>
-<text class="small" x="428.50" y="575.00" text-anchor="middle">c16 4800/4380M</text>
-<rect x="478.00" y="552.00" width="93.00" height="27.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 900, importance, thread 3, cpu 56, target 4800 MHz, measured 4383 MHz, elapsed 0.194202 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="563.000000" text-anchor="middle">0.19 ms</text>
-<text class="small" x="524.50" y="575.00" text-anchor="middle">c56 4800/4383M</text>
-<text x="8" y="600.00">s1000 heat_update</text>
-<rect x="190.00" y="582.00" width="93.00" height="27.00" fill="rgb(224,87,89)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4557 MHz, elapsed 3.237231 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="593.000000" text-anchor="middle">3.24 ms</text>
-<text class="small" x="236.50" y="605.00" text-anchor="middle">c32 4800/4557M</text>
-<rect x="286.00" y="582.00" width="93.00" height="27.00" fill="rgb(225,98,100)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4558 MHz, elapsed 3.006563 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="593.000000" text-anchor="middle">3.01 ms</text>
-<text class="small" x="332.50" y="605.00" text-anchor="middle">c40 4800/4558M</text>
-<rect x="382.00" y="582.00" width="93.00" height="27.00" fill="rgb(225,98,100)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4558 MHz, elapsed 3.007128 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="593.000000" text-anchor="middle">3.01 ms</text>
-<text class="small" x="428.50" y="605.00" text-anchor="middle">c16 4800/4558M</text>
-<rect x="478.00" y="582.00" width="93.00" height="27.00" fill="rgb(225,90,93)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4556 MHz, elapsed 3.159392 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="593.000000" text-anchor="middle">3.16 ms</text>
-<text class="small" x="524.50" y="605.00" text-anchor="middle">c56 4800/4556M</text>
-<text x="8" y="630.00">s1000 importance</text>
-<rect x="190.00" y="612.00" width="93.00" height="27.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 1000, importance, thread 0, cpu 32, target 4800 MHz, measured 4300 MHz, elapsed 0.196945 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="623.000000" text-anchor="middle">0.20 ms</text>
-<text class="small" x="236.50" y="635.00" text-anchor="middle">c32 4800/4300M</text>
-<rect x="286.00" y="612.00" width="93.00" height="27.00" fill="rgb(238,237,246)" stroke="#334155" stroke-width="0.35"><title>step 1000, importance, thread 1, cpu 40, target 4800 MHz, measured 4300 MHz, elapsed 0.184799 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="623.000000" text-anchor="middle">0.18 ms</text>
-<text class="small" x="332.50" y="635.00" text-anchor="middle">c40 4800/4300M</text>
-<rect x="382.00" y="612.00" width="93.00" height="27.00" fill="rgb(238,237,246)" stroke="#334155" stroke-width="0.35"><title>step 1000, importance, thread 2, cpu 16, target 4800 MHz, measured 4300 MHz, elapsed 0.183823 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="623.000000" text-anchor="middle">0.18 ms</text>
-<text class="small" x="428.50" y="635.00" text-anchor="middle">c16 4800/4300M</text>
-<rect x="478.00" y="612.00" width="93.00" height="27.00" fill="rgb(238,237,245)" stroke="#334155" stroke-width="0.35"><title>step 1000, importance, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 0.192532 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="623.000000" text-anchor="middle">0.19 ms</text>
-<text class="small" x="524.50" y="635.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="660.00">s1100 heat_update</text>
-<rect x="190.00" y="642.00" width="93.00" height="27.00" fill="rgb(223,76,78)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4228 MHz, elapsed 3.452541 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="653.000000" text-anchor="middle">3.45 ms</text>
-<text class="small" x="236.50" y="665.00" text-anchor="middle">c32 4800/4228M</text>
-<rect x="286.00" y="642.00" width="93.00" height="27.00" fill="rgb(226,99,102)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4299 MHz, elapsed 2.977491 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="653.000000" text-anchor="middle">2.98 ms</text>
-<text class="small" x="332.50" y="665.00" text-anchor="middle">c40 4800/4299M</text>
-<rect x="382.00" y="642.00" width="93.00" height="27.00" fill="rgb(226,99,102)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4300 MHz, elapsed 2.979328 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="653.000000" text-anchor="middle">2.98 ms</text>
-<text class="small" x="428.50" y="665.00" text-anchor="middle">c16 4800/4300M</text>
-<rect x="478.00" y="642.00" width="93.00" height="27.00" fill="rgb(224,84,86)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 3.289192 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="653.000000" text-anchor="middle">3.29 ms</text>
-<text class="small" x="524.50" y="665.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="690.00">s1100 importance</text>
-<rect x="190.00" y="672.00" width="93.00" height="27.00" fill="rgb(238,236,244)" stroke="#334155" stroke-width="0.35"><title>step 1100, importance, thread 0, cpu 32, target 4800 MHz, measured 4100 MHz, elapsed 0.206139 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="683.000000" text-anchor="middle">0.21 ms</text>
-<text class="small" x="236.50" y="695.00" text-anchor="middle">c32 4800/4100M</text>
-<rect x="286.00" y="672.00" width="93.00" height="27.00" fill="rgb(238,237,246)" stroke="#334155" stroke-width="0.35"><title>step 1100, importance, thread 1, cpu 40, target 4800 MHz, measured 4300 MHz, elapsed 0.172636 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="683.000000" text-anchor="middle">0.17 ms</text>
-<text class="small" x="332.50" y="695.00" text-anchor="middle">c40 4800/4300M</text>
-<rect x="382.00" y="672.00" width="93.00" height="27.00" fill="rgb(238,238,246)" stroke="#334155" stroke-width="0.35"><title>step 1100, importance, thread 2, cpu 16, target 4800 MHz, measured 4300 MHz, elapsed 0.168778 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="683.000000" text-anchor="middle">0.17 ms</text>
-<text class="small" x="428.50" y="695.00" text-anchor="middle">c16 4800/4300M</text>
-<rect x="478.00" y="672.00" width="93.00" height="27.00" fill="rgb(238,237,245)" stroke="#334155" stroke-width="0.35"><title>step 1100, importance, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 0.190017 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="683.000000" text-anchor="middle">0.19 ms</text>
-<text class="small" x="524.50" y="695.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="720.00">s1200 heat_update</text>
-<rect x="190.00" y="702.00" width="93.00" height="27.00" fill="rgb(223,76,78)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4147 MHz, elapsed 3.450789 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="713.000000" text-anchor="middle">3.45 ms</text>
-<text class="small" x="236.50" y="725.00" text-anchor="middle">c32 4800/4147M</text>
-<rect x="286.00" y="702.00" width="93.00" height="27.00" fill="rgb(227,110,113)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4299 MHz, elapsed 2.755567 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="713.000000" text-anchor="middle">2.76 ms</text>
-<text class="small" x="332.50" y="725.00" text-anchor="middle">c40 4800/4299M</text>
-<rect x="382.00" y="702.00" width="93.00" height="27.00" fill="rgb(227,110,113)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4299 MHz, elapsed 2.759734 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="713.000000" text-anchor="middle">2.76 ms</text>
-<text class="small" x="428.50" y="725.00" text-anchor="middle">c16 4800/4299M</text>
-<rect x="478.00" y="702.00" width="93.00" height="27.00" fill="rgb(224,87,89)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 3.232352 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="713.000000" text-anchor="middle">3.23 ms</text>
-<text class="small" x="524.50" y="725.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="750.00">s1200 importance</text>
-<rect x="190.00" y="732.00" width="93.00" height="27.00" fill="rgb(238,236,244)" stroke="#334155" stroke-width="0.35"><title>step 1200, importance, thread 0, cpu 32, target 4800 MHz, measured 4100 MHz, elapsed 0.204284 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="743.000000" text-anchor="middle">0.20 ms</text>
-<text class="small" x="236.50" y="755.00" text-anchor="middle">c32 4800/4100M</text>
-<rect x="286.00" y="732.00" width="93.00" height="27.00" fill="rgb(238,238,247)" stroke="#334155" stroke-width="0.35"><title>step 1200, importance, thread 1, cpu 40, target 4800 MHz, measured 4300 MHz, elapsed 0.158311 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="743.000000" text-anchor="middle">0.16 ms</text>
-<text class="small" x="332.50" y="755.00" text-anchor="middle">c40 4800/4300M</text>
-<rect x="382.00" y="732.00" width="93.00" height="27.00" fill="rgb(238,238,247)" stroke="#334155" stroke-width="0.35"><title>step 1200, importance, thread 2, cpu 16, target 4800 MHz, measured 4300 MHz, elapsed 0.159414 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="743.000000" text-anchor="middle">0.16 ms</text>
-<text class="small" x="428.50" y="755.00" text-anchor="middle">c16 4800/4300M</text>
-<rect x="478.00" y="732.00" width="93.00" height="27.00" fill="rgb(238,237,245)" stroke="#334155" stroke-width="0.35"><title>step 1200, importance, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 0.185303 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="743.000000" text-anchor="middle">0.19 ms</text>
-<text class="small" x="524.50" y="755.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="780.00">s1300 heat_update</text>
-<rect x="190.00" y="762.00" width="93.00" height="27.00" fill="rgb(225,90,93)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4429 MHz, elapsed 3.157996 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="773.000000" text-anchor="middle">3.16 ms</text>
-<text class="small" x="236.50" y="785.00" text-anchor="middle">c32 4800/4429M</text>
-<rect x="286.00" y="762.00" width="93.00" height="27.00" fill="rgb(227,118,121)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4174 MHz, elapsed 2.600416 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="773.000000" text-anchor="middle">2.60 ms</text>
-<text class="small" x="332.50" y="785.00" text-anchor="middle">c40 4800/4174M</text>
-<rect x="382.00" y="762.00" width="93.00" height="27.00" fill="rgb(227,118,122)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4174 MHz, elapsed 2.588800 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="773.000000" text-anchor="middle">2.59 ms</text>
-<text class="small" x="428.50" y="785.00" text-anchor="middle">c16 4800/4174M</text>
-<rect x="478.00" y="762.00" width="93.00" height="27.00" fill="rgb(225,92,95)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4347 MHz, elapsed 3.119093 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="773.000000" text-anchor="middle">3.12 ms</text>
-<text class="small" x="524.50" y="785.00" text-anchor="middle">c56 4800/4347M</text>
-<text x="8" y="810.00">s1300 importance</text>
-<rect x="190.00" y="792.00" width="93.00" height="27.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 1300, importance, thread 0, cpu 32, target 4800 MHz, measured 4100 MHz, elapsed 0.202268 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="803.000000" text-anchor="middle">0.20 ms</text>
-<text class="small" x="236.50" y="815.00" text-anchor="middle">c32 4800/4100M</text>
-<rect x="286.00" y="792.00" width="93.00" height="27.00" fill="rgb(238,238,247)" stroke="#334155" stroke-width="0.35"><title>step 1300, importance, thread 1, cpu 40, target 4800 MHz, measured 4100 MHz, elapsed 0.154738 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="803.000000" text-anchor="middle">0.15 ms</text>
-<text class="small" x="332.50" y="815.00" text-anchor="middle">c40 4800/4100M</text>
-<rect x="382.00" y="792.00" width="93.00" height="27.00" fill="rgb(238,238,247)" stroke="#334155" stroke-width="0.35"><title>step 1300, importance, thread 2, cpu 16, target 4800 MHz, measured 4099 MHz, elapsed 0.160679 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="803.000000" text-anchor="middle">0.16 ms</text>
-<text class="small" x="428.50" y="815.00" text-anchor="middle">c16 4800/4099M</text>
-<rect x="478.00" y="792.00" width="93.00" height="27.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 1300, importance, thread 3, cpu 56, target 4800 MHz, measured 4100 MHz, elapsed 0.194306 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="803.000000" text-anchor="middle">0.19 ms</text>
-<text class="small" x="524.50" y="815.00" text-anchor="middle">c56 4800/4100M</text>
-<text x="8" y="840.00">s1400 heat_update</text>
-<rect x="190.00" y="822.00" width="93.00" height="27.00" fill="rgb(225,88,90)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4179 MHz, elapsed 3.205985 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="833.000000" text-anchor="middle">3.21 ms</text>
-<text class="small" x="236.50" y="845.00" text-anchor="middle">c32 4800/4179M</text>
-<rect x="286.00" y="822.00" width="93.00" height="27.00" fill="rgb(228,127,131)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4299 MHz, elapsed 2.421897 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="833.000000" text-anchor="middle">2.42 ms</text>
-<text class="small" x="332.50" y="845.00" text-anchor="middle">c40 4800/4299M</text>
-<rect x="382.00" y="822.00" width="93.00" height="27.00" fill="rgb(228,120,124)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4100 MHz, elapsed 2.548060 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="833.000000" text-anchor="middle">2.55 ms</text>
-<text class="small" x="428.50" y="845.00" text-anchor="middle">c16 4800/4100M</text>
-<rect x="478.00" y="822.00" width="93.00" height="27.00" fill="rgb(226,99,101)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 2.990599 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="833.000000" text-anchor="middle">2.99 ms</text>
-<text class="small" x="524.50" y="845.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="870.00">s1400 importance</text>
-<rect x="190.00" y="852.00" width="93.00" height="27.00" fill="rgb(238,237,245)" stroke="#334155" stroke-width="0.35"><title>step 1400, importance, thread 0, cpu 32, target 4800 MHz, measured 4100 MHz, elapsed 0.191755 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="863.000000" text-anchor="middle">0.19 ms</text>
-<text class="small" x="236.50" y="875.00" text-anchor="middle">c32 4800/4100M</text>
-<rect x="286.00" y="852.00" width="93.00" height="27.00" fill="rgb(238,239,248)" stroke="#334155" stroke-width="0.35"><title>step 1400, importance, thread 1, cpu 40, target 4800 MHz, measured 4299 MHz, elapsed 0.145617 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="863.000000" text-anchor="middle">0.15 ms</text>
-<text class="small" x="332.50" y="875.00" text-anchor="middle">c40 4800/4299M</text>
-<rect x="382.00" y="852.00" width="93.00" height="27.00" fill="rgb(238,239,247)" stroke="#334155" stroke-width="0.35"><title>step 1400, importance, thread 2, cpu 16, target 4800 MHz, measured 4100 MHz, elapsed 0.147289 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="863.000000" text-anchor="middle">0.15 ms</text>
-<text class="small" x="428.50" y="875.00" text-anchor="middle">c16 4800/4100M</text>
-<rect x="478.00" y="852.00" width="93.00" height="27.00" fill="rgb(238,238,246)" stroke="#334155" stroke-width="0.35"><title>step 1400, importance, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 0.172384 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="863.000000" text-anchor="middle">0.17 ms</text>
-<text class="small" x="524.50" y="875.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="900.00">s1500 heat_update</text>
-<rect x="190.00" y="882.00" width="93.00" height="27.00" fill="rgb(226,103,106)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4479 MHz, elapsed 2.895211 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="893.000000" text-anchor="middle">2.90 ms</text>
-<text class="small" x="236.50" y="905.00" text-anchor="middle">c32 4800/4479M</text>
-<rect x="286.00" y="882.00" width="93.00" height="27.00" fill="rgb(229,138,143)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4600 MHz, elapsed 2.184300 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="893.000000" text-anchor="middle">2.18 ms</text>
-<text class="small" x="332.50" y="905.00" text-anchor="middle">c40 4800/4600M</text>
-<rect x="382.00" y="882.00" width="93.00" height="27.00" fill="rgb(228,125,128)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4199 MHz, elapsed 2.461919 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="893.000000" text-anchor="middle">2.46 ms</text>
-<text class="small" x="428.50" y="905.00" text-anchor="middle">c16 4800/4199M</text>
-<rect x="478.00" y="882.00" width="93.00" height="27.00" fill="rgb(227,113,116)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4600 MHz, elapsed 2.698234 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="893.000000" text-anchor="middle">2.70 ms</text>
-<text class="small" x="524.50" y="905.00" text-anchor="middle">c56 4800/4600M</text>
-<text x="8" y="930.00">s1500 importance</text>
-<rect x="190.00" y="912.00" width="93.00" height="27.00" fill="rgb(238,237,245)" stroke="#334155" stroke-width="0.35"><title>step 1500, importance, thread 0, cpu 32, target 4800 MHz, measured 4129 MHz, elapsed 0.185994 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="923.000000" text-anchor="middle">0.19 ms</text>
-<text class="small" x="236.50" y="935.00" text-anchor="middle">c32 4800/4129M</text>
-<rect x="286.00" y="912.00" width="93.00" height="27.00" fill="rgb(238,239,248)" stroke="#334155" stroke-width="0.35"><title>step 1500, importance, thread 1, cpu 40, target 4800 MHz, measured 4416 MHz, elapsed 0.134534 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="923.000000" text-anchor="middle">0.13 ms</text>
-<text class="small" x="332.50" y="935.00" text-anchor="middle">c40 4800/4416M</text>
-<rect x="382.00" y="912.00" width="93.00" height="27.00" fill="rgb(238,239,248)" stroke="#334155" stroke-width="0.35"><title>step 1500, importance, thread 2, cpu 16, target 4800 MHz, measured 4137 MHz, elapsed 0.141475 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="923.000000" text-anchor="middle">0.14 ms</text>
-<text class="small" x="428.50" y="935.00" text-anchor="middle">c16 4800/4137M</text>
-<rect x="478.00" y="912.00" width="93.00" height="27.00" fill="rgb(238,238,247)" stroke="#334155" stroke-width="0.35"><title>step 1500, importance, thread 3, cpu 56, target 4800 MHz, measured 4399 MHz, elapsed 0.161557 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="923.000000" text-anchor="middle">0.16 ms</text>
-<text class="small" x="524.50" y="935.00" text-anchor="middle">c56 4800/4399M</text>
-<text x="8" y="960.00">s1600 heat_update</text>
-<rect x="190.00" y="942.00" width="93.00" height="27.00" fill="rgb(226,104,107)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4300 MHz, elapsed 2.878750 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="953.000000" text-anchor="middle">2.88 ms</text>
-<text class="small" x="236.50" y="965.00" text-anchor="middle">c32 4800/4300M</text>
-<rect x="286.00" y="942.00" width="93.00" height="27.00" fill="rgb(229,134,138)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4300 MHz, elapsed 2.271649 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="953.000000" text-anchor="middle">2.27 ms</text>
-<text class="small" x="332.50" y="965.00" text-anchor="middle">c40 4800/4300M</text>
-<rect x="382.00" y="942.00" width="93.00" height="27.00" fill="rgb(228,130,134)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4204 MHz, elapsed 2.361621 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="953.000000" text-anchor="middle">2.36 ms</text>
-<text class="small" x="428.50" y="965.00" text-anchor="middle">c16 4800/4204M</text>
-<rect x="478.00" y="942.00" width="93.00" height="27.00" fill="rgb(227,110,114)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4299 MHz, elapsed 2.751718 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="953.000000" text-anchor="middle">2.75 ms</text>
-<text class="small" x="524.50" y="965.00" text-anchor="middle">c56 4800/4299M</text>
-<text x="8" y="990.00">s1600 importance</text>
-<rect x="190.00" y="972.00" width="93.00" height="27.00" fill="rgb(238,238,246)" stroke="#334155" stroke-width="0.35"><title>step 1600, importance, thread 0, cpu 32, target 4800 MHz, measured 4300 MHz, elapsed 0.166691 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="983.000000" text-anchor="middle">0.17 ms</text>
-<text class="small" x="236.50" y="995.00" text-anchor="middle">c32 4800/4300M</text>
-<rect x="286.00" y="972.00" width="93.00" height="27.00" fill="rgb(238,239,248)" stroke="#334155" stroke-width="0.35"><title>step 1600, importance, thread 1, cpu 40, target 4800 MHz, measured 4300 MHz, elapsed 0.135419 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="983.000000" text-anchor="middle">0.14 ms</text>
-<text class="small" x="332.50" y="995.00" text-anchor="middle">c40 4800/4300M</text>
-<rect x="382.00" y="972.00" width="93.00" height="27.00" fill="rgb(238,239,248)" stroke="#334155" stroke-width="0.35"><title>step 1600, importance, thread 2, cpu 16, target 4800 MHz, measured 4100 MHz, elapsed 0.135772 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="983.000000" text-anchor="middle">0.14 ms</text>
-<text class="small" x="428.50" y="995.00" text-anchor="middle">c16 4800/4100M</text>
-<rect x="478.00" y="972.00" width="93.00" height="27.00" fill="rgb(238,238,247)" stroke="#334155" stroke-width="0.35"><title>step 1600, importance, thread 3, cpu 56, target 4800 MHz, measured 4171 MHz, elapsed 0.163791 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="983.000000" text-anchor="middle">0.16 ms</text>
-<text class="small" x="524.50" y="995.00" text-anchor="middle">c56 4800/4171M</text>
-<text x="8" y="1020.00">s1700 heat_update</text>
-<rect x="190.00" y="1002.00" width="93.00" height="27.00" fill="rgb(226,103,106)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4115 MHz, elapsed 2.899052 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="1013.000000" text-anchor="middle">2.90 ms</text>
-<text class="small" x="236.50" y="1025.00" text-anchor="middle">c32 4800/4115M</text>
-<rect x="286.00" y="1002.00" width="93.00" height="27.00" fill="rgb(229,139,144)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4300 MHz, elapsed 2.168283 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="1013.000000" text-anchor="middle">2.17 ms</text>
-<text class="small" x="332.50" y="1025.00" text-anchor="middle">c40 4800/4300M</text>
-<rect x="382.00" y="1002.00" width="93.00" height="27.00" fill="rgb(228,131,135)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4100 MHz, elapsed 2.341546 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="1013.000000" text-anchor="middle">2.34 ms</text>
-<text class="small" x="428.50" y="1025.00" text-anchor="middle">c16 4800/4100M</text>
-<rect x="478.00" y="1002.00" width="93.00" height="27.00" fill="rgb(227,114,117)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 2.678799 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="1013.000000" text-anchor="middle">2.68 ms</text>
-<text class="small" x="524.50" y="1025.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="1050.00">s1700 importance</text>
-<rect x="190.00" y="1032.00" width="93.00" height="27.00" fill="rgb(238,238,247)" stroke="#334155" stroke-width="0.35"><title>step 1700, importance, thread 0, cpu 32, target 4800 MHz, measured 4100 MHz, elapsed 0.164491 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="1043.000000" text-anchor="middle">0.16 ms</text>
-<text class="small" x="236.50" y="1055.00" text-anchor="middle">c32 4800/4100M</text>
-<rect x="286.00" y="1032.00" width="93.00" height="27.00" fill="rgb(238,240,248)" stroke="#334155" stroke-width="0.35"><title>step 1700, importance, thread 1, cpu 40, target 4800 MHz, measured 4300 MHz, elapsed 0.130996 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="1043.000000" text-anchor="middle">0.13 ms</text>
-<text class="small" x="332.50" y="1055.00" text-anchor="middle">c40 4800/4300M</text>
-<rect x="382.00" y="1032.00" width="93.00" height="27.00" fill="rgb(238,239,248)" stroke="#334155" stroke-width="0.35"><title>step 1700, importance, thread 2, cpu 16, target 4800 MHz, measured 4179 MHz, elapsed 0.133559 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="1043.000000" text-anchor="middle">0.13 ms</text>
-<text class="small" x="428.50" y="1055.00" text-anchor="middle">c16 4800/4179M</text>
-<rect x="478.00" y="1032.00" width="93.00" height="27.00" fill="rgb(238,238,247)" stroke="#334155" stroke-width="0.35"><title>step 1700, importance, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 0.153661 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="1043.000000" text-anchor="middle">0.15 ms</text>
-<text class="small" x="524.50" y="1055.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="1080.00">s1800 heat_update</text>
-<rect x="190.00" y="1062.00" width="93.00" height="27.00" fill="rgb(227,114,117)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4300 MHz, elapsed 2.677529 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="1073.000000" text-anchor="middle">2.68 ms</text>
-<text class="small" x="236.50" y="1085.00" text-anchor="middle">c32 4800/4300M</text>
-<rect x="286.00" y="1062.00" width="93.00" height="27.00" fill="rgb(229,140,145)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4299 MHz, elapsed 2.148096 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="1073.000000" text-anchor="middle">2.15 ms</text>
-<text class="small" x="332.50" y="1085.00" text-anchor="middle">c40 4800/4299M</text>
-<rect x="382.00" y="1062.00" width="93.00" height="27.00" fill="rgb(229,133,137)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4100 MHz, elapsed 2.299501 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="1073.000000" text-anchor="middle">2.30 ms</text>
-<text class="small" x="428.50" y="1085.00" text-anchor="middle">c16 4800/4100M</text>
-<rect x="478.00" y="1062.00" width="93.00" height="27.00" fill="rgb(227,119,122)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 2.581387 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="1073.000000" text-anchor="middle">2.58 ms</text>
-<text class="small" x="524.50" y="1085.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="1110.00">s1800 importance</text>
-<rect x="190.00" y="1092.00" width="93.00" height="27.00" fill="rgb(238,238,247)" stroke="#334155" stroke-width="0.35"><title>step 1800, importance, thread 0, cpu 32, target 4800 MHz, measured 4300 MHz, elapsed 0.153138 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="1103.000000" text-anchor="middle">0.15 ms</text>
-<text class="small" x="236.50" y="1115.00" text-anchor="middle">c32 4800/4300M</text>
-<rect x="286.00" y="1092.00" width="93.00" height="27.00" fill="rgb(238,240,248)" stroke="#334155" stroke-width="0.35"><title>step 1800, importance, thread 1, cpu 40, target 4800 MHz, measured 4299 MHz, elapsed 0.128646 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="1103.000000" text-anchor="middle">0.13 ms</text>
-<text class="small" x="332.50" y="1115.00" text-anchor="middle">c40 4800/4299M</text>
-<rect x="382.00" y="1092.00" width="93.00" height="27.00" fill="rgb(238,239,248)" stroke="#334155" stroke-width="0.35"><title>step 1800, importance, thread 2, cpu 16, target 4800 MHz, measured 4100 MHz, elapsed 0.132167 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="1103.000000" text-anchor="middle">0.13 ms</text>
-<text class="small" x="428.50" y="1115.00" text-anchor="middle">c16 4800/4100M</text>
-<rect x="478.00" y="1092.00" width="93.00" height="27.00" fill="rgb(238,239,247)" stroke="#334155" stroke-width="0.35"><title>step 1800, importance, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 0.148293 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="1103.000000" text-anchor="middle">0.15 ms</text>
-<text class="small" x="524.50" y="1115.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="1140.00">s1900 heat_update</text>
-<rect x="190.00" y="1122.00" width="93.00" height="27.00" fill="rgb(227,114,117)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4164 MHz, elapsed 2.679456 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="1133.000000" text-anchor="middle">2.68 ms</text>
-<text class="small" x="236.50" y="1145.00" text-anchor="middle">c32 4800/4164M</text>
-<rect x="286.00" y="1122.00" width="93.00" height="27.00" fill="rgb(229,134,138)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4127 MHz, elapsed 2.281899 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="1133.000000" text-anchor="middle">2.28 ms</text>
-<text class="small" x="332.50" y="1145.00" text-anchor="middle">c40 4800/4127M</text>
-<rect x="382.00" y="1122.00" width="93.00" height="27.00" fill="rgb(229,134,138)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4187 MHz, elapsed 2.281874 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="1133.000000" text-anchor="middle">2.28 ms</text>
-<text class="small" x="428.50" y="1145.00" text-anchor="middle">c16 4800/4187M</text>
-<rect x="478.00" y="1122.00" width="93.00" height="27.00" fill="rgb(228,124,128)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4300 MHz, elapsed 2.474774 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="1133.000000" text-anchor="middle">2.47 ms</text>
-<text class="small" x="524.50" y="1145.00" text-anchor="middle">c56 4800/4300M</text>
-<text x="8" y="1170.00">s1900 importance</text>
-<rect x="190.00" y="1152.00" width="93.00" height="27.00" fill="rgb(238,238,247)" stroke="#334155" stroke-width="0.35"><title>step 1900, importance, thread 0, cpu 32, target 4800 MHz, measured 4100 MHz, elapsed 0.152514 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="1163.000000" text-anchor="middle">0.15 ms</text>
-<text class="small" x="236.50" y="1175.00" text-anchor="middle">c32 4800/4100M</text>
-<rect x="286.00" y="1152.00" width="93.00" height="27.00" fill="rgb(238,240,248)" stroke="#334155" stroke-width="0.35"><title>step 1900, importance, thread 1, cpu 40, target 4800 MHz, measured 4100 MHz, elapsed 0.129341 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="1163.000000" text-anchor="middle">0.13 ms</text>
-<text class="small" x="332.50" y="1175.00" text-anchor="middle">c40 4800/4100M</text>
-<rect x="382.00" y="1152.00" width="93.00" height="27.00" fill="rgb(238,240,248)" stroke="#334155" stroke-width="0.35"><title>step 1900, importance, thread 2, cpu 16, target 4800 MHz, measured 4100 MHz, elapsed 0.129834 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="1163.000000" text-anchor="middle">0.13 ms</text>
-<text class="small" x="428.50" y="1175.00" text-anchor="middle">c16 4800/4100M</text>
-<rect x="478.00" y="1152.00" width="93.00" height="27.00" fill="rgb(238,239,247)" stroke="#334155" stroke-width="0.35"><title>step 1900, importance, thread 3, cpu 56, target 4800 MHz, measured 4211 MHz, elapsed 0.147299 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="1163.000000" text-anchor="middle">0.15 ms</text>
-<text class="small" x="524.50" y="1175.00" text-anchor="middle">c56 4800/4211M</text>
-<text x="8" y="1200.00">s2000 heat_update</text>
-<rect x="190.00" y="1182.00" width="93.00" height="27.00" fill="rgb(227,120,123)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4200 MHz, elapsed 2.559133 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="1193.000000" text-anchor="middle">2.56 ms</text>
-<text class="small" x="236.50" y="1205.00" text-anchor="middle">c32 4800/4200M</text>
-<rect x="286.00" y="1182.00" width="93.00" height="27.00" fill="rgb(229,137,141)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4199 MHz, elapsed 2.217668 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="1193.000000" text-anchor="middle">2.22 ms</text>
-<text class="small" x="332.50" y="1205.00" text-anchor="middle">c40 4800/4199M</text>
-<rect x="382.00" y="1182.00" width="93.00" height="27.00" fill="rgb(230,146,151)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 2, cpu 16, target 4800 MHz, measured 4600 MHz, elapsed 2.023171 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="1193.000000" text-anchor="middle">2.02 ms</text>
-<text class="small" x="428.50" y="1205.00" text-anchor="middle">c16 4800/4600M</text>
-<rect x="478.00" y="1182.00" width="93.00" height="27.00" fill="rgb(229,135,139)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 3, cpu 56, target 4800 MHz, measured 4599 MHz, elapsed 2.257476 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="1193.000000" text-anchor="middle">2.26 ms</text>
-<text class="small" x="524.50" y="1205.00" text-anchor="middle">c56 4800/4599M</text>
-<text x="8" y="1230.00">s2000 importance</text>
-<rect x="190.00" y="1212.00" width="93.00" height="27.00" fill="rgb(238,239,247)" stroke="#334155" stroke-width="0.35"><title>step 2000, importance, thread 0, cpu 32, target 4800 MHz, measured 4139 MHz, elapsed 0.147743 ms, applied yes</title></rect>
-<text class="small" x="236.500000" y="1223.000000" text-anchor="middle">0.15 ms</text>
-<text class="small" x="236.50" y="1235.00" text-anchor="middle">c32 4800/4139M</text>
-<rect x="286.00" y="1212.00" width="93.00" height="27.00" fill="rgb(238,240,248)" stroke="#334155" stroke-width="0.35"><title>step 2000, importance, thread 1, cpu 40, target 4800 MHz, measured 4143 MHz, elapsed 0.126943 ms, applied yes</title></rect>
-<text class="small" x="332.500000" y="1223.000000" text-anchor="middle">0.13 ms</text>
-<text class="small" x="332.50" y="1235.00" text-anchor="middle">c40 4800/4143M</text>
-<rect x="382.00" y="1212.00" width="93.00" height="27.00" fill="rgb(238,240,249)" stroke="#334155" stroke-width="0.35"><title>step 2000, importance, thread 2, cpu 16, target 4800 MHz, measured 4436 MHz, elapsed 0.124363 ms, applied yes</title></rect>
-<text class="small" x="428.500000" y="1223.000000" text-anchor="middle">0.12 ms</text>
-<text class="small" x="428.50" y="1235.00" text-anchor="middle">c16 4800/4436M</text>
-<rect x="478.00" y="1212.00" width="93.00" height="27.00" fill="rgb(238,239,248)" stroke="#334155" stroke-width="0.35"><title>step 2000, importance, thread 3, cpu 56, target 4800 MHz, measured 4425 MHz, elapsed 0.136573 ms, applied yes</title></rect>
-<text class="small" x="524.500000" y="1223.000000" text-anchor="middle">0.14 ms</text>
-<text class="small" x="524.50" y="1235.00" text-anchor="middle">c56 4800/4425M</text>
+<text x="12" y="20">OMPT DVFS timing, max=4.292 ms, color=2-5 ms, max_target=4800 MHz, max_measured=4600 MHz</text>
+<text class="small" x="124" y="34" text-anchor="middle">t0</text>
+<text class="small" x="220" y="34" text-anchor="middle">t1</text>
+<text class="small" x="316" y="34" text-anchor="middle">t2</text>
+<text class="small" x="412" y="34" text-anchor="middle">t3</text>
+<text x="8" y="53">s100</text>
+<text class="small" x="8" y="66">4.29 ms</text>
+<rect x="76.00" y="42.00" width="93.00" height="27.00" fill="rgb(250,163,21)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 0, cpu 32, target 3795 MHz, measured 3709 MHz, elapsed 4.262153 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="53.000000" text-anchor="middle" fill="#0f172a">4.26 ms</text>
+<text class="small" x="122.50" y="65.00" text-anchor="middle" fill="#0f172a">3795/3709M</text>
+<rect x="172.00" y="42.00" width="93.00" height="27.00" fill="rgb(249,157,22)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 1, cpu 40, target 4299 MHz, measured 4146 MHz, elapsed 4.291532 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="53.000000" text-anchor="middle" fill="#0f172a">4.29 ms</text>
+<text class="small" x="218.50" y="65.00" text-anchor="middle" fill="#0f172a">4299/4146M</text>
+<rect x="268.00" y="42.00" width="93.00" height="27.00" fill="rgb(250,196,21)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 2, cpu 48, target 4800 MHz, measured 4378 MHz, elapsed 4.082416 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="53.000000" text-anchor="middle" fill="#0f172a">4.08 ms</text>
+<text class="small" x="314.50" y="65.00" text-anchor="middle" fill="#0f172a">4800/4378M</text>
+<rect x="364.00" y="42.00" width="93.00" height="27.00" fill="rgb(250,175,21)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 3, cpu 24, target 3725 MHz, measured 3709 MHz, elapsed 4.195876 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="53.000000" text-anchor="middle" fill="#0f172a">4.20 ms</text>
+<text class="small" x="410.50" y="65.00" text-anchor="middle" fill="#0f172a">3725/3709M</text>
+<text x="8" y="83.00">s200</text>
+<text class="small" x="8" y="96.00">4.16 ms</text>
+<rect x="76.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,181,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 0, cpu 32, target 3789 MHz, measured 3771 MHz, elapsed 4.161821 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="83.000000" text-anchor="middle" fill="#0f172a">4.16 ms</text>
+<text class="small" x="122.50" y="95.00" text-anchor="middle" fill="#0f172a">3789/3771M</text>
+<rect x="172.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,193,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 1, cpu 40, target 4513 MHz, measured 4300 MHz, elapsed 4.101340 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="83.000000" text-anchor="middle" fill="#0f172a">4.10 ms</text>
+<text class="small" x="218.50" y="95.00" text-anchor="middle" fill="#0f172a">4513/4300M</text>
+<rect x="268.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,193,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 2, cpu 48, target 4800 MHz, measured 4300 MHz, elapsed 4.098876 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="83.000000" text-anchor="middle" fill="#0f172a">4.10 ms</text>
+<text class="small" x="314.50" y="95.00" text-anchor="middle" fill="#0f172a">4800/4300M</text>
+<rect x="364.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,194,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 3, cpu 24, target 3727 MHz, measured 3774 MHz, elapsed 4.095976 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="83.000000" text-anchor="middle" fill="#0f172a">4.10 ms</text>
+<text class="small" x="410.50" y="95.00" text-anchor="middle" fill="#0f172a">3727/3774M</text>
+<text x="8" y="113.00">s300</text>
+<text class="small" x="8" y="126.00">4.15 ms</text>
+<rect x="76.00" y="102.00" width="93.00" height="27.00" fill="rgb(250,184,21)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 0, cpu 32, target 3759 MHz, measured 3748 MHz, elapsed 4.145903 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="113.000000" text-anchor="middle" fill="#0f172a">4.15 ms</text>
+<text class="small" x="122.50" y="125.00" text-anchor="middle" fill="#0f172a">3759/3748M</text>
+<rect x="172.00" y="102.00" width="93.00" height="27.00" fill="rgb(250,195,21)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 1, cpu 40, target 4591 MHz, measured 4300 MHz, elapsed 4.088414 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="113.000000" text-anchor="middle" fill="#0f172a">4.09 ms</text>
+<text class="small" x="218.50" y="125.00" text-anchor="middle" fill="#0f172a">4591/4300M</text>
+<rect x="268.00" y="102.00" width="93.00" height="27.00" fill="rgb(250,191,21)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 2, cpu 48, target 4800 MHz, measured 4300 MHz, elapsed 4.108158 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="113.000000" text-anchor="middle" fill="#0f172a">4.11 ms</text>
+<text class="small" x="314.50" y="125.00" text-anchor="middle" fill="#0f172a">4800/4300M</text>
+<rect x="364.00" y="102.00" width="93.00" height="27.00" fill="rgb(250,194,21)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 3, cpu 24, target 3716 MHz, measured 3771 MHz, elapsed 4.091548 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="113.000000" text-anchor="middle" fill="#0f172a">4.09 ms</text>
+<text class="small" x="410.50" y="125.00" text-anchor="middle" fill="#0f172a">3716/3771M</text>
+<text x="8" y="143.00">s400</text>
+<text class="small" x="8" y="156.00">4.11 ms</text>
+<rect x="76.00" y="132.00" width="93.00" height="27.00" fill="rgb(248,204,22)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 0, cpu 32, target 3951 MHz, measured 3949 MHz, elapsed 4.035587 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="143.000000" text-anchor="middle" fill="#0f172a">4.04 ms</text>
+<text class="small" x="122.50" y="155.00" text-anchor="middle" fill="#0f172a">3951/3949M</text>
+<rect x="172.00" y="132.00" width="93.00" height="27.00" fill="rgb(250,192,21)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 1, cpu 40, target 4490 MHz, measured 4300 MHz, elapsed 4.107175 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="143.000000" text-anchor="middle" fill="#0f172a">4.11 ms</text>
+<text class="small" x="218.50" y="155.00" text-anchor="middle" fill="#0f172a">4490/4300M</text>
+<rect x="268.00" y="132.00" width="93.00" height="27.00" fill="rgb(250,197,21)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 2, cpu 48, target 4800 MHz, measured 4300 MHz, elapsed 4.079304 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="143.000000" text-anchor="middle" fill="#0f172a">4.08 ms</text>
+<text class="small" x="314.50" y="155.00" text-anchor="middle" fill="#0f172a">4800/4300M</text>
+<rect x="364.00" y="132.00" width="93.00" height="27.00" fill="rgb(250,198,21)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 3, cpu 24, target 3724 MHz, measured 3773 MHz, elapsed 4.072904 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="143.000000" text-anchor="middle" fill="#0f172a">4.07 ms</text>
+<text class="small" x="410.50" y="155.00" text-anchor="middle" fill="#0f172a">3724/3773M</text>
+<text x="8" y="173.00">s500</text>
+<text class="small" x="8" y="186.00">4.06 ms</text>
+<rect x="76.00" y="162.00" width="93.00" height="27.00" fill="rgb(250,201,21)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 0, cpu 32, target 3836 MHz, measured 3837 MHz, elapsed 4.058175 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="173.000000" text-anchor="middle" fill="#0f172a">4.06 ms</text>
+<text class="small" x="122.50" y="185.00" text-anchor="middle" fill="#0f172a">3836/3837M</text>
+<rect x="172.00" y="162.00" width="93.00" height="27.00" fill="rgb(246,204,22)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 1, cpu 40, target 4675 MHz, measured 4300 MHz, elapsed 4.029605 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="173.000000" text-anchor="middle" fill="#0f172a">4.03 ms</text>
+<text class="small" x="218.50" y="185.00" text-anchor="middle" fill="#0f172a">4675/4300M</text>
+<rect x="268.00" y="162.00" width="93.00" height="27.00" fill="rgb(236,204,26)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 2, cpu 48, target 4800 MHz, measured 4300 MHz, elapsed 4.003854 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="173.000000" text-anchor="middle" fill="#0f172a">4.00 ms</text>
+<text class="small" x="314.50" y="185.00" text-anchor="middle" fill="#0f172a">4800/4300M</text>
+<rect x="364.00" y="162.00" width="93.00" height="27.00" fill="rgb(250,203,21)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 3, cpu 24, target 3792 MHz, measured 3745 MHz, elapsed 4.043864 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="173.000000" text-anchor="middle" fill="#0f172a">4.04 ms</text>
+<text class="small" x="410.50" y="185.00" text-anchor="middle" fill="#0f172a">3792/3745M</text>
+<text x="8" y="203.00">s600</text>
+<text class="small" x="8" y="216.00">3.95 ms</text>
+<rect x="76.00" y="192.00" width="93.00" height="27.00" fill="rgb(209,203,35)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 0, cpu 32, target 3961 MHz, measured 3937 MHz, elapsed 3.937062 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="203.000000" text-anchor="middle" fill="#0f172a">3.94 ms</text>
+<text class="small" x="122.50" y="215.00" text-anchor="middle" fill="#0f172a">3961/3937M</text>
+<rect x="172.00" y="192.00" width="93.00" height="27.00" fill="rgb(215,203,33)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4300 MHz, elapsed 3.952606 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="203.000000" text-anchor="middle" fill="#0f172a">3.95 ms</text>
+<text class="small" x="218.50" y="215.00" text-anchor="middle" fill="#0f172a">4800/4300M</text>
+<rect x="268.00" y="192.00" width="93.00" height="27.00" fill="rgb(211,203,34)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 2, cpu 48, target 4410 MHz, measured 4300 MHz, elapsed 3.942178 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="203.000000" text-anchor="middle" fill="#0f172a">3.94 ms</text>
+<text class="small" x="314.50" y="215.00" text-anchor="middle" fill="#0f172a">4410/4300M</text>
+<rect x="364.00" y="192.00" width="93.00" height="27.00" fill="rgb(203,202,37)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 3, cpu 24, target 3836 MHz, measured 3847 MHz, elapsed 3.922553 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="203.000000" text-anchor="middle" fill="#0f172a">3.92 ms</text>
+<text class="small" x="410.50" y="215.00" text-anchor="middle" fill="#0f172a">3836/3847M</text>
+<text x="8" y="233.00">s700</text>
+<text class="small" x="8" y="246.00">3.90 ms</text>
+<rect x="76.00" y="222.00" width="93.00" height="27.00" fill="rgb(176,202,46)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 0, cpu 32, target 3975 MHz, measured 3949 MHz, elapsed 3.855524 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="233.000000" text-anchor="middle" fill="#0f172a">3.86 ms</text>
+<text class="small" x="122.50" y="245.00" text-anchor="middle" fill="#0f172a">3975/3949M</text>
+<rect x="172.00" y="222.00" width="93.00" height="27.00" fill="rgb(194,202,40)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4300 MHz, elapsed 3.900546 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="233.000000" text-anchor="middle" fill="#0f172a">3.90 ms</text>
+<text class="small" x="218.50" y="245.00" text-anchor="middle" fill="#0f172a">4800/4300M</text>
+<rect x="268.00" y="222.00" width="93.00" height="27.00" fill="rgb(191,202,41)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 2, cpu 48, target 4352 MHz, measured 4300 MHz, elapsed 3.892908 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="233.000000" text-anchor="middle" fill="#0f172a">3.89 ms</text>
+<text class="small" x="314.50" y="245.00" text-anchor="middle" fill="#0f172a">4352/4300M</text>
+<rect x="364.00" y="222.00" width="93.00" height="27.00" fill="rgb(190,202,41)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 3, cpu 24, target 3832 MHz, measured 3862 MHz, elapsed 3.890219 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="233.000000" text-anchor="middle" fill="#0f172a">3.89 ms</text>
+<text class="small" x="410.50" y="245.00" text-anchor="middle" fill="#0f172a">3832/3862M</text>
+<text x="8" y="263.00">s800</text>
+<text class="small" x="8" y="276.00">3.50 ms</text>
+<rect x="76.00" y="252.00" width="93.00" height="27.00" fill="rgb(32,196,104)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 0, cpu 32, target 4410 MHz, measured 4430 MHz, elapsed 3.453033 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="263.000000" text-anchor="middle" fill="#0f172a">3.45 ms</text>
+<text class="small" x="122.50" y="275.00" text-anchor="middle" fill="#0f172a">4410/4430M</text>
+<rect x="172.00" y="252.00" width="93.00" height="27.00" fill="rgb(36,197,93)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 1, cpu 40, target 4800 MHz, measured 4600 MHz, elapsed 3.503770 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="263.000000" text-anchor="middle" fill="#0f172a">3.50 ms</text>
+<text class="small" x="218.50" y="275.00" text-anchor="middle" fill="#0f172a">4800/4600M</text>
+<rect x="268.00" y="252.00" width="93.00" height="27.00" fill="rgb(34,197,96)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 2, cpu 48, target 4708 MHz, measured 4600 MHz, elapsed 3.492753 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="263.000000" text-anchor="middle" fill="#0f172a">3.49 ms</text>
+<text class="small" x="314.50" y="275.00" text-anchor="middle" fill="#0f172a">4708/4600M</text>
+<rect x="364.00" y="252.00" width="93.00" height="27.00" fill="rgb(32,196,102)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 3, cpu 24, target 4301 MHz, measured 4346 MHz, elapsed 3.461498 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="263.000000" text-anchor="middle" fill="#0f172a">3.46 ms</text>
+<text class="small" x="410.50" y="275.00" text-anchor="middle" fill="#0f172a">4301/4346M</text>
+<text x="8" y="293.00">s900</text>
+<text class="small" x="8" y="306.00">3.56 ms</text>
+<rect x="76.00" y="282.00" width="93.00" height="27.00" fill="rgb(58,198,86)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4300 MHz, elapsed 3.561025 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="293.000000" text-anchor="middle" fill="#0f172a">3.56 ms</text>
+<text class="small" x="122.50" y="305.00" text-anchor="middle" fill="#0f172a">4800/4300M</text>
+<rect x="172.00" y="282.00" width="93.00" height="27.00" fill="rgb(37,197,93)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 1, cpu 40, target 4507 MHz, measured 4300 MHz, elapsed 3.507378 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="293.000000" text-anchor="middle" fill="#0f172a">3.51 ms</text>
+<text class="small" x="218.50" y="305.00" text-anchor="middle" fill="#0f172a">4507/4300M</text>
+<rect x="268.00" y="282.00" width="93.00" height="27.00" fill="rgb(33,197,97)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 2, cpu 48, target 4515 MHz, measured 4300 MHz, elapsed 3.486349 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="293.000000" text-anchor="middle" fill="#0f172a">3.49 ms</text>
+<text class="small" x="314.50" y="305.00" text-anchor="middle" fill="#0f172a">4515/4300M</text>
+<rect x="364.00" y="282.00" width="93.00" height="27.00" fill="rgb(33,197,97)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 3, cpu 24, target 4203 MHz, measured 4211 MHz, elapsed 3.486370 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="293.000000" text-anchor="middle" fill="#0f172a">3.49 ms</text>
+<text class="small" x="410.50" y="305.00" text-anchor="middle" fill="#0f172a">4203/4211M</text>
+<text x="8" y="323.00">s1000</text>
+<text class="small" x="8" y="336.00">3.50 ms</text>
+<rect x="76.00" y="312.00" width="93.00" height="27.00" fill="rgb(34,197,94)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4200 MHz, elapsed 3.499273 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="323.000000" text-anchor="middle" fill="#0f172a">3.50 ms</text>
+<text class="small" x="122.50" y="335.00" text-anchor="middle" fill="#0f172a">4800/4200M</text>
+<rect x="172.00" y="312.00" width="93.00" height="27.00" fill="rgb(29,194,117)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 1, cpu 40, target 4041 MHz, measured 4031 MHz, elapsed 3.395629 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="323.000000" text-anchor="middle" fill="#0f172a">3.40 ms</text>
+<text class="small" x="218.50" y="335.00" text-anchor="middle" fill="#0f172a">4041/4031M</text>
+<rect x="268.00" y="312.00" width="93.00" height="27.00" fill="rgb(31,195,108)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 2, cpu 48, target 3973 MHz, measured 4000 MHz, elapsed 3.433904 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="323.000000" text-anchor="middle" fill="#0f172a">3.43 ms</text>
+<text class="small" x="314.50" y="335.00" text-anchor="middle" fill="#0f172a">3973/4000M</text>
+<rect x="364.00" y="312.00" width="93.00" height="27.00" fill="rgb(32,196,102)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 3, cpu 24, target 4167 MHz, measured 4173 MHz, elapsed 3.464053 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="323.000000" text-anchor="middle" fill="#0f172a">3.46 ms</text>
+<text class="small" x="410.50" y="335.00" text-anchor="middle" fill="#0f172a">4167/4173M</text>
+<text x="8" y="353.00">s1100</text>
+<text class="small" x="8" y="366.00">3.47 ms</text>
+<rect x="76.00" y="342.00" width="93.00" height="27.00" fill="rgb(32,196,100)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4172 MHz, elapsed 3.470864 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="353.000000" text-anchor="middle" fill="#0f172a">3.47 ms</text>
+<text class="small" x="122.50" y="365.00" text-anchor="middle" fill="#0f172a">4800/4172M</text>
+<rect x="172.00" y="342.00" width="93.00" height="27.00" fill="rgb(14,186,177)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 1, cpu 40, target 4035 MHz, measured 4098 MHz, elapsed 3.121457 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="353.000000" text-anchor="middle" fill="#0f172a">3.12 ms</text>
+<text class="small" x="218.50" y="365.00" text-anchor="middle" fill="#0f172a">4035/4098M</text>
+<rect x="268.00" y="342.00" width="93.00" height="27.00" fill="rgb(14,186,179)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 2, cpu 48, target 4011 MHz, measured 4098 MHz, elapsed 3.113240 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="353.000000" text-anchor="middle" fill="#0f172a">3.11 ms</text>
+<text class="small" x="314.50" y="365.00" text-anchor="middle" fill="#0f172a">4011/4098M</text>
+<rect x="364.00" y="342.00" width="93.00" height="27.00" fill="rgb(21,190,150)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 3, cpu 24, target 4540 MHz, measured 4359 MHz, elapsed 3.243515 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="353.000000" text-anchor="middle" fill="#0f172a">3.24 ms</text>
+<text class="small" x="410.50" y="365.00" text-anchor="middle" fill="#0f172a">4540/4359M</text>
+<text x="8" y="383.00">s1200</text>
+<text class="small" x="8" y="396.00">3.54 ms</text>
+<rect x="76.00" y="372.00" width="93.00" height="27.00" fill="rgb(30,195,109)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4129 MHz, elapsed 3.430118 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="383.000000" text-anchor="middle" fill="#0f172a">3.43 ms</text>
+<text class="small" x="122.50" y="395.00" text-anchor="middle" fill="#0f172a">4800/4129M</text>
+<rect x="172.00" y="372.00" width="93.00" height="27.00" fill="rgb(32,196,102)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 1, cpu 40, target 3420 MHz, measured 3421 MHz, elapsed 3.464120 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="383.000000" text-anchor="middle" fill="#0f172a">3.46 ms</text>
+<text class="small" x="218.50" y="395.00" text-anchor="middle" fill="#0f172a">3420/3421M</text>
+<rect x="268.00" y="372.00" width="93.00" height="27.00" fill="rgb(51,198,88)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 2, cpu 48, target 3376 MHz, measured 3329 MHz, elapsed 3.542148 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="383.000000" text-anchor="middle" fill="#0f172a">3.54 ms</text>
+<text class="small" x="314.50" y="395.00" text-anchor="middle" fill="#0f172a">3376/3329M</text>
+<rect x="364.00" y="372.00" width="93.00" height="27.00" fill="rgb(31,196,105)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 3, cpu 24, target 4006 MHz, measured 4003 MHz, elapsed 3.449714 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="383.000000" text-anchor="middle" fill="#0f172a">3.45 ms</text>
+<text class="small" x="410.50" y="395.00" text-anchor="middle" fill="#0f172a">4006/4003M</text>
+<text x="8" y="413.00">s1300</text>
+<text class="small" x="8" y="426.00">3.00 ms</text>
+<rect x="76.00" y="402.00" width="93.00" height="27.00" fill="rgb(6,182,211)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4600 MHz, elapsed 2.964934 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="413.000000" text-anchor="middle" fill="#0f172a">2.96 ms</text>
+<text class="small" x="122.50" y="425.00" text-anchor="middle" fill="#0f172a">4800/4600M</text>
+<rect x="172.00" y="402.00" width="93.00" height="27.00" fill="rgb(8,183,203)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 1, cpu 40, target 3491 MHz, measured 3593 MHz, elapsed 3.002251 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="413.000000" text-anchor="middle" fill="#0f172a">3.00 ms</text>
+<text class="small" x="218.50" y="425.00" text-anchor="middle" fill="#0f172a">3491/3593M</text>
+<rect x="268.00" y="402.00" width="93.00" height="27.00" fill="rgb(8,183,204)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 2, cpu 48, target 3452 MHz, measured 3595 MHz, elapsed 2.998507 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="413.000000" text-anchor="middle" fill="#0f172a">3.00 ms</text>
+<text class="small" x="314.50" y="425.00" text-anchor="middle" fill="#0f172a">3452/3595M</text>
+<rect x="364.00" y="402.00" width="93.00" height="27.00" fill="rgb(7,180,213)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 3, cpu 24, target 4515 MHz, measured 4520 MHz, elapsed 2.948703 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="413.000000" text-anchor="middle" fill="#0f172a">2.95 ms</text>
+<text class="small" x="410.50" y="425.00" text-anchor="middle" fill="#0f172a">4515/4520M</text>
+<text x="8" y="443.00">s1400</text>
+<text class="small" x="8" y="456.00">3.19 ms</text>
+<rect x="76.00" y="432.00" width="93.00" height="27.00" fill="rgb(18,188,161)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4100 MHz, elapsed 3.191227 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="443.000000" text-anchor="middle" fill="#0f172a">3.19 ms</text>
+<text class="small" x="122.50" y="455.00" text-anchor="middle" fill="#0f172a">4800/4100M</text>
+<rect x="172.00" y="432.00" width="93.00" height="27.00" fill="rgb(14,187,176)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 1, cpu 40, target 3223 MHz, measured 3334 MHz, elapsed 3.123172 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="443.000000" text-anchor="middle" fill="#0f172a">3.12 ms</text>
+<text class="small" x="218.50" y="455.00" text-anchor="middle" fill="#0f172a">3223/3334M</text>
+<rect x="268.00" y="432.00" width="93.00" height="27.00" fill="rgb(17,188,167)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 2, cpu 48, target 3166 MHz, measured 3249 MHz, elapsed 3.165766 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="443.000000" text-anchor="middle" fill="#0f172a">3.17 ms</text>
+<text class="small" x="314.50" y="455.00" text-anchor="middle" fill="#0f172a">3166/3249M</text>
+<rect x="364.00" y="432.00" width="93.00" height="27.00" fill="rgb(17,188,165)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 3, cpu 24, target 4061 MHz, measured 4052 MHz, elapsed 3.173668 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="443.000000" text-anchor="middle" fill="#0f172a">3.17 ms</text>
+<text class="small" x="410.50" y="455.00" text-anchor="middle" fill="#0f172a">4061/4052M</text>
+<text x="8" y="473.00">s1500</text>
+<text class="small" x="8" y="486.00">3.19 ms</text>
+<rect x="76.00" y="462.00" width="93.00" height="27.00" fill="rgb(16,187,170)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4132 MHz, elapsed 3.152830 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="473.000000" text-anchor="middle" fill="#0f172a">3.15 ms</text>
+<text class="small" x="122.50" y="485.00" text-anchor="middle" fill="#0f172a">4800/4132M</text>
+<rect x="172.00" y="462.00" width="93.00" height="27.00" fill="rgb(18,188,162)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 1, cpu 40, target 3257 MHz, measured 3078 MHz, elapsed 3.189711 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="473.000000" text-anchor="middle" fill="#0f172a">3.19 ms</text>
+<text class="small" x="218.50" y="485.00" text-anchor="middle" fill="#0f172a">3257/3078M</text>
+<rect x="268.00" y="462.00" width="93.00" height="27.00" fill="rgb(15,187,174)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 2, cpu 48, target 3353 MHz, measured 3170 MHz, elapsed 3.132345 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="473.000000" text-anchor="middle" fill="#0f172a">3.13 ms</text>
+<text class="small" x="314.50" y="485.00" text-anchor="middle" fill="#0f172a">3353/3170M</text>
+<rect x="364.00" y="462.00" width="93.00" height="27.00" fill="rgb(7,180,213)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 3, cpu 24, target 4262 MHz, measured 4205 MHz, elapsed 2.948514 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="473.000000" text-anchor="middle" fill="#0f172a">2.95 ms</text>
+<text class="small" x="410.50" y="485.00" text-anchor="middle" fill="#0f172a">4262/4205M</text>
+<text x="8" y="503.00">s1600</text>
+<text class="small" x="8" y="516.00">3.02 ms</text>
+<rect x="76.00" y="492.00" width="93.00" height="27.00" fill="rgb(9,174,214)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4166 MHz, elapsed 2.914598 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="503.000000" text-anchor="middle" fill="#0f172a">2.91 ms</text>
+<text class="small" x="122.50" y="515.00" text-anchor="middle" fill="#0f172a">4800/4166M</text>
+<rect x="172.00" y="492.00" width="93.00" height="27.00" fill="rgb(9,184,199)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 1, cpu 40, target 3084 MHz, measured 3144 MHz, elapsed 3.018531 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="503.000000" text-anchor="middle" fill="#0f172a">3.02 ms</text>
+<text class="small" x="218.50" y="515.00" text-anchor="middle" fill="#0f172a">3084/3144M</text>
+<rect x="268.00" y="492.00" width="93.00" height="27.00" fill="rgb(9,174,214)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 2, cpu 48, target 3202 MHz, measured 3329 MHz, elapsed 2.913881 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="503.000000" text-anchor="middle" fill="#0f172a">2.91 ms</text>
+<text class="small" x="314.50" y="515.00" text-anchor="middle" fill="#0f172a">3202/3329M</text>
+<rect x="364.00" y="492.00" width="93.00" height="27.00" fill="rgb(8,178,213)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 3, cpu 24, target 4039 MHz, measured 4041 MHz, elapsed 2.935674 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="503.000000" text-anchor="middle" fill="#0f172a">2.94 ms</text>
+<text class="small" x="410.50" y="515.00" text-anchor="middle" fill="#0f172a">4039/4041M</text>
+<text x="8" y="533.00">s1700</text>
+<text class="small" x="8" y="546.00">2.77 ms</text>
+<rect x="76.00" y="522.00" width="93.00" height="27.00" fill="rgb(18,149,221)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4299 MHz, elapsed 2.770787 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="533.000000" text-anchor="middle" fill="#0f172a">2.77 ms</text>
+<text class="small" x="122.50" y="545.00" text-anchor="middle" fill="#0f172a">4800/4299M</text>
+<rect x="172.00" y="522.00" width="93.00" height="27.00" fill="rgb(20,144,223)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 1, cpu 40, target 3302 MHz, measured 3432 MHz, elapsed 2.740602 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="533.000000" text-anchor="middle" fill="#0f172a">2.74 ms</text>
+<text class="small" x="218.50" y="545.00" text-anchor="middle" fill="#0f172a">3302/3432M</text>
+<rect x="268.00" y="522.00" width="93.00" height="27.00" fill="rgb(21,141,223)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 2, cpu 48, target 3318 MHz, measured 3433 MHz, elapsed 2.721643 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="533.000000" text-anchor="middle" fill="#0f172a">2.72 ms</text>
+<text class="small" x="314.50" y="545.00" text-anchor="middle" fill="#0f172a">3318/3433M</text>
+<rect x="364.00" y="522.00" width="93.00" height="27.00" fill="rgb(22,140,224)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 3, cpu 24, target 4248 MHz, measured 4215 MHz, elapsed 2.715973 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="533.000000" text-anchor="middle" fill="#0f172a">2.72 ms</text>
+<text class="small" x="410.50" y="545.00" text-anchor="middle" fill="#0f172a">4248/4215M</text>
+<text x="8" y="563.00">s1800</text>
+<text class="small" x="8" y="576.00">2.89 ms</text>
+<rect x="76.00" y="552.00" width="93.00" height="27.00" fill="rgb(28,122,229)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4300 MHz, elapsed 2.613549 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="563.000000" text-anchor="middle" fill="#f8fafc">2.61 ms</text>
+<text class="small" x="122.50" y="575.00" text-anchor="middle" fill="#f8fafc">4800/4300M</text>
+<rect x="172.00" y="552.00" width="93.00" height="27.00" fill="rgb(11,169,216)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 1, cpu 40, target 3147 MHz, measured 3167 MHz, elapsed 2.885788 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="563.000000" text-anchor="middle" fill="#0f172a">2.89 ms</text>
+<text class="small" x="218.50" y="575.00" text-anchor="middle" fill="#0f172a">3147/3167M</text>
+<rect x="268.00" y="552.00" width="93.00" height="27.00" fill="rgb(18,149,221)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 2, cpu 48, target 3304 MHz, measured 3372 MHz, elapsed 2.766638 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="563.000000" text-anchor="middle" fill="#0f172a">2.77 ms</text>
+<text class="small" x="314.50" y="575.00" text-anchor="middle" fill="#0f172a">3304/3372M</text>
+<rect x="364.00" y="552.00" width="93.00" height="27.00" fill="rgb(16,156,219)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 3, cpu 24, target 3958 MHz, measured 3929 MHz, elapsed 2.808814 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="563.000000" text-anchor="middle" fill="#0f172a">2.81 ms</text>
+<text class="small" x="410.50" y="575.00" text-anchor="middle" fill="#0f172a">3958/3929M</text>
+<text x="8" y="593.00">s1900</text>
+<text class="small" x="8" y="606.00">2.68 ms</text>
+<rect x="76.00" y="582.00" width="93.00" height="27.00" fill="rgb(24,134,225)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4100 MHz, elapsed 2.681118 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="593.000000" text-anchor="middle" fill="#f8fafc">2.68 ms</text>
+<text class="small" x="122.50" y="605.00" text-anchor="middle" fill="#f8fafc">4800/4100M</text>
+<rect x="172.00" y="582.00" width="93.00" height="27.00" fill="rgb(31,116,230)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 1, cpu 40, target 3444 MHz, measured 3544 MHz, elapsed 2.577508 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="593.000000" text-anchor="middle" fill="#f8fafc">2.58 ms</text>
+<text class="small" x="218.50" y="605.00" text-anchor="middle" fill="#f8fafc">3444/3544M</text>
+<rect x="268.00" y="582.00" width="93.00" height="27.00" fill="rgb(30,117,230)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 2, cpu 48, target 3428 MHz, measured 3547 MHz, elapsed 2.585519 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="593.000000" text-anchor="middle" fill="#f8fafc">2.59 ms</text>
+<text class="small" x="314.50" y="605.00" text-anchor="middle" fill="#f8fafc">3428/3547M</text>
+<rect x="364.00" y="582.00" width="93.00" height="27.00" fill="rgb(28,124,228)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 3, cpu 24, target 4050 MHz, measured 4054 MHz, elapsed 2.626855 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="593.000000" text-anchor="middle" fill="#f8fafc">2.63 ms</text>
+<text class="small" x="410.50" y="605.00" text-anchor="middle" fill="#f8fafc">4050/4054M</text>
+<text x="8" y="623.00">s2000</text>
+<text class="small" x="8" y="636.00">2.40 ms</text>
+<rect x="76.00" y="612.00" width="93.00" height="27.00" fill="rgb(30,81,209)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 0, cpu 32, target 4800 MHz, measured 4499 MHz, elapsed 2.370041 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="623.000000" text-anchor="middle" fill="#f8fafc">2.37 ms</text>
+<text class="small" x="122.50" y="635.00" text-anchor="middle" fill="#f8fafc">4800/4499M</text>
+<rect x="172.00" y="612.00" width="93.00" height="27.00" fill="rgb(32,87,216)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 1, cpu 40, target 3665 MHz, measured 3749 MHz, elapsed 2.402491 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="623.000000" text-anchor="middle" fill="#f8fafc">2.40 ms</text>
+<text class="small" x="218.50" y="635.00" text-anchor="middle" fill="#f8fafc">3665/3749M</text>
+<rect x="268.00" y="612.00" width="93.00" height="27.00" fill="rgb(29,79,205)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 2, cpu 48, target 3859 MHz, measured 3904 MHz, elapsed 2.355500 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="623.000000" text-anchor="middle" fill="#f8fafc">2.36 ms</text>
+<text class="small" x="314.50" y="635.00" text-anchor="middle" fill="#f8fafc">3859/3904M</text>
+<rect x="364.00" y="612.00" width="93.00" height="27.00" fill="rgb(29,79,205)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 3, cpu 24, target 4387 MHz, measured 4379 MHz, elapsed 2.353319 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="623.000000" text-anchor="middle" fill="#f8fafc">2.35 ms</text>
+<text class="small" x="410.50" y="635.00" text-anchor="middle" fill="#f8fafc">4387/4379M</text>
 </svg>

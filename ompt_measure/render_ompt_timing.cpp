@@ -33,6 +33,53 @@ struct EventKey {
     }
 };
 
+struct Rgb {
+    int red = 0;
+    int green = 0;
+    int blue = 0;
+};
+
+Rgb lerp_color(const Rgb &a, const Rgb &b, double u) {
+    return {
+        static_cast<int>(std::round(static_cast<double>(a.red) +
+                                    (static_cast<double>(b.red) - static_cast<double>(a.red)) * u)),
+        static_cast<int>(std::round(static_cast<double>(a.green) +
+                                    (static_cast<double>(b.green) - static_cast<double>(a.green)) * u)),
+        static_cast<int>(std::round(static_cast<double>(a.blue) +
+                                    (static_cast<double>(b.blue) - static_cast<double>(a.blue)) * u)),
+    };
+}
+
+Rgb temperature_color(double value) {
+    const double t = std::max(0.0, std::min(1.0, value));
+    constexpr int stops = 7;
+    const double position[stops] = {0.00, 0.16, 0.32, 0.50, 0.68, 0.84, 1.00};
+    const Rgb color[stops] = {
+        {8, 22, 120},
+        {37, 99, 235},
+        {6, 182, 212},
+        {34, 197, 94},
+        {250, 204, 21},
+        {249, 115, 22},
+        {220, 38, 38},
+    };
+
+    for (int k = 0; k < stops - 1; ++k) {
+        if (t <= position[k + 1]) {
+            const double u = (t - position[k]) / (position[k + 1] - position[k]);
+            return lerp_color(color[k], color[k + 1], u);
+        }
+    }
+    return color[stops - 1];
+}
+
+const char *text_color_for_fill(const Rgb &color) {
+    const double luminance = 0.2126 * static_cast<double>(color.red) +
+                             0.7152 * static_cast<double>(color.green) +
+                             0.0722 * static_cast<double>(color.blue);
+    return luminance < 120.0 ? "#f8fafc" : "#0f172a";
+}
+
 std::vector<std::string> split_csv_line(const std::string &line) {
     std::vector<std::string> fields;
     std::string field;
@@ -55,7 +102,7 @@ std::string amr_region_label(int region_id) {
 }
 
 bool should_render_region(const std::string &label) {
-    return label == "heat_update" || label == "importance";
+    return label == "heat_update";
 }
 
 int main(int argc, char **argv) {
@@ -121,12 +168,14 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    constexpr double left = 190.0;
+    constexpr double left = 76.0;
     constexpr double top = 42.0;
-    constexpr double cell_w = 54.0;
-    constexpr double row_h = 22.0;
+    constexpr double cell_w = 96.0;
+    constexpr double row_h = 30.0;
     constexpr double right_pad = 32.0;
     constexpr double bottom_pad = 32.0;
+    constexpr double color_min_ms = 2.0;
+    constexpr double color_max_ms = 5.0;
     const double width = left + cell_w * static_cast<double>(max_thread + 1) + right_pad;
     const double height = top + row_h * static_cast<double>(events.size()) + bottom_pad;
 
@@ -141,7 +190,8 @@ int main(int argc, char **argv) {
     out << "<rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n";
     out << "<style>text{font-family:monospace;font-size:11px}.small{font-size:10px}</style>\n";
     out << "<text x=\"12\" y=\"20\">OMPT per-thread region time, max="
-        << std::fixed << std::setprecision(3) << max_elapsed << " ms</text>\n";
+        << std::fixed << std::setprecision(3) << max_elapsed
+        << " ms, color=2-5 ms</text>\n";
 
     for (int tid = 0; tid <= max_thread; ++tid) {
         const double x = left + cell_w * static_cast<double>(tid) + cell_w * 0.5;
@@ -154,22 +204,27 @@ int main(int argc, char **argv) {
         const EventKey &key = entry.first;
         const auto &rows = entry.second;
         const double y = top + row_h * static_cast<double>(row_index);
+        double event_max_ms = 0.0;
+        for (const TimingRow &row : rows) {
+            event_max_ms = std::max(event_max_ms, row.elapsed_ms);
+        }
 
-        out << "<text x=\"8\" y=\"" << y + 15.0 << "\">"
-            << "s" << key.step << ' ' << key.region_label << "</text>\n";
+        out << "<text x=\"8\" y=\"" << y + 11.0 << "\">"
+            << "s" << key.step << "</text>\n";
+        out << "<text class=\"small\" x=\"8\" y=\"" << y + 24.0 << "\">"
+            << std::fixed << std::setprecision(2) << event_max_ms << " ms</text>\n";
 
         for (const TimingRow &row : rows) {
             const double x = left + cell_w * static_cast<double>(row.thread_id);
-            const double ratio = max_elapsed > 0.0 ? row.elapsed_ms / max_elapsed : 0.0;
-            const int red = static_cast<int>(std::round(239.0 + (220.0 - 239.0) * ratio));
-            const int green = static_cast<int>(std::round(246.0 + (38.0 - 246.0) * ratio));
-            const int blue = static_cast<int>(std::round(255.0 + (38.0 - 255.0) * ratio));
+            const double ratio = (row.elapsed_ms - color_min_ms) / (color_max_ms - color_min_ms);
+            const Rgb color = temperature_color(ratio);
+            const char *label_color = text_color_for_fill(color);
 
             out << "<rect x=\"" << x
                 << "\" y=\"" << y
                 << "\" width=\"" << cell_w - 3.0
                 << "\" height=\"" << row_h - 3.0
-                << "\" fill=\"rgb(" << red << ',' << green << ',' << blue << ")\""
+                << "\" fill=\"rgb(" << color.red << ',' << color.green << ',' << color.blue << ")\""
                 << " stroke=\"#334155\" stroke-width=\"0.35\">"
                 << "<title>step " << row.step
                 << ", " << row.region_label
@@ -178,7 +233,7 @@ int main(int argc, char **argv) {
 
             out << "<text class=\"small\" x=\"" << x + 0.5 * (cell_w - 3.0)
                 << "\" y=\"" << y + 13.0
-                << "\" text-anchor=\"middle\">"
+                << "\" text-anchor=\"middle\" fill=\"" << label_color << "\">"
                 << std::fixed << std::setprecision(2) << row.elapsed_ms
                 << "</text>\n";
         }

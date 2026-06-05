@@ -1,369 +1,209 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438 954">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 674">
 <rect width="100%" height="100%" fill="white"/>
 <style>text{font-family:monospace;font-size:11px}.small{font-size:10px}</style>
-<text x="12" y="20">OMPT per-thread region time, max=4.260 ms</text>
-<text class="small" x="217.000" y="34" text-anchor="middle">t0</text>
-<text class="small" x="271.000" y="34" text-anchor="middle">t1</text>
-<text class="small" x="325.000" y="34" text-anchor="middle">t2</text>
-<text class="small" x="379.000" y="34" text-anchor="middle">t3</text>
-<text x="8" y="57.000">s100 heat_update</text>
-<rect x="190.000" y="42.000" width="51.000" height="19.000" fill="rgb(222,57,57)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 0, 3.877911 ms</title></rect>
-<text class="small" x="215.500000" y="55.000000" text-anchor="middle">3.88</text>
-<rect x="244.00" y="42.00" width="51.00" height="19.00" fill="rgb(220,38,38)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 1, 4.254378 ms</title></rect>
-<text class="small" x="269.500000" y="55.000000" text-anchor="middle">4.25</text>
-<rect x="298.00" y="42.00" width="51.00" height="19.00" fill="rgb(220,38,38)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 2, 4.259688 ms</title></rect>
-<text class="small" x="323.500000" y="55.000000" text-anchor="middle">4.26</text>
-<rect x="352.00" y="42.00" width="51.00" height="19.00" fill="rgb(223,66,68)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 3, 3.680605 ms</title></rect>
-<text class="small" x="377.500000" y="55.000000" text-anchor="middle">3.68</text>
-<text x="8" y="79.00">s100 importance</text>
-<rect x="190.00" y="64.00" width="51.00" height="19.00" fill="rgb(238,235,244)" stroke="#334155" stroke-width="0.35"><title>step 100, importance, thread 0, 0.221512 ms</title></rect>
-<text class="small" x="215.500000" y="77.000000" text-anchor="middle">0.22</text>
-<rect x="244.00" y="64.00" width="51.00" height="19.00" fill="rgb(238,234,243)" stroke="#334155" stroke-width="0.35"><title>step 100, importance, thread 1, 0.240669 ms</title></rect>
-<text class="small" x="269.500000" y="77.000000" text-anchor="middle">0.24</text>
-<rect x="298.00" y="64.00" width="51.00" height="19.00" fill="rgb(238,234,243)" stroke="#334155" stroke-width="0.35"><title>step 100, importance, thread 2, 0.242542 ms</title></rect>
-<text class="small" x="323.500000" y="77.000000" text-anchor="middle">0.24</text>
-<rect x="352.00" y="64.00" width="51.00" height="19.00" fill="rgb(238,236,244)" stroke="#334155" stroke-width="0.35"><title>step 100, importance, thread 3, 0.210274 ms</title></rect>
-<text class="small" x="377.500000" y="77.000000" text-anchor="middle">0.21</text>
-<text x="8" y="101.00">s200 heat_update</text>
-<rect x="190.00" y="86.00" width="51.00" height="19.00" fill="rgb(222,62,63)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 0, 3.777795 ms</title></rect>
-<text class="small" x="215.500000" y="99.000000" text-anchor="middle">3.78</text>
-<rect x="244.00" y="86.00" width="51.00" height="19.00" fill="rgb(221,44,44)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 1, 4.141247 ms</title></rect>
-<text class="small" x="269.500000" y="99.000000" text-anchor="middle">4.14</text>
-<rect x="298.00" y="86.00" width="51.00" height="19.00" fill="rgb(221,44,44)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 2, 4.138375 ms</title></rect>
-<text class="small" x="323.500000" y="99.000000" text-anchor="middle">4.14</text>
-<rect x="352.00" y="86.00" width="51.00" height="19.00" fill="rgb(223,70,72)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 3, 3.601428 ms</title></rect>
-<text class="small" x="377.500000" y="99.000000" text-anchor="middle">3.60</text>
-<text x="8" y="123.00">s200 importance</text>
-<rect x="190.00" y="108.00" width="51.00" height="19.00" fill="rgb(238,235,244)" stroke="#334155" stroke-width="0.35"><title>step 200, importance, thread 0, 0.218060 ms</title></rect>
-<text class="small" x="215.500000" y="121.000000" text-anchor="middle">0.22</text>
-<rect x="244.00" y="108.00" width="51.00" height="19.00" fill="rgb(238,235,243)" stroke="#334155" stroke-width="0.35"><title>step 200, importance, thread 1, 0.235244 ms</title></rect>
-<text class="small" x="269.500000" y="121.000000" text-anchor="middle">0.24</text>
-<rect x="298.00" y="108.00" width="51.00" height="19.00" fill="rgb(238,234,243)" stroke="#334155" stroke-width="0.35"><title>step 200, importance, thread 2, 0.236724 ms</title></rect>
-<text class="small" x="323.500000" y="121.000000" text-anchor="middle">0.24</text>
-<rect x="352.00" y="108.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 200, importance, thread 3, 0.204133 ms</title></rect>
-<text class="small" x="377.500000" y="121.000000" text-anchor="middle">0.20</text>
-<text x="8" y="145.00">s300 heat_update</text>
-<rect x="190.00" y="130.00" width="51.00" height="19.00" fill="rgb(222,63,65)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 0, 3.737692 ms</title></rect>
-<text class="small" x="215.500000" y="143.000000" text-anchor="middle">3.74</text>
-<rect x="244.00" y="130.00" width="51.00" height="19.00" fill="rgb(220,43,44)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 1, 4.148948 ms</title></rect>
-<text class="small" x="269.500000" y="143.000000" text-anchor="middle">4.15</text>
-<rect x="298.00" y="130.00" width="51.00" height="19.00" fill="rgb(221,47,47)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 2, 4.075326 ms</title></rect>
-<text class="small" x="323.500000" y="143.000000" text-anchor="middle">4.08</text>
-<rect x="352.00" y="130.00" width="51.00" height="19.00" fill="rgb(223,71,72)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 3, 3.587431 ms</title></rect>
-<text class="small" x="377.500000" y="143.000000" text-anchor="middle">3.59</text>
-<text x="8" y="167.00">s300 importance</text>
-<rect x="190.00" y="152.00" width="51.00" height="19.00" fill="rgb(238,236,244)" stroke="#334155" stroke-width="0.35"><title>step 300, importance, thread 0, 0.214702 ms</title></rect>
-<text class="small" x="215.500000" y="165.000000" text-anchor="middle">0.21</text>
-<rect x="244.00" y="152.00" width="51.00" height="19.00" fill="rgb(238,234,243)" stroke="#334155" stroke-width="0.35"><title>step 300, importance, thread 1, 0.238280 ms</title></rect>
-<text class="small" x="269.500000" y="165.000000" text-anchor="middle">0.24</text>
-<rect x="298.00" y="152.00" width="51.00" height="19.00" fill="rgb(238,234,243)" stroke="#334155" stroke-width="0.35"><title>step 300, importance, thread 2, 0.238454 ms</title></rect>
-<text class="small" x="323.500000" y="165.000000" text-anchor="middle">0.24</text>
-<rect x="352.00" y="152.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 300, importance, thread 3, 0.205286 ms</title></rect>
-<text class="small" x="377.500000" y="165.000000" text-anchor="middle">0.21</text>
-<text x="8" y="189.00">s400 heat_update</text>
-<rect x="190.00" y="174.00" width="51.00" height="19.00" fill="rgb(222,65,66)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 0, 3.711596 ms</title></rect>
-<text class="small" x="215.500000" y="187.000000" text-anchor="middle">3.71</text>
-<rect x="244.00" y="174.00" width="51.00" height="19.00" fill="rgb(221,47,47)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 1, 4.083396 ms</title></rect>
-<text class="small" x="269.500000" y="187.000000" text-anchor="middle">4.08</text>
-<rect x="298.00" y="174.00" width="51.00" height="19.00" fill="rgb(221,47,47)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 2, 4.078349 ms</title></rect>
-<text class="small" x="323.500000" y="187.000000" text-anchor="middle">4.08</text>
-<rect x="352.00" y="174.00" width="51.00" height="19.00" fill="rgb(222,63,64)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 3, 3.744633 ms</title></rect>
-<text class="small" x="377.500000" y="187.000000" text-anchor="middle">3.74</text>
-<text x="8" y="211.00">s400 importance</text>
-<rect x="190.00" y="196.00" width="51.00" height="19.00" fill="rgb(238,236,244)" stroke="#334155" stroke-width="0.35"><title>step 400, importance, thread 0, 0.211073 ms</title></rect>
-<text class="small" x="215.500000" y="209.000000" text-anchor="middle">0.21</text>
-<rect x="244.00" y="196.00" width="51.00" height="19.00" fill="rgb(238,235,243)" stroke="#334155" stroke-width="0.35"><title>step 400, importance, thread 1, 0.231941 ms</title></rect>
-<text class="small" x="269.500000" y="209.000000" text-anchor="middle">0.23</text>
-<rect x="298.00" y="196.00" width="51.00" height="19.00" fill="rgb(238,235,243)" stroke="#334155" stroke-width="0.35"><title>step 400, importance, thread 2, 0.232526 ms</title></rect>
-<text class="small" x="323.500000" y="209.000000" text-anchor="middle">0.23</text>
-<rect x="352.00" y="196.00" width="51.00" height="19.00" fill="rgb(238,236,244)" stroke="#334155" stroke-width="0.35"><title>step 400, importance, thread 3, 0.209216 ms</title></rect>
-<text class="small" x="377.500000" y="209.000000" text-anchor="middle">0.21</text>
-<text x="8" y="233.00">s500 heat_update</text>
-<rect x="190.00" y="218.00" width="51.00" height="19.00" fill="rgb(222,64,65)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 0, 3.725335 ms</title></rect>
-<text class="small" x="215.500000" y="231.000000" text-anchor="middle">3.73</text>
-<rect x="244.00" y="218.00" width="51.00" height="19.00" fill="rgb(221,47,47)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 1, 4.083795 ms</title></rect>
-<text class="small" x="269.500000" y="231.000000" text-anchor="middle">4.08</text>
-<rect x="298.00" y="218.00" width="51.00" height="19.00" fill="rgb(220,41,41)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 2, 4.200061 ms</title></rect>
-<text class="small" x="323.500000" y="231.000000" text-anchor="middle">4.20</text>
-<rect x="352.00" y="218.00" width="51.00" height="19.00" fill="rgb(223,73,74)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 3, 3.545751 ms</title></rect>
-<text class="small" x="377.500000" y="231.000000" text-anchor="middle">3.55</text>
-<text x="8" y="255.00">s500 importance</text>
-<rect x="190.00" y="240.00" width="51.00" height="19.00" fill="rgb(238,236,244)" stroke="#334155" stroke-width="0.35"><title>step 500, importance, thread 0, 0.207991 ms</title></rect>
-<text class="small" x="215.500000" y="253.000000" text-anchor="middle">0.21</text>
-<rect x="244.00" y="240.00" width="51.00" height="19.00" fill="rgb(238,235,243)" stroke="#334155" stroke-width="0.35"><title>step 500, importance, thread 1, 0.228918 ms</title></rect>
-<text class="small" x="269.500000" y="253.000000" text-anchor="middle">0.23</text>
-<rect x="298.00" y="240.00" width="51.00" height="19.00" fill="rgb(238,234,243)" stroke="#334155" stroke-width="0.35"><title>step 500, importance, thread 2, 0.242295 ms</title></rect>
-<text class="small" x="323.500000" y="253.000000" text-anchor="middle">0.24</text>
-<rect x="352.00" y="240.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 500, importance, thread 3, 0.205937 ms</title></rect>
-<text class="small" x="377.500000" y="253.000000" text-anchor="middle">0.21</text>
-<text x="8" y="277.00">s600 heat_update</text>
-<rect x="190.00" y="262.00" width="51.00" height="19.00" fill="rgb(223,70,71)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 0, 3.610980 ms</title></rect>
-<text class="small" x="215.500000" y="275.000000" text-anchor="middle">3.61</text>
-<rect x="244.00" y="262.00" width="51.00" height="19.00" fill="rgb(221,52,53)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 1, 3.971909 ms</title></rect>
-<text class="small" x="269.500000" y="275.000000" text-anchor="middle">3.97</text>
-<rect x="298.00" y="262.00" width="51.00" height="19.00" fill="rgb(221,53,54)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 2, 3.945334 ms</title></rect>
-<text class="small" x="323.500000" y="275.000000" text-anchor="middle">3.95</text>
-<rect x="352.00" y="262.00" width="51.00" height="19.00" fill="rgb(223,74,75)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 3, 3.527429 ms</title></rect>
-<text class="small" x="377.500000" y="275.000000" text-anchor="middle">3.53</text>
-<text x="8" y="299.00">s600 importance</text>
-<rect x="190.00" y="284.00" width="51.00" height="19.00" fill="rgb(238,236,244)" stroke="#334155" stroke-width="0.35"><title>step 600, importance, thread 0, 0.207300 ms</title></rect>
-<text class="small" x="215.500000" y="297.000000" text-anchor="middle">0.21</text>
-<rect x="244.00" y="284.00" width="51.00" height="19.00" fill="rgb(238,235,244)" stroke="#334155" stroke-width="0.35"><title>step 600, importance, thread 1, 0.225297 ms</title></rect>
-<text class="small" x="269.500000" y="297.000000" text-anchor="middle">0.23</text>
-<rect x="298.00" y="284.00" width="51.00" height="19.00" fill="rgb(238,235,243)" stroke="#334155" stroke-width="0.35"><title>step 600, importance, thread 2, 0.226574 ms</title></rect>
-<text class="small" x="323.500000" y="297.000000" text-anchor="middle">0.23</text>
-<rect x="352.00" y="284.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 600, importance, thread 3, 0.202468 ms</title></rect>
-<text class="small" x="377.500000" y="297.000000" text-anchor="middle">0.20</text>
-<text x="8" y="321.00">s700 heat_update</text>
-<rect x="190.00" y="306.00" width="51.00" height="19.00" fill="rgb(224,78,79)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 0, 3.446937 ms</title></rect>
-<text class="small" x="215.500000" y="319.000000" text-anchor="middle">3.45</text>
-<rect x="244.00" y="306.00" width="51.00" height="19.00" fill="rgb(223,68,69)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 1, 3.655325 ms</title></rect>
-<text class="small" x="269.500000" y="319.000000" text-anchor="middle">3.66</text>
-<rect x="298.00" y="306.00" width="51.00" height="19.00" fill="rgb(222,65,66)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 2, 3.701189 ms</title></rect>
-<text class="small" x="323.500000" y="319.000000" text-anchor="middle">3.70</text>
-<rect x="352.00" y="306.00" width="51.00" height="19.00" fill="rgb(224,84,86)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 3, 3.320443 ms</title></rect>
-<text class="small" x="377.500000" y="319.000000" text-anchor="middle">3.32</text>
-<text x="8" y="343.00">s700 importance</text>
-<rect x="190.00" y="328.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 700, importance, thread 0, 0.204901 ms</title></rect>
-<text class="small" x="215.500000" y="341.000000" text-anchor="middle">0.20</text>
-<rect x="244.00" y="328.00" width="51.00" height="19.00" fill="rgb(238,235,244)" stroke="#334155" stroke-width="0.35"><title>step 700, importance, thread 1, 0.220086 ms</title></rect>
-<text class="small" x="269.500000" y="341.000000" text-anchor="middle">0.22</text>
-<rect x="298.00" y="328.00" width="51.00" height="19.00" fill="rgb(238,235,243)" stroke="#334155" stroke-width="0.35"><title>step 700, importance, thread 2, 0.234513 ms</title></rect>
-<text class="small" x="323.500000" y="341.000000" text-anchor="middle">0.23</text>
-<rect x="352.00" y="328.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 700, importance, thread 3, 0.197459 ms</title></rect>
-<text class="small" x="377.500000" y="341.000000" text-anchor="middle">0.20</text>
-<text x="8" y="365.00">s800 heat_update</text>
-<rect x="190.00" y="350.00" width="51.00" height="19.00" fill="rgb(223,71,72)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 0, 3.588627 ms</title></rect>
-<text class="small" x="215.500000" y="363.000000" text-anchor="middle">3.59</text>
-<rect x="244.00" y="350.00" width="51.00" height="19.00" fill="rgb(222,56,57)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 1, 3.891944 ms</title></rect>
-<text class="small" x="269.500000" y="363.000000" text-anchor="middle">3.89</text>
-<rect x="298.00" y="350.00" width="51.00" height="19.00" fill="rgb(223,66,67)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 2, 3.696244 ms</title></rect>
-<text class="small" x="323.500000" y="363.000000" text-anchor="middle">3.70</text>
-<rect x="352.00" y="350.00" width="51.00" height="19.00" fill="rgb(224,79,80)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 3, 3.427199 ms</title></rect>
-<text class="small" x="377.500000" y="363.000000" text-anchor="middle">3.43</text>
-<text x="8" y="387.00">s800 importance</text>
-<rect x="190.00" y="372.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 800, importance, thread 0, 0.203218 ms</title></rect>
-<text class="small" x="215.500000" y="385.000000" text-anchor="middle">0.20</text>
-<rect x="244.00" y="372.00" width="51.00" height="19.00" fill="rgb(238,235,244)" stroke="#334155" stroke-width="0.35"><title>step 800, importance, thread 1, 0.222721 ms</title></rect>
-<text class="small" x="269.500000" y="385.000000" text-anchor="middle">0.22</text>
-<rect x="298.00" y="372.00" width="51.00" height="19.00" fill="rgb(238,236,244)" stroke="#334155" stroke-width="0.35"><title>step 800, importance, thread 2, 0.209695 ms</title></rect>
-<text class="small" x="323.500000" y="385.000000" text-anchor="middle">0.21</text>
-<rect x="352.00" y="372.00" width="51.00" height="19.00" fill="rgb(238,237,245)" stroke="#334155" stroke-width="0.35"><title>step 800, importance, thread 3, 0.193130 ms</title></rect>
-<text class="small" x="377.500000" y="385.000000" text-anchor="middle">0.19</text>
-<text x="8" y="409.00">s900 heat_update</text>
-<rect x="190.00" y="394.00" width="51.00" height="19.00" fill="rgb(223,73,75)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 0, 3.537365 ms</title></rect>
-<text class="small" x="215.500000" y="407.000000" text-anchor="middle">3.54</text>
-<rect x="244.00" y="394.00" width="51.00" height="19.00" fill="rgb(223,72,74)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 1, 3.553650 ms</title></rect>
-<text class="small" x="269.500000" y="407.000000" text-anchor="middle">3.55</text>
-<rect x="298.00" y="394.00" width="51.00" height="19.00" fill="rgb(223,73,75)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 2, 3.533356 ms</title></rect>
-<text class="small" x="323.500000" y="407.000000" text-anchor="middle">3.53</text>
-<rect x="352.00" y="394.00" width="51.00" height="19.00" fill="rgb(223,73,74)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 3, 3.551889 ms</title></rect>
-<text class="small" x="377.500000" y="407.000000" text-anchor="middle">3.55</text>
-<text x="8" y="431.00">s900 importance</text>
-<rect x="190.00" y="416.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 900, importance, thread 0, 0.203601 ms</title></rect>
-<text class="small" x="215.500000" y="429.000000" text-anchor="middle">0.20</text>
-<rect x="244.00" y="416.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 900, importance, thread 1, 0.200804 ms</title></rect>
-<text class="small" x="269.500000" y="429.000000" text-anchor="middle">0.20</text>
-<rect x="298.00" y="416.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 900, importance, thread 2, 0.202504 ms</title></rect>
-<text class="small" x="323.500000" y="429.000000" text-anchor="middle">0.20</text>
-<rect x="352.00" y="416.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 900, importance, thread 3, 0.205342 ms</title></rect>
-<text class="small" x="377.500000" y="429.000000" text-anchor="middle">0.21</text>
-<text x="8" y="453.00">s1000 heat_update</text>
-<rect x="190.00" y="438.00" width="51.00" height="19.00" fill="rgb(225,89,91)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 0, 3.225173 ms</title></rect>
-<text class="small" x="215.500000" y="451.000000" text-anchor="middle">3.23</text>
-<rect x="244.00" y="438.00" width="51.00" height="19.00" fill="rgb(224,86,88)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 1, 3.281191 ms</title></rect>
-<text class="small" x="269.500000" y="451.000000" text-anchor="middle">3.28</text>
-<rect x="298.00" y="438.00" width="51.00" height="19.00" fill="rgb(226,100,102)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 2, 2.993807 ms</title></rect>
-<text class="small" x="323.500000" y="451.000000" text-anchor="middle">2.99</text>
-<rect x="352.00" y="438.00" width="51.00" height="19.00" fill="rgb(224,85,87)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 3, 3.291115 ms</title></rect>
-<text class="small" x="377.500000" y="451.000000" text-anchor="middle">3.29</text>
-<text x="8" y="475.00">s1000 importance</text>
-<rect x="190.00" y="460.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 1000, importance, thread 0, 0.204867 ms</title></rect>
-<text class="small" x="215.500000" y="473.000000" text-anchor="middle">0.20</text>
-<rect x="244.00" y="460.00" width="51.00" height="19.00" fill="rgb(238,237,245)" stroke="#334155" stroke-width="0.35"><title>step 1000, importance, thread 1, 0.190812 ms</title></rect>
-<text class="small" x="269.500000" y="473.000000" text-anchor="middle">0.19</text>
-<rect x="298.00" y="460.00" width="51.00" height="19.00" fill="rgb(238,237,246)" stroke="#334155" stroke-width="0.35"><title>step 1000, importance, thread 2, 0.181104 ms</title></rect>
-<text class="small" x="323.500000" y="473.000000" text-anchor="middle">0.18</text>
-<rect x="352.00" y="460.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 1000, importance, thread 3, 0.203265 ms</title></rect>
-<text class="small" x="377.500000" y="473.000000" text-anchor="middle">0.20</text>
-<text x="8" y="497.00">s1100 heat_update</text>
-<rect x="190.00" y="482.00" width="51.00" height="19.00" fill="rgb(224,81,83)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 0, 3.381438 ms</title></rect>
-<text class="small" x="215.500000" y="495.000000" text-anchor="middle">3.38</text>
-<rect x="244.00" y="482.00" width="51.00" height="19.00" fill="rgb(225,95,97)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 1, 3.099763 ms</title></rect>
-<text class="small" x="269.500000" y="495.000000" text-anchor="middle">3.10</text>
-<rect x="298.00" y="482.00" width="51.00" height="19.00" fill="rgb(226,101,104)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 2, 2.961866 ms</title></rect>
-<text class="small" x="323.500000" y="495.000000" text-anchor="middle">2.96</text>
-<rect x="352.00" y="482.00" width="51.00" height="19.00" fill="rgb(224,86,88)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 3, 3.285394 ms</title></rect>
-<text class="small" x="377.500000" y="495.000000" text-anchor="middle">3.29</text>
-<text x="8" y="519.00">s1100 importance</text>
-<rect x="190.00" y="504.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 1100, importance, thread 0, 0.195718 ms</title></rect>
-<text class="small" x="215.500000" y="517.000000" text-anchor="middle">0.20</text>
-<rect x="244.00" y="504.00" width="51.00" height="19.00" fill="rgb(238,237,246)" stroke="#334155" stroke-width="0.35"><title>step 1100, importance, thread 1, 0.176257 ms</title></rect>
-<text class="small" x="269.500000" y="517.000000" text-anchor="middle">0.18</text>
-<rect x="298.00" y="504.00" width="51.00" height="19.00" fill="rgb(238,238,246)" stroke="#334155" stroke-width="0.35"><title>step 1100, importance, thread 2, 0.174049 ms</title></rect>
-<text class="small" x="323.500000" y="517.000000" text-anchor="middle">0.17</text>
-<rect x="352.00" y="504.00" width="51.00" height="19.00" fill="rgb(238,237,245)" stroke="#334155" stroke-width="0.35"><title>step 1100, importance, thread 3, 0.187743 ms</title></rect>
-<text class="small" x="377.500000" y="517.000000" text-anchor="middle">0.19</text>
-<text x="8" y="541.00">s1200 heat_update</text>
-<rect x="190.00" y="526.00" width="51.00" height="19.00" fill="rgb(225,87,90)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 0, 3.247151 ms</title></rect>
-<text class="small" x="215.500000" y="539.000000" text-anchor="middle">3.25</text>
-<rect x="244.00" y="526.00" width="51.00" height="19.00" fill="rgb(227,110,113)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 1, 2.795167 ms</title></rect>
-<text class="small" x="269.500000" y="539.000000" text-anchor="middle">2.80</text>
-<rect x="298.00" y="526.00" width="51.00" height="19.00" fill="rgb(227,112,115)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 2, 2.749549 ms</title></rect>
-<text class="small" x="323.500000" y="539.000000" text-anchor="middle">2.75</text>
-<rect x="352.00" y="526.00" width="51.00" height="19.00" fill="rgb(225,89,91)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 3, 3.216853 ms</title></rect>
-<text class="small" x="377.500000" y="539.000000" text-anchor="middle">3.22</text>
-<text x="8" y="563.00">s1200 importance</text>
-<rect x="190.00" y="548.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 1200, importance, thread 0, 0.198040 ms</title></rect>
-<text class="small" x="215.500000" y="561.000000" text-anchor="middle">0.20</text>
-<rect x="244.00" y="548.00" width="51.00" height="19.00" fill="rgb(238,238,247)" stroke="#334155" stroke-width="0.35"><title>step 1200, importance, thread 1, 0.157818 ms</title></rect>
-<text class="small" x="269.500000" y="561.000000" text-anchor="middle">0.16</text>
-<rect x="298.00" y="548.00" width="51.00" height="19.00" fill="rgb(238,238,247)" stroke="#334155" stroke-width="0.35"><title>step 1200, importance, thread 2, 0.158680 ms</title></rect>
-<text class="small" x="323.500000" y="561.000000" text-anchor="middle">0.16</text>
-<rect x="352.00" y="548.00" width="51.00" height="19.00" fill="rgb(238,237,246)" stroke="#334155" stroke-width="0.35"><title>step 1200, importance, thread 3, 0.182449 ms</title></rect>
-<text class="small" x="377.500000" y="561.000000" text-anchor="middle">0.18</text>
-<text x="8" y="585.00">s1300 heat_update</text>
-<rect x="190.00" y="570.00" width="51.00" height="19.00" fill="rgb(223,70,71)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 0, 3.606536 ms</title></rect>
-<text class="small" x="215.500000" y="583.000000" text-anchor="middle">3.61</text>
-<rect x="244.00" y="570.00" width="51.00" height="19.00" fill="rgb(225,89,91)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 1, 3.215325 ms</title></rect>
-<text class="small" x="269.500000" y="583.000000" text-anchor="middle">3.22</text>
-<rect x="298.00" y="570.00" width="51.00" height="19.00" fill="rgb(226,108,111)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 2, 2.830512 ms</title></rect>
-<text class="small" x="323.500000" y="583.000000" text-anchor="middle">2.83</text>
-<rect x="352.00" y="570.00" width="51.00" height="19.00" fill="rgb(223,75,76)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 3, 3.508894 ms</title></rect>
-<text class="small" x="377.500000" y="583.000000" text-anchor="middle">3.51</text>
-<text x="8" y="607.00">s1300 importance</text>
-<rect x="190.00" y="592.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 1300, importance, thread 0, 0.204803 ms</title></rect>
-<text class="small" x="215.500000" y="605.000000" text-anchor="middle">0.20</text>
-<rect x="244.00" y="592.00" width="51.00" height="19.00" fill="rgb(238,238,247)" stroke="#334155" stroke-width="0.35"><title>step 1300, importance, thread 1, 0.165708 ms</title></rect>
-<text class="small" x="269.500000" y="605.000000" text-anchor="middle">0.17</text>
-<rect x="298.00" y="592.00" width="51.00" height="19.00" fill="rgb(238,238,247)" stroke="#334155" stroke-width="0.35"><title>step 1300, importance, thread 2, 0.162625 ms</title></rect>
-<text class="small" x="323.500000" y="605.000000" text-anchor="middle">0.16</text>
-<rect x="352.00" y="592.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 1300, importance, thread 3, 0.196117 ms</title></rect>
-<text class="small" x="377.500000" y="605.000000" text-anchor="middle">0.20</text>
-<text x="8" y="629.00">s1400 heat_update</text>
-<rect x="190.00" y="614.00" width="51.00" height="19.00" fill="rgb(224,82,84)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 0, 3.354425 ms</title></rect>
-<text class="small" x="215.500000" y="627.000000" text-anchor="middle">3.35</text>
-<rect x="244.00" y="614.00" width="51.00" height="19.00" fill="rgb(228,124,128)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 1, 2.490326 ms</title></rect>
-<text class="small" x="269.500000" y="627.000000" text-anchor="middle">2.49</text>
-<rect x="298.00" y="614.00" width="51.00" height="19.00" fill="rgb(227,118,122)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 2, 2.618283 ms</title></rect>
-<text class="small" x="323.500000" y="627.000000" text-anchor="middle">2.62</text>
-<rect x="352.00" y="614.00" width="51.00" height="19.00" fill="rgb(226,99,101)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 3, 3.020367 ms</title></rect>
-<text class="small" x="377.500000" y="627.000000" text-anchor="middle">3.02</text>
-<text x="8" y="651.00">s1400 importance</text>
-<rect x="190.00" y="636.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 1400, importance, thread 0, 0.202976 ms</title></rect>
-<text class="small" x="215.500000" y="649.000000" text-anchor="middle">0.20</text>
-<rect x="244.00" y="636.00" width="51.00" height="19.00" fill="rgb(238,239,247)" stroke="#334155" stroke-width="0.35"><title>step 1400, importance, thread 1, 0.151929 ms</title></rect>
-<text class="small" x="269.500000" y="649.000000" text-anchor="middle">0.15</text>
-<rect x="298.00" y="636.00" width="51.00" height="19.00" fill="rgb(238,238,247)" stroke="#334155" stroke-width="0.35"><title>step 1400, importance, thread 2, 0.160975 ms</title></rect>
-<text class="small" x="323.500000" y="649.000000" text-anchor="middle">0.16</text>
-<rect x="352.00" y="636.00" width="51.00" height="19.00" fill="rgb(238,237,246)" stroke="#334155" stroke-width="0.35"><title>step 1400, importance, thread 3, 0.174374 ms</title></rect>
-<text class="small" x="377.500000" y="649.000000" text-anchor="middle">0.17</text>
-<text x="8" y="673.00">s1500 heat_update</text>
-<rect x="190.00" y="658.00" width="51.00" height="19.00" fill="rgb(225,91,93)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 0, 3.180482 ms</title></rect>
-<text class="small" x="215.500000" y="671.000000" text-anchor="middle">3.18</text>
-<rect x="244.00" y="658.00" width="51.00" height="19.00" fill="rgb(229,132,136)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 1, 2.327688 ms</title></rect>
-<text class="small" x="269.500000" y="671.000000" text-anchor="middle">2.33</text>
-<rect x="298.00" y="658.00" width="51.00" height="19.00" fill="rgb(228,125,129)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 2, 2.479976 ms</title></rect>
-<text class="small" x="323.500000" y="671.000000" text-anchor="middle">2.48</text>
-<rect x="352.00" y="658.00" width="51.00" height="19.00" fill="rgb(226,104,107)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 3, 2.905757 ms</title></rect>
-<text class="small" x="377.500000" y="671.000000" text-anchor="middle">2.91</text>
-<text x="8" y="695.00">s1500 importance</text>
-<rect x="190.00" y="680.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 1500, importance, thread 0, 0.195019 ms</title></rect>
-<text class="small" x="215.500000" y="693.000000" text-anchor="middle">0.20</text>
-<rect x="244.00" y="680.00" width="51.00" height="19.00" fill="rgb(238,239,247)" stroke="#334155" stroke-width="0.35"><title>step 1500, importance, thread 1, 0.150748 ms</title></rect>
-<text class="small" x="269.500000" y="693.000000" text-anchor="middle">0.15</text>
-<rect x="298.00" y="680.00" width="51.00" height="19.00" fill="rgb(238,239,247)" stroke="#334155" stroke-width="0.35"><title>step 1500, importance, thread 2, 0.150635 ms</title></rect>
-<text class="small" x="323.500000" y="693.000000" text-anchor="middle">0.15</text>
-<rect x="352.00" y="680.00" width="51.00" height="19.00" fill="rgb(238,238,246)" stroke="#334155" stroke-width="0.35"><title>step 1500, importance, thread 3, 0.169624 ms</title></rect>
-<text class="small" x="377.500000" y="693.000000" text-anchor="middle">0.17</text>
-<text x="8" y="717.00">s1600 heat_update</text>
-<rect x="190.00" y="702.00" width="51.00" height="19.00" fill="rgb(225,90,93)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 0, 3.186652 ms</title></rect>
-<text class="small" x="215.500000" y="715.000000" text-anchor="middle">3.19</text>
-<rect x="244.00" y="702.00" width="51.00" height="19.00" fill="rgb(229,135,139)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 1, 2.272993 ms</title></rect>
-<text class="small" x="269.500000" y="715.000000" text-anchor="middle">2.27</text>
-<rect x="298.00" y="702.00" width="51.00" height="19.00" fill="rgb(227,118,121)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 2, 2.621896 ms</title></rect>
-<text class="small" x="323.500000" y="715.000000" text-anchor="middle">2.62</text>
-<rect x="352.00" y="702.00" width="51.00" height="19.00" fill="rgb(225,95,97)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 3, 3.094890 ms</title></rect>
-<text class="small" x="377.500000" y="715.000000" text-anchor="middle">3.09</text>
-<text x="8" y="739.00">s1600 importance</text>
-<rect x="190.00" y="724.00" width="51.00" height="19.00" fill="rgb(238,236,245)" stroke="#334155" stroke-width="0.35"><title>step 1600, importance, thread 0, 0.202849 ms</title></rect>
-<text class="small" x="215.500000" y="737.000000" text-anchor="middle">0.20</text>
-<rect x="244.00" y="724.00" width="51.00" height="19.00" fill="rgb(238,239,248)" stroke="#334155" stroke-width="0.35"><title>step 1600, importance, thread 1, 0.138610 ms</title></rect>
-<text class="small" x="269.500000" y="737.000000" text-anchor="middle">0.14</text>
-<rect x="298.00" y="724.00" width="51.00" height="19.00" fill="rgb(238,239,247)" stroke="#334155" stroke-width="0.35"><title>step 1600, importance, thread 2, 0.151873 ms</title></rect>
-<text class="small" x="323.500000" y="737.000000" text-anchor="middle">0.15</text>
-<rect x="352.00" y="724.00" width="51.00" height="19.00" fill="rgb(238,237,245)" stroke="#334155" stroke-width="0.35"><title>step 1600, importance, thread 3, 0.187179 ms</title></rect>
-<text class="small" x="377.500000" y="737.000000" text-anchor="middle">0.19</text>
-<text x="8" y="761.00">s1700 heat_update</text>
-<rect x="190.00" y="746.00" width="51.00" height="19.00" fill="rgb(227,115,118)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 0, 2.680270 ms</title></rect>
-<text class="small" x="215.500000" y="759.000000" text-anchor="middle">2.68</text>
-<rect x="244.00" y="746.00" width="51.00" height="19.00" fill="rgb(229,135,140)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 1, 2.264894 ms</title></rect>
-<text class="small" x="269.500000" y="759.000000" text-anchor="middle">2.26</text>
-<rect x="298.00" y="746.00" width="51.00" height="19.00" fill="rgb(229,134,138)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 2, 2.297117 ms</title></rect>
-<text class="small" x="323.500000" y="759.000000" text-anchor="middle">2.30</text>
-<rect x="352.00" y="746.00" width="51.00" height="19.00" fill="rgb(227,115,118)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 3, 2.686186 ms</title></rect>
-<text class="small" x="377.500000" y="759.000000" text-anchor="middle">2.69</text>
-<text x="8" y="783.00">s1700 importance</text>
-<rect x="190.00" y="768.00" width="51.00" height="19.00" fill="rgb(238,238,247)" stroke="#334155" stroke-width="0.35"><title>step 1700, importance, thread 0, 0.166695 ms</title></rect>
-<text class="small" x="215.500000" y="781.000000" text-anchor="middle">0.17</text>
-<rect x="244.00" y="768.00" width="51.00" height="19.00" fill="rgb(238,240,248)" stroke="#334155" stroke-width="0.35"><title>step 1700, importance, thread 1, 0.132619 ms</title></rect>
-<text class="small" x="269.500000" y="781.000000" text-anchor="middle">0.13</text>
-<rect x="298.00" y="768.00" width="51.00" height="19.00" fill="rgb(238,239,248)" stroke="#334155" stroke-width="0.35"><title>step 1700, importance, thread 2, 0.135359 ms</title></rect>
-<text class="small" x="323.500000" y="781.000000" text-anchor="middle">0.14</text>
-<rect x="352.00" y="768.00" width="51.00" height="19.00" fill="rgb(238,238,247)" stroke="#334155" stroke-width="0.35"><title>step 1700, importance, thread 3, 0.155165 ms</title></rect>
-<text class="small" x="377.500000" y="781.000000" text-anchor="middle">0.16</text>
-<text x="8" y="805.00">s1800 heat_update</text>
-<rect x="190.00" y="790.00" width="51.00" height="19.00" fill="rgb(227,111,114)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 0, 2.761489 ms</title></rect>
-<text class="small" x="215.500000" y="803.000000" text-anchor="middle">2.76</text>
-<rect x="244.00" y="790.00" width="51.00" height="19.00" fill="rgb(229,138,143)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 1, 2.207351 ms</title></rect>
-<text class="small" x="269.500000" y="803.000000" text-anchor="middle">2.21</text>
-<rect x="298.00" y="790.00" width="51.00" height="19.00" fill="rgb(228,130,133)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 2, 2.385065 ms</title></rect>
-<text class="small" x="323.500000" y="803.000000" text-anchor="middle">2.39</text>
-<rect x="352.00" y="790.00" width="51.00" height="19.00" fill="rgb(227,116,119)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 3, 2.671306 ms</title></rect>
-<text class="small" x="377.500000" y="803.000000" text-anchor="middle">2.67</text>
-<text x="8" y="827.00">s1800 importance</text>
-<rect x="190.00" y="812.00" width="51.00" height="19.00" fill="rgb(238,238,247)" stroke="#334155" stroke-width="0.35"><title>step 1800, importance, thread 0, 0.158218 ms</title></rect>
-<text class="small" x="215.500000" y="825.000000" text-anchor="middle">0.16</text>
-<rect x="244.00" y="812.00" width="51.00" height="19.00" fill="rgb(238,239,248)" stroke="#334155" stroke-width="0.35"><title>step 1800, importance, thread 1, 0.134586 ms</title></rect>
-<text class="small" x="269.500000" y="825.000000" text-anchor="middle">0.13</text>
-<rect x="298.00" y="812.00" width="51.00" height="19.00" fill="rgb(238,240,248)" stroke="#334155" stroke-width="0.35"><title>step 1800, importance, thread 2, 0.129691 ms</title></rect>
-<text class="small" x="323.500000" y="825.000000" text-anchor="middle">0.13</text>
-<rect x="352.00" y="812.00" width="51.00" height="19.00" fill="rgb(238,239,247)" stroke="#334155" stroke-width="0.35"><title>step 1800, importance, thread 3, 0.151503 ms</title></rect>
-<text class="small" x="377.500000" y="825.000000" text-anchor="middle">0.15</text>
-<text x="8" y="849.00">s1900 heat_update</text>
-<rect x="190.00" y="834.00" width="51.00" height="19.00" fill="rgb(226,107,110)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 0, 2.840984 ms</title></rect>
-<text class="small" x="215.500000" y="847.000000" text-anchor="middle">2.84</text>
-<rect x="244.00" y="834.00" width="51.00" height="19.00" fill="rgb(229,132,137)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 1, 2.325356 ms</title></rect>
-<text class="small" x="269.500000" y="847.000000" text-anchor="middle">2.33</text>
-<rect x="298.00" y="834.00" width="51.00" height="19.00" fill="rgb(229,139,144)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 2, 2.185311 ms</title></rect>
-<text class="small" x="323.500000" y="847.000000" text-anchor="middle">2.19</text>
-<rect x="352.00" y="834.00" width="51.00" height="19.00" fill="rgb(228,122,126)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 3, 2.531444 ms</title></rect>
-<text class="small" x="377.500000" y="847.000000" text-anchor="middle">2.53</text>
-<text x="8" y="871.00">s1900 importance</text>
-<rect x="190.00" y="856.00" width="51.00" height="19.00" fill="rgb(238,238,246)" stroke="#334155" stroke-width="0.35"><title>step 1900, importance, thread 0, 0.167304 ms</title></rect>
-<text class="small" x="215.500000" y="869.000000" text-anchor="middle">0.17</text>
-<rect x="244.00" y="856.00" width="51.00" height="19.00" fill="rgb(238,239,247)" stroke="#334155" stroke-width="0.35"><title>step 1900, importance, thread 1, 0.148405 ms</title></rect>
-<text class="small" x="269.500000" y="869.000000" text-anchor="middle">0.15</text>
-<rect x="298.00" y="856.00" width="51.00" height="19.00" fill="rgb(238,239,248)" stroke="#334155" stroke-width="0.35"><title>step 1900, importance, thread 2, 0.146968 ms</title></rect>
-<text class="small" x="323.500000" y="869.000000" text-anchor="middle">0.15</text>
-<rect x="352.00" y="856.00" width="51.00" height="19.00" fill="rgb(238,239,248)" stroke="#334155" stroke-width="0.35"><title>step 1900, importance, thread 3, 0.146086 ms</title></rect>
-<text class="small" x="377.500000" y="869.000000" text-anchor="middle">0.15</text>
-<text x="8" y="893.00">s2000 heat_update</text>
-<rect x="190.00" y="878.00" width="51.00" height="19.00" fill="rgb(228,130,134)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 0, 2.372447 ms</title></rect>
-<text class="small" x="215.500000" y="891.000000" text-anchor="middle">2.37</text>
-<rect x="244.00" y="878.00" width="51.00" height="19.00" fill="rgb(229,141,146)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 1, 2.141059 ms</title></rect>
-<text class="small" x="269.500000" y="891.000000" text-anchor="middle">2.14</text>
-<rect x="298.00" y="878.00" width="51.00" height="19.00" fill="rgb(229,139,144)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 2, 2.181053 ms</title></rect>
-<text class="small" x="323.500000" y="891.000000" text-anchor="middle">2.18</text>
-<rect x="352.00" y="878.00" width="51.00" height="19.00" fill="rgb(228,127,131)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 3, 2.436435 ms</title></rect>
-<text class="small" x="377.500000" y="891.000000" text-anchor="middle">2.44</text>
-<text x="8" y="915.00">s2000 importance</text>
-<rect x="190.00" y="900.00" width="51.00" height="19.00" fill="rgb(238,239,248)" stroke="#334155" stroke-width="0.35"><title>step 2000, importance, thread 0, 0.144707 ms</title></rect>
-<text class="small" x="215.500000" y="913.000000" text-anchor="middle">0.14</text>
-<rect x="244.00" y="900.00" width="51.00" height="19.00" fill="rgb(238,240,248)" stroke="#334155" stroke-width="0.35"><title>step 2000, importance, thread 1, 0.128142 ms</title></rect>
-<text class="small" x="269.500000" y="913.000000" text-anchor="middle">0.13</text>
-<rect x="298.00" y="900.00" width="51.00" height="19.00" fill="rgb(238,239,248)" stroke="#334155" stroke-width="0.35"><title>step 2000, importance, thread 2, 0.133883 ms</title></rect>
-<text class="small" x="323.500000" y="913.000000" text-anchor="middle">0.13</text>
-<rect x="352.00" y="900.00" width="51.00" height="19.00" fill="rgb(238,239,248)" stroke="#334155" stroke-width="0.35"><title>step 2000, importance, thread 3, 0.139805 ms</title></rect>
-<text class="small" x="377.500000" y="913.000000" text-anchor="middle">0.14</text>
+<text x="12" y="20">OMPT per-thread region time, max=4.260 ms, color=2-5 ms</text>
+<text class="small" x="124.000" y="34" text-anchor="middle">t0</text>
+<text class="small" x="220.000" y="34" text-anchor="middle">t1</text>
+<text class="small" x="316.000" y="34" text-anchor="middle">t2</text>
+<text class="small" x="412.000" y="34" text-anchor="middle">t3</text>
+<text x="8" y="53.000">s100</text>
+<text class="small" x="8" y="66.000">4.26 ms</text>
+<rect x="76.00" y="42.00" width="93.00" height="27.00" fill="rgb(185,202,43)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 0, 3.877911 ms</title></rect>
+<text class="small" x="122.500000" y="55.000000" text-anchor="middle" fill="#0f172a">3.88</text>
+<rect x="172.00" y="42.00" width="93.00" height="27.00" fill="rgb(250,164,21)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 1, 4.254378 ms</title></rect>
+<text class="small" x="218.500000" y="55.000000" text-anchor="middle" fill="#0f172a">4.25</text>
+<rect x="268.00" y="42.00" width="93.00" height="27.00" fill="rgb(250,163,21)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 2, 4.259688 ms</title></rect>
+<text class="small" x="314.500000" y="55.000000" text-anchor="middle" fill="#0f172a">4.26</text>
+<rect x="364.00" y="42.00" width="93.00" height="27.00" fill="rgb(106,199,70)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 3, 3.680605 ms</title></rect>
+<text class="small" x="410.500000" y="55.000000" text-anchor="middle" fill="#0f172a">3.68</text>
+<text x="8" y="83.00">s200</text>
+<text class="small" x="8" y="96.00">4.14 ms</text>
+<rect x="76.00" y="72.00" width="93.00" height="27.00" fill="rgb(145,201,56)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 0, 3.777795 ms</title></rect>
+<text class="small" x="122.500000" y="85.000000" text-anchor="middle" fill="#0f172a">3.78</text>
+<rect x="172.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,185,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 1, 4.141247 ms</title></rect>
+<text class="small" x="218.500000" y="85.000000" text-anchor="middle" fill="#0f172a">4.14</text>
+<rect x="268.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,186,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 2, 4.138375 ms</title></rect>
+<text class="small" x="314.500000" y="85.000000" text-anchor="middle" fill="#0f172a">4.14</text>
+<rect x="364.00" y="72.00" width="93.00" height="27.00" fill="rgb(75,198,80)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 3, 3.601428 ms</title></rect>
+<text class="small" x="410.500000" y="85.000000" text-anchor="middle" fill="#0f172a">3.60</text>
+<text x="8" y="113.00">s300</text>
+<text class="small" x="8" y="126.00">4.15 ms</text>
+<rect x="76.00" y="102.00" width="93.00" height="27.00" fill="rgb(129,200,62)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 0, 3.737692 ms</title></rect>
+<text class="small" x="122.500000" y="115.000000" text-anchor="middle" fill="#0f172a">3.74</text>
+<rect x="172.00" y="102.00" width="93.00" height="27.00" fill="rgb(250,184,21)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 1, 4.148948 ms</title></rect>
+<text class="small" x="218.500000" y="115.000000" text-anchor="middle" fill="#0f172a">4.15</text>
+<rect x="268.00" y="102.00" width="93.00" height="27.00" fill="rgb(250,197,21)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 2, 4.075326 ms</title></rect>
+<text class="small" x="314.500000" y="115.000000" text-anchor="middle" fill="#0f172a">4.08</text>
+<rect x="364.00" y="102.00" width="93.00" height="27.00" fill="rgb(69,198,82)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 3, 3.587431 ms</title></rect>
+<text class="small" x="410.500000" y="115.000000" text-anchor="middle" fill="#0f172a">3.59</text>
+<text x="8" y="143.00">s400</text>
+<text class="small" x="8" y="156.00">4.08 ms</text>
+<rect x="76.00" y="132.00" width="93.00" height="27.00" fill="rgb(119,200,65)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 0, 3.711596 ms</title></rect>
+<text class="small" x="122.500000" y="145.000000" text-anchor="middle" fill="#0f172a">3.71</text>
+<rect x="172.00" y="132.00" width="93.00" height="27.00" fill="rgb(250,196,21)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 1, 4.083396 ms</title></rect>
+<text class="small" x="218.500000" y="145.000000" text-anchor="middle" fill="#0f172a">4.08</text>
+<rect x="268.00" y="132.00" width="93.00" height="27.00" fill="rgb(250,197,21)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 2, 4.078349 ms</title></rect>
+<text class="small" x="314.500000" y="145.000000" text-anchor="middle" fill="#0f172a">4.08</text>
+<rect x="364.00" y="132.00" width="93.00" height="27.00" fill="rgb(132,200,61)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 3, 3.744633 ms</title></rect>
+<text class="small" x="410.500000" y="145.000000" text-anchor="middle" fill="#0f172a">3.74</text>
+<text x="8" y="173.00">s500</text>
+<text class="small" x="8" y="186.00">4.20 ms</text>
+<rect x="76.00" y="162.00" width="93.00" height="27.00" fill="rgb(124,200,64)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 0, 3.725335 ms</title></rect>
+<text class="small" x="122.500000" y="175.000000" text-anchor="middle" fill="#0f172a">3.73</text>
+<rect x="172.00" y="162.00" width="93.00" height="27.00" fill="rgb(250,196,21)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 1, 4.083795 ms</title></rect>
+<text class="small" x="218.500000" y="175.000000" text-anchor="middle" fill="#0f172a">4.08</text>
+<rect x="268.00" y="162.00" width="93.00" height="27.00" fill="rgb(250,174,21)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 2, 4.200061 ms</title></rect>
+<text class="small" x="314.500000" y="175.000000" text-anchor="middle" fill="#0f172a">4.20</text>
+<rect x="364.00" y="162.00" width="93.00" height="27.00" fill="rgb(52,198,88)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 3, 3.545751 ms</title></rect>
+<text class="small" x="410.500000" y="175.000000" text-anchor="middle" fill="#0f172a">3.55</text>
+<text x="8" y="203.00">s600</text>
+<text class="small" x="8" y="216.00">3.97 ms</text>
+<rect x="76.00" y="192.00" width="93.00" height="27.00" fill="rgb(78,198,79)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 0, 3.610980 ms</title></rect>
+<text class="small" x="122.500000" y="205.000000" text-anchor="middle" fill="#0f172a">3.61</text>
+<rect x="172.00" y="192.00" width="93.00" height="27.00" fill="rgb(223,203,30)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 1, 3.971909 ms</title></rect>
+<text class="small" x="218.500000" y="205.000000" text-anchor="middle" fill="#0f172a">3.97</text>
+<rect x="268.00" y="192.00" width="93.00" height="27.00" fill="rgb(212,203,34)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 2, 3.945334 ms</title></rect>
+<text class="small" x="314.500000" y="205.000000" text-anchor="middle" fill="#0f172a">3.95</text>
+<rect x="364.00" y="192.00" width="93.00" height="27.00" fill="rgb(45,197,90)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 3, 3.527429 ms</title></rect>
+<text class="small" x="410.500000" y="205.000000" text-anchor="middle" fill="#0f172a">3.53</text>
+<text x="8" y="233.00">s700</text>
+<text class="small" x="8" y="246.00">3.70 ms</text>
+<rect x="76.00" y="222.00" width="93.00" height="27.00" fill="rgb(31,196,106)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 0, 3.446937 ms</title></rect>
+<text class="small" x="122.500000" y="235.000000" text-anchor="middle" fill="#0f172a">3.45</text>
+<rect x="172.00" y="222.00" width="93.00" height="27.00" fill="rgb(96,199,73)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 1, 3.655325 ms</title></rect>
+<text class="small" x="218.500000" y="235.000000" text-anchor="middle" fill="#0f172a">3.66</text>
+<rect x="268.00" y="222.00" width="93.00" height="27.00" fill="rgb(114,200,67)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 2, 3.701189 ms</title></rect>
+<text class="small" x="314.500000" y="235.000000" text-anchor="middle" fill="#0f172a">3.70</text>
+<rect x="364.00" y="222.00" width="93.00" height="27.00" fill="rgb(25,192,133)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 3, 3.320443 ms</title></rect>
+<text class="small" x="410.500000" y="235.000000" text-anchor="middle" fill="#0f172a">3.32</text>
+<text x="8" y="263.00">s800</text>
+<text class="small" x="8" y="276.00">3.89 ms</text>
+<rect x="76.00" y="252.00" width="93.00" height="27.00" fill="rgb(69,198,82)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 0, 3.588627 ms</title></rect>
+<text class="small" x="122.500000" y="265.000000" text-anchor="middle" fill="#0f172a">3.59</text>
+<rect x="172.00" y="252.00" width="93.00" height="27.00" fill="rgb(191,202,41)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 1, 3.891944 ms</title></rect>
+<text class="small" x="218.500000" y="265.000000" text-anchor="middle" fill="#0f172a">3.89</text>
+<rect x="268.00" y="252.00" width="93.00" height="27.00" fill="rgb(112,200,67)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 2, 3.696244 ms</title></rect>
+<text class="small" x="314.500000" y="265.000000" text-anchor="middle" fill="#0f172a">3.70</text>
+<rect x="364.00" y="252.00" width="93.00" height="27.00" fill="rgb(30,195,110)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 3, 3.427199 ms</title></rect>
+<text class="small" x="410.500000" y="265.000000" text-anchor="middle" fill="#0f172a">3.43</text>
+<text x="8" y="293.00">s900</text>
+<text class="small" x="8" y="306.00">3.55 ms</text>
+<rect x="76.00" y="282.00" width="93.00" height="27.00" fill="rgb(49,197,89)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 0, 3.537365 ms</title></rect>
+<text class="small" x="122.500000" y="295.000000" text-anchor="middle" fill="#0f172a">3.54</text>
+<rect x="172.00" y="282.00" width="93.00" height="27.00" fill="rgb(55,198,87)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 1, 3.553650 ms</title></rect>
+<text class="small" x="218.500000" y="295.000000" text-anchor="middle" fill="#0f172a">3.55</text>
+<rect x="268.00" y="282.00" width="93.00" height="27.00" fill="rgb(47,197,89)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 2, 3.533356 ms</title></rect>
+<text class="small" x="314.500000" y="295.000000" text-anchor="middle" fill="#0f172a">3.53</text>
+<rect x="364.00" y="282.00" width="93.00" height="27.00" fill="rgb(55,198,87)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 3, 3.551889 ms</title></rect>
+<text class="small" x="410.500000" y="295.000000" text-anchor="middle" fill="#0f172a">3.55</text>
+<text x="8" y="323.00">s1000</text>
+<text class="small" x="8" y="336.00">3.29 ms</text>
+<rect x="76.00" y="312.00" width="93.00" height="27.00" fill="rgb(20,189,154)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 0, 3.225173 ms</title></rect>
+<text class="small" x="122.500000" y="325.000000" text-anchor="middle" fill="#0f172a">3.23</text>
+<rect x="172.00" y="312.00" width="93.00" height="27.00" fill="rgb(23,191,142)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 1, 3.281191 ms</title></rect>
+<text class="small" x="218.500000" y="325.000000" text-anchor="middle" fill="#0f172a">3.28</text>
+<rect x="268.00" y="312.00" width="93.00" height="27.00" fill="rgb(8,183,205)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 2, 2.993807 ms</title></rect>
+<text class="small" x="314.500000" y="325.000000" text-anchor="middle" fill="#0f172a">2.99</text>
+<rect x="364.00" y="312.00" width="93.00" height="27.00" fill="rgb(23,191,140)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 3, 3.291115 ms</title></rect>
+<text class="small" x="410.500000" y="325.000000" text-anchor="middle" fill="#0f172a">3.29</text>
+<text x="8" y="353.00">s1100</text>
+<text class="small" x="8" y="366.00">3.38 ms</text>
+<rect x="76.00" y="342.00" width="93.00" height="27.00" fill="rgb(28,194,120)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 0, 3.381438 ms</title></rect>
+<text class="small" x="122.500000" y="355.000000" text-anchor="middle" fill="#0f172a">3.38</text>
+<rect x="172.00" y="342.00" width="93.00" height="27.00" fill="rgb(13,186,181)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 1, 3.099763 ms</title></rect>
+<text class="small" x="218.500000" y="355.000000" text-anchor="middle" fill="#0f172a">3.10</text>
+<rect x="268.00" y="342.00" width="93.00" height="27.00" fill="rgb(6,182,212)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 2, 2.961866 ms</title></rect>
+<text class="small" x="314.500000" y="355.000000" text-anchor="middle" fill="#0f172a">2.96</text>
+<rect x="364.00" y="342.00" width="93.00" height="27.00" fill="rgb(23,191,141)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 3, 3.285394 ms</title></rect>
+<text class="small" x="410.500000" y="355.000000" text-anchor="middle" fill="#0f172a">3.29</text>
+<text x="8" y="383.00">s1200</text>
+<text class="small" x="8" y="396.00">3.25 ms</text>
+<rect x="76.00" y="372.00" width="93.00" height="27.00" fill="rgb(21,190,149)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 0, 3.247151 ms</title></rect>
+<text class="small" x="122.500000" y="385.000000" text-anchor="middle" fill="#0f172a">3.25</text>
+<rect x="172.00" y="372.00" width="93.00" height="27.00" fill="rgb(17,153,220)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 1, 2.795167 ms</title></rect>
+<text class="small" x="218.500000" y="385.000000" text-anchor="middle" fill="#0f172a">2.80</text>
+<rect x="268.00" y="372.00" width="93.00" height="27.00" fill="rgb(20,146,222)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 2, 2.749549 ms</title></rect>
+<text class="small" x="314.500000" y="385.000000" text-anchor="middle" fill="#0f172a">2.75</text>
+<rect x="364.00" y="372.00" width="93.00" height="27.00" fill="rgb(19,189,156)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 3, 3.216853 ms</title></rect>
+<text class="small" x="410.500000" y="385.000000" text-anchor="middle" fill="#0f172a">3.22</text>
+<text x="8" y="413.00">s1300</text>
+<text class="small" x="8" y="426.00">3.61 ms</text>
+<rect x="76.00" y="402.00" width="93.00" height="27.00" fill="rgb(77,198,80)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 0, 3.606536 ms</title></rect>
+<text class="small" x="122.500000" y="415.000000" text-anchor="middle" fill="#0f172a">3.61</text>
+<rect x="172.00" y="402.00" width="93.00" height="27.00" fill="rgb(19,189,156)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 1, 3.215325 ms</title></rect>
+<text class="small" x="218.500000" y="415.000000" text-anchor="middle" fill="#0f172a">3.22</text>
+<rect x="268.00" y="402.00" width="93.00" height="27.00" fill="rgb(14,160,218)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 2, 2.830512 ms</title></rect>
+<text class="small" x="314.500000" y="415.000000" text-anchor="middle" fill="#0f172a">2.83</text>
+<rect x="364.00" y="402.00" width="93.00" height="27.00" fill="rgb(38,197,93)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 3, 3.508894 ms</title></rect>
+<text class="small" x="410.500000" y="415.000000" text-anchor="middle" fill="#0f172a">3.51</text>
+<text x="8" y="443.00">s1400</text>
+<text class="small" x="8" y="456.00">3.35 ms</text>
+<rect x="76.00" y="432.00" width="93.00" height="27.00" fill="rgb(26,193,126)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 0, 3.354425 ms</title></rect>
+<text class="small" x="122.500000" y="445.000000" text-anchor="middle" fill="#0f172a">3.35</text>
+<rect x="172.00" y="432.00" width="93.00" height="27.00" fill="rgb(36,101,235)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 1, 2.490326 ms</title></rect>
+<text class="small" x="218.500000" y="445.000000" text-anchor="middle" fill="#f8fafc">2.49</text>
+<rect x="268.00" y="432.00" width="93.00" height="27.00" fill="rgb(28,123,228)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 2, 2.618283 ms</title></rect>
+<text class="small" x="314.500000" y="445.000000" text-anchor="middle" fill="#f8fafc">2.62</text>
+<rect x="364.00" y="432.00" width="93.00" height="27.00" fill="rgb(9,184,199)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 3, 3.020367 ms</title></rect>
+<text class="small" x="410.500000" y="445.000000" text-anchor="middle" fill="#0f172a">3.02</text>
+<text x="8" y="473.00">s1500</text>
+<text class="small" x="8" y="486.00">3.18 ms</text>
+<rect x="76.00" y="462.00" width="93.00" height="27.00" fill="rgb(17,188,164)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 0, 3.180482 ms</title></rect>
+<text class="small" x="122.500000" y="475.000000" text-anchor="middle" fill="#0f172a">3.18</text>
+<rect x="172.00" y="462.00" width="93.00" height="27.00" fill="rgb(28,75,199)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 1, 2.327688 ms</title></rect>
+<text class="small" x="218.500000" y="475.000000" text-anchor="middle" fill="#f8fafc">2.33</text>
+<rect x="268.00" y="462.00" width="93.00" height="27.00" fill="rgb(37,99,235)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 2, 2.479976 ms</title></rect>
+<text class="small" x="314.500000" y="475.000000" text-anchor="middle" fill="#f8fafc">2.48</text>
+<rect x="364.00" y="462.00" width="93.00" height="27.00" fill="rgb(10,173,215)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 3, 2.905757 ms</title></rect>
+<text class="small" x="410.500000" y="475.000000" text-anchor="middle" fill="#0f172a">2.91</text>
+<text x="8" y="503.00">s1600</text>
+<text class="small" x="8" y="516.00">3.19 ms</text>
+<rect x="76.00" y="492.00" width="93.00" height="27.00" fill="rgb(18,188,162)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 0, 3.186652 ms</title></rect>
+<text class="small" x="122.500000" y="505.000000" text-anchor="middle" fill="#0f172a">3.19</text>
+<rect x="172.00" y="492.00" width="93.00" height="27.00" fill="rgb(24,66,185)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 1, 2.272993 ms</title></rect>
+<text class="small" x="218.500000" y="505.000000" text-anchor="middle" fill="#f8fafc">2.27</text>
+<rect x="268.00" y="492.00" width="93.00" height="27.00" fill="rgb(28,124,228)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 2, 2.621896 ms</title></rect>
+<text class="small" x="314.500000" y="505.000000" text-anchor="middle" fill="#f8fafc">2.62</text>
+<rect x="364.00" y="492.00" width="93.00" height="27.00" fill="rgb(13,186,183)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 3, 3.094890 ms</title></rect>
+<text class="small" x="410.500000" y="505.000000" text-anchor="middle" fill="#0f172a">3.09</text>
+<text x="8" y="533.00">s1700</text>
+<text class="small" x="8" y="546.00">2.69 ms</text>
+<rect x="76.00" y="522.00" width="93.00" height="27.00" fill="rgb(24,134,225)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 0, 2.680270 ms</title></rect>
+<text class="small" x="122.500000" y="535.000000" text-anchor="middle" fill="#f8fafc">2.68</text>
+<rect x="172.00" y="522.00" width="93.00" height="27.00" fill="rgb(24,64,183)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 1, 2.264894 ms</title></rect>
+<text class="small" x="218.500000" y="535.000000" text-anchor="middle" fill="#f8fafc">2.26</text>
+<rect x="268.00" y="522.00" width="93.00" height="27.00" fill="rgb(26,70,191)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 2, 2.297117 ms</title></rect>
+<text class="small" x="314.500000" y="535.000000" text-anchor="middle" fill="#f8fafc">2.30</text>
+<rect x="364.00" y="522.00" width="93.00" height="27.00" fill="rgb(24,135,225)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 3, 2.686186 ms</title></rect>
+<text class="small" x="410.500000" y="535.000000" text-anchor="middle" fill="#f8fafc">2.69</text>
+<text x="8" y="563.00">s1800</text>
+<text class="small" x="8" y="576.00">2.76 ms</text>
+<rect x="76.00" y="552.00" width="93.00" height="27.00" fill="rgb(19,148,222)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 0, 2.761489 ms</title></rect>
+<text class="small" x="122.500000" y="565.000000" text-anchor="middle" fill="#0f172a">2.76</text>
+<rect x="172.00" y="552.00" width="93.00" height="27.00" fill="rgb(21,55,170)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 1, 2.207351 ms</title></rect>
+<text class="small" x="218.500000" y="565.000000" text-anchor="middle" fill="#f8fafc">2.21</text>
+<rect x="268.00" y="552.00" width="93.00" height="27.00" fill="rgb(31,84,212)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 2, 2.385065 ms</title></rect>
+<text class="small" x="314.500000" y="565.000000" text-anchor="middle" fill="#f8fafc">2.39</text>
+<rect x="364.00" y="552.00" width="93.00" height="27.00" fill="rgb(25,132,226)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 3, 2.671306 ms</title></rect>
+<text class="small" x="410.500000" y="565.000000" text-anchor="middle" fill="#f8fafc">2.67</text>
+<text x="8" y="593.00">s1900</text>
+<text class="small" x="8" y="606.00">2.84 ms</text>
+<rect x="76.00" y="582.00" width="93.00" height="27.00" fill="rgb(14,161,218)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 0, 2.840984 ms</title></rect>
+<text class="small" x="122.500000" y="595.000000" text-anchor="middle" fill="#0f172a">2.84</text>
+<rect x="172.00" y="582.00" width="93.00" height="27.00" fill="rgb(28,74,198)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 1, 2.325356 ms</title></rect>
+<text class="small" x="218.500000" y="595.000000" text-anchor="middle" fill="#f8fafc">2.33</text>
+<rect x="268.00" y="582.00" width="93.00" height="27.00" fill="rgb(19,52,164)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 2, 2.185311 ms</title></rect>
+<text class="small" x="314.500000" y="595.000000" text-anchor="middle" fill="#f8fafc">2.19</text>
+<rect x="364.00" y="582.00" width="93.00" height="27.00" fill="rgb(34,108,233)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 3, 2.531444 ms</title></rect>
+<text class="small" x="410.500000" y="595.000000" text-anchor="middle" fill="#f8fafc">2.53</text>
+<text x="8" y="623.00">s2000</text>
+<text class="small" x="8" y="636.00">2.44 ms</text>
+<rect x="76.00" y="612.00" width="93.00" height="27.00" fill="rgb(31,82,209)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 0, 2.372447 ms</title></rect>
+<text class="small" x="122.500000" y="625.000000" text-anchor="middle" fill="#f8fafc">2.37</text>
+<rect x="172.00" y="612.00" width="93.00" height="27.00" fill="rgb(17,45,154)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 1, 2.141059 ms</title></rect>
+<text class="small" x="218.500000" y="625.000000" text-anchor="middle" fill="#f8fafc">2.14</text>
+<rect x="268.00" y="612.00" width="93.00" height="27.00" fill="rgb(19,51,163)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 2, 2.181053 ms</title></rect>
+<text class="small" x="314.500000" y="625.000000" text-anchor="middle" fill="#f8fafc">2.18</text>
+<rect x="364.00" y="612.00" width="93.00" height="27.00" fill="rgb(34,92,225)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 3, 2.436435 ms</title></rect>
+<text class="small" x="410.500000" y="625.000000" text-anchor="middle" fill="#f8fafc">2.44</text>
 </svg>
