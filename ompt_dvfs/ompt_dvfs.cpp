@@ -25,6 +25,8 @@ using Clock = std::chrono::steady_clock;
 struct RegionState {
     int id = 0;
     unsigned long long executions = 0;
+    bool dvfs_enabled = false;
+    double last_region_wall_ms = 0.0;
     std::vector<double> last_elapsed_ms;
     std::vector<double> last_target_mhz;
 };
@@ -35,6 +37,8 @@ struct ParallelEvent {
     unsigned long long parallel_id = 0;
     const void *codeptr = nullptr;
     int requested_threads = 0;
+    bool dvfs_enabled = false;
+    double region_wall_ms = 0.0;
     std::atomic<int> team_size{0};
     std::vector<double> start_ms;
     std::vector<double> current_start_ms;
@@ -63,6 +67,8 @@ double max_mhz = 4800.0;
 double min_mhz = 800.0;
 double bus_mhz = 100.0;
 double reference_mhz = 0.0;
+double dvfs_enable_region_ms = 1.2;
+double dvfs_disable_region_ms = 0.8;
 bool debug = false;
 bool msr_control_enabled = false;
 bool msr_counter_enabled = false;
@@ -141,7 +147,8 @@ double reference_mhz_for_cpu(int cpu) {
 }
 
 void begin_thread_sample(ParallelEvent *event, std::size_t slot, int cpu) {
-    if (!msr_counter_enabled || cpu < 0 || slot >= event->current_sample.size()) {
+    if (!event->dvfs_enabled || !msr_counter_enabled || cpu < 0 ||
+        slot >= event->current_sample.size()) {
         return;
     }
 
@@ -156,7 +163,8 @@ void begin_thread_sample(ParallelEvent *event, std::size_t slot, int cpu) {
 }
 
 void end_thread_sample(ParallelEvent *event, std::size_t slot) {
-    if (!msr_counter_enabled || slot >= event->sample_started.size() ||
+    if (!event->dvfs_enabled || !msr_counter_enabled ||
+        slot >= event->sample_started.size() ||
         !event->sample_started[slot]) {
         return;
     }
@@ -243,7 +251,8 @@ std::vector<double> plan_targets(const RegionState &region, std::size_t slots) {
 void write_header() {
     output << "parallel_id,region_id,region_exec,thread_id,team_size,"
            << "requested_threads,start_ms,end_ms,elapsed_ms,codeptr,"
-           << "cpu_id,target_mhz,measured_mhz,resource_applied\n";
+           << "cpu_id,target_mhz,measured_mhz,resource_applied,"
+           << "dvfs_enabled,region_wall_ms,dvfs_enable_ms,dvfs_disable_ms\n";
 }
 
 bool should_write_execution(const ParallelEvent &event) {
@@ -270,7 +279,7 @@ void apply_target_to_thread(ParallelEvent *event, unsigned int thread_num) {
         return;
     }
 
-    if (!msr_control_enabled) {
+    if (!event->dvfs_enabled || !msr_control_enabled) {
         return;
     }
 
@@ -287,6 +296,31 @@ void apply_target_to_thread(ParallelEvent *event, unsigned int thread_num) {
                      event->target_mhz[slot],
                      applied ? "applied" : "failed");
     }
+}
+
+double compute_region_wall_ms(const ParallelEvent &event, int team_size) {
+    bool found = false;
+    double min_start = 0.0;
+    double max_end = 0.0;
+    for (int tid = 0; tid < team_size; ++tid) {
+        const std::size_t index = static_cast<std::size_t>(tid);
+        if (index >= event.has_started.size() || index >= event.start_ms.size() ||
+            index >= event.end_ms.size() || !event.has_started[index]) {
+            continue;
+        }
+
+        if (!found) {
+            min_start = event.start_ms[index];
+            max_end = event.end_ms[index];
+            found = true;
+            continue;
+        }
+
+        min_start = std::min(min_start, event.start_ms[index]);
+        max_end = std::max(max_end, event.end_ms[index]);
+    }
+
+    return found && max_end >= min_start ? max_end - min_start : 0.0;
 }
 
 void reset_touched_resources(const ParallelEvent &event, int team_size) {
@@ -323,6 +357,13 @@ void update_region_history(const ParallelEvent &event, int team_size) {
         region.last_target_mhz[index] =
             index < event.target_mhz.size() ? event.target_mhz[index] : max_mhz;
     }
+
+    region.last_region_wall_ms = event.region_wall_ms;
+    if (!region.dvfs_enabled && event.region_wall_ms >= dvfs_enable_region_ms) {
+        region.dvfs_enabled = true;
+    } else if (region.dvfs_enabled && event.region_wall_ms <= dvfs_disable_region_ms) {
+        region.dvfs_enabled = false;
+    }
 }
 
 void write_event_csv(const ParallelEvent &event, int team_size) {
@@ -356,7 +397,11 @@ void write_event_csv(const ParallelEvent &event, int team_size) {
                << cpu << ','
                << target << ','
                << measured << ','
-               << applied << '\n';
+               << applied << ','
+               << (event.dvfs_enabled ? 1 : 0) << ','
+               << event.region_wall_ms << ','
+               << dvfs_enable_region_ms << ','
+               << dvfs_disable_region_ms << '\n';
     }
     output.flush();
 }
@@ -412,7 +457,10 @@ void on_parallel_begin(ompt_data_t *encountering_task_data,
         state.executions += 1;
         event->region_id = state.id;
         event->region_exec = state.executions;
-        event->target_mhz = plan_targets(state, static_cast<std::size_t>(slots));
+        event->dvfs_enabled = state.dvfs_enabled;
+        event->target_mhz = event->dvfs_enabled
+                                ? plan_targets(state, static_cast<std::size_t>(slots))
+                                : std::vector<double>(static_cast<std::size_t>(slots), max_mhz);
     }
 
     parallel_data->ptr = event;
@@ -490,6 +538,7 @@ void on_parallel_end(ompt_data_t *parallel_data,
     }
 
     const int team_size = event_team_size(*event);
+    event->region_wall_ms = compute_region_wall_ms(*event, team_size);
     reset_touched_resources(*event, team_size);
     update_region_history(*event, team_size);
 
@@ -514,6 +563,11 @@ int ompt_initialize(ompt_function_lookup_t lookup,
     min_mhz = env_double("AMR_DVFS_MIN_MHZ", env_double("AMR_RESCTRL_MIN_MHZ", min_mhz));
     bus_mhz = env_double("AMR_DVFS_BUS_MHZ", bus_mhz);
     reference_mhz = env_double("AMR_DVFS_BASE_MHZ", reference_mhz);
+    dvfs_enable_region_ms = env_double("AMR_DVFS_ENABLE_REGION_MS", dvfs_enable_region_ms);
+    dvfs_disable_region_ms = env_double("AMR_DVFS_DISABLE_REGION_MS", dvfs_disable_region_ms);
+    if (dvfs_disable_region_ms > dvfs_enable_region_ms) {
+        std::swap(dvfs_disable_region_ms, dvfs_enable_region_ms);
+    }
     if (min_mhz > max_mhz) {
         std::swap(min_mhz, max_mhz);
     }
@@ -569,11 +623,14 @@ int ompt_initialize(ompt_function_lookup_t lookup,
 
     std::fprintf(stderr,
                  "[AMR-DVFS] enabled, writing %s every %d execution(s) per region, "
-                 "target range %.0f-%.0f MHz, MSR control %s, counters %s, base %.0f MHz\n",
+                 "target range %.0f-%.0f MHz, region DVFS enable >= %.3f ms, "
+                 "disable <= %.3f ms, MSR control %s, counters %s, base %.0f MHz\n",
                  output_path ? output_path : "ompt_dvfs/ompt_regions.csv",
                  output_exec_interval,
                  min_mhz,
                  max_mhz,
+                 dvfs_enable_region_ms,
+                 dvfs_disable_region_ms,
                  msr_control_enabled ? "enabled" : "disabled",
                  msr_counter_enabled ? "enabled" : "disabled",
                  reference_mhz > 0.0 ? reference_mhz : 0.0);
