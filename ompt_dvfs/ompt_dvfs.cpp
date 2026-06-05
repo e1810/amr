@@ -228,6 +228,7 @@ std::vector<double> plan_targets(const RegionState &region, std::size_t slots) {
 
     constexpr double target_elapsed_fraction = 0.95;
     std::vector<double> work_estimates(slots, 0.0);
+    std::size_t critical_slot = slots;
     double critical_elapsed_ms = 0.0;
     for (std::size_t i = 0; i < slots && i < region.last_elapsed_ms.size(); ++i) {
         const double previous_mhz =
@@ -237,15 +238,18 @@ std::vector<double> plan_targets(const RegionState &region, std::size_t slots) {
                        ? region.last_target_mhz[i]
                        : max_mhz);
         work_estimates[i] = region.last_elapsed_ms[i] * previous_mhz;
-        critical_elapsed_ms = std::max(critical_elapsed_ms, region.last_elapsed_ms[i]);
+        if (region.last_elapsed_ms[i] > critical_elapsed_ms) {
+            critical_elapsed_ms = region.last_elapsed_ms[i];
+            critical_slot = i;
+        }
     }
-    const double target_elapsed_ms = critical_elapsed_ms * target_elapsed_fraction;
-    if (target_elapsed_ms <= 0.0) {
+    if (critical_slot >= slots || work_estimates[critical_slot] <= 0.0) {
         return targets;
     }
 
+    const double target_work = work_estimates[critical_slot] * target_elapsed_fraction;
     for (std::size_t i = 0; i < slots && i < region.last_elapsed_ms.size(); ++i) {
-        targets[i] = std::clamp(work_estimates[i] / target_elapsed_ms, min_mhz, max_mhz);
+        targets[i] = std::clamp(max_mhz * work_estimates[i] / target_work, min_mhz, max_mhz);
     }
     return targets;
 }
