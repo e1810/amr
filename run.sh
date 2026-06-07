@@ -82,15 +82,25 @@ MAX_LEVEL=${MAX_LEVEL:-3}
 STEPS=${STEPS:-2000}
 DIFFUSION=${DIFFUSION:-0.01}
 STEP_INTERVAL=${STEP_INTERVAL:-100}
-INITIAL_PATTERN=${INITIAL_PATTERN:-checker}
+INITIAL_PATTERN=${INITIAL_PATTERN:-circle}
 
-if [ "$INITIAL_PATTERN" = "hotspot" ]; then
-    DEFAULT_INITIAL_SCALE=0.12
-else
-    DEFAULT_INITIAL_SCALE=0.25
-fi
+case "$INITIAL_PATTERN" in
+    hotspot)
+        DEFAULT_INITIAL_SCALE=0.12
+        ;;
+    fine_checker)
+        DEFAULT_INITIAL_SCALE=0.125
+        ;;
+    multi_circle)
+        DEFAULT_INITIAL_SCALE=0.20
+        ;;
+    *)
+        DEFAULT_INITIAL_SCALE=0.25
+        ;;
+esac
 INITIAL_SCALE=${INITIAL_SCALE:-$DEFAULT_INITIAL_SCALE}
 DIFFUSION_SUBSTEPS=${DIFFUSION_SUBSTEPS:-16}
+STATE_COMPONENTS=${STATE_COMPONENTS:-1}
 
 if [ -n "${OMPT_TOOL_LIBRARY:-}" ]; then
     USE_OMPT=1
@@ -131,7 +141,7 @@ AMR_START_NS=$(date +%s%N)
 set +e
 "$REPO_ROOT/amr" "$COARSE_N" "$PARTS" "$MAX_LEVEL" "$INITIAL_SCALE" "$STEPS" "$DIFFUSION" \
     "$SNAPSHOT_INTERVAL" "$SNAPSHOT_PREFIX" "$INITIAL_PATTERN" \
-    "$DIFFUSION_SUBSTEPS"
+    "$DIFFUSION_SUBSTEPS" "$STATE_COMPONENTS"
 AMR_STATUS=$?
 set -e
 AMR_END_NS=$(date +%s%N)
@@ -158,7 +168,9 @@ fi
 
 fine_n=$((COARSE_N * (1 << MAX_LEVEL)))
 if [ "$USE_OMPT" -eq 1 ]; then
-    printf 'fine_n=%d, case_dir=%s, wrote %s, %s and %s\n' "$fine_n" "$CASE_DIR" "$TIMING_CSV" "$TIMING_SVG" "$METRICS_CSV"
+    printf 'fine_n=%d, state_components=%d, case_dir=%s, wrote %s, %s and %s\n' \
+        "$fine_n" "$STATE_COMPONENTS" "$CASE_DIR" "$TIMING_CSV" "$TIMING_SVG" "$METRICS_CSV"
 else
-    printf 'fine_n=%d, case_dir=%s, wrote %s\n' "$fine_n" "$CASE_DIR" "$METRICS_CSV"
+    printf 'fine_n=%d, state_components=%d, case_dir=%s, wrote %s\n' \
+        "$fine_n" "$STATE_COMPONENTS" "$CASE_DIR" "$METRICS_CSV"
 fi

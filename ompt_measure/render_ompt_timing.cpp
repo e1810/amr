@@ -174,8 +174,8 @@ int main(int argc, char **argv) {
     constexpr double row_h = 30.0;
     constexpr double right_pad = 32.0;
     constexpr double bottom_pad = 32.0;
-    constexpr double color_min_ms = 2.0;
-    constexpr double color_max_ms = 5.0;
+    constexpr double color_min_ms = 20.0;
+    constexpr double color_max_ms = 45;
     const double width = left + cell_w * static_cast<double>(max_thread + 1) + right_pad;
     const double height = top + row_h * static_cast<double>(events.size()) + bottom_pad;
 
@@ -191,7 +191,7 @@ int main(int argc, char **argv) {
     out << "<style>text{font-family:monospace;font-size:11px}.small{font-size:10px}</style>\n";
     out << "<text x=\"12\" y=\"20\">OMPT per-thread region time, max="
         << std::fixed << std::setprecision(3) << max_elapsed
-        << " ms, color=2-5 ms</text>\n";
+        << " ms, color=20-45 ms</text>\n";
 
     for (int tid = 0; tid <= max_thread; ++tid) {
         const double x = left + cell_w * static_cast<double>(tid) + cell_w * 0.5;

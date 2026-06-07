@@ -33,6 +33,11 @@ int index2d(int i, int j, int n) {
     return j * n + i;
 }
 
+std::size_t state_index(int cell, int component, int state_components) {
+    return static_cast<std::size_t>(cell) * static_cast<std::size_t>(state_components) +
+           static_cast<std::size_t>(component);
+}
+
 int row_begin(int coarse_n, int parts, int part) {
     return coarse_n * part / parts;
 }
@@ -74,6 +79,7 @@ void write_snapshot_text(const std::string &path,
                          int fine_n,
                          const std::string &initial_pattern,
                          double initial_scale,
+                         int state_components,
                          const std::vector<unsigned char> &active,
                          const std::vector<unsigned char> &level,
                          const std::vector<double> &value,
@@ -101,6 +107,7 @@ void write_snapshot_text(const std::string &path,
     out << "# fine_n " << fine_n << "\n";
     out << "# initial_pattern " << initial_pattern << "\n";
     out << "# initial_scale " << std::setprecision(17) << initial_scale << "\n";
+    out << "# state_components " << state_components << "\n";
     out << "# leaves " << leaves << "\n";
     out << "# columns i j level value importance\n";
 
@@ -114,7 +121,7 @@ void write_snapshot_text(const std::string &path,
             out << i << ' '
                 << j << ' '
                 << static_cast<int>(level[static_cast<std::size_t>(p)]) << ' '
-                << value[static_cast<std::size_t>(p)] << ' '
+                << value[state_index(p, 0, state_components)] << ' '
                 << importance[static_cast<std::size_t>(p)] << '\n';
         }
     }
@@ -147,6 +154,8 @@ void rebuild_owner(const std::vector<unsigned char> &active,
 double face_average(const std::vector<int> &owner,
                     const std::vector<double> &value,
                     int fine_n,
+                    int state_components,
+                    int component,
                     int self,
                     int i,
                     int j,
@@ -183,7 +192,7 @@ double face_average(const std::vector<int> &owner,
             continue;
         }
 
-        sum += value[static_cast<std::size_t>(q)];
+        sum += value[state_index(q, component, state_components)];
         ++count;
     }
 
@@ -197,8 +206,9 @@ int main(int argc, char **argv) {
     // coarse_n:      number of cells per side in the initial mesh.
     // max_level:     maximum AMR depth; fine_n = coarse_n * 2^max_level.
     // parts:         OpenMP thread count and row-part guide for logs.
-    // initial_scale: size parameter for checker/stripe/square/circle/hotspot data.
-    // steps:         number of explicit heat-diffusion time steps.
+    // initial_scale:    size parameter for checker/fine_checker/stripe/square/circle/hotspot/multi_circle data.
+    // steps:            number of explicit heat-diffusion time steps.
+    // state_components: number of per-cell state variables advanced by the stencil.
     // ------------------------------------------------------------------
     const int coarse_n = argc > 1 ? std::atoi(argv[1]) : 16;
     const int parts = argc > 2 ? std::atoi(argv[2]) : 4;
@@ -210,22 +220,26 @@ int main(int argc, char **argv) {
     const std::string snapshot_prefix = argc > 8 ? argv[8] : "snapshots/amr_step";
     const std::string initial_pattern = argc > 9 ? argv[9] : "checker";
     const int diffusion_substeps = argc > 10 ? std::atoi(argv[10]) : 1;
+    const int state_components = argc > 11 ? std::atoi(argv[11]) : 1;
     const bool known_initial_pattern =
         initial_pattern == "checker" ||
+        initial_pattern == "fine_checker" ||
         initial_pattern == "stripe" ||
         initial_pattern == "square" ||
         initial_pattern == "circle" ||
-        initial_pattern == "hotspot";
+        initial_pattern == "hotspot" ||
+        initial_pattern == "multi_circle";
 
     if (coarse_n < 1 || parts < 1 || parts > coarse_n || max_level < 0 || max_level > 10 ||
         initial_scale <= 0.0 || steps < 0 || diffusion <= 0.0 || snapshot_interval < 0 ||
-        diffusion_substeps < 1 || !known_initial_pattern) {
+        diffusion_substeps < 1 || state_components < 1 || state_components > 256 ||
+        !known_initial_pattern) {
         std::cerr << "usage: " << argv[0]
                   << " [coarse_n>=1] [parts in 1..coarse_n] [max_level 0..10]"
                   << " [initial_scale>0] [steps>=0] [diffusion>0]"
                   << " [snapshot_interval>=0] [snapshot_prefix]"
-                  << " [initial_pattern: checker|stripe|square|circle|hotspot]"
-                  << " [diffusion_substeps>=1]\n";
+                  << " [initial_pattern: checker|fine_checker|stripe|square|circle|hotspot|multi_circle]"
+                  << " [diffusion_substeps>=1] [state_components in 1..256]\n";
         return 2;
     }
 
@@ -238,6 +252,8 @@ int main(int argc, char **argv) {
     const int fine_n = coarse_n * refine_factor;
     const int coarse_width = refine_factor;
     const int array_size = fine_n * fine_n;
+    const std::size_t state_size = static_cast<std::size_t>(array_size) *
+                                   static_cast<std::size_t>(state_components);
     const double dx_min = 1.0 / static_cast<double>(fine_n);
     const double dt = 0.20 * dx_min * dx_min / diffusion;
     const double output_dt = dt * static_cast<double>(diffusion_substeps);
@@ -246,7 +262,7 @@ int main(int argc, char **argv) {
     const double coarsen_value_tolerance = 0.03;
     const int amr_log_interval = snapshot_interval > 0 ? snapshot_interval : 100;
 
-    // Dense storage for AMR leaves and scalar fields.
+    // Dense storage for AMR leaves and per-cell state fields.
     // Only active[p] entries are physical cells; inactive entries are just
     // unused slots on the finest-grid canvas.
     std::vector<unsigned char> active(static_cast<std::size_t>(array_size), 0);
@@ -254,8 +270,8 @@ int main(int argc, char **argv) {
     std::vector<unsigned char> refine_mark(static_cast<std::size_t>(array_size), 0);
     std::vector<unsigned char> coarsen_mark(static_cast<std::size_t>(array_size), 0);
     std::vector<int> owner(static_cast<std::size_t>(array_size), -1);
-    std::vector<double> value(static_cast<std::size_t>(array_size), 0.0);
-    std::vector<double> next_value(static_cast<std::size_t>(array_size), 0.0);
+    std::vector<double> value(state_size, 0.0);
+    std::vector<double> next_value(state_size, 0.0);
     std::vector<double> importance(static_cast<std::size_t>(array_size), 0.0);
 
     // ------------------------------------------------------------------
@@ -281,6 +297,7 @@ int main(int argc, char **argv) {
               << ", diffusion=" << diffusion
               << ", dt=" << dt
               << ", diffusion_substeps=" << diffusion_substeps
+              << ", state_components=" << state_components
               << ", output_dt=" << output_dt
               << ", refine_threshold=" << refine_threshold
               << ", coarsen_threshold=" << coarsen_threshold
@@ -300,8 +317,8 @@ int main(int argc, char **argv) {
     // ------------------------------------------------------------------
     // Parallel region 1: initialize the scalar field.
     //
-    // Each iteration reads active/level and writes value[p] for one active
-    // leaf. No two iterations write the same p.
+    // Each iteration reads active/level and writes all state components for one
+    // active leaf. No two iterations write the same p.
     // ------------------------------------------------------------------
 #pragma omp parallel for schedule(static)
     for (int j = 0; j < fine_n; ++j) {
@@ -320,15 +337,16 @@ int main(int argc, char **argv) {
                 const double x = 0.5 * (x0 + x1);
                 const double y = 0.5 * (y0 + y1);
 
-                if (initial_pattern == "checker") {
+                double primary_value = 0.0;
+                if (initial_pattern == "checker" || initial_pattern == "fine_checker") {
                     const int blocks = std::max(2, static_cast<int>(std::round(1.0 / initial_scale)));
                     const int block_i = std::min(blocks - 1, static_cast<int>(x * blocks));
                     const int block_j = std::min(blocks - 1, static_cast<int>(y * blocks));
-                    value[static_cast<std::size_t>(p)] = ((block_i + block_j) % 2 == 0) ? 1.0 : 0.0;
+                    primary_value = ((block_i + block_j) % 2 == 0) ? 1.0 : 0.0;
                 } else if (initial_pattern == "stripe") {
-                    value[static_cast<std::size_t>(p)] = (std::abs(x - 0.5) <= 0.5 * initial_scale) ? 1.0 : 0.0;
+                    primary_value = (std::abs(x - 0.5) <= 0.5 * initial_scale) ? 1.0 : 0.0;
                 } else if (initial_pattern == "square") {
-                    value[static_cast<std::size_t>(p)] =
+                    primary_value =
                         (std::abs(x - 0.5) <= 0.5 * initial_scale &&
                          std::abs(y - 0.5) <= 0.5 * initial_scale) ? 1.0 : 0.0;
                 } else if (initial_pattern == "hotspot") {
@@ -338,15 +356,41 @@ int main(int argc, char **argv) {
                     const double nearest_y = std::max(y0, std::min(hotspot_y, y1));
                     const double dx = nearest_x - hotspot_x;
                     const double dy = nearest_y - hotspot_y;
-                    value[static_cast<std::size_t>(p)] =
-                        (dx * dx + dy * dy <= initial_scale * initial_scale) ? 1.0 : 0.0;
+                    primary_value = (dx * dx + dy * dy <= initial_scale * initial_scale) ? 1.0 : 0.0;
+                } else if (initial_pattern == "multi_circle") {
+                    const double centers[4][2] = {
+                        {0.25, 0.25},
+                        {0.75, 0.25},
+                        {0.25, 0.75},
+                        {0.75, 0.75},
+                    };
+                    bool inside = false;
+                    for (const auto &center : centers) {
+                        const double nearest_x = std::max(x0, std::min(center[0], x1));
+                        const double nearest_y = std::max(y0, std::min(center[1], y1));
+                        const double dx = nearest_x - center[0];
+                        const double dy = nearest_y - center[1];
+                        if (dx * dx + dy * dy <= initial_scale * initial_scale) {
+                            inside = true;
+                            break;
+                        }
+                    }
+                    primary_value = inside ? 1.0 : 0.0;
                 } else {
                     const double nearest_x = std::max(x0, std::min(0.5, x1));
                     const double nearest_y = std::max(y0, std::min(0.5, y1));
                     const double dx = nearest_x - 0.5;
                     const double dy = nearest_y - 0.5;
-                    value[static_cast<std::size_t>(p)] =
-                        (dx * dx + dy * dy <= initial_scale * initial_scale) ? 1.0 : 0.0;
+                    primary_value = (dx * dx + dy * dy <= initial_scale * initial_scale) ? 1.0 : 0.0;
+                }
+
+                value[state_index(p, 0, state_components)] = primary_value;
+                for (int component = 1; component < state_components; ++component) {
+                    const double wave = 0.05 *
+                        std::sin(static_cast<double>(component + 1) * 3.14159265358979323846 * x) *
+                        std::cos(static_cast<double>(component + 1) * 3.14159265358979323846 * y);
+                    value[state_index(p, component, state_components)] =
+                        primary_value * (1.0 + 0.01 * static_cast<double>(component)) + wave;
                 }
         }
     }
@@ -362,6 +406,7 @@ int main(int argc, char **argv) {
                             fine_n,
                             initial_pattern,
                             initial_scale,
+                            state_components,
                             active,
                             level,
                             value,
@@ -378,7 +423,7 @@ int main(int argc, char **argv) {
             }
             const int w = cell_width(level[static_cast<std::size_t>(p)], max_level);
             const double cell_size = static_cast<double>(w) / static_cast<double>(fine_n);
-            initial_heat += value[static_cast<std::size_t>(p)] * cell_size * cell_size;
+            initial_heat += value[state_index(p, 0, state_components)] * cell_size * cell_size;
         }
     }
 
@@ -397,7 +442,7 @@ int main(int argc, char **argv) {
         // below. It must be rebuilt after any mesh topology change.
         rebuild_owner(active, level, owner, fine_n, max_level);
 
-        // Parallel region 2: advance heat diffusion.
+        // Parallel region 2: advance heat diffusion for all state components.
         //
         // A finer fine_n forces a smaller stable dt. diffusion_substeps repeats
         // that stable update several times inside one visible step, so a heavy
@@ -416,14 +461,17 @@ int main(int argc, char **argv) {
                         }
 
                         const int w = cell_width(level[static_cast<std::size_t>(p)], max_level);
-                        const double center = value[static_cast<std::size_t>(p)];
-                        const double left = face_average(owner, value, fine_n, p, i, j, w, 0, center);
-                        const double right = face_average(owner, value, fine_n, p, i, j, w, 1, center);
-                        const double bottom = face_average(owner, value, fine_n, p, i, j, w, 2, center);
-                        const double top = face_average(owner, value, fine_n, p, i, j, w, 3, center);
                         const double dx = static_cast<double>(w) / static_cast<double>(fine_n);
-                        const double laplacian = (left + right + bottom + top - 4.0 * center) / (dx * dx);
-                        next_value[static_cast<std::size_t>(p)] = center + dt * diffusion * laplacian;
+                        for (int component = 0; component < state_components; ++component) {
+                            const double center = value[state_index(p, component, state_components)];
+                            const double left = face_average(owner, value, fine_n, state_components, component, p, i, j, w, 0, center);
+                            const double right = face_average(owner, value, fine_n, state_components, component, p, i, j, w, 1, center);
+                            const double bottom = face_average(owner, value, fine_n, state_components, component, p, i, j, w, 2, center);
+                            const double top = face_average(owner, value, fine_n, state_components, component, p, i, j, w, 3, center);
+                            const double laplacian = (left + right + bottom + top - 4.0 * center) / (dx * dx);
+                            next_value[state_index(p, component, state_components)] =
+                                center + dt * diffusion * laplacian;
+                        }
                     }
                 }
 
@@ -432,7 +480,10 @@ int main(int argc, char **argv) {
                     for (int i = 0; i < fine_n; ++i) {
                         const int p = index2d(i, j, fine_n);
                         if (active[static_cast<std::size_t>(p)]) {
-                            value[static_cast<std::size_t>(p)] = next_value[static_cast<std::size_t>(p)];
+                            for (int component = 0; component < state_components; ++component) {
+                                value[state_index(p, component, state_components)] =
+                                    next_value[state_index(p, component, state_components)];
+                            }
                         }
                     }
                 }
@@ -453,11 +504,11 @@ int main(int argc, char **argv) {
                 }
 
                 const int w = cell_width(level[static_cast<std::size_t>(p)], max_level);
-                const double center = value[static_cast<std::size_t>(p)];
-                const double left = face_average(owner, value, fine_n, p, i, j, w, 0, center);
-                const double right = face_average(owner, value, fine_n, p, i, j, w, 1, center);
-                const double bottom = face_average(owner, value, fine_n, p, i, j, w, 2, center);
-                const double top = face_average(owner, value, fine_n, p, i, j, w, 3, center);
+                const double center = value[state_index(p, 0, state_components)];
+                const double left = face_average(owner, value, fine_n, state_components, 0, p, i, j, w, 0, center);
+                const double right = face_average(owner, value, fine_n, state_components, 0, p, i, j, w, 1, center);
+                const double bottom = face_average(owner, value, fine_n, state_components, 0, p, i, j, w, 2, center);
+                const double top = face_average(owner, value, fine_n, state_components, 0, p, i, j, w, 3, center);
                 const double jump_x = std::max(std::abs(right - center), std::abs(left - center));
                 const double jump_y = std::max(std::abs(top - center), std::abs(bottom - center));
                 importance[static_cast<std::size_t>(p)] = std::max(jump_x, jump_y);
@@ -520,7 +571,7 @@ int main(int argc, char **argv) {
                 const int child[4] = {p00, p10, p01, p11};
 
                 bool can_coarsen = true;
-                double min_value = value[static_cast<std::size_t>(p00)];
+                double min_value = value[state_index(p00, 0, state_components)];
                 double max_value = min_value;
                 for (int c = 0; c < 4; ++c) {
                     const int q = child[c];
@@ -532,8 +583,8 @@ int main(int argc, char **argv) {
                         break;
                     }
 
-                    min_value = std::min(min_value, value[static_cast<std::size_t>(q)]);
-                    max_value = std::max(max_value, value[static_cast<std::size_t>(q)]);
+                    min_value = std::min(min_value, value[state_index(q, 0, state_components)]);
+                    max_value = std::max(max_value, value[state_index(q, 0, state_components)]);
                 }
 
                 if (can_coarsen && max_value - min_value <= coarsen_value_tolerance) {
@@ -547,7 +598,7 @@ int main(int argc, char **argv) {
         //
         // Topology edits touch multiple array entries per parent, so keeping
         // this pass serial makes the data movement easy to inspect. The
-        // parent's scalar value is the average of the four child values.
+        // parent's state is the component-wise average of the four child states.
         int coarsened = 0;
         if (coarsen_requested > 0) {
             for (int j = 0; j < fine_n; ++j) {
@@ -564,29 +615,38 @@ int main(int argc, char **argv) {
                     const int p11 = index2d(i + child_w, j + child_w, fine_n);
                     const int child[4] = {p00, p10, p01, p11};
 
-                    double parent_value = 0.0;
+                    std::vector<double> parent_value(static_cast<std::size_t>(state_components), 0.0);
                     double parent_importance = 0.0;
-                    for (int c = 0; c < 4; ++c) {
-                        const int q = child[c];
-                        parent_value += 0.25 * value[static_cast<std::size_t>(q)];
+                    for (int child_index = 0; child_index < 4; ++child_index) {
+                        const int q = child[child_index];
+                        for (int component = 0; component < state_components; ++component) {
+                            parent_value[static_cast<std::size_t>(component)] +=
+                                0.25 * value[state_index(q, component, state_components)];
+                        }
                         parent_importance = std::max(parent_importance,
                                                      importance[static_cast<std::size_t>(q)]);
                     }
 
                     active[static_cast<std::size_t>(p00)] = 1;
                     level[static_cast<std::size_t>(p00)] = static_cast<unsigned char>(child_level - 1);
-                    value[static_cast<std::size_t>(p00)] = parent_value;
-                    next_value[static_cast<std::size_t>(p00)] = parent_value;
+                    for (int component = 0; component < state_components; ++component) {
+                        value[state_index(p00, component, state_components)] =
+                            parent_value[static_cast<std::size_t>(component)];
+                        next_value[state_index(p00, component, state_components)] =
+                            parent_value[static_cast<std::size_t>(component)];
+                    }
                     importance[static_cast<std::size_t>(p00)] = parent_importance;
                     refine_mark[static_cast<std::size_t>(p00)] = 0;
 
-                    for (int c = 1; c < 4; ++c) {
-                        const int q = child[c];
+                    for (int child_index = 1; child_index < 4; ++child_index) {
+                        const int q = child[child_index];
                         active[static_cast<std::size_t>(q)] = 0;
                         level[static_cast<std::size_t>(q)] = 0;
                         refine_mark[static_cast<std::size_t>(q)] = 0;
-                        value[static_cast<std::size_t>(q)] = 0.0;
-                        next_value[static_cast<std::size_t>(q)] = 0.0;
+                        for (int component = 0; component < state_components; ++component) {
+                            value[state_index(q, component, state_components)] = 0.0;
+                            next_value[state_index(q, component, state_components)] = 0.0;
+                        }
                         importance[static_cast<std::size_t>(q)] = 0.0;
                     }
                     ++coarsened;
@@ -615,18 +675,26 @@ int main(int argc, char **argv) {
                         continue;
                     }
 
-                    const double parent_value = value[static_cast<std::size_t>(p)];
+                    std::vector<double> parent_value(static_cast<std::size_t>(state_components), 0.0);
+                    for (int component = 0; component < state_components; ++component) {
+                        parent_value[static_cast<std::size_t>(component)] =
+                            value[state_index(p, component, state_components)];
+                    }
                     const double parent_importance = importance[static_cast<std::size_t>(p)];
                     const int child_level = parent_level + 1;
 
                     const int child_i[4] = {i, i + half, i, i + half};
                     const int child_j[4] = {j, j, j + half, j + half};
-                    for (int c = 0; c < 4; ++c) {
-                        const int q = index2d(child_i[c], child_j[c], fine_n);
+                    for (int child_index = 0; child_index < 4; ++child_index) {
+                        const int q = index2d(child_i[child_index], child_j[child_index], fine_n);
                         active[static_cast<std::size_t>(q)] = 1;
                         level[static_cast<std::size_t>(q)] = static_cast<unsigned char>(child_level);
-                        value[static_cast<std::size_t>(q)] = parent_value;
-                        next_value[static_cast<std::size_t>(q)] = parent_value;
+                        for (int component = 0; component < state_components; ++component) {
+                            value[state_index(q, component, state_components)] =
+                                parent_value[static_cast<std::size_t>(component)];
+                            next_value[state_index(q, component, state_components)] =
+                                parent_value[static_cast<std::size_t>(component)];
+                        }
                         importance[static_cast<std::size_t>(q)] = parent_importance;
                     }
                     ++refined;
@@ -662,6 +730,7 @@ int main(int argc, char **argv) {
                                 fine_n,
                                 initial_pattern,
                                 initial_scale,
+                                state_components,
                                 active,
                                 level,
                                 value,
@@ -684,7 +753,7 @@ int main(int argc, char **argv) {
             }
             const int w = cell_width(level[static_cast<std::size_t>(p)], max_level);
             const double cell_size = static_cast<double>(w) / static_cast<double>(fine_n);
-            final_heat += value[static_cast<std::size_t>(p)] * cell_size * cell_size;
+            final_heat += value[state_index(p, 0, state_components)] * cell_size * cell_size;
         }
     }
     std::cout << "heat: initial=" << initial_heat

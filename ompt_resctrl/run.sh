@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -eo pipefail
+
+#mount -t resctrl resctrl /sys/fs/resctrl 
+
+REPO_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
+bash ompt_resctrl/resctrl_cleanup.sh
+
+export OMPT_MODE=${OMPT_MODE:-resctrl}
+export OMPT_TOOL_LIBRARY=ompt_resctrl/libompt_resctrl.so
+export OMPT_RENDERER=ompt_resctrl/render_ompt_timing
+export AMR_RESCTRL_RESOURCE=${AMR_RESCTRL_RESOURCE:-cat}
+export AMR_RESCTRL_CAT_L3_WAYS=${AMR_RESCTRL_CAT_L3_WAYS:-0}
+export AMR_RESCTRL_CAT_UNRESTRICTED_THREADS=${AMR_RESCTRL_CAT_UNRESTRICTED_THREADS-1,2}
+export AMR_RESCTRL_CAT_UNRESTRICTED_L3_MASK=${AMR_RESCTRL_CAT_UNRESTRICTED_L3_MASK:-7ffe}
+export AMR_RESCTRL_CAT_STICKY=${AMR_RESCTRL_CAT_STICKY:-1}
+export AMR_RESCTRL_MONITOR=${AMR_RESCTRL_MONITOR:-1}
+export AMR_RESCTRL_MAX_MB_PERCENT=${AMR_RESCTRL_MAX_MB_PERCENT:-100}
+export AMR_RESCTRL_TARGET_ELAPSED_FRACTION=${AMR_RESCTRL_TARGET_ELAPSED_FRACTION:-1.0}
+export AMR_RESCTRL_AGGRESSIVENESS=${AMR_RESCTRL_AGGRESSIVENESS:-1.8}
+exec "$REPO_ROOT/run.sh" "$@"
+
+bash ompt_resctrl/resctrl_cleanup.sh

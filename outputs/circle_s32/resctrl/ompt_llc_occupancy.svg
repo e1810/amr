@@ -1,0 +1,289 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 556 674">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:monospace;font-size:11px}.small{font-size:9px}</style>
+<text x="12" y="20">OMPT resctrl LLC occupancy, max=7.99 MiB, color=0-7.99 MiB</text>
+<text class="small" x="132" y="34" text-anchor="middle">t0</text>
+<text class="small" x="244" y="34" text-anchor="middle">t1</text>
+<text class="small" x="356" y="34" text-anchor="middle">t2</text>
+<text class="small" x="468" y="34" text-anchor="middle">t3</text>
+<text x="8" y="53">s100</text>
+<text class="small" x="8" y="66">7.30 MiB</text>
+<rect x="76" y="42" width="109" height="27" fill="rgb(22,139,224)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 0, cpu 32, llc_occupancy_mib 1.890625, target L3 1w, mask 1, start_llc_occupancy_bytes 2793472, end_llc_occupancy_bytes 1982464, llc_occupancy_delta_bytes 270336</title></rect>
+<text class="small" x="130.5" y="53" text-anchor="middle" fill="#0f172a">1.89 MiB</text>
+<text class="small" x="130.5" y="65" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="188" y="42" width="109" height="27" fill="rgb(247,110,23)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 1, cpu 40, llc_occupancy_mib 6.789062, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7569408, end_llc_occupancy_bytes 7118848, llc_occupancy_delta_bytes 180224</title></rect>
+<text class="small" x="242.5" y="53" text-anchor="middle" fill="#0f172a">6.79 MiB</text>
+<text class="small" x="242.5" y="65" text-anchor="middle" fill="#0f172a">L3 15w</text>
+<rect x="300" y="42" width="109" height="27" fill="rgb(236,79,29)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 2, cpu 16, llc_occupancy_mib 7.304688, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7659520, end_llc_occupancy_bytes 7659520, llc_occupancy_delta_bytes 0</title></rect>
+<text class="small" x="354.5" y="53" text-anchor="middle" fill="#f8fafc">7.30 MiB</text>
+<text class="small" x="354.5" y="65" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="42" width="109" height="27" fill="rgb(31,84,213)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 3, cpu 56, llc_occupancy_mib 1.031250, target L3 1w, mask 1, start_llc_occupancy_bytes 1351680, end_llc_occupancy_bytes 1081344, llc_occupancy_delta_bytes 90112</title></rect>
+<text class="small" x="466.5" y="53" text-anchor="middle" fill="#f8fafc">1.03 MiB</text>
+<text class="small" x="466.5" y="65" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="83">s200</text>
+<text class="small" x="8" y="96">7.22 MiB</text>
+<rect x="76" y="72" width="109" height="27" fill="rgb(22,139,224)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 0, cpu 32, llc_occupancy_mib 1.890625, target L3 1w, mask 1, start_llc_occupancy_bytes 2433024, end_llc_occupancy_bytes 1982464, llc_occupancy_delta_bytes -90112</title></rect>
+<text class="small" x="130.5" y="83" text-anchor="middle" fill="#0f172a">1.89 MiB</text>
+<text class="small" x="130.5" y="95" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="188" y="72" width="109" height="27" fill="rgb(245,105,24)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 1, cpu 40, llc_occupancy_mib 6.875000, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7569408, end_llc_occupancy_bytes 7208960, llc_occupancy_delta_bytes 360448</title></rect>
+<text class="small" x="242.5" y="83" text-anchor="middle" fill="#0f172a">6.88 MiB</text>
+<text class="small" x="242.5" y="95" text-anchor="middle" fill="#0f172a">L3 15w</text>
+<rect x="300" y="72" width="109" height="27" fill="rgb(238,85,28)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 2, cpu 16, llc_occupancy_mib 7.218750, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7569408, end_llc_occupancy_bytes 7569408, llc_occupancy_delta_bytes 180224</title></rect>
+<text class="small" x="354.5" y="83" text-anchor="middle" fill="#f8fafc">7.22 MiB</text>
+<text class="small" x="354.5" y="95" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="72" width="109" height="27" fill="rgb(37,100,235)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 3, cpu 56, llc_occupancy_mib 1.289062, target L3 1w, mask 1, start_llc_occupancy_bytes 1622016, end_llc_occupancy_bytes 1351680, llc_occupancy_delta_bytes 450560</title></rect>
+<text class="small" x="466.5" y="83" text-anchor="middle" fill="#f8fafc">1.29 MiB</text>
+<text class="small" x="466.5" y="95" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="113">s300</text>
+<text class="small" x="8" y="126">7.22 MiB</text>
+<rect x="76" y="102" width="109" height="27" fill="rgb(20,144,222)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 0, cpu 32, llc_occupancy_mib 1.976562, target L3 1w, mask 1, start_llc_occupancy_bytes 2703360, end_llc_occupancy_bytes 2072576, llc_occupancy_delta_bytes 90112</title></rect>
+<text class="small" x="130.5" y="113" text-anchor="middle" fill="#0f172a">1.98 MiB</text>
+<text class="small" x="130.5" y="125" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="188" y="102" width="109" height="27" fill="rgb(249,116,22)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 1, cpu 40, llc_occupancy_mib 6.703125, target L3 15w, mask 7fff, start_llc_occupancy_bytes 8019968, end_llc_occupancy_bytes 7028736, llc_occupancy_delta_bytes 270336</title></rect>
+<text class="small" x="242.5" y="113" text-anchor="middle" fill="#0f172a">6.70 MiB</text>
+<text class="small" x="242.5" y="125" text-anchor="middle" fill="#0f172a">L3 15w</text>
+<rect x="300" y="102" width="109" height="27" fill="rgb(238,85,28)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 2, cpu 16, llc_occupancy_mib 7.218750, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7299072, end_llc_occupancy_bytes 7569408, llc_occupancy_delta_bytes 360448</title></rect>
+<text class="small" x="354.5" y="113" text-anchor="middle" fill="#f8fafc">7.22 MiB</text>
+<text class="small" x="354.5" y="125" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="102" width="109" height="27" fill="rgb(35,105,233)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 3, cpu 56, llc_occupancy_mib 1.375000, target L3 1w, mask 1, start_llc_occupancy_bytes 1441792, end_llc_occupancy_bytes 1441792, llc_occupancy_delta_bytes 180224</title></rect>
+<text class="small" x="466.5" y="113" text-anchor="middle" fill="#f8fafc">1.38 MiB</text>
+<text class="small" x="466.5" y="125" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="143">s400</text>
+<text class="small" x="8" y="156">7.30 MiB</text>
+<rect x="76" y="132" width="109" height="27" fill="rgb(22,139,224)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 0, cpu 32, llc_occupancy_mib 1.890625, target L3 1w, mask 1, start_llc_occupancy_bytes 2703360, end_llc_occupancy_bytes 1982464, llc_occupancy_delta_bytes 0</title></rect>
+<text class="small" x="130.5" y="143" text-anchor="middle" fill="#0f172a">1.89 MiB</text>
+<text class="small" x="130.5" y="155" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="188" y="132" width="109" height="27" fill="rgb(243,100,25)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 1, cpu 40, llc_occupancy_mib 6.960938, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7749632, end_llc_occupancy_bytes 7299072, llc_occupancy_delta_bytes 360448</title></rect>
+<text class="small" x="242.5" y="143" text-anchor="middle" fill="#0f172a">6.96 MiB</text>
+<text class="small" x="242.5" y="155" text-anchor="middle" fill="#0f172a">L3 15w</text>
+<rect x="300" y="132" width="109" height="27" fill="rgb(236,79,29)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 2, cpu 16, llc_occupancy_mib 7.304688, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7479296, end_llc_occupancy_bytes 7659520, llc_occupancy_delta_bytes 90112</title></rect>
+<text class="small" x="354.5" y="143" text-anchor="middle" fill="#f8fafc">7.30 MiB</text>
+<text class="small" x="354.5" y="155" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="132" width="109" height="27" fill="rgb(31,116,230)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 3, cpu 56, llc_occupancy_mib 1.546875, target L3 1w, mask 1, start_llc_occupancy_bytes 1441792, end_llc_occupancy_bytes 1622016, llc_occupancy_delta_bytes 90112</title></rect>
+<text class="small" x="466.5" y="143" text-anchor="middle" fill="#f8fafc">1.55 MiB</text>
+<text class="small" x="466.5" y="155" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="173">s500</text>
+<text class="small" x="8" y="186">7.13 MiB</text>
+<rect x="76" y="162" width="109" height="27" fill="rgb(16,155,219)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 0, cpu 32, llc_occupancy_mib 2.148438, target L3 1w, mask 1, start_llc_occupancy_bytes 2793472, end_llc_occupancy_bytes 2252800, llc_occupancy_delta_bytes 270336</title></rect>
+<text class="small" x="130.5" y="173" text-anchor="middle" fill="#0f172a">2.15 MiB</text>
+<text class="small" x="130.5" y="185" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="188" y="162" width="109" height="27" fill="rgb(245,105,24)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 1, cpu 8, llc_occupancy_mib 6.875000, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7839744, end_llc_occupancy_bytes 7208960, llc_occupancy_delta_bytes 90112</title></rect>
+<text class="small" x="242.5" y="173" text-anchor="middle" fill="#0f172a">6.88 MiB</text>
+<text class="small" x="242.5" y="185" text-anchor="middle" fill="#0f172a">L3 15w</text>
+<rect x="300" y="162" width="109" height="27" fill="rgb(239,90,27)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 2, cpu 16, llc_occupancy_mib 7.132812, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7749632, end_llc_occupancy_bytes 7479296, llc_occupancy_delta_bytes 180224</title></rect>
+<text class="small" x="354.5" y="173" text-anchor="middle" fill="#f8fafc">7.13 MiB</text>
+<text class="small" x="354.5" y="185" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="162" width="109" height="27" fill="rgb(31,116,230)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 3, cpu 56, llc_occupancy_mib 1.546875, target L3 1w, mask 1, start_llc_occupancy_bytes 1531904, end_llc_occupancy_bytes 1622016, llc_occupancy_delta_bytes 90112</title></rect>
+<text class="small" x="466.5" y="173" text-anchor="middle" fill="#f8fafc">1.55 MiB</text>
+<text class="small" x="466.5" y="185" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="203">s600</text>
+<text class="small" x="8" y="216">7.13 MiB</text>
+<rect x="76" y="192" width="109" height="27" fill="rgb(16,155,219)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 0, cpu 32, llc_occupancy_mib 2.148438, target L3 1w, mask 1, start_llc_occupancy_bytes 2793472, end_llc_occupancy_bytes 2252800, llc_occupancy_delta_bytes 270336</title></rect>
+<text class="small" x="130.5" y="203" text-anchor="middle" fill="#0f172a">2.15 MiB</text>
+<text class="small" x="130.5" y="215" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="188" y="192" width="109" height="27" fill="rgb(249,116,22)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 1, cpu 8, llc_occupancy_mib 6.703125, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7929856, end_llc_occupancy_bytes 7028736, llc_occupancy_delta_bytes -180224</title></rect>
+<text class="small" x="242.5" y="203" text-anchor="middle" fill="#0f172a">6.70 MiB</text>
+<text class="small" x="242.5" y="215" text-anchor="middle" fill="#0f172a">L3 15w</text>
+<rect x="300" y="192" width="109" height="27" fill="rgb(239,90,27)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 2, cpu 16, llc_occupancy_mib 7.132812, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7749632, end_llc_occupancy_bytes 7479296, llc_occupancy_delta_bytes 0</title></rect>
+<text class="small" x="354.5" y="203" text-anchor="middle" fill="#f8fafc">7.13 MiB</text>
+<text class="small" x="354.5" y="215" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="192" width="109" height="27" fill="rgb(33,111,232)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 3, cpu 56, llc_occupancy_mib 1.460938, target L3 1w, mask 1, start_llc_occupancy_bytes 1261568, end_llc_occupancy_bytes 1531904, llc_occupancy_delta_bytes 270336</title></rect>
+<text class="small" x="466.5" y="203" text-anchor="middle" fill="#f8fafc">1.46 MiB</text>
+<text class="small" x="466.5" y="215" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="233">s700</text>
+<text class="small" x="8" y="246">7.56 MiB</text>
+<rect x="76" y="222" width="109" height="27" fill="rgb(22,139,224)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 0, cpu 32, llc_occupancy_mib 1.890625, target L3 1w, mask 1, start_llc_occupancy_bytes 2793472, end_llc_occupancy_bytes 1982464, llc_occupancy_delta_bytes 0</title></rect>
+<text class="small" x="130.5" y="233" text-anchor="middle" fill="#0f172a">1.89 MiB</text>
+<text class="small" x="130.5" y="245" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="188" y="222" width="109" height="27" fill="rgb(243,100,25)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 1, cpu 8, llc_occupancy_mib 6.960938, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7749632, end_llc_occupancy_bytes 7299072, llc_occupancy_delta_bytes 450560</title></rect>
+<text class="small" x="242.5" y="233" text-anchor="middle" fill="#0f172a">6.96 MiB</text>
+<text class="small" x="242.5" y="245" text-anchor="middle" fill="#0f172a">L3 15w</text>
+<rect x="300" y="222" width="109" height="27" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 2, cpu 16, llc_occupancy_mib 7.562500, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7929856, end_llc_occupancy_bytes 7929856, llc_occupancy_delta_bytes 540672</title></rect>
+<text class="small" x="354.5" y="233" text-anchor="middle" fill="#f8fafc">7.56 MiB</text>
+<text class="small" x="354.5" y="245" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="222" width="109" height="27" fill="rgb(35,94,228)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 3, cpu 56, llc_occupancy_mib 1.203125, target L3 1w, mask 1, start_llc_occupancy_bytes 1261568, end_llc_occupancy_bytes 1261568, llc_occupancy_delta_bytes 0</title></rect>
+<text class="small" x="466.5" y="233" text-anchor="middle" fill="#f8fafc">1.20 MiB</text>
+<text class="small" x="466.5" y="245" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="263">s800</text>
+<text class="small" x="8" y="276">7.56 MiB</text>
+<rect x="76" y="252" width="109" height="27" fill="rgb(18,150,221)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 0, cpu 32, llc_occupancy_mib 2.062500, target L3 1w, mask 1, start_llc_occupancy_bytes 2523136, end_llc_occupancy_bytes 2162688, llc_occupancy_delta_bytes 0</title></rect>
+<text class="small" x="130.5" y="263" text-anchor="middle" fill="#0f172a">2.06 MiB</text>
+<text class="small" x="130.5" y="275" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="188" y="252" width="109" height="27" fill="rgb(249,134,22)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 1, cpu 8, llc_occupancy_mib 6.445312, target L3 15w, mask 7fff, start_llc_occupancy_bytes 8110080, end_llc_occupancy_bytes 6758400, llc_occupancy_delta_bytes -90112</title></rect>
+<text class="small" x="242.5" y="263" text-anchor="middle" fill="#0f172a">6.45 MiB</text>
+<text class="small" x="242.5" y="275" text-anchor="middle" fill="#0f172a">L3 15w</text>
+<rect x="300" y="252" width="109" height="27" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 2, cpu 48, llc_occupancy_mib 7.562500, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7839744, end_llc_occupancy_bytes 7929856, llc_occupancy_delta_bytes 0</title></rect>
+<text class="small" x="354.5" y="263" text-anchor="middle" fill="#f8fafc">7.56 MiB</text>
+<text class="small" x="354.5" y="275" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="252" width="109" height="27" fill="rgb(37,100,235)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 3, cpu 24, llc_occupancy_mib 1.289062, target L3 1w, mask 1, start_llc_occupancy_bytes 1622016, end_llc_occupancy_bytes 1351680, llc_occupancy_delta_bytes 180224</title></rect>
+<text class="small" x="466.5" y="263" text-anchor="middle" fill="#f8fafc">1.29 MiB</text>
+<text class="small" x="466.5" y="275" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="293">s900</text>
+<text class="small" x="8" y="306">7.99 MiB</text>
+<rect x="76" y="282" width="109" height="27" fill="rgb(16,155,219)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 0, cpu 32, llc_occupancy_mib 2.148438, target L3 1w, mask 1, start_llc_occupancy_bytes 2613248, end_llc_occupancy_bytes 2252800, llc_occupancy_delta_bytes 90112</title></rect>
+<text class="small" x="130.5" y="293" text-anchor="middle" fill="#0f172a">2.15 MiB</text>
+<text class="small" x="130.5" y="305" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="188" y="282" width="109" height="27" fill="rgb(239,90,27)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 1, cpu 8, llc_occupancy_mib 7.132812, target L3 15w, mask 7fff, start_llc_occupancy_bytes 8019968, end_llc_occupancy_bytes 7479296, llc_occupancy_delta_bytes 360448</title></rect>
+<text class="small" x="242.5" y="293" text-anchor="middle" fill="#f8fafc">7.13 MiB</text>
+<text class="small" x="242.5" y="305" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="300" y="282" width="109" height="27" fill="rgb(220,38,38)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 2, cpu 48, llc_occupancy_mib 7.992188, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7929856, end_llc_occupancy_bytes 8380416, llc_occupancy_delta_bytes 540672</title></rect>
+<text class="small" x="354.5" y="293" text-anchor="middle" fill="#f8fafc">7.99 MiB</text>
+<text class="small" x="354.5" y="305" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="282" width="109" height="27" fill="rgb(33,111,232)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 3, cpu 24, llc_occupancy_mib 1.460938, target L3 1w, mask 1, start_llc_occupancy_bytes 1802240, end_llc_occupancy_bytes 1531904, llc_occupancy_delta_bytes 270336</title></rect>
+<text class="small" x="466.5" y="293" text-anchor="middle" fill="#f8fafc">1.46 MiB</text>
+<text class="small" x="466.5" y="305" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="323">s1000</text>
+<text class="small" x="8" y="336">7.65 MiB</text>
+<rect x="76" y="312" width="109" height="27" fill="rgb(20,144,222)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 0, cpu 0, llc_occupancy_mib 1.976562, target L3 1w, mask 1, start_llc_occupancy_bytes 2613248, end_llc_occupancy_bytes 2072576, llc_occupancy_delta_bytes 0</title></rect>
+<text class="small" x="130.5" y="323" text-anchor="middle" fill="#0f172a">1.98 MiB</text>
+<text class="small" x="130.5" y="335" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="188" y="312" width="109" height="27" fill="rgb(247,110,23)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 1, cpu 8, llc_occupancy_mib 6.789062, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7749632, end_llc_occupancy_bytes 7118848, llc_occupancy_delta_bytes 360448</title></rect>
+<text class="small" x="242.5" y="323" text-anchor="middle" fill="#0f172a">6.79 MiB</text>
+<text class="small" x="242.5" y="335" text-anchor="middle" fill="#0f172a">L3 15w</text>
+<rect x="300" y="312" width="109" height="27" fill="rgb(228,59,34)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 2, cpu 16, llc_occupancy_mib 7.648438, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7929856, end_llc_occupancy_bytes 8019968, llc_occupancy_delta_bytes 450560</title></rect>
+<text class="small" x="354.5" y="323" text-anchor="middle" fill="#f8fafc">7.65 MiB</text>
+<text class="small" x="354.5" y="335" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="312" width="109" height="27" fill="rgb(35,105,233)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 3, cpu 24, llc_occupancy_mib 1.375000, target L3 1w, mask 1, start_llc_occupancy_bytes 1261568, end_llc_occupancy_bytes 1441792, llc_occupancy_delta_bytes 180224</title></rect>
+<text class="small" x="466.5" y="323" text-anchor="middle" fill="#f8fafc">1.38 MiB</text>
+<text class="small" x="466.5" y="335" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="353">s1100</text>
+<text class="small" x="8" y="366">7.91 MiB</text>
+<rect x="76" y="342" width="109" height="27" fill="rgb(22,139,224)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 0, cpu 0, llc_occupancy_mib 1.890625, target L3 1w, mask 1, start_llc_occupancy_bytes 2703360, end_llc_occupancy_bytes 1982464, llc_occupancy_delta_bytes -270336</title></rect>
+<text class="small" x="130.5" y="353" text-anchor="middle" fill="#0f172a">1.89 MiB</text>
+<text class="small" x="130.5" y="365" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="188" y="342" width="109" height="27" fill="rgb(249,134,22)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 1, cpu 8, llc_occupancy_mib 6.445312, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7389184, end_llc_occupancy_bytes 6758400, llc_occupancy_delta_bytes 0</title></rect>
+<text class="small" x="242.5" y="353" text-anchor="middle" fill="#0f172a">6.45 MiB</text>
+<text class="small" x="242.5" y="365" text-anchor="middle" fill="#0f172a">L3 15w</text>
+<rect x="300" y="342" width="109" height="27" fill="rgb(222,43,37)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 2, cpu 16, llc_occupancy_mib 7.906250, target L3 15w, mask 7fff, start_llc_occupancy_bytes 8110080, end_llc_occupancy_bytes 8290304, llc_occupancy_delta_bytes 270336</title></rect>
+<text class="small" x="354.5" y="353" text-anchor="middle" fill="#f8fafc">7.91 MiB</text>
+<text class="small" x="354.5" y="365" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="342" width="109" height="27" fill="rgb(28,122,229)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 3, cpu 24, llc_occupancy_mib 1.632812, target L3 1w, mask 1, start_llc_occupancy_bytes 1351680, end_llc_occupancy_bytes 1712128, llc_occupancy_delta_bytes 450560</title></rect>
+<text class="small" x="466.5" y="353" text-anchor="middle" fill="#f8fafc">1.63 MiB</text>
+<text class="small" x="466.5" y="365" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="383">s1200</text>
+<text class="small" x="8" y="396">7.73 MiB</text>
+<rect x="76" y="372" width="109" height="27" fill="rgb(24,133,226)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 0, cpu 0, llc_occupancy_mib 1.804688, target L3 1w, mask 1, start_llc_occupancy_bytes 2613248, end_llc_occupancy_bytes 1892352, llc_occupancy_delta_bytes 0</title></rect>
+<text class="small" x="130.5" y="383" text-anchor="middle" fill="#f8fafc">1.80 MiB</text>
+<text class="small" x="130.5" y="395" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<rect x="188" y="372" width="109" height="27" fill="rgb(247,110,23)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 1, cpu 8, llc_occupancy_mib 6.789062, target L3 15w, mask 7fff, start_llc_occupancy_bytes 8380416, end_llc_occupancy_bytes 7118848, llc_occupancy_delta_bytes 0</title></rect>
+<text class="small" x="242.5" y="383" text-anchor="middle" fill="#0f172a">6.79 MiB</text>
+<text class="small" x="242.5" y="395" text-anchor="middle" fill="#0f172a">L3 15w</text>
+<rect x="300" y="372" width="109" height="27" fill="rgb(226,54,35)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 2, cpu 16, llc_occupancy_mib 7.734375, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7929856, end_llc_occupancy_bytes 8110080, llc_occupancy_delta_bytes 270336</title></rect>
+<text class="small" x="354.5" y="383" text-anchor="middle" fill="#f8fafc">7.73 MiB</text>
+<text class="small" x="354.5" y="395" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="372" width="109" height="27" fill="rgb(35,94,228)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 3, cpu 24, llc_occupancy_mib 1.203125, target L3 1w, mask 1, start_llc_occupancy_bytes 1351680, end_llc_occupancy_bytes 1261568, llc_occupancy_delta_bytes 0</title></rect>
+<text class="small" x="466.5" y="383" text-anchor="middle" fill="#f8fafc">1.20 MiB</text>
+<text class="small" x="466.5" y="395" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="413">s1300</text>
+<text class="small" x="8" y="426">7.91 MiB</text>
+<rect x="76" y="402" width="109" height="27" fill="rgb(24,133,226)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 0, cpu 32, llc_occupancy_mib 1.804688, target L3 1w, mask 1, start_llc_occupancy_bytes 2523136, end_llc_occupancy_bytes 1892352, llc_occupancy_delta_bytes 180224</title></rect>
+<text class="small" x="130.5" y="413" text-anchor="middle" fill="#f8fafc">1.80 MiB</text>
+<text class="small" x="130.5" y="425" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<rect x="188" y="402" width="109" height="27" fill="rgb(238,85,28)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 1, cpu 8, llc_occupancy_mib 7.218750, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7839744, end_llc_occupancy_bytes 7569408, llc_occupancy_delta_bytes 450560</title></rect>
+<text class="small" x="242.5" y="413" text-anchor="middle" fill="#f8fafc">7.22 MiB</text>
+<text class="small" x="242.5" y="425" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="300" y="402" width="109" height="27" fill="rgb(222,43,37)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 2, cpu 16, llc_occupancy_mib 7.906250, target L3 15w, mask 7fff, start_llc_occupancy_bytes 8110080, end_llc_occupancy_bytes 8290304, llc_occupancy_delta_bytes 630784</title></rect>
+<text class="small" x="354.5" y="413" text-anchor="middle" fill="#f8fafc">7.91 MiB</text>
+<text class="small" x="354.5" y="425" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="402" width="109" height="27" fill="rgb(31,116,230)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 3, cpu 24, llc_occupancy_mib 1.546875, target L3 1w, mask 1, start_llc_occupancy_bytes 1531904, end_llc_occupancy_bytes 1622016, llc_occupancy_delta_bytes -90112</title></rect>
+<text class="small" x="466.5" y="413" text-anchor="middle" fill="#f8fafc">1.55 MiB</text>
+<text class="small" x="466.5" y="425" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="443">s1400</text>
+<text class="small" x="8" y="456">7.73 MiB</text>
+<rect x="76" y="432" width="109" height="27" fill="rgb(18,150,221)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 0, cpu 32, llc_occupancy_mib 2.062500, target L3 1w, mask 1, start_llc_occupancy_bytes 2523136, end_llc_occupancy_bytes 2162688, llc_occupancy_delta_bytes 90112</title></rect>
+<text class="small" x="130.5" y="443" text-anchor="middle" fill="#0f172a">2.06 MiB</text>
+<text class="small" x="130.5" y="455" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="188" y="432" width="109" height="27" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 1, cpu 8, llc_occupancy_mib 7.562500, target L3 15w, mask 7fff, start_llc_occupancy_bytes 8110080, end_llc_occupancy_bytes 7929856, llc_occupancy_delta_bytes 540672</title></rect>
+<text class="small" x="242.5" y="443" text-anchor="middle" fill="#f8fafc">7.56 MiB</text>
+<text class="small" x="242.5" y="455" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="300" y="432" width="109" height="27" fill="rgb(226,54,35)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 2, cpu 16, llc_occupancy_mib 7.734375, target L3 15w, mask 7fff, start_llc_occupancy_bytes 8470528, end_llc_occupancy_bytes 8110080, llc_occupancy_delta_bytes 450560</title></rect>
+<text class="small" x="354.5" y="443" text-anchor="middle" fill="#f8fafc">7.73 MiB</text>
+<text class="small" x="354.5" y="455" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="432" width="109" height="27" fill="rgb(37,100,235)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 3, cpu 24, llc_occupancy_mib 1.289062, target L3 1w, mask 1, start_llc_occupancy_bytes 1261568, end_llc_occupancy_bytes 1351680, llc_occupancy_delta_bytes 180224</title></rect>
+<text class="small" x="466.5" y="443" text-anchor="middle" fill="#f8fafc">1.29 MiB</text>
+<text class="small" x="466.5" y="455" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="473">s1500</text>
+<text class="small" x="8" y="486">7.65 MiB</text>
+<rect x="76" y="462" width="109" height="27" fill="rgb(22,139,224)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 0, cpu 32, llc_occupancy_mib 1.890625, target L3 1w, mask 1, start_llc_occupancy_bytes 2793472, end_llc_occupancy_bytes 1982464, llc_occupancy_delta_bytes 0</title></rect>
+<text class="small" x="130.5" y="473" text-anchor="middle" fill="#0f172a">1.89 MiB</text>
+<text class="small" x="130.5" y="485" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="188" y="462" width="109" height="27" fill="rgb(249,116,22)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 1, cpu 40, llc_occupancy_mib 6.703125, target L3 15w, mask 7fff, start_llc_occupancy_bytes 8200192, end_llc_occupancy_bytes 7028736, llc_occupancy_delta_bytes -180224</title></rect>
+<text class="small" x="242.5" y="473" text-anchor="middle" fill="#0f172a">6.70 MiB</text>
+<text class="small" x="242.5" y="485" text-anchor="middle" fill="#0f172a">L3 15w</text>
+<rect x="300" y="462" width="109" height="27" fill="rgb(228,59,34)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 2, cpu 16, llc_occupancy_mib 7.648438, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7299072, end_llc_occupancy_bytes 8019968, llc_occupancy_delta_bytes 811008</title></rect>
+<text class="small" x="354.5" y="473" text-anchor="middle" fill="#f8fafc">7.65 MiB</text>
+<text class="small" x="354.5" y="485" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="462" width="109" height="27" fill="rgb(31,116,230)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 3, cpu 24, llc_occupancy_mib 1.546875, target L3 1w, mask 1, start_llc_occupancy_bytes 1531904, end_llc_occupancy_bytes 1622016, llc_occupancy_delta_bytes 0</title></rect>
+<text class="small" x="466.5" y="473" text-anchor="middle" fill="#f8fafc">1.55 MiB</text>
+<text class="small" x="466.5" y="485" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="503">s1600</text>
+<text class="small" x="8" y="516">7.56 MiB</text>
+<rect x="76" y="492" width="109" height="27" fill="rgb(16,155,219)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 0, cpu 32, llc_occupancy_mib 2.148438, target L3 1w, mask 1, start_llc_occupancy_bytes 2252800, end_llc_occupancy_bytes 2252800, llc_occupancy_delta_bytes 90112</title></rect>
+<text class="small" x="130.5" y="503" text-anchor="middle" fill="#0f172a">2.15 MiB</text>
+<text class="small" x="130.5" y="515" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="188" y="492" width="109" height="27" fill="rgb(245,105,24)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 1, cpu 40, llc_occupancy_mib 6.875000, target L3 15w, mask 7fff, start_llc_occupancy_bytes 8290304, end_llc_occupancy_bytes 7208960, llc_occupancy_delta_bytes 180224</title></rect>
+<text class="small" x="242.5" y="503" text-anchor="middle" fill="#0f172a">6.88 MiB</text>
+<text class="small" x="242.5" y="515" text-anchor="middle" fill="#0f172a">L3 15w</text>
+<rect x="300" y="492" width="109" height="27" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 2, cpu 16, llc_occupancy_mib 7.562500, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7479296, end_llc_occupancy_bytes 7929856, llc_occupancy_delta_bytes 180224</title></rect>
+<text class="small" x="354.5" y="503" text-anchor="middle" fill="#f8fafc">7.56 MiB</text>
+<text class="small" x="354.5" y="515" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="492" width="109" height="27" fill="rgb(31,116,230)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 3, cpu 24, llc_occupancy_mib 1.546875, target L3 1w, mask 1, start_llc_occupancy_bytes 1531904, end_llc_occupancy_bytes 1622016, llc_occupancy_delta_bytes 360448</title></rect>
+<text class="small" x="466.5" y="503" text-anchor="middle" fill="#f8fafc">1.55 MiB</text>
+<text class="small" x="466.5" y="515" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="533">s1700</text>
+<text class="small" x="8" y="546">7.91 MiB</text>
+<rect x="76" y="522" width="109" height="27" fill="rgb(33,111,232)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 0, cpu 32, llc_occupancy_mib 1.460938, target L3 1w, mask 1, start_llc_occupancy_bytes 2793472, end_llc_occupancy_bytes 1531904, llc_occupancy_delta_bytes -180224</title></rect>
+<text class="small" x="130.5" y="533" text-anchor="middle" fill="#f8fafc">1.46 MiB</text>
+<text class="small" x="130.5" y="545" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<rect x="188" y="522" width="109" height="27" fill="rgb(245,105,24)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 1, cpu 40, llc_occupancy_mib 6.875000, target L3 15w, mask 7fff, start_llc_occupancy_bytes 8019968, end_llc_occupancy_bytes 7208960, llc_occupancy_delta_bytes 180224</title></rect>
+<text class="small" x="242.5" y="533" text-anchor="middle" fill="#0f172a">6.88 MiB</text>
+<text class="small" x="242.5" y="545" text-anchor="middle" fill="#0f172a">L3 15w</text>
+<rect x="300" y="522" width="109" height="27" fill="rgb(222,43,37)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 2, cpu 16, llc_occupancy_mib 7.906250, target L3 15w, mask 7fff, start_llc_occupancy_bytes 8019968, end_llc_occupancy_bytes 8290304, llc_occupancy_delta_bytes 360448</title></rect>
+<text class="small" x="354.5" y="533" text-anchor="middle" fill="#f8fafc">7.91 MiB</text>
+<text class="small" x="354.5" y="545" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="522" width="109" height="27" fill="rgb(24,133,226)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 3, cpu 24, llc_occupancy_mib 1.804688, target L3 1w, mask 1, start_llc_occupancy_bytes 1171456, end_llc_occupancy_bytes 1892352, llc_occupancy_delta_bytes 360448</title></rect>
+<text class="small" x="466.5" y="533" text-anchor="middle" fill="#f8fafc">1.80 MiB</text>
+<text class="small" x="466.5" y="545" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="563">s1800</text>
+<text class="small" x="8" y="576">7.39 MiB</text>
+<rect x="76" y="552" width="109" height="27" fill="rgb(31,116,230)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 0, cpu 32, llc_occupancy_mib 1.546875, target L3 1w, mask 1, start_llc_occupancy_bytes 2703360, end_llc_occupancy_bytes 1622016, llc_occupancy_delta_bytes -180224</title></rect>
+<text class="small" x="130.5" y="563" text-anchor="middle" fill="#f8fafc">1.55 MiB</text>
+<text class="small" x="130.5" y="575" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<rect x="188" y="552" width="109" height="27" fill="rgb(239,90,27)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 1, cpu 40, llc_occupancy_mib 7.132812, target L3 15w, mask 7fff, start_llc_occupancy_bytes 8200192, end_llc_occupancy_bytes 7479296, llc_occupancy_delta_bytes 90112</title></rect>
+<text class="small" x="242.5" y="563" text-anchor="middle" fill="#f8fafc">7.13 MiB</text>
+<text class="small" x="242.5" y="575" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="300" y="552" width="109" height="27" fill="rgb(234,74,30)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 2, cpu 16, llc_occupancy_mib 7.390625, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7479296, end_llc_occupancy_bytes 7749632, llc_occupancy_delta_bytes 450560</title></rect>
+<text class="small" x="354.5" y="563" text-anchor="middle" fill="#f8fafc">7.39 MiB</text>
+<text class="small" x="354.5" y="575" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="552" width="109" height="27" fill="rgb(28,122,229)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 3, cpu 24, llc_occupancy_mib 1.632812, target L3 1w, mask 1, start_llc_occupancy_bytes 1531904, end_llc_occupancy_bytes 1712128, llc_occupancy_delta_bytes 180224</title></rect>
+<text class="small" x="466.5" y="563" text-anchor="middle" fill="#f8fafc">1.63 MiB</text>
+<text class="small" x="466.5" y="575" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="593">s1900</text>
+<text class="small" x="8" y="606">7.39 MiB</text>
+<rect x="76" y="582" width="109" height="27" fill="rgb(20,144,222)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 0, cpu 32, llc_occupancy_mib 1.976562, target L3 1w, mask 1, start_llc_occupancy_bytes 2883584, end_llc_occupancy_bytes 2072576, llc_occupancy_delta_bytes -180224</title></rect>
+<text class="small" x="130.5" y="593" text-anchor="middle" fill="#0f172a">1.98 MiB</text>
+<text class="small" x="130.5" y="605" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="188" y="582" width="109" height="27" fill="rgb(239,90,27)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 1, cpu 40, llc_occupancy_mib 7.132812, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7929856, end_llc_occupancy_bytes 7479296, llc_occupancy_delta_bytes 540672</title></rect>
+<text class="small" x="242.5" y="593" text-anchor="middle" fill="#f8fafc">7.13 MiB</text>
+<text class="small" x="242.5" y="605" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="300" y="582" width="109" height="27" fill="rgb(234,74,30)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 2, cpu 16, llc_occupancy_mib 7.390625, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7479296, end_llc_occupancy_bytes 7749632, llc_occupancy_delta_bytes 270336</title></rect>
+<text class="small" x="354.5" y="593" text-anchor="middle" fill="#f8fafc">7.39 MiB</text>
+<text class="small" x="354.5" y="605" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="582" width="109" height="27" fill="rgb(28,122,229)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 3, cpu 24, llc_occupancy_mib 1.632812, target L3 1w, mask 1, start_llc_occupancy_bytes 1441792, end_llc_occupancy_bytes 1712128, llc_occupancy_delta_bytes 180224</title></rect>
+<text class="small" x="466.5" y="593" text-anchor="middle" fill="#f8fafc">1.63 MiB</text>
+<text class="small" x="466.5" y="605" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<text x="8" y="623">s2000</text>
+<text class="small" x="8" y="636">7.39 MiB</text>
+<rect x="76" y="612" width="109" height="27" fill="rgb(12,167,216)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 0, cpu 32, llc_occupancy_mib 2.320312, target L3 1w, mask 1, start_llc_occupancy_bytes 2523136, end_llc_occupancy_bytes 2433024, llc_occupancy_delta_bytes 270336</title></rect>
+<text class="small" x="130.5" y="623" text-anchor="middle" fill="#0f172a">2.32 MiB</text>
+<text class="small" x="130.5" y="635" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="188" y="612" width="109" height="27" fill="rgb(243,100,25)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 1, cpu 40, llc_occupancy_mib 6.960938, target L3 15w, mask 7fff, start_llc_occupancy_bytes 8290304, end_llc_occupancy_bytes 7299072, llc_occupancy_delta_bytes 0</title></rect>
+<text class="small" x="242.5" y="623" text-anchor="middle" fill="#0f172a">6.96 MiB</text>
+<text class="small" x="242.5" y="635" text-anchor="middle" fill="#0f172a">L3 15w</text>
+<rect x="300" y="612" width="109" height="27" fill="rgb(234,74,30)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 2, cpu 16, llc_occupancy_mib 7.390625, target L3 15w, mask 7fff, start_llc_occupancy_bytes 7569408, end_llc_occupancy_bytes 7749632, llc_occupancy_delta_bytes 450560</title></rect>
+<text class="small" x="354.5" y="623" text-anchor="middle" fill="#f8fafc">7.39 MiB</text>
+<text class="small" x="354.5" y="635" text-anchor="middle" fill="#f8fafc">L3 15w</text>
+<rect x="412" y="612" width="109" height="27" fill="rgb(28,122,229)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 3, cpu 24, llc_occupancy_mib 1.632812, target L3 1w, mask 1, start_llc_occupancy_bytes 1441792, end_llc_occupancy_bytes 1712128, llc_occupancy_delta_bytes 180224</title></rect>
+<text class="small" x="466.5" y="623" text-anchor="middle" fill="#f8fafc">1.63 MiB</text>
+<text class="small" x="466.5" y="635" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+</svg>
