@@ -78,6 +78,12 @@ struct ParallelEvent {
     std::vector<std::int64_t> monitor_mbm_remote_delta_bytes;
 };
 
+struct L3ThreadTarget {
+    int thread = -1;
+    int ways = 0;
+    std::string mask;
+};
+
 std::mutex state_mutex;
 std::mutex output_mutex;
 std::unordered_map<const void *, RegionState> region_by_codeptr;
@@ -101,6 +107,8 @@ int unrestricted_l3_ways = 0;
 std::string unrestricted_l3_mask;
 std::vector<int> unrestricted_l3_threads;
 std::string unrestricted_l3_threads_text = "none";
+std::vector<L3ThreadTarget> l3_thread_targets;
+std::string l3_thread_targets_text = "none";
 bool debug = false;
 bool resctrl_control_enabled = false;
 bool cat_control_enabled = false;
@@ -228,10 +236,115 @@ std::string thread_list_text(const std::vector<int> &threads) {
     return text;
 }
 
+void upsert_l3_thread_target(std::vector<L3ThreadTarget> *targets,
+                             int thread,
+                             int ways,
+                             const std::string &mask) {
+    if (!targets || thread < 0 || ways <= 0 || mask.empty()) {
+        return;
+    }
+    for (L3ThreadTarget &target : *targets) {
+        if (target.thread == thread) {
+            target.ways = ways;
+            target.mask = mask;
+            return;
+        }
+    }
+    targets->push_back(L3ThreadTarget{thread, ways, mask});
+}
+
+std::vector<L3ThreadTarget> env_l3_thread_targets(const char *name,
+                                                  std::uint64_t cbm_mask) {
+    std::vector<L3ThreadTarget> result;
+    const char *text = std::getenv(name);
+    if (!text || text[0] == '\0') {
+        return result;
+    }
+
+    const char *cursor = text;
+    while (*cursor != '\0') {
+        while (*cursor == ' ' || *cursor == '\t' ||
+               *cursor == ',' || *cursor == ';') {
+            ++cursor;
+        }
+        if (*cursor == '\0') {
+            break;
+        }
+
+        char *thread_end = nullptr;
+        const long thread = std::strtol(cursor, &thread_end, 10);
+        if (thread_end == cursor || thread < 0) {
+            while (*cursor != '\0' && *cursor != ',' && *cursor != ';') {
+                ++cursor;
+            }
+            continue;
+        }
+
+        cursor = thread_end;
+        while (*cursor == ' ' || *cursor == '\t') {
+            ++cursor;
+        }
+        if (*cursor != ':' && *cursor != '=') {
+            while (*cursor != '\0' && *cursor != ',' && *cursor != ';') {
+                ++cursor;
+            }
+            continue;
+        }
+        ++cursor;
+        while (*cursor == ' ' || *cursor == '\t') {
+            ++cursor;
+        }
+
+        const char *mask_begin = cursor;
+        while (*cursor != '\0' && *cursor != ',' && *cursor != ';') {
+            ++cursor;
+        }
+        const char *mask_end = cursor;
+        while (mask_end > mask_begin &&
+               (*(mask_end - 1) == ' ' || *(mask_end - 1) == '\t')) {
+            --mask_end;
+        }
+
+        const std::string mask(mask_begin, mask_end - mask_begin);
+        const int ways = hex_mask_popcount(mask, cbm_mask);
+        upsert_l3_thread_target(&result, static_cast<int>(thread), ways, mask);
+    }
+
+    return result;
+}
+
+std::string l3_thread_targets_to_text(const std::vector<L3ThreadTarget> &targets) {
+    if (targets.empty()) {
+        return "none";
+    }
+
+    std::string text;
+    for (std::size_t i = 0; i < targets.size(); ++i) {
+        if (i > 0) {
+            text += ',';
+        }
+        text += std::to_string(targets[i].thread);
+        text += ':';
+        text += std::to_string(targets[i].ways);
+        text += "way/";
+        text += targets[i].mask;
+    }
+    return text;
+}
+
 bool is_unrestricted_l3_thread(std::size_t slot) {
     return std::find(unrestricted_l3_threads.begin(),
                      unrestricted_l3_threads.end(),
                      static_cast<int>(slot)) != unrestricted_l3_threads.end();
+}
+
+const L3ThreadTarget *l3_thread_target_for_slot(std::size_t slot) {
+    for (const L3ThreadTarget &target : l3_thread_targets) {
+        if (target.thread == static_cast<int>(slot)) {
+            return &target;
+        }
+    }
+    return nullptr;
 }
 
 ResourceKind parse_resource_kind() {
@@ -777,7 +890,10 @@ void on_parallel_begin(ompt_data_t *encountering_task_data,
     event->target_l3_mask.assign(slots, effective_l3_mask);
     if (resource_kind == ResourceKind::Cat) {
         for (std::size_t slot = 0; slot < static_cast<std::size_t>(slots); ++slot) {
-            if (is_unrestricted_l3_thread(slot)) {
+            if (const L3ThreadTarget *target = l3_thread_target_for_slot(slot)) {
+                event->target_l3_ways[slot] = target->ways;
+                event->target_l3_mask[slot] = target->mask;
+            } else if (is_unrestricted_l3_thread(slot)) {
                 event->target_l3_ways[slot] = unrestricted_l3_ways;
                 event->target_l3_mask[slot] = unrestricted_l3_mask;
             }
@@ -982,6 +1098,9 @@ int ompt_initialize(ompt_function_lookup_t lookup,
         }
         unrestricted_l3_threads = env_thread_list("AMR_RESCTRL_CAT_UNRESTRICTED_THREADS");
         unrestricted_l3_threads_text = thread_list_text(unrestricted_l3_threads);
+        l3_thread_targets =
+            env_l3_thread_targets("AMR_RESCTRL_CAT_THREAD_L3_MASKS", cat_info.cbm_mask);
+        l3_thread_targets_text = l3_thread_targets_to_text(l3_thread_targets);
     } else {
         resctrl::configure(std::getenv("AMR_RESCTRL_ROOT"),
                            std::getenv("AMR_RESCTRL_GROUP_PREFIX"));
@@ -1054,7 +1173,7 @@ int ompt_initialize(ompt_function_lookup_t lookup,
         std::fprintf(stderr,
                      "[AMR-RESCTRL] enabled, writing %s every %d execution(s) per region, "
                      "resource cat, requested L3 ways %d, effective L3 ways %d, "
-                     "mask %s, unrestricted threads %s use L3 ways %d mask %s, "
+                     "mask %s, thread L3 masks %s, unrestricted threads %s use L3 ways %d mask %s, "
                      "cat always %s, sticky %s, control %s, monitor %s, "
                      "cleanup %s, root %s, group prefix %s\n",
                      output_path ? output_path : "ompt_resctrl/ompt_regions.csv",
@@ -1062,6 +1181,7 @@ int ompt_initialize(ompt_function_lookup_t lookup,
                      requested_l3_ways,
                      effective_l3_ways,
                      effective_l3_mask.c_str(),
+                     l3_thread_targets_text.c_str(),
                      unrestricted_l3_threads_text.c_str(),
                      unrestricted_l3_ways,
                      unrestricted_l3_mask.c_str(),

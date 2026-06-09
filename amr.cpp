@@ -232,14 +232,14 @@ int main(int argc, char **argv) {
 
     if (coarse_n < 1 || parts < 1 || parts > coarse_n || max_level < 0 || max_level > 10 ||
         initial_scale <= 0.0 || steps < 0 || diffusion <= 0.0 || snapshot_interval < 0 ||
-        diffusion_substeps < 1 || state_components < 1 || state_components > 256 ||
+        diffusion_substeps < 1 || state_components < 1 ||
         !known_initial_pattern) {
         std::cerr << "usage: " << argv[0]
                   << " [coarse_n>=1] [parts in 1..coarse_n] [max_level 0..10]"
                   << " [initial_scale>0] [steps>=0] [diffusion>0]"
                   << " [snapshot_interval>=0] [snapshot_prefix]"
                   << " [initial_pattern: checker|fine_checker|stripe|square|circle|hotspot|multi_circle]"
-                  << " [diffusion_substeps>=1] [state_components in 1..256]\n";
+                  << " [diffusion_substeps>=1] [state_components>=1]\n";
         return 2;
     }
 
