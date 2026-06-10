@@ -28,6 +28,10 @@ struct TimingRow {
     std::string target_l3_mask;
     bool resource_applied = false;
     bool mon_valid = false;
+    bool pmu_valid = false;
+    long long pmu_llc_references = -1;
+    long long pmu_llc_misses = -1;
+    long long pmu_llc_hits = -1;
     long long mon_start_llc_occupancy_bytes = -1;
     long long mon_end_llc_occupancy_bytes = -1;
     long long mon_llc_occupancy_delta_bytes = -1;
@@ -237,6 +241,22 @@ std::string occupancy_label(double value) {
     return fixed_text(value * 1024.0, 0) + " KiB";
 }
 
+std::string count_label(double value) {
+    if (value < 0.0) {
+        return "n/a";
+    }
+    if (value >= 1000000000.0) {
+        return fixed_text(value / 1000000000.0, 2) + "B";
+    }
+    if (value >= 1000000.0) {
+        return fixed_text(value / 1000000.0, 1) + "M";
+    }
+    if (value >= 1000.0) {
+        return fixed_text(value / 1000.0, 1) + "K";
+    }
+    return fixed_text(value, 0);
+}
+
 std::string derived_output_path(const std::string &output, const std::string &suffix) {
     const std::string timing_svg = "timing.svg";
     const std::size_t timing_pos = output.rfind(timing_svg);
@@ -363,6 +383,146 @@ bool render_metric_svg(const std::map<EventKey, std::vector<TimingRow>> &events,
     return true;
 }
 
+
+bool render_cache_counts_svg(const std::map<EventKey, std::vector<TimingRow>> &events,
+                             int max_thread,
+                             const std::string &output,
+                             bool percent_mode) {
+    double max_hit = 0.0;
+    double max_miss = 0.0;
+    bool has_value = false;
+    for (const auto &entry : events) {
+        for (const TimingRow &row : entry.second) {
+            if (row.pmu_valid && row.pmu_llc_hits >= 0) {
+                has_value = true;
+                max_hit = std::max(max_hit, static_cast<double>(row.pmu_llc_hits));
+            }
+            if (row.pmu_valid && row.pmu_llc_misses >= 0) {
+                has_value = true;
+                max_miss = std::max(max_miss, static_cast<double>(row.pmu_llc_misses));
+            }
+        }
+    }
+
+    const double max_value = std::max(max_hit, max_miss);
+    constexpr double left = 86.0;
+    constexpr double top = 46.0;
+    constexpr double cell_w = 128.0;
+    constexpr double row_h = 48.0;
+    constexpr double right_pad = 32.0;
+    constexpr double bottom_pad = 32.0;
+    const double width = left + cell_w * static_cast<double>(max_thread + 1) + right_pad;
+    const double height = top + row_h * static_cast<double>(events.size()) + bottom_pad;
+
+    std::ofstream out(output);
+    if (!out) {
+        std::cerr << "failed to open output: " << output
+                  << ": " << std::strerror(errno) << '\n';
+        return false;
+    }
+
+    out << "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 "
+        << width << ' ' << height << "\">\n";
+    out << "<rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n";
+    out << "<style>text{font-family:monospace;font-size:11px}.small{font-size:9px}</style>\n";
+    out << "<text x=\"12\" y=\"20\">OMPT resctrl LLC cache counts, max_hit="
+        << (has_value ? count_label(max_hit) : std::string("n/a"))
+        << ", max_miss=" << (has_value ? count_label(max_miss) : std::string("n/a"))
+        << ", color=0-" << (has_value ? count_label(max_value) : std::string("n/a"))
+        << "</text>\n";
+    out << "<text class=\"small\" x=\"12\" y=\"35\">top: hit count, bottom: miss count</text>\n";
+
+    for (int tid = 0; tid <= max_thread; ++tid) {
+        const double x = left + cell_w * static_cast<double>(tid) + cell_w * 0.5;
+        out << "<text class=\"small\" x=\"" << x
+            << "\" y=\"40\" text-anchor=\"middle\">t" << tid << "</text>\n";
+    }
+
+    int row_index = 0;
+    for (const auto &entry : events) {
+        const EventKey &key = entry.first;
+        const auto &rows = entry.second;
+        const double y = top + row_h * static_cast<double>(row_index);
+        double event_max_hit = -1.0;
+        double event_max_miss = -1.0;
+        for (const TimingRow &row : rows) {
+            if (row.pmu_valid && row.pmu_llc_hits >= 0) {
+                event_max_hit = std::max(event_max_hit, static_cast<double>(row.pmu_llc_hits));
+            }
+            if (row.pmu_valid && row.pmu_llc_misses >= 0) {
+                event_max_miss = std::max(event_max_miss, static_cast<double>(row.pmu_llc_misses));
+            }
+        }
+
+        out << "<text x=\"8\" y=\"" << y + 12.0 << "\">"
+            << "s" << key.step << "</text>\n";
+        out << "<text class=\"small\" x=\"8\" y=\"" << y + 27.0 << "\">H "
+            << count_label(event_max_hit) << "</text>\n";
+        out << "<text class=\"small\" x=\"8\" y=\"" << y + 40.0 << "\">M "
+            << count_label(event_max_miss) << "</text>\n";
+
+        for (const TimingRow &row : rows) {
+            const double x = left + cell_w * static_cast<double>(row.thread_id);
+            const double half_h = (row_h - 4.0) * 0.5;
+            const bool hit_valid = row.pmu_valid && row.pmu_llc_hits >= 0;
+            const bool miss_valid = row.pmu_valid && row.pmu_llc_misses >= 0;
+            const double hit_value = hit_valid ? static_cast<double>(row.pmu_llc_hits) : -1.0;
+            const double miss_value = miss_valid ? static_cast<double>(row.pmu_llc_misses) : -1.0;
+            const double hit_ratio = hit_valid && max_value > 0.0 ? hit_value / max_value : 0.0;
+            const double miss_ratio = miss_valid && max_value > 0.0 ? miss_value / max_value : 0.0;
+            const Rgb hit_color = hit_valid ? temperature_color(hit_ratio) : Rgb{226, 232, 240};
+            const Rgb miss_color = miss_valid ? temperature_color(miss_ratio) : Rgb{226, 232, 240};
+            const char *hit_label_color = hit_valid ? text_color_for_fill(hit_color) : "#475569";
+            const char *miss_label_color = miss_valid ? text_color_for_fill(miss_color) : "#475569";
+            const double miss_rate = row.pmu_valid && row.pmu_llc_references > 0
+                                         ? 100.0 * static_cast<double>(row.pmu_llc_misses) /
+                                               static_cast<double>(row.pmu_llc_references)
+                                         : -1.0;
+
+            const std::string tooltip_prefix =
+                "step " + std::to_string(row.step) +
+                ", " + row.region_label +
+                ", thread " + std::to_string(row.thread_id) +
+                ", cpu " + std::to_string(row.cpu_id) +
+                ", references " + std::to_string(row.pmu_llc_references) +
+                ", hits " + std::to_string(row.pmu_llc_hits) +
+                ", misses " + std::to_string(row.pmu_llc_misses) +
+                ", miss_rate_pct " + (miss_rate >= 0.0 ? fixed_text(miss_rate, 3) : std::string("n/a")) +
+                ", target " + target_text(row.target_value, row.resource_kind, percent_mode) +
+                (row.resource_kind == "cat" ? ", mask " + row.target_l3_mask : "");
+
+            out << "<rect x=\"" << x
+                << "\" y=\"" << y
+                << "\" width=\"" << cell_w - 3.0
+                << "\" height=\"" << half_h
+                << "\" fill=\"rgb(" << hit_color.red << ',' << hit_color.green << ',' << hit_color.blue << ")\""
+                << " stroke=\"#334155\" stroke-width=\"0.35\">"
+                << "<title>" << tooltip_prefix << ", metric hits</title></rect>\n";
+            out << "<rect x=\"" << x
+                << "\" y=\"" << y + half_h
+                << "\" width=\"" << cell_w - 3.0
+                << "\" height=\"" << half_h
+                << "\" fill=\"rgb(" << miss_color.red << ',' << miss_color.green << ',' << miss_color.blue << ")\""
+                << " stroke=\"#334155\" stroke-width=\"0.35\">"
+                << "<title>" << tooltip_prefix << ", metric misses</title></rect>\n";
+
+            out << "<text class=\"small\" x=\"" << x + 0.5 * (cell_w - 3.0)
+                << "\" y=\"" << y + 13.0
+                << "\" text-anchor=\"middle\" fill=\"" << hit_label_color << "\">H "
+                << count_label(hit_value) << "</text>\n";
+            out << "<text class=\"small\" x=\"" << x + 0.5 * (cell_w - 3.0)
+                << "\" y=\"" << y + half_h + 13.0
+                << "\" text-anchor=\"middle\" fill=\"" << miss_label_color << "\">M "
+                << count_label(miss_value) << "</text>\n";
+        }
+        ++row_index;
+    }
+
+    out << "</svg>\n";
+    std::cout << "wrote " << output << '\n';
+    return true;
+}
+
 int main(int argc, char **argv) {
     if (argc < 3 || argc > 4) {
         std::cerr << "usage: " << argv[0] << " ompt_regions.csv output.svg [exec_interval]\n";
@@ -391,6 +551,7 @@ int main(int argc, char **argv) {
     const bool has_resource_kind = columns.find("resource_kind") != columns.end();
     const bool has_l3_target = columns.find("target_l3_ways") != columns.end();
     const bool has_monitor = columns.find("mon_valid") != columns.end();
+    const bool has_pmu = columns.find("pmu_valid") != columns.end();
     const std::string target_column = percent_mode ? "target_mb_percent" : "target_mhz";
 
     std::map<EventKey, std::vector<TimingRow>> events;
@@ -428,6 +589,10 @@ int main(int argc, char **argv) {
                                ? static_cast<double>(row.target_l3_ways)
                                : double_field(f, columns, target_column, 11);
         row.resource_applied = int_field(f, columns, "resource_applied", percent_mode ? 12 : 13) != 0;
+        row.pmu_valid = has_pmu && int_field(f, columns, "pmu_valid", 10) != 0;
+        row.pmu_llc_references = has_pmu ? ll_field(f, columns, "pmu_llc_references", 11) : -1;
+        row.pmu_llc_misses = has_pmu ? ll_field(f, columns, "pmu_llc_misses", 12) : -1;
+        row.pmu_llc_hits = has_pmu ? ll_field(f, columns, "pmu_llc_hits", 13) : -1;
         row.mon_valid = has_monitor && int_field(f, columns, "mon_valid", 20) != 0;
         row.mon_start_llc_occupancy_bytes = has_monitor ? ll_field(f, columns, "mon_start_llc_occupancy_bytes", 22) : -1;
         row.mon_end_llc_occupancy_bytes = has_monitor ? ll_field(f, columns, "mon_end_llc_occupancy_bytes", 23) : -1;
@@ -548,6 +713,7 @@ int main(int argc, char **argv) {
 
     const std::string bandwidth_output = derived_output_path(output, "memory_bandwidth");
     const std::string llc_output = derived_output_path(output, "llc_occupancy");
+    const std::string cache_output = derived_output_path(output, "cache_counts");
 
     const auto bandwidth_detail = [](const TimingRow &row) {
         std::ostringstream detail;
@@ -573,6 +739,9 @@ int main(int argc, char **argv) {
     if (!render_metric_svg(events, max_thread, llc_output,
                            "OMPT resctrl LLC occupancy", "llc_occupancy_mib", percent_mode,
                            llc_occupancy_mib, occupancy_label, llc_detail)) {
+        return 1;
+    }
+    if (has_pmu && !render_cache_counts_svg(events, max_thread, cache_output, percent_mode)) {
         return 1;
     }
     return 0;

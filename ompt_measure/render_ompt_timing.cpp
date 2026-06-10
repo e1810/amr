@@ -1,6 +1,8 @@
 #include <algorithm>
+#include <cerrno>
 #include <cmath>
 #include <cstdlib>
+#include <cstring>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
@@ -19,6 +21,10 @@ struct TimingRow {
     int thread_id = 0;
     int team_size = 0;
     double elapsed_ms = 0.0;
+    bool pmu_valid = false;
+    long long pmu_llc_references = -1;
+    long long pmu_llc_misses = -1;
+    long long pmu_llc_hits = -1;
 };
 
 struct EventKey {
@@ -105,6 +111,182 @@ bool should_render_region(const std::string &label) {
     return label == "heat_update";
 }
 
+
+std::string fixed_text(double value, int precision) {
+    std::ostringstream out;
+    out << std::fixed << std::setprecision(precision) << value;
+    return out.str();
+}
+
+std::string count_label(double value) {
+    if (value < 0.0) {
+        return "n/a";
+    }
+    if (value >= 1000000000.0) {
+        return fixed_text(value / 1000000000.0, 2) + "B";
+    }
+    if (value >= 1000000.0) {
+        return fixed_text(value / 1000000.0, 1) + "M";
+    }
+    if (value >= 1000.0) {
+        return fixed_text(value / 1000.0, 1) + "K";
+    }
+    return fixed_text(value, 0);
+}
+
+std::string derived_output_path(const std::string &output, const std::string &suffix) {
+    const std::string timing_svg = "timing.svg";
+    const std::size_t timing_pos = output.rfind(timing_svg);
+    if (timing_pos != std::string::npos && timing_pos + timing_svg.size() == output.size()) {
+        return output.substr(0, timing_pos) + suffix + ".svg";
+    }
+
+    const std::size_t dot_pos = output.rfind(".svg");
+    if (dot_pos != std::string::npos && dot_pos + 4 == output.size()) {
+        return output.substr(0, dot_pos) + "_" + suffix + ".svg";
+    }
+    return output + "_" + suffix + ".svg";
+}
+
+bool render_cache_counts_svg(const std::map<EventKey, std::vector<TimingRow>> &events,
+                             int max_thread,
+                             const std::string &output) {
+    double max_hit = 0.0;
+    double max_miss = 0.0;
+    bool has_value = false;
+    for (const auto &entry : events) {
+        for (const TimingRow &row : entry.second) {
+            if (row.pmu_valid && row.pmu_llc_hits >= 0) {
+                has_value = true;
+                max_hit = std::max(max_hit, static_cast<double>(row.pmu_llc_hits));
+            }
+            if (row.pmu_valid && row.pmu_llc_misses >= 0) {
+                has_value = true;
+                max_miss = std::max(max_miss, static_cast<double>(row.pmu_llc_misses));
+            }
+        }
+    }
+
+    const double max_value = std::max(max_hit, max_miss);
+    constexpr double left = 86.0;
+    constexpr double top = 46.0;
+    constexpr double cell_w = 128.0;
+    constexpr double row_h = 48.0;
+    constexpr double right_pad = 32.0;
+    constexpr double bottom_pad = 32.0;
+    const double width = left + cell_w * static_cast<double>(max_thread + 1) + right_pad;
+    const double height = top + row_h * static_cast<double>(events.size()) + bottom_pad;
+
+    std::ofstream out(output);
+    if (!out) {
+        std::cerr << "failed to open output: " << output
+                  << ": " << std::strerror(errno) << '\n';
+        return false;
+    }
+
+    out << "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 "
+        << width << ' ' << height << "\">\n";
+    out << "<rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n";
+    out << "<style>text{font-family:monospace;font-size:11px}.small{font-size:9px}</style>\n";
+    out << "<text x=\"12\" y=\"20\">OMPT cache counts, max_hit="
+        << (has_value ? count_label(max_hit) : std::string("n/a"))
+        << ", max_miss=" << (has_value ? count_label(max_miss) : std::string("n/a"))
+        << ", color=0-" << (has_value ? count_label(max_value) : std::string("n/a"))
+        << "</text>\n";
+    out << "<text class=\"small\" x=\"12\" y=\"35\">top: hit count, bottom: miss count</text>\n";
+
+    for (int tid = 0; tid <= max_thread; ++tid) {
+        const double x = left + cell_w * static_cast<double>(tid) + cell_w * 0.5;
+        out << "<text class=\"small\" x=\"" << x
+            << "\" y=\"40\" text-anchor=\"middle\">t" << tid << "</text>\n";
+    }
+
+    int row_index = 0;
+    for (const auto &entry : events) {
+        const EventKey &key = entry.first;
+        const auto &rows = entry.second;
+        const double y = top + row_h * static_cast<double>(row_index);
+        double event_max_hit = -1.0;
+        double event_max_miss = -1.0;
+        for (const TimingRow &row : rows) {
+            if (row.pmu_valid && row.pmu_llc_hits >= 0) {
+                event_max_hit = std::max(event_max_hit, static_cast<double>(row.pmu_llc_hits));
+            }
+            if (row.pmu_valid && row.pmu_llc_misses >= 0) {
+                event_max_miss = std::max(event_max_miss, static_cast<double>(row.pmu_llc_misses));
+            }
+        }
+
+        out << "<text x=\"8\" y=\"" << y + 12.0 << "\">s" << key.step << "</text>\n";
+        out << "<text class=\"small\" x=\"8\" y=\"" << y + 27.0 << "\">H "
+            << count_label(event_max_hit) << "</text>\n";
+        out << "<text class=\"small\" x=\"8\" y=\"" << y + 40.0 << "\">M "
+            << count_label(event_max_miss) << "</text>\n";
+
+        for (const TimingRow &row : rows) {
+            const double x = left + cell_w * static_cast<double>(row.thread_id);
+            const double half_h = (row_h - 4.0) * 0.5;
+            const bool hit_valid = row.pmu_valid && row.pmu_llc_hits >= 0;
+            const bool miss_valid = row.pmu_valid && row.pmu_llc_misses >= 0;
+            const double hit_value = hit_valid ? static_cast<double>(row.pmu_llc_hits) : -1.0;
+            const double miss_value = miss_valid ? static_cast<double>(row.pmu_llc_misses) : -1.0;
+            const double hit_ratio = hit_valid && max_value > 0.0 ? hit_value / max_value : 0.0;
+            const double miss_ratio = miss_valid && max_value > 0.0 ? miss_value / max_value : 0.0;
+            const Rgb hit_color = hit_valid ? temperature_color(hit_ratio) : Rgb{226, 232, 240};
+            const Rgb miss_color = miss_valid ? temperature_color(miss_ratio) : Rgb{226, 232, 240};
+            const char *hit_label_color = hit_valid ? text_color_for_fill(hit_color) : "#475569";
+            const char *miss_label_color = miss_valid ? text_color_for_fill(miss_color) : "#475569";
+            const double miss_rate = row.pmu_valid && row.pmu_llc_references > 0
+                                         ? 100.0 * static_cast<double>(row.pmu_llc_misses) /
+                                               static_cast<double>(row.pmu_llc_references)
+                                         : -1.0;
+
+            out << "<rect x=\"" << x
+                << "\" y=\"" << y
+                << "\" width=\"" << cell_w - 3.0
+                << "\" height=\"" << half_h
+                << "\" fill=\"rgb(" << hit_color.red << ',' << hit_color.green << ',' << hit_color.blue << ")\""
+                << " stroke=\"#334155\" stroke-width=\"0.35\">"
+                << "<title>step " << row.step
+                << ", " << row.region_label
+                << ", thread " << row.thread_id
+                << ", references " << row.pmu_llc_references
+                << ", hits " << row.pmu_llc_hits
+                << ", misses " << row.pmu_llc_misses
+                << ", miss_rate_pct " << (miss_rate >= 0.0 ? fixed_text(miss_rate, 3) : std::string("n/a"))
+                << ", metric hits</title></rect>\n";
+            out << "<rect x=\"" << x
+                << "\" y=\"" << y + half_h
+                << "\" width=\"" << cell_w - 3.0
+                << "\" height=\"" << half_h
+                << "\" fill=\"rgb(" << miss_color.red << ',' << miss_color.green << ',' << miss_color.blue << ")\""
+                << " stroke=\"#334155\" stroke-width=\"0.35\">"
+                << "<title>step " << row.step
+                << ", " << row.region_label
+                << ", thread " << row.thread_id
+                << ", references " << row.pmu_llc_references
+                << ", hits " << row.pmu_llc_hits
+                << ", misses " << row.pmu_llc_misses
+                << ", miss_rate_pct " << (miss_rate >= 0.0 ? fixed_text(miss_rate, 3) : std::string("n/a"))
+                << ", metric misses</title></rect>\n";
+
+            out << "<text class=\"small\" x=\"" << x + 0.5 * (cell_w - 3.0)
+                << "\" y=\"" << y + 13.0
+                << "\" text-anchor=\"middle\" fill=\"" << hit_label_color << "\">H "
+                << count_label(hit_value) << "</text>\n";
+            out << "<text class=\"small\" x=\"" << x + 0.5 * (cell_w - 3.0)
+                << "\" y=\"" << y + half_h + 13.0
+                << "\" text-anchor=\"middle\" fill=\"" << miss_label_color << "\">M "
+                << count_label(miss_value) << "</text>\n";
+        }
+        ++row_index;
+    }
+
+    out << "</svg>\n";
+    std::cout << "wrote " << output << '\n';
+    return true;
+}
+
 int main(int argc, char **argv) {
     if (argc < 3 || argc > 4) {
         std::cerr << "usage: " << argv[0] << " ompt_regions.csv output.svg [exec_interval]\n";
@@ -123,6 +305,7 @@ int main(int argc, char **argv) {
 
     std::string line;
     std::getline(in, line);  // header
+    const bool has_pmu = line.find("pmu_valid") != std::string::npos;
 
     std::map<EventKey, std::vector<TimingRow>> events;
     int max_thread = 0;
@@ -145,6 +328,12 @@ int main(int argc, char **argv) {
         row.thread_id = std::atoi(f[3].c_str());
         row.team_size = std::atoi(f[4].c_str());
         row.elapsed_ms = std::atof(f[8].c_str());
+        if (has_pmu && f.size() > 13) {
+            row.pmu_valid = std::atoi(f[10].c_str()) != 0;
+            row.pmu_llc_references = std::strtoll(f[11].c_str(), nullptr, 10);
+            row.pmu_llc_misses = std::strtoll(f[12].c_str(), nullptr, 10);
+            row.pmu_llc_hits = std::strtoll(f[13].c_str(), nullptr, 10);
+        }
         row.region_label = amr_region_label(row.region_id);
 
         if (!should_render_region(row.region_label) ||
@@ -242,5 +431,10 @@ int main(int argc, char **argv) {
 
     out << "</svg>\n";
     std::cout << "wrote " << output << '\n';
+
+    if (has_pmu && !render_cache_counts_svg(events, max_thread,
+                                            derived_output_path(output, "cache_counts"))) {
+        return 1;
+    }
     return 0;
 }

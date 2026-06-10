@@ -4,6 +4,7 @@
 #include "resctrl_mba.hpp"
 #include "resctrl_cat.hpp"
 #include "resctrl_mon.hpp"
+#include "../ompt_common/perf_cache.hpp"
 
 #include <algorithm>
 #include <atomic>
@@ -44,6 +45,7 @@ struct ParallelEvent {
     unsigned long long parallel_id = 0;
     const void *codeptr = nullptr;
     int requested_threads = 0;
+    bool cache_counter_enabled = false;
     bool resctrl_enabled = false;
     double region_wall_ms = 0.0;
     std::atomic<int> team_size{0};
@@ -59,6 +61,11 @@ struct ParallelEvent {
     std::vector<unsigned char> has_started;
     std::vector<unsigned char> work_started;
     std::vector<unsigned char> resource_applied;
+    std::vector<unsigned char> cache_counter_active;
+    std::vector<unsigned char> cache_counter_valid;
+    std::vector<std::uint64_t> cache_references;
+    std::vector<std::uint64_t> cache_misses;
+    std::vector<std::uint64_t> cache_hits;
     bool monitor_enabled = false;
     std::vector<resctrl_mon::Sample> monitor_interval_start;
     std::vector<unsigned char> monitor_interval_active;
@@ -416,6 +423,54 @@ void add_counter_delta(std::vector<std::int64_t> *values,
     (*values)[slot] += end - begin;
 }
 
+void add_cache_delta(ParallelEvent *event,
+                     std::size_t slot,
+                     const perf_cache::Delta &delta) {
+    if (!event || !delta.valid || slot >= event->cache_counter_valid.size() ||
+        slot >= event->cache_references.size() ||
+        slot >= event->cache_misses.size() ||
+        slot >= event->cache_hits.size()) {
+        return;
+    }
+
+    event->cache_counter_valid[slot] = 1;
+    event->cache_references[slot] += delta.references;
+    event->cache_misses[slot] += delta.misses;
+    event->cache_hits[slot] += delta.hits;
+}
+
+void record_cache_counter_begin(ParallelEvent *event, unsigned int thread_num) {
+    if (!event || !event->cache_counter_enabled ||
+        !has_thread_slot(event, thread_num)) {
+        return;
+    }
+
+    const std::size_t slot = static_cast<std::size_t>(thread_num);
+    if (slot >= event->cache_counter_active.size() ||
+        event->cache_counter_active[slot]) {
+        return;
+    }
+
+    if (perf_cache::start()) {
+        event->cache_counter_active[slot] = 1;
+    }
+}
+
+void record_cache_counter_end(ParallelEvent *event, unsigned int thread_num) {
+    if (!has_thread_slot(event, thread_num)) {
+        return;
+    }
+
+    const std::size_t slot = static_cast<std::size_t>(thread_num);
+    if (slot >= event->cache_counter_active.size() ||
+        !event->cache_counter_active[slot]) {
+        return;
+    }
+
+    event->cache_counter_active[slot] = 0;
+    add_cache_delta(event, slot, perf_cache::stop());
+}
+
 void record_monitor_begin(ParallelEvent *event, unsigned int thread_num) {
     if (!event || !event->monitor_enabled || !has_thread_slot(event, thread_num)) {
         return;
@@ -527,6 +582,7 @@ void record_thread_end(ParallelEvent *event, unsigned int thread_num) {
         return;
     }
 
+    record_cache_counter_end(event, thread_num);
     event->end_ms[slot] = now_ms();
     event->elapsed_ms[slot] += event->end_ms[slot] - event->current_start_ms[slot];
     record_monitor_end(event, thread_num);
@@ -571,6 +627,7 @@ std::vector<double> plan_targets(const RegionState &region, std::size_t slots) {
 void write_header() {
     output << "parallel_id,region_id,region_exec,thread_id,team_size,"
            << "requested_threads,start_ms,end_ms,elapsed_ms,codeptr,"
+           << "pmu_valid,pmu_llc_references,pmu_llc_misses,pmu_llc_hits,"
            << "cpu_id,target_mb_percent,resource_applied,"
            << "resctrl_enabled,region_wall_ms,resctrl_enable_ms,resctrl_disable_ms,"
            << "resource_kind,target_l3_ways,target_l3_mask,"
@@ -756,6 +813,22 @@ void write_event_csv(const ParallelEvent &event, int team_size) {
         const double start = index < event.start_ms.size() ? event.start_ms[index] : 0.0;
         const double end = index < event.end_ms.size() ? event.end_ms[index] : 0.0;
         const double elapsed = index < event.elapsed_ms.size() ? event.elapsed_ms[index] : 0.0;
+        const int pmu_valid =
+            index < event.cache_counter_valid.size()
+                ? static_cast<int>(event.cache_counter_valid[index])
+                : 0;
+        const long long pmu_references =
+            pmu_valid && index < event.cache_references.size()
+                ? static_cast<long long>(event.cache_references[index])
+                : -1LL;
+        const long long pmu_misses =
+            pmu_valid && index < event.cache_misses.size()
+                ? static_cast<long long>(event.cache_misses[index])
+                : -1LL;
+        const long long pmu_hits =
+            pmu_valid && index < event.cache_hits.size()
+                ? static_cast<long long>(event.cache_hits[index])
+                : -1LL;
         const int cpu = index < event.cpu_id.size() ? event.cpu_id[index] : -1;
         const double target =
             index < event.target_mb_percent.size() ? event.target_mb_percent[index] : max_mb_percent;
@@ -829,6 +902,10 @@ void write_event_csv(const ParallelEvent &event, int team_size) {
                << end << ','
                << elapsed << ','
                << event.codeptr << ','
+               << pmu_valid << ','
+               << pmu_references << ','
+               << pmu_misses << ','
+               << pmu_hits << ','
                << cpu << ','
                << target << ','
                << applied << ','
@@ -904,6 +981,11 @@ void on_parallel_begin(ompt_data_t *encountering_task_data,
     event->has_started.assign(slots, 0);
     event->work_started.assign(slots, 0);
     event->resource_applied.assign(slots, 0);
+    event->cache_counter_active.assign(slots, 0);
+    event->cache_counter_valid.assign(slots, 0);
+    event->cache_references.assign(slots, 0);
+    event->cache_misses.assign(slots, 0);
+    event->cache_hits.assign(slots, 0);
     event->monitor_interval_start.assign(slots, resctrl_mon::Sample());
     event->monitor_interval_active.assign(slots, 0);
     event->monitor_valid.assign(slots, 0);
@@ -947,7 +1029,8 @@ void on_parallel_begin(ompt_data_t *encountering_task_data,
         }
     }
 
-    event->monitor_enabled = monitor_configured && should_write_execution(*event);
+    event->cache_counter_enabled = should_write_execution(*event);
+    event->monitor_enabled = monitor_configured && event->cache_counter_enabled;
     parallel_data->ptr = event;
 }
 
@@ -993,6 +1076,7 @@ void on_work(ompt_work_t work_type,
     const std::size_t slot = static_cast<std::size_t>(thread_num);
     if (endpoint == ompt_scope_begin) {
         record_monitor_begin(event, thread_num);
+        record_cache_counter_begin(event, thread_num);
         const double start = now_ms();
         if (!event->has_started[slot]) {
             event->start_ms[slot] = start;
@@ -1077,6 +1161,7 @@ int ompt_initialize(ompt_function_lookup_t lookup,
     }
     debug = env_bool("AMR_RESCTRL_DEBUG", debug);
     cleanup_groups_on_finalize = env_bool("AMR_RESCTRL_CLEANUP_GROUPS", false);
+    perf_cache::configure(env_bool("AMR_OMPT_CACHE_COUNTERS", true));
     monitor_requested = env_bool("AMR_RESCTRL_MONITOR", monitor_requested);
 
     if (resource_kind == ResourceKind::Cat) {
