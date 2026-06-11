@@ -35,15 +35,43 @@ amr_metrics_read_energy_uj() {
     fi
 }
 
+amr_metrics_read_energy_max_range_uj() {
+    local total=0
+    local found=0
+    local path base name range
+
+    for path in /sys/class/powercap/intel-rapl:*; do
+        [ -d "$path" ] || continue
+        base=$(basename "$path")
+        [[ "$base" =~ ^intel-rapl:[0-9]+$ ]] || continue
+        [ -r "$path/name" ] || continue
+        name=$(cat "$path/name") || continue
+        [[ "$name" == package-* ]] || continue
+        [ -r "$path/max_energy_range_uj" ] || continue
+        range=$(cat "$path/max_energy_range_uj") || continue
+
+        total=$((total + range))
+        found=1
+    done
+
+    if [ "$found" -eq 0 ]; then
+        printf 'nan\n'
+    else
+        printf '%s\n' "$total"
+    fi
+}
+
 amr_metrics_write_csv() {
     local elapsed_ns=$1
     local energy_before_uj=$2
     local energy_after_uj=$3
-    local csv=$4
+    local energy_max_range_uj=$4
+    local csv=$5
 
     awk -v elapsed_ns="$elapsed_ns" \
         -v before="$energy_before_uj" \
-        -v after="$energy_after_uj" '
+        -v after="$energy_after_uj" \
+        -v max_range="$energy_max_range_uj" '
         BEGIN {
             elapsed_s = elapsed_ns / 1000000000.0
             energy_j = "nan"
@@ -51,6 +79,9 @@ amr_metrics_write_csv() {
 
             if (before != "nan" && after != "nan") {
                 delta_uj = after - before
+                if (delta_uj < 0 && max_range != "nan") {
+                    delta_uj += max_range
+                }
                 if (delta_uj >= 0 && elapsed_s > 0.0) {
                     energy_j = delta_uj / 1000000.0
                     avg_power_w = energy_j / elapsed_s
@@ -137,6 +168,7 @@ export OMP_PROC_BIND=${OMP_PROC_BIND:-true}
 export OMP_PLACES=${OMP_PLACES:-cores}
 
 ENERGY_BEFORE_UJ=$(amr_metrics_read_energy_uj)
+ENERGY_MAX_RANGE_UJ=$(amr_metrics_read_energy_max_range_uj)
 AMR_START_NS=$(date +%s%N)
 set +e
 "$REPO_ROOT/amr" "$COARSE_N" "$PARTS" "$MAX_LEVEL" "$INITIAL_SCALE" "$STEPS" "$DIFFUSION" \
@@ -147,7 +179,8 @@ set -e
 AMR_END_NS=$(date +%s%N)
 ENERGY_AFTER_UJ=$(amr_metrics_read_energy_uj)
 AMR_ELAPSED_NS=$((AMR_END_NS - AMR_START_NS))
-amr_metrics_write_csv "$AMR_ELAPSED_NS" "$ENERGY_BEFORE_UJ" "$ENERGY_AFTER_UJ" "$METRICS_CSV"
+amr_metrics_write_csv "$AMR_ELAPSED_NS" "$ENERGY_BEFORE_UJ" "$ENERGY_AFTER_UJ" \
+    "$ENERGY_MAX_RANGE_UJ" "$METRICS_CSV"
 amr_metrics_print_summary "$METRICS_CSV"
 if [ "$AMR_STATUS" -ne 0 ]; then
     exit "$AMR_STATUS"
