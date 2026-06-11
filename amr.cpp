@@ -151,43 +151,81 @@ void rebuild_owner(const std::vector<unsigned char> &active,
     }
 }
 
-double face_average(const std::vector<int> &owner,
+struct FaceStencil {
+    bool boundary = false;
+    int base = 0;
+    int stride = 1;
+    int width = 0;
+    int uniform_owner = -2;
+};
+
+FaceStencil make_face_stencil(const std::vector<int> &owner,
+                              int fine_n,
+                              int i,
+                              int j,
+                              int w,
+                              int direction) {
+    FaceStencil face;
+    face.width = w;
+
+    if (direction == 0) {       // left
+        if (i == 0) {
+            face.boundary = true;
+            return face;
+        }
+        face.base = index2d(i - 1, j, fine_n);
+        face.stride = fine_n;
+    } else if (direction == 1) {  // right
+        if (i + w >= fine_n) {
+            face.boundary = true;
+            return face;
+        }
+        face.base = index2d(i + w, j, fine_n);
+        face.stride = fine_n;
+    } else if (direction == 2) {  // bottom
+        if (j == 0) {
+            face.boundary = true;
+            return face;
+        }
+        face.base = index2d(i, j - 1, fine_n);
+    } else {                    // top
+        if (j + w >= fine_n) {
+            face.boundary = true;
+            return face;
+        }
+        face.base = index2d(i, j + w, fine_n);
+    }
+
+    const int first_owner = owner[static_cast<std::size_t>(face.base)];
+    const int last_owner = owner[static_cast<std::size_t>(face.base + (w - 1) * face.stride)];
+    if (first_owner == last_owner) {
+        face.uniform_owner = first_owner;
+    }
+    return face;
+}
+
+double face_average(const FaceStencil &face,
+                    const std::vector<int> &owner,
                     const std::vector<double> &value,
-                    int fine_n,
                     int state_components,
                     int component,
                     int self,
-                    int i,
-                    int j,
-                    int w,
-                    int direction,
                     double fallback) {
+    if (face.boundary) {
+        return fallback;
+    }
+
+    if (face.uniform_owner != -2) {
+        if (face.uniform_owner < 0 || face.uniform_owner == self) {
+            return fallback;
+        }
+        return value[state_index(face.uniform_owner, component, state_components)];
+    }
+
     double sum = 0.0;
     int count = 0;
-
-    for (int s = 0; s < w; ++s) {
-        int ni = i;
-        int nj = j;
-
-        if (direction == 0) {       // left
-            ni = i - 1;
-            nj = j + s;
-        } else if (direction == 1) {  // right
-            ni = i + w;
-            nj = j + s;
-        } else if (direction == 2) {  // bottom
-            ni = i + s;
-            nj = j - 1;
-        } else {                    // top
-            ni = i + s;
-            nj = j + w;
-        }
-
-        if (ni < 0 || ni >= fine_n || nj < 0 || nj >= fine_n) {
-            continue;
-        }
-
-        const int q = owner[static_cast<std::size_t>(index2d(ni, nj, fine_n))];
+    for (int s = 0, offset = 0; s < face.width; ++s, offset += face.stride) {
+        const int q = owner[static_cast<std::size_t>(face.base + offset)];
         if (q < 0 || q == self) {
             continue;
         }
@@ -462,12 +500,16 @@ int main(int argc, char **argv) {
 
                         const int w = cell_width(level[static_cast<std::size_t>(p)], max_level);
                         const double dx = static_cast<double>(w) / static_cast<double>(fine_n);
+                        const FaceStencil left_face = make_face_stencil(owner, fine_n, i, j, w, 0);
+                        const FaceStencil right_face = make_face_stencil(owner, fine_n, i, j, w, 1);
+                        const FaceStencil bottom_face = make_face_stencil(owner, fine_n, i, j, w, 2);
+                        const FaceStencil top_face = make_face_stencil(owner, fine_n, i, j, w, 3);
                         for (int component = 0; component < state_components; ++component) {
                             const double center = value[state_index(p, component, state_components)];
-                            const double left = face_average(owner, value, fine_n, state_components, component, p, i, j, w, 0, center);
-                            const double right = face_average(owner, value, fine_n, state_components, component, p, i, j, w, 1, center);
-                            const double bottom = face_average(owner, value, fine_n, state_components, component, p, i, j, w, 2, center);
-                            const double top = face_average(owner, value, fine_n, state_components, component, p, i, j, w, 3, center);
+                            const double left = face_average(left_face, owner, value, state_components, component, p, center);
+                            const double right = face_average(right_face, owner, value, state_components, component, p, center);
+                            const double bottom = face_average(bottom_face, owner, value, state_components, component, p, center);
+                            const double top = face_average(top_face, owner, value, state_components, component, p, center);
                             const double laplacian = (left + right + bottom + top - 4.0 * center) / (dx * dx);
                             next_value[state_index(p, component, state_components)] =
                                 center + dt * diffusion * laplacian;
@@ -505,10 +547,14 @@ int main(int argc, char **argv) {
 
                 const int w = cell_width(level[static_cast<std::size_t>(p)], max_level);
                 const double center = value[state_index(p, 0, state_components)];
-                const double left = face_average(owner, value, fine_n, state_components, 0, p, i, j, w, 0, center);
-                const double right = face_average(owner, value, fine_n, state_components, 0, p, i, j, w, 1, center);
-                const double bottom = face_average(owner, value, fine_n, state_components, 0, p, i, j, w, 2, center);
-                const double top = face_average(owner, value, fine_n, state_components, 0, p, i, j, w, 3, center);
+                const FaceStencil left_face = make_face_stencil(owner, fine_n, i, j, w, 0);
+                const FaceStencil right_face = make_face_stencil(owner, fine_n, i, j, w, 1);
+                const FaceStencil bottom_face = make_face_stencil(owner, fine_n, i, j, w, 2);
+                const FaceStencil top_face = make_face_stencil(owner, fine_n, i, j, w, 3);
+                const double left = face_average(left_face, owner, value, state_components, 0, p, center);
+                const double right = face_average(right_face, owner, value, state_components, 0, p, center);
+                const double bottom = face_average(bottom_face, owner, value, state_components, 0, p, center);
+                const double top = face_average(top_face, owner, value, state_components, 0, p, center);
                 const double jump_x = std::max(std::abs(right - center), std::abs(left - center));
                 const double jump_y = std::max(std::abs(top - center), std::abs(bottom - center));
                 importance[static_cast<std::size_t>(p)] = std::max(jump_x, jump_y);

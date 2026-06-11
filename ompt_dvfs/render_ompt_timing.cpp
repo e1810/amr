@@ -204,8 +204,6 @@ int main(int argc, char **argv) {
     constexpr double row_h = 30.0;
     constexpr double right_pad = 32.0;
     constexpr double bottom_pad = 32.0;
-    constexpr double color_min_ms = 2.0;
-    constexpr double color_max_ms = 5.0;
     const double width = left + cell_w * static_cast<double>(max_thread + 1) + right_pad;
     const double height = top + row_h * static_cast<double>(events.size()) + bottom_pad;
 
@@ -221,7 +219,8 @@ int main(int argc, char **argv) {
     out << "<style>text{font-family:monospace;font-size:11px}.small{font-size:9px}</style>\n";
     out << "<text x=\"12\" y=\"20\">OMPT DVFS timing, max="
         << std::fixed << std::setprecision(3) << max_elapsed
-        << " ms, color=2-5 ms, max_target=" << std::setprecision(0) << max_target << " MHz";
+        << " ms, color=0-" << max_elapsed
+        << " ms, max_target=" << std::setprecision(0) << max_target << " MHz";
     if (max_measured > 0.0) {
         out << ", max_measured=" << std::setprecision(0) << max_measured << " MHz";
     }
@@ -250,7 +249,7 @@ int main(int argc, char **argv) {
 
         for (const TimingRow &row : rows) {
             const double x = left + cell_w * static_cast<double>(row.thread_id);
-            const double ratio = (row.elapsed_ms - color_min_ms) / (color_max_ms - color_min_ms);
+            const double ratio = max_elapsed > 0.0 ? row.elapsed_ms / max_elapsed : 0.0;
             const Rgb color = temperature_color(ratio);
             const char *label_color = text_color_for_fill(color);
 

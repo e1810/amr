@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <cerrno>
 #include <cmath>
+#include <cstdint>
 #include <cstdlib>
 #include <cstring>
 #include <fstream>
@@ -10,6 +11,7 @@
 #include <sstream>
 #include <string>
 #include <tuple>
+#include <utility>
 #include <vector>
 
 struct TimingRow {
@@ -25,6 +27,9 @@ struct TimingRow {
     long long pmu_llc_references = -1;
     long long pmu_llc_misses = -1;
     long long pmu_llc_hits = -1;
+    bool workload_valid = false;
+    long long active_meshes = -1;
+    std::uint64_t working_set_bytes = 0;
 };
 
 struct EventKey {
@@ -44,6 +49,16 @@ struct Rgb {
     int green = 0;
     int blue = 0;
 };
+
+struct WorkloadInfo {
+    bool valid = false;
+    int fine_n = 0;
+    int state_components = 0;
+    long long total_active_meshes = 0;
+    std::vector<long long> active_meshes;
+    std::vector<std::uint64_t> working_set_bytes;
+};
+
 
 Rgb lerp_color(const Rgb &a, const Rgb &b, double u) {
     return {
@@ -132,6 +147,186 @@ std::string count_label(double value) {
         return fixed_text(value / 1000.0, 1) + "K";
     }
     return fixed_text(value, 0);
+}
+
+std::string byte_label(std::uint64_t value) {
+    static const char *units[] = {"B", "KiB", "MiB", "GiB", "TiB"};
+    double scaled = static_cast<double>(value);
+    int unit = 0;
+    while (scaled >= 1024.0 && unit < 4) {
+        scaled /= 1024.0;
+        ++unit;
+    }
+
+    if (unit == 0) {
+        return std::to_string(value) + " B";
+    }
+    const int precision = scaled >= 100.0 ? 0 : (scaled >= 10.0 ? 1 : 2);
+    return fixed_text(scaled, precision) + " " + units[unit];
+}
+
+std::string directory_name(const std::string &path) {
+    const std::size_t slash = path.find_last_of("/\\");
+    if (slash == std::string::npos) {
+        return ".";
+    }
+    if (slash == 0) {
+        return path.substr(0, 1);
+    }
+    return path.substr(0, slash);
+}
+
+std::string join_path(const std::string &dir, const std::string &name) {
+    if (dir.empty() || dir == ".") {
+        return name;
+    }
+    const char last = dir[dir.size() - 1];
+    if (last == '/' || last == '\\') {
+        return dir + name;
+    }
+    return dir + "/" + name;
+}
+
+void append_unique(std::vector<std::string> &values, const std::string &value) {
+    if (std::find(values.begin(), values.end(), value) == values.end()) {
+        values.push_back(value);
+    }
+}
+
+std::vector<std::string> snapshot_directories(const std::string &input,
+                                              const std::string &output) {
+    std::vector<std::string> dirs;
+    append_unique(dirs, join_path(directory_name(output), "txt"));
+    append_unique(dirs, join_path(directory_name(input), "txt"));
+    return dirs;
+}
+
+std::string snapshot_name(int step) {
+    std::ostringstream out;
+    out << "snapshot_" << std::setw(6) << std::setfill('0') << step << ".txt";
+    return out.str();
+}
+
+bool parse_snapshot_int(const std::string &line,
+                        const std::string &prefix,
+                        int &value) {
+    if (line.compare(0, prefix.size(), prefix) != 0) {
+        return false;
+    }
+    value = std::atoi(line.c_str() + prefix.size());
+    return true;
+}
+
+std::uint64_t state_working_set_bytes(long long active_meshes,
+                                      int state_components) {
+    if (active_meshes <= 0 || state_components <= 0) {
+        return 0;
+    }
+    return static_cast<std::uint64_t>(active_meshes) *
+           static_cast<std::uint64_t>(state_components) *
+           static_cast<std::uint64_t>(2 * sizeof(double));
+}
+
+WorkloadInfo load_snapshot_workload(const std::vector<std::string> &snapshot_dirs,
+                                    int step,
+                                    int team_size) {
+    WorkloadInfo info;
+    if (team_size <= 0) {
+        return info;
+    }
+
+    const std::string name = snapshot_name(step);
+    for (const std::string &dir : snapshot_dirs) {
+        const std::string path = join_path(dir, name);
+        std::ifstream in(path);
+        if (!in) {
+            continue;
+        }
+
+        info = WorkloadInfo();
+        info.active_meshes.assign(static_cast<std::size_t>(team_size), 0);
+        info.working_set_bytes.assign(static_cast<std::size_t>(team_size), 0);
+
+        std::string line;
+        while (std::getline(in, line)) {
+            if (line.empty()) {
+                continue;
+            }
+
+            if (line[0] == '#') {
+                parse_snapshot_int(line, "# fine_n ", info.fine_n);
+                parse_snapshot_int(line, "# state_components ", info.state_components);
+                continue;
+            }
+
+            int i = 0;
+            int j = 0;
+            int level = 0;
+            std::istringstream row(line);
+            if (!(row >> i >> j >> level) || info.fine_n <= 0 ||
+                j < 0 || j >= info.fine_n) {
+                continue;
+            }
+
+            int thread_id = static_cast<int>(
+                (static_cast<long long>(j) * static_cast<long long>(team_size)) /
+                static_cast<long long>(info.fine_n));
+            thread_id = std::max(0, std::min(team_size - 1, thread_id));
+            ++info.active_meshes[static_cast<std::size_t>(thread_id)];
+            ++info.total_active_meshes;
+        }
+
+        if (info.fine_n <= 0 || info.state_components <= 0) {
+            return WorkloadInfo();
+        }
+
+        for (int tid = 0; tid < team_size; ++tid) {
+            const std::size_t index = static_cast<std::size_t>(tid);
+            info.working_set_bytes[index] =
+                state_working_set_bytes(info.active_meshes[index], info.state_components);
+        }
+        info.valid = true;
+        return info;
+    }
+
+    return info;
+}
+
+bool annotate_workloads(std::map<EventKey, std::vector<TimingRow>> &events,
+                        const std::string &input,
+                        const std::string &output,
+                        int default_team_size) {
+    const std::vector<std::string> snapshot_dirs = snapshot_directories(input, output);
+    std::map<std::pair<int, int>, WorkloadInfo> workload_cache;
+    bool any_workload = false;
+
+    for (auto &entry : events) {
+        for (TimingRow &row : entry.second) {
+            const int team_size = row.team_size > 0 ? row.team_size : default_team_size;
+            const auto cache_key = std::make_pair(row.step, team_size);
+            auto iter = workload_cache.find(cache_key);
+            if (iter == workload_cache.end()) {
+                iter = workload_cache
+                           .emplace(cache_key,
+                                    load_snapshot_workload(snapshot_dirs, row.step, team_size))
+                           .first;
+            }
+
+            const WorkloadInfo &workload = iter->second;
+            if (!workload.valid || row.thread_id < 0 ||
+                static_cast<std::size_t>(row.thread_id) >= workload.active_meshes.size()) {
+                continue;
+            }
+
+            const std::size_t index = static_cast<std::size_t>(row.thread_id);
+            row.workload_valid = true;
+            row.active_meshes = workload.active_meshes[index];
+            row.working_set_bytes = workload.working_set_bytes[index];
+            any_workload = true;
+        }
+    }
+
+    return any_workload;
 }
 
 std::string derived_output_path(const std::string &output, const std::string &suffix) {
@@ -357,14 +552,14 @@ int main(int argc, char **argv) {
         return 1;
     }
 
+    const bool has_workload = annotate_workloads(events, input, output, max_thread + 1);
+
     constexpr double left = 76.0;
-    constexpr double top = 42.0;
+    constexpr double top = 56.0;
     constexpr double cell_w = 96.0;
-    constexpr double row_h = 30.0;
+    constexpr double row_h = 38.0;
     constexpr double right_pad = 32.0;
     constexpr double bottom_pad = 32.0;
-    constexpr double color_min_ms = 20.0;
-    constexpr double color_max_ms = 45;
     const double width = left + cell_w * static_cast<double>(max_thread + 1) + right_pad;
     const double height = top + row_h * static_cast<double>(events.size()) + bottom_pad;
 
@@ -377,15 +572,19 @@ int main(int argc, char **argv) {
     out << "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 "
         << width << ' ' << height << "\">\n";
     out << "<rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n";
-    out << "<style>text{font-family:monospace;font-size:11px}.small{font-size:10px}</style>\n";
+    out << "<style>text{font-family:monospace;font-size:11px}.small{font-size:10px}.tiny{font-size:9px}</style>\n";
     out << "<text x=\"12\" y=\"20\">OMPT per-thread region time, max="
         << std::fixed << std::setprecision(3) << max_elapsed
-        << " ms, color=20-45 ms</text>\n";
+        << " ms, color=0-" << max_elapsed << " ms</text>\n";
+    out << "<text class=\"small\" x=\"12\" y=\"36\">cell: elapsed ms / WS bytes"
+        << " (value+next_value)"
+        << (has_workload ? "" : ", WS=n/a")
+        << "</text>\n";
 
     for (int tid = 0; tid <= max_thread; ++tid) {
         const double x = left + cell_w * static_cast<double>(tid) + cell_w * 0.5;
         out << "<text class=\"small\" x=\"" << x
-            << "\" y=\"34\" text-anchor=\"middle\">t" << tid << "</text>\n";
+            << "\" y=\"48\" text-anchor=\"middle\">t" << tid << "</text>\n";
     }
 
     int row_index = 0;
@@ -400,14 +599,16 @@ int main(int argc, char **argv) {
 
         out << "<text x=\"8\" y=\"" << y + 11.0 << "\">"
             << "s" << key.step << "</text>\n";
-        out << "<text class=\"small\" x=\"8\" y=\"" << y + 24.0 << "\">"
+        out << "<text class=\"small\" x=\"8\" y=\"" << y + 27.0 << "\">"
             << std::fixed << std::setprecision(2) << event_max_ms << " ms</text>\n";
 
         for (const TimingRow &row : rows) {
             const double x = left + cell_w * static_cast<double>(row.thread_id);
-            const double ratio = (row.elapsed_ms - color_min_ms) / (color_max_ms - color_min_ms);
+            const double ratio = max_elapsed > 0.0 ? row.elapsed_ms / max_elapsed : 0.0;
             const Rgb color = temperature_color(ratio);
             const char *label_color = text_color_for_fill(color);
+            const std::string workload_label =
+                row.workload_valid ? byte_label(row.working_set_bytes) : std::string("n/a");
 
             out << "<rect x=\"" << x
                 << "\" y=\"" << y
@@ -418,12 +619,22 @@ int main(int argc, char **argv) {
                 << "<title>step " << row.step
                 << ", " << row.region_label
                 << ", thread " << row.thread_id
-                << ", " << std::fixed << std::setprecision(6) << row.elapsed_ms << " ms</title></rect>\n";
+                << ", " << std::fixed << std::setprecision(6) << row.elapsed_ms << " ms"
+                << ", active_meshes "
+                << (row.workload_valid ? std::to_string(row.active_meshes) : std::string("n/a"))
+                << ", working_set_bytes "
+                << (row.workload_valid ? std::to_string(row.working_set_bytes) : std::string("n/a"))
+                << "</title></rect>\n";
 
             out << "<text class=\"small\" x=\"" << x + 0.5 * (cell_w - 3.0)
                 << "\" y=\"" << y + 13.0
                 << "\" text-anchor=\"middle\" fill=\"" << label_color << "\">"
-                << std::fixed << std::setprecision(2) << row.elapsed_ms
+                << fixed_text(row.elapsed_ms, 2) << " ms"
+                << "</text>\n";
+            out << "<text class=\"tiny\" x=\"" << x + 0.5 * (cell_w - 3.0)
+                << "\" y=\"" << y + 27.0
+                << "\" text-anchor=\"middle\" fill=\"" << label_color << "\">WS "
+                << workload_label
                 << "</text>\n";
         }
         ++row_index;

@@ -629,8 +629,6 @@ int main(int argc, char **argv) {
     constexpr double row_h = 30.0;
     constexpr double right_pad = 32.0;
     constexpr double bottom_pad = 32.0;
-    constexpr double color_min_ms = 20.0;
-    constexpr double color_max_ms = 45.0;
     const double width = left + cell_w * static_cast<double>(max_thread + 1) + right_pad;
     const double height = top + row_h * static_cast<double>(events.size()) + bottom_pad;
 
@@ -647,7 +645,8 @@ int main(int argc, char **argv) {
     out << "<style>text{font-family:monospace;font-size:11px}.small{font-size:9px}</style>\n";
     out << "<text x=\"12\" y=\"20\">OMPT resctrl timing, max="
         << std::fixed << std::setprecision(3) << max_elapsed
-        << " ms, color=20-45 ms, max_target=" << target_text(max_target, saw_cat ? "cat" : "mba", percent_mode)
+        << " ms, color=0-" << max_elapsed
+        << " ms, max_target=" << target_text(max_target, saw_cat ? "cat" : "mba", percent_mode)
         << "</text>\n";
 
     for (int tid = 0; tid <= max_thread; ++tid) {
@@ -673,7 +672,7 @@ int main(int argc, char **argv) {
 
         for (const TimingRow &row : rows) {
             const double x = left + cell_w * static_cast<double>(row.thread_id);
-            const double ratio = (row.elapsed_ms - color_min_ms) / (color_max_ms - color_min_ms);
+            const double ratio = max_elapsed > 0.0 ? row.elapsed_ms / max_elapsed : 0.0;
             const Rgb color = temperature_color(ratio);
             const char *label_color = text_color_for_fill(color);
 
