@@ -1,0 +1,290 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 848">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:monospace;font-size:11px}.small{font-size:10px}.tiny{font-size:9px}</style>
+<text x="12" y="20">OMPT per-thread region time, max=28.976 ms, color=0-28.976 ms</text>
+<text class="small" x="12" y="36">cell: elapsed ms / WS bytes (value+next_value)</text>
+<text class="small" x="124.000" y="48" text-anchor="middle">t0</text>
+<text class="small" x="220.000" y="48" text-anchor="middle">t1</text>
+<text class="small" x="316.000" y="48" text-anchor="middle">t2</text>
+<text class="small" x="412.000" y="48" text-anchor="middle">t3</text>
+<text x="8" y="67.000">s100</text>
+<text class="small" x="8" y="83.000">28.98 ms</text>
+<rect x="76.00" y="56.00" width="93.00" height="35.00" fill="rgb(7,183,207)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 0, 9.512989 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="122.500000" y="69.000000" text-anchor="middle" fill="#0f172a">9.51 ms</text>
+<text class="tiny" x="122.500000" y="83.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<rect x="172.000000" y="56.000000" width="93.000000" height="35.000000" fill="rgb(220,38,38)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 1, 28.976000 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="218.500000" y="69.000000" text-anchor="middle" fill="#f8fafc">28.98 ms</text>
+<text class="tiny" x="218.500000" y="83.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="268.000000" y="56.000000" width="93.000000" height="35.000000" fill="rgb(225,51,35)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 2, 28.184058 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="314.500000" y="69.000000" text-anchor="middle" fill="#f8fafc">28.18 ms</text>
+<text class="tiny" x="314.500000" y="83.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="364.000000" y="56.000000" width="93.000000" height="35.000000" fill="rgb(7,180,213)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 3, 9.145326 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="410.500000" y="69.000000" text-anchor="middle" fill="#0f172a">9.15 ms</text>
+<text class="tiny" x="410.500000" y="83.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<text x="8" y="105.000000">s200</text>
+<text class="small" x="8" y="121.000000">27.21 ms</text>
+<rect x="76.00" y="94.00" width="93.00" height="35.00" fill="rgb(8,178,213)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 0, 9.026763 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="122.500000" y="107.000000" text-anchor="middle" fill="#0f172a">9.03 ms</text>
+<text class="tiny" x="122.500000" y="121.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<rect x="172.000000" y="94.000000" width="93.000000" height="35.000000" fill="rgb(231,67,32)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 1, 27.214225 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="218.500000" y="107.000000" text-anchor="middle" fill="#f8fafc">27.21 ms</text>
+<text class="tiny" x="218.500000" y="121.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="268.000000" y="94.000000" width="93.000000" height="35.000000" fill="rgb(231,68,32)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 2, 27.148299 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="314.500000" y="107.000000" text-anchor="middle" fill="#f8fafc">27.15 ms</text>
+<text class="tiny" x="314.500000" y="121.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="364.000000" y="94.000000" width="93.000000" height="35.000000" fill="rgb(9,174,214)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 3, 8.819097 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="410.500000" y="107.000000" text-anchor="middle" fill="#0f172a">8.82 ms</text>
+<text class="tiny" x="410.500000" y="121.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<text x="8" y="143.000000">s300</text>
+<text class="small" x="8" y="159.000000">26.73 ms</text>
+<rect x="76.00" y="132.00" width="93.00" height="35.00" fill="rgb(9,174,214)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 0, 8.806534 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="122.500000" y="145.000000" text-anchor="middle" fill="#0f172a">8.81 ms</text>
+<text class="tiny" x="122.500000" y="159.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<rect x="172.000000" y="132.000000" width="93.000000" height="35.000000" fill="rgb(234,75,30)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 1, 26.726884 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="218.500000" y="145.000000" text-anchor="middle" fill="#f8fafc">26.73 ms</text>
+<text class="tiny" x="218.500000" y="159.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="268.000000" y="132.000000" width="93.000000" height="35.000000" fill="rgb(236,81,29)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 2, 26.408297 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="314.500000" y="145.000000" text-anchor="middle" fill="#f8fafc">26.41 ms</text>
+<text class="tiny" x="314.500000" y="159.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="364.000000" y="132.000000" width="93.000000" height="35.000000" fill="rgb(10,170,215)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 3, 8.603594 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="410.500000" y="145.000000" text-anchor="middle" fill="#0f172a">8.60 ms</text>
+<text class="tiny" x="410.500000" y="159.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<text x="8" y="181.000000">s400</text>
+<text class="small" x="8" y="197.000000">27.69 ms</text>
+<rect x="76.00" y="170.00" width="93.00" height="35.00" fill="rgb(8,177,213)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 0, 8.995561 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="122.500000" y="183.000000" text-anchor="middle" fill="#0f172a">9.00 ms</text>
+<text class="tiny" x="122.500000" y="197.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<rect x="172.000000" y="170.000000" width="93.000000" height="35.000000" fill="rgb(228,59,34)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 1, 27.691000 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="218.500000" y="183.000000" text-anchor="middle" fill="#f8fafc">27.69 ms</text>
+<text class="tiny" x="218.500000" y="197.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="268.000000" y="170.000000" width="93.000000" height="35.000000" fill="rgb(231,68,32)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 2, 27.166474 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="314.500000" y="183.000000" text-anchor="middle" fill="#f8fafc">27.17 ms</text>
+<text class="tiny" x="314.500000" y="197.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="364.000000" y="170.000000" width="93.000000" height="35.000000" fill="rgb(9,174,214)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 3, 8.821693 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="410.500000" y="183.000000" text-anchor="middle" fill="#0f172a">8.82 ms</text>
+<text class="tiny" x="410.500000" y="197.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<text x="8" y="219.000000">s500</text>
+<text class="small" x="8" y="235.000000">28.05 ms</text>
+<rect x="76.00" y="208.00" width="93.00" height="35.00" fill="rgb(7,179,213)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 0, 9.096167 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="122.500000" y="221.000000" text-anchor="middle" fill="#0f172a">9.10 ms</text>
+<text class="tiny" x="122.500000" y="235.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<rect x="172.000000" y="208.000000" width="93.000000" height="35.000000" fill="rgb(226,53,35)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 1, 28.051792 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="218.500000" y="221.000000" text-anchor="middle" fill="#f8fafc">28.05 ms</text>
+<text class="tiny" x="218.500000" y="235.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="268.000000" y="208.000000" width="93.000000" height="35.000000" fill="rgb(228,58,34)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 2, 27.744486 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="314.500000" y="221.000000" text-anchor="middle" fill="#f8fafc">27.74 ms</text>
+<text class="tiny" x="314.500000" y="235.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="364.000000" y="208.000000" width="93.000000" height="35.000000" fill="rgb(9,175,214)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 3, 8.894431 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="410.500000" y="221.000000" text-anchor="middle" fill="#0f172a">8.89 ms</text>
+<text class="tiny" x="410.500000" y="235.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<text x="8" y="257.000000">s600</text>
+<text class="small" x="8" y="273.000000">27.99 ms</text>
+<rect x="76.00" y="246.00" width="93.00" height="35.00" fill="rgb(7,181,212)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 0, 9.190745 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="122.500000" y="259.000000" text-anchor="middle" fill="#0f172a">9.19 ms</text>
+<text class="tiny" x="122.500000" y="273.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<rect x="172.000000" y="246.000000" width="93.000000" height="35.000000" fill="rgb(226,54,35)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 1, 27.985466 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="218.500000" y="259.000000" text-anchor="middle" fill="#f8fafc">27.99 ms</text>
+<text class="tiny" x="218.500000" y="273.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="268.000000" y="246.000000" width="93.000000" height="35.000000" fill="rgb(227,57,34)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 2, 27.840661 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="314.500000" y="259.000000" text-anchor="middle" fill="#f8fafc">27.84 ms</text>
+<text class="tiny" x="314.500000" y="273.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="364.000000" y="246.000000" width="93.000000" height="35.000000" fill="rgb(9,175,214)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 3, 8.888549 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="410.500000" y="259.000000" text-anchor="middle" fill="#0f172a">8.89 ms</text>
+<text class="tiny" x="410.500000" y="273.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<text x="8" y="295.000000">s700</text>
+<text class="small" x="8" y="311.000000">27.76 ms</text>
+<rect x="76.00" y="284.00" width="93.00" height="35.00" fill="rgb(7,180,212)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 0, 9.186589 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="122.500000" y="297.000000" text-anchor="middle" fill="#0f172a">9.19 ms</text>
+<text class="tiny" x="122.500000" y="311.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<rect x="172.000000" y="284.000000" width="93.000000" height="35.000000" fill="rgb(228,58,34)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 1, 27.760702 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="218.500000" y="297.000000" text-anchor="middle" fill="#f8fafc">27.76 ms</text>
+<text class="tiny" x="218.500000" y="311.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="268.000000" y="284.000000" width="93.000000" height="35.000000" fill="rgb(230,63,33)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 2, 27.454181 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="314.500000" y="297.000000" text-anchor="middle" fill="#f8fafc">27.45 ms</text>
+<text class="tiny" x="314.500000" y="311.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="364.000000" y="284.000000" width="93.000000" height="35.000000" fill="rgb(9,174,214)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 3, 8.837970 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="410.500000" y="297.000000" text-anchor="middle" fill="#0f172a">8.84 ms</text>
+<text class="tiny" x="410.500000" y="311.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<text x="8" y="333.000000">s800</text>
+<text class="small" x="8" y="349.000000">28.14 ms</text>
+<rect x="76.00" y="322.00" width="93.00" height="35.00" fill="rgb(7,179,213)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 0, 9.116330 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="122.500000" y="335.000000" text-anchor="middle" fill="#0f172a">9.12 ms</text>
+<text class="tiny" x="122.500000" y="349.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<rect x="172.000000" y="322.000000" width="93.000000" height="35.000000" fill="rgb(225,52,35)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 1, 28.137263 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="218.500000" y="335.000000" text-anchor="middle" fill="#f8fafc">28.14 ms</text>
+<text class="tiny" x="218.500000" y="349.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="268.000000" y="322.000000" width="93.000000" height="35.000000" fill="rgb(226,53,35)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 2, 28.068442 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="314.500000" y="335.000000" text-anchor="middle" fill="#f8fafc">28.07 ms</text>
+<text class="tiny" x="314.500000" y="349.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="364.000000" y="322.000000" width="93.000000" height="35.000000" fill="rgb(8,176,214)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 3, 8.913241 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="410.500000" y="335.000000" text-anchor="middle" fill="#0f172a">8.91 ms</text>
+<text class="tiny" x="410.500000" y="349.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<text x="8" y="371.000000">s900</text>
+<text class="small" x="8" y="387.000000">28.25 ms</text>
+<rect x="76.00" y="360.00" width="93.00" height="35.00" fill="rgb(7,180,213)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 0, 9.170276 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="122.500000" y="373.000000" text-anchor="middle" fill="#0f172a">9.17 ms</text>
+<text class="tiny" x="122.500000" y="387.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<rect x="172.000000" y="360.000000" width="93.000000" height="35.000000" fill="rgb(225,50,35)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 1, 28.250083 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="218.500000" y="373.000000" text-anchor="middle" fill="#f8fafc">28.25 ms</text>
+<text class="tiny" x="218.500000" y="387.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="268.000000" y="360.000000" width="93.000000" height="35.000000" fill="rgb(229,61,33)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 2, 27.614672 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="314.500000" y="373.000000" text-anchor="middle" fill="#f8fafc">27.61 ms</text>
+<text class="tiny" x="314.500000" y="387.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="364.000000" y="360.000000" width="93.000000" height="35.000000" fill="rgb(8,176,214)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 3, 8.915406 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="410.500000" y="373.000000" text-anchor="middle" fill="#0f172a">8.92 ms</text>
+<text class="tiny" x="410.500000" y="387.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<text x="8" y="409.000000">s1000</text>
+<text class="small" x="8" y="425.000000">27.57 ms</text>
+<rect x="76.00" y="398.00" width="93.00" height="35.00" fill="rgb(7,179,213)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 0, 9.101941 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="122.500000" y="411.000000" text-anchor="middle" fill="#0f172a">9.10 ms</text>
+<text class="tiny" x="122.500000" y="425.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<rect x="172.000000" y="398.000000" width="93.000000" height="35.000000" fill="rgb(229,61,33)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 1, 27.574003 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="218.500000" y="411.000000" text-anchor="middle" fill="#f8fafc">27.57 ms</text>
+<text class="tiny" x="218.500000" y="425.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="268.000000" y="398.000000" width="93.000000" height="35.000000" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 2, 27.350492 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="314.500000" y="411.000000" text-anchor="middle" fill="#f8fafc">27.35 ms</text>
+<text class="tiny" x="314.500000" y="425.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="364.000000" y="398.000000" width="93.000000" height="35.000000" fill="rgb(9,175,214)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 3, 8.889376 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="410.500000" y="411.000000" text-anchor="middle" fill="#0f172a">8.89 ms</text>
+<text class="tiny" x="410.500000" y="425.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<text x="8" y="447.000000">s1100</text>
+<text class="small" x="8" y="463.000000">27.85 ms</text>
+<rect x="76.00" y="436.00" width="93.00" height="35.00" fill="rgb(7,179,213)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 0, 9.103137 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="122.500000" y="449.000000" text-anchor="middle" fill="#0f172a">9.10 ms</text>
+<text class="tiny" x="122.500000" y="463.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<rect x="172.000000" y="436.000000" width="93.000000" height="35.000000" fill="rgb(227,57,34)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 1, 27.854712 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="218.500000" y="449.000000" text-anchor="middle" fill="#f8fafc">27.85 ms</text>
+<text class="tiny" x="218.500000" y="463.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="268.000000" y="436.000000" width="93.000000" height="35.000000" fill="rgb(228,60,33)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 2, 27.639156 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="314.500000" y="449.000000" text-anchor="middle" fill="#f8fafc">27.64 ms</text>
+<text class="tiny" x="314.500000" y="463.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="364.000000" y="436.000000" width="93.000000" height="35.000000" fill="rgb(9,175,214)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 3, 8.895924 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="410.500000" y="449.000000" text-anchor="middle" fill="#0f172a">8.90 ms</text>
+<text class="tiny" x="410.500000" y="463.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<text x="8" y="485.000000">s1200</text>
+<text class="small" x="8" y="501.000000">28.05 ms</text>
+<rect x="76.00" y="474.00" width="93.00" height="35.00" fill="rgb(6,181,212)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 0, 9.217907 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="122.500000" y="487.000000" text-anchor="middle" fill="#0f172a">9.22 ms</text>
+<text class="tiny" x="122.500000" y="501.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<rect x="172.000000" y="474.000000" width="93.000000" height="35.000000" fill="rgb(226,53,35)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 1, 28.052387 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="218.500000" y="487.000000" text-anchor="middle" fill="#f8fafc">28.05 ms</text>
+<text class="tiny" x="218.500000" y="501.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="268.000000" y="474.000000" width="93.000000" height="35.000000" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 2, 27.348604 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="314.500000" y="487.000000" text-anchor="middle" fill="#f8fafc">27.35 ms</text>
+<text class="tiny" x="314.500000" y="501.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="364.000000" y="474.000000" width="93.000000" height="35.000000" fill="rgb(8,175,214)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 3, 8.904670 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="410.500000" y="487.000000" text-anchor="middle" fill="#0f172a">8.90 ms</text>
+<text class="tiny" x="410.500000" y="501.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<text x="8" y="523.000000">s1300</text>
+<text class="small" x="8" y="539.000000">28.21 ms</text>
+<rect x="76.00" y="512.00" width="93.00" height="35.00" fill="rgb(7,179,213)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 0, 9.107426 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="122.500000" y="525.000000" text-anchor="middle" fill="#0f172a">9.11 ms</text>
+<text class="tiny" x="122.500000" y="539.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<rect x="172.000000" y="512.000000" width="93.000000" height="35.000000" fill="rgb(225,51,35)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 1, 28.210949 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="218.500000" y="525.000000" text-anchor="middle" fill="#f8fafc">28.21 ms</text>
+<text class="tiny" x="218.500000" y="539.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="268.000000" y="512.000000" width="93.000000" height="35.000000" fill="rgb(228,60,33)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 2, 27.659134 ms, active_meshes 7216, working_set_bytes 7389184</title></rect>
+<text class="small" x="314.500000" y="525.000000" text-anchor="middle" fill="#f8fafc">27.66 ms</text>
+<text class="tiny" x="314.500000" y="539.000000" text-anchor="middle" fill="#f8fafc">WS 7.05 MiB</text>
+<rect x="364.000000" y="512.000000" width="93.000000" height="35.000000" fill="rgb(8,177,213)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 3, 8.979031 ms, active_meshes 2050, working_set_bytes 2099200</title></rect>
+<text class="small" x="410.500000" y="525.000000" text-anchor="middle" fill="#0f172a">8.98 ms</text>
+<text class="tiny" x="410.500000" y="539.000000" text-anchor="middle" fill="#0f172a">WS 2.00 MiB</text>
+<text x="8" y="561.000000">s1400</text>
+<text class="small" x="8" y="577.000000">27.96 ms</text>
+<rect x="76.00" y="550.00" width="93.00" height="35.00" fill="rgb(7,180,213)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 0, 9.134661 ms, active_meshes 2038, working_set_bytes 2086912</title></rect>
+<text class="small" x="122.500000" y="563.000000" text-anchor="middle" fill="#0f172a">9.13 ms</text>
+<text class="tiny" x="122.500000" y="577.000000" text-anchor="middle" fill="#0f172a">WS 1.99 MiB</text>
+<rect x="172.000000" y="550.000000" width="93.000000" height="35.000000" fill="rgb(226,55,34)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 1, 27.959015 ms, active_meshes 7204, working_set_bytes 7376896</title></rect>
+<text class="small" x="218.500000" y="563.000000" text-anchor="middle" fill="#f8fafc">27.96 ms</text>
+<text class="tiny" x="218.500000" y="577.000000" text-anchor="middle" fill="#f8fafc">WS 7.04 MiB</text>
+<rect x="268.000000" y="550.000000" width="93.000000" height="35.000000" fill="rgb(227,58,34)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 2, 27.782373 ms, active_meshes 7204, working_set_bytes 7376896</title></rect>
+<text class="small" x="314.500000" y="563.000000" text-anchor="middle" fill="#f8fafc">27.78 ms</text>
+<text class="tiny" x="314.500000" y="577.000000" text-anchor="middle" fill="#f8fafc">WS 7.04 MiB</text>
+<rect x="364.000000" y="550.000000" width="93.000000" height="35.000000" fill="rgb(9,174,214)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 3, 8.807956 ms, active_meshes 2038, working_set_bytes 2086912</title></rect>
+<text class="small" x="410.500000" y="563.000000" text-anchor="middle" fill="#0f172a">8.81 ms</text>
+<text class="tiny" x="410.500000" y="577.000000" text-anchor="middle" fill="#0f172a">WS 1.99 MiB</text>
+<text x="8" y="599.000000">s1500</text>
+<text class="small" x="8" y="615.000000">28.30 ms</text>
+<rect x="76.00" y="588.00" width="93.00" height="35.00" fill="rgb(7,179,213)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 0, 9.091117 ms, active_meshes 2038, working_set_bytes 2086912</title></rect>
+<text class="small" x="122.500000" y="601.000000" text-anchor="middle" fill="#0f172a">9.09 ms</text>
+<text class="tiny" x="122.500000" y="615.000000" text-anchor="middle" fill="#0f172a">WS 1.99 MiB</text>
+<rect x="172.000000" y="588.000000" width="93.000000" height="35.000000" fill="rgb(224,49,36)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 1, 28.304965 ms, active_meshes 7204, working_set_bytes 7376896</title></rect>
+<text class="small" x="218.500000" y="601.000000" text-anchor="middle" fill="#f8fafc">28.30 ms</text>
+<text class="tiny" x="218.500000" y="615.000000" text-anchor="middle" fill="#f8fafc">WS 7.04 MiB</text>
+<rect x="268.000000" y="588.000000" width="93.000000" height="35.000000" fill="rgb(227,57,34)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 2, 27.855819 ms, active_meshes 7204, working_set_bytes 7376896</title></rect>
+<text class="small" x="314.500000" y="601.000000" text-anchor="middle" fill="#f8fafc">27.86 ms</text>
+<text class="tiny" x="314.500000" y="615.000000" text-anchor="middle" fill="#f8fafc">WS 7.04 MiB</text>
+<rect x="364.000000" y="588.000000" width="93.000000" height="35.000000" fill="rgb(9,173,214)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 3, 8.782620 ms, active_meshes 2038, working_set_bytes 2086912</title></rect>
+<text class="small" x="410.500000" y="601.000000" text-anchor="middle" fill="#0f172a">8.78 ms</text>
+<text class="tiny" x="410.500000" y="615.000000" text-anchor="middle" fill="#0f172a">WS 1.99 MiB</text>
+<text x="8" y="637.000000">s1600</text>
+<text class="small" x="8" y="653.000000">28.35 ms</text>
+<rect x="76.00" y="626.00" width="93.00" height="35.00" fill="rgb(7,180,213)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 0, 9.167892 ms, active_meshes 2038, working_set_bytes 2086912</title></rect>
+<text class="small" x="122.500000" y="639.000000" text-anchor="middle" fill="#0f172a">9.17 ms</text>
+<text class="tiny" x="122.500000" y="653.000000" text-anchor="middle" fill="#0f172a">WS 1.99 MiB</text>
+<rect x="172.000000" y="626.000000" width="93.000000" height="35.000000" fill="rgb(224,48,36)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 1, 28.351038 ms, active_meshes 7204, working_set_bytes 7376896</title></rect>
+<text class="small" x="218.500000" y="639.000000" text-anchor="middle" fill="#f8fafc">28.35 ms</text>
+<text class="tiny" x="218.500000" y="653.000000" text-anchor="middle" fill="#f8fafc">WS 7.04 MiB</text>
+<rect x="268.000000" y="626.000000" width="93.000000" height="35.000000" fill="rgb(228,58,34)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 2, 27.767352 ms, active_meshes 7204, working_set_bytes 7376896</title></rect>
+<text class="small" x="314.500000" y="639.000000" text-anchor="middle" fill="#f8fafc">27.77 ms</text>
+<text class="tiny" x="314.500000" y="653.000000" text-anchor="middle" fill="#f8fafc">WS 7.04 MiB</text>
+<rect x="364.000000" y="626.000000" width="93.000000" height="35.000000" fill="rgb(9,175,214)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 3, 8.893722 ms, active_meshes 2038, working_set_bytes 2086912</title></rect>
+<text class="small" x="410.500000" y="639.000000" text-anchor="middle" fill="#0f172a">8.89 ms</text>
+<text class="tiny" x="410.500000" y="653.000000" text-anchor="middle" fill="#0f172a">WS 1.99 MiB</text>
+<text x="8" y="675.000000">s1700</text>
+<text class="small" x="8" y="691.000000">26.50 ms</text>
+<rect x="76.00" y="664.00" width="93.00" height="35.00" fill="rgb(9,173,215)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 0, 8.763606 ms, active_meshes 2038, working_set_bytes 2086912</title></rect>
+<text class="small" x="122.500000" y="677.000000" text-anchor="middle" fill="#0f172a">8.76 ms</text>
+<text class="tiny" x="122.500000" y="691.000000" text-anchor="middle" fill="#0f172a">WS 1.99 MiB</text>
+<rect x="172.000000" y="664.000000" width="93.000000" height="35.000000" fill="rgb(236,79,29)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 1, 26.489954 ms, active_meshes 7204, working_set_bytes 7376896</title></rect>
+<text class="small" x="218.500000" y="677.000000" text-anchor="middle" fill="#f8fafc">26.49 ms</text>
+<text class="tiny" x="218.500000" y="691.000000" text-anchor="middle" fill="#f8fafc">WS 7.04 MiB</text>
+<rect x="268.000000" y="664.000000" width="93.000000" height="35.000000" fill="rgb(235,79,29)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 2, 26.498099 ms, active_meshes 7204, working_set_bytes 7376896</title></rect>
+<text class="small" x="314.500000" y="677.000000" text-anchor="middle" fill="#f8fafc">26.50 ms</text>
+<text class="tiny" x="314.500000" y="691.000000" text-anchor="middle" fill="#f8fafc">WS 7.04 MiB</text>
+<rect x="364.000000" y="664.000000" width="93.000000" height="35.000000" fill="rgb(11,169,216)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 3, 8.549077 ms, active_meshes 2038, working_set_bytes 2086912</title></rect>
+<text class="small" x="410.500000" y="677.000000" text-anchor="middle" fill="#0f172a">8.55 ms</text>
+<text class="tiny" x="410.500000" y="691.000000" text-anchor="middle" fill="#0f172a">WS 1.99 MiB</text>
+<text x="8" y="713.000000">s1800</text>
+<text class="small" x="8" y="729.000000">28.11 ms</text>
+<rect x="76.00" y="702.00" width="93.00" height="35.00" fill="rgb(7,179,213)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 0, 9.118229 ms, active_meshes 2008, working_set_bytes 2056192</title></rect>
+<text class="small" x="122.500000" y="715.000000" text-anchor="middle" fill="#0f172a">9.12 ms</text>
+<text class="tiny" x="122.500000" y="729.000000" text-anchor="middle" fill="#0f172a">WS 1.96 MiB</text>
+<rect x="172.000000" y="702.000000" width="93.000000" height="35.000000" fill="rgb(225,52,35)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 1, 28.110606 ms, active_meshes 7084, working_set_bytes 7254016</title></rect>
+<text class="small" x="218.500000" y="715.000000" text-anchor="middle" fill="#f8fafc">28.11 ms</text>
+<text class="tiny" x="218.500000" y="729.000000" text-anchor="middle" fill="#f8fafc">WS 6.92 MiB</text>
+<rect x="268.000000" y="702.000000" width="93.000000" height="35.000000" fill="rgb(229,63,33)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 2, 27.462716 ms, active_meshes 7084, working_set_bytes 7254016</title></rect>
+<text class="small" x="314.500000" y="715.000000" text-anchor="middle" fill="#f8fafc">27.46 ms</text>
+<text class="tiny" x="314.500000" y="729.000000" text-anchor="middle" fill="#f8fafc">WS 6.92 MiB</text>
+<rect x="364.000000" y="702.000000" width="93.000000" height="35.000000" fill="rgb(10,172,215)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 3, 8.711735 ms, active_meshes 2008, working_set_bytes 2056192</title></rect>
+<text class="small" x="410.500000" y="715.000000" text-anchor="middle" fill="#0f172a">8.71 ms</text>
+<text class="tiny" x="410.500000" y="729.000000" text-anchor="middle" fill="#0f172a">WS 1.96 MiB</text>
+<text x="8" y="751.000000">s1900</text>
+<text class="small" x="8" y="767.000000">27.86 ms</text>
+<rect x="76.00" y="740.00" width="93.00" height="35.00" fill="rgb(8,177,214)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 0, 8.966865 ms, active_meshes 1984, working_set_bytes 2031616</title></rect>
+<text class="small" x="122.500000" y="753.000000" text-anchor="middle" fill="#0f172a">8.97 ms</text>
+<text class="tiny" x="122.500000" y="767.000000" text-anchor="middle" fill="#0f172a">WS 1.94 MiB</text>
+<rect x="172.000000" y="740.000000" width="93.000000" height="35.000000" fill="rgb(228,59,34)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 1, 27.718588 ms, active_meshes 6970, working_set_bytes 7137280</title></rect>
+<text class="small" x="218.500000" y="753.000000" text-anchor="middle" fill="#f8fafc">27.72 ms</text>
+<text class="tiny" x="218.500000" y="767.000000" text-anchor="middle" fill="#f8fafc">WS 6.81 MiB</text>
+<rect x="268.000000" y="740.000000" width="93.000000" height="35.000000" fill="rgb(227,57,34)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 2, 27.856668 ms, active_meshes 6970, working_set_bytes 7137280</title></rect>
+<text class="small" x="314.500000" y="753.000000" text-anchor="middle" fill="#f8fafc">27.86 ms</text>
+<text class="tiny" x="314.500000" y="767.000000" text-anchor="middle" fill="#f8fafc">WS 6.81 MiB</text>
+<rect x="364.000000" y="740.000000" width="93.000000" height="35.000000" fill="rgb(10,172,215)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 3, 8.737522 ms, active_meshes 1984, working_set_bytes 2031616</title></rect>
+<text class="small" x="410.500000" y="753.000000" text-anchor="middle" fill="#0f172a">8.74 ms</text>
+<text class="tiny" x="410.500000" y="767.000000" text-anchor="middle" fill="#0f172a">WS 1.94 MiB</text>
+<text x="8" y="789.000000">s2000</text>
+<text class="small" x="8" y="805.000000">27.88 ms</text>
+<rect x="76.00" y="778.00" width="93.00" height="35.00" fill="rgb(8,177,213)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 0, 8.982082 ms, active_meshes 1984, working_set_bytes 2031616</title></rect>
+<text class="small" x="122.500000" y="791.000000" text-anchor="middle" fill="#0f172a">8.98 ms</text>
+<text class="tiny" x="122.500000" y="805.000000" text-anchor="middle" fill="#0f172a">WS 1.94 MiB</text>
+<rect x="172.000000" y="778.000000" width="93.000000" height="35.000000" fill="rgb(227,58,34)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 1, 27.781094 ms, active_meshes 6946, working_set_bytes 7112704</title></rect>
+<text class="small" x="218.500000" y="791.000000" text-anchor="middle" fill="#f8fafc">27.78 ms</text>
+<text class="tiny" x="218.500000" y="805.000000" text-anchor="middle" fill="#f8fafc">WS 6.78 MiB</text>
+<rect x="268.000000" y="778.000000" width="93.000000" height="35.000000" fill="rgb(227,56,34)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 2, 27.878244 ms, active_meshes 6946, working_set_bytes 7112704</title></rect>
+<text class="small" x="314.500000" y="791.000000" text-anchor="middle" fill="#f8fafc">27.88 ms</text>
+<text class="tiny" x="314.500000" y="805.000000" text-anchor="middle" fill="#f8fafc">WS 6.78 MiB</text>
+<rect x="364.000000" y="778.000000" width="93.000000" height="35.000000" fill="rgb(10,172,215)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 3, 8.705952 ms, active_meshes 1984, working_set_bytes 2031616</title></rect>
+<text class="small" x="410.500000" y="791.000000" text-anchor="middle" fill="#0f172a">8.71 ms</text>
+<text class="tiny" x="410.500000" y="805.000000" text-anchor="middle" fill="#0f172a">WS 1.94 MiB</text>
+</svg>
