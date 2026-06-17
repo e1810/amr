@@ -125,6 +125,9 @@ case "$INITIAL_PATTERN" in
     multi_circle)
         DEFAULT_INITIAL_SCALE=0.20
         ;;
+    balanced_circle)
+        DEFAULT_INITIAL_SCALE=0.287
+        ;;
     *)
         DEFAULT_INITIAL_SCALE=0.25
         ;;

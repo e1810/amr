@@ -244,7 +244,7 @@ int main(int argc, char **argv) {
     // coarse_n:      number of cells per side in the initial mesh.
     // max_level:     maximum AMR depth; fine_n = coarse_n * 2^max_level.
     // parts:         OpenMP thread count and row-part guide for logs.
-    // initial_scale:    size parameter for checker/fine_checker/stripe/square/circle/hotspot/multi_circle data.
+    // initial_scale:    size parameter for checker/fine_checker/stripe/square/circle/balanced_circle/hotspot/multi_circle data.
     // steps:            number of explicit heat-diffusion time steps.
     // state_components: number of per-cell state variables advanced by the stencil.
     // ------------------------------------------------------------------
@@ -265,6 +265,7 @@ int main(int argc, char **argv) {
         initial_pattern == "stripe" ||
         initial_pattern == "square" ||
         initial_pattern == "circle" ||
+        initial_pattern == "balanced_circle" ||
         initial_pattern == "hotspot" ||
         initial_pattern == "multi_circle";
 
@@ -276,7 +277,7 @@ int main(int argc, char **argv) {
                   << " [coarse_n>=1] [parts in 1..coarse_n] [max_level 0..10]"
                   << " [initial_scale>0] [steps>=0] [diffusion>0]"
                   << " [snapshot_interval>=0] [snapshot_prefix]"
-                  << " [initial_pattern: checker|fine_checker|stripe|square|circle|hotspot|multi_circle]"
+                  << " [initial_pattern: checker|fine_checker|stripe|square|circle|balanced_circle|hotspot|multi_circle]"
                   << " [diffusion_substeps>=1] [state_components>=1]\n";
         return 2;
     }
