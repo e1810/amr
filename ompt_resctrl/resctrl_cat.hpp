@@ -23,6 +23,7 @@ struct AssignmentResult {
     pid_t tid = -1;
     int ways = 0;
     std::string mask;
+    std::string group_name;
 };
 
 void configure(const char *root_path, const char *group_prefix);
@@ -31,6 +32,8 @@ bool control_available();
 
 AssignmentResult assign_current_thread_l3(int slot, int requested_ways);
 AssignmentResult assign_current_thread_l3_mask(int slot, const std::string &requested_mask);
+AssignmentResult assign_current_thread_monitor_l3(int slot, int requested_ways);
+AssignmentResult assign_current_thread_monitor_l3_mask(int slot, const std::string &requested_mask);
 bool release_task(pid_t tid);
 bool cleanup_created_groups();
 

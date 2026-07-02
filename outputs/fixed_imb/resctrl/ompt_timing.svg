@@ -1,0 +1,1021 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1644 674">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:monospace;font-size:11px}.small{font-size:9px}</style>
+<text x="12" y="20">OMPT resctrl timing, max=1.805 ms, color=0-1.805 ms, max_target=L3 14w</text>
+<text class="small" x="124.000" y="34" text-anchor="middle">t0</text>
+<text class="small" x="220.000" y="34" text-anchor="middle">t1</text>
+<text class="small" x="316.000" y="34" text-anchor="middle">t2</text>
+<text class="small" x="412.000" y="34" text-anchor="middle">t3</text>
+<text class="small" x="508.000" y="34" text-anchor="middle">t4</text>
+<text class="small" x="604.000" y="34" text-anchor="middle">t5</text>
+<text class="small" x="700.000" y="34" text-anchor="middle">t6</text>
+<text class="small" x="796.000" y="34" text-anchor="middle">t7</text>
+<text class="small" x="892.000" y="34" text-anchor="middle">t8</text>
+<text class="small" x="988.000" y="34" text-anchor="middle">t9</text>
+<text class="small" x="1084.000" y="34" text-anchor="middle">t10</text>
+<text class="small" x="1180.000" y="34" text-anchor="middle">t11</text>
+<text class="small" x="1276.000" y="34" text-anchor="middle">t12</text>
+<text class="small" x="1372.000" y="34" text-anchor="middle">t13</text>
+<text class="small" x="1468.000" y="34" text-anchor="middle">t14</text>
+<text class="small" x="1564.000" y="34" text-anchor="middle">t15</text>
+<text x="8" y="53.000">s100</text>
+<text class="small" x="8" y="66.000">1.80 ms</text>
+<rect x="76.00" y="42.00" width="93.00" height="27.00" fill="rgb(250,176,21)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 0, cpu 0, target L3 1w, mask 1, elapsed 1.319296 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="53.000000" text-anchor="middle" fill="#0f172a">1.32 ms</text>
+<text class="small" x="122.50" y="65.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="42.00" width="93.00" height="27.00" fill="rgb(249,130,22)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 1, cpu 2, target L3 1w, mask 1, elapsed 1.468519 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="53.000000" text-anchor="middle" fill="#0f172a">1.47 ms</text>
+<text class="small" x="218.50" y="65.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="42.00" width="93.00" height="27.00" fill="rgb(249,131,22)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 2, cpu 4, target L3 1w, mask 1, elapsed 1.463005 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="53.000000" text-anchor="middle" fill="#0f172a">1.46 ms</text>
+<text class="small" x="314.50" y="65.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="42.00" width="93.00" height="27.00" fill="rgb(250,168,21)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.344150 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="53.000000" text-anchor="middle" fill="#0f172a">1.34 ms</text>
+<text class="small" x="410.50" y="65.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="42.00" width="93.00" height="27.00" fill="rgb(249,123,22)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 4, cpu 8, target L3 14w, mask 7ffe, elapsed 1.488647 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="53.000000" text-anchor="middle" fill="#0f172a">1.49 ms</text>
+<text class="small" x="506.50" y="65.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="42.00" width="93.00" height="27.00" fill="rgb(227,56,34)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.737185 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="53.000000" text-anchor="middle" fill="#f8fafc">1.74 ms</text>
+<text class="small" x="602.50" y="65.00" text-anchor="middle" fill="#f8fafc">L3 14w</text>
+<rect x="652.00" y="42.00" width="93.00" height="27.00" fill="rgb(249,137,22)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.445910 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="53.000000" text-anchor="middle" fill="#0f172a">1.45 ms</text>
+<text class="small" x="698.50" y="65.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="42.00" width="93.00" height="27.00" fill="rgb(249,121,22)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.496900 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="53.000000" text-anchor="middle" fill="#0f172a">1.50 ms</text>
+<text class="small" x="794.50" y="65.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="42.00" width="93.00" height="27.00" fill="rgb(249,118,22)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 8, cpu 48, target L3 14w, mask 7ffe, elapsed 1.506082 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="53.000000" text-anchor="middle" fill="#0f172a">1.51 ms</text>
+<text class="small" x="890.50" y="65.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="42.00" width="93.00" height="27.00" fill="rgb(249,122,22)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.493392 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="53.000000" text-anchor="middle" fill="#0f172a">1.49 ms</text>
+<text class="small" x="986.50" y="65.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="42.00" width="93.00" height="27.00" fill="rgb(247,111,23)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.532132 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="53.000000" text-anchor="middle" fill="#0f172a">1.53 ms</text>
+<text class="small" x="1082.50" y="65.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="42.00" width="93.00" height="27.00" fill="rgb(248,113,22)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.523142 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="53.000000" text-anchor="middle" fill="#0f172a">1.52 ms</text>
+<text class="small" x="1178.50" y="65.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="42.00" width="93.00" height="27.00" fill="rgb(250,174,21)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.324613 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="53.000000" text-anchor="middle" fill="#0f172a">1.32 ms</text>
+<text class="small" x="1274.50" y="65.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="42.00" width="93.00" height="27.00" fill="rgb(249,148,22)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.408864 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="53.000000" text-anchor="middle" fill="#0f172a">1.41 ms</text>
+<text class="small" x="1370.50" y="65.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="42.00" width="93.00" height="27.00" fill="rgb(220,38,38)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 14, cpu 60, target L3 1w, mask 1, elapsed 1.804611 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="53.000000" text-anchor="middle" fill="#f8fafc">1.80 ms</text>
+<text class="small" x="1466.50" y="65.00" text-anchor="middle" fill="#f8fafc">L3 1w</text>
+<rect x="1516.00" y="42.00" width="93.00" height="27.00" fill="rgb(250,174,21)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 15, cpu 62, target L3 1w, mask 1, elapsed 1.324559 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="53.000000" text-anchor="middle" fill="#0f172a">1.32 ms</text>
+<text class="small" x="1562.50" y="65.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="83.00">s200</text>
+<text class="small" x="8" y="96.00">1.27 ms</text>
+<rect x="76.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,190,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 0, cpu 0, target L3 1w, mask 1, elapsed 1.272440 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="83.000000" text-anchor="middle" fill="#0f172a">1.27 ms</text>
+<text class="small" x="122.50" y="95.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,192,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 1, cpu 2, target L3 1w, mask 1, elapsed 1.266251 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="83.000000" text-anchor="middle" fill="#0f172a">1.27 ms</text>
+<text class="small" x="218.50" y="95.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,196,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 2, cpu 4, target L3 1w, mask 1, elapsed 1.251762 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="83.000000" text-anchor="middle" fill="#0f172a">1.25 ms</text>
+<text class="small" x="314.50" y="95.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,196,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.254520 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="83.000000" text-anchor="middle" fill="#0f172a">1.25 ms</text>
+<text class="small" x="410.50" y="95.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,197,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 4, cpu 8, target L3 14w, mask 7ffe, elapsed 1.249126 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="83.000000" text-anchor="middle" fill="#0f172a">1.25 ms</text>
+<text class="small" x="506.50" y="95.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,201,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.237718 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="83.000000" text-anchor="middle" fill="#0f172a">1.24 ms</text>
+<text class="small" x="602.50" y="95.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="72.00" width="93.00" height="27.00" fill="rgb(246,204,22)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.221672 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="83.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="698.50" y="95.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,201,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.237922 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="83.000000" text-anchor="middle" fill="#0f172a">1.24 ms</text>
+<text class="small" x="794.50" y="95.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,197,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 8, cpu 48, target L3 14w, mask 7ffe, elapsed 1.251131 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="83.000000" text-anchor="middle" fill="#0f172a">1.25 ms</text>
+<text class="small" x="890.50" y="95.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="72.00" width="93.00" height="27.00" fill="rgb(247,204,22)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.222716 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="83.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="986.50" y="95.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,193,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.262024 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="83.000000" text-anchor="middle" fill="#0f172a">1.26 ms</text>
+<text class="small" x="1082.50" y="95.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,196,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.254519 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="83.000000" text-anchor="middle" fill="#0f172a">1.25 ms</text>
+<text class="small" x="1178.50" y="95.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,193,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.262848 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="83.000000" text-anchor="middle" fill="#0f172a">1.26 ms</text>
+<text class="small" x="1274.50" y="95.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,192,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.267483 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="83.000000" text-anchor="middle" fill="#0f172a">1.27 ms</text>
+<text class="small" x="1370.50" y="95.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,193,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.262499 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="83.000000" text-anchor="middle" fill="#0f172a">1.26 ms</text>
+<text class="small" x="1466.50" y="95.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,199,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 15, cpu 62, target L3 1w, mask 1, elapsed 1.242036 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="83.000000" text-anchor="middle" fill="#0f172a">1.24 ms</text>
+<text class="small" x="1562.50" y="95.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="113.00">s300</text>
+<text class="small" x="8" y="126.00">1.24 ms</text>
+<rect x="76.00" y="102.00" width="93.00" height="27.00" fill="rgb(250,202,21)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 0, cpu 0, target L3 1w, mask 1, elapsed 1.233831 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="113.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="122.50" y="125.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="102.00" width="93.00" height="27.00" fill="rgb(233,203,27)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 1, cpu 2, target L3 1w, mask 1, elapsed 1.202210 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="113.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="218.50" y="125.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="102.00" width="93.00" height="27.00" fill="rgb(242,204,24)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 2, cpu 4, target L3 1w, mask 1, elapsed 1.214907 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="113.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="314.50" y="125.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="102.00" width="93.00" height="27.00" fill="rgb(247,204,22)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.222059 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="113.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="410.50" y="125.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="102.00" width="93.00" height="27.00" fill="rgb(250,203,21)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 4, cpu 8, target L3 14w, mask 7ffe, elapsed 1.230121 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="113.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="506.50" y="125.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="102.00" width="93.00" height="27.00" fill="rgb(225,203,29)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.190152 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="113.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="602.50" y="125.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="102.00" width="93.00" height="27.00" fill="rgb(242,204,24)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.215291 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="113.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="698.50" y="125.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="102.00" width="93.00" height="27.00" fill="rgb(250,204,21)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.227637 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="113.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="794.50" y="125.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="102.00" width="93.00" height="27.00" fill="rgb(247,204,22)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 8, cpu 48, target L3 14w, mask 7ffe, elapsed 1.222276 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="113.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="890.50" y="125.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="102.00" width="93.00" height="27.00" fill="rgb(243,204,24)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.215948 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="113.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="986.50" y="125.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="102.00" width="93.00" height="27.00" fill="rgb(241,204,24)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.213208 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="113.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1082.50" y="125.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="102.00" width="93.00" height="27.00" fill="rgb(245,204,23)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.219521 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="113.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="1178.50" y="125.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="102.00" width="93.00" height="27.00" fill="rgb(250,202,21)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.232026 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="113.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="1274.50" y="125.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="102.00" width="93.00" height="27.00" fill="rgb(250,203,21)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.230222 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="113.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="1370.50" y="125.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="102.00" width="93.00" height="27.00" fill="rgb(250,201,21)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.235768 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="113.000000" text-anchor="middle" fill="#0f172a">1.24 ms</text>
+<text class="small" x="1466.50" y="125.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="102.00" width="93.00" height="27.00" fill="rgb(232,203,27)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 15, cpu 62, target L3 1w, mask 1, elapsed 1.199887 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="113.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1562.50" y="125.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="143.00">s400</text>
+<text class="small" x="8" y="156.00">1.22 ms</text>
+<rect x="76.00" y="132.00" width="93.00" height="27.00" fill="rgb(246,204,22)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 0, cpu 0, target L3 1w, mask 1, elapsed 1.220827 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="143.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="122.50" y="155.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="132.00" width="93.00" height="27.00" fill="rgb(224,203,30)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 1, cpu 2, target L3 1w, mask 1, elapsed 1.188111 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="143.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="218.50" y="155.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="132.00" width="93.00" height="27.00" fill="rgb(246,204,22)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 2, cpu 4, target L3 1w, mask 1, elapsed 1.220885 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="143.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="314.50" y="155.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="132.00" width="93.00" height="27.00" fill="rgb(221,203,31)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.183119 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="143.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="410.50" y="155.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="132.00" width="93.00" height="27.00" fill="rgb(237,204,25)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 4, cpu 8, target L3 14w, mask 7ffe, elapsed 1.207683 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="143.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="506.50" y="155.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="132.00" width="93.00" height="27.00" fill="rgb(224,203,30)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.187916 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="143.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="602.50" y="155.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="132.00" width="93.00" height="27.00" fill="rgb(222,203,30)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.185331 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="143.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="698.50" y="155.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="132.00" width="93.00" height="27.00" fill="rgb(222,203,31)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.184441 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="143.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="794.50" y="155.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="132.00" width="93.00" height="27.00" fill="rgb(232,203,27)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 8, cpu 48, target L3 14w, mask 7ffe, elapsed 1.200218 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="143.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="890.50" y="155.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="132.00" width="93.00" height="27.00" fill="rgb(220,203,31)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.182417 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="143.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="986.50" y="155.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="132.00" width="93.00" height="27.00" fill="rgb(222,203,30)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.184865 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="143.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="1082.50" y="155.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="132.00" width="93.00" height="27.00" fill="rgb(227,203,29)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.192933 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="143.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1178.50" y="155.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="132.00" width="93.00" height="27.00" fill="rgb(229,203,28)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.195316 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="143.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1274.50" y="155.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="132.00" width="93.00" height="27.00" fill="rgb(241,204,24)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.213116 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="143.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1370.50" y="155.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="132.00" width="93.00" height="27.00" fill="rgb(236,204,26)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.206472 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="143.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1466.50" y="155.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="132.00" width="93.00" height="27.00" fill="rgb(223,203,30)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 15, cpu 62, target L3 1w, mask 1, elapsed 1.186371 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="143.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1562.50" y="155.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="173.00">s500</text>
+<text class="small" x="8" y="186.00">1.23 ms</text>
+<rect x="76.00" y="162.00" width="93.00" height="27.00" fill="rgb(250,204,21)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 0, cpu 0, target L3 1w, mask 1, elapsed 1.228578 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="173.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="122.50" y="185.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="162.00" width="93.00" height="27.00" fill="rgb(248,204,22)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 1, cpu 2, target L3 1w, mask 1, elapsed 1.223674 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="173.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="218.50" y="185.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="162.00" width="93.00" height="27.00" fill="rgb(241,204,24)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 2, cpu 4, target L3 1w, mask 1, elapsed 1.213537 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="173.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="314.50" y="185.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="162.00" width="93.00" height="27.00" fill="rgb(250,203,21)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.231382 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="173.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="410.50" y="185.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="162.00" width="93.00" height="27.00" fill="rgb(244,204,23)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 4, cpu 40, target L3 14w, mask 7ffe, elapsed 1.218593 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="173.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="506.50" y="185.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="162.00" width="93.00" height="27.00" fill="rgb(233,203,27)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.201969 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="173.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="602.50" y="185.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="162.00" width="93.00" height="27.00" fill="rgb(250,203,21)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.229571 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="173.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="698.50" y="185.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="162.00" width="93.00" height="27.00" fill="rgb(233,203,27)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.202257 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="173.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="794.50" y="185.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="162.00" width="93.00" height="27.00" fill="rgb(244,204,23)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 8, cpu 48, target L3 14w, mask 7ffe, elapsed 1.218841 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="173.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="890.50" y="185.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="162.00" width="93.00" height="27.00" fill="rgb(242,204,24)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.214979 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="173.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="986.50" y="185.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="162.00" width="93.00" height="27.00" fill="rgb(239,204,25)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.210255 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="173.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1082.50" y="185.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="162.00" width="93.00" height="27.00" fill="rgb(239,204,25)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.210506 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="173.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1178.50" y="185.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="162.00" width="93.00" height="27.00" fill="rgb(240,204,24)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.212412 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="173.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1274.50" y="185.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="162.00" width="93.00" height="27.00" fill="rgb(250,204,21)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.228375 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="173.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="1370.50" y="185.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="162.00" width="93.00" height="27.00" fill="rgb(250,203,21)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.230195 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="173.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="1466.50" y="185.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="162.00" width="93.00" height="27.00" fill="rgb(250,202,21)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 15, cpu 62, target L3 1w, mask 1, elapsed 1.233246 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="173.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="1562.50" y="185.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="203.00">s600</text>
+<text class="small" x="8" y="216.00">1.21 ms</text>
+<rect x="76.00" y="192.00" width="93.00" height="27.00" fill="rgb(240,204,24)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 0, cpu 0, target L3 1w, mask 1, elapsed 1.211925 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="203.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="122.50" y="215.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="192.00" width="93.00" height="27.00" fill="rgb(223,203,30)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 1, cpu 2, target L3 1w, mask 1, elapsed 1.186071 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="203.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="218.50" y="215.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="192.00" width="93.00" height="27.00" fill="rgb(222,203,30)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 2, cpu 4, target L3 1w, mask 1, elapsed 1.185616 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="203.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="314.50" y="215.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="192.00" width="93.00" height="27.00" fill="rgb(221,203,31)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.183152 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="203.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="410.50" y="215.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="192.00" width="93.00" height="27.00" fill="rgb(231,203,27)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 4, cpu 40, target L3 14w, mask 7ffe, elapsed 1.198329 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="203.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="506.50" y="215.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="192.00" width="93.00" height="27.00" fill="rgb(224,203,30)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.188649 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="203.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="602.50" y="215.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="192.00" width="93.00" height="27.00" fill="rgb(220,203,31)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.181810 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="203.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="698.50" y="215.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="192.00" width="93.00" height="27.00" fill="rgb(227,203,29)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.191902 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="203.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="794.50" y="215.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="192.00" width="93.00" height="27.00" fill="rgb(221,203,31)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 8, cpu 48, target L3 14w, mask 7ffe, elapsed 1.184252 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="203.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="890.50" y="215.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="192.00" width="93.00" height="27.00" fill="rgb(234,203,26)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.203054 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="203.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="986.50" y="215.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="192.00" width="93.00" height="27.00" fill="rgb(225,203,29)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.189325 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="203.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1082.50" y="215.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="192.00" width="93.00" height="27.00" fill="rgb(229,203,28)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.195320 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="203.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1178.50" y="215.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="192.00" width="93.00" height="27.00" fill="rgb(229,203,28)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.195908 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="203.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1274.50" y="215.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="192.00" width="93.00" height="27.00" fill="rgb(220,203,31)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.181498 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="203.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="1370.50" y="215.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="192.00" width="93.00" height="27.00" fill="rgb(238,204,25)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.209285 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="203.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1466.50" y="215.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="192.00" width="93.00" height="27.00" fill="rgb(225,203,30)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 15, cpu 62, target L3 1w, mask 1, elapsed 1.189050 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="203.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1562.50" y="215.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="233.00">s700</text>
+<text class="small" x="8" y="246.00">1.21 ms</text>
+<rect x="76.00" y="222.00" width="93.00" height="27.00" fill="rgb(242,204,24)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 0, cpu 32, target L3 1w, mask 1, elapsed 1.214660 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="233.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="122.50" y="245.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="222.00" width="93.00" height="27.00" fill="rgb(228,203,29)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 1, cpu 2, target L3 1w, mask 1, elapsed 1.193597 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="233.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="218.50" y="245.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="222.00" width="93.00" height="27.00" fill="rgb(233,203,27)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 2, cpu 4, target L3 1w, mask 1, elapsed 1.201158 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="233.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="314.50" y="245.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="222.00" width="93.00" height="27.00" fill="rgb(226,203,29)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.191068 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="233.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="410.50" y="245.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="222.00" width="93.00" height="27.00" fill="rgb(216,203,33)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 4, cpu 40, target L3 14w, mask 7ffe, elapsed 1.175358 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="233.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="506.50" y="245.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="222.00" width="93.00" height="27.00" fill="rgb(224,203,30)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.188236 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="233.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="602.50" y="245.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="222.00" width="93.00" height="27.00" fill="rgb(235,204,26)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.204099 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="233.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="698.50" y="245.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="222.00" width="93.00" height="27.00" fill="rgb(231,203,27)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.198576 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="233.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="794.50" y="245.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="222.00" width="93.00" height="27.00" fill="rgb(216,203,32)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 8, cpu 48, target L3 14w, mask 7ffe, elapsed 1.176529 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="233.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="890.50" y="245.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="222.00" width="93.00" height="27.00" fill="rgb(229,203,28)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.195176 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="233.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="986.50" y="245.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="222.00" width="93.00" height="27.00" fill="rgb(233,203,27)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.201496 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="233.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1082.50" y="245.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="222.00" width="93.00" height="27.00" fill="rgb(230,203,28)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.197330 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="233.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1178.50" y="245.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="222.00" width="93.00" height="27.00" fill="rgb(221,203,31)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.184037 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="233.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="1274.50" y="245.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="222.00" width="93.00" height="27.00" fill="rgb(230,203,28)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.197296 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="233.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1370.50" y="245.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="222.00" width="93.00" height="27.00" fill="rgb(233,203,27)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.201300 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="233.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1466.50" y="245.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="222.00" width="93.00" height="27.00" fill="rgb(237,204,25)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 15, cpu 62, target L3 1w, mask 1, elapsed 1.207684 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="233.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1562.50" y="245.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="263.00">s800</text>
+<text class="small" x="8" y="276.00">1.24 ms</text>
+<rect x="76.00" y="252.00" width="93.00" height="27.00" fill="rgb(250,200,21)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 0, cpu 32, target L3 1w, mask 1, elapsed 1.238722 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="263.000000" text-anchor="middle" fill="#0f172a">1.24 ms</text>
+<text class="small" x="122.50" y="275.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="252.00" width="93.00" height="27.00" fill="rgb(233,203,27)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 1, cpu 2, target L3 1w, mask 1, elapsed 1.201849 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="263.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="218.50" y="275.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="252.00" width="93.00" height="27.00" fill="rgb(232,203,27)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 2, cpu 36, target L3 1w, mask 1, elapsed 1.200060 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="263.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="314.50" y="275.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="252.00" width="93.00" height="27.00" fill="rgb(223,203,30)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.186059 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="263.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="410.50" y="275.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="252.00" width="93.00" height="27.00" fill="rgb(224,203,30)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 4, cpu 40, target L3 14w, mask 7ffe, elapsed 1.187930 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="263.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="506.50" y="275.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="252.00" width="93.00" height="27.00" fill="rgb(223,203,30)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.187124 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="263.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="602.50" y="275.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="252.00" width="93.00" height="27.00" fill="rgb(218,203,32)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.179175 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="263.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="698.50" y="275.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="252.00" width="93.00" height="27.00" fill="rgb(225,203,29)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.190081 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="263.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="794.50" y="275.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="252.00" width="93.00" height="27.00" fill="rgb(227,203,29)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 8, cpu 48, target L3 14w, mask 7ffe, elapsed 1.191936 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="263.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="890.50" y="275.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="252.00" width="93.00" height="27.00" fill="rgb(226,203,29)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.190318 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="263.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="986.50" y="275.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="252.00" width="93.00" height="27.00" fill="rgb(233,203,27)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.200890 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="263.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1082.50" y="275.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="252.00" width="93.00" height="27.00" fill="rgb(234,203,26)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.202866 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="263.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1178.50" y="275.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="252.00" width="93.00" height="27.00" fill="rgb(243,204,23)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.216679 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="263.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="1274.50" y="275.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="252.00" width="93.00" height="27.00" fill="rgb(220,203,31)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.181935 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="263.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="1370.50" y="275.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="252.00" width="93.00" height="27.00" fill="rgb(230,203,28)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.196370 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="263.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1466.50" y="275.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="252.00" width="93.00" height="27.00" fill="rgb(216,203,33)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 15, cpu 62, target L3 1w, mask 1, elapsed 1.175724 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="263.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="1562.50" y="275.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="293.00">s900</text>
+<text class="small" x="8" y="306.00">1.22 ms</text>
+<rect x="76.00" y="282.00" width="93.00" height="27.00" fill="rgb(248,204,22)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 0, cpu 32, target L3 1w, mask 1, elapsed 1.223681 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="293.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="122.50" y="305.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="282.00" width="93.00" height="27.00" fill="rgb(231,203,28)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 1, cpu 34, target L3 1w, mask 1, elapsed 1.198185 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="293.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="218.50" y="305.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="282.00" width="93.00" height="27.00" fill="rgb(237,204,25)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 2, cpu 36, target L3 1w, mask 1, elapsed 1.207498 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="293.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="314.50" y="305.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="282.00" width="93.00" height="27.00" fill="rgb(230,203,28)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.197051 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="293.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="410.50" y="305.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="282.00" width="93.00" height="27.00" fill="rgb(227,203,29)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 4, cpu 40, target L3 14w, mask 7ffe, elapsed 1.192133 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="293.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="506.50" y="305.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="282.00" width="93.00" height="27.00" fill="rgb(219,203,31)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.181015 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="293.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="602.50" y="305.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="282.00" width="93.00" height="27.00" fill="rgb(219,203,31)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.180934 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="293.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="698.50" y="305.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="282.00" width="93.00" height="27.00" fill="rgb(224,203,30)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.188539 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="293.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="794.50" y="305.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="282.00" width="93.00" height="27.00" fill="rgb(225,203,29)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 8, cpu 16, target L3 14w, mask 7ffe, elapsed 1.189393 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="293.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="890.50" y="305.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="282.00" width="93.00" height="27.00" fill="rgb(216,203,32)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.175991 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="293.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="986.50" y="305.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="282.00" width="93.00" height="27.00" fill="rgb(226,203,29)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.190522 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="293.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1082.50" y="305.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="282.00" width="93.00" height="27.00" fill="rgb(227,203,29)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.192441 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="293.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1178.50" y="305.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="282.00" width="93.00" height="27.00" fill="rgb(221,203,31)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.183070 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="293.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="1274.50" y="305.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="282.00" width="93.00" height="27.00" fill="rgb(225,203,29)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.189360 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="293.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1370.50" y="305.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="282.00" width="93.00" height="27.00" fill="rgb(236,204,26)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.206770 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="293.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1466.50" y="305.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="282.00" width="93.00" height="27.00" fill="rgb(239,204,25)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 15, cpu 62, target L3 1w, mask 1, elapsed 1.211345 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="293.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1562.50" y="305.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="323.00">s1000</text>
+<text class="small" x="8" y="336.00">1.23 ms</text>
+<rect x="76.00" y="312.00" width="93.00" height="27.00" fill="rgb(249,204,21)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 0, cpu 32, target L3 1w, mask 1, elapsed 1.225901 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="323.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="122.50" y="335.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="312.00" width="93.00" height="27.00" fill="rgb(216,203,32)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 1, cpu 34, target L3 1w, mask 1, elapsed 1.176665 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="323.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="218.50" y="335.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="312.00" width="93.00" height="27.00" fill="rgb(235,203,26)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 2, cpu 36, target L3 1w, mask 1, elapsed 1.203837 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="323.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="314.50" y="335.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="312.00" width="93.00" height="27.00" fill="rgb(244,204,23)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.218757 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="323.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="410.50" y="335.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="312.00" width="93.00" height="27.00" fill="rgb(219,203,32)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 4, cpu 40, target L3 14w, mask 7ffe, elapsed 1.180291 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="323.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="506.50" y="335.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="312.00" width="93.00" height="27.00" fill="rgb(213,203,33)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.172089 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="323.000000" text-anchor="middle" fill="#0f172a">1.17 ms</text>
+<text class="small" x="602.50" y="335.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="312.00" width="93.00" height="27.00" fill="rgb(219,203,32)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.179896 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="323.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="698.50" y="335.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="312.00" width="93.00" height="27.00" fill="rgb(222,203,31)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.184556 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="323.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="794.50" y="335.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="312.00" width="93.00" height="27.00" fill="rgb(210,203,35)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 8, cpu 16, target L3 14w, mask 7ffe, elapsed 1.166430 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="323.000000" text-anchor="middle" fill="#0f172a">1.17 ms</text>
+<text class="small" x="890.50" y="335.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="312.00" width="93.00" height="27.00" fill="rgb(219,203,31)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.180881 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="323.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="986.50" y="335.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="312.00" width="93.00" height="27.00" fill="rgb(233,203,27)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.201095 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="323.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1082.50" y="335.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="312.00" width="93.00" height="27.00" fill="rgb(229,203,28)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.195627 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="323.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1178.50" y="335.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="312.00" width="93.00" height="27.00" fill="rgb(221,203,31)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.183881 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="323.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="1274.50" y="335.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="312.00" width="93.00" height="27.00" fill="rgb(238,204,25)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.208456 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="323.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1370.50" y="335.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="312.00" width="93.00" height="27.00" fill="rgb(241,204,24)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.213921 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="323.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1466.50" y="335.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="312.00" width="93.00" height="27.00" fill="rgb(221,203,31)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 15, cpu 62, target L3 1w, mask 1, elapsed 1.183456 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="323.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="1562.50" y="335.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="353.00">s1100</text>
+<text class="small" x="8" y="366.00">1.23 ms</text>
+<rect x="76.00" y="342.00" width="93.00" height="27.00" fill="rgb(240,204,24)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 0, cpu 32, target L3 1w, mask 1, elapsed 1.211737 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="353.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="122.50" y="365.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="342.00" width="93.00" height="27.00" fill="rgb(230,203,28)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 1, cpu 34, target L3 1w, mask 1, elapsed 1.197501 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="353.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="218.50" y="365.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="342.00" width="93.00" height="27.00" fill="rgb(250,204,21)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 2, cpu 36, target L3 1w, mask 1, elapsed 1.226697 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="353.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="314.50" y="365.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="342.00" width="93.00" height="27.00" fill="rgb(233,203,27)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.201654 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="353.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="410.50" y="365.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="342.00" width="93.00" height="27.00" fill="rgb(235,204,26)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 4, cpu 40, target L3 14w, mask 7ffe, elapsed 1.204973 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="353.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="506.50" y="365.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="342.00" width="93.00" height="27.00" fill="rgb(223,203,30)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.186057 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="353.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="602.50" y="365.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="342.00" width="93.00" height="27.00" fill="rgb(220,203,31)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.182009 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="353.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="698.50" y="365.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="342.00" width="93.00" height="27.00" fill="rgb(238,204,25)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.209590 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="353.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="794.50" y="365.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="342.00" width="93.00" height="27.00" fill="rgb(228,203,28)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 8, cpu 16, target L3 14w, mask 7ffe, elapsed 1.194656 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="353.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="890.50" y="365.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="342.00" width="93.00" height="27.00" fill="rgb(220,203,31)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.181713 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="353.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="986.50" y="365.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="342.00" width="93.00" height="27.00" fill="rgb(227,203,29)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.192777 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="353.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1082.50" y="365.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="342.00" width="93.00" height="27.00" fill="rgb(235,203,26)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.203917 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="353.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1178.50" y="365.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="342.00" width="93.00" height="27.00" fill="rgb(222,203,30)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.185400 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="353.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1274.50" y="365.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="342.00" width="93.00" height="27.00" fill="rgb(226,203,29)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.191096 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="353.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1370.50" y="365.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="342.00" width="93.00" height="27.00" fill="rgb(227,203,29)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.193187 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="353.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1466.50" y="365.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="342.00" width="93.00" height="27.00" fill="rgb(229,203,28)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 15, cpu 62, target L3 1w, mask 1, elapsed 1.194847 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="353.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1562.50" y="365.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="383.00">s1200</text>
+<text class="small" x="8" y="396.00">1.33 ms</text>
+<rect x="76.00" y="372.00" width="93.00" height="27.00" fill="rgb(250,172,21)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 0, cpu 32, target L3 1w, mask 1, elapsed 1.332041 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="383.000000" text-anchor="middle" fill="#0f172a">1.33 ms</text>
+<text class="small" x="122.50" y="395.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="372.00" width="93.00" height="27.00" fill="rgb(250,187,21)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 1, cpu 34, target L3 1w, mask 1, elapsed 1.282033 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="383.000000" text-anchor="middle" fill="#0f172a">1.28 ms</text>
+<text class="small" x="218.50" y="395.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="372.00" width="93.00" height="27.00" fill="rgb(250,186,21)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 2, cpu 36, target L3 1w, mask 1, elapsed 1.284567 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="383.000000" text-anchor="middle" fill="#0f172a">1.28 ms</text>
+<text class="small" x="314.50" y="395.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="372.00" width="93.00" height="27.00" fill="rgb(250,183,21)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.294289 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="383.000000" text-anchor="middle" fill="#0f172a">1.29 ms</text>
+<text class="small" x="410.50" y="395.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="372.00" width="93.00" height="27.00" fill="rgb(250,187,21)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 4, cpu 40, target L3 14w, mask 7ffe, elapsed 1.282788 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="383.000000" text-anchor="middle" fill="#0f172a">1.28 ms</text>
+<text class="small" x="506.50" y="395.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="372.00" width="93.00" height="27.00" fill="rgb(250,189,21)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.277351 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="383.000000" text-anchor="middle" fill="#0f172a">1.28 ms</text>
+<text class="small" x="602.50" y="395.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="372.00" width="93.00" height="27.00" fill="rgb(250,193,21)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.262293 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="383.000000" text-anchor="middle" fill="#0f172a">1.26 ms</text>
+<text class="small" x="698.50" y="395.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="372.00" width="93.00" height="27.00" fill="rgb(250,188,21)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.279789 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="383.000000" text-anchor="middle" fill="#0f172a">1.28 ms</text>
+<text class="small" x="794.50" y="395.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="372.00" width="93.00" height="27.00" fill="rgb(250,188,21)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 8, cpu 16, target L3 14w, mask 7ffe, elapsed 1.279042 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="383.000000" text-anchor="middle" fill="#0f172a">1.28 ms</text>
+<text class="small" x="890.50" y="395.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="372.00" width="93.00" height="27.00" fill="rgb(250,183,21)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.295970 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="383.000000" text-anchor="middle" fill="#0f172a">1.30 ms</text>
+<text class="small" x="986.50" y="395.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="372.00" width="93.00" height="27.00" fill="rgb(250,185,21)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.290225 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="383.000000" text-anchor="middle" fill="#0f172a">1.29 ms</text>
+<text class="small" x="1082.50" y="395.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="372.00" width="93.00" height="27.00" fill="rgb(250,188,21)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.279063 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="383.000000" text-anchor="middle" fill="#0f172a">1.28 ms</text>
+<text class="small" x="1178.50" y="395.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="372.00" width="93.00" height="27.00" fill="rgb(250,188,21)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.278889 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="383.000000" text-anchor="middle" fill="#0f172a">1.28 ms</text>
+<text class="small" x="1274.50" y="395.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="372.00" width="93.00" height="27.00" fill="rgb(250,182,21)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.299215 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="383.000000" text-anchor="middle" fill="#0f172a">1.30 ms</text>
+<text class="small" x="1370.50" y="395.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="372.00" width="93.00" height="27.00" fill="rgb(250,175,21)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.322162 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="383.000000" text-anchor="middle" fill="#0f172a">1.32 ms</text>
+<text class="small" x="1466.50" y="395.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="372.00" width="93.00" height="27.00" fill="rgb(250,190,21)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 15, cpu 62, target L3 1w, mask 1, elapsed 1.274068 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="383.000000" text-anchor="middle" fill="#0f172a">1.27 ms</text>
+<text class="small" x="1562.50" y="395.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="413.00">s1300</text>
+<text class="small" x="8" y="426.00">1.25 ms</text>
+<rect x="76.00" y="402.00" width="93.00" height="27.00" fill="rgb(250,196,21)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 0, cpu 32, target L3 1w, mask 1, elapsed 1.251647 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="413.000000" text-anchor="middle" fill="#0f172a">1.25 ms</text>
+<text class="small" x="122.50" y="425.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="402.00" width="93.00" height="27.00" fill="rgb(244,204,23)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 1, cpu 34, target L3 1w, mask 1, elapsed 1.217540 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="413.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="218.50" y="425.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="402.00" width="93.00" height="27.00" fill="rgb(247,204,22)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 2, cpu 36, target L3 1w, mask 1, elapsed 1.223313 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="413.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="314.50" y="425.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="402.00" width="93.00" height="27.00" fill="rgb(214,203,33)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.173715 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="413.000000" text-anchor="middle" fill="#0f172a">1.17 ms</text>
+<text class="small" x="410.50" y="425.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="402.00" width="93.00" height="27.00" fill="rgb(227,203,29)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 4, cpu 40, target L3 14w, mask 7ffe, elapsed 1.192983 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="413.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="506.50" y="425.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="402.00" width="93.00" height="27.00" fill="rgb(213,203,33)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.171781 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="413.000000" text-anchor="middle" fill="#0f172a">1.17 ms</text>
+<text class="small" x="602.50" y="425.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="402.00" width="93.00" height="27.00" fill="rgb(228,203,28)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.194188 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="413.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="698.50" y="425.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="402.00" width="93.00" height="27.00" fill="rgb(224,203,30)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.188351 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="413.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="794.50" y="425.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="402.00" width="93.00" height="27.00" fill="rgb(222,203,30)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 8, cpu 16, target L3 14w, mask 7ffe, elapsed 1.185066 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="413.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="890.50" y="425.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="402.00" width="93.00" height="27.00" fill="rgb(233,203,27)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.201345 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="413.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="986.50" y="425.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="402.00" width="93.00" height="27.00" fill="rgb(232,203,27)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.199465 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="413.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1082.50" y="425.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="402.00" width="93.00" height="27.00" fill="rgb(232,203,27)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.200577 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="413.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1178.50" y="425.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="402.00" width="93.00" height="27.00" fill="rgb(234,203,26)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.203069 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="413.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1274.50" y="425.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="402.00" width="93.00" height="27.00" fill="rgb(240,204,24)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.212784 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="413.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1370.50" y="425.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="402.00" width="93.00" height="27.00" fill="rgb(222,203,30)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.185570 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="413.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1466.50" y="425.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="402.00" width="93.00" height="27.00" fill="rgb(223,203,30)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 15, cpu 62, target L3 1w, mask 1, elapsed 1.186364 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="413.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1562.50" y="425.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="443.00">s1400</text>
+<text class="small" x="8" y="456.00">1.27 ms</text>
+<rect x="76.00" y="432.00" width="93.00" height="27.00" fill="rgb(250,190,21)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 0, cpu 32, target L3 1w, mask 1, elapsed 1.272105 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="443.000000" text-anchor="middle" fill="#0f172a">1.27 ms</text>
+<text class="small" x="122.50" y="455.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="432.00" width="93.00" height="27.00" fill="rgb(250,204,21)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 1, cpu 34, target L3 1w, mask 1, elapsed 1.226965 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="443.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="218.50" y="455.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="432.00" width="93.00" height="27.00" fill="rgb(249,204,21)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 2, cpu 36, target L3 1w, mask 1, elapsed 1.226182 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="443.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="314.50" y="455.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="432.00" width="93.00" height="27.00" fill="rgb(248,204,22)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.224615 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="443.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="410.50" y="455.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="432.00" width="93.00" height="27.00" fill="rgb(244,204,23)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 4, cpu 40, target L3 14w, mask 7ffe, elapsed 1.217791 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="443.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="506.50" y="455.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="432.00" width="93.00" height="27.00" fill="rgb(232,203,27)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.200419 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="443.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="602.50" y="455.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="432.00" width="93.00" height="27.00" fill="rgb(230,203,28)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.197244 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="443.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="698.50" y="455.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="432.00" width="93.00" height="27.00" fill="rgb(244,204,23)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.218045 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="443.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="794.50" y="455.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="432.00" width="93.00" height="27.00" fill="rgb(239,204,25)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 8, cpu 16, target L3 14w, mask 7ffe, elapsed 1.210430 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="443.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="890.50" y="455.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="432.00" width="93.00" height="27.00" fill="rgb(238,204,25)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.209110 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="443.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="986.50" y="455.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="432.00" width="93.00" height="27.00" fill="rgb(246,204,22)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.221519 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="443.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="1082.50" y="455.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="432.00" width="93.00" height="27.00" fill="rgb(236,204,26)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.206246 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="443.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1178.50" y="455.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="432.00" width="93.00" height="27.00" fill="rgb(250,199,21)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.242449 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="443.000000" text-anchor="middle" fill="#0f172a">1.24 ms</text>
+<text class="small" x="1274.50" y="455.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="432.00" width="93.00" height="27.00" fill="rgb(245,204,23)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.219541 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="443.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="1370.50" y="455.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="432.00" width="93.00" height="27.00" fill="rgb(238,204,25)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.209011 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="443.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1466.50" y="455.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="432.00" width="93.00" height="27.00" fill="rgb(244,204,23)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 15, cpu 62, target L3 1w, mask 1, elapsed 1.217840 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="443.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="1562.50" y="455.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="473.00">s1500</text>
+<text class="small" x="8" y="486.00">1.24 ms</text>
+<rect x="76.00" y="462.00" width="93.00" height="27.00" fill="rgb(250,204,21)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 0, cpu 32, target L3 1w, mask 1, elapsed 1.226943 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="473.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="122.50" y="485.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="462.00" width="93.00" height="27.00" fill="rgb(246,204,22)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 1, cpu 34, target L3 1w, mask 1, elapsed 1.221456 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="473.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="218.50" y="485.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="462.00" width="93.00" height="27.00" fill="rgb(245,204,23)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 2, cpu 4, target L3 1w, mask 1, elapsed 1.219039 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="473.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="314.50" y="485.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="462.00" width="93.00" height="27.00" fill="rgb(246,204,22)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.221355 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="473.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="410.50" y="485.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="462.00" width="93.00" height="27.00" fill="rgb(234,203,26)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 4, cpu 40, target L3 14w, mask 7ffe, elapsed 1.202776 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="473.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="506.50" y="485.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="462.00" width="93.00" height="27.00" fill="rgb(245,204,23)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.219868 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="473.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="602.50" y="485.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="462.00" width="93.00" height="27.00" fill="rgb(229,203,28)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.195960 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="473.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="698.50" y="485.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="462.00" width="93.00" height="27.00" fill="rgb(224,203,30)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.188450 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="473.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="794.50" y="485.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="462.00" width="93.00" height="27.00" fill="rgb(244,204,23)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 8, cpu 16, target L3 14w, mask 7ffe, elapsed 1.218826 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="473.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="890.50" y="485.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="462.00" width="93.00" height="27.00" fill="rgb(250,204,21)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.226676 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="473.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="986.50" y="485.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="462.00" width="93.00" height="27.00" fill="rgb(232,203,27)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.199976 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="473.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1082.50" y="485.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="462.00" width="93.00" height="27.00" fill="rgb(239,204,25)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.211044 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="473.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1178.50" y="485.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="462.00" width="93.00" height="27.00" fill="rgb(240,204,24)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.211725 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="473.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1274.50" y="485.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="462.00" width="93.00" height="27.00" fill="rgb(250,202,21)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.233358 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="473.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="1370.50" y="485.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="462.00" width="93.00" height="27.00" fill="rgb(250,200,21)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.238801 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="473.000000" text-anchor="middle" fill="#0f172a">1.24 ms</text>
+<text class="small" x="1466.50" y="485.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="462.00" width="93.00" height="27.00" fill="rgb(235,204,26)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 15, cpu 30, target L3 1w, mask 1, elapsed 1.204605 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="473.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1562.50" y="485.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="503.00">s1600</text>
+<text class="small" x="8" y="516.00">1.30 ms</text>
+<rect x="76.00" y="492.00" width="93.00" height="27.00" fill="rgb(250,183,21)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 0, cpu 32, target L3 1w, mask 1, elapsed 1.294702 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="503.000000" text-anchor="middle" fill="#0f172a">1.29 ms</text>
+<text class="small" x="122.50" y="515.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="492.00" width="93.00" height="27.00" fill="rgb(250,182,21)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 1, cpu 34, target L3 1w, mask 1, elapsed 1.297365 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="503.000000" text-anchor="middle" fill="#0f172a">1.30 ms</text>
+<text class="small" x="218.50" y="515.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="492.00" width="93.00" height="27.00" fill="rgb(250,184,21)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 2, cpu 4, target L3 1w, mask 1, elapsed 1.290853 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="503.000000" text-anchor="middle" fill="#0f172a">1.29 ms</text>
+<text class="small" x="314.50" y="515.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="492.00" width="93.00" height="27.00" fill="rgb(250,185,21)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.287241 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="503.000000" text-anchor="middle" fill="#0f172a">1.29 ms</text>
+<text class="small" x="410.50" y="515.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="492.00" width="93.00" height="27.00" fill="rgb(250,186,21)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 4, cpu 8, target L3 14w, mask 7ffe, elapsed 1.286800 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="503.000000" text-anchor="middle" fill="#0f172a">1.29 ms</text>
+<text class="small" x="506.50" y="515.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="492.00" width="93.00" height="27.00" fill="rgb(250,187,21)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.283005 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="503.000000" text-anchor="middle" fill="#0f172a">1.28 ms</text>
+<text class="small" x="602.50" y="515.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="492.00" width="93.00" height="27.00" fill="rgb(250,183,21)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.296144 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="503.000000" text-anchor="middle" fill="#0f172a">1.30 ms</text>
+<text class="small" x="698.50" y="515.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="492.00" width="93.00" height="27.00" fill="rgb(250,181,21)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.301432 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="503.000000" text-anchor="middle" fill="#0f172a">1.30 ms</text>
+<text class="small" x="794.50" y="515.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="492.00" width="93.00" height="27.00" fill="rgb(250,187,21)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 8, cpu 16, target L3 14w, mask 7ffe, elapsed 1.281547 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="503.000000" text-anchor="middle" fill="#0f172a">1.28 ms</text>
+<text class="small" x="890.50" y="515.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="492.00" width="93.00" height="27.00" fill="rgb(250,189,21)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.274941 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="503.000000" text-anchor="middle" fill="#0f172a">1.27 ms</text>
+<text class="small" x="986.50" y="515.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="492.00" width="93.00" height="27.00" fill="rgb(250,186,21)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.286668 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="503.000000" text-anchor="middle" fill="#0f172a">1.29 ms</text>
+<text class="small" x="1082.50" y="515.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="492.00" width="93.00" height="27.00" fill="rgb(250,183,21)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.295237 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="503.000000" text-anchor="middle" fill="#0f172a">1.30 ms</text>
+<text class="small" x="1178.50" y="515.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="492.00" width="93.00" height="27.00" fill="rgb(250,188,21)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.277612 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="503.000000" text-anchor="middle" fill="#0f172a">1.28 ms</text>
+<text class="small" x="1274.50" y="515.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="492.00" width="93.00" height="27.00" fill="rgb(250,184,21)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.290958 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="503.000000" text-anchor="middle" fill="#0f172a">1.29 ms</text>
+<text class="small" x="1370.50" y="515.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="492.00" width="93.00" height="27.00" fill="rgb(250,184,21)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.293563 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="503.000000" text-anchor="middle" fill="#0f172a">1.29 ms</text>
+<text class="small" x="1466.50" y="515.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="492.00" width="93.00" height="27.00" fill="rgb(250,189,21)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 15, cpu 30, target L3 1w, mask 1, elapsed 1.276177 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="503.000000" text-anchor="middle" fill="#0f172a">1.28 ms</text>
+<text class="small" x="1562.50" y="515.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="533.00">s1700</text>
+<text class="small" x="8" y="546.00">1.21 ms</text>
+<rect x="76.00" y="522.00" width="93.00" height="27.00" fill="rgb(237,204,25)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 0, cpu 32, target L3 1w, mask 1, elapsed 1.207686 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="533.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="122.50" y="545.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="522.00" width="93.00" height="27.00" fill="rgb(231,203,28)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 1, cpu 2, target L3 1w, mask 1, elapsed 1.197814 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="533.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="218.50" y="545.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="522.00" width="93.00" height="27.00" fill="rgb(229,203,28)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 2, cpu 4, target L3 1w, mask 1, elapsed 1.195507 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="533.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="314.50" y="545.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="522.00" width="93.00" height="27.00" fill="rgb(225,203,29)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.190183 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="533.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="410.50" y="545.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="522.00" width="93.00" height="27.00" fill="rgb(225,203,30)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 4, cpu 8, target L3 14w, mask 7ffe, elapsed 1.188819 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="533.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="506.50" y="545.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="522.00" width="93.00" height="27.00" fill="rgb(218,203,32)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.178665 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="533.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="602.50" y="545.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="522.00" width="93.00" height="27.00" fill="rgb(228,203,28)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.194275 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="533.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="698.50" y="545.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="522.00" width="93.00" height="27.00" fill="rgb(229,203,28)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.196171 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="533.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="794.50" y="545.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="522.00" width="93.00" height="27.00" fill="rgb(238,204,25)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 8, cpu 16, target L3 14w, mask 7ffe, elapsed 1.208511 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="533.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="890.50" y="545.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="522.00" width="93.00" height="27.00" fill="rgb(234,203,26)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.203336 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="533.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="986.50" y="545.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="522.00" width="93.00" height="27.00" fill="rgb(236,204,26)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.206035 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="533.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1082.50" y="545.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="522.00" width="93.00" height="27.00" fill="rgb(222,203,31)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.184310 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="533.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="1178.50" y="545.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="522.00" width="93.00" height="27.00" fill="rgb(223,203,30)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.186271 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="533.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1274.50" y="545.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="522.00" width="93.00" height="27.00" fill="rgb(224,203,30)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.188106 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="533.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1370.50" y="545.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="522.00" width="93.00" height="27.00" fill="rgb(235,204,26)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.204557 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="533.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1466.50" y="545.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="522.00" width="93.00" height="27.00" fill="rgb(223,203,30)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 15, cpu 30, target L3 1w, mask 1, elapsed 1.186005 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="533.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1562.50" y="545.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="563.00">s1800</text>
+<text class="small" x="8" y="576.00">1.36 ms</text>
+<rect x="76.00" y="552.00" width="93.00" height="27.00" fill="rgb(250,163,21)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 0, cpu 32, target L3 1w, mask 1, elapsed 1.358769 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="563.000000" text-anchor="middle" fill="#0f172a">1.36 ms</text>
+<text class="small" x="122.50" y="575.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="552.00" width="93.00" height="27.00" fill="rgb(250,180,21)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 1, cpu 2, target L3 1w, mask 1, elapsed 1.305923 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="563.000000" text-anchor="middle" fill="#0f172a">1.31 ms</text>
+<text class="small" x="218.50" y="575.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="552.00" width="93.00" height="27.00" fill="rgb(250,172,21)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 2, cpu 4, target L3 1w, mask 1, elapsed 1.331209 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="563.000000" text-anchor="middle" fill="#0f172a">1.33 ms</text>
+<text class="small" x="314.50" y="575.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="552.00" width="93.00" height="27.00" fill="rgb(250,173,21)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.326840 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="563.000000" text-anchor="middle" fill="#0f172a">1.33 ms</text>
+<text class="small" x="410.50" y="575.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="552.00" width="93.00" height="27.00" fill="rgb(250,178,21)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 4, cpu 8, target L3 14w, mask 7ffe, elapsed 1.311212 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="563.000000" text-anchor="middle" fill="#0f172a">1.31 ms</text>
+<text class="small" x="506.50" y="575.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="552.00" width="93.00" height="27.00" fill="rgb(250,181,21)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.300394 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="563.000000" text-anchor="middle" fill="#0f172a">1.30 ms</text>
+<text class="small" x="602.50" y="575.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="552.00" width="93.00" height="27.00" fill="rgb(250,176,21)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.318637 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="563.000000" text-anchor="middle" fill="#0f172a">1.32 ms</text>
+<text class="small" x="698.50" y="575.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="552.00" width="93.00" height="27.00" fill="rgb(250,174,21)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.324461 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="563.000000" text-anchor="middle" fill="#0f172a">1.32 ms</text>
+<text class="small" x="794.50" y="575.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="552.00" width="93.00" height="27.00" fill="rgb(250,175,21)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 8, cpu 16, target L3 14w, mask 7ffe, elapsed 1.322076 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="563.000000" text-anchor="middle" fill="#0f172a">1.32 ms</text>
+<text class="small" x="890.50" y="575.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="552.00" width="93.00" height="27.00" fill="rgb(250,181,21)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.302831 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="563.000000" text-anchor="middle" fill="#0f172a">1.30 ms</text>
+<text class="small" x="986.50" y="575.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="552.00" width="93.00" height="27.00" fill="rgb(250,183,21)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.295564 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="563.000000" text-anchor="middle" fill="#0f172a">1.30 ms</text>
+<text class="small" x="1082.50" y="575.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="552.00" width="93.00" height="27.00" fill="rgb(250,181,21)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.303345 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="563.000000" text-anchor="middle" fill="#0f172a">1.30 ms</text>
+<text class="small" x="1178.50" y="575.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="552.00" width="93.00" height="27.00" fill="rgb(250,178,21)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.312852 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="563.000000" text-anchor="middle" fill="#0f172a">1.31 ms</text>
+<text class="small" x="1274.50" y="575.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="552.00" width="93.00" height="27.00" fill="rgb(250,176,21)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.319453 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="563.000000" text-anchor="middle" fill="#0f172a">1.32 ms</text>
+<text class="small" x="1370.50" y="575.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="552.00" width="93.00" height="27.00" fill="rgb(250,171,21)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.334417 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="563.000000" text-anchor="middle" fill="#0f172a">1.33 ms</text>
+<text class="small" x="1466.50" y="575.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="552.00" width="93.00" height="27.00" fill="rgb(250,180,21)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 15, cpu 30, target L3 1w, mask 1, elapsed 1.304077 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="563.000000" text-anchor="middle" fill="#0f172a">1.30 ms</text>
+<text class="small" x="1562.50" y="575.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="593.00">s1900</text>
+<text class="small" x="8" y="606.00">1.22 ms</text>
+<rect x="76.00" y="582.00" width="93.00" height="27.00" fill="rgb(234,203,26)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 0, cpu 32, target L3 1w, mask 1, elapsed 1.203614 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="593.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="122.50" y="605.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="582.00" width="93.00" height="27.00" fill="rgb(235,204,26)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 1, cpu 2, target L3 1w, mask 1, elapsed 1.204414 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="593.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="218.50" y="605.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="582.00" width="93.00" height="27.00" fill="rgb(223,203,30)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 2, cpu 4, target L3 1w, mask 1, elapsed 1.187136 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="593.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="314.50" y="605.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="582.00" width="93.00" height="27.00" fill="rgb(239,204,25)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.210878 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="593.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="410.50" y="605.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="582.00" width="93.00" height="27.00" fill="rgb(234,203,26)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 4, cpu 8, target L3 14w, mask 7ffe, elapsed 1.202850 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="593.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="506.50" y="605.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="582.00" width="93.00" height="27.00" fill="rgb(215,203,33)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.174946 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="593.000000" text-anchor="middle" fill="#0f172a">1.17 ms</text>
+<text class="small" x="602.50" y="605.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="582.00" width="93.00" height="27.00" fill="rgb(228,203,28)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.193914 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="593.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="698.50" y="605.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="582.00" width="93.00" height="27.00" fill="rgb(221,203,31)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.183953 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="593.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="794.50" y="605.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="582.00" width="93.00" height="27.00" fill="rgb(219,203,32)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 8, cpu 16, target L3 14w, mask 7ffe, elapsed 1.180035 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="593.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="890.50" y="605.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="582.00" width="93.00" height="27.00" fill="rgb(219,203,32)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.180014 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="593.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="986.50" y="605.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="582.00" width="93.00" height="27.00" fill="rgb(226,203,29)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.190641 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="593.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1082.50" y="605.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="582.00" width="93.00" height="27.00" fill="rgb(222,203,30)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.185534 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="593.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1178.50" y="605.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="582.00" width="93.00" height="27.00" fill="rgb(244,204,23)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.218808 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="593.000000" text-anchor="middle" fill="#0f172a">1.22 ms</text>
+<text class="small" x="1274.50" y="605.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="582.00" width="93.00" height="27.00" fill="rgb(223,203,30)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.186316 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="593.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1370.50" y="605.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="582.00" width="93.00" height="27.00" fill="rgb(230,203,28)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.196813 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="593.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1466.50" y="605.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="582.00" width="93.00" height="27.00" fill="rgb(204,202,37)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 15, cpu 30, target L3 1w, mask 1, elapsed 1.157349 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="593.000000" text-anchor="middle" fill="#0f172a">1.16 ms</text>
+<text class="small" x="1562.50" y="605.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<text x="8" y="623.00">s2000</text>
+<text class="small" x="8" y="636.00">1.23 ms</text>
+<rect x="76.00" y="612.00" width="93.00" height="27.00" fill="rgb(250,203,21)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 0, cpu 32, target L3 1w, mask 1, elapsed 1.228973 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="623.000000" text-anchor="middle" fill="#0f172a">1.23 ms</text>
+<text class="small" x="122.50" y="635.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="172.00" y="612.00" width="93.00" height="27.00" fill="rgb(227,203,29)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 1, cpu 2, target L3 1w, mask 1, elapsed 1.192843 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="623.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="218.50" y="635.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="268.00" y="612.00" width="93.00" height="27.00" fill="rgb(220,203,31)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 2, cpu 4, target L3 1w, mask 1, elapsed 1.181884 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="623.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="314.50" y="635.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="364.00" y="612.00" width="93.00" height="27.00" fill="rgb(234,203,27)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 3, cpu 6, target L3 1w, mask 1, elapsed 1.202427 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="623.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="410.50" y="635.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="460.00" y="612.00" width="93.00" height="27.00" fill="rgb(232,203,27)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 4, cpu 8, target L3 14w, mask 7ffe, elapsed 1.199587 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="623.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="506.50" y="635.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="556.00" y="612.00" width="93.00" height="27.00" fill="rgb(213,203,33)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 5, cpu 10, target L3 14w, mask 7ffe, elapsed 1.171670 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="623.000000" text-anchor="middle" fill="#0f172a">1.17 ms</text>
+<text class="small" x="602.50" y="635.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="652.00" y="612.00" width="93.00" height="27.00" fill="rgb(228,203,28)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 6, cpu 44, target L3 14w, mask 7ffe, elapsed 1.193872 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="623.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="698.50" y="635.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="748.00" y="612.00" width="93.00" height="27.00" fill="rgb(222,203,31)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 7, cpu 46, target L3 14w, mask 7ffe, elapsed 1.184639 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="623.000000" text-anchor="middle" fill="#0f172a">1.18 ms</text>
+<text class="small" x="794.50" y="635.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="844.00" y="612.00" width="93.00" height="27.00" fill="rgb(227,203,29)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 8, cpu 16, target L3 14w, mask 7ffe, elapsed 1.192162 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="623.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="890.50" y="635.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="940.00" y="612.00" width="93.00" height="27.00" fill="rgb(230,203,28)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 9, cpu 18, target L3 14w, mask 7ffe, elapsed 1.197404 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="623.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="986.50" y="635.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1036.00" y="612.00" width="93.00" height="27.00" fill="rgb(233,203,27)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 10, cpu 52, target L3 14w, mask 7ffe, elapsed 1.202315 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="623.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1082.50" y="635.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1132.00" y="612.00" width="93.00" height="27.00" fill="rgb(231,203,27)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 11, cpu 54, target L3 14w, mask 7ffe, elapsed 1.198302 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="623.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1178.50" y="635.00" text-anchor="middle" fill="#0f172a">L3 14w</text>
+<rect x="1228.00" y="612.00" width="93.00" height="27.00" fill="rgb(226,203,29)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 12, cpu 56, target L3 1w, mask 1, elapsed 1.190630 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="623.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1274.50" y="635.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1324.00" y="612.00" width="93.00" height="27.00" fill="rgb(226,203,29)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 13, cpu 58, target L3 1w, mask 1, elapsed 1.191304 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="623.000000" text-anchor="middle" fill="#0f172a">1.19 ms</text>
+<text class="small" x="1370.50" y="635.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1420.00" y="612.00" width="93.00" height="27.00" fill="rgb(239,204,25)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 14, cpu 28, target L3 1w, mask 1, elapsed 1.210852 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="623.000000" text-anchor="middle" fill="#0f172a">1.21 ms</text>
+<text class="small" x="1466.50" y="635.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+<rect x="1516.00" y="612.00" width="93.00" height="27.00" fill="rgb(232,203,27)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 15, cpu 30, target L3 1w, mask 1, elapsed 1.200750 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="623.000000" text-anchor="middle" fill="#0f172a">1.20 ms</text>
+<text class="small" x="1562.50" y="635.00" text-anchor="middle" fill="#0f172a">L3 1w</text>
+</svg>

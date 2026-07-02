@@ -38,7 +38,8 @@ esac
 
 "$CXX" -std=c++17 -O2 -Wall -Wextra -pedantic -fPIC -shared "$OMP_FLAG" \
     ompt_resctrl/ompt_resctrl.cpp ompt_resctrl/resctrl_mba.cpp ompt_resctrl/resctrl_cat.cpp \
-    ompt_resctrl/resctrl_mon.cpp ompt_common/perf_cache.cpp -o ompt_resctrl/libompt_resctrl.so
+    ompt_resctrl/resctrl_mon.cpp ompt_resctrl/mba_policy.cpp ompt_common/perf_cache.cpp \
+    -o ompt_resctrl/libompt_resctrl.so
 
 "$CXX" -std=c++17 -O2 -Wall -Wextra -pedantic \
     ompt_resctrl/render_ompt_timing.cpp -o ompt_resctrl/render_ompt_timing

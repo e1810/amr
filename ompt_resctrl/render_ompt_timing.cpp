@@ -173,8 +173,16 @@ bool should_render_region(const std::string &label) {
     return label == "heat_update";
 }
 
+bool is_l3_resource(const std::string &resource_kind) {
+    return resource_kind == "cat" || resource_kind == "monitor";
+}
+
+bool shows_l3_mask(const std::string &resource_kind) {
+    return is_l3_resource(resource_kind);
+}
+
 std::string target_text(double value, const std::string &resource_kind, bool percent_mode) {
-    if (resource_kind == "cat") {
+    if (is_l3_resource(resource_kind)) {
         if (value <= 0.0) {
             return "L3?";
         }
@@ -360,7 +368,7 @@ bool render_metric_svg(const std::map<EventKey, std::vector<TimingRow>> &events,
                 << ", cpu " << row.cpu_id
                 << ", " << units << ' ' << (valid ? fixed_text(value, 6) : std::string("n/a"))
                 << ", target " << target_text(row.target_value, row.resource_kind, percent_mode)
-                << (row.resource_kind == "cat" ? ", mask " + row.target_l3_mask : "")
+                << (shows_l3_mask(row.resource_kind) ? ", mask " + row.target_l3_mask : "")
                 << detail_func(row)
                 << "</title></rect>\n";
 
@@ -489,7 +497,7 @@ bool render_cache_counts_svg(const std::map<EventKey, std::vector<TimingRow>> &e
                 ", misses " + std::to_string(row.pmu_llc_misses) +
                 ", miss_rate_pct " + (miss_rate >= 0.0 ? fixed_text(miss_rate, 3) : std::string("n/a")) +
                 ", target " + target_text(row.target_value, row.resource_kind, percent_mode) +
-                (row.resource_kind == "cat" ? ", mask " + row.target_l3_mask : "");
+                (shows_l3_mask(row.resource_kind) ? ", mask " + row.target_l3_mask : "");
 
             out << "<rect x=\"" << x
                 << "\" y=\"" << y
@@ -580,12 +588,12 @@ int main(int argc, char **argv) {
         row.region_label = amr_region_label(row.region_id);
         row.cpu_id = int_field(f, columns, "cpu_id", 10);
         row.resource_kind = has_resource_kind ? field_or(f, columns, "resource_kind", 17) : "mba";
-        if (row.resource_kind == "cat") {
+        if (is_l3_resource(row.resource_kind)) {
             saw_cat = true;
         }
         row.target_l3_ways = has_l3_target ? int_field(f, columns, "target_l3_ways", 18) : 0;
         row.target_l3_mask = has_l3_target ? field_or(f, columns, "target_l3_mask", 19) : "";
-        row.target_value = row.resource_kind == "cat"
+        row.target_value = is_l3_resource(row.resource_kind)
                                ? static_cast<double>(row.target_l3_ways)
                                : double_field(f, columns, target_column, 11);
         row.resource_applied = int_field(f, columns, "resource_applied", percent_mode ? 12 : 13) != 0;
@@ -687,7 +695,7 @@ int main(int argc, char **argv) {
                 << ", thread " << row.thread_id
                 << ", cpu " << row.cpu_id
                 << ", target " << target_text(row.target_value, row.resource_kind, percent_mode)
-                << (row.resource_kind == "cat" ? ", mask " + row.target_l3_mask : "")
+                << (shows_l3_mask(row.resource_kind) ? ", mask " + row.target_l3_mask : "")
                 << ", elapsed " << std::setprecision(6) << row.elapsed_ms << " ms"
                 << ", applied " << (row.resource_applied ? "yes" : "no")
                 << "</title></rect>\n";

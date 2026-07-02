@@ -112,6 +112,24 @@ void add_counter(const std::string &path, const char *filename, std::int64_t *su
     *sum += value;
 }
 
+resctrl_mon::Sample sample_mon_data_path(const std::string &mon_data_path) {
+    resctrl_mon::Sample sample;
+    const std::vector<std::string> domain_dirs = list_l3_monitor_dirs(mon_data_path);
+    sample.domain_count = static_cast<int>(domain_dirs.size());
+    for (const std::string &domain_dir : domain_dirs) {
+        add_counter(domain_dir, "llc_occupancy", &sample.llc_occupancy_bytes);
+        add_counter(domain_dir, "mbm_total_bytes", &sample.mbm_total_bytes);
+        add_counter(domain_dir, "mbm_local_bytes", &sample.mbm_local_bytes);
+        add_counter(domain_dir, "mbm_remote_bytes", &sample.mbm_remote_bytes);
+    }
+
+    sample.valid = sample.llc_occupancy_bytes >= 0 ||
+                   sample.mbm_total_bytes >= 0 ||
+                   sample.mbm_local_bytes >= 0 ||
+                   sample.mbm_remote_bytes >= 0;
+    return sample;
+}
+
 }  // namespace
 
 namespace resctrl_mon {
@@ -127,32 +145,28 @@ void configure(const char *root_path, const char *group_prefix) {
 }
 
 Sample sample_slot(int slot) {
-    std::string root;
     std::string prefix;
     {
         std::lock_guard<std::mutex> lock(mon_mutex);
-        root = configured_root;
         prefix = configured_prefix;
     }
 
-    const std::string group_path = join_path(root, prefix + "_t" + std::to_string(std::max(0, slot)));
-    const std::string mon_data_path = join_path(group_path, "mon_data");
+    return sample_group(prefix + "_t" + std::to_string(std::max(0, slot)));
+}
 
-    Sample sample;
-    const std::vector<std::string> domain_dirs = list_l3_monitor_dirs(mon_data_path);
-    sample.domain_count = static_cast<int>(domain_dirs.size());
-    for (const std::string &domain_dir : domain_dirs) {
-        add_counter(domain_dir, "llc_occupancy", &sample.llc_occupancy_bytes);
-        add_counter(domain_dir, "mbm_total_bytes", &sample.mbm_total_bytes);
-        add_counter(domain_dir, "mbm_local_bytes", &sample.mbm_local_bytes);
-        add_counter(domain_dir, "mbm_remote_bytes", &sample.mbm_remote_bytes);
+Sample sample_group(const std::string &group_name) {
+    if (group_name.empty()) {
+        return Sample();
     }
 
-    sample.valid = sample.llc_occupancy_bytes >= 0 ||
-                   sample.mbm_total_bytes >= 0 ||
-                   sample.mbm_local_bytes >= 0 ||
-                   sample.mbm_remote_bytes >= 0;
-    return sample;
+    std::string root;
+    {
+        std::lock_guard<std::mutex> lock(mon_mutex);
+        root = configured_root;
+    }
+
+    const std::string group_path = join_path(root, group_name);
+    return sample_mon_data_path(join_path(group_path, "mon_data"));
 }
 
 std::string root_path() {

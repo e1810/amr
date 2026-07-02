@@ -1,6 +1,7 @@
 #include <omp-tools.h>
 #include <omp.h>
 
+#include "mba_policy.hpp"
 #include "resctrl_mba.hpp"
 #include "resctrl_cat.hpp"
 #include "resctrl_mon.hpp"
@@ -28,6 +29,7 @@ using Clock = std::chrono::steady_clock;
 enum class ResourceKind {
     Mba,
     Cat,
+    Monitor,
 };
 
 struct RegionState {
@@ -35,8 +37,9 @@ struct RegionState {
     unsigned long long executions = 0;
     bool resctrl_enabled = false;
     double last_region_wall_ms = 0.0;
-    std::vector<double> last_elapsed_ms;
-    std::vector<double> last_target_mb_percent;
+    mba_policy::History mba_history;
+    std::vector<int> mba_target_level;
+    std::vector<double> mba_target_mb_percent;
 };
 
 struct ParallelEvent {
@@ -55,7 +58,9 @@ struct ParallelEvent {
     std::vector<double> elapsed_ms;
     std::vector<double> target_mb_percent;
     std::vector<int> target_l3_ways;
+    std::vector<int> target_mba_level;
     std::vector<std::string> target_l3_mask;
+    std::vector<std::string> resctrl_group_name;
     std::vector<int> cpu_id;
     std::vector<pid_t> task_id;
     std::vector<unsigned char> has_started;
@@ -98,13 +103,12 @@ std::atomic<unsigned long long> next_parallel_id{1};
 Clock::time_point tool_start;
 std::ofstream output;
 int output_exec_interval = 1;
-double max_mb_percent = 100.0;
-double min_mb_percent = 10.0;
+constexpr double max_mb_percent = resctrl::kMbaLevelMaxPercent;
+constexpr double skip_short_region_ms = 10.0;
 double mba_granularity_percent = 10.0;
+mba_policy::Config mba_policy_config = mba_policy::strict_config();
 double resctrl_enable_region_ms = 1.2;
 double resctrl_disable_region_ms = 0.8;
-double target_elapsed_fraction = 0.95;
-double target_aggressiveness = 1.0;
 ResourceKind resource_kind = ResourceKind::Mba;
 std::string resource_kind_name = "mba";
 int requested_l3_ways = 0;
@@ -119,6 +123,7 @@ std::string l3_thread_targets_text = "none";
 bool debug = false;
 bool resctrl_control_enabled = false;
 bool cat_control_enabled = false;
+bool monitor_group_enabled = false;
 bool cat_apply_always = true;
 bool cat_sticky_assignments = true;
 bool cleanup_groups_on_finalize = false;
@@ -129,6 +134,19 @@ double now_ms() {
     const auto now = Clock::now();
     return std::chrono::duration<double, std::milli>(now - tool_start).count();
 }
+[[noreturn]] void fatal_resctrl(const std::string &reason) {
+    std::fprintf(stderr, "[AMR-RESCTRL] fatal error: %s\n", reason.c_str());
+    std::fflush(stderr);
+    std::exit(EXIT_FAILURE);
+}
+
+[[noreturn]] void fatal_mba(const std::string &reason) {
+    std::fprintf(stderr, "[AMR-RESCTRL] fatal MBA error: %s\n", reason.c_str());
+    std::fflush(stderr);
+    std::exit(EXIT_FAILURE);
+}
+
+
 
 bool has_thread_slot(const ParallelEvent *event, unsigned int thread_num) {
     return event && static_cast<std::size_t>(thread_num) < event->start_ms.size();
@@ -361,34 +379,36 @@ ResourceKind parse_resource_kind() {
     }
 
     const std::string value(text);
+    if (value == "mba") {
+        return ResourceKind::Mba;
+    }
     if (value == "cat" || value == "l3") {
         return ResourceKind::Cat;
     }
-    return ResourceKind::Mba;
+    if (value == "monitor" || value == "mon" || value == "group" || value == "groups") {
+        return ResourceKind::Monitor;
+    }
+    fatal_resctrl("unknown AMR_RESCTRL_RESOURCE: " + value);
 }
 
 const char *resource_kind_label(ResourceKind kind) {
-    return kind == ResourceKind::Cat ? "cat" : "mba";
+    switch (kind) {
+        case ResourceKind::Cat: return "cat";
+        case ResourceKind::Monitor: return "monitor";
+        case ResourceKind::Mba: return "mba";
+    }
+    return "mba";
 }
 
-double normalize_mb_percent(double value) {
-    if (!std::isfinite(value)) {
-        return max_mb_percent;
-    }
-
-    value = std::clamp(value, min_mb_percent, max_mb_percent);
-    if (value >= max_mb_percent) {
-        return max_mb_percent;
-    }
-    if (mba_granularity_percent <= 0.0) {
-        return value;
-    }
-
-    const double steps = std::ceil((value - min_mb_percent) / mba_granularity_percent);
-    return std::clamp(min_mb_percent + steps * mba_granularity_percent,
-                      min_mb_percent,
-                      max_mb_percent);
+bool uses_l3_thread_groups() {
+    return resource_kind == ResourceKind::Cat ||
+           resource_kind == ResourceKind::Monitor;
 }
+
+bool uses_cat_resctrl_groups() {
+    return resource_kind == ResourceKind::Cat || resource_kind == ResourceKind::Monitor;
+}
+
 
 void set_first_counter(std::vector<std::int64_t> *values,
                        std::size_t slot,
@@ -453,6 +473,8 @@ void record_cache_counter_begin(ParallelEvent *event, unsigned int thread_num) {
 
     if (perf_cache::start()) {
         event->cache_counter_active[slot] = 1;
+    } else if (resource_kind == ResourceKind::Mba) {
+        fatal_mba("cache PMU counters are required but could not be started");
     }
 }
 
@@ -468,7 +490,11 @@ void record_cache_counter_end(ParallelEvent *event, unsigned int thread_num) {
     }
 
     event->cache_counter_active[slot] = 0;
-    add_cache_delta(event, slot, perf_cache::stop());
+    const perf_cache::Delta delta = perf_cache::stop();
+    if (!delta.valid && resource_kind == ResourceKind::Mba) {
+        fatal_mba("cache PMU counters are required but produced no valid reading");
+    }
+    add_cache_delta(event, slot, delta);
 }
 
 void record_monitor_begin(ParallelEvent *event, unsigned int thread_num) {
@@ -484,7 +510,11 @@ void record_monitor_begin(ParallelEvent *event, unsigned int thread_num) {
         return;
     }
 
-    const resctrl_mon::Sample sample = resctrl_mon::sample_slot(static_cast<int>(slot));
+    const std::string group_name =
+        slot < event->resctrl_group_name.size() ? event->resctrl_group_name[slot] : std::string();
+    const resctrl_mon::Sample sample = group_name.empty()
+                                           ? resctrl_mon::sample_slot(static_cast<int>(slot))
+                                           : resctrl_mon::sample_group(group_name);
     if (!sample.valid) {
         event->monitor_interval_active[slot] = 0;
         return;
@@ -528,7 +558,11 @@ void record_monitor_end(ParallelEvent *event, unsigned int thread_num) {
 
     event->monitor_interval_active[slot] = 0;
     const resctrl_mon::Sample begin = event->monitor_interval_start[slot];
-    const resctrl_mon::Sample end = resctrl_mon::sample_slot(static_cast<int>(slot));
+    const std::string group_name =
+        slot < event->resctrl_group_name.size() ? event->resctrl_group_name[slot] : std::string();
+    const resctrl_mon::Sample end = group_name.empty()
+                                        ? resctrl_mon::sample_slot(static_cast<int>(slot))
+                                        : resctrl_mon::sample_group(group_name);
     if (!end.valid) {
         return;
     }
@@ -589,39 +623,48 @@ void record_thread_end(ParallelEvent *event, unsigned int thread_num) {
     event->work_started[slot] = 0;
 }
 
-std::vector<double> plan_targets(const RegionState &region, std::size_t slots) {
-    std::vector<double> targets(slots, max_mb_percent);
-    if (region.executions <= 1 || region.last_elapsed_ms.empty()) {
-        return targets;
+
+double mba_percent_for_level(int level) {
+    return static_cast<double>(resctrl::mba_percent_for_level(level));
+}
+
+std::vector<int> plan_mba_levels(const RegionState &region, std::size_t slots) {
+    return mba_policy::plan_levels(region.mba_history,
+                                   slots,
+                                   resctrl::kMbaLevelCount,
+                                   mba_policy_config);
+}
+
+bool interval_due(unsigned long long region_exec);
+
+void refresh_mba_targets_if_due(RegionState *region,
+                                unsigned long long region_exec,
+                                std::size_t slots) {
+    if (!region) {
+        return;
     }
 
-    std::vector<double> work_estimates(slots, 0.0);
-    std::size_t critical_slot = slots;
-    double critical_elapsed_ms = 0.0;
-    for (std::size_t i = 0; i < slots && i < region.last_elapsed_ms.size(); ++i) {
-        const double previous_percent =
-            i < region.last_target_mb_percent.size() && region.last_target_mb_percent[i] > 0.0
-                ? region.last_target_mb_percent[i]
-                : max_mb_percent;
-        work_estimates[i] = region.last_elapsed_ms[i] * previous_percent;
-        if (region.last_elapsed_ms[i] > critical_elapsed_ms) {
-            critical_elapsed_ms = region.last_elapsed_ms[i];
-            critical_slot = i;
-        }
-    }
-    if (critical_slot >= slots || work_estimates[critical_slot] <= 0.0) {
-        return targets;
+    const bool size_changed = region->mba_target_level.size() != slots;
+    if (!size_changed && !interval_due(region_exec)) {
+        return;
     }
 
-    const double target_work = work_estimates[critical_slot] * target_elapsed_fraction;
-    for (std::size_t i = 0; i < slots && i < region.last_elapsed_ms.size(); ++i) {
-        double ratio = work_estimates[i] / target_work;
-        if (ratio < 1.0 && target_aggressiveness > 1.0) {
-            ratio = std::pow(ratio, target_aggressiveness);
-        }
-        targets[i] = normalize_mb_percent(max_mb_percent * ratio);
+    region->mba_target_level = plan_mba_levels(*region, slots);
+    region->mba_target_mb_percent.assign(slots, max_mb_percent);
+    for (std::size_t slot = 0; slot < slots; ++slot) {
+        region->mba_target_mb_percent[slot] =
+            mba_percent_for_level(region->mba_target_level[slot]);
     }
-    return targets;
+}
+
+void require_cache_counters_for_mba() {
+    if (!perf_cache::start()) {
+        fatal_mba("cache PMU counters are required but could not be opened");
+    }
+    const perf_cache::Delta delta = perf_cache::stop();
+    if (!delta.valid) {
+        fatal_mba("cache PMU counters are required but produced no valid probe reading");
+    }
 }
 
 void write_header() {
@@ -642,9 +685,17 @@ void write_header() {
            << "mon_mbm_remote_delta_bytes\n";
 }
 
-bool should_write_execution(const ParallelEvent &event) {
+bool interval_due(unsigned long long region_exec) {
     return output_exec_interval <= 1 ||
-           (event.region_exec > 0 && event.region_exec % output_exec_interval == 0);
+           (region_exec >= 0 && region_exec % output_exec_interval == 0);
+}
+
+bool should_write_execution(const ParallelEvent &event) {
+    return event.region_exec <= 1 || interval_due(event.region_exec);
+}
+
+bool should_apply_resctrl(const RegionState &region, unsigned long long region_exec) {
+    return interval_due(region_exec) && region.last_region_wall_ms > skip_short_region_ms;
 }
 
 int event_team_size(const ParallelEvent &event) {
@@ -683,15 +734,51 @@ void apply_target_to_thread(ParallelEvent *event, unsigned int thread_num) {
             if (slot < event->target_l3_mask.size()) {
                 event->target_l3_mask[slot] = assignment.mask;
             }
+            if (slot < event->resctrl_group_name.size()) {
+                event->resctrl_group_name[slot] = assignment.group_name;
+            }
         }
-    } else if (event->resctrl_enabled && resctrl_control_enabled &&
-               event->target_mb_percent[slot] < max_mb_percent) {
-        const resctrl::AssignmentResult assignment = resctrl::assign_current_thread_mba(
-            static_cast<int>(slot),
-            event->target_mb_percent[slot]);
-        cpu = assignment.cpu;
-        tid = assignment.tid;
-        applied = assignment.applied;
+    } else if (resource_kind == ResourceKind::Monitor) {
+        if (monitor_group_enabled) {
+            const std::string target_mask =
+                slot < event->target_l3_mask.size() ? event->target_l3_mask[slot] : std::string();
+            const resctrl_cat::AssignmentResult assignment =
+                target_mask.empty()
+                    ? resctrl_cat::assign_current_thread_monitor_l3(
+                          static_cast<int>(slot),
+                          slot < event->target_l3_ways.size() ? event->target_l3_ways[slot] : requested_l3_ways)
+                    : resctrl_cat::assign_current_thread_monitor_l3_mask(static_cast<int>(slot), target_mask);
+            cpu = assignment.cpu;
+            tid = assignment.tid;
+            applied = assignment.applied;
+            if (slot < event->target_l3_ways.size()) {
+                event->target_l3_ways[slot] = assignment.ways;
+            }
+            if (slot < event->target_l3_mask.size()) {
+                event->target_l3_mask[slot] = assignment.mask;
+            }
+            if (slot < event->resctrl_group_name.size()) {
+                event->resctrl_group_name[slot] = assignment.group_name;
+            }
+        }
+    } else if (resource_kind == ResourceKind::Mba) {
+        if (!resctrl_control_enabled || !event->resctrl_enabled) {
+            applied = false;
+        } else {
+            const int mba_level =
+                slot < event->target_mba_level.size() ? event->target_mba_level[slot]
+                                                      : resctrl::kMbaLevelCount - 1;
+            const resctrl::AssignmentResult assignment = resctrl::assign_current_thread_mba_level(mba_level);
+            cpu = assignment.cpu;
+            tid = assignment.tid;
+            applied = assignment.applied;
+            if (!applied) {
+                fatal_mba("MBA thread assignment failed: " + resctrl::last_error());
+            }
+            if (slot < event->resctrl_group_name.size()) {
+                event->resctrl_group_name[slot] = assignment.group_name;
+            }
+        }
     }
 
     event->cpu_id[slot] = cpu;
@@ -752,7 +839,11 @@ double compute_region_wall_ms(const ParallelEvent &event, int team_size) {
 }
 
 void reset_touched_resources(const ParallelEvent &event, int team_size) {
-    if (resource_kind == ResourceKind::Cat && cat_sticky_assignments) {
+    if (resource_kind == ResourceKind::Mba) {
+        return;
+    }
+    if ((resource_kind == ResourceKind::Cat || resource_kind == ResourceKind::Monitor) &&
+        cat_sticky_assignments) {
         return;
     }
 
@@ -767,7 +858,7 @@ void reset_touched_resources(const ParallelEvent &event, int team_size) {
         const pid_t task = event.task_id[index];
         if (std::find(reset_tasks.begin(), reset_tasks.end(), task) == reset_tasks.end()) {
             reset_tasks.push_back(task);
-            if (resource_kind == ResourceKind::Cat) {
+            if (resource_kind == ResourceKind::Cat || resource_kind == ResourceKind::Monitor) {
                 resctrl_cat::release_task(task);
             } else {
                 resctrl::release_task(task);
@@ -784,17 +875,32 @@ void update_region_history(const ParallelEvent &event, int team_size) {
     }
 
     RegionState &region = iter->second;
-    region.last_elapsed_ms.assign(static_cast<std::size_t>(team_size), 0.0);
-    region.last_target_mb_percent.assign(static_cast<std::size_t>(team_size), max_mb_percent);
+    const std::size_t history_slots = static_cast<std::size_t>(std::max(0, team_size));
+    region.mba_history.elapsed_ms.assign(history_slots, 0.0);
+    region.mba_history.target_mb_percent.assign(history_slots, max_mb_percent);
+    region.mba_history.cache_counter_valid.assign(history_slots, 0);
+    region.mba_history.cache_references.assign(history_slots, 0);
+    region.mba_history.cache_misses.assign(history_slots, 0);
     for (int tid = 0; tid < team_size; ++tid) {
         const std::size_t index = static_cast<std::size_t>(tid);
-        region.last_elapsed_ms[index] =
+        region.mba_history.elapsed_ms[index] =
             index < event.elapsed_ms.size() ? event.elapsed_ms[index] : 0.0;
-        region.last_target_mb_percent[index] =
-            index < event.target_mb_percent.size() ? event.target_mb_percent[index] : max_mb_percent;
+        region.mba_history.target_mb_percent[index] =
+            index < event.target_mb_percent.size() ? event.target_mb_percent[index]
+                                                   : max_mb_percent;
+        region.mba_history.cache_counter_valid[index] =
+            index < event.cache_counter_valid.size() ? event.cache_counter_valid[index] : 0;
+        region.mba_history.cache_references[index] =
+            index < event.cache_references.size() ? event.cache_references[index] : 0;
+        region.mba_history.cache_misses[index] =
+            index < event.cache_misses.size() ? event.cache_misses[index] : 0;
     }
 
     region.last_region_wall_ms = event.region_wall_ms;
+
+    if (resource_kind != ResourceKind::Cat) {
+        return;
+    }
     if (!region.resctrl_enabled && event.region_wall_ms >= resctrl_enable_region_ms) {
         region.resctrl_enabled = true;
     } else if (region.resctrl_enabled && event.region_wall_ms <= resctrl_disable_region_ms) {
@@ -963,9 +1069,11 @@ void on_parallel_begin(ompt_data_t *encountering_task_data,
     event->current_start_ms.assign(slots, 0.0);
     event->end_ms.assign(slots, 0.0);
     event->elapsed_ms.assign(slots, 0.0);
+    event->target_mba_level.assign(slots, resctrl::kMbaLevelCount - 1);
     event->target_l3_ways.assign(slots, effective_l3_ways);
     event->target_l3_mask.assign(slots, effective_l3_mask);
-    if (resource_kind == ResourceKind::Cat) {
+    event->resctrl_group_name.assign(slots, std::string());
+    if (uses_l3_thread_groups()) {
         for (std::size_t slot = 0; slot < static_cast<std::size_t>(slots); ++slot) {
             if (const L3ThreadTarget *target = l3_thread_target_for_slot(slot)) {
                 event->target_l3_ways[slot] = target->ways;
@@ -1018,18 +1126,25 @@ void on_parallel_begin(ompt_data_t *encountering_task_data,
         event->region_exec = state.executions;
         event->resctrl_enabled = state.resctrl_enabled;
         if (resource_kind == ResourceKind::Mba) {
-            event->target_mb_percent =
-                event->resctrl_enabled
-                    ? plan_targets(state, static_cast<std::size_t>(slots))
-                    : std::vector<double>(static_cast<std::size_t>(slots), max_mb_percent);
-        } else {
+            event->resctrl_enabled = should_apply_resctrl(state, event->region_exec);
+            refresh_mba_targets_if_due(&state,
+                                       state.executions,
+                                       static_cast<std::size_t>(slots));
+            event->target_mba_level = state.mba_target_level;
+            event->target_mb_percent = state.mba_target_mb_percent;
+        } else if (resource_kind == ResourceKind::Cat) {
             event->resctrl_enabled = cat_apply_always || state.resctrl_enabled;
+            event->target_mb_percent =
+                std::vector<double>(static_cast<std::size_t>(slots), max_mb_percent);
+        } else {
+            event->resctrl_enabled = true;
             event->target_mb_percent =
                 std::vector<double>(static_cast<std::size_t>(slots), max_mb_percent);
         }
     }
 
-    event->cache_counter_enabled = should_write_execution(*event);
+    event->cache_counter_enabled =
+        should_write_execution(*event) || (resource_kind == ResourceKind::Mba && event->resctrl_enabled);
     event->monitor_enabled = monitor_configured && event->cache_counter_enabled;
     parallel_data->ptr = event;
 }
@@ -1133,42 +1248,38 @@ int ompt_initialize(ompt_function_lookup_t lookup,
     requested_l3_ways = env_int("AMR_RESCTRL_CAT_L3_WAYS", requested_l3_ways);
     cat_apply_always = env_bool("AMR_RESCTRL_CAT_ALWAYS", cat_apply_always);
     cat_sticky_assignments = env_bool("AMR_RESCTRL_CAT_STICKY", cat_sticky_assignments);
-    max_mb_percent = env_double("AMR_RESCTRL_MAX_MB_PERCENT",
-                                env_double("AMR_RESCTRL_MAX_PERCENT", max_mb_percent));
-    min_mb_percent = env_double("AMR_RESCTRL_MIN_MB_PERCENT",
-                                env_double("AMR_RESCTRL_MIN_PERCENT", min_mb_percent));
-    mba_granularity_percent = env_double("AMR_RESCTRL_MB_GRANULARITY_PERCENT",
-                                         mba_granularity_percent);
     resctrl_enable_region_ms =
         env_double("AMR_RESCTRL_ENABLE_REGION_MS", resctrl_enable_region_ms);
     resctrl_disable_region_ms =
         env_double("AMR_RESCTRL_DISABLE_REGION_MS", resctrl_disable_region_ms);
-    target_elapsed_fraction =
-        env_double("AMR_RESCTRL_TARGET_ELAPSED_FRACTION", target_elapsed_fraction);
-    target_aggressiveness =
-        env_double("AMR_RESCTRL_AGGRESSIVENESS", target_aggressiveness);
     if (resctrl_disable_region_ms > resctrl_enable_region_ms) {
         std::swap(resctrl_disable_region_ms, resctrl_enable_region_ms);
     }
-    if (min_mb_percent > max_mb_percent) {
-        std::swap(min_mb_percent, max_mb_percent);
-    }
-    if (target_elapsed_fraction <= 0.0) {
-        target_elapsed_fraction = 0.95;
-    }
-    if (target_aggressiveness < 1.0) {
-        target_aggressiveness = 1.0;
-    }
     debug = env_bool("AMR_RESCTRL_DEBUG", debug);
     cleanup_groups_on_finalize = env_bool("AMR_RESCTRL_CLEANUP_GROUPS", false);
-    perf_cache::configure(env_bool("AMR_OMPT_CACHE_COUNTERS", true));
+    mba_policy_config.strictness = std::max(
+        0.10, env_double("AMR_RESCTRL_MBA_STRICTNESS", mba_policy_config.strictness));
+    const bool cache_counters_enabled = env_bool("AMR_OMPT_CACHE_COUNTERS", true);
+    if (resource_kind == ResourceKind::Mba && !cache_counters_enabled) {
+        fatal_mba("AMR_OMPT_CACHE_COUNTERS=0 is incompatible with MBA control");
+    }
+    perf_cache::configure(cache_counters_enabled);
     monitor_requested = env_bool("AMR_RESCTRL_MONITOR", monitor_requested);
 
-    if (resource_kind == ResourceKind::Cat) {
+    if (uses_l3_thread_groups()) {
         resctrl_cat::configure(std::getenv("AMR_RESCTRL_ROOT"),
                                std::getenv("AMR_RESCTRL_CAT_GROUP_PREFIX"));
         const resctrl_cat::L3Info cat_info = resctrl_cat::l3_info(1);
-        cat_control_enabled = cat_info.available;
+        if (resource_kind == ResourceKind::Cat && !cat_info.available) {
+            fatal_resctrl("L3 CAT control unavailable at " +
+                          resctrl_cat::root_path());
+        }
+        if (resource_kind == ResourceKind::Monitor && !cat_info.available) {
+            fatal_resctrl("resctrl monitor group assignment unavailable at " +
+                          resctrl_cat::root_path());
+        }
+        cat_control_enabled = resource_kind == ResourceKind::Cat && cat_info.available;
+        monitor_group_enabled = resource_kind == ResourceKind::Monitor && cat_info.available;
         effective_l3_ways = resctrl_cat::effective_ways(requested_l3_ways);
         effective_l3_mask = resctrl_cat::mask_for_ways_text(requested_l3_ways);
         unrestricted_l3_ways = cat_info.max_cbm_bits > 0 ? cat_info.max_cbm_bits : effective_l3_ways;
@@ -1186,30 +1297,32 @@ int ompt_initialize(ompt_function_lookup_t lookup,
         l3_thread_targets =
             env_l3_thread_targets("AMR_RESCTRL_CAT_THREAD_L3_MASKS", cat_info.cbm_mask);
         l3_thread_targets_text = l3_thread_targets_to_text(l3_thread_targets);
-    } else {
-        resctrl::configure(std::getenv("AMR_RESCTRL_ROOT"),
-                           std::getenv("AMR_RESCTRL_GROUP_PREFIX"));
-        const resctrl::MbaInfo mba_info =
-            resctrl::mba_info(static_cast<int>(std::round(min_mb_percent)),
-                              static_cast<int>(std::round(mba_granularity_percent)),
-                              static_cast<int>(std::round(max_mb_percent)));
-        min_mb_percent = env_double("AMR_RESCTRL_MIN_MB_PERCENT",
-                                    env_double("AMR_RESCTRL_MIN_PERCENT",
-                                               static_cast<double>(mba_info.min_percent)));
-        mba_granularity_percent =
-            env_double("AMR_RESCTRL_MB_GRANULARITY_PERCENT",
-                       static_cast<double>(mba_info.granularity_percent));
-        if (min_mb_percent > max_mb_percent) {
-            std::swap(min_mb_percent, max_mb_percent);
-        }
-        resctrl_control_enabled = mba_info.available;
     }
 
-    if (resource_kind == ResourceKind::Cat) {
+    if (resource_kind == ResourceKind::Mba) {
+        resctrl::configure(std::getenv("AMR_RESCTRL_ROOT"),
+                           std::getenv("AMR_RESCTRL_GROUP_PREFIX"));
+        const resctrl::MbaInfo mba_info = resctrl::mba_info();
+        mba_granularity_percent = mba_info.granularity_percent;
+        if (!mba_info.available) {
+            fatal_mba("MBA control unavailable: " + mba_info.diagnostic);
+        }
+        if (!resctrl::prepare_mba_level_groups()) {
+            const std::string diagnostic = resctrl::last_error();
+            resctrl::cleanup_created_groups();
+            fatal_mba("MBA group preparation failed: " + diagnostic);
+        }
+        require_cache_counters_for_mba();
+        resctrl_control_enabled = true;
+    }
+
+    if (uses_cat_resctrl_groups()) {
         const std::string root = resctrl_cat::root_path();
         const std::string prefix = resctrl_cat::group_prefix();
         resctrl_mon::configure(root.c_str(), prefix.c_str());
-        monitor_configured = monitor_requested && cat_control_enabled;
+        monitor_configured = monitor_requested &&
+                             (resource_kind == ResourceKind::Cat ? cat_control_enabled
+                                                                  : monitor_group_enabled);
     } else {
         const std::string root = resctrl::root_path();
         const std::string prefix = resctrl::group_prefix();
@@ -1245,15 +1358,6 @@ int ompt_initialize(ompt_function_lookup_t lookup,
     set_callback(ompt_callback_work,
                  reinterpret_cast<ompt_callback_t>(&on_work));
 
-    if (resource_kind == ResourceKind::Cat && !cat_control_enabled) {
-        std::fprintf(stderr,
-                     "[AMR-RESCTRL] resctrl L3 CAT write unavailable; recording timing only\n");
-    } else if (resource_kind == ResourceKind::Mba && !resctrl_control_enabled) {
-        std::fprintf(stderr,
-                     "[AMR-RESCTRL] resctrl MBA write unavailable; recording timing and "
-                     "planned targets only\n");
-    }
-
     if (resource_kind == ResourceKind::Cat) {
         std::fprintf(stderr,
                      "[AMR-RESCTRL] enabled, writing %s every %d execution(s) per region, "
@@ -1277,22 +1381,41 @@ int ompt_initialize(ompt_function_lookup_t lookup,
                      cleanup_groups_on_finalize ? "enabled" : "disabled",
                      resctrl_cat::root_path().c_str(),
                      resctrl_cat::group_prefix().c_str());
+    } else if (resource_kind == ResourceKind::Monitor) {
+        std::fprintf(stderr,
+                     "[AMR-RESCTRL] enabled, writing %s every %d execution(s) per region, "
+                     "resource monitor, requested L3 ways %d, effective L3 ways %d, "
+                     "group mask %s, thread group masks %s, unrestricted threads %s group ways %d mask %s, "
+                     "sticky %s, group assign %s, monitor %s, cleanup %s, root %s, group prefix %s\n",
+                     output_path ? output_path : "ompt_resctrl/ompt_regions.csv",
+                     output_exec_interval,
+                     requested_l3_ways,
+                     effective_l3_ways,
+                     effective_l3_mask.c_str(),
+                     l3_thread_targets_text.c_str(),
+                     unrestricted_l3_threads_text.c_str(),
+                     unrestricted_l3_ways,
+                     unrestricted_l3_mask.c_str(),
+                     cat_sticky_assignments ? "enabled" : "disabled",
+                     monitor_group_enabled ? "enabled" : "disabled",
+                     monitor_configured ? "enabled" : "disabled",
+                     cleanup_groups_on_finalize ? "enabled" : "disabled",
+                     resctrl_cat::root_path().c_str(),
+                     resctrl_cat::group_prefix().c_str());
     } else {
         std::fprintf(stderr,
                      "[AMR-RESCTRL] enabled, writing %s every %d execution(s) per region, "
-                     "resource mba, MBA target range %.0f-%.0f%%, granularity %.0f%%, "
-                     "target fraction %.2f, aggressiveness %.2f, region resctrl enable "
-                     ">= %.3f ms, disable <= %.3f ms, control %s, monitor %s, "
+                     "resource mba, %d MBA levels in range %.0f-%.0f%%, granularity %.0f%%, "
+                     "slowest measured thread 100%%, relaxed noncritical budget, strictness %.2f, "
+                     "PMU required, control %s, monitor %s, "
                      "cleanup %s, root %s, group prefix %s\n",
                      output_path ? output_path : "ompt_resctrl/ompt_regions.csv",
                      output_exec_interval,
-                     min_mb_percent,
-                     max_mb_percent,
+                     resctrl::kMbaLevelCount,
+                     static_cast<double>(resctrl::kMbaLevelMinPercent),
+                     static_cast<double>(resctrl::kMbaLevelMaxPercent),
                      mba_granularity_percent,
-                     target_elapsed_fraction,
-                     target_aggressiveness,
-                     resctrl_enable_region_ms,
-                     resctrl_disable_region_ms,
+                     mba_policy_config.strictness,
                      resctrl_control_enabled ? "enabled" : "disabled",
                      monitor_configured ? "enabled" : "disabled",
                      cleanup_groups_on_finalize ? "enabled" : "disabled",
@@ -1305,7 +1428,8 @@ int ompt_initialize(ompt_function_lookup_t lookup,
 void ompt_finalize(ompt_data_t *tool_data) {
     (void)tool_data;
     if (cleanup_groups_on_finalize) {
-        if (resource_kind == ResourceKind::Cat && cat_control_enabled) {
+        if ((resource_kind == ResourceKind::Cat && cat_control_enabled) ||
+            (resource_kind == ResourceKind::Monitor && monitor_group_enabled)) {
             resctrl_cat::cleanup_created_groups();
         } else if (resource_kind == ResourceKind::Mba && resctrl_control_enabled) {
             resctrl::cleanup_created_groups();

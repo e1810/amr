@@ -5,12 +5,14 @@
 #include <cmath>
 #include <cstdio>
 #include <cstdlib>
+#include <cstring>
 #include <fstream>
 #include <map>
 #include <mutex>
 #include <set>
 #include <sstream>
 #include <string>
+#include <utility>
 #include <vector>
 
 #include <sched.h>
@@ -25,8 +27,11 @@ std::string configured_root = "/sys/fs/resctrl";
 std::string configured_prefix = "amr_mba";
 bool cached_info_valid = false;
 resctrl::MbaInfo cached_info;
-std::set<int> created_slots;
-std::map<int, int> group_percent_by_slot;
+std::set<std::string> created_groups;
+std::map<std::string, int> group_percent_by_name;
+std::map<pid_t, std::string> assigned_group_by_tid;
+std::vector<std::string> mba_level_group_names;
+std::string last_error_text;
 
 std::string join_path(const std::string &a, const std::string &b) {
     if (a.empty()) {
@@ -41,6 +46,10 @@ std::string join_path(const std::string &a, const std::string &b) {
 bool is_directory(const std::string &path) {
     struct stat st {};
     return stat(path.c_str(), &st) == 0 && S_ISDIR(st.st_mode);
+}
+
+std::string errno_diagnostic(const std::string &operation, const std::string &path) {
+    return operation + " " + path + ": " + std::strerror(errno);
 }
 
 bool read_file(const std::string &path, std::string *out) {
@@ -73,15 +82,19 @@ std::string trim(std::string text) {
     return text.substr(first, last - first + 1);
 }
 
-int read_int_file(const std::string &path, int fallback) {
+bool read_int_file(const std::string &path, int *out) {
     std::string text;
-    if (!read_file(path, &text)) {
-        return fallback;
+    if (!out || !read_file(path, &text)) {
+        return false;
     }
 
     char *end = nullptr;
     const long value = std::strtol(text.c_str(), &end, 10);
-    return end != text.c_str() ? static_cast<int>(value) : fallback;
+    if (end == text.c_str()) {
+        return false;
+    }
+    *out = static_cast<int>(value);
+    return true;
 }
 
 std::vector<int> parse_mb_domains(const std::string &schemata) {
@@ -123,44 +136,56 @@ std::vector<int> parse_mb_domains(const std::string &schemata) {
     return domains;
 }
 
-resctrl::MbaInfo build_mba_info_locked(int fallback_min_percent,
-                                       int fallback_granularity_percent,
-                                       int max_percent) {
+resctrl::MbaInfo build_mba_info_locked() {
     resctrl::MbaInfo info;
-    info.min_percent = fallback_min_percent;
-    info.granularity_percent = fallback_granularity_percent;
-    info.max_percent = max_percent;
+    info.min_percent = resctrl::kMbaLevelMinPercent;
+    info.granularity_percent = resctrl::kMbaLevelStepPercent;
+    info.max_percent = resctrl::kMbaLevelMaxPercent;
 
     if (!is_directory(configured_root)) {
+        info.diagnostic = "resctrl root is missing or not a directory: " + configured_root;
         return info;
     }
 
     const std::string mb_info_dir = join_path(join_path(configured_root, "info"), "MB");
-    info.min_percent = read_int_file(join_path(mb_info_dir, "min_bandwidth"),
-                                     fallback_min_percent);
-    info.granularity_percent = read_int_file(join_path(mb_info_dir, "bandwidth_gran"),
-                                             fallback_granularity_percent);
-    if (info.min_percent <= 0) {
-        info.min_percent = fallback_min_percent;
+    const std::string min_path = join_path(mb_info_dir, "min_bandwidth");
+    if (!read_int_file(min_path, &info.min_percent) || info.min_percent <= 0) {
+        info.diagnostic = "cannot read positive MBA min_bandwidth: " + min_path;
+        return info;
     }
-    if (info.granularity_percent <= 0) {
-        info.granularity_percent = fallback_granularity_percent;
-    }
-    if (info.max_percent <= 0) {
-        info.max_percent = 100;
+    const std::string granularity_path = join_path(mb_info_dir, "bandwidth_gran");
+    if (!read_int_file(granularity_path, &info.granularity_percent) ||
+        info.granularity_percent <= 0) {
+        info.diagnostic = "cannot read positive MBA bandwidth_gran: " + granularity_path;
+        return info;
     }
     if (info.min_percent > info.max_percent) {
-        info.min_percent = info.max_percent;
+        info.diagnostic = "MBA min_bandwidth exceeds configured max percent";
+        return info;
     }
 
+    const std::string schemata_path = join_path(configured_root, "schemata");
     std::string schemata;
-    if (read_file(join_path(configured_root, "schemata"), &schemata)) {
-        info.domains = parse_mb_domains(schemata);
+    if (!read_file(schemata_path, &schemata)) {
+        info.diagnostic = "cannot read resctrl schemata: " + schemata_path;
+        return info;
+    }
+    info.domains = parse_mb_domains(schemata);
+    if (info.domains.empty()) {
+        info.diagnostic = "MBA is not listed in resctrl schemata: " + schemata_path;
+        return info;
     }
 
-    info.available = !info.domains.empty() &&
-                     access(configured_root.c_str(), W_OK | X_OK) == 0 &&
-                     access(join_path(configured_root, "tasks").c_str(), W_OK) == 0;
+    const std::string tasks_path = join_path(configured_root, "tasks");
+    if (access(configured_root.c_str(), W_OK | X_OK) != 0) {
+        info.diagnostic = errno_diagnostic("resctrl root is not writable", configured_root);
+        return info;
+    }
+    if (access(tasks_path.c_str(), W_OK) != 0) {
+        info.diagnostic = errno_diagnostic("resctrl tasks is not writable", tasks_path);
+        return info;
+    }
+    info.available = true;
     return info;
 }
 
@@ -181,12 +206,14 @@ int normalize_percent_locked(double percent) {
     return std::clamp(rounded, min_percent, max_percent);
 }
 
-std::string group_name_for_slot(int slot) {
-    return configured_prefix + "_t" + std::to_string(std::max(0, slot));
+
+std::string group_name_for_mba_level(int level) {
+    return configured_prefix + "_mba_level" +
+           std::to_string(std::clamp(level, 0, resctrl::kMbaLevelCount - 1) + 1);
 }
 
-std::string group_path_for_slot(int slot) {
-    return join_path(configured_root, group_name_for_slot(slot));
+std::string group_path_for_name(const std::string &group_name) {
+    return join_path(configured_root, group_name);
 }
 
 std::string schemata_for_percent_locked(int percent) {
@@ -202,34 +229,43 @@ std::string schemata_for_percent_locked(int percent) {
     return out.str();
 }
 
-bool ensure_group_locked(int slot, int percent) {
-    const std::string path = group_path_for_slot(slot);
+bool ensure_named_group_locked(const std::string &group_name, int percent) {
+    const std::string path = group_path_for_name(group_name);
     bool created = false;
     if (!is_directory(path)) {
         if (mkdir(path.c_str(), 0755) != 0) {
+            last_error_text = errno_diagnostic("cannot create MBA group", path);
             return false;
         }
-        created_slots.insert(slot);
+        created_groups.insert(group_name);
         created = true;
     }
 
-    const auto iter = group_percent_by_slot.find(slot);
-    if (!created && iter != group_percent_by_slot.end() && iter->second == percent) {
+    const auto iter = group_percent_by_name.find(group_name);
+    if (!created && iter != group_percent_by_name.end() && iter->second == percent) {
         return true;
     }
 
     if (!write_file(join_path(path, "schemata"), schemata_for_percent_locked(percent))) {
+        last_error_text = errno_diagnostic("cannot write MBA schemata", join_path(path, "schemata"));
         return false;
     }
-    group_percent_by_slot[slot] = percent;
+    group_percent_by_name[group_name] = percent;
     return true;
 }
 
+
 bool write_tid_to_tasks(const std::string &tasks_path, pid_t tid) {
     if (tid <= 0) {
+        last_error_text = "current thread ID is unavailable";
         return false;
     }
-    return write_file(tasks_path, std::to_string(static_cast<long>(tid)) + "\n");
+    if (!write_file(tasks_path, std::to_string(static_cast<long>(tid)) + "\n")) {
+        last_error_text = errno_diagnostic("cannot assign TID " + std::to_string(static_cast<long>(tid)) +
+                                           " to MBA group through", tasks_path);
+        return false;
+    }
+    return true;
 }
 
 }  // namespace
@@ -246,29 +282,35 @@ void configure(const char *root_path, const char *group_prefix) {
     }
     cached_info_valid = false;
     cached_info = MbaInfo();
-    created_slots.clear();
-    group_percent_by_slot.clear();
+    created_groups.clear();
+    group_percent_by_name.clear();
+    assigned_group_by_tid.clear();
+    mba_level_group_names.clear();
+    last_error_text.clear();
 }
 
-MbaInfo mba_info(int fallback_min_percent,
-                 int fallback_granularity_percent,
-                 int max_percent) {
+MbaInfo mba_info() {
     std::lock_guard<std::mutex> lock(resctrl_mutex);
-    cached_info = build_mba_info_locked(fallback_min_percent,
-                                        fallback_granularity_percent,
-                                        max_percent);
+    cached_info = build_mba_info_locked();
     cached_info_valid = true;
+    last_error_text = cached_info.diagnostic;
     return cached_info;
 }
 
 bool control_available() {
     std::lock_guard<std::mutex> lock(resctrl_mutex);
     if (!cached_info_valid) {
-        cached_info = build_mba_info_locked(10, 10, 100);
+        cached_info = build_mba_info_locked();
         cached_info_valid = true;
     }
+    last_error_text = cached_info.diagnostic;
     return cached_info.available;
 }
+std::string last_error() {
+    std::lock_guard<std::mutex> lock(resctrl_mutex);
+    return last_error_text.empty() ? cached_info.diagnostic : last_error_text;
+}
+
 
 int current_cpu() {
     const int cpu = sched_getcpu();
@@ -280,49 +322,116 @@ pid_t current_tid() {
     return tid > 0 ? static_cast<pid_t>(tid) : static_cast<pid_t>(-1);
 }
 
-AssignmentResult assign_current_thread_mba(int slot, double percent) {
+int mba_percent_for_level(int level) {
+    std::lock_guard<std::mutex> lock(resctrl_mutex);
+    if (!cached_info_valid) {
+        cached_info = build_mba_info_locked();
+        cached_info_valid = true;
+    }
+
+    const int requested_percent =
+        kMbaLevelPercents[static_cast<std::size_t>(
+            std::clamp(level, 0, kMbaLevelCount - 1))];
+    return normalize_percent_locked(requested_percent);
+}
+
+bool prepare_mba_level_groups() {
+    std::lock_guard<std::mutex> lock(resctrl_mutex);
+    if (!cached_info_valid) {
+        cached_info = build_mba_info_locked();
+        cached_info_valid = true;
+    }
+    if (!cached_info.available) {
+        last_error_text = cached_info.diagnostic;
+        return false;
+    }
+
+    std::vector<std::string> level_names;
+    level_names.reserve(kMbaLevelCount);
+    for (int level = 0; level < kMbaLevelCount; ++level) {
+        const int percent = normalize_percent_locked(
+            kMbaLevelPercents[static_cast<std::size_t>(level)]);
+        const std::string group_name = group_name_for_mba_level(level);
+        if (!ensure_named_group_locked(group_name, percent)) {
+            return false;
+        }
+        level_names.push_back(group_name);
+    }
+
+    mba_level_group_names = std::move(level_names);
+    last_error_text.clear();
+    return true;
+}
+AssignmentResult assign_current_thread_mba_level(int level) {
     AssignmentResult result;
     result.cpu = current_cpu();
     result.tid = current_tid();
 
     std::lock_guard<std::mutex> lock(resctrl_mutex);
     if (!cached_info_valid) {
-        cached_info = build_mba_info_locked(10, 10, 100);
+        cached_info = build_mba_info_locked();
         cached_info_valid = true;
     }
-    if (!cached_info.available || result.tid <= 0) {
+    if (!cached_info.available) {
+        last_error_text = cached_info.diagnostic;
+        return result;
+    }
+    if (result.tid <= 0) {
+        last_error_text = "current thread ID is unavailable";
         return result;
     }
 
-    const int normalized = normalize_percent_locked(percent);
-    if (!ensure_group_locked(slot, normalized)) {
+    if (level < 0 || level >= static_cast<int>(mba_level_group_names.size())) {
+        last_error_text = "requested MBA level was not prepared";
         return result;
     }
 
-    result.applied = write_tid_to_tasks(join_path(group_path_for_slot(slot), "tasks"),
+    result.group_name = mba_level_group_names[static_cast<std::size_t>(level)];
+    const auto assigned = assigned_group_by_tid.find(result.tid);
+    if (assigned != assigned_group_by_tid.end() && assigned->second == result.group_name) {
+        result.applied = true;
+        return result;
+    }
+
+    result.applied = write_tid_to_tasks(join_path(group_path_for_name(result.group_name), "tasks"),
                                         result.tid);
+    if (result.applied) {
+        assigned_group_by_tid[result.tid] = result.group_name;
+    }
     return result;
 }
+
 
 bool release_task(pid_t tid) {
     std::lock_guard<std::mutex> lock(resctrl_mutex);
     if (tid <= 0 || !is_directory(configured_root)) {
         return false;
     }
-    return write_tid_to_tasks(join_path(configured_root, "tasks"), tid);
+    const bool released = write_tid_to_tasks(join_path(configured_root, "tasks"), tid);
+    if (released) {
+        assigned_group_by_tid.erase(tid);
+    }
+    return released;
 }
 
 bool cleanup_created_groups() {
     std::lock_guard<std::mutex> lock(resctrl_mutex);
     bool ok = true;
-    for (const int slot : created_slots) {
-        const std::string path = group_path_for_slot(slot);
+    for (const auto &assignment : assigned_group_by_tid) {
+        if (!write_tid_to_tasks(join_path(configured_root, "tasks"), assignment.first)) {
+            ok = false;
+        }
+    }
+    for (const std::string &group_name : created_groups) {
+        const std::string path = group_path_for_name(group_name);
         if (rmdir(path.c_str()) != 0 && errno != ENOENT) {
             ok = false;
         }
     }
-    created_slots.clear();
-    group_percent_by_slot.clear();
+    created_groups.clear();
+    group_percent_by_name.clear();
+    assigned_group_by_tid.clear();
+    mba_level_group_names.clear();
     return ok;
 }
 

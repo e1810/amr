@@ -105,15 +105,16 @@ amr_metrics_print_summary() {
 }
 
 # Increase coarse_n to increase fine_n = coarse_n * 2^max_level.
-# The default here is intentionally heavier than the quick examples so the
-# per-thread loop time is larger than OpenMP/OMPT overhead.
-COARSE_N=${COARSE_N:-64}
-PARTS=${PARTS:-4}
+# Defaults use 16 threads. Doubling coarse_n from 64 to 128 keeps
+# coarse_n^2 / threads, and therefore the per-thread state working set,
+# roughly constant relative to the previous 4-thread default.
+COARSE_N=${COARSE_N:-128}
+PARTS=${PARTS:-16}
 MAX_LEVEL=${MAX_LEVEL:-3}
 STEPS=${STEPS:-2000}
 DIFFUSION=${DIFFUSION:-0.01}
 STEP_INTERVAL=${STEP_INTERVAL:-100}
-INITIAL_PATTERN=${INITIAL_PATTERN:-circle}
+INITIAL_PATTERN=${INITIAL_PATTERN:-fixed_imb}
 
 case "$INITIAL_PATTERN" in
     hotspot)
@@ -128,12 +129,18 @@ case "$INITIAL_PATTERN" in
     balanced_circle)
         DEFAULT_INITIAL_SCALE=0.287
         ;;
+    fixed_imb)
+        DEFAULT_INITIAL_SCALE=0.05
+        ;;
     *)
         DEFAULT_INITIAL_SCALE=0.25
         ;;
 esac
 INITIAL_SCALE=${INITIAL_SCALE:-$DEFAULT_INITIAL_SCALE}
 DIFFUSION_SUBSTEPS=${DIFFUSION_SUBSTEPS:-16}
+DIFFUSION_CFL=${DIFFUSION_CFL:-0.20}
+DIFFUSION_CFL_AFTER_STEP=${DIFFUSION_CFL_AFTER_STEP:--1}
+DIFFUSION_CFL_AFTER=${DIFFUSION_CFL_AFTER:-$DIFFUSION_CFL}
 STATE_COMPONENTS=${STATE_COMPONENTS:-1}
 
 if [ -n "${OMPT_TOOL_LIBRARY:-}" ]; then
@@ -176,7 +183,8 @@ AMR_START_NS=$(date +%s%N)
 set +e
 "$REPO_ROOT/amr" "$COARSE_N" "$PARTS" "$MAX_LEVEL" "$INITIAL_SCALE" "$STEPS" "$DIFFUSION" \
     "$SNAPSHOT_INTERVAL" "$SNAPSHOT_PREFIX" "$INITIAL_PATTERN" \
-    "$DIFFUSION_SUBSTEPS" "$STATE_COMPONENTS"
+    "$DIFFUSION_SUBSTEPS" "$STATE_COMPONENTS" "$DIFFUSION_CFL" \
+    "$DIFFUSION_CFL_AFTER_STEP" "$DIFFUSION_CFL_AFTER"
 AMR_STATUS=$?
 set -e
 AMR_END_NS=$(date +%s%N)

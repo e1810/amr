@@ -24,10 +24,10 @@ std::string configured_root = "/sys/fs/resctrl";
 std::string configured_prefix = "amr_l3";
 bool cached_info_valid = false;
 resctrl_cat::L3Info cached_info;
-std::set<int> created_slots;
-std::map<int, int> group_ways_by_slot;
-std::map<int, std::uint64_t> group_mask_by_slot;
-std::map<int, pid_t> assigned_tid_by_slot;
+std::set<std::string> created_groups;
+std::map<std::string, int> group_ways_by_name;
+std::map<std::string, std::uint64_t> group_mask_by_name;
+std::map<pid_t, std::string> assigned_group_by_tid;
 
 std::string join_path(const std::string &a, const std::string &b) {
     if (a.empty()) {
@@ -243,12 +243,13 @@ resctrl_cat::L3Info build_l3_info_locked(int fallback_min_cbm_bits) {
     return info;
 }
 
-std::string group_name_for_slot(int slot) {
-    return configured_prefix + "_t" + std::to_string(std::max(0, slot));
+std::string group_name_for_mask(int ways, std::uint64_t mask) {
+    return configured_prefix + "_w" + std::to_string(std::max(1, ways)) +
+           "_m" + hex_mask(mask);
 }
 
-std::string group_path_for_slot(int slot) {
-    return join_path(configured_root, group_name_for_slot(slot));
+std::string group_path_for_name(const std::string &group_name) {
+    return join_path(configured_root, group_name);
 }
 
 std::string schemata_for_mask_locked(std::uint64_t mask) {
@@ -264,30 +265,42 @@ std::string schemata_for_mask_locked(std::uint64_t mask) {
     return out.str();
 }
 
-bool ensure_group_locked(int slot, int ways, std::uint64_t mask) {
-    const std::string path = group_path_for_slot(slot);
+bool ensure_group_directory_locked(const std::string &group_name) {
+    const std::string path = group_path_for_name(group_name);
+    if (is_directory(path)) {
+        return true;
+    }
+    if (mkdir(path.c_str(), 0755) != 0) {
+        return false;
+    }
+    created_groups.insert(group_name);
+    return true;
+}
+
+bool ensure_group_locked(const std::string &group_name, int ways, std::uint64_t mask) {
+    const std::string path = group_path_for_name(group_name);
     bool created = false;
     if (!is_directory(path)) {
         if (mkdir(path.c_str(), 0755) != 0) {
             return false;
         }
-        created_slots.insert(slot);
+        created_groups.insert(group_name);
         created = true;
     }
 
-    const auto ways_iter = group_ways_by_slot.find(slot);
-    const auto mask_iter = group_mask_by_slot.find(slot);
+    const auto ways_iter = group_ways_by_name.find(group_name);
+    const auto mask_iter = group_mask_by_name.find(group_name);
     if (!created &&
-        ways_iter != group_ways_by_slot.end() && ways_iter->second == ways &&
-        mask_iter != group_mask_by_slot.end() && mask_iter->second == mask) {
+        ways_iter != group_ways_by_name.end() && ways_iter->second == ways &&
+        mask_iter != group_mask_by_name.end() && mask_iter->second == mask) {
         return true;
     }
 
     if (!write_file(join_path(path, "schemata"), schemata_for_mask_locked(mask))) {
         return false;
     }
-    group_ways_by_slot[slot] = ways;
-    group_mask_by_slot[slot] = mask;
+    group_ways_by_name[group_name] = ways;
+    group_mask_by_name[group_name] = mask;
     return true;
 }
 
@@ -322,10 +335,10 @@ void configure(const char *root_path, const char *group_prefix) {
     }
     cached_info_valid = false;
     cached_info = L3Info();
-    created_slots.clear();
-    group_ways_by_slot.clear();
-    group_mask_by_slot.clear();
-    assigned_tid_by_slot.clear();
+    created_groups.clear();
+    group_ways_by_name.clear();
+    group_mask_by_name.clear();
+    assigned_group_by_tid.clear();
 }
 
 L3Info l3_info(int fallback_min_cbm_bits) {
@@ -345,6 +358,7 @@ bool control_available() {
 }
 
 AssignmentResult assign_current_thread_l3(int slot, int requested_ways) {
+    (void)slot;
     AssignmentResult result;
     result.cpu = current_cpu();
     result.tid = current_tid();
@@ -362,25 +376,27 @@ AssignmentResult assign_current_thread_l3(int slot, int requested_ways) {
     const std::uint64_t mask = contiguous_mask_for_ways_locked(ways);
     result.ways = ways;
     result.mask = hex_mask(mask);
-    if (mask == 0 || !ensure_group_locked(slot, ways, mask)) {
+    result.group_name = group_name_for_mask(ways, mask);
+    if (mask == 0 || !ensure_group_locked(result.group_name, ways, mask)) {
         return result;
     }
 
-    const auto assigned = assigned_tid_by_slot.find(slot);
-    if (assigned != assigned_tid_by_slot.end() && assigned->second == result.tid) {
+    const auto assigned = assigned_group_by_tid.find(result.tid);
+    if (assigned != assigned_group_by_tid.end() && assigned->second == result.group_name) {
         result.applied = true;
         return result;
     }
 
-    result.applied = write_tid_to_tasks(join_path(group_path_for_slot(slot), "tasks"),
+    result.applied = write_tid_to_tasks(join_path(group_path_for_name(result.group_name), "tasks"),
                                         result.tid);
     if (result.applied) {
-        assigned_tid_by_slot[slot] = result.tid;
+        assigned_group_by_tid[result.tid] = result.group_name;
     }
     return result;
 }
 
 AssignmentResult assign_current_thread_l3_mask(int slot, const std::string &requested_mask) {
+    (void)slot;
     AssignmentResult result;
     result.cpu = current_cpu();
     result.tid = current_tid();
@@ -406,20 +422,105 @@ AssignmentResult assign_current_thread_l3_mask(int slot, const std::string &requ
 
     result.ways = ways;
     result.mask = hex_mask(mask);
-    if (!ensure_group_locked(slot, ways, mask)) {
+    result.group_name = group_name_for_mask(ways, mask);
+    if (!ensure_group_locked(result.group_name, ways, mask)) {
         return result;
     }
 
-    const auto assigned = assigned_tid_by_slot.find(slot);
-    if (assigned != assigned_tid_by_slot.end() && assigned->second == result.tid) {
+    const auto assigned = assigned_group_by_tid.find(result.tid);
+    if (assigned != assigned_group_by_tid.end() && assigned->second == result.group_name) {
         result.applied = true;
         return result;
     }
 
-    result.applied = write_tid_to_tasks(join_path(group_path_for_slot(slot), "tasks"),
+    result.applied = write_tid_to_tasks(join_path(group_path_for_name(result.group_name), "tasks"),
                                         result.tid);
     if (result.applied) {
-        assigned_tid_by_slot[slot] = result.tid;
+        assigned_group_by_tid[result.tid] = result.group_name;
+    }
+    return result;
+}
+
+AssignmentResult assign_current_thread_monitor_l3(int slot, int requested_ways) {
+    (void)slot;
+    AssignmentResult result;
+    result.cpu = current_cpu();
+    result.tid = current_tid();
+
+    std::lock_guard<std::mutex> lock(cat_mutex);
+    if (!cached_info_valid) {
+        cached_info = build_l3_info_locked(1);
+        cached_info_valid = true;
+    }
+    if (!cached_info.available || result.tid <= 0) {
+        return result;
+    }
+
+    const int ways = effective_ways(requested_ways);
+    const std::uint64_t mask = contiguous_mask_for_ways_locked(ways);
+    result.ways = ways;
+    result.mask = hex_mask(mask);
+    result.group_name = group_name_for_mask(ways, mask);
+    if (mask == 0 || !ensure_group_directory_locked(result.group_name)) {
+        return result;
+    }
+
+    const auto assigned = assigned_group_by_tid.find(result.tid);
+    if (assigned != assigned_group_by_tid.end() && assigned->second == result.group_name) {
+        result.applied = true;
+        return result;
+    }
+
+    result.applied = write_tid_to_tasks(join_path(group_path_for_name(result.group_name), "tasks"),
+                                        result.tid);
+    if (result.applied) {
+        assigned_group_by_tid[result.tid] = result.group_name;
+    }
+    return result;
+}
+
+AssignmentResult assign_current_thread_monitor_l3_mask(int slot, const std::string &requested_mask) {
+    (void)slot;
+    AssignmentResult result;
+    result.cpu = current_cpu();
+    result.tid = current_tid();
+
+    std::lock_guard<std::mutex> lock(cat_mutex);
+    if (!cached_info_valid) {
+        cached_info = build_l3_info_locked(1);
+        cached_info_valid = true;
+    }
+    if (!cached_info.available || result.tid <= 0) {
+        return result;
+    }
+
+    std::uint64_t mask = 0;
+    if (!parse_hex_mask(requested_mask, &mask)) {
+        return result;
+    }
+    mask &= cached_info.cbm_mask;
+    const int ways = popcount64(mask);
+    if (mask == 0 || ways < std::max(1, cached_info.min_cbm_bits)) {
+        return result;
+    }
+
+    result.ways = ways;
+    result.mask = hex_mask(mask);
+    result.group_name = group_name_for_mask(ways, mask);
+    if (!ensure_group_directory_locked(result.group_name)) {
+        return result;
+    }
+
+    const auto assigned = assigned_group_by_tid.find(result.tid);
+    if (assigned != assigned_group_by_tid.end() && assigned->second == result.group_name) {
+        result.applied = true;
+        return result;
+    }
+
+    result.applied = write_tid_to_tasks(join_path(group_path_for_name(result.group_name), "tasks"),
+                                        result.tid);
+    if (result.applied) {
+        assigned_group_by_tid[result.tid] = result.group_name;
     }
     return result;
 }
@@ -429,22 +530,26 @@ bool release_task(pid_t tid) {
     if (tid <= 0 || !is_directory(configured_root)) {
         return false;
     }
-    return write_tid_to_tasks(join_path(configured_root, "tasks"), tid);
+    const bool released = write_tid_to_tasks(join_path(configured_root, "tasks"), tid);
+    if (released) {
+        assigned_group_by_tid.erase(tid);
+    }
+    return released;
 }
 
 bool cleanup_created_groups() {
     std::lock_guard<std::mutex> lock(cat_mutex);
     bool ok = true;
-    for (const int slot : created_slots) {
-        const std::string path = group_path_for_slot(slot);
+    for (const std::string &group_name : created_groups) {
+        const std::string path = group_path_for_name(group_name);
         if (rmdir(path.c_str()) != 0 && errno != ENOENT) {
             ok = false;
         }
     }
-    created_slots.clear();
-    group_ways_by_slot.clear();
-    group_mask_by_slot.clear();
-    assigned_tid_by_slot.clear();
+    created_groups.clear();
+    group_ways_by_name.clear();
+    group_mask_by_name.clear();
+    assigned_group_by_tid.clear();
     return ok;
 }
 

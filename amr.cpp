@@ -244,9 +244,11 @@ int main(int argc, char **argv) {
     // coarse_n:      number of cells per side in the initial mesh.
     // max_level:     maximum AMR depth; fine_n = coarse_n * 2^max_level.
     // parts:         OpenMP thread count and row-part guide for logs.
-    // initial_scale:    size parameter for checker/fine_checker/stripe/square/circle/balanced_circle/hotspot/multi_circle data.
+    // initial_scale:    size parameter for checker/fine_checker/stripe/square/circle/balanced_circle/fixed_imb/hotspot/multi_circle data.
     // steps:            number of explicit heat-diffusion time steps.
     // state_components: number of per-cell state variables advanced by the stencil.
+    // diffusion_cfl: per-substep explicit diffusion strength; lower values
+    //                preserve sharp imbalances longer.
     // ------------------------------------------------------------------
     const int coarse_n = argc > 1 ? std::atoi(argv[1]) : 16;
     const int parts = argc > 2 ? std::atoi(argv[2]) : 4;
@@ -259,6 +261,9 @@ int main(int argc, char **argv) {
     const std::string initial_pattern = argc > 9 ? argv[9] : "checker";
     const int diffusion_substeps = argc > 10 ? std::atoi(argv[10]) : 1;
     const int state_components = argc > 11 ? std::atoi(argv[11]) : 1;
+    const double diffusion_cfl = argc > 12 ? std::atof(argv[12]) : 0.20;
+    const int diffusion_cfl_after_step = argc > 13 ? std::atoi(argv[13]) : -1;
+    const double diffusion_cfl_after = argc > 14 ? std::atof(argv[14]) : diffusion_cfl;
     const bool known_initial_pattern =
         initial_pattern == "checker" ||
         initial_pattern == "fine_checker" ||
@@ -266,19 +271,26 @@ int main(int argc, char **argv) {
         initial_pattern == "square" ||
         initial_pattern == "circle" ||
         initial_pattern == "balanced_circle" ||
+        initial_pattern == "fixed_imb" ||
         initial_pattern == "hotspot" ||
         initial_pattern == "multi_circle";
 
     if (coarse_n < 1 || parts < 1 || parts > coarse_n || max_level < 0 || max_level > 10 ||
         initial_scale <= 0.0 || steps < 0 || diffusion <= 0.0 || snapshot_interval < 0 ||
         diffusion_substeps < 1 || state_components < 1 ||
+        diffusion_cfl <= 0.0 || diffusion_cfl > 0.25 ||
+        diffusion_cfl_after_step < -1 ||
+        diffusion_cfl_after <= 0.0 || diffusion_cfl_after > 0.25 ||
         !known_initial_pattern) {
         std::cerr << "usage: " << argv[0]
                   << " [coarse_n>=1] [parts in 1..coarse_n] [max_level 0..10]"
                   << " [initial_scale>0] [steps>=0] [diffusion>0]"
                   << " [snapshot_interval>=0] [snapshot_prefix]"
-                  << " [initial_pattern: checker|fine_checker|stripe|square|circle|balanced_circle|hotspot|multi_circle]"
-                  << " [diffusion_substeps>=1] [state_components>=1]\n";
+                  << " [initial_pattern: checker|fine_checker|stripe|square|circle|balanced_circle|fixed_imb|hotspot|multi_circle]"
+                  << " [diffusion_substeps>=1] [state_components>=1]"
+                  << " [diffusion_cfl in (0,0.25]]"
+                  << " [diffusion_cfl_after_step>=-1]"
+                  << " [diffusion_cfl_after in (0,0.25]]\n";
         return 2;
     }
 
@@ -294,8 +306,8 @@ int main(int argc, char **argv) {
     const std::size_t state_size = static_cast<std::size_t>(array_size) *
                                    static_cast<std::size_t>(state_components);
     const double dx_min = 1.0 / static_cast<double>(fine_n);
-    const double dt = 0.20 * dx_min * dx_min / diffusion;
-    const double output_dt = dt * static_cast<double>(diffusion_substeps);
+    const double base_dt = diffusion_cfl * dx_min * dx_min / diffusion;
+    const double base_output_dt = base_dt * static_cast<double>(diffusion_substeps);
     const double refine_threshold = 0.05;
     const double coarsen_threshold = 0.015;
     const double coarsen_value_tolerance = 0.03;
@@ -334,10 +346,13 @@ int main(int argc, char **argv) {
               << ", row_parts=" << parts << '\n';
     std::cout << "heat diffusion: steps=" << steps
               << ", diffusion=" << diffusion
-              << ", dt=" << dt
+              << ", base_dt=" << base_dt
               << ", diffusion_substeps=" << diffusion_substeps
+              << ", diffusion_cfl=" << diffusion_cfl
+              << ", diffusion_cfl_after_step=" << diffusion_cfl_after_step
+              << ", diffusion_cfl_after=" << diffusion_cfl_after
               << ", state_components=" << state_components
-              << ", output_dt=" << output_dt
+              << ", base_output_dt=" << base_output_dt
               << ", refine_threshold=" << refine_threshold
               << ", coarsen_threshold=" << coarsen_threshold
               << ", coarsen_value_tolerance=" << coarsen_value_tolerance << '\n';
@@ -388,6 +403,43 @@ int main(int argc, char **argv) {
                     primary_value =
                         (std::abs(x - 0.5) <= 0.5 * initial_scale &&
                          std::abs(y - 0.5) <= 0.5 * initial_scale) ? 1.0 : 0.0;
+                } else if (initial_pattern == "fixed_imb") {
+                    const int high_threads = std::max(1, parts / 2);
+                    const int high_begin = (parts - high_threads) / 2;
+                    const int high_end = high_begin + high_threads;
+                    const int thread_band = std::max(
+                        0,
+                        std::min(parts - 1, static_cast<int>(y * static_cast<double>(parts))));
+                    const double local_y = y * static_cast<double>(parts) -
+                                           static_cast<double>(thread_band);
+                    const bool high_thread =
+                        thread_band >= high_begin && thread_band < high_end;
+                    const double patch_width = std::min(1.0, 2.0 * initial_scale);
+                    const double edge_margin = std::min(0.45, initial_scale);
+                    const double patch_y_begin = 0.375;
+                    const double patch_y_end = 0.625;
+                    // Tuned for the default fixed_imb case to stay near a 1.5x high/low working-set ratio.
+                    const double patch_value = 0.81;
+                    double patch_left = 0.0;
+                    if (high_threads > 1) {
+                        const int top_to_bottom_index = high_end - 1 - thread_band;
+                        const double available_gap = std::max(
+                            0.0,
+                            1.0 - 2.0 * edge_margin -
+                                patch_width * static_cast<double>(high_threads));
+                        const double gap =
+                            available_gap / static_cast<double>(high_threads - 1);
+                        patch_left = edge_margin +
+                                     static_cast<double>(top_to_bottom_index) *
+                                         (patch_width + gap);
+                    }
+                    const double patch_right = std::min(1.0, patch_left + patch_width);
+                    primary_value =
+                        (high_thread &&
+                         x >= patch_left &&
+                         x <= patch_right &&
+                         local_y >= patch_y_begin &&
+                         local_y < patch_y_end) ? patch_value : 0.0;
                 } else if (initial_pattern == "hotspot") {
                     const double hotspot_x = 0.35;
                     const double hotspot_y = 0.35;
@@ -466,6 +518,8 @@ int main(int argc, char **argv) {
         }
     }
 
+    double simulation_time = 0.0;
+
     // ------------------------------------------------------------------
     // Time loop.
     //
@@ -477,6 +531,12 @@ int main(int argc, char **argv) {
     //   5. Apply coarsen/refine sequentially.
     // ------------------------------------------------------------------
     for (int step = 1; step <= steps; ++step) {
+        const double step_diffusion_cfl =
+            (diffusion_cfl_after_step >= 0 && step > diffusion_cfl_after_step)
+                ? diffusion_cfl_after
+                : diffusion_cfl;
+        const double step_dt = step_diffusion_cfl * dx_min * dx_min / diffusion;
+
         // owner[] is a read-only lookup table for the parallel physics loops
         // below. It must be rebuilt after any mesh topology change.
         rebuild_owner(active, level, owner, fine_n, max_level);
@@ -513,7 +573,7 @@ int main(int argc, char **argv) {
                             const double top = face_average(top_face, owner, value, state_components, component, p, center);
                             const double laplacian = (left + right + bottom + top - 4.0 * center) / (dx * dx);
                             next_value[state_index(p, component, state_components)] =
-                                center + dt * diffusion * laplacian;
+                                center + step_dt * diffusion * laplacian;
                         }
                     }
                 }
@@ -532,6 +592,8 @@ int main(int argc, char **argv) {
                 }
             }
         }
+
+        simulation_time += step_dt * static_cast<double>(diffusion_substeps);
 
         // Parallel region 3: compute refinement importance.
         //
@@ -770,7 +832,7 @@ int main(int argc, char **argv) {
             (step % snapshot_interval == 0 || step == steps)) {
             write_snapshot_text(snapshot_path(snapshot_prefix, step),
                                 step,
-                                step * output_dt,
+                                simulation_time,
                                 coarse_n,
                                 parts,
                                 max_level,

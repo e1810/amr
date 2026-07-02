@@ -17,6 +17,7 @@ struct Sample {
 
 void configure(const char *root_path, const char *group_prefix);
 Sample sample_slot(int slot);
+Sample sample_group(const std::string &group_name);
 
 std::string root_path();
 std::string group_prefix();
