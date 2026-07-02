@@ -1,0 +1,491 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2166 414">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:monospace;font-size:11px}.small{font-size:9px}</style>
+<text x="12" y="20">OMPT cache counts, max_hit=5.1M, max_miss=17.4M, color=0-17.4M</text>
+<text class="small" x="12" y="35">top: hit count, bottom: miss count</text>
+<text class="small" x="150" y="40" text-anchor="middle">t0</text>
+<text class="small" x="278" y="40" text-anchor="middle">t1</text>
+<text class="small" x="406" y="40" text-anchor="middle">t2</text>
+<text class="small" x="534" y="40" text-anchor="middle">t3</text>
+<text class="small" x="662" y="40" text-anchor="middle">t4</text>
+<text class="small" x="790" y="40" text-anchor="middle">t5</text>
+<text class="small" x="918" y="40" text-anchor="middle">t6</text>
+<text class="small" x="1046" y="40" text-anchor="middle">t7</text>
+<text class="small" x="1174" y="40" text-anchor="middle">t8</text>
+<text class="small" x="1302" y="40" text-anchor="middle">t9</text>
+<text class="small" x="1430" y="40" text-anchor="middle">t10</text>
+<text class="small" x="1558" y="40" text-anchor="middle">t11</text>
+<text class="small" x="1686" y="40" text-anchor="middle">t12</text>
+<text class="small" x="1814" y="40" text-anchor="middle">t13</text>
+<text class="small" x="1942" y="40" text-anchor="middle">t14</text>
+<text class="small" x="2070" y="40" text-anchor="middle">t15</text>
+<text x="8" y="58">s100</text>
+<text class="small" x="8" y="73">H 4.9M</text>
+<text class="small" x="8" y="86">M 16.5M</text>
+<rect x="86" y="46" width="125" height="22" fill="rgb(36,103,234)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 0, references 7036436, hits 2911070, misses 4125366, miss_rate_pct 58.629, metric hits</title></rect>
+<rect x="86" y="68" width="125" height="22" fill="rgb(22,139,224)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 0, references 7036436, hits 2911070, misses 4125366, miss_rate_pct 58.629, metric misses</title></rect>
+<text class="small" x="148.5" y="59" text-anchor="middle" fill="#f8fafc">H 2.9M</text>
+<text class="small" x="148.5" y="81" text-anchor="middle" fill="#0f172a">M 4.1M</text>
+<rect x="214" y="46" width="125" height="22" fill="rgb(30,117,230)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 1, references 7775334, hits 3398161, misses 4377173, miss_rate_pct 56.296, metric hits</title></rect>
+<rect x="214" y="68" width="125" height="22" fill="rgb(19,146,222)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 1, references 7775334, hits 3398161, misses 4377173, miss_rate_pct 56.296, metric misses</title></rect>
+<text class="small" x="276.5" y="59" text-anchor="middle" fill="#f8fafc">H 3.4M</text>
+<text class="small" x="276.5" y="81" text-anchor="middle" fill="#0f172a">M 4.4M</text>
+<rect x="342" y="46" width="125" height="22" fill="rgb(36,97,233)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 2, references 7864829, hits 2734786, misses 5130043, miss_rate_pct 65.228, metric hits</title></rect>
+<rect x="342" y="68" width="125" height="22" fill="rgb(11,169,216)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 2, references 7864829, hits 2734786, misses 5130043, miss_rate_pct 65.228, metric misses</title></rect>
+<text class="small" x="404.5" y="59" text-anchor="middle" fill="#f8fafc">H 2.7M</text>
+<text class="small" x="404.5" y="81" text-anchor="middle" fill="#0f172a">M 5.1M</text>
+<rect x="470" y="46" width="125" height="22" fill="rgb(34,92,225)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 3, references 7844797, hits 2542137, misses 5302660, miss_rate_pct 67.595, metric hits</title></rect>
+<rect x="470" y="68" width="125" height="22" fill="rgb(9,174,214)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 3, references 7844797, hits 2542137, misses 5302660, miss_rate_pct 67.595, metric misses</title></rect>
+<text class="small" x="532.5" y="59" text-anchor="middle" fill="#f8fafc">H 2.5M</text>
+<text class="small" x="532.5" y="81" text-anchor="middle" fill="#0f172a">M 5.3M</text>
+<rect x="598" y="46" width="125" height="22" fill="rgb(13,163,217)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 4, references 21358678, hits 4948062, misses 16410616, miss_rate_pct 76.833, metric hits</title></rect>
+<rect x="598" y="68" width="125" height="22" fill="rgb(231,66,32)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 4, references 21358678, hits 4948062, misses 16410616, miss_rate_pct 76.833, metric misses</title></rect>
+<text class="small" x="660.5" y="59" text-anchor="middle" fill="#0f172a">H 4.9M</text>
+<text class="small" x="660.5" y="81" text-anchor="middle" fill="#f8fafc">M 16.4M</text>
+<rect x="726" y="46" width="125" height="22" fill="rgb(19,147,222)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 5, references 20890008, hits 4419037, misses 16470971, miss_rate_pct 78.846, metric hits</title></rect>
+<rect x="726" y="68" width="125" height="22" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 5, references 20890008, hits 4419037, misses 16470971, miss_rate_pct 78.846, metric misses</title></rect>
+<text class="small" x="788.5" y="59" text-anchor="middle" fill="#0f172a">H 4.4M</text>
+<text class="small" x="788.5" y="81" text-anchor="middle" fill="#f8fafc">M 16.5M</text>
+<rect x="854" y="46" width="125" height="22" fill="rgb(27,125,228)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 6, references 19622119, hits 3669615, misses 15952504, miss_rate_pct 81.299, metric hits</title></rect>
+<rect x="854" y="68" width="125" height="22" fill="rgb(235,79,29)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 6, references 19622119, hits 3669615, misses 15952504, miss_rate_pct 81.299, metric misses</title></rect>
+<text class="small" x="916.5" y="59" text-anchor="middle" fill="#f8fafc">H 3.7M</text>
+<text class="small" x="916.5" y="81" text-anchor="middle" fill="#f8fafc">M 16.0M</text>
+<rect x="982" y="46" width="125" height="22" fill="rgb(19,147,222)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 7, references 20901618, hits 4412159, misses 16489459, miss_rate_pct 78.891, metric hits</title></rect>
+<rect x="982" y="68" width="125" height="22" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 7, references 20901618, hits 4412159, misses 16489459, miss_rate_pct 78.891, metric misses</title></rect>
+<text class="small" x="1044.5" y="59" text-anchor="middle" fill="#0f172a">H 4.4M</text>
+<text class="small" x="1044.5" y="81" text-anchor="middle" fill="#f8fafc">M 16.5M</text>
+<rect x="1110" y="46" width="125" height="22" fill="rgb(18,151,221)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 8, references 20909410, hits 4538074, misses 16371336, miss_rate_pct 78.296, metric hits</title></rect>
+<rect x="1110" y="68" width="125" height="22" fill="rgb(231,67,32)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 8, references 20909410, hits 4538074, misses 16371336, miss_rate_pct 78.296, metric misses</title></rect>
+<text class="small" x="1172.5" y="59" text-anchor="middle" fill="#0f172a">H 4.5M</text>
+<text class="small" x="1172.5" y="81" text-anchor="middle" fill="#f8fafc">M 16.4M</text>
+<rect x="1238" y="46" width="125" height="22" fill="rgb(28,123,228)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 9, references 19608242, hits 3598882, misses 16009360, miss_rate_pct 81.646, metric hits</title></rect>
+<rect x="1238" y="68" width="125" height="22" fill="rgb(235,77,30)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 9, references 19608242, hits 3598882, misses 16009360, miss_rate_pct 81.646, metric misses</title></rect>
+<text class="small" x="1300.5" y="59" text-anchor="middle" fill="#f8fafc">H 3.6M</text>
+<text class="small" x="1300.5" y="81" text-anchor="middle" fill="#f8fafc">M 16.0M</text>
+<rect x="1366" y="46" width="125" height="22" fill="rgb(19,148,221)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 10, references 20904544, hits 4437612, misses 16466932, miss_rate_pct 78.772, metric hits</title></rect>
+<rect x="1366" y="68" width="125" height="22" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 10, references 20904544, hits 4437612, misses 16466932, miss_rate_pct 78.772, metric misses</title></rect>
+<text class="small" x="1428.5" y="59" text-anchor="middle" fill="#0f172a">H 4.4M</text>
+<text class="small" x="1428.5" y="81" text-anchor="middle" fill="#f8fafc">M 16.5M</text>
+<rect x="1494" y="46" width="125" height="22" fill="rgb(18,150,221)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 11, references 20828638, hits 4489232, misses 16339406, miss_rate_pct 78.447, metric hits</title></rect>
+<rect x="1494" y="68" width="125" height="22" fill="rgb(231,68,32)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 11, references 20828638, hits 4489232, misses 16339406, miss_rate_pct 78.447, metric misses</title></rect>
+<text class="small" x="1556.5" y="59" text-anchor="middle" fill="#0f172a">H 4.5M</text>
+<text class="small" x="1556.5" y="81" text-anchor="middle" fill="#f8fafc">M 16.3M</text>
+<rect x="1622" y="46" width="125" height="22" fill="rgb(22,59,175)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 12, references 7737981, hits 1345409, misses 6392572, miss_rate_pct 82.613, metric hits</title></rect>
+<rect x="1622" y="68" width="125" height="22" fill="rgb(13,186,181)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 12, references 7737981, hits 1345409, misses 6392572, miss_rate_pct 82.613, metric misses</title></rect>
+<text class="small" x="1684.5" y="59" text-anchor="middle" fill="#f8fafc">H 1.3M</text>
+<text class="small" x="1684.5" y="81" text-anchor="middle" fill="#0f172a">M 6.4M</text>
+<rect x="1750" y="46" width="125" height="22" fill="rgb(20,53,166)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 13, references 7732099, hits 1122554, misses 6609545, miss_rate_pct 85.482, metric hits</title></rect>
+<rect x="1750" y="68" width="125" height="22" fill="rgb(15,187,173)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 13, references 7732099, hits 1122554, misses 6609545, miss_rate_pct 85.482, metric misses</title></rect>
+<text class="small" x="1812.5" y="59" text-anchor="middle" fill="#f8fafc">H 1.1M</text>
+<text class="small" x="1812.5" y="81" text-anchor="middle" fill="#0f172a">M 6.6M</text>
+<rect x="1878" y="46" width="125" height="22" fill="rgb(19,52,164)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 14, references 7748622, hits 1072304, misses 6676318, miss_rate_pct 86.161, metric hits</title></rect>
+<rect x="1878" y="68" width="125" height="22" fill="rgb(16,187,171)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 14, references 7748622, hits 1072304, misses 6676318, miss_rate_pct 86.161, metric misses</title></rect>
+<text class="small" x="1940.5" y="59" text-anchor="middle" fill="#f8fafc">H 1.1M</text>
+<text class="small" x="1940.5" y="81" text-anchor="middle" fill="#0f172a">M 6.7M</text>
+<rect x="2006" y="46" width="125" height="22" fill="rgb(32,86,215)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 15, references 7647695, hits 2307857, misses 5339838, miss_rate_pct 69.823, metric hits</title></rect>
+<rect x="2006" y="68" width="125" height="22" fill="rgb(9,175,214)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 15, references 7647695, hits 2307857, misses 5339838, miss_rate_pct 69.823, metric misses</title></rect>
+<text class="small" x="2068.5" y="59" text-anchor="middle" fill="#f8fafc">H 2.3M</text>
+<text class="small" x="2068.5" y="81" text-anchor="middle" fill="#0f172a">M 5.3M</text>
+<text x="8" y="106">s200</text>
+<text class="small" x="8" y="121">H 5.1M</text>
+<text class="small" x="8" y="134">M 17.4M</text>
+<rect x="86" y="94" width="125" height="22" fill="rgb(36,101,234)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 0, references 7027850, hits 2870676, misses 4157174, miss_rate_pct 59.153, metric hits</title></rect>
+<rect x="86" y="116" width="125" height="22" fill="rgb(22,140,224)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 0, references 7027850, hits 2870676, misses 4157174, miss_rate_pct 59.153, metric misses</title></rect>
+<text class="small" x="148.5" y="107" text-anchor="middle" fill="#f8fafc">H 2.9M</text>
+<text class="small" x="148.5" y="129" text-anchor="middle" fill="#0f172a">M 4.2M</text>
+<rect x="214" y="94" width="125" height="22" fill="rgb(30,117,230)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 1, references 7766365, hits 3398808, misses 4367557, miss_rate_pct 56.237, metric hits</title></rect>
+<rect x="214" y="116" width="125" height="22" fill="rgb(19,146,222)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 1, references 7766365, hits 3398808, misses 4367557, miss_rate_pct 56.237, metric misses</title></rect>
+<text class="small" x="276.5" y="107" text-anchor="middle" fill="#f8fafc">H 3.4M</text>
+<text class="small" x="276.5" y="129" text-anchor="middle" fill="#0f172a">M 4.4M</text>
+<rect x="342" y="94" width="125" height="22" fill="rgb(36,98,233)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 2, references 7858446, hits 2740744, misses 5117702, miss_rate_pct 65.124, metric hits</title></rect>
+<rect x="342" y="116" width="125" height="22" fill="rgb(11,168,216)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 2, references 7858446, hits 2740744, misses 5117702, miss_rate_pct 65.124, metric misses</title></rect>
+<text class="small" x="404.5" y="107" text-anchor="middle" fill="#f8fafc">H 2.7M</text>
+<text class="small" x="404.5" y="129" text-anchor="middle" fill="#0f172a">M 5.1M</text>
+<rect x="470" y="94" width="125" height="22" fill="rgb(35,93,226)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 3, references 7835774, hits 2560436, misses 5275338, miss_rate_pct 67.324, metric hits</title></rect>
+<rect x="470" y="116" width="125" height="22" fill="rgb(9,173,215)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 3, references 7835774, hits 2560436, misses 5275338, miss_rate_pct 67.324, metric misses</title></rect>
+<text class="small" x="532.5" y="107" text-anchor="middle" fill="#f8fafc">H 2.6M</text>
+<text class="small" x="532.5" y="129" text-anchor="middle" fill="#0f172a">M 5.3M</text>
+<rect x="598" y="94" width="125" height="22" fill="rgb(12,166,216)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 4, references 22266595, hits 5058522, misses 17208073, miss_rate_pct 77.282, metric hits</title></rect>
+<rect x="598" y="116" width="125" height="22" fill="rgb(222,44,37)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 4, references 22266595, hits 5058522, misses 17208073, miss_rate_pct 77.282, metric misses</title></rect>
+<text class="small" x="660.5" y="107" text-anchor="middle" fill="#0f172a">H 5.1M</text>
+<text class="small" x="660.5" y="129" text-anchor="middle" fill="#f8fafc">M 17.2M</text>
+<rect x="726" y="94" width="125" height="22" fill="rgb(20,145,222)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 5, references 21768291, hits 4328918, misses 17439373, miss_rate_pct 80.114, metric hits</title></rect>
+<rect x="726" y="116" width="125" height="22" fill="rgb(220,38,38)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 5, references 21768291, hits 4328918, misses 17439373, miss_rate_pct 80.114, metric misses</title></rect>
+<text class="small" x="788.5" y="107" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="788.5" y="129" text-anchor="middle" fill="#f8fafc">M 17.4M</text>
+<rect x="854" y="94" width="125" height="22" fill="rgb(27,125,228)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 6, references 20402917, hits 3675437, misses 16727480, miss_rate_pct 81.986, metric hits</title></rect>
+<rect x="854" y="116" width="125" height="22" fill="rgb(227,58,34)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 6, references 20402917, hits 3675437, misses 16727480, miss_rate_pct 81.986, metric misses</title></rect>
+<text class="small" x="916.5" y="107" text-anchor="middle" fill="#f8fafc">H 3.7M</text>
+<text class="small" x="916.5" y="129" text-anchor="middle" fill="#f8fafc">M 16.7M</text>
+<rect x="982" y="94" width="125" height="22" fill="rgb(19,147,222)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 7, references 21781602, hits 4398621, misses 17382981, miss_rate_pct 79.806, metric hits</title></rect>
+<rect x="982" y="116" width="125" height="22" fill="rgb(221,40,38)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 7, references 21781602, hits 4398621, misses 17382981, miss_rate_pct 79.806, metric misses</title></rect>
+<text class="small" x="1044.5" y="107" text-anchor="middle" fill="#0f172a">H 4.4M</text>
+<text class="small" x="1044.5" y="129" text-anchor="middle" fill="#f8fafc">M 17.4M</text>
+<rect x="1110" y="94" width="125" height="22" fill="rgb(17,152,220)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 8, references 21792418, hits 4559173, misses 17233245, miss_rate_pct 79.079, metric hits</title></rect>
+<rect x="1110" y="116" width="125" height="22" fill="rgb(222,44,37)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 8, references 21792418, hits 4559173, misses 17233245, miss_rate_pct 79.079, metric misses</title></rect>
+<text class="small" x="1172.5" y="107" text-anchor="middle" fill="#0f172a">H 4.6M</text>
+<text class="small" x="1172.5" y="129" text-anchor="middle" fill="#f8fafc">M 17.2M</text>
+<rect x="1238" y="94" width="125" height="22" fill="rgb(28,123,228)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 9, references 20389422, hits 3605452, misses 16783970, miss_rate_pct 82.317, metric hits</title></rect>
+<rect x="1238" y="116" width="125" height="22" fill="rgb(227,56,34)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 9, references 20389422, hits 3605452, misses 16783970, miss_rate_pct 82.317, metric misses</title></rect>
+<text class="small" x="1300.5" y="107" text-anchor="middle" fill="#f8fafc">H 3.6M</text>
+<text class="small" x="1300.5" y="129" text-anchor="middle" fill="#f8fafc">M 16.8M</text>
+<rect x="1366" y="94" width="125" height="22" fill="rgb(19,148,222)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 10, references 21781029, hits 4421564, misses 17359465, miss_rate_pct 79.700, metric hits</title></rect>
+<rect x="1366" y="116" width="125" height="22" fill="rgb(221,40,38)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 10, references 21781029, hits 4421564, misses 17359465, miss_rate_pct 79.700, metric misses</title></rect>
+<text class="small" x="1428.5" y="107" text-anchor="middle" fill="#0f172a">H 4.4M</text>
+<text class="small" x="1428.5" y="129" text-anchor="middle" fill="#f8fafc">M 17.4M</text>
+<rect x="1494" y="94" width="125" height="22" fill="rgb(18,150,221)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 11, references 21724063, hits 4497872, misses 17226191, miss_rate_pct 79.295, metric hits</title></rect>
+<rect x="1494" y="116" width="125" height="22" fill="rgb(222,44,37)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 11, references 21724063, hits 4497872, misses 17226191, miss_rate_pct 79.295, metric misses</title></rect>
+<text class="small" x="1556.5" y="107" text-anchor="middle" fill="#0f172a">H 4.5M</text>
+<text class="small" x="1556.5" y="129" text-anchor="middle" fill="#f8fafc">M 17.2M</text>
+<rect x="1622" y="94" width="125" height="22" fill="rgb(22,60,177)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 12, references 7736350, hits 1373969, misses 6362381, miss_rate_pct 82.240, metric hits</title></rect>
+<rect x="1622" y="116" width="125" height="22" fill="rgb(13,186,183)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 12, references 7736350, hits 1373969, misses 6362381, miss_rate_pct 82.240, metric misses</title></rect>
+<text class="small" x="1684.5" y="107" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="1684.5" y="129" text-anchor="middle" fill="#0f172a">M 6.4M</text>
+<rect x="1750" y="94" width="125" height="22" fill="rgb(19,52,165)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 13, references 7729981, hits 1081285, misses 6648696, miss_rate_pct 86.012, metric hits</title></rect>
+<rect x="1750" y="116" width="125" height="22" fill="rgb(16,187,172)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 13, references 7729981, hits 1081285, misses 6648696, miss_rate_pct 86.012, metric misses</title></rect>
+<text class="small" x="1812.5" y="107" text-anchor="middle" fill="#f8fafc">H 1.1M</text>
+<text class="small" x="1812.5" y="129" text-anchor="middle" fill="#0f172a">M 6.6M</text>
+<rect x="1878" y="94" width="125" height="22" fill="rgb(19,52,165)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 14, references 7741695, hits 1085852, misses 6655843, miss_rate_pct 85.974, metric hits</title></rect>
+<rect x="1878" y="116" width="125" height="22" fill="rgb(16,187,172)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 14, references 7741695, hits 1085852, misses 6655843, miss_rate_pct 85.974, metric misses</title></rect>
+<text class="small" x="1940.5" y="107" text-anchor="middle" fill="#f8fafc">H 1.1M</text>
+<text class="small" x="1940.5" y="129" text-anchor="middle" fill="#0f172a">M 6.7M</text>
+<rect x="2006" y="94" width="125" height="22" fill="rgb(32,86,215)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 15, references 7643411, hits 2302387, misses 5341024, miss_rate_pct 69.877, metric hits</title></rect>
+<rect x="2006" y="116" width="125" height="22" fill="rgb(9,175,214)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 15, references 7643411, hits 2302387, misses 5341024, miss_rate_pct 69.877, metric misses</title></rect>
+<text class="small" x="2068.5" y="107" text-anchor="middle" fill="#f8fafc">H 2.3M</text>
+<text class="small" x="2068.5" y="129" text-anchor="middle" fill="#0f172a">M 5.3M</text>
+<text x="8" y="154">s300</text>
+<text class="small" x="8" y="169">H 5.0M</text>
+<text class="small" x="8" y="182">M 17.4M</text>
+<rect x="86" y="142" width="125" height="22" fill="rgb(36,101,234)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 0, references 7028429, hits 2867507, misses 4160922, miss_rate_pct 59.201, metric hits</title></rect>
+<rect x="86" y="164" width="125" height="22" fill="rgb(22,140,224)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 0, references 7028429, hits 2867507, misses 4160922, miss_rate_pct 59.201, metric misses</title></rect>
+<text class="small" x="148.5" y="155" text-anchor="middle" fill="#f8fafc">H 2.9M</text>
+<text class="small" x="148.5" y="177" text-anchor="middle" fill="#0f172a">M 4.2M</text>
+<rect x="214" y="142" width="125" height="22" fill="rgb(30,117,230)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 1, references 7764673, hits 3395898, misses 4368775, miss_rate_pct 56.265, metric hits</title></rect>
+<rect x="214" y="164" width="125" height="22" fill="rgb(19,146,222)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 1, references 7764673, hits 3395898, misses 4368775, miss_rate_pct 56.265, metric misses</title></rect>
+<text class="small" x="276.5" y="155" text-anchor="middle" fill="#f8fafc">H 3.4M</text>
+<text class="small" x="276.5" y="177" text-anchor="middle" fill="#0f172a">M 4.4M</text>
+<rect x="342" y="142" width="125" height="22" fill="rgb(36,98,233)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 2, references 7860917, hits 2740472, misses 5120445, miss_rate_pct 65.138, metric hits</title></rect>
+<rect x="342" y="164" width="125" height="22" fill="rgb(11,168,216)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 2, references 7860917, hits 2740472, misses 5120445, miss_rate_pct 65.138, metric misses</title></rect>
+<text class="small" x="404.5" y="155" text-anchor="middle" fill="#f8fafc">H 2.7M</text>
+<text class="small" x="404.5" y="177" text-anchor="middle" fill="#0f172a">M 5.1M</text>
+<rect x="470" y="142" width="125" height="22" fill="rgb(35,93,226)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 3, references 7833539, hits 2562293, misses 5271246, miss_rate_pct 67.291, metric hits</title></rect>
+<rect x="470" y="164" width="125" height="22" fill="rgb(9,173,215)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 3, references 7833539, hits 2562293, misses 5271246, miss_rate_pct 67.291, metric misses</title></rect>
+<text class="small" x="532.5" y="155" text-anchor="middle" fill="#f8fafc">H 2.6M</text>
+<text class="small" x="532.5" y="177" text-anchor="middle" fill="#0f172a">M 5.3M</text>
+<rect x="598" y="142" width="125" height="22" fill="rgb(12,166,216)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 4, references 22262034, hits 5046412, misses 17215622, miss_rate_pct 77.332, metric hits</title></rect>
+<rect x="598" y="164" width="125" height="22" fill="rgb(222,44,37)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 4, references 22262034, hits 5046412, misses 17215622, miss_rate_pct 77.332, metric misses</title></rect>
+<text class="small" x="660.5" y="155" text-anchor="middle" fill="#0f172a">H 5.0M</text>
+<text class="small" x="660.5" y="177" text-anchor="middle" fill="#f8fafc">M 17.2M</text>
+<rect x="726" y="142" width="125" height="22" fill="rgb(20,145,222)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 5, references 21769870, hits 4336801, misses 17433069, miss_rate_pct 80.079, metric hits</title></rect>
+<rect x="726" y="164" width="125" height="22" fill="rgb(220,38,38)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 5, references 21769870, hits 4336801, misses 17433069, miss_rate_pct 80.079, metric misses</title></rect>
+<text class="small" x="788.5" y="155" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="788.5" y="177" text-anchor="middle" fill="#f8fafc">M 17.4M</text>
+<rect x="854" y="142" width="125" height="22" fill="rgb(27,125,228)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 6, references 20405018, hits 3668754, misses 16736264, miss_rate_pct 82.020, metric hits</title></rect>
+<rect x="854" y="164" width="125" height="22" fill="rgb(227,57,34)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 6, references 20405018, hits 3668754, misses 16736264, miss_rate_pct 82.020, metric misses</title></rect>
+<text class="small" x="916.5" y="155" text-anchor="middle" fill="#f8fafc">H 3.7M</text>
+<text class="small" x="916.5" y="177" text-anchor="middle" fill="#f8fafc">M 16.7M</text>
+<rect x="982" y="142" width="125" height="22" fill="rgb(19,147,222)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 7, references 21784111, hits 4397747, misses 17386364, miss_rate_pct 79.812, metric hits</title></rect>
+<rect x="982" y="164" width="125" height="22" fill="rgb(221,39,38)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 7, references 21784111, hits 4397747, misses 17386364, miss_rate_pct 79.812, metric misses</title></rect>
+<text class="small" x="1044.5" y="155" text-anchor="middle" fill="#0f172a">H 4.4M</text>
+<text class="small" x="1044.5" y="177" text-anchor="middle" fill="#f8fafc">M 17.4M</text>
+<rect x="1110" y="142" width="125" height="22" fill="rgb(17,152,220)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 8, references 21795181, hits 4583089, misses 17212092, miss_rate_pct 78.972, metric hits</title></rect>
+<rect x="1110" y="164" width="125" height="22" fill="rgb(222,44,37)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 8, references 21795181, hits 4583089, misses 17212092, miss_rate_pct 78.972, metric misses</title></rect>
+<text class="small" x="1172.5" y="155" text-anchor="middle" fill="#0f172a">H 4.6M</text>
+<text class="small" x="1172.5" y="177" text-anchor="middle" fill="#f8fafc">M 17.2M</text>
+<rect x="1238" y="142" width="125" height="22" fill="rgb(28,123,228)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 9, references 20386204, hits 3589362, misses 16796842, miss_rate_pct 82.393, metric hits</title></rect>
+<rect x="1238" y="164" width="125" height="22" fill="rgb(227,56,34)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 9, references 20386204, hits 3589362, misses 16796842, miss_rate_pct 82.393, metric misses</title></rect>
+<text class="small" x="1300.5" y="155" text-anchor="middle" fill="#f8fafc">H 3.6M</text>
+<text class="small" x="1300.5" y="177" text-anchor="middle" fill="#f8fafc">M 16.8M</text>
+<rect x="1366" y="142" width="125" height="22" fill="rgb(19,147,222)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 10, references 21782005, hits 4416578, misses 17365427, miss_rate_pct 79.724, metric hits</title></rect>
+<rect x="1366" y="164" width="125" height="22" fill="rgb(221,40,38)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 10, references 21782005, hits 4416578, misses 17365427, miss_rate_pct 79.724, metric misses</title></rect>
+<text class="small" x="1428.5" y="155" text-anchor="middle" fill="#0f172a">H 4.4M</text>
+<text class="small" x="1428.5" y="177" text-anchor="middle" fill="#f8fafc">M 17.4M</text>
+<rect x="1494" y="142" width="125" height="22" fill="rgb(18,150,221)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 11, references 21724690, hits 4489105, misses 17235585, miss_rate_pct 79.336, metric hits</title></rect>
+<rect x="1494" y="164" width="125" height="22" fill="rgb(222,44,37)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 11, references 21724690, hits 4489105, misses 17235585, miss_rate_pct 79.336, metric misses</title></rect>
+<text class="small" x="1556.5" y="155" text-anchor="middle" fill="#0f172a">H 4.5M</text>
+<text class="small" x="1556.5" y="177" text-anchor="middle" fill="#f8fafc">M 17.2M</text>
+<rect x="1622" y="142" width="125" height="22" fill="rgb(22,60,177)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 12, references 7730310, hits 1381054, misses 6349256, miss_rate_pct 82.135, metric hits</title></rect>
+<rect x="1622" y="164" width="125" height="22" fill="rgb(13,186,183)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 12, references 7730310, hits 1381054, misses 6349256, miss_rate_pct 82.135, metric misses</title></rect>
+<text class="small" x="1684.5" y="155" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="1684.5" y="177" text-anchor="middle" fill="#0f172a">M 6.3M</text>
+<rect x="1750" y="142" width="125" height="22" fill="rgb(19,52,165)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 13, references 7731750, hits 1083220, misses 6648530, miss_rate_pct 85.990, metric hits</title></rect>
+<rect x="1750" y="164" width="125" height="22" fill="rgb(16,187,172)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 13, references 7731750, hits 1083220, misses 6648530, miss_rate_pct 85.990, metric misses</title></rect>
+<text class="small" x="1812.5" y="155" text-anchor="middle" fill="#f8fafc">H 1.1M</text>
+<text class="small" x="1812.5" y="177" text-anchor="middle" fill="#0f172a">M 6.6M</text>
+<rect x="1878" y="142" width="125" height="22" fill="rgb(19,52,164)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 14, references 7741178, hits 1076210, misses 6664968, miss_rate_pct 86.098, metric hits</title></rect>
+<rect x="1878" y="164" width="125" height="22" fill="rgb(16,187,171)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 14, references 7741178, hits 1076210, misses 6664968, miss_rate_pct 86.098, metric misses</title></rect>
+<text class="small" x="1940.5" y="155" text-anchor="middle" fill="#f8fafc">H 1.1M</text>
+<text class="small" x="1940.5" y="177" text-anchor="middle" fill="#0f172a">M 6.7M</text>
+<rect x="2006" y="142" width="125" height="22" fill="rgb(32,86,215)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 15, references 7643498, hits 2302402, misses 5341096, miss_rate_pct 69.878, metric hits</title></rect>
+<rect x="2006" y="164" width="125" height="22" fill="rgb(9,175,214)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 15, references 7643498, hits 2302402, misses 5341096, miss_rate_pct 69.878, metric misses</title></rect>
+<text class="small" x="2068.5" y="155" text-anchor="middle" fill="#f8fafc">H 2.3M</text>
+<text class="small" x="2068.5" y="177" text-anchor="middle" fill="#0f172a">M 5.3M</text>
+<text x="8" y="202">s400</text>
+<text class="small" x="8" y="217">H 5.0M</text>
+<text class="small" x="8" y="230">M 17.3M</text>
+<rect x="86" y="190" width="125" height="22" fill="rgb(36,102,234)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 0, references 7040572, hits 2902350, misses 4138222, miss_rate_pct 58.777, metric hits</title></rect>
+<rect x="86" y="212" width="125" height="22" fill="rgb(22,139,224)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 0, references 7040572, hits 2902350, misses 4138222, miss_rate_pct 58.777, metric misses</title></rect>
+<text class="small" x="148.5" y="203" text-anchor="middle" fill="#f8fafc">H 2.9M</text>
+<text class="small" x="148.5" y="225" text-anchor="middle" fill="#0f172a">M 4.1M</text>
+<rect x="214" y="190" width="125" height="22" fill="rgb(30,118,230)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 1, references 7766472, hits 3424464, misses 4342008, miss_rate_pct 55.907, metric hits</title></rect>
+<rect x="214" y="212" width="125" height="22" fill="rgb(20,145,222)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 1, references 7766472, hits 3424464, misses 4342008, miss_rate_pct 55.907, metric misses</title></rect>
+<text class="small" x="276.5" y="203" text-anchor="middle" fill="#f8fafc">H 3.4M</text>
+<text class="small" x="276.5" y="225" text-anchor="middle" fill="#0f172a">M 4.3M</text>
+<rect x="342" y="190" width="125" height="22" fill="rgb(37,99,235)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 2, references 7865334, hits 2780741, misses 5084593, miss_rate_pct 64.646, metric hits</title></rect>
+<rect x="342" y="212" width="125" height="22" fill="rgb(12,167,216)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 2, references 7865334, hits 2780741, misses 5084593, miss_rate_pct 64.646, metric misses</title></rect>
+<text class="small" x="404.5" y="203" text-anchor="middle" fill="#f8fafc">H 2.8M</text>
+<text class="small" x="404.5" y="225" text-anchor="middle" fill="#0f172a">M 5.1M</text>
+<rect x="470" y="190" width="125" height="22" fill="rgb(35,94,227)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 3, references 7836364, hits 2594134, misses 5242230, miss_rate_pct 66.896, metric hits</title></rect>
+<rect x="470" y="212" width="125" height="22" fill="rgb(10,172,215)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 3, references 7836364, hits 2594134, misses 5242230, miss_rate_pct 66.896, metric misses</title></rect>
+<text class="small" x="532.5" y="203" text-anchor="middle" fill="#f8fafc">H 2.6M</text>
+<text class="small" x="532.5" y="225" text-anchor="middle" fill="#0f172a">M 5.2M</text>
+<rect x="598" y="190" width="125" height="22" fill="rgb(12,165,217)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 4, references 22086287, hits 5005884, misses 17080403, miss_rate_pct 77.335, metric hits</title></rect>
+<rect x="598" y="212" width="125" height="22" fill="rgb(224,48,36)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 4, references 22086287, hits 5005884, misses 17080403, miss_rate_pct 77.335, metric misses</title></rect>
+<text class="small" x="660.5" y="203" text-anchor="middle" fill="#0f172a">H 5.0M</text>
+<text class="small" x="660.5" y="225" text-anchor="middle" fill="#f8fafc">M 17.1M</text>
+<rect x="726" y="190" width="125" height="22" fill="rgb(20,143,223)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 5, references 21613410, hits 4276559, misses 17336851, miss_rate_pct 80.213, metric hits</title></rect>
+<rect x="726" y="212" width="125" height="22" fill="rgb(221,41,37)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 5, references 21613410, hits 4276559, misses 17336851, miss_rate_pct 80.213, metric misses</title></rect>
+<text class="small" x="788.5" y="203" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="788.5" y="225" text-anchor="middle" fill="#f8fafc">M 17.3M</text>
+<rect x="854" y="190" width="125" height="22" fill="rgb(28,123,228)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 6, references 20266018, hits 3605791, misses 16660227, miss_rate_pct 82.208, metric hits</title></rect>
+<rect x="854" y="212" width="125" height="22" fill="rgb(228,60,34)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 6, references 20266018, hits 3605791, misses 16660227, miss_rate_pct 82.208, metric misses</title></rect>
+<text class="small" x="916.5" y="203" text-anchor="middle" fill="#f8fafc">H 3.6M</text>
+<text class="small" x="916.5" y="225" text-anchor="middle" fill="#f8fafc">M 16.7M</text>
+<rect x="982" y="190" width="125" height="22" fill="rgb(20,145,222)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 7, references 21626033, hits 4329232, misses 17296801, miss_rate_pct 79.981, metric hits</title></rect>
+<rect x="982" y="212" width="125" height="22" fill="rgb(221,42,37)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 7, references 21626033, hits 4329232, misses 17296801, miss_rate_pct 79.981, metric misses</title></rect>
+<text class="small" x="1044.5" y="203" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="1044.5" y="225" text-anchor="middle" fill="#f8fafc">M 17.3M</text>
+<rect x="1110" y="190" width="125" height="22" fill="rgb(18,150,221)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 8, references 21638685, hits 4505347, misses 17133338, miss_rate_pct 79.179, metric hits</title></rect>
+<rect x="1110" y="212" width="125" height="22" fill="rgb(223,46,36)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 8, references 21638685, hits 4505347, misses 17133338, miss_rate_pct 79.179, metric misses</title></rect>
+<text class="small" x="1172.5" y="203" text-anchor="middle" fill="#0f172a">H 4.5M</text>
+<text class="small" x="1172.5" y="225" text-anchor="middle" fill="#f8fafc">M 17.1M</text>
+<rect x="1238" y="190" width="125" height="22" fill="rgb(28,123,228)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 9, references 20258010, hits 3582058, misses 16675952, miss_rate_pct 82.318, metric hits</title></rect>
+<rect x="1238" y="212" width="125" height="22" fill="rgb(228,59,34)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 9, references 20258010, hits 3582058, misses 16675952, miss_rate_pct 82.318, metric misses</title></rect>
+<text class="small" x="1300.5" y="203" text-anchor="middle" fill="#f8fafc">H 3.6M</text>
+<text class="small" x="1300.5" y="225" text-anchor="middle" fill="#f8fafc">M 16.7M</text>
+<rect x="1366" y="190" width="125" height="22" fill="rgb(20,145,222)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 10, references 21624239, hits 4349971, misses 17274268, miss_rate_pct 79.884, metric hits</title></rect>
+<rect x="1366" y="212" width="125" height="22" fill="rgb(222,43,37)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 10, references 21624239, hits 4349971, misses 17274268, miss_rate_pct 79.884, metric misses</title></rect>
+<text class="small" x="1428.5" y="203" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="1428.5" y="225" text-anchor="middle" fill="#f8fafc">M 17.3M</text>
+<rect x="1494" y="190" width="125" height="22" fill="rgb(18,150,221)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 11, references 21569417, hits 4493876, misses 17075541, miss_rate_pct 79.166, metric hits</title></rect>
+<rect x="1494" y="212" width="125" height="22" fill="rgb(224,48,36)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 11, references 21569417, hits 4493876, misses 17075541, miss_rate_pct 79.166, metric misses</title></rect>
+<text class="small" x="1556.5" y="203" text-anchor="middle" fill="#0f172a">H 4.5M</text>
+<text class="small" x="1556.5" y="225" text-anchor="middle" fill="#f8fafc">M 17.1M</text>
+<rect x="1622" y="190" width="125" height="22" fill="rgb(22,60,176)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 12, references 7725517, hits 1363199, misses 6362318, miss_rate_pct 82.355, metric hits</title></rect>
+<rect x="1622" y="212" width="125" height="22" fill="rgb(13,186,183)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 12, references 7725517, hits 1363199, misses 6362318, miss_rate_pct 82.355, metric misses</title></rect>
+<text class="small" x="1684.5" y="203" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="1684.5" y="225" text-anchor="middle" fill="#0f172a">M 6.4M</text>
+<rect x="1750" y="190" width="125" height="22" fill="rgb(19,52,165)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 13, references 7733491, hits 1089892, misses 6643599, miss_rate_pct 85.907, metric hits</title></rect>
+<rect x="1750" y="212" width="125" height="22" fill="rgb(15,187,172)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 13, references 7733491, hits 1089892, misses 6643599, miss_rate_pct 85.907, metric misses</title></rect>
+<text class="small" x="1812.5" y="203" text-anchor="middle" fill="#f8fafc">H 1.1M</text>
+<text class="small" x="1812.5" y="225" text-anchor="middle" fill="#0f172a">M 6.6M</text>
+<rect x="1878" y="190" width="125" height="22" fill="rgb(19,52,165)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 14, references 7737997, hits 1090110, misses 6647887, miss_rate_pct 85.912, metric hits</title></rect>
+<rect x="1878" y="212" width="125" height="22" fill="rgb(16,187,172)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 14, references 7737997, hits 1090110, misses 6647887, miss_rate_pct 85.912, metric misses</title></rect>
+<text class="small" x="1940.5" y="203" text-anchor="middle" fill="#f8fafc">H 1.1M</text>
+<text class="small" x="1940.5" y="225" text-anchor="middle" fill="#0f172a">M 6.6M</text>
+<rect x="2006" y="190" width="125" height="22" fill="rgb(32,86,216)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 15, references 7642565, hits 2320257, misses 5322308, miss_rate_pct 69.640, metric hits</title></rect>
+<rect x="2006" y="212" width="125" height="22" fill="rgb(9,174,214)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 15, references 7642565, hits 2320257, misses 5322308, miss_rate_pct 69.640, metric misses</title></rect>
+<text class="small" x="2068.5" y="203" text-anchor="middle" fill="#f8fafc">H 2.3M</text>
+<text class="small" x="2068.5" y="225" text-anchor="middle" fill="#0f172a">M 5.3M</text>
+<text x="8" y="250">s500</text>
+<text class="small" x="8" y="265">H 4.9M</text>
+<text class="small" x="8" y="278">M 16.9M</text>
+<rect x="86" y="238" width="125" height="22" fill="rgb(35,104,234)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 0, references 7039891, hits 2969171, misses 4070720, miss_rate_pct 57.824, metric hits</title></rect>
+<rect x="86" y="260" width="125" height="22" fill="rgb(23,137,224)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 0, references 7039891, hits 2969171, misses 4070720, miss_rate_pct 57.824, metric misses</title></rect>
+<text class="small" x="148.5" y="251" text-anchor="middle" fill="#f8fafc">H 3.0M</text>
+<text class="small" x="148.5" y="273" text-anchor="middle" fill="#f8fafc">M 4.1M</text>
+<rect x="214" y="238" width="125" height="22" fill="rgb(29,120,229)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 1, references 7771617, hits 3501456, misses 4270161, miss_rate_pct 54.946, metric hits</title></rect>
+<rect x="214" y="260" width="125" height="22" fill="rgb(21,143,223)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 1, references 7771617, hits 3501456, misses 4270161, miss_rate_pct 54.946, metric misses</title></rect>
+<text class="small" x="276.5" y="251" text-anchor="middle" fill="#f8fafc">H 3.5M</text>
+<text class="small" x="276.5" y="273" text-anchor="middle" fill="#0f172a">M 4.3M</text>
+<rect x="342" y="238" width="125" height="22" fill="rgb(37,100,235)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 2, references 7865625, hits 2829550, misses 5036075, miss_rate_pct 64.026, metric hits</title></rect>
+<rect x="342" y="260" width="125" height="22" fill="rgb(12,166,216)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 2, references 7865625, hits 2829550, misses 5036075, miss_rate_pct 64.026, metric misses</title></rect>
+<text class="small" x="404.5" y="251" text-anchor="middle" fill="#f8fafc">H 2.8M</text>
+<text class="small" x="404.5" y="273" text-anchor="middle" fill="#0f172a">M 5.0M</text>
+<rect x="470" y="238" width="125" height="22" fill="rgb(35,95,229)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 3, references 7838750, hits 2638930, misses 5199820, miss_rate_pct 66.335, metric hits</title></rect>
+<rect x="470" y="260" width="125" height="22" fill="rgb(10,171,215)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 3, references 7838750, hits 2638930, misses 5199820, miss_rate_pct 66.335, metric misses</title></rect>
+<text class="small" x="532.5" y="251" text-anchor="middle" fill="#f8fafc">H 2.6M</text>
+<text class="small" x="532.5" y="273" text-anchor="middle" fill="#0f172a">M 5.2M</text>
+<rect x="598" y="238" width="125" height="22" fill="rgb(14,162,218)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 4, references 21618828, hits 4901093, misses 16717735, miss_rate_pct 77.330, metric hits</title></rect>
+<rect x="598" y="260" width="125" height="22" fill="rgb(228,58,34)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 4, references 21618828, hits 4901093, misses 16717735, miss_rate_pct 77.330, metric misses</title></rect>
+<text class="small" x="660.5" y="251" text-anchor="middle" fill="#0f172a">H 4.9M</text>
+<text class="small" x="660.5" y="273" text-anchor="middle" fill="#f8fafc">M 16.7M</text>
+<rect x="726" y="238" width="125" height="22" fill="rgb(21,142,223)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 5, references 21159371, hits 4224641, misses 16934730, miss_rate_pct 80.034, metric hits</title></rect>
+<rect x="726" y="260" width="125" height="22" fill="rgb(225,52,35)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 5, references 21159371, hits 4224641, misses 16934730, miss_rate_pct 80.034, metric misses</title></rect>
+<text class="small" x="788.5" y="251" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="788.5" y="273" text-anchor="middle" fill="#f8fafc">M 16.9M</text>
+<rect x="854" y="238" width="125" height="22" fill="rgb(28,123,228)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 6, references 19859557, hits 3599364, misses 16260193, miss_rate_pct 81.876, metric hits</title></rect>
+<rect x="854" y="260" width="125" height="22" fill="rgb(232,71,31)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 6, references 19859557, hits 3599364, misses 16260193, miss_rate_pct 81.876, metric misses</title></rect>
+<text class="small" x="916.5" y="251" text-anchor="middle" fill="#f8fafc">H 3.6M</text>
+<text class="small" x="916.5" y="273" text-anchor="middle" fill="#f8fafc">M 16.3M</text>
+<rect x="982" y="238" width="125" height="22" fill="rgb(21,142,223)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 7, references 21169821, hits 4232401, misses 16937420, miss_rate_pct 80.007, metric hits</title></rect>
+<rect x="982" y="260" width="125" height="22" fill="rgb(225,52,35)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 7, references 21169821, hits 4232401, misses 16937420, miss_rate_pct 80.007, metric misses</title></rect>
+<text class="small" x="1044.5" y="251" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1044.5" y="273" text-anchor="middle" fill="#f8fafc">M 16.9M</text>
+<rect x="1110" y="238" width="125" height="22" fill="rgb(19,147,222)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 8, references 21188960, hits 4419724, misses 16769236, miss_rate_pct 79.141, metric hits</title></rect>
+<rect x="1110" y="260" width="125" height="22" fill="rgb(227,56,34)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 8, references 21188960, hits 4419724, misses 16769236, miss_rate_pct 79.141, metric misses</title></rect>
+<text class="small" x="1172.5" y="251" text-anchor="middle" fill="#0f172a">H 4.4M</text>
+<text class="small" x="1172.5" y="273" text-anchor="middle" fill="#f8fafc">M 16.8M</text>
+<rect x="1238" y="238" width="125" height="22" fill="rgb(29,121,229)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 9, references 19843144, hits 3531654, misses 16311490, miss_rate_pct 82.202, metric hits</title></rect>
+<rect x="1238" y="260" width="125" height="22" fill="rgb(232,69,32)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 9, references 19843144, hits 3531654, misses 16311490, miss_rate_pct 82.202, metric misses</title></rect>
+<text class="small" x="1300.5" y="251" text-anchor="middle" fill="#f8fafc">H 3.5M</text>
+<text class="small" x="1300.5" y="273" text-anchor="middle" fill="#f8fafc">M 16.3M</text>
+<rect x="1366" y="238" width="125" height="22" fill="rgb(21,142,223)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 10, references 21168655, hits 4251258, misses 16917397, miss_rate_pct 79.917, metric hits</title></rect>
+<rect x="1366" y="260" width="125" height="22" fill="rgb(225,52,35)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 10, references 21168655, hits 4251258, misses 16917397, miss_rate_pct 79.917, metric misses</title></rect>
+<text class="small" x="1428.5" y="251" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="1428.5" y="273" text-anchor="middle" fill="#f8fafc">M 16.9M</text>
+<rect x="1494" y="238" width="125" height="22" fill="rgb(19,147,222)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 11, references 21137440, hits 4418365, misses 16719075, miss_rate_pct 79.097, metric hits</title></rect>
+<rect x="1494" y="260" width="125" height="22" fill="rgb(227,58,34)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 11, references 21137440, hits 4418365, misses 16719075, miss_rate_pct 79.097, metric misses</title></rect>
+<text class="small" x="1556.5" y="251" text-anchor="middle" fill="#0f172a">H 4.4M</text>
+<text class="small" x="1556.5" y="273" text-anchor="middle" fill="#f8fafc">M 16.7M</text>
+<rect x="1622" y="238" width="125" height="22" fill="rgb(23,61,178)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 12, references 7728664, hits 1411548, misses 6317116, miss_rate_pct 81.736, metric hits</title></rect>
+<rect x="1622" y="260" width="125" height="22" fill="rgb(13,186,184)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 12, references 7728664, hits 1411548, misses 6317116, miss_rate_pct 81.736, metric misses</title></rect>
+<text class="small" x="1684.5" y="251" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="1684.5" y="273" text-anchor="middle" fill="#0f172a">M 6.3M</text>
+<rect x="1750" y="238" width="125" height="22" fill="rgb(19,52,165)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 13, references 7732573, hits 1103734, misses 6628839, miss_rate_pct 85.726, metric hits</title></rect>
+<rect x="1750" y="260" width="125" height="22" fill="rgb(15,187,173)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 13, references 7732573, hits 1103734, misses 6628839, miss_rate_pct 85.726, metric misses</title></rect>
+<text class="small" x="1812.5" y="251" text-anchor="middle" fill="#f8fafc">H 1.1M</text>
+<text class="small" x="1812.5" y="273" text-anchor="middle" fill="#0f172a">M 6.6M</text>
+<rect x="1878" y="238" width="125" height="22" fill="rgb(20,53,166)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 14, references 7738468, hits 1122421, misses 6616047, miss_rate_pct 85.496, metric hits</title></rect>
+<rect x="1878" y="260" width="125" height="22" fill="rgb(15,187,173)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 14, references 7738468, hits 1122421, misses 6616047, miss_rate_pct 85.496, metric misses</title></rect>
+<text class="small" x="1940.5" y="251" text-anchor="middle" fill="#f8fafc">H 1.1M</text>
+<text class="small" x="1940.5" y="273" text-anchor="middle" fill="#0f172a">M 6.6M</text>
+<rect x="2006" y="238" width="125" height="22" fill="rgb(33,87,218)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 15, references 7646056, hits 2369802, misses 5276254, miss_rate_pct 69.006, metric hits</title></rect>
+<rect x="2006" y="260" width="125" height="22" fill="rgb(9,173,215)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 15, references 7646056, hits 2369802, misses 5276254, miss_rate_pct 69.006, metric misses</title></rect>
+<text class="small" x="2068.5" y="251" text-anchor="middle" fill="#f8fafc">H 2.4M</text>
+<text class="small" x="2068.5" y="273" text-anchor="middle" fill="#0f172a">M 5.3M</text>
+<text x="8" y="298">s600</text>
+<text class="small" x="8" y="313">H 4.6M</text>
+<text class="small" x="8" y="326">M 15.8M</text>
+<rect x="86" y="286" width="125" height="22" fill="rgb(34,107,233)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 0, references 7042404, hits 3049584, misses 3992820, miss_rate_pct 56.697, metric hits</title></rect>
+<rect x="86" y="308" width="125" height="22" fill="rgb(24,135,225)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 0, references 7042404, hits 3049584, misses 3992820, miss_rate_pct 56.697, metric misses</title></rect>
+<text class="small" x="148.5" y="299" text-anchor="middle" fill="#f8fafc">H 3.0M</text>
+<text class="small" x="148.5" y="321" text-anchor="middle" fill="#f8fafc">M 4.0M</text>
+<rect x="214" y="286" width="125" height="22" fill="rgb(28,124,228)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 1, references 7782341, hits 3617704, misses 4164637, miss_rate_pct 53.514, metric hits</title></rect>
+<rect x="214" y="308" width="125" height="22" fill="rgb(22,140,224)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 1, references 7782341, hits 3617704, misses 4164637, miss_rate_pct 53.514, metric misses</title></rect>
+<text class="small" x="276.5" y="299" text-anchor="middle" fill="#f8fafc">H 3.6M</text>
+<text class="small" x="276.5" y="321" text-anchor="middle" fill="#0f172a">M 4.2M</text>
+<rect x="342" y="286" width="125" height="22" fill="rgb(36,103,234)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 2, references 7873399, hits 2923978, misses 4949421, miss_rate_pct 62.863, metric hits</title></rect>
+<rect x="342" y="308" width="125" height="22" fill="rgb(13,163,217)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 2, references 7873399, hits 2923978, misses 4949421, miss_rate_pct 62.863, metric misses</title></rect>
+<text class="small" x="404.5" y="299" text-anchor="middle" fill="#f8fafc">H 2.9M</text>
+<text class="small" x="404.5" y="321" text-anchor="middle" fill="#0f172a">M 4.9M</text>
+<rect x="470" y="286" width="125" height="22" fill="rgb(36,97,232)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 3, references 7848736, hits 2724015, misses 5124721, miss_rate_pct 65.294, metric hits</title></rect>
+<rect x="470" y="308" width="125" height="22" fill="rgb(11,168,216)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 3, references 7848736, hits 2724015, misses 5124721, miss_rate_pct 65.294, metric misses</title></rect>
+<text class="small" x="532.5" y="299" text-anchor="middle" fill="#f8fafc">H 2.7M</text>
+<text class="small" x="532.5" y="321" text-anchor="middle" fill="#0f172a">M 5.1M</text>
+<rect x="598" y="286" width="125" height="22" fill="rgb(17,152,220)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 4, references 20171791, hits 4562842, misses 15608949, miss_rate_pct 77.380, metric hits</title></rect>
+<rect x="598" y="308" width="125" height="22" fill="rgb(239,89,28)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 4, references 20171791, hits 4562842, misses 15608949, miss_rate_pct 77.380, metric misses</title></rect>
+<text class="small" x="660.5" y="299" text-anchor="middle" fill="#0f172a">H 4.6M</text>
+<text class="small" x="660.5" y="321" text-anchor="middle" fill="#f8fafc">M 15.6M</text>
+<rect x="726" y="286" width="125" height="22" fill="rgb(22,140,224)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 5, references 19910202, hits 4157594, misses 15752608, miss_rate_pct 79.118, metric hits</title></rect>
+<rect x="726" y="308" width="125" height="22" fill="rgb(238,85,28)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 5, references 19910202, hits 4157594, misses 15752608, miss_rate_pct 79.118, metric misses</title></rect>
+<text class="small" x="788.5" y="299" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="788.5" y="321" text-anchor="middle" fill="#f8fafc">M 15.8M</text>
+<rect x="854" y="286" width="125" height="22" fill="rgb(26,129,227)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 6, references 18804581, hits 3803793, misses 15000788, miss_rate_pct 79.772, metric hits</title></rect>
+<rect x="854" y="308" width="125" height="22" fill="rgb(245,105,24)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 6, references 18804581, hits 3803793, misses 15000788, miss_rate_pct 79.772, metric misses</title></rect>
+<text class="small" x="916.5" y="299" text-anchor="middle" fill="#f8fafc">H 3.8M</text>
+<text class="small" x="916.5" y="321" text-anchor="middle" fill="#0f172a">M 15.0M</text>
+<rect x="982" y="286" width="125" height="22" fill="rgb(21,141,223)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 7, references 19930047, hits 4186847, misses 15743200, miss_rate_pct 78.992, metric hits</title></rect>
+<rect x="982" y="308" width="125" height="22" fill="rgb(238,85,28)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 7, references 19930047, hits 4186847, misses 15743200, miss_rate_pct 78.992, metric misses</title></rect>
+<text class="small" x="1044.5" y="299" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1044.5" y="321" text-anchor="middle" fill="#f8fafc">M 15.7M</text>
+<rect x="1110" y="286" width="125" height="22" fill="rgb(20,146,222)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 8, references 19929073, hits 4362108, misses 15566965, miss_rate_pct 78.112, metric hits</title></rect>
+<rect x="1110" y="308" width="125" height="22" fill="rgb(239,90,27)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 8, references 19929073, hits 4362108, misses 15566965, miss_rate_pct 78.112, metric misses</title></rect>
+<text class="small" x="1172.5" y="299" text-anchor="middle" fill="#0f172a">H 4.4M</text>
+<text class="small" x="1172.5" y="321" text-anchor="middle" fill="#f8fafc">M 15.6M</text>
+<rect x="1238" y="286" width="125" height="22" fill="rgb(27,126,228)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 9, references 18792115, hits 3698009, misses 15094106, miss_rate_pct 80.321, metric hits</title></rect>
+<rect x="1238" y="308" width="125" height="22" fill="rgb(244,103,25)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 9, references 18792115, hits 3698009, misses 15094106, miss_rate_pct 80.321, metric misses</title></rect>
+<text class="small" x="1300.5" y="299" text-anchor="middle" fill="#f8fafc">H 3.7M</text>
+<text class="small" x="1300.5" y="321" text-anchor="middle" fill="#0f172a">M 15.1M</text>
+<rect x="1366" y="286" width="125" height="22" fill="rgb(22,140,224)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 10, references 19927843, hits 4174196, misses 15753647, miss_rate_pct 79.053, metric hits</title></rect>
+<rect x="1366" y="308" width="125" height="22" fill="rgb(238,85,28)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 10, references 19927843, hits 4174196, misses 15753647, miss_rate_pct 79.053, metric misses</title></rect>
+<text class="small" x="1428.5" y="299" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1428.5" y="321" text-anchor="middle" fill="#f8fafc">M 15.8M</text>
+<rect x="1494" y="286" width="125" height="22" fill="rgb(22,140,224)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 11, references 19744854, hits 4174115, misses 15570739, miss_rate_pct 78.860, metric hits</title></rect>
+<rect x="1494" y="308" width="125" height="22" fill="rgb(239,90,27)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 11, references 19744854, hits 4174115, misses 15570739, miss_rate_pct 78.860, metric misses</title></rect>
+<text class="small" x="1556.5" y="299" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1556.5" y="321" text-anchor="middle" fill="#f8fafc">M 15.6M</text>
+<rect x="1622" y="286" width="125" height="22" fill="rgb(23,61,178)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 12, references 7730542, hits 1411636, misses 6318906, miss_rate_pct 81.739, metric hits</title></rect>
+<rect x="1622" y="308" width="125" height="22" fill="rgb(13,186,184)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 12, references 7730542, hits 1411636, misses 6318906, miss_rate_pct 81.739, metric misses</title></rect>
+<text class="small" x="1684.5" y="299" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="1684.5" y="321" text-anchor="middle" fill="#0f172a">M 6.3M</text>
+<rect x="1750" y="286" width="125" height="22" fill="rgb(20,54,167)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 13, references 7731987, hits 1149569, misses 6582418, miss_rate_pct 85.132, metric hits</title></rect>
+<rect x="1750" y="308" width="125" height="22" fill="rgb(15,187,174)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 13, references 7731987, hits 1149569, misses 6582418, miss_rate_pct 85.132, metric misses</title></rect>
+<text class="small" x="1812.5" y="299" text-anchor="middle" fill="#f8fafc">H 1.1M</text>
+<text class="small" x="1812.5" y="321" text-anchor="middle" fill="#0f172a">M 6.6M</text>
+<rect x="1878" y="286" width="125" height="22" fill="rgb(20,54,168)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 14, references 7738834, hits 1165932, misses 6572902, miss_rate_pct 84.934, metric hits</title></rect>
+<rect x="1878" y="308" width="125" height="22" fill="rgb(15,187,175)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 14, references 7738834, hits 1165932, misses 6572902, miss_rate_pct 84.934, metric misses</title></rect>
+<text class="small" x="1940.5" y="299" text-anchor="middle" fill="#f8fafc">H 1.2M</text>
+<text class="small" x="1940.5" y="321" text-anchor="middle" fill="#0f172a">M 6.6M</text>
+<rect x="2006" y="286" width="125" height="22" fill="rgb(34,90,222)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 15, references 7655121, hits 2473357, misses 5181764, miss_rate_pct 67.690, metric hits</title></rect>
+<rect x="2006" y="308" width="125" height="22" fill="rgb(10,170,215)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 15, references 7655121, hits 2473357, misses 5181764, miss_rate_pct 67.690, metric misses</title></rect>
+<text class="small" x="2068.5" y="299" text-anchor="middle" fill="#f8fafc">H 2.5M</text>
+<text class="small" x="2068.5" y="321" text-anchor="middle" fill="#0f172a">M 5.2M</text>
+<text x="8" y="346">s700</text>
+<text class="small" x="8" y="361">H 4.3M</text>
+<text class="small" x="8" y="374">M 14.7M</text>
+<rect x="86" y="334" width="125" height="22" fill="rgb(33,110,232)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 0, references 7039009, hits 3176242, misses 3862767, miss_rate_pct 54.877, metric hits</title></rect>
+<rect x="86" y="356" width="125" height="22" fill="rgb(25,131,226)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 0, references 7039009, hits 3176242, misses 3862767, miss_rate_pct 54.877, metric misses</title></rect>
+<text class="small" x="148.5" y="347" text-anchor="middle" fill="#f8fafc">H 3.2M</text>
+<text class="small" x="148.5" y="369" text-anchor="middle" fill="#f8fafc">M 3.9M</text>
+<rect x="214" y="334" width="125" height="22" fill="rgb(26,128,227)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 1, references 7791992, hits 3769062, misses 4022930, miss_rate_pct 51.629, metric hits</title></rect>
+<rect x="214" y="356" width="125" height="22" fill="rgb(23,136,225)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 1, references 7791992, hits 3769062, misses 4022930, miss_rate_pct 51.629, metric misses</title></rect>
+<text class="small" x="276.5" y="347" text-anchor="middle" fill="#f8fafc">H 3.8M</text>
+<text class="small" x="276.5" y="369" text-anchor="middle" fill="#f8fafc">M 4.0M</text>
+<rect x="342" y="334" width="125" height="22" fill="rgb(34,107,233)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 2, references 7884715, hits 3055616, misses 4829099, miss_rate_pct 61.246, metric hits</title></rect>
+<rect x="342" y="356" width="125" height="22" fill="rgb(14,160,218)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 2, references 7884715, hits 3055616, misses 4829099, miss_rate_pct 61.246, metric misses</title></rect>
+<text class="small" x="404.5" y="347" text-anchor="middle" fill="#f8fafc">H 3.1M</text>
+<text class="small" x="404.5" y="369" text-anchor="middle" fill="#0f172a">M 4.8M</text>
+<rect x="470" y="334" width="125" height="22" fill="rgb(37,100,235)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 3, references 7856261, hits 2834905, misses 5021356, miss_rate_pct 63.915, metric hits</title></rect>
+<rect x="470" y="356" width="125" height="22" fill="rgb(12,165,217)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 3, references 7856261, hits 2834905, misses 5021356, miss_rate_pct 63.915, metric misses</title></rect>
+<text class="small" x="532.5" y="347" text-anchor="middle" fill="#f8fafc">H 2.8M</text>
+<text class="small" x="532.5" y="369" text-anchor="middle" fill="#0f172a">M 5.0M</text>
+<rect x="598" y="334" width="125" height="22" fill="rgb(21,143,223)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 4, references 18886974, hits 4266709, misses 14620265, miss_rate_pct 77.409, metric hits</title></rect>
+<rect x="598" y="356" width="125" height="22" fill="rgb(249,116,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 4, references 18886974, hits 4266709, misses 14620265, miss_rate_pct 77.409, metric misses</title></rect>
+<text class="small" x="660.5" y="347" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="660.5" y="369" text-anchor="middle" fill="#0f172a">M 14.6M</text>
+<rect x="726" y="334" width="125" height="22" fill="rgb(22,139,224)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 5, references 18832903, hits 4134200, misses 14698703, miss_rate_pct 78.048, metric hits</title></rect>
+<rect x="726" y="356" width="125" height="22" fill="rgb(248,114,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 5, references 18832903, hits 4134200, misses 14698703, miss_rate_pct 78.048, metric misses</title></rect>
+<text class="small" x="788.5" y="347" text-anchor="middle" fill="#0f172a">H 4.1M</text>
+<text class="small" x="788.5" y="369" text-anchor="middle" fill="#0f172a">M 14.7M</text>
+<rect x="854" y="334" width="125" height="22" fill="rgb(25,131,226)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 6, references 17851202, hits 3872148, misses 13979054, miss_rate_pct 78.309, metric hits</title></rect>
+<rect x="854" y="356" width="125" height="22" fill="rgb(249,136,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 6, references 17851202, hits 3872148, misses 13979054, miss_rate_pct 78.309, metric misses</title></rect>
+<text class="small" x="916.5" y="347" text-anchor="middle" fill="#f8fafc">H 3.9M</text>
+<text class="small" x="916.5" y="369" text-anchor="middle" fill="#0f172a">M 14.0M</text>
+<rect x="982" y="334" width="125" height="22" fill="rgb(22,138,224)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 7, references 18845561, hits 4097315, misses 14748246, miss_rate_pct 78.258, metric hits</title></rect>
+<rect x="982" y="356" width="125" height="22" fill="rgb(248,112,23)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 7, references 18845561, hits 4097315, misses 14748246, miss_rate_pct 78.258, metric misses</title></rect>
+<text class="small" x="1044.5" y="347" text-anchor="middle" fill="#f8fafc">H 4.1M</text>
+<text class="small" x="1044.5" y="369" text-anchor="middle" fill="#0f172a">M 14.7M</text>
+<rect x="1110" y="334" width="125" height="22" fill="rgb(21,143,223)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 8, references 18848239, hits 4254009, misses 14594230, miss_rate_pct 77.430, metric hits</title></rect>
+<rect x="1110" y="356" width="125" height="22" fill="rgb(249,117,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 8, references 18848239, hits 4254009, misses 14594230, miss_rate_pct 77.430, metric misses</title></rect>
+<text class="small" x="1172.5" y="347" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="1172.5" y="369" text-anchor="middle" fill="#0f172a">M 14.6M</text>
+<rect x="1238" y="334" width="125" height="22" fill="rgb(26,129,227)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 9, references 17840496, hits 3794891, misses 14045605, miss_rate_pct 78.729, metric hits</title></rect>
+<rect x="1238" y="356" width="125" height="22" fill="rgb(249,134,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 9, references 17840496, hits 3794891, misses 14045605, miss_rate_pct 78.729, metric misses</title></rect>
+<text class="small" x="1300.5" y="347" text-anchor="middle" fill="#f8fafc">H 3.8M</text>
+<text class="small" x="1300.5" y="369" text-anchor="middle" fill="#0f172a">M 14.0M</text>
+<rect x="1366" y="334" width="125" height="22" fill="rgb(22,138,224)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 10, references 18834732, hits 4099275, misses 14735457, miss_rate_pct 78.236, metric hits</title></rect>
+<rect x="1366" y="356" width="125" height="22" fill="rgb(248,113,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 10, references 18834732, hits 4099275, misses 14735457, miss_rate_pct 78.236, metric misses</title></rect>
+<text class="small" x="1428.5" y="347" text-anchor="middle" fill="#f8fafc">H 4.1M</text>
+<text class="small" x="1428.5" y="369" text-anchor="middle" fill="#0f172a">M 14.7M</text>
+<rect x="1494" y="334" width="125" height="22" fill="rgb(22,139,224)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 11, references 18686569, hits 4125547, misses 14561022, miss_rate_pct 77.922, metric hits</title></rect>
+<rect x="1494" y="356" width="125" height="22" fill="rgb(249,118,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 11, references 18686569, hits 4125547, misses 14561022, miss_rate_pct 77.922, metric misses</title></rect>
+<text class="small" x="1556.5" y="347" text-anchor="middle" fill="#0f172a">H 4.1M</text>
+<text class="small" x="1556.5" y="369" text-anchor="middle" fill="#0f172a">M 14.6M</text>
+<rect x="1622" y="334" width="125" height="22" fill="rgb(23,62,179)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 12, references 7733431, hits 1436331, misses 6297100, miss_rate_pct 81.427, metric hits</title></rect>
+<rect x="1622" y="356" width="125" height="22" fill="rgb(12,185,185)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 12, references 7733431, hits 1436331, misses 6297100, miss_rate_pct 81.427, metric misses</title></rect>
+<text class="small" x="1684.5" y="347" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="1684.5" y="369" text-anchor="middle" fill="#0f172a">M 6.3M</text>
+<rect x="1750" y="334" width="125" height="22" fill="rgb(20,54,168)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 13, references 7732857, hits 1170833, misses 6562024, miss_rate_pct 84.859, metric hits</title></rect>
+<rect x="1750" y="356" width="125" height="22" fill="rgb(15,187,175)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 13, references 7732857, hits 1170833, misses 6562024, miss_rate_pct 84.859, metric misses</title></rect>
+<text class="small" x="1812.5" y="347" text-anchor="middle" fill="#f8fafc">H 1.2M</text>
+<text class="small" x="1812.5" y="369" text-anchor="middle" fill="#0f172a">M 6.6M</text>
+<rect x="1878" y="334" width="125" height="22" fill="rgb(20,55,169)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 14, references 7743808, hits 1185163, misses 6558645, miss_rate_pct 84.695, metric hits</title></rect>
+<rect x="1878" y="356" width="125" height="22" fill="rgb(15,187,175)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 14, references 7743808, hits 1185163, misses 6558645, miss_rate_pct 84.695, metric misses</title></rect>
+<text class="small" x="1940.5" y="347" text-anchor="middle" fill="#f8fafc">H 1.2M</text>
+<text class="small" x="1940.5" y="369" text-anchor="middle" fill="#0f172a">M 6.6M</text>
+<rect x="2006" y="334" width="125" height="22" fill="rgb(34,91,223)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 15, references 7656210, hits 2509788, misses 5146422, miss_rate_pct 67.219, metric hits</title></rect>
+<rect x="2006" y="356" width="125" height="22" fill="rgb(11,169,216)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 15, references 7656210, hits 2509788, misses 5146422, miss_rate_pct 67.219, metric misses</title></rect>
+<text class="small" x="2068.5" y="347" text-anchor="middle" fill="#f8fafc">H 2.5M</text>
+<text class="small" x="2068.5" y="369" text-anchor="middle" fill="#0f172a">M 5.1M</text>
+</svg>

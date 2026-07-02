@@ -1,0 +1,1021 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 674">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:monospace;font-size:11px}.small{font-size:9px}</style>
+<text x="12" y="20">OMPT resctrl memory bandwidth, max=67.17 GiB/s, color=0-67.17 GiB/s</text>
+<text class="small" x="132" y="34" text-anchor="middle">t0</text>
+<text class="small" x="244" y="34" text-anchor="middle">t1</text>
+<text class="small" x="356" y="34" text-anchor="middle">t2</text>
+<text class="small" x="468" y="34" text-anchor="middle">t3</text>
+<text class="small" x="580" y="34" text-anchor="middle">t4</text>
+<text class="small" x="692" y="34" text-anchor="middle">t5</text>
+<text class="small" x="804" y="34" text-anchor="middle">t6</text>
+<text class="small" x="916" y="34" text-anchor="middle">t7</text>
+<text class="small" x="1028" y="34" text-anchor="middle">t8</text>
+<text class="small" x="1140" y="34" text-anchor="middle">t9</text>
+<text class="small" x="1252" y="34" text-anchor="middle">t10</text>
+<text class="small" x="1364" y="34" text-anchor="middle">t11</text>
+<text class="small" x="1476" y="34" text-anchor="middle">t12</text>
+<text class="small" x="1588" y="34" text-anchor="middle">t13</text>
+<text class="small" x="1700" y="34" text-anchor="middle">t14</text>
+<text class="small" x="1812" y="34" text-anchor="middle">t15</text>
+<text x="8" y="53">s100</text>
+<text class="small" x="8" y="66">65.66 GiB/s</text>
+<rect x="76" y="42" width="109" height="27" fill="rgb(24,192,135)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 0, cpu 32, bandwidth_mib_s 30093.629208, target 40%, elapsed_ms 74.684360, mbm_total_delta_bytes 2356699136, mbm_local_delta_bytes 2355347456, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="53" text-anchor="middle" fill="#0f172a">29.39 GiB/s</text>
+<text class="small" x="130.5" y="65" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="188" y="42" width="109" height="27" fill="rgb(24,192,136)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 1, cpu 34, bandwidth_mib_s 29952.068325, target 40%, elapsed_ms 78.896367, mbm_total_delta_bytes 2477899776, mbm_local_delta_bytes 2477359104, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="53" text-anchor="middle" fill="#0f172a">29.25 GiB/s</text>
+<text class="small" x="242.5" y="65" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="300" y="42" width="109" height="27" fill="rgb(22,191,144)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 2, cpu 36, bandwidth_mib_s 29178.766384, target 40%, elapsed_ms 83.216817, mbm_total_delta_bytes 2546114560, mbm_local_delta_bytes 2544852992, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="53" text-anchor="middle" fill="#0f172a">28.49 GiB/s</text>
+<text class="small" x="354.5" y="65" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="412" y="42" width="109" height="27" fill="rgb(16,187,170)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 3, cpu 38, bandwidth_mib_s 26450.955694, target 40%, elapsed_ms 97.981455, mbm_total_delta_bytes 2717597696, mbm_local_delta_bytes 2714624000, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="53" text-anchor="middle" fill="#0f172a">25.83 GiB/s</text>
+<text class="small" x="466.5" y="65" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="524" y="42" width="109" height="27" fill="rgb(225,50,35)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 4, cpu 8, bandwidth_mib_s 67048.589889, target 100%, elapsed_ms 157.188825, mbm_total_delta_bytes 11051245568, mbm_local_delta_bytes 11053858816, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="53" text-anchor="middle" fill="#f8fafc">65.48 GiB/s</text>
+<text class="small" x="578.5" y="65" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="42" width="109" height="27" fill="rgb(232,69,32)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 5, cpu 42, bandwidth_mib_s 64368.577306, target 100%, elapsed_ms 172.969563, mbm_total_delta_bytes 11674640384, mbm_local_delta_bytes 11666350080, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="53" text-anchor="middle" fill="#f8fafc">62.86 GiB/s</text>
+<text class="small" x="690.5" y="65" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="42" width="109" height="27" fill="rgb(225,51,35)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 6, cpu 12, bandwidth_mib_s 66960.077394, target 100%, elapsed_ms 158.980341, mbm_total_delta_bytes 11162443776, mbm_local_delta_bytes 11165958144, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="53" text-anchor="middle" fill="#f8fafc">65.39 GiB/s</text>
+<text class="small" x="802.5" y="65" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="42" width="109" height="27" fill="rgb(237,83,29)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 7, cpu 46, bandwidth_mib_s 62417.666383, target 100%, elapsed_ms 179.612235, mbm_total_delta_bytes 11755560960, mbm_local_delta_bytes 11743215616, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="53" text-anchor="middle" fill="#f8fafc">60.95 GiB/s</text>
+<text class="small" x="914.5" y="65" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="42" width="109" height="27" fill="rgb(226,54,35)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 8, cpu 16, bandwidth_mib_s 66496.024999, target 100%, elapsed_ms 164.544610, mbm_total_delta_bytes 11473059840, mbm_local_delta_bytes 11471798272, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="53" text-anchor="middle" fill="#f8fafc">64.94 GiB/s</text>
+<text class="small" x="1026.5" y="65" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="42" width="109" height="27" fill="rgb(224,49,36)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 9, cpu 18, bandwidth_mib_s 67239.525512, target 100%, elapsed_ms 158.715822, mbm_total_delta_bytes 11190378496, mbm_local_delta_bytes 11190198272, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="53" text-anchor="middle" fill="#f8fafc">65.66 GiB/s</text>
+<text class="small" x="1138.5" y="65" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="42" width="109" height="27" fill="rgb(225,52,35)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 10, cpu 20, bandwidth_mib_s 66764.368233, target 100%, elapsed_ms 163.965642, mbm_total_delta_bytes 11478827008, mbm_local_delta_bytes 11475763200, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="53" text-anchor="middle" fill="#f8fafc">65.20 GiB/s</text>
+<text class="small" x="1250.5" y="65" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="42" width="109" height="27" fill="rgb(226,54,35)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 11, cpu 54, bandwidth_mib_s 66450.955747, target 100%, elapsed_ms 165.364909, mbm_total_delta_bytes 11522441216, mbm_local_delta_bytes 11516403712, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="53" text-anchor="middle" fill="#f8fafc">64.89 GiB/s</text>
+<text class="small" x="1362.5" y="65" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="42" width="109" height="27" fill="rgb(13,186,182)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 12, cpu 56, bandwidth_mib_s 25188.864186, target 40%, elapsed_ms 104.275990, mbm_total_delta_bytes 2754183168, mbm_local_delta_bytes 2751119360, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="53" text-anchor="middle" fill="#0f172a">24.60 GiB/s</text>
+<text class="small" x="1474.5" y="65" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1532" y="42" width="109" height="27" fill="rgb(23,62,180)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 13, cpu 58, bandwidth_mib_s 5755.466973, target 50%, elapsed_ms 82.869579, mbm_total_delta_bytes 500121600, mbm_local_delta_bytes 499941376, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="53" text-anchor="middle" fill="#f8fafc">5.62 GiB/s</text>
+<text class="small" x="1586.5" y="65" text-anchor="middle" fill="#f8fafc">50%</text>
+<rect x="1644" y="42" width="109" height="27" fill="rgb(21,190,149)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 14, cpu 28, bandwidth_mib_s 28661.017434, target 40%, elapsed_ms 86.465168, mbm_total_delta_bytes 2598559744, mbm_local_delta_bytes 2598469632, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="53" text-anchor="middle" fill="#0f172a">27.99 GiB/s</text>
+<text class="small" x="1698.5" y="65" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1756" y="42" width="109" height="27" fill="rgb(23,191,140)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 15, cpu 62, bandwidth_mib_s 29560.744369, target 40%, elapsed_ms 80.719910, mbm_total_delta_bytes 2502049792, mbm_local_delta_bytes 2501238784, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="53" text-anchor="middle" fill="#0f172a">28.87 GiB/s</text>
+<text class="small" x="1810.5" y="65" text-anchor="middle" fill="#0f172a">40%</text>
+<text x="8" y="83">s200</text>
+<text class="small" x="8" y="96">66.60 GiB/s</text>
+<rect x="76" y="72" width="109" height="27" fill="rgb(12,185,188)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 0, cpu 32, bandwidth_mib_s 24529.973635, target 30%, elapsed_ms 103.766227, mbm_total_delta_bytes 2669027328, mbm_local_delta_bytes 2669658112, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="83" text-anchor="middle" fill="#0f172a">23.96 GiB/s</text>
+<text class="small" x="130.5" y="95" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="188" y="72" width="109" height="27" fill="rgb(12,185,187)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 1, cpu 34, bandwidth_mib_s 24586.616776, target 30%, elapsed_ms 101.905351, mbm_total_delta_bytes 2627215360, mbm_local_delta_bytes 2625863680, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="83" text-anchor="middle" fill="#0f172a">24.01 GiB/s</text>
+<text class="small" x="242.5" y="95" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="300" y="72" width="109" height="27" fill="rgb(10,184,195)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 2, cpu 36, bandwidth_mib_s 23802.602546, target 30%, elapsed_ms 114.854825, mbm_total_delta_bytes 2866642944, mbm_local_delta_bytes 2864029696, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="83" text-anchor="middle" fill="#0f172a">23.24 GiB/s</text>
+<text class="small" x="354.5" y="95" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="412" y="72" width="109" height="27" fill="rgb(7,180,212)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 3, cpu 38, bandwidth_mib_s 21802.617474, target 30%, elapsed_ms 138.082618, mbm_total_delta_bytes 3156803584, mbm_local_delta_bytes 3155992576, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="83" text-anchor="middle" fill="#0f172a">21.29 GiB/s</text>
+<text class="small" x="466.5" y="95" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="524" y="72" width="109" height="27" fill="rgb(229,63,33)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 4, cpu 40, bandwidth_mib_s 65190.853528, target 100%, elapsed_ms 182.576897, mbm_total_delta_bytes 12480512000, mbm_local_delta_bytes 12471410688, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="83" text-anchor="middle" fill="#f8fafc">63.66 GiB/s</text>
+<text class="small" x="578.5" y="95" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="72" width="109" height="27" fill="rgb(222,44,37)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 5, cpu 42, bandwidth_mib_s 67967.252015, target 100%, elapsed_ms 172.373799, mbm_total_delta_bytes 12284878848, mbm_local_delta_bytes 12284157952, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="83" text-anchor="middle" fill="#f8fafc">66.37 GiB/s</text>
+<text class="small" x="690.5" y="95" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="72" width="109" height="27" fill="rgb(222,42,37)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 6, cpu 12, bandwidth_mib_s 68159.393757, target 100%, elapsed_ms 169.071179, mbm_total_delta_bytes 12083568640, mbm_local_delta_bytes 12086992896, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="83" text-anchor="middle" fill="#f8fafc">66.56 GiB/s</text>
+<text class="small" x="802.5" y="95" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="72" width="109" height="27" fill="rgb(224,49,36)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 7, cpu 46, bandwidth_mib_s 67204.089871, target 100%, elapsed_ms 176.439922, mbm_total_delta_bytes 12433473536, mbm_local_delta_bytes 12426444800, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="83" text-anchor="middle" fill="#f8fafc">65.63 GiB/s</text>
+<text class="small" x="914.5" y="95" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="72" width="109" height="27" fill="rgb(223,45,37)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 8, cpu 16, bandwidth_mib_s 67789.510826, target 100%, elapsed_ms 174.468709, mbm_total_delta_bytes 12401664000, mbm_local_delta_bytes 12398690304, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="83" text-anchor="middle" fill="#f8fafc">66.20 GiB/s</text>
+<text class="small" x="1026.5" y="95" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="72" width="109" height="27" fill="rgb(222,42,37)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 9, cpu 18, bandwidth_mib_s 68194.710292, target 100%, elapsed_ms 167.664214, mbm_total_delta_bytes 11989221376, mbm_local_delta_bytes 11994988544, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="83" text-anchor="middle" fill="#f8fafc">66.60 GiB/s</text>
+<text class="small" x="1138.5" y="95" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="72" width="109" height="27" fill="rgb(223,45,37)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 10, cpu 52, bandwidth_mib_s 67774.657140, target 100%, elapsed_ms 174.513286, mbm_total_delta_bytes 12402114560, mbm_local_delta_bytes 12401934336, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="83" text-anchor="middle" fill="#f8fafc">66.19 GiB/s</text>
+<text class="small" x="1250.5" y="95" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="72" width="109" height="27" fill="rgb(223,46,36)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 11, cpu 54, bandwidth_mib_s 67619.806339, target 100%, elapsed_ms 174.938343, mbm_total_delta_bytes 12403916800, mbm_local_delta_bytes 12399591424, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="83" text-anchor="middle" fill="#f8fafc">66.03 GiB/s</text>
+<text class="small" x="1362.5" y="95" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="72" width="109" height="27" fill="rgb(8,176,214)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 12, cpu 56, bandwidth_mib_s 21242.296261, target 30%, elapsed_ms 144.038983, mbm_total_delta_bytes 3208347648, mbm_local_delta_bytes 3206184960, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="83" text-anchor="middle" fill="#0f172a">20.74 GiB/s</text>
+<text class="small" x="1474.5" y="95" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1532" y="72" width="109" height="27" fill="rgb(12,165,217)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 13, cpu 26, bandwidth_mib_s 19746.709358, target 30%, elapsed_ms 157.842359, mbm_total_delta_bytes 3268272128, mbm_local_delta_bytes 3265568768, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="83" text-anchor="middle" fill="#0f172a">19.28 GiB/s</text>
+<text class="small" x="1586.5" y="95" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1644" y="72" width="109" height="27" fill="rgb(9,184,199)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 14, cpu 28, bandwidth_mib_s 23328.033828, target 30%, elapsed_ms 120.679976, mbm_total_delta_bytes 2951979008, mbm_local_delta_bytes 2949545984, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="83" text-anchor="middle" fill="#0f172a">22.78 GiB/s</text>
+<text class="small" x="1698.5" y="95" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1756" y="72" width="109" height="27" fill="rgb(11,185,190)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 15, cpu 62, bandwidth_mib_s 24351.511280, target 30%, elapsed_ms 106.757042, mbm_total_delta_bytes 2725978112, mbm_local_delta_bytes 2723815424, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="83" text-anchor="middle" fill="#0f172a">23.78 GiB/s</text>
+<text class="small" x="1810.5" y="95" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="113">s300</text>
+<text class="small" x="8" y="126">67.17 GiB/s</text>
+<rect x="76" y="102" width="109" height="27" fill="rgb(13,186,183)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 0, cpu 32, bandwidth_mib_s 25023.485256, target 30%, elapsed_ms 104.003548, mbm_total_delta_bytes 2728951808, mbm_local_delta_bytes 2728230912, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="113" text-anchor="middle" fill="#0f172a">24.44 GiB/s</text>
+<text class="small" x="130.5" y="125" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="188" y="102" width="109" height="27" fill="rgb(12,185,185)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 1, cpu 2, bandwidth_mib_s 24812.485012, target 30%, elapsed_ms 108.801703, mbm_total_delta_bytes 2830778368, mbm_local_delta_bytes 2829336576, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="113" text-anchor="middle" fill="#0f172a">24.23 GiB/s</text>
+<text class="small" x="242.5" y="125" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="300" y="102" width="109" height="27" fill="rgb(11,185,191)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 2, cpu 36, bandwidth_mib_s 24165.762547, target 30%, elapsed_ms 118.004307, mbm_total_delta_bytes 2990186496, mbm_local_delta_bytes 2986942464, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="113" text-anchor="middle" fill="#0f172a">23.60 GiB/s</text>
+<text class="small" x="354.5" y="125" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="412" y="102" width="109" height="27" fill="rgb(7,182,209)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 3, cpu 38, bandwidth_mib_s 22362.574140, target 30%, elapsed_ms 138.010652, mbm_total_delta_bytes 3236192256, mbm_local_delta_bytes 3234840576, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="113" text-anchor="middle" fill="#0f172a">21.84 GiB/s</text>
+<text class="small" x="466.5" y="125" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="524" y="102" width="109" height="27" fill="rgb(220,38,38)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 4, cpu 40, bandwidth_mib_s 68785.906579, target 100%, elapsed_ms 165.484821, mbm_total_delta_bytes 11935965184, mbm_local_delta_bytes 11937587200, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="113" text-anchor="middle" fill="#f8fafc">67.17 GiB/s</text>
+<text class="small" x="578.5" y="125" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="102" width="109" height="27" fill="rgb(221,41,37)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 5, cpu 42, bandwidth_mib_s 68393.246941, target 100%, elapsed_ms 170.948324, mbm_total_delta_bytes 12259647488, mbm_local_delta_bytes 12256944128, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="113" text-anchor="middle" fill="#f8fafc">66.79 GiB/s</text>
+<text class="small" x="690.5" y="125" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="102" width="109" height="27" fill="rgb(223,47,36)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 6, cpu 44, bandwidth_mib_s 67558.944425, target 100%, elapsed_ms 172.270745, mbm_total_delta_bytes 12203778048, mbm_local_delta_bytes 12201885696, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="113" text-anchor="middle" fill="#f8fafc">65.98 GiB/s</text>
+<text class="small" x="802.5" y="125" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="102" width="109" height="27" fill="rgb(223,47,36)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 7, cpu 46, bandwidth_mib_s 67526.448450, target 100%, elapsed_ms 175.002031, mbm_total_delta_bytes 12391301120, mbm_local_delta_bytes 12385083392, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="113" text-anchor="middle" fill="#f8fafc">65.94 GiB/s</text>
+<text class="small" x="914.5" y="125" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="102" width="109" height="27" fill="rgb(222,43,37)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 8, cpu 16, bandwidth_mib_s 68085.553770, target 100%, elapsed_ms 172.736946, mbm_total_delta_bytes 12332187648, mbm_local_delta_bytes 12330835968, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="113" text-anchor="middle" fill="#f8fafc">66.49 GiB/s</text>
+<text class="small" x="1026.5" y="125" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="102" width="109" height="27" fill="rgb(220,38,38)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 9, cpu 18, bandwidth_mib_s 68763.864723, target 100%, elapsed_ms 165.350404, mbm_total_delta_bytes 11922448384, mbm_local_delta_bytes 11927674880, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="113" text-anchor="middle" fill="#f8fafc">67.15 GiB/s</text>
+<text class="small" x="1138.5" y="125" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="102" width="109" height="27" fill="rgb(222,43,37)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 10, cpu 52, bandwidth_mib_s 68021.759004, target 100%, elapsed_ms 172.896422, mbm_total_delta_bytes 12332007424, mbm_local_delta_bytes 12332908544, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="113" text-anchor="middle" fill="#f8fafc">66.43 GiB/s</text>
+<text class="small" x="1250.5" y="125" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="102" width="109" height="27" fill="rgb(231,67,32)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 11, cpu 54, bandwidth_mib_s 64618.699339, target 100%, elapsed_ms 184.241367, mbm_total_delta_bytes 12483756032, mbm_local_delta_bytes 12477898752, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="113" text-anchor="middle" fill="#f8fafc">63.10 GiB/s</text>
+<text class="small" x="1362.5" y="125" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="102" width="109" height="27" fill="rgb(7,179,213)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 12, cpu 56, bandwidth_mib_s 21563.512970, target 30%, elapsed_ms 146.711586, mbm_total_delta_bytes 3317293056, mbm_local_delta_bytes 3315400704, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="113" text-anchor="middle" fill="#0f172a">21.06 GiB/s</text>
+<text class="small" x="1474.5" y="125" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1532" y="102" width="109" height="27" fill="rgb(11,168,216)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 13, cpu 26, bandwidth_mib_s 20213.422119, target 30%, elapsed_ms 158.449404, mbm_total_delta_bytes 3358384128, mbm_local_delta_bytes 3352256512, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="113" text-anchor="middle" fill="#0f172a">19.74 GiB/s</text>
+<text class="small" x="1586.5" y="125" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1644" y="102" width="109" height="27" fill="rgb(10,184,193)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 14, cpu 28, bandwidth_mib_s 23959.347025, target 30%, elapsed_ms 120.516640, mbm_total_delta_bytes 3027763200, mbm_local_delta_bytes 3025330176, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="113" text-anchor="middle" fill="#0f172a">23.40 GiB/s</text>
+<text class="small" x="1698.5" y="125" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1756" y="102" width="109" height="27" fill="rgb(12,185,187)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 15, cpu 62, bandwidth_mib_s 24642.876898, target 30%, elapsed_ms 111.346514, mbm_total_delta_bytes 2877186048, mbm_local_delta_bytes 2875383808, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="113" text-anchor="middle" fill="#0f172a">24.07 GiB/s</text>
+<text class="small" x="1810.5" y="125" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="143">s400</text>
+<text class="small" x="8" y="156">66.93 GiB/s</text>
+<rect x="76" y="132" width="109" height="27" fill="rgb(13,186,184)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 0, cpu 32, bandwidth_mib_s 24901.783354, target 30%, elapsed_ms 102.603407, mbm_total_delta_bytes 2679119872, mbm_local_delta_bytes 2680020992, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="143" text-anchor="middle" fill="#0f172a">24.32 GiB/s</text>
+<text class="small" x="130.5" y="155" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="188" y="132" width="109" height="27" fill="rgb(12,185,186)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 1, cpu 34, bandwidth_mib_s 24778.491882, target 30%, elapsed_ms 104.979843, mbm_total_delta_bytes 2727600128, mbm_local_delta_bytes 2727600128, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="143" text-anchor="middle" fill="#0f172a">24.20 GiB/s</text>
+<text class="small" x="242.5" y="155" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="300" y="132" width="109" height="27" fill="rgb(12,185,189)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 2, cpu 36, bandwidth_mib_s 24461.720695, target 30%, elapsed_ms 111.131223, mbm_total_delta_bytes 2850512896, mbm_local_delta_bytes 2847719424, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="143" text-anchor="middle" fill="#0f172a">23.89 GiB/s</text>
+<text class="small" x="354.5" y="155" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="412" y="132" width="109" height="27" fill="rgb(6,182,212)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 3, cpu 38, bandwidth_mib_s 21983.320939, target 30%, elapsed_ms 137.143036, mbm_total_delta_bytes 3161309184, mbm_local_delta_bytes 3160227840, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="143" text-anchor="middle" fill="#0f172a">21.47 GiB/s</text>
+<text class="small" x="466.5" y="155" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="524" y="132" width="109" height="27" fill="rgb(227,56,34)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 4, cpu 40, bandwidth_mib_s 66220.468643, target 100%, elapsed_ms 175.965584, mbm_total_delta_bytes 12218556416, mbm_local_delta_bytes 12210536448, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="143" text-anchor="middle" fill="#f8fafc">64.67 GiB/s</text>
+<text class="small" x="578.5" y="155" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="132" width="109" height="27" fill="rgb(221,41,37)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 5, cpu 42, bandwidth_mib_s 68341.679063, target 100%, elapsed_ms 168.680580, mbm_total_delta_bytes 12087894016, mbm_local_delta_bytes 12087443456, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="143" text-anchor="middle" fill="#f8fafc">66.74 GiB/s</text>
+<text class="small" x="690.5" y="155" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="132" width="109" height="27" fill="rgb(221,40,38)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 6, cpu 44, bandwidth_mib_s 68470.246503, target 100%, elapsed_ms 164.941169, mbm_total_delta_bytes 11842158592, mbm_local_delta_bytes 11845943296, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="143" text-anchor="middle" fill="#f8fafc">66.87 GiB/s</text>
+<text class="small" x="802.5" y="155" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="132" width="109" height="27" fill="rgb(223,47,36)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 7, cpu 46, bandwidth_mib_s 67513.632799, target 100%, elapsed_ms 173.089000, mbm_total_delta_bytes 12253519872, mbm_local_delta_bytes 12247932928, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="143" text-anchor="middle" fill="#f8fafc">65.93 GiB/s</text>
+<text class="small" x="914.5" y="155" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="132" width="109" height="27" fill="rgb(234,76,30)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 8, cpu 48, bandwidth_mib_s 63329.422086, target 100%, elapsed_ms 187.150867, mbm_total_delta_bytes 12427886592, mbm_local_delta_bytes 12420857856, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="143" text-anchor="middle" fill="#f8fafc">61.85 GiB/s</text>
+<text class="small" x="1026.5" y="155" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="132" width="109" height="27" fill="rgb(221,40,38)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 9, cpu 50, bandwidth_mib_s 68541.129101, target 100%, elapsed_ms 164.173780, mbm_total_delta_bytes 11799265280, mbm_local_delta_bytes 11803951104, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="143" text-anchor="middle" fill="#f8fafc">66.93 GiB/s</text>
+<text class="small" x="1138.5" y="155" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="132" width="109" height="27" fill="rgb(222,43,37)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 10, cpu 52, bandwidth_mib_s 68031.266498, target 100%, elapsed_ms 170.998925, mbm_total_delta_bytes 12198371328, mbm_local_delta_bytes 12196208640, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="143" text-anchor="middle" fill="#f8fafc">66.44 GiB/s</text>
+<text class="small" x="1250.5" y="155" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="132" width="109" height="27" fill="rgb(222,44,37)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 11, cpu 54, bandwidth_mib_s 67928.252825, target 100%, elapsed_ms 171.517596, mbm_total_delta_bytes 12216844288, mbm_local_delta_bytes 12211798016, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="143" text-anchor="middle" fill="#f8fafc">66.34 GiB/s</text>
+<text class="small" x="1362.5" y="155" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="132" width="109" height="27" fill="rgb(9,175,214)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 12, cpu 56, bandwidth_mib_s 21067.629033, target 30%, elapsed_ms 147.460382, mbm_total_delta_bytes 3257548800, mbm_local_delta_bytes 3253764096, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="143" text-anchor="middle" fill="#0f172a">20.57 GiB/s</text>
+<text class="small" x="1474.5" y="155" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1532" y="132" width="109" height="27" fill="rgb(12,166,216)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 13, cpu 26, bandwidth_mib_s 19864.311379, target 30%, elapsed_ms 158.283630, mbm_total_delta_bytes 3296927744, mbm_local_delta_bytes 3292692480, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="143" text-anchor="middle" fill="#0f172a">19.40 GiB/s</text>
+<text class="small" x="1586.5" y="155" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1644" y="132" width="109" height="27" fill="rgb(10,184,195)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 14, cpu 28, bandwidth_mib_s 23750.393241, target 30%, elapsed_ms 118.928294, mbm_total_delta_bytes 2961801216, mbm_local_delta_bytes 2960359424, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="143" text-anchor="middle" fill="#0f172a">23.19 GiB/s</text>
+<text class="small" x="1698.5" y="155" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1756" y="132" width="109" height="27" fill="rgb(12,185,188)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 15, cpu 62, bandwidth_mib_s 24570.398463, target 30%, elapsed_ms 108.670526, mbm_total_delta_bytes 2799779840, mbm_local_delta_bytes 2799239168, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="143" text-anchor="middle" fill="#0f172a">23.99 GiB/s</text>
+<text class="small" x="1810.5" y="155" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="173">s500</text>
+<text class="small" x="8" y="186">64.02 GiB/s</text>
+<rect x="76" y="162" width="109" height="27" fill="rgb(12,185,186)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 0, cpu 32, bandwidth_mib_s 24776.651035, target 30%, elapsed_ms 104.099710, mbm_total_delta_bytes 2704531456, mbm_local_delta_bytes 2707234816, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="173" text-anchor="middle" fill="#0f172a">24.20 GiB/s</text>
+<text class="small" x="130.5" y="185" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="188" y="162" width="109" height="27" fill="rgb(12,185,187)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 1, cpu 34, bandwidth_mib_s 24611.893894, target 30%, elapsed_ms 108.445408, mbm_total_delta_bytes 2798698496, mbm_local_delta_bytes 2799239168, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="173" text-anchor="middle" fill="#0f172a">24.04 GiB/s</text>
+<text class="small" x="242.5" y="185" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="300" y="162" width="109" height="27" fill="rgb(10,184,193)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 2, cpu 36, bandwidth_mib_s 23984.946800, target 30%, elapsed_ms 118.463951, mbm_total_delta_bytes 2979373056, mbm_local_delta_bytes 2977210368, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="173" text-anchor="middle" fill="#0f172a">23.42 GiB/s</text>
+<text class="small" x="354.5" y="185" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="412" y="162" width="109" height="27" fill="rgb(6,182,210)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 3, cpu 38, bandwidth_mib_s 22229.407325, target 30%, elapsed_ms 138.678911, mbm_total_delta_bytes 3232497664, mbm_local_delta_bytes 3229614080, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="173" text-anchor="middle" fill="#0f172a">21.71 GiB/s</text>
+<text class="small" x="466.5" y="185" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="524" y="162" width="109" height="27" fill="rgb(229,61,33)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 4, cpu 40, bandwidth_mib_s 65495.086742, target 100%, elapsed_ms 173.925618, mbm_total_delta_bytes 11944615936, mbm_local_delta_bytes 11946508288, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="173" text-anchor="middle" fill="#f8fafc">63.96 GiB/s</text>
+<text class="small" x="578.5" y="185" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="162" width="109" height="27" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 5, cpu 42, bandwidth_mib_s 64960.414867, target 100%, elapsed_ms 179.603730, mbm_total_delta_bytes 12233875456, mbm_local_delta_bytes 12228919296, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="173" text-anchor="middle" fill="#f8fafc">63.44 GiB/s</text>
+<text class="small" x="690.5" y="185" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="162" width="109" height="27" fill="rgb(228,61,33)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 6, cpu 44, bandwidth_mib_s 65560.843729, target 100%, elapsed_ms 172.997459, mbm_total_delta_bytes 11892801536, mbm_local_delta_bytes 11896676352, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="173" text-anchor="middle" fill="#f8fafc">64.02 GiB/s</text>
+<text class="small" x="802.5" y="185" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="162" width="109" height="27" fill="rgb(232,69,31)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 7, cpu 46, bandwidth_mib_s 64294.153733, target 100%, elapsed_ms 182.385848, mbm_total_delta_bytes 12295962624, mbm_local_delta_bytes 12288573440, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="173" text-anchor="middle" fill="#f8fafc">62.79 GiB/s</text>
+<text class="small" x="914.5" y="185" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="162" width="109" height="27" fill="rgb(231,67,32)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 8, cpu 48, bandwidth_mib_s 64699.693537, target 100%, elapsed_ms 180.744553, mbm_total_delta_bytes 12262170624, mbm_local_delta_bytes 12260999168, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="173" text-anchor="middle" fill="#f8fafc">63.18 GiB/s</text>
+<text class="small" x="1026.5" y="185" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="162" width="109" height="27" fill="rgb(229,61,33)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 9, cpu 50, bandwidth_mib_s 65513.958532, target 100%, elapsed_ms 173.167176, mbm_total_delta_bytes 11895955456, mbm_local_delta_bytes 11899920384, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="173" text-anchor="middle" fill="#f8fafc">63.98 GiB/s</text>
+<text class="small" x="1138.5" y="185" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="162" width="109" height="27" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 10, cpu 52, bandwidth_mib_s 64867.797804, target 100%, elapsed_ms 180.243035, mbm_total_delta_bytes 12259917824, mbm_local_delta_bytes 12256944128, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="173" text-anchor="middle" fill="#f8fafc">63.35 GiB/s</text>
+<text class="small" x="1250.5" y="185" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="162" width="109" height="27" fill="rgb(236,82,29)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 11, cpu 54, bandwidth_mib_s 62530.660052, target 100%, elapsed_ms 188.388459, mbm_total_delta_bytes 12352282624, mbm_local_delta_bytes 12346425344, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="173" text-anchor="middle" fill="#f8fafc">61.07 GiB/s</text>
+<text class="small" x="1362.5" y="185" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="162" width="109" height="27" fill="rgb(11,168,216)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 12, cpu 56, bandwidth_mib_s 20110.845462, target 30%, elapsed_ms 158.915730, mbm_total_delta_bytes 3351175168, mbm_local_delta_bytes 3347931136, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="173" text-anchor="middle" fill="#0f172a">19.64 GiB/s</text>
+<text class="small" x="1474.5" y="185" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1532" y="162" width="109" height="27" fill="rgb(11,169,216)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 13, cpu 26, bandwidth_mib_s 20293.774478, target 30%, elapsed_ms 157.500195, mbm_total_delta_bytes 3351535616, mbm_local_delta_bytes 3348291584, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="173" text-anchor="middle" fill="#0f172a">19.82 GiB/s</text>
+<text class="small" x="1586.5" y="185" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1644" y="162" width="109" height="27" fill="rgb(10,184,194)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 14, cpu 28, bandwidth_mib_s 23910.402755, target 30%, elapsed_ms 119.688686, mbm_total_delta_bytes 3000819712, mbm_local_delta_bytes 2999558144, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="173" text-anchor="middle" fill="#0f172a">23.35 GiB/s</text>
+<text class="small" x="1698.5" y="185" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1756" y="162" width="109" height="27" fill="rgb(11,185,192)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 15, cpu 62, bandwidth_mib_s 24141.430067, target 30%, elapsed_ms 115.371557, mbm_total_delta_bytes 2920529920, mbm_local_delta_bytes 2918187008, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="173" text-anchor="middle" fill="#0f172a">23.58 GiB/s</text>
+<text class="small" x="1810.5" y="185" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="203">s600</text>
+<text class="small" x="8" y="216">66.82 GiB/s</text>
+<rect x="76" y="192" width="109" height="27" fill="rgb(8,178,213)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 0, cpu 32, bandwidth_mib_s 21462.206371, target 30%, elapsed_ms 97.412515, mbm_total_delta_bytes 2192244736, mbm_local_delta_bytes 2189721600, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="203" text-anchor="middle" fill="#0f172a">20.96 GiB/s</text>
+<text class="small" x="130.5" y="215" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="188" y="192" width="109" height="27" fill="rgb(8,176,214)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 1, cpu 34, bandwidth_mib_s 21239.715784, target 30%, elapsed_ms 101.847820, mbm_total_delta_bytes 2268299264, mbm_local_delta_bytes 2265595904, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="203" text-anchor="middle" fill="#0f172a">20.74 GiB/s</text>
+<text class="small" x="242.5" y="215" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="300" y="192" width="109" height="27" fill="rgb(11,170,215)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 2, cpu 36, bandwidth_mib_s 20361.870740, target 30%, elapsed_ms 114.624859, mbm_total_delta_bytes 2447351808, mbm_local_delta_bytes 2444197888, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="203" text-anchor="middle" fill="#0f172a">19.88 GiB/s</text>
+<text class="small" x="354.5" y="215" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="412" y="192" width="109" height="27" fill="rgb(15,158,219)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 3, cpu 38, bandwidth_mib_s 18866.035660, target 30%, elapsed_ms 129.498175, mbm_total_delta_bytes 2561794048, mbm_local_delta_bytes 2559541248, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="203" text-anchor="middle" fill="#0f172a">18.42 GiB/s</text>
+<text class="small" x="466.5" y="215" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="524" y="192" width="109" height="27" fill="rgb(221,41,37)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 4, cpu 40, bandwidth_mib_s 68419.404031, target 100%, elapsed_ms 151.872806, mbm_total_delta_bytes 10895802368, mbm_local_delta_bytes 10899316736, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="203" text-anchor="middle" fill="#f8fafc">66.82 GiB/s</text>
+<text class="small" x="578.5" y="215" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="192" width="109" height="27" fill="rgb(222,43,37)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 5, cpu 42, bandwidth_mib_s 68115.313124, target 100%, elapsed_ms 157.480076, mbm_total_delta_bytes 11247869952, mbm_local_delta_bytes 11244445696, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="203" text-anchor="middle" fill="#f8fafc">66.52 GiB/s</text>
+<text class="small" x="690.5" y="215" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="192" width="109" height="27" fill="rgb(221,42,37)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 6, cpu 44, bandwidth_mib_s 68260.342513, target 100%, elapsed_ms 152.220408, mbm_total_delta_bytes 10895351808, mbm_local_delta_bytes 10898145280, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="203" text-anchor="middle" fill="#f8fafc">66.66 GiB/s</text>
+<text class="small" x="802.5" y="215" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="192" width="109" height="27" fill="rgb(223,47,36)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 7, cpu 46, bandwidth_mib_s 67513.363782, target 100%, elapsed_ms 159.972495, mbm_total_delta_bytes 11324915712, mbm_local_delta_bytes 11317706752, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="203" text-anchor="middle" fill="#f8fafc">65.93 GiB/s</text>
+<text class="small" x="914.5" y="215" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="192" width="109" height="27" fill="rgb(228,60,33)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 8, cpu 48, bandwidth_mib_s 65629.939600, target 100%, elapsed_ms 165.414454, mbm_total_delta_bytes 11383488512, mbm_local_delta_bytes 11379343360, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="203" text-anchor="middle" fill="#f8fafc">64.09 GiB/s</text>
+<text class="small" x="1026.5" y="215" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="192" width="109" height="27" fill="rgb(224,50,36)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 9, cpu 50, bandwidth_mib_s 67080.613218, target 100%, elapsed_ms 160.281965, mbm_total_delta_bytes 11274092544, mbm_local_delta_bytes 11271028736, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="203" text-anchor="middle" fill="#f8fafc">65.51 GiB/s</text>
+<text class="small" x="1138.5" y="215" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="192" width="109" height="27" fill="rgb(222,43,37)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 10, cpu 52, bandwidth_mib_s 68097.856908, target 100%, elapsed_ms 157.540636, mbm_total_delta_bytes 11249311744, mbm_local_delta_bytes 11246608384, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="203" text-anchor="middle" fill="#f8fafc">66.50 GiB/s</text>
+<text class="small" x="1250.5" y="215" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="192" width="109" height="27" fill="rgb(222,44,37)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 11, cpu 54, bandwidth_mib_s 67866.147611, target 100%, elapsed_ms 158.559699, mbm_total_delta_bytes 11283554304, mbm_local_delta_bytes 11283103744, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="203" text-anchor="middle" fill="#f8fafc">66.28 GiB/s</text>
+<text class="small" x="1362.5" y="215" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="192" width="109" height="27" fill="rgb(20,145,222)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 12, cpu 56, bandwidth_mib_s 17051.036384, target 30%, elapsed_ms 147.254154, mbm_total_delta_bytes 2632802304, mbm_local_delta_bytes 2629648384, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="203" text-anchor="middle" fill="#0f172a">16.65 GiB/s</text>
+<text class="small" x="1474.5" y="215" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1532" y="192" width="109" height="27" fill="rgb(20,53,166)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 13, cpu 26, bandwidth_mib_s 4372.488699, target 40%, elapsed_ms 113.384727, mbm_total_delta_bytes 519856128, mbm_local_delta_bytes 519856128, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="203" text-anchor="middle" fill="#f8fafc">4.27 GiB/s</text>
+<text class="small" x="1586.5" y="215" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1644" y="192" width="109" height="27" fill="rgb(11,170,215)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 14, cpu 28, bandwidth_mib_s 20386.636629, target 30%, elapsed_ms 114.270627, mbm_total_delta_bytes 2442756096, mbm_local_delta_bytes 2440953856, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="203" text-anchor="middle" fill="#0f172a">19.91 GiB/s</text>
+<text class="small" x="1698.5" y="215" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1756" y="192" width="109" height="27" fill="rgb(8,176,214)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 15, cpu 62, bandwidth_mib_s 21281.686628, target 30%, elapsed_ms 101.352179, mbm_total_delta_bytes 2261721088, mbm_local_delta_bytes 2260639744, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="203" text-anchor="middle" fill="#0f172a">20.78 GiB/s</text>
+<text class="small" x="1810.5" y="215" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="233">s700</text>
+<text class="small" x="8" y="246">66.55 GiB/s</text>
+<rect x="76" y="222" width="109" height="27" fill="rgb(19,148,221)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 0, cpu 32, bandwidth_mib_s 17468.091799, target 30%, elapsed_ms 94.674408, mbm_total_delta_bytes 1734115328, mbm_local_delta_bytes 1732493312, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="233" text-anchor="middle" fill="#0f172a">17.06 GiB/s</text>
+<text class="small" x="130.5" y="245" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="188" y="222" width="109" height="27" fill="rgb(19,146,222)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 1, cpu 34, bandwidth_mib_s 17223.357094, target 30%, elapsed_ms 99.916551, mbm_total_delta_bytes 1804492800, mbm_local_delta_bytes 1801699328, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="233" text-anchor="middle" fill="#0f172a">16.82 GiB/s</text>
+<text class="small" x="242.5" y="245" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="300" y="222" width="109" height="27" fill="rgb(21,142,223)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 2, cpu 36, bandwidth_mib_s 16669.723827, target 30%, elapsed_ms 107.725240, mbm_total_delta_bytes 1882980352, mbm_local_delta_bytes 1879015424, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="233" text-anchor="middle" fill="#0f172a">16.28 GiB/s</text>
+<text class="small" x="354.5" y="245" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="412" y="222" width="109" height="27" fill="rgb(28,124,228)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 3, cpu 38, bandwidth_mib_s 14336.348248, target 30%, elapsed_ms 133.482824, mbm_total_delta_bytes 2006614016, mbm_local_delta_bytes 2004090880, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="233" text-anchor="middle" fill="#f8fafc">14.00 GiB/s</text>
+<text class="small" x="466.5" y="245" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="524" y="222" width="109" height="27" fill="rgb(222,42,37)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 4, cpu 40, bandwidth_mib_s 68151.823312, target 100%, elapsed_ms 143.552767, mbm_total_delta_bytes 10258620416, mbm_local_delta_bytes 10259611648, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="233" text-anchor="middle" fill="#f8fafc">66.55 GiB/s</text>
+<text class="small" x="578.5" y="245" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="222" width="109" height="27" fill="rgb(223,45,37)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 5, cpu 42, bandwidth_mib_s 67769.944574, target 100%, elapsed_ms 149.120769, mbm_total_delta_bytes 10596810752, mbm_local_delta_bytes 10593656832, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="233" text-anchor="middle" fill="#f8fafc">66.18 GiB/s</text>
+<text class="small" x="690.5" y="245" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="222" width="109" height="27" fill="rgb(222,43,37)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 6, cpu 44, bandwidth_mib_s 68117.089077, target 100%, elapsed_ms 144.575963, mbm_total_delta_bytes 10326474752, mbm_local_delta_bytes 10329628672, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="233" text-anchor="middle" fill="#f8fafc">66.52 GiB/s</text>
+<text class="small" x="802.5" y="245" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="222" width="109" height="27" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 7, cpu 46, bandwidth_mib_s 64895.802292, target 100%, elapsed_ms 158.345782, mbm_total_delta_bytes 10775142400, mbm_local_delta_bytes 10763968512, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="233" text-anchor="middle" fill="#f8fafc">63.37 GiB/s</text>
+<text class="small" x="914.5" y="245" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="222" width="109" height="27" fill="rgb(223,46,36)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 8, cpu 48, bandwidth_mib_s 67592.304248, target 100%, elapsed_ms 150.088624, mbm_total_delta_bytes 10637631488, mbm_local_delta_bytes 10635739136, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="233" text-anchor="middle" fill="#f8fafc">66.01 GiB/s</text>
+<text class="small" x="1026.5" y="245" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="222" width="109" height="27" fill="rgb(224,49,36)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 9, cpu 50, bandwidth_mib_s 67206.589001, target 100%, elapsed_ms 150.326011, mbm_total_delta_bytes 10593656832, mbm_local_delta_bytes 10590683136, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="233" text-anchor="middle" fill="#f8fafc">65.63 GiB/s</text>
+<text class="small" x="1138.5" y="245" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="222" width="109" height="27" fill="rgb(222,44,37)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 10, cpu 52, bandwidth_mib_s 67896.743707, target 100%, elapsed_ms 148.892910, mbm_total_delta_bytes 10600415232, mbm_local_delta_bytes 10597892096, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="233" text-anchor="middle" fill="#f8fafc">66.31 GiB/s</text>
+<text class="small" x="1250.5" y="245" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="222" width="109" height="27" fill="rgb(223,46,36)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 11, cpu 54, bandwidth_mib_s 67673.655271, target 100%, elapsed_ms 149.922170, mbm_total_delta_bytes 10638622720, mbm_local_delta_bytes 10631593984, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="233" text-anchor="middle" fill="#f8fafc">66.09 GiB/s</text>
+<text class="small" x="1362.5" y="245" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="222" width="109" height="27" fill="rgb(32,86,216)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 12, cpu 56, bandwidth_mib_s 9192.946581, target 40%, elapsed_ms 106.382512, mbm_total_delta_bytes 1025474560, mbm_local_delta_bytes 1026555904, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="233" text-anchor="middle" fill="#f8fafc">8.98 GiB/s</text>
+<text class="small" x="1474.5" y="245" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1532" y="222" width="109" height="27" fill="rgb(32,85,213)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 13, cpu 26, bandwidth_mib_s 8933.539782, target 40%, elapsed_ms 113.858143, mbm_total_delta_bytes 1066565632, mbm_local_delta_bytes 1065213952, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="233" text-anchor="middle" fill="#f8fafc">8.72 GiB/s</text>
+<text class="small" x="1586.5" y="245" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1644" y="222" width="109" height="27" fill="rgb(22,139,224)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 14, cpu 28, bandwidth_mib_s 16287.302060, target 30%, elapsed_ms 112.539261, mbm_total_delta_bytes 1921998848, mbm_local_delta_bytes 1918664704, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="233" text-anchor="middle" fill="#0f172a">15.91 GiB/s</text>
+<text class="small" x="1698.5" y="245" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1756" y="222" width="109" height="27" fill="rgb(19,147,222)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 15, cpu 62, bandwidth_mib_s 17390.540349, target 30%, elapsed_ms 95.719244, mbm_total_delta_bytes 1745469440, mbm_local_delta_bytes 1743396864, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="233" text-anchor="middle" fill="#0f172a">16.98 GiB/s</text>
+<text class="small" x="1810.5" y="245" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="263">s800</text>
+<text class="small" x="8" y="276">66.30 GiB/s</text>
+<rect x="76" y="252" width="109" height="27" fill="rgb(18,149,221)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 0, cpu 32, bandwidth_mib_s 17678.240862, target 30%, elapsed_ms 93.874672, mbm_total_delta_bytes 1740152832, mbm_local_delta_bytes 1737719808, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="263" text-anchor="middle" fill="#0f172a">17.26 GiB/s</text>
+<text class="small" x="130.5" y="275" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="188" y="252" width="109" height="27" fill="rgb(19,148,222)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 1, cpu 34, bandwidth_mib_s 17462.680109, target 30%, elapsed_ms 98.478315, mbm_total_delta_bytes 1803231232, mbm_local_delta_bytes 1800798208, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="263" text-anchor="middle" fill="#0f172a">17.05 GiB/s</text>
+<text class="small" x="242.5" y="275" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="300" y="252" width="109" height="27" fill="rgb(22,140,224)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 2, cpu 36, bandwidth_mib_s 16503.707033, target 30%, elapsed_ms 112.938168, mbm_total_delta_bytes 1954439168, mbm_local_delta_bytes 1951375360, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="263" text-anchor="middle" fill="#0f172a">16.12 GiB/s</text>
+<text class="small" x="354.5" y="275" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="412" y="252" width="109" height="27" fill="rgb(27,126,227)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 3, cpu 38, bandwidth_mib_s 14613.644151, target 30%, elapsed_ms 132.978788, mbm_total_delta_bytes 2037702656, mbm_local_delta_bytes 2035810304, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="263" text-anchor="middle" fill="#f8fafc">14.27 GiB/s</text>
+<text class="small" x="466.5" y="275" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="524" y="252" width="109" height="27" fill="rgb(223,45,36)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 4, cpu 40, bandwidth_mib_s 67736.308472, target 100%, elapsed_ms 142.534109, mbm_total_delta_bytes 10123722752, mbm_local_delta_bytes 10122461184, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="263" text-anchor="middle" fill="#f8fafc">66.15 GiB/s</text>
+<text class="small" x="578.5" y="275" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="252" width="109" height="27" fill="rgb(224,50,36)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 5, cpu 42, bandwidth_mib_s 67141.892235, target 100%, elapsed_ms 148.105536, mbm_total_delta_bytes 10427129856, mbm_local_delta_bytes 10415955968, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="263" text-anchor="middle" fill="#f8fafc">65.57 GiB/s</text>
+<text class="small" x="690.5" y="275" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="252" width="109" height="27" fill="rgb(222,44,37)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 6, cpu 44, bandwidth_mib_s 67889.084813, target 100%, elapsed_ms 141.769039, mbm_total_delta_bytes 10092093440, mbm_local_delta_bytes 10093084672, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="263" text-anchor="middle" fill="#f8fafc">66.30 GiB/s</text>
+<text class="small" x="802.5" y="275" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="252" width="109" height="27" fill="rgb(225,52,35)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 7, cpu 46, bandwidth_mib_s 66729.060182, target 100%, elapsed_ms 149.257497, mbm_total_delta_bytes 10443620352, mbm_local_delta_bytes 10436681728, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="263" text-anchor="middle" fill="#f8fafc">65.17 GiB/s</text>
+<text class="small" x="914.5" y="275" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="252" width="109" height="27" fill="rgb(224,50,36)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 8, cpu 48, bandwidth_mib_s 67088.049780, target 100%, elapsed_ms 148.080932, mbm_total_delta_bytes 10417037312, mbm_local_delta_bytes 10415235072, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="263" text-anchor="middle" fill="#f8fafc">65.52 GiB/s</text>
+<text class="small" x="1026.5" y="275" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="252" width="109" height="27" fill="rgb(222,45,37)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 9, cpu 50, bandwidth_mib_s 67838.790238, target 100%, elapsed_ms 141.755066, mbm_total_delta_bytes 10083622912, mbm_local_delta_bytes 10087677952, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="263" text-anchor="middle" fill="#f8fafc">66.25 GiB/s</text>
+<text class="small" x="1138.5" y="275" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="252" width="109" height="27" fill="rgb(224,49,36)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 10, cpu 52, bandwidth_mib_s 67259.557377, target 100%, elapsed_ms 147.546178, mbm_total_delta_bytes 10405953536, mbm_local_delta_bytes 10403610624, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="263" text-anchor="middle" fill="#f8fafc">65.68 GiB/s</text>
+<text class="small" x="1250.5" y="275" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="252" width="109" height="27" fill="rgb(225,50,35)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 11, cpu 54, bandwidth_mib_s 67012.414905, target 100%, elapsed_ms 148.551998, mbm_total_delta_bytes 10438393856, mbm_local_delta_bytes 10433347584, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="263" text-anchor="middle" fill="#f8fafc">65.44 GiB/s</text>
+<text class="small" x="1362.5" y="275" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="252" width="109" height="27" fill="rgb(32,86,216)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 12, cpu 56, bandwidth_mib_s 9155.587575, target 40%, elapsed_ms 101.353749, mbm_total_delta_bytes 973029376, mbm_local_delta_bytes 973119488, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="263" text-anchor="middle" fill="#f8fafc">8.94 GiB/s</text>
+<text class="small" x="1474.5" y="275" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1532" y="252" width="109" height="27" fill="rgb(31,83,211)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 13, cpu 26, bandwidth_mib_s 8730.112785, target 40%, elapsed_ms 113.341534, mbm_total_delta_bytes 1037549568, mbm_local_delta_bytes 1036648448, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="263" text-anchor="middle" fill="#f8fafc">8.53 GiB/s</text>
+<text class="small" x="1586.5" y="275" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1644" y="252" width="109" height="27" fill="rgb(21,142,223)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 14, cpu 28, bandwidth_mib_s 16669.852867, target 30%, elapsed_ms 111.250607, mbm_total_delta_bytes 1944616960, mbm_local_delta_bytes 1943265280, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="263" text-anchor="middle" fill="#0f172a">16.28 GiB/s</text>
+<text class="small" x="1698.5" y="275" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1756" y="252" width="109" height="27" fill="rgb(19,147,222)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 15, cpu 62, bandwidth_mib_s 17413.467225, target 30%, elapsed_ms 99.496896, mbm_total_delta_bytes 1816748032, mbm_local_delta_bytes 1813954560, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="263" text-anchor="middle" fill="#0f172a">17.01 GiB/s</text>
+<text class="small" x="1810.5" y="275" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="293">s900</text>
+<text class="small" x="8" y="306">63.83 GiB/s</text>
+<rect x="76" y="282" width="109" height="27" fill="rgb(18,149,221)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 0, cpu 32, bandwidth_mib_s 17588.570174, target 30%, elapsed_ms 92.413531, mbm_total_delta_bytes 1704378368, mbm_local_delta_bytes 1705910272, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="293" text-anchor="middle" fill="#0f172a">17.18 GiB/s</text>
+<text class="small" x="130.5" y="305" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="188" y="282" width="109" height="27" fill="rgb(19,148,221)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 1, cpu 34, bandwidth_mib_s 17472.586265, target 30%, elapsed_ms 96.892854, mbm_total_delta_bytes 1775206400, mbm_local_delta_bytes 1773944832, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="293" text-anchor="middle" fill="#0f172a">17.06 GiB/s</text>
+<text class="small" x="242.5" y="305" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="300" y="282" width="109" height="27" fill="rgb(22,139,224)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 2, cpu 36, bandwidth_mib_s 16252.486771, target 30%, elapsed_ms 112.341462, mbm_total_delta_bytes 1914519552, mbm_local_delta_bytes 1912537088, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="293" text-anchor="middle" fill="#0f172a">15.87 GiB/s</text>
+<text class="small" x="354.5" y="305" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="412" y="282" width="109" height="27" fill="rgb(27,125,228)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 3, cpu 38, bandwidth_mib_s 14387.786598, target 30%, elapsed_ms 132.229121, mbm_total_delta_bytes 1994899456, mbm_local_delta_bytes 1993728000, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="293" text-anchor="middle" fill="#f8fafc">14.05 GiB/s</text>
+<text class="small" x="466.5" y="305" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="524" y="282" width="109" height="27" fill="rgb(229,63,33)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 4, cpu 40, bandwidth_mib_s 65232.847979, target 100%, elapsed_ms 142.616033, mbm_total_delta_bytes 9755164672, mbm_local_delta_bytes 9754533888, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="293" text-anchor="middle" fill="#f8fafc">63.70 GiB/s</text>
+<text class="small" x="578.5" y="305" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="282" width="109" height="27" fill="rgb(231,67,32)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 5, cpu 42, bandwidth_mib_s 64692.723366, target 100%, elapsed_ms 146.662795, mbm_total_delta_bytes 9948905472, mbm_local_delta_bytes 9945391104, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="293" text-anchor="middle" fill="#f8fafc">63.18 GiB/s</text>
+<text class="small" x="690.5" y="305" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="282" width="109" height="27" fill="rgb(229,62,33)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 6, cpu 44, bandwidth_mib_s 65286.170157, target 100%, elapsed_ms 140.340787, mbm_total_delta_bytes 9607380992, mbm_local_delta_bytes 9614049280, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="293" text-anchor="middle" fill="#f8fafc">63.76 GiB/s</text>
+<text class="small" x="802.5" y="305" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="282" width="109" height="27" fill="rgb(240,90,27)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 7, cpu 46, bandwidth_mib_s 61371.016195, target 100%, elapsed_ms 156.550131, mbm_total_delta_bytes 10074341376, mbm_local_delta_bytes 10066771968, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="293" text-anchor="middle" fill="#f8fafc">59.93 GiB/s</text>
+<text class="small" x="914.5" y="305" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="282" width="109" height="27" fill="rgb(231,67,32)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 8, cpu 48, bandwidth_mib_s 64673.939500, target 100%, elapsed_ms 146.751899, mbm_total_delta_bytes 9952059392, mbm_local_delta_bytes 9949265920, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="293" text-anchor="middle" fill="#f8fafc">63.16 GiB/s</text>
+<text class="small" x="1026.5" y="305" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="282" width="109" height="27" fill="rgb(229,62,33)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 9, cpu 50, bandwidth_mib_s 65365.299433, target 100%, elapsed_ms 140.178783, mbm_total_delta_bytes 9607921664, mbm_local_delta_bytes 9612337152, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="293" text-anchor="middle" fill="#f8fafc">63.83 GiB/s</text>
+<text class="small" x="1138.5" y="305" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="282" width="109" height="27" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 10, cpu 52, bandwidth_mib_s 64915.809080, target 100%, elapsed_ms 145.851654, mbm_total_delta_bytes 9927999488, mbm_local_delta_bytes 9929351168, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="293" text-anchor="middle" fill="#f8fafc">63.39 GiB/s</text>
+<text class="small" x="1250.5" y="305" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="282" width="109" height="27" fill="rgb(231,67,32)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 11, cpu 54, bandwidth_mib_s 64610.900921, target 100%, elapsed_ms 146.780693, mbm_total_delta_bytes 9944309760, mbm_local_delta_bytes 9943588864, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="293" text-anchor="middle" fill="#f8fafc">63.10 GiB/s</text>
+<text class="small" x="1362.5" y="305" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="282" width="109" height="27" fill="rgb(32,86,216)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 12, cpu 56, bandwidth_mib_s 9150.558064, target 40%, elapsed_ms 105.062752, mbm_total_delta_bytes 1008082944, mbm_local_delta_bytes 1008263168, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="293" text-anchor="middle" fill="#f8fafc">8.94 GiB/s</text>
+<text class="small" x="1474.5" y="305" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1532" y="282" width="109" height="27" fill="rgb(32,85,214)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 13, cpu 58, bandwidth_mib_s 8987.368017, target 40%, elapsed_ms 109.284463, mbm_total_delta_bytes 1029890048, mbm_local_delta_bytes 1028898816, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="293" text-anchor="middle" fill="#f8fafc">8.78 GiB/s</text>
+<text class="small" x="1586.5" y="305" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1644" y="282" width="109" height="27" fill="rgb(20,145,222)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 14, cpu 60, bandwidth_mib_s 17065.761223, target 30%, elapsed_ms 102.652083, mbm_total_delta_bytes 1836933120, mbm_local_delta_bytes 1834770432, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="293" text-anchor="middle" fill="#0f172a">16.67 GiB/s</text>
+<text class="small" x="1698.5" y="305" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1756" y="282" width="109" height="27" fill="rgb(19,148,222)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 15, cpu 62, bandwidth_mib_s 17445.501295, target 30%, elapsed_ms 97.422591, mbm_total_delta_bytes 1782145024, mbm_local_delta_bytes 1780072448, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="293" text-anchor="middle" fill="#0f172a">17.04 GiB/s</text>
+<text class="small" x="1810.5" y="305" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="323">s1000</text>
+<text class="small" x="8" y="336">64.24 GiB/s</text>
+<rect x="76" y="312" width="109" height="27" fill="rgb(27,125,228)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 0, cpu 32, bandwidth_mib_s 14492.101405, target 30%, elapsed_ms 90.052287, mbm_total_delta_bytes 1368440832, mbm_local_delta_bytes 1367900160, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="323" text-anchor="middle" fill="#f8fafc">14.15 GiB/s</text>
+<text class="small" x="130.5" y="335" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="188" y="312" width="109" height="27" fill="rgb(28,124,228)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 1, cpu 34, bandwidth_mib_s 14281.752936, target 30%, elapsed_ms 94.309042, mbm_total_delta_bytes 1412325376, mbm_local_delta_bytes 1411964928, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="323" text-anchor="middle" fill="#f8fafc">13.95 GiB/s</text>
+<text class="small" x="242.5" y="335" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="300" y="312" width="109" height="27" fill="rgb(31,115,231)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 2, cpu 36, bandwidth_mib_s 13063.466971, target 30%, elapsed_ms 110.853636, mbm_total_delta_bytes 1518477312, mbm_local_delta_bytes 1516404736, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="323" text-anchor="middle" fill="#f8fafc">12.76 GiB/s</text>
+<text class="small" x="354.5" y="335" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="412" y="312" width="109" height="27" fill="rgb(29,121,229)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 3, cpu 6, bandwidth_mib_s 13859.379550, target 40%, elapsed_ms 95.124546, mbm_total_delta_bytes 1382408192, mbm_local_delta_bytes 1383399424, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="323" text-anchor="middle" fill="#f8fafc">13.53 GiB/s</text>
+<text class="small" x="466.5" y="335" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="524" y="312" width="109" height="27" fill="rgb(228,60,33)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 4, cpu 40, bandwidth_mib_s 65650.626690, target 100%, elapsed_ms 130.615899, mbm_total_delta_bytes 8991555584, mbm_local_delta_bytes 8993628160, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="323" text-anchor="middle" fill="#f8fafc">64.11 GiB/s</text>
+<text class="small" x="578.5" y="335" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="312" width="109" height="27" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 5, cpu 42, bandwidth_mib_s 65019.053241, target 100%, elapsed_ms 135.923859, mbm_total_delta_bytes 9266937856, mbm_local_delta_bytes 9265045504, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="323" text-anchor="middle" fill="#f8fafc">63.50 GiB/s</text>
+<text class="small" x="690.5" y="335" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="312" width="109" height="27" fill="rgb(228,60,33)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 6, cpu 12, bandwidth_mib_s 65579.117295, target 100%, elapsed_ms 130.090002, mbm_total_delta_bytes 8945598464, mbm_local_delta_bytes 8950644736, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="323" text-anchor="middle" fill="#f8fafc">64.04 GiB/s</text>
+<text class="small" x="802.5" y="335" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="312" width="109" height="27" fill="rgb(235,79,30)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 7, cpu 46, bandwidth_mib_s 62967.919321, target 100%, elapsed_ms 143.500032, mbm_total_delta_bytes 9474826240, mbm_local_delta_bytes 9466265600, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="323" text-anchor="middle" fill="#f8fafc">61.49 GiB/s</text>
+<text class="small" x="914.5" y="335" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="312" width="109" height="27" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 8, cpu 48, bandwidth_mib_s 64981.167553, target 100%, elapsed_ms 135.634129, mbm_total_delta_bytes 9241796608, mbm_local_delta_bytes 9244049408, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="323" text-anchor="middle" fill="#f8fafc">63.46 GiB/s</text>
+<text class="small" x="1026.5" y="335" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="312" width="109" height="27" fill="rgb(228,59,34)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 9, cpu 18, bandwidth_mib_s 65782.664774, target 100%, elapsed_ms 129.551608, mbm_total_delta_bytes 8936226816, mbm_local_delta_bytes 8938299392, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="323" text-anchor="middle" fill="#f8fafc">64.24 GiB/s</text>
+<text class="small" x="1138.5" y="335" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="312" width="109" height="27" fill="rgb(233,73,31)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 10, cpu 52, bandwidth_mib_s 63746.981298, target 100%, elapsed_ms 141.467238, mbm_total_delta_bytes 9456173056, mbm_local_delta_bytes 9450586112, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="323" text-anchor="middle" fill="#f8fafc">62.25 GiB/s</text>
+<text class="small" x="1250.5" y="335" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="312" width="109" height="27" fill="rgb(232,71,31)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 11, cpu 54, bandwidth_mib_s 64090.640645, target 100%, elapsed_ms 140.195124, mbm_total_delta_bytes 9421660160, mbm_local_delta_bytes 9414991872, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="323" text-anchor="middle" fill="#f8fafc">62.59 GiB/s</text>
+<text class="small" x="1362.5" y="335" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="312" width="109" height="27" fill="rgb(30,117,230)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 12, cpu 56, bandwidth_mib_s 13406.020682, target 40%, elapsed_ms 103.809468, mbm_total_delta_bytes 1459273728, mbm_local_delta_bytes 1458102272, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="323" text-anchor="middle" fill="#f8fafc">13.09 GiB/s</text>
+<text class="small" x="1474.5" y="335" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1532" y="312" width="109" height="27" fill="rgb(32,113,231)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 13, cpu 58, bandwidth_mib_s 12809.950191, target 40%, elapsed_ms 112.517514, mbm_total_delta_bytes 1511358464, mbm_local_delta_bytes 1509826560, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="323" text-anchor="middle" fill="#f8fafc">12.51 GiB/s</text>
+<text class="small" x="1586.5" y="335" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1644" y="312" width="109" height="27" fill="rgb(30,117,230)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 14, cpu 60, bandwidth_mib_s 13387.478500, target 30%, elapsed_ms 107.175709, mbm_total_delta_bytes 1504509952, mbm_local_delta_bytes 1502887936, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="323" text-anchor="middle" fill="#f8fafc">13.07 GiB/s</text>
+<text class="small" x="1698.5" y="335" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1756" y="312" width="109" height="27" fill="rgb(28,124,228)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 15, cpu 62, bandwidth_mib_s 14268.615645, target 30%, elapsed_ms 94.305531, mbm_total_delta_bytes 1410973696, mbm_local_delta_bytes 1409351680, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="323" text-anchor="middle" fill="#f8fafc">13.93 GiB/s</text>
+<text class="small" x="1810.5" y="335" text-anchor="middle" fill="#f8fafc">30%</text>
+<text x="8" y="353">s1100</text>
+<text class="small" x="8" y="366">64.30 GiB/s</text>
+<rect x="76" y="342" width="109" height="27" fill="rgb(26,129,227)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 0, cpu 32, bandwidth_mib_s 14999.124728, target 30%, elapsed_ms 86.687350, mbm_total_delta_bytes 1363394560, mbm_local_delta_bytes 1362763776, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="353" text-anchor="middle" fill="#f8fafc">14.65 GiB/s</text>
+<text class="small" x="130.5" y="365" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="188" y="342" width="109" height="27" fill="rgb(27,127,227)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 1, cpu 34, bandwidth_mib_s 14692.850763, target 30%, elapsed_ms 91.167319, mbm_total_delta_bytes 1404575744, mbm_local_delta_bytes 1402503168, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="353" text-anchor="middle" fill="#f8fafc">14.35 GiB/s</text>
+<text class="small" x="242.5" y="365" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="300" y="342" width="109" height="27" fill="rgb(31,116,230)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 2, cpu 36, bandwidth_mib_s 13219.022841, target 30%, elapsed_ms 109.373629, mbm_total_delta_bytes 1516044288, mbm_local_delta_bytes 1512710144, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="353" text-anchor="middle" fill="#f8fafc">12.91 GiB/s</text>
+<text class="small" x="354.5" y="365" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="412" y="342" width="109" height="27" fill="rgb(28,122,229)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 3, cpu 38, bandwidth_mib_s 14095.305607, target 40%, elapsed_ms 92.782442, mbm_total_delta_bytes 1371324416, mbm_local_delta_bytes 1370513408, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="353" text-anchor="middle" fill="#f8fafc">13.76 GiB/s</text>
+<text class="small" x="466.5" y="365" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="524" y="342" width="109" height="27" fill="rgb(228,59,34)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 4, cpu 40, bandwidth_mib_s 65800.192813, target 100%, elapsed_ms 120.261212, mbm_total_delta_bytes 8297603072, mbm_local_delta_bytes 8301658112, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="353" text-anchor="middle" fill="#f8fafc">64.26 GiB/s</text>
+<text class="small" x="578.5" y="365" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="342" width="109" height="27" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 5, cpu 42, bandwidth_mib_s 65092.808559, target 100%, elapsed_ms 125.466769, mbm_total_delta_bytes 8563703808, mbm_local_delta_bytes 8560640000, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="353" text-anchor="middle" fill="#f8fafc">63.57 GiB/s</text>
+<text class="small" x="690.5" y="365" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="342" width="109" height="27" fill="rgb(228,59,34)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 6, cpu 12, bandwidth_mib_s 65759.722915, target 100%, elapsed_ms 119.951012, mbm_total_delta_bytes 8271110144, mbm_local_delta_bytes 8273362944, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="353" text-anchor="middle" fill="#f8fafc">64.22 GiB/s</text>
+<text class="small" x="802.5" y="365" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="342" width="109" height="27" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 7, cpu 46, bandwidth_mib_s 64912.873012, target 100%, elapsed_ms 125.973424, mbm_total_delta_bytes 8574517248, mbm_local_delta_bytes 8569470976, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="353" text-anchor="middle" fill="#f8fafc">63.39 GiB/s</text>
+<text class="small" x="914.5" y="365" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="342" width="109" height="27" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 8, cpu 48, bandwidth_mib_s 65083.013241, target 100%, elapsed_ms 125.232130, mbm_total_delta_bytes 8546402304, mbm_local_delta_bytes 8546131968, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="353" text-anchor="middle" fill="#f8fafc">63.56 GiB/s</text>
+<text class="small" x="1026.5" y="365" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="342" width="109" height="27" fill="rgb(228,59,34)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 9, cpu 18, bandwidth_mib_s 65840.968637, target 100%, elapsed_ms 118.967650, mbm_total_delta_bytes 8213438464, mbm_local_delta_bytes 8219115520, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="353" text-anchor="middle" fill="#f8fafc">64.30 GiB/s</text>
+<text class="small" x="1138.5" y="365" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="342" width="109" height="27" fill="rgb(233,74,31)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 10, cpu 52, bandwidth_mib_s 63696.431805, target 100%, elapsed_ms 129.021405, mbm_total_delta_bytes 8617410560, mbm_local_delta_bytes 8609120256, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="353" text-anchor="middle" fill="#f8fafc">62.20 GiB/s</text>
+<text class="small" x="1250.5" y="365" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="342" width="109" height="27" fill="rgb(229,63,33)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 11, cpu 54, bandwidth_mib_s 65202.253364, target 100%, elapsed_ms 125.016289, mbm_total_delta_bytes 8547303424, mbm_local_delta_bytes 8544149504, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="353" text-anchor="middle" fill="#f8fafc">63.67 GiB/s</text>
+<text class="small" x="1362.5" y="365" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="342" width="109" height="27" fill="rgb(30,117,230)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 12, cpu 56, bandwidth_mib_s 13387.398888, target 40%, elapsed_ms 104.127187, mbm_total_delta_bytes 1461706752, mbm_local_delta_bytes 1461616640, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="353" text-anchor="middle" fill="#f8fafc">13.07 GiB/s</text>
+<text class="small" x="1474.5" y="365" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1532" y="342" width="109" height="27" fill="rgb(32,113,231)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 13, cpu 58, bandwidth_mib_s 12844.086890, target 40%, elapsed_ms 112.245231, mbm_total_delta_bytes 1511718912, mbm_local_delta_bytes 1508204544, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="353" text-anchor="middle" fill="#f8fafc">12.54 GiB/s</text>
+<text class="small" x="1586.5" y="365" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1644" y="342" width="109" height="27" fill="rgb(30,119,229)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 14, cpu 60, bandwidth_mib_s 13649.270928, target 30%, elapsed_ms 104.584913, mbm_total_delta_bytes 1496850432, mbm_local_delta_bytes 1494958080, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="353" text-anchor="middle" fill="#f8fafc">13.33 GiB/s</text>
+<text class="small" x="1698.5" y="365" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1756" y="342" width="109" height="27" fill="rgb(27,127,227)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 15, cpu 62, bandwidth_mib_s 14669.805091, target 30%, elapsed_ms 91.398411, mbm_total_delta_bytes 1405927424, mbm_local_delta_bytes 1404035072, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="353" text-anchor="middle" fill="#f8fafc">14.33 GiB/s</text>
+<text class="small" x="1810.5" y="365" text-anchor="middle" fill="#f8fafc">30%</text>
+<text x="8" y="383">s1200</text>
+<text class="small" x="8" y="396">65.28 GiB/s</text>
+<rect x="76" y="372" width="109" height="27" fill="rgb(27,126,227)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 0, cpu 32, bandwidth_mib_s 14622.723017, target 30%, elapsed_ms 84.816624, mbm_total_delta_bytes 1300496384, mbm_local_delta_bytes 1300496384, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="383" text-anchor="middle" fill="#f8fafc">14.28 GiB/s</text>
+<text class="small" x="130.5" y="395" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="188" y="372" width="109" height="27" fill="rgb(27,125,228)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 1, cpu 34, bandwidth_mib_s 14455.867836, target 30%, elapsed_ms 88.048696, mbm_total_delta_bytes 1334648832, mbm_local_delta_bytes 1332576256, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="383" text-anchor="middle" fill="#f8fafc">14.12 GiB/s</text>
+<text class="small" x="242.5" y="395" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="300" y="372" width="109" height="27" fill="rgb(30,118,230)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 2, cpu 36, bandwidth_mib_s 13491.327547, target 30%, elapsed_ms 101.267601, mbm_total_delta_bytes 1432600576, mbm_local_delta_bytes 1428725760, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="383" text-anchor="middle" fill="#f8fafc">13.18 GiB/s</text>
+<text class="small" x="354.5" y="395" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="412" y="372" width="109" height="27" fill="rgb(28,122,229)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 3, cpu 38, bandwidth_mib_s 14092.330182, target 40%, elapsed_ms 90.996972, mbm_total_delta_bytes 1344651264, mbm_local_delta_bytes 1344200704, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="383" text-anchor="middle" fill="#f8fafc">13.76 GiB/s</text>
+<text class="small" x="466.5" y="395" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="524" y="372" width="109" height="27" fill="rgb(225,52,35)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 4, cpu 40, bandwidth_mib_s 66801.690297, target 100%, elapsed_ms 113.514390, mbm_total_delta_bytes 7951302656, mbm_local_delta_bytes 7954006016, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="383" text-anchor="middle" fill="#f8fafc">65.24 GiB/s</text>
+<text class="small" x="578.5" y="395" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="372" width="109" height="27" fill="rgb(228,58,34)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 5, cpu 42, bandwidth_mib_s 65868.954515, target 100%, elapsed_ms 119.104977, mbm_total_delta_bytes 8226414592, mbm_local_delta_bytes 8220557312, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="383" text-anchor="middle" fill="#f8fafc">64.33 GiB/s</text>
+<text class="small" x="690.5" y="395" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="372" width="109" height="27" fill="rgb(225,52,35)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 6, cpu 12, bandwidth_mib_s 66848.853144, target 100%, elapsed_ms 113.397023, mbm_total_delta_bytes 7948689408, mbm_local_delta_bytes 7952293888, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="383" text-anchor="middle" fill="#f8fafc">65.28 GiB/s</text>
+<text class="small" x="802.5" y="395" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="372" width="109" height="27" fill="rgb(227,58,34)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 7, cpu 46, bandwidth_mib_s 65981.904521, target 100%, elapsed_ms 118.773450, mbm_total_delta_bytes 8217583616, mbm_local_delta_bytes 8212987904, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="383" text-anchor="middle" fill="#f8fafc">64.44 GiB/s</text>
+<text class="small" x="914.5" y="395" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="372" width="109" height="27" fill="rgb(227,56,34)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 8, cpu 48, bandwidth_mib_s 66271.923907, target 100%, elapsed_ms 117.945049, mbm_total_delta_bytes 8196136960, mbm_local_delta_bytes 8195686400, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="383" text-anchor="middle" fill="#f8fafc">64.72 GiB/s</text>
+<text class="small" x="1026.5" y="395" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="372" width="109" height="27" fill="rgb(225,52,35)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 9, cpu 18, bandwidth_mib_s 66794.662516, target 100%, elapsed_ms 112.350388, mbm_total_delta_bytes 7868940288, mbm_local_delta_bytes 7877140480, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="383" text-anchor="middle" fill="#f8fafc">65.23 GiB/s</text>
+<text class="small" x="1138.5" y="395" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="372" width="109" height="27" fill="rgb(226,55,34)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 10, cpu 52, bandwidth_mib_s 66376.691337, target 100%, elapsed_ms 117.666964, mbm_total_delta_bytes 8189739008, mbm_local_delta_bytes 8189468672, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="383" text-anchor="middle" fill="#f8fafc">64.82 GiB/s</text>
+<text class="small" x="1250.5" y="395" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="372" width="109" height="27" fill="rgb(227,56,34)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 11, cpu 54, bandwidth_mib_s 66228.047026, target 100%, elapsed_ms 118.139973, mbm_total_delta_bytes 8204247040, mbm_local_delta_bytes 8200642560, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="383" text-anchor="middle" fill="#f8fafc">64.68 GiB/s</text>
+<text class="small" x="1362.5" y="395" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="372" width="109" height="27" fill="rgb(30,117,230)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 12, cpu 56, bandwidth_mib_s 13348.418133, target 40%, elapsed_ms 104.495645, mbm_total_delta_bytes 1462607872, mbm_local_delta_bytes 1462247424, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="383" text-anchor="middle" fill="#f8fafc">13.04 GiB/s</text>
+<text class="small" x="1474.5" y="395" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1532" y="372" width="109" height="27" fill="rgb(32,113,231)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 13, cpu 58, bandwidth_mib_s 12847.675726, target 40%, elapsed_ms 111.745650, mbm_total_delta_bytes 1505411072, mbm_local_delta_bytes 1503608832, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="383" text-anchor="middle" fill="#f8fafc">12.55 GiB/s</text>
+<text class="small" x="1586.5" y="395" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1644" y="372" width="109" height="27" fill="rgb(30,117,230)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 14, cpu 60, bandwidth_mib_s 13362.373355, target 30%, elapsed_ms 102.379946, mbm_total_delta_bytes 1434492928, mbm_local_delta_bytes 1432780800, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="383" text-anchor="middle" fill="#f8fafc">13.05 GiB/s</text>
+<text class="small" x="1698.5" y="395" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1756" y="372" width="109" height="27" fill="rgb(27,126,227)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 15, cpu 62, bandwidth_mib_s 14650.161164, target 30%, elapsed_ms 84.845483, mbm_total_delta_bytes 1303379968, mbm_local_delta_bytes 1301667840, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="383" text-anchor="middle" fill="#f8fafc">14.31 GiB/s</text>
+<text class="small" x="1810.5" y="395" text-anchor="middle" fill="#f8fafc">30%</text>
+<text x="8" y="413">s1300</text>
+<text class="small" x="8" y="426">64.01 GiB/s</text>
+<rect x="76" y="402" width="109" height="27" fill="rgb(35,104,234)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 0, cpu 32, bandwidth_mib_s 11714.028254, target 30%, elapsed_ms 82.115086, mbm_total_delta_bytes 1008623616, mbm_local_delta_bytes 1007812608, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="413" text-anchor="middle" fill="#f8fafc">11.44 GiB/s</text>
+<text class="small" x="130.5" y="425" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="188" y="402" width="109" height="27" fill="rgb(34,106,233)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 1, cpu 34, bandwidth_mib_s 11980.618691, target 30%, elapsed_ms 78.673942, mbm_total_delta_bytes 988348416, mbm_local_delta_bytes 987447296, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="413" text-anchor="middle" fill="#f8fafc">11.70 GiB/s</text>
+<text class="small" x="242.5" y="425" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="300" y="402" width="109" height="27" fill="rgb(30,118,230)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 2, cpu 36, bandwidth_mib_s 13549.754979, target 40%, elapsed_ms 78.011097, mbm_total_delta_bytes 1108377600, mbm_local_delta_bytes 1108918272, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="413" text-anchor="middle" fill="#f8fafc">13.23 GiB/s</text>
+<text class="small" x="354.5" y="425" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="412" y="402" width="109" height="27" fill="rgb(32,114,231)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 3, cpu 38, bandwidth_mib_s 12941.109214, target 40%, elapsed_ms 93.128609, mbm_total_delta_bytes 1263730688, mbm_local_delta_bytes 1263280128, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="413" text-anchor="middle" fill="#f8fafc">12.64 GiB/s</text>
+<text class="small" x="466.5" y="425" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="524" y="402" width="109" height="27" fill="rgb(229,61,33)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 4, cpu 40, bandwidth_mib_s 65436.935571, target 100%, elapsed_ms 105.577797, mbm_total_delta_bytes 7244283904, mbm_local_delta_bytes 7245455360, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="413" text-anchor="middle" fill="#f8fafc">63.90 GiB/s</text>
+<text class="small" x="578.5" y="425" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="402" width="109" height="27" fill="rgb(231,66,32)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 5, cpu 42, bandwidth_mib_s 64770.623262, target 100%, elapsed_ms 110.649603, mbm_total_delta_bytes 7514980352, mbm_local_delta_bytes 7513088000, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="413" text-anchor="middle" fill="#f8fafc">63.25 GiB/s</text>
+<text class="small" x="690.5" y="425" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="402" width="109" height="27" fill="rgb(229,61,33)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 6, cpu 12, bandwidth_mib_s 65547.722576, target 100%, elapsed_ms 104.309855, mbm_total_delta_bytes 7169400832, mbm_local_delta_bytes 7175348224, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="413" text-anchor="middle" fill="#f8fafc">64.01 GiB/s</text>
+<text class="small" x="802.5" y="425" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="402" width="109" height="27" fill="rgb(231,66,32)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 7, cpu 46, bandwidth_mib_s 64720.352505, target 100%, elapsed_ms 110.756794, mbm_total_delta_bytes 7516422144, mbm_local_delta_bytes 7512817664, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="413" text-anchor="middle" fill="#f8fafc">63.20 GiB/s</text>
+<text class="small" x="914.5" y="425" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="402" width="109" height="27" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 8, cpu 48, bandwidth_mib_s 65116.683965, target 100%, elapsed_ms 109.686751, mbm_total_delta_bytes 7489388544, mbm_local_delta_bytes 7487496192, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="413" text-anchor="middle" fill="#f8fafc">63.59 GiB/s</text>
+<text class="small" x="1026.5" y="425" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="402" width="109" height="27" fill="rgb(229,61,33)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 9, cpu 18, bandwidth_mib_s 65532.243677, target 100%, elapsed_ms 103.760110, mbm_total_delta_bytes 7129931776, mbm_local_delta_bytes 7138402304, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="413" text-anchor="middle" fill="#f8fafc">64.00 GiB/s</text>
+<text class="small" x="1138.5" y="425" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="402" width="109" height="27" fill="rgb(229,63,33)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 10, cpu 52, bandwidth_mib_s 65222.609093, target 100%, elapsed_ms 109.308338, mbm_total_delta_bytes 7475691520, mbm_local_delta_bytes 7474520064, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="413" text-anchor="middle" fill="#f8fafc">63.69 GiB/s</text>
+<text class="small" x="1250.5" y="425" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="402" width="109" height="27" fill="rgb(234,74,31)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 11, cpu 54, bandwidth_mib_s 63652.764681, target 100%, elapsed_ms 113.062646, mbm_total_delta_bytes 7546339328, mbm_local_delta_bytes 7541563392, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="413" text-anchor="middle" fill="#f8fafc">62.16 GiB/s</text>
+<text class="small" x="1362.5" y="425" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="402" width="109" height="27" fill="rgb(34,107,233)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 12, cpu 56, bandwidth_mib_s 12094.646865, target 40%, elapsed_ms 103.213276, mbm_total_delta_bytes 1308966912, mbm_local_delta_bytes 1307525120, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="413" text-anchor="middle" fill="#f8fafc">11.81 GiB/s</text>
+<text class="small" x="1474.5" y="425" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1532" y="402" width="109" height="27" fill="rgb(24,64,183)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 13, cpu 58, bandwidth_mib_s 6004.387628, target 50%, elapsed_ms 82.496964, mbm_total_delta_bytes 519405568, mbm_local_delta_bytes 519225344, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="413" text-anchor="middle" fill="#f8fafc">5.86 GiB/s</text>
+<text class="small" x="1586.5" y="425" text-anchor="middle" fill="#f8fafc">50%</text>
+<rect x="1644" y="402" width="109" height="27" fill="rgb(36,96,230)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 14, cpu 60, bandwidth_mib_s 10545.627516, target 30%, elapsed_ms 97.112968, mbm_total_delta_bytes 1073864704, mbm_local_delta_bytes 1071972352, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="413" text-anchor="middle" fill="#f8fafc">10.30 GiB/s</text>
+<text class="small" x="1698.5" y="425" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1756" y="402" width="109" height="27" fill="rgb(36,102,234)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 15, cpu 62, bandwidth_mib_s 11405.809546, target 30%, elapsed_ms 87.046512, mbm_total_delta_bytes 1041063936, mbm_local_delta_bytes 1038811136, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="413" text-anchor="middle" fill="#f8fafc">11.14 GiB/s</text>
+<text class="small" x="1810.5" y="425" text-anchor="middle" fill="#f8fafc">30%</text>
+<text x="8" y="443">s1400</text>
+<text class="small" x="8" y="456">64.13 GiB/s</text>
+<rect x="76" y="432" width="109" height="27" fill="rgb(30,82,209)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 0, cpu 32, bandwidth_mib_s 8535.345848, target 30%, elapsed_ms 79.157967, mbm_total_delta_bytes 708460544, mbm_local_delta_bytes 706568192, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="443" text-anchor="middle" fill="#f8fafc">8.34 GiB/s</text>
+<text class="small" x="130.5" y="455" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="188" y="432" width="109" height="27" fill="rgb(31,83,211)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 1, cpu 34, bandwidth_mib_s 8702.736359, target 30%, elapsed_ms 76.519575, mbm_total_delta_bytes 698277888, mbm_local_delta_bytes 697196544, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="443" text-anchor="middle" fill="#f8fafc">8.50 GiB/s</text>
+<text class="small" x="242.5" y="455" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="300" y="432" width="109" height="27" fill="rgb(8,177,213)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 2, cpu 36, bandwidth_mib_s 21381.227067, target 40%, elapsed_ms 77.403620, mbm_total_delta_bytes 1735376896, mbm_local_delta_bytes 1736368128, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="443" text-anchor="middle" fill="#0f172a">20.88 GiB/s</text>
+<text class="small" x="354.5" y="455" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="412" y="432" width="109" height="27" fill="rgb(10,171,215)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 3, cpu 38, bandwidth_mib_s 20495.878092, target 40%, elapsed_ms 92.252543, mbm_total_delta_bytes 1982644224, mbm_local_delta_bytes 1981833216, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="443" text-anchor="middle" fill="#0f172a">20.02 GiB/s</text>
+<text class="small" x="466.5" y="455" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="524" y="432" width="109" height="27" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 4, cpu 40, bandwidth_mib_s 64912.895217, target 100%, elapsed_ms 104.539610, mbm_total_delta_bytes 7115603968, mbm_local_delta_bytes 7107584000, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="443" text-anchor="middle" fill="#f8fafc">63.39 GiB/s</text>
+<text class="small" x="578.5" y="455" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="432" width="109" height="27" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 5, cpu 42, bandwidth_mib_s 64907.323138, target 100%, elapsed_ms 105.230446, mbm_total_delta_bytes 7162011648, mbm_local_delta_bytes 7155433472, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="443" text-anchor="middle" fill="#f8fafc">63.39 GiB/s</text>
+<text class="small" x="690.5" y="455" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="432" width="109" height="27" fill="rgb(228,60,33)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 6, cpu 12, bandwidth_mib_s 65664.789480, target 100%, elapsed_ms 99.328704, mbm_total_delta_bytes 6839230464, mbm_local_delta_bytes 6842654720, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="443" text-anchor="middle" fill="#f8fafc">64.13 GiB/s</text>
+<text class="small" x="802.5" y="455" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="432" width="109" height="27" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 7, cpu 46, bandwidth_mib_s 65065.917660, target 100%, elapsed_ms 104.913197, mbm_total_delta_bytes 7157866496, mbm_local_delta_bytes 7153360896, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="443" text-anchor="middle" fill="#f8fafc">63.54 GiB/s</text>
+<text class="small" x="914.5" y="455" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="432" width="109" height="27" fill="rgb(229,62,33)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 8, cpu 48, bandwidth_mib_s 65291.759064, target 100%, elapsed_ms 104.279168, mbm_total_delta_bytes 7139303424, mbm_local_delta_bytes 7139844096, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="443" text-anchor="middle" fill="#f8fafc">63.76 GiB/s</text>
+<text class="small" x="1026.5" y="455" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="432" width="109" height="27" fill="rgb(229,61,33)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 9, cpu 18, bandwidth_mib_s 65547.682534, target 100%, elapsed_ms 98.896517, mbm_total_delta_bytes 6797328384, mbm_local_delta_bytes 6804267008, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="443" text-anchor="middle" fill="#f8fafc">64.01 GiB/s</text>
+<text class="small" x="1138.5" y="455" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="432" width="109" height="27" fill="rgb(229,62,33)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 10, cpu 52, bandwidth_mib_s 65393.869120, target 100%, elapsed_ms 103.753634, mbm_total_delta_bytes 7114432512, mbm_local_delta_bytes 7115333632, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="443" text-anchor="middle" fill="#f8fafc">63.86 GiB/s</text>
+<text class="small" x="1250.5" y="455" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="432" width="109" height="27" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 11, cpu 54, bandwidth_mib_s 65088.741344, target 100%, elapsed_ms 104.919979, mbm_total_delta_bytes 7160840192, mbm_local_delta_bytes 7157866496, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="443" text-anchor="middle" fill="#f8fafc">63.56 GiB/s</text>
+<text class="small" x="1362.5" y="455" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="432" width="109" height="27" fill="rgb(14,161,218)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 12, cpu 56, bandwidth_mib_s 19260.191848, target 40%, elapsed_ms 102.820562, mbm_total_delta_bytes 2076540928, mbm_local_delta_bytes 2075729920, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="443" text-anchor="middle" fill="#0f172a">18.81 GiB/s</text>
+<text class="small" x="1474.5" y="455" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1532" y="432" width="109" height="27" fill="rgb(16,155,219)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 13, cpu 58, bandwidth_mib_s 18433.508136, target 40%, elapsed_ms 109.487688, mbm_total_delta_bytes 2116280320, mbm_local_delta_bytes 2115108864, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="443" text-anchor="middle" fill="#0f172a">18.00 GiB/s</text>
+<text class="small" x="1586.5" y="455" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1644" y="432" width="109" height="27" fill="rgb(6,182,211)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 14, cpu 60, bandwidth_mib_s 22091.097967, target 40%, elapsed_ms 64.654154, mbm_total_delta_bytes 1497661440, mbm_local_delta_bytes 1498112000, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="443" text-anchor="middle" fill="#0f172a">21.57 GiB/s</text>
+<text class="small" x="1698.5" y="455" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1756" y="432" width="109" height="27" fill="rgb(30,81,208)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 15, cpu 62, bandwidth_mib_s 8380.059323, target 30%, elapsed_ms 82.234837, mbm_total_delta_bytes 722608128, mbm_local_delta_bytes 721076224, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="443" text-anchor="middle" fill="#f8fafc">8.18 GiB/s</text>
+<text class="small" x="1810.5" y="455" text-anchor="middle" fill="#f8fafc">30%</text>
+<text x="8" y="473">s1500</text>
+<text class="small" x="8" y="486">61.63 GiB/s</text>
+<rect x="76" y="462" width="109" height="27" fill="rgb(33,108,232)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 0, cpu 32, bandwidth_mib_s 12254.615089, target 30%, elapsed_ms 76.402976, mbm_total_delta_bytes 981770240, mbm_local_delta_bytes 980688896, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="473" text-anchor="middle" fill="#f8fafc">11.97 GiB/s</text>
+<text class="small" x="130.5" y="485" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="188" y="462" width="109" height="27" fill="rgb(33,109,232)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 1, cpu 34, bandwidth_mib_s 12284.400775, target 30%, elapsed_ms 74.538765, mbm_total_delta_bytes 960143360, mbm_local_delta_bytes 959152128, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="473" text-anchor="middle" fill="#f8fafc">12.00 GiB/s</text>
+<text class="small" x="242.5" y="485" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="300" y="462" width="109" height="27" fill="rgb(31,82,210)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 2, cpu 36, bandwidth_mib_s 8624.613289, target 40%, elapsed_ms 72.898196, mbm_total_delta_bytes 659259392, mbm_local_delta_bytes 659349504, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="473" text-anchor="middle" fill="#f8fafc">8.42 GiB/s</text>
+<text class="small" x="354.5" y="485" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="412" y="462" width="109" height="27" fill="rgb(29,78,204)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 3, cpu 38, bandwidth_mib_s 8006.305727, target 40%, elapsed_ms 87.877023, mbm_total_delta_bytes 737746944, mbm_local_delta_bytes 737476608, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="473" text-anchor="middle" fill="#f8fafc">7.82 GiB/s</text>
+<text class="small" x="466.5" y="485" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="524" y="462" width="109" height="27" fill="rgb(235,78,30)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 4, cpu 40, bandwidth_mib_s 63020.862140, target 100%, elapsed_ms 94.270866, mbm_total_delta_bytes 6229622784, mbm_local_delta_bytes 6232866816, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="473" text-anchor="middle" fill="#f8fafc">61.54 GiB/s</text>
+<text class="small" x="578.5" y="485" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="462" width="109" height="27" fill="rgb(237,82,29)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 5, cpu 42, bandwidth_mib_s 62501.755683, target 100%, elapsed_ms 99.320335, mbm_total_delta_bytes 6509240320, mbm_local_delta_bytes 6506176512, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="473" text-anchor="middle" fill="#f8fafc">61.04 GiB/s</text>
+<text class="small" x="690.5" y="485" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="462" width="109" height="27" fill="rgb(235,78,30)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 6, cpu 44, bandwidth_mib_s 63104.750004, target 100%, elapsed_ms 95.881872, mbm_total_delta_bytes 6344515584, mbm_local_delta_bytes 6345326592, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="473" text-anchor="middle" fill="#f8fafc">61.63 GiB/s</text>
+<text class="small" x="802.5" y="485" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="462" width="109" height="27" fill="rgb(237,82,29)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 7, cpu 46, bandwidth_mib_s 62482.465217, target 100%, elapsed_ms 98.978269, mbm_total_delta_bytes 6484819968, mbm_local_delta_bytes 6482657280, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="473" text-anchor="middle" fill="#f8fafc">61.02 GiB/s</text>
+<text class="small" x="914.5" y="485" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="462" width="109" height="27" fill="rgb(240,90,27)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 8, cpu 48, bandwidth_mib_s 61308.429984, target 100%, elapsed_ms 101.379691, mbm_total_delta_bytes 6517350400, mbm_local_delta_bytes 6511853568, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="473" text-anchor="middle" fill="#f8fafc">59.87 GiB/s</text>
+<text class="small" x="1026.5" y="485" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="462" width="109" height="27" fill="rgb(235,78,30)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 9, cpu 18, bandwidth_mib_s 63086.508963, target 100%, elapsed_ms 92.593960, mbm_total_delta_bytes 6125182976, mbm_local_delta_bytes 6133563392, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="473" text-anchor="middle" fill="#f8fafc">61.61 GiB/s</text>
+<text class="small" x="1138.5" y="485" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="462" width="109" height="27" fill="rgb(238,85,28)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 10, cpu 52, bandwidth_mib_s 62006.916257, target 100%, elapsed_ms 99.231496, mbm_total_delta_bytes 6451929088, mbm_local_delta_bytes 6449766400, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="473" text-anchor="middle" fill="#f8fafc">60.55 GiB/s</text>
+<text class="small" x="1250.5" y="485" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="462" width="109" height="27" fill="rgb(236,81,29)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 11, cpu 54, bandwidth_mib_s 62679.341978, target 100%, elapsed_ms 98.505591, mbm_total_delta_bytes 6474186752, mbm_local_delta_bytes 6472654848, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="473" text-anchor="middle" fill="#f8fafc">61.21 GiB/s</text>
+<text class="small" x="1362.5" y="485" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="462" width="109" height="27" fill="rgb(33,110,232)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 12, cpu 56, bandwidth_mib_s 12521.386113, target 50%, elapsed_ms 76.161571, mbm_total_delta_bytes 999972864, mbm_local_delta_bytes 1000693760, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="473" text-anchor="middle" fill="#f8fafc">12.23 GiB/s</text>
+<text class="small" x="1474.5" y="485" text-anchor="middle" fill="#f8fafc">50%</text>
+<rect x="1532" y="462" width="109" height="27" fill="rgb(34,108,233)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 13, cpu 58, bandwidth_mib_s 12166.953259, target 50%, elapsed_ms 82.024823, mbm_total_delta_bytes 1046470656, mbm_local_delta_bytes 1045659648, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="473" text-anchor="middle" fill="#f8fafc">11.88 GiB/s</text>
+<text class="small" x="1586.5" y="485" text-anchor="middle" fill="#f8fafc">50%</text>
+<rect x="1644" y="462" width="109" height="27" fill="rgb(36,96,231)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 14, cpu 60, bandwidth_mib_s 10590.190191, target 30%, elapsed_ms 96.404076, mbm_total_delta_bytes 1070530560, mbm_local_delta_bytes 1068728320, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="473" text-anchor="middle" fill="#f8fafc">10.34 GiB/s</text>
+<text class="small" x="1698.5" y="485" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1756" y="462" width="109" height="27" fill="rgb(35,105,233)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 15, cpu 62, bandwidth_mib_s 11779.402032, target 30%, elapsed_ms 83.330047, mbm_total_delta_bytes 1029259264, mbm_local_delta_bytes 1027637248, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="473" text-anchor="middle" fill="#f8fafc">11.50 GiB/s</text>
+<text class="small" x="1810.5" y="485" text-anchor="middle" fill="#f8fafc">30%</text>
+<text x="8" y="503">s1600</text>
+<text class="small" x="8" y="516">62.87 GiB/s</text>
+<rect x="76" y="492" width="109" height="27" fill="rgb(32,86,215)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 0, cpu 32, bandwidth_mib_s 9103.765941, target 30%, elapsed_ms 73.469767, mbm_total_delta_bytes 701341696, mbm_local_delta_bytes 700530688, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="503" text-anchor="middle" fill="#f8fafc">8.89 GiB/s</text>
+<text class="small" x="130.5" y="515" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="188" y="492" width="109" height="27" fill="rgb(33,87,218)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 1, cpu 34, bandwidth_mib_s 9332.097993, target 30%, elapsed_ms 70.557888, mbm_total_delta_bytes 690438144, mbm_local_delta_bytes 689537024, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="503" text-anchor="middle" fill="#f8fafc">9.11 GiB/s</text>
+<text class="small" x="242.5" y="515" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="300" y="492" width="109" height="27" fill="rgb(33,110,232)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 2, cpu 4, bandwidth_mib_s 12525.781212, target 40%, elapsed_ms 75.592840, mbm_total_delta_bytes 992854016, mbm_local_delta_bytes 992854016, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="503" text-anchor="middle" fill="#f8fafc">12.23 GiB/s</text>
+<text class="small" x="354.5" y="515" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="412" y="492" width="109" height="27" fill="rgb(36,101,234)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 3, cpu 38, bandwidth_mib_s 11280.521967, target 40%, elapsed_ms 90.413037, mbm_total_delta_bytes 1069449216, mbm_local_delta_bytes 1068277760, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="503" text-anchor="middle" fill="#f8fafc">11.02 GiB/s</text>
+<text class="small" x="466.5" y="515" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="524" y="492" width="109" height="27" fill="rgb(232,70,31)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 4, cpu 40, bandwidth_mib_s 64177.250490, target 100%, elapsed_ms 87.391389, mbm_total_delta_bytes 5880979456, mbm_local_delta_bytes 5883052032, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="503" text-anchor="middle" fill="#f8fafc">62.67 GiB/s</text>
+<text class="small" x="578.5" y="515" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="492" width="109" height="27" fill="rgb(235,77,30)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 5, cpu 42, bandwidth_mib_s 63256.944602, target 100%, elapsed_ms 92.519733, mbm_total_delta_bytes 6136807424, mbm_local_delta_bytes 6128787456, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="503" text-anchor="middle" fill="#f8fafc">61.77 GiB/s</text>
+<text class="small" x="690.5" y="515" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="492" width="109" height="27" fill="rgb(232,69,32)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 6, cpu 44, bandwidth_mib_s 64381.690579, target 100%, elapsed_ms 87.655817, mbm_total_delta_bytes 5917564928, mbm_local_delta_bytes 5922250752, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="503" text-anchor="middle" fill="#f8fafc">62.87 GiB/s</text>
+<text class="small" x="802.5" y="515" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="492" width="109" height="27" fill="rgb(234,74,31)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 7, cpu 46, bandwidth_mib_s 63633.482692, target 100%, elapsed_ms 91.803453, mbm_total_delta_bytes 6125543424, mbm_local_delta_bytes 6124371968, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="503" text-anchor="middle" fill="#f8fafc">62.14 GiB/s</text>
+<text class="small" x="914.5" y="515" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="492" width="109" height="27" fill="rgb(235,79,30)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 8, cpu 48, bandwidth_mib_s 62971.142889, target 100%, elapsed_ms 92.889150, mbm_total_delta_bytes 6133473280, mbm_local_delta_bytes 6127886336, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="503" text-anchor="middle" fill="#f8fafc">61.50 GiB/s</text>
+<text class="small" x="1026.5" y="515" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="492" width="109" height="27" fill="rgb(232,69,32)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 9, cpu 18, bandwidth_mib_s 64379.552584, target 100%, elapsed_ms 87.369064, mbm_total_delta_bytes 5898010624, mbm_local_delta_bytes 5901524992, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="503" text-anchor="middle" fill="#f8fafc">62.87 GiB/s</text>
+<text class="small" x="1138.5" y="515" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="492" width="109" height="27" fill="rgb(233,72,31)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 10, cpu 52, bandwidth_mib_s 63915.122299, target 100%, elapsed_ms 91.042617, mbm_total_delta_bytes 6101663744, mbm_local_delta_bytes 6102474752, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="503" text-anchor="middle" fill="#f8fafc">62.42 GiB/s</text>
+<text class="small" x="1250.5" y="515" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="492" width="109" height="27" fill="rgb(234,75,30)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 11, cpu 54, bandwidth_mib_s 63480.634251, target 100%, elapsed_ms 91.985238, mbm_total_delta_bytes 6122930176, mbm_local_delta_bytes 6119055360, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="503" text-anchor="middle" fill="#f8fafc">61.99 GiB/s</text>
+<text class="small" x="1362.5" y="515" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="492" width="109" height="27" fill="rgb(33,110,232)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 12, cpu 56, bandwidth_mib_s 12527.934571, target 50%, elapsed_ms 76.053164, mbm_total_delta_bytes 999071744, mbm_local_delta_bytes 999612416, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="503" text-anchor="middle" fill="#f8fafc">12.23 GiB/s</text>
+<text class="small" x="1474.5" y="515" text-anchor="middle" fill="#f8fafc">50%</text>
+<rect x="1532" y="492" width="109" height="27" fill="rgb(34,108,232)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 13, cpu 58, bandwidth_mib_s 12212.746667, target 50%, elapsed_ms 80.915075, mbm_total_delta_bytes 1036197888, mbm_local_delta_bytes 1034756096, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="503" text-anchor="middle" fill="#f8fafc">11.93 GiB/s</text>
+<text class="small" x="1586.5" y="515" text-anchor="middle" fill="#f8fafc">50%</text>
+<rect x="1644" y="492" width="109" height="27" fill="rgb(31,115,231)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 14, cpu 60, bandwidth_mib_s 13100.196724, target 40%, elapsed_ms 67.686245, mbm_total_delta_bytes 929775616, mbm_local_delta_bytes 929325056, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="503" text-anchor="middle" fill="#f8fafc">12.79 GiB/s</text>
+<text class="small" x="1698.5" y="515" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1756" y="492" width="109" height="27" fill="rgb(30,81,209)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 15, cpu 62, bandwidth_mib_s 8500.866235, target 30%, elapsed_ms 81.561541, mbm_total_delta_bytes 727023616, mbm_local_delta_bytes 726122496, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="503" text-anchor="middle" fill="#f8fafc">8.30 GiB/s</text>
+<text class="small" x="1810.5" y="515" text-anchor="middle" fill="#f8fafc">30%</text>
+<text x="8" y="533">s1700</text>
+<text class="small" x="8" y="546">61.46 GiB/s</text>
+<rect x="76" y="522" width="109" height="27" fill="rgb(34,91,222)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 0, cpu 32, bandwidth_mib_s 9799.258791, target 30%, elapsed_ms 70.912570, mbm_total_delta_bytes 728645632, mbm_local_delta_bytes 727924736, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="533" text-anchor="middle" fill="#f8fafc">9.57 GiB/s</text>
+<text class="small" x="130.5" y="545" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="188" y="522" width="109" height="27" fill="rgb(33,89,220)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 1, cpu 34, bandwidth_mib_s 9612.482111, target 30%, elapsed_ms 73.837101, mbm_total_delta_bytes 744235008, mbm_local_delta_bytes 743063552, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="533" text-anchor="middle" fill="#f8fafc">9.39 GiB/s</text>
+<text class="small" x="242.5" y="545" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="300" y="522" width="109" height="27" fill="rgb(27,73,196)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 2, cpu 36, bandwidth_mib_s 7246.645971, target 40%, elapsed_ms 74.426673, mbm_total_delta_bytes 565542912, mbm_local_delta_bytes 565452800, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="533" text-anchor="middle" fill="#f8fafc">7.08 GiB/s</text>
+<text class="small" x="354.5" y="545" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="412" y="522" width="109" height="27" fill="rgb(15,158,219)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 3, cpu 6, bandwidth_mib_s 18871.696193, target 50%, elapsed_ms 67.491532, mbm_total_delta_bytes 1335549952, mbm_local_delta_bytes 1336000512, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="533" text-anchor="middle" fill="#0f172a">18.43 GiB/s</text>
+<text class="small" x="466.5" y="545" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="524" y="522" width="109" height="27" fill="rgb(236,80,29)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 4, cpu 40, bandwidth_mib_s 62785.365042, target 100%, elapsed_ms 84.309556, mbm_total_delta_bytes 5550538752, mbm_local_delta_bytes 5554413568, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="533" text-anchor="middle" fill="#f8fafc">61.31 GiB/s</text>
+<text class="small" x="578.5" y="545" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="522" width="109" height="27" fill="rgb(239,88,28)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 5, cpu 42, bandwidth_mib_s 61606.183825, target 100%, elapsed_ms 89.333945, mbm_total_delta_bytes 5770862592, mbm_local_delta_bytes 5767258112, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="533" text-anchor="middle" fill="#f8fafc">60.16 GiB/s</text>
+<text class="small" x="690.5" y="545" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="522" width="109" height="27" fill="rgb(236,80,29)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 6, cpu 44, bandwidth_mib_s 62726.316544, target 100%, elapsed_ms 86.487822, mbm_total_delta_bytes 5688590336, mbm_local_delta_bytes 5686968320, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="533" text-anchor="middle" fill="#f8fafc">61.26 GiB/s</text>
+<text class="small" x="802.5" y="545" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="522" width="109" height="27" fill="rgb(237,82,29)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 7, cpu 46, bandwidth_mib_s 62426.579748, target 100%, elapsed_ms 88.834481, mbm_total_delta_bytes 5815017472, mbm_local_delta_bytes 5812674560, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="533" text-anchor="middle" fill="#f8fafc">60.96 GiB/s</text>
+<text class="small" x="914.5" y="545" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="522" width="109" height="27" fill="rgb(236,81,29)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 8, cpu 48, bandwidth_mib_s 62576.106238, target 100%, elapsed_ms 88.074252, mbm_total_delta_bytes 5779062784, mbm_local_delta_bytes 5780955136, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="533" text-anchor="middle" fill="#f8fafc">61.11 GiB/s</text>
+<text class="small" x="1026.5" y="545" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="522" width="109" height="27" fill="rgb(235,79,29)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 9, cpu 18, bandwidth_mib_s 62935.036243, target 100%, elapsed_ms 84.174596, mbm_total_delta_bytes 5554864128, mbm_local_delta_bytes 5561352192, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="533" text-anchor="middle" fill="#f8fafc">61.46 GiB/s</text>
+<text class="small" x="1138.5" y="545" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="522" width="109" height="27" fill="rgb(238,86,28)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 10, cpu 52, bandwidth_mib_s 61890.423795, target 100%, elapsed_ms 89.685977, mbm_total_delta_bytes 5820334080, mbm_local_delta_bytes 5813305344, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="533" text-anchor="middle" fill="#f8fafc">60.44 GiB/s</text>
+<text class="small" x="1250.5" y="545" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="522" width="109" height="27" fill="rgb(237,82,29)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 11, cpu 54, bandwidth_mib_s 62515.629812, target 100%, elapsed_ms 88.512740, mbm_total_delta_bytes 5802221568, mbm_local_delta_bytes 5798526976, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="533" text-anchor="middle" fill="#f8fafc">61.05 GiB/s</text>
+<text class="small" x="1362.5" y="545" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="522" width="109" height="27" fill="rgb(16,155,219)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 12, cpu 56, bandwidth_mib_s 18438.227937, target 50%, elapsed_ms 73.790307, mbm_total_delta_bytes 1426653184, mbm_local_delta_bytes 1426022400, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="533" text-anchor="middle" fill="#0f172a">18.01 GiB/s</text>
+<text class="small" x="1474.5" y="545" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1532" y="522" width="109" height="27" fill="rgb(19,147,222)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 13, cpu 58, bandwidth_mib_s 17421.746847, target 50%, elapsed_ms 81.395666, mbm_total_delta_bytes 1486938112, mbm_local_delta_bytes 1485225984, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="533" text-anchor="middle" fill="#0f172a">17.01 GiB/s</text>
+<text class="small" x="1586.5" y="545" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1644" y="522" width="109" height="27" fill="rgb(29,79,205)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 14, cpu 60, bandwidth_mib_s 8107.874042, target 40%, elapsed_ms 61.274347, mbm_total_delta_bytes 520937472, mbm_local_delta_bytes 521117696, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="533" text-anchor="middle" fill="#f8fafc">7.92 GiB/s</text>
+<text class="small" x="1698.5" y="545" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1756" y="522" width="109" height="27" fill="rgb(32,87,216)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 15, cpu 62, bandwidth_mib_s 9225.331704, target 30%, elapsed_ms 78.640465, mbm_total_delta_bytes 760725504, mbm_local_delta_bytes 759193600, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="533" text-anchor="middle" fill="#f8fafc">9.01 GiB/s</text>
+<text class="small" x="1810.5" y="545" text-anchor="middle" fill="#f8fafc">30%</text>
+<text x="8" y="563">s1800</text>
+<text class="small" x="8" y="576">63.78 GiB/s</text>
+<rect x="76" y="552" width="109" height="27" fill="rgb(34,91,223)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 0, cpu 32, bandwidth_mib_s 9812.571709, target 30%, elapsed_ms 68.285329, mbm_total_delta_bytes 702603264, mbm_local_delta_bytes 702513152, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="563" text-anchor="middle" fill="#f8fafc">9.58 GiB/s</text>
+<text class="small" x="130.5" y="575" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="188" y="552" width="109" height="27" fill="rgb(33,89,220)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 1, cpu 34, bandwidth_mib_s 9597.447045, target 30%, elapsed_ms 71.060564, mbm_total_delta_bytes 715128832, mbm_local_delta_bytes 714407936, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="563" text-anchor="middle" fill="#f8fafc">9.37 GiB/s</text>
+<text class="small" x="242.5" y="575" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="300" y="552" width="109" height="27" fill="rgb(33,109,232)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 2, cpu 36, bandwidth_mib_s 12364.889249, target 40%, elapsed_ms 73.852006, mbm_total_delta_bytes 957530112, mbm_local_delta_bytes 956268544, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="563" text-anchor="middle" fill="#f8fafc">12.08 GiB/s</text>
+<text class="small" x="354.5" y="575" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="412" y="552" width="109" height="27" fill="rgb(37,99,235)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 3, cpu 6, bandwidth_mib_s 11060.095830, target 40%, elapsed_ms 89.588679, mbm_total_delta_bytes 1038991360, mbm_local_delta_bytes 1039081472, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="563" text-anchor="middle" fill="#f8fafc">10.80 GiB/s</text>
+<text class="small" x="466.5" y="575" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="524" y="552" width="109" height="27" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 4, cpu 40, bandwidth_mib_s 65013.168156, target 100%, elapsed_ms 81.112534, mbm_total_delta_bytes 5529542656, mbm_local_delta_bytes 5535039488, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="563" text-anchor="middle" fill="#f8fafc">63.49 GiB/s</text>
+<text class="small" x="578.5" y="575" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="552" width="109" height="27" fill="rgb(232,71,31)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 5, cpu 42, bandwidth_mib_s 64089.903976, target 100%, elapsed_ms 86.445826, mbm_total_delta_bytes 5809430528, mbm_local_delta_bytes 5804294144, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="563" text-anchor="middle" fill="#f8fafc">62.59 GiB/s</text>
+<text class="small" x="690.5" y="575" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="552" width="109" height="27" fill="rgb(229,62,33)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 6, cpu 44, bandwidth_mib_s 65311.155756, target 100%, elapsed_ms 81.641154, mbm_total_delta_bytes 5591089152, mbm_local_delta_bytes 5594963968, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="563" text-anchor="middle" fill="#f8fafc">63.78 GiB/s</text>
+<text class="small" x="802.5" y="575" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="552" width="109" height="27" fill="rgb(232,69,32)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 7, cpu 46, bandwidth_mib_s 64392.202347, target 100%, elapsed_ms 85.923884, mbm_total_delta_bytes 5801590784, mbm_local_delta_bytes 5798346752, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="563" text-anchor="middle" fill="#f8fafc">62.88 GiB/s</text>
+<text class="small" x="914.5" y="575" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="552" width="109" height="27" fill="rgb(231,68,32)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 8, cpu 48, bandwidth_mib_s 64549.598180, target 100%, elapsed_ms 85.394848, mbm_total_delta_bytes 5779963904, mbm_local_delta_bytes 5782216704, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="563" text-anchor="middle" fill="#f8fafc">63.04 GiB/s</text>
+<text class="small" x="1026.5" y="575" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="552" width="109" height="27" fill="rgb(229,63,33)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 9, cpu 18, bandwidth_mib_s 65223.796898, target 100%, elapsed_ms 81.737326, mbm_total_delta_bytes 5590188032, mbm_local_delta_bytes 5596946432, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="563" text-anchor="middle" fill="#f8fafc">63.70 GiB/s</text>
+<text class="small" x="1138.5" y="575" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="552" width="109" height="27" fill="rgb(231,67,32)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 10, cpu 52, bandwidth_mib_s 64673.159205, target 100%, elapsed_ms 85.161271, mbm_total_delta_bytes 5775187968, mbm_local_delta_bytes 5780054016, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="563" text-anchor="middle" fill="#f8fafc">63.16 GiB/s</text>
+<text class="small" x="1250.5" y="575" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="552" width="109" height="27" fill="rgb(232,70,31)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 11, cpu 54, bandwidth_mib_s 64265.732488, target 100%, elapsed_ms 86.157162, mbm_total_delta_bytes 5805916160, mbm_local_delta_bytes 5800960000, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="563" text-anchor="middle" fill="#f8fafc">62.76 GiB/s</text>
+<text class="small" x="1362.5" y="575" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="552" width="109" height="27" fill="rgb(32,113,231)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 12, cpu 56, bandwidth_mib_s 12850.935529, target 50%, elapsed_ms 75.238321, mbm_total_delta_bytes 1013850112, mbm_local_delta_bytes 1014120448, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="563" text-anchor="middle" fill="#f8fafc">12.55 GiB/s</text>
+<text class="small" x="1474.5" y="575" text-anchor="middle" fill="#f8fafc">50%</text>
+<rect x="1532" y="552" width="109" height="27" fill="rgb(33,110,232)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 13, cpu 58, bandwidth_mib_s 12447.194821, target 50%, elapsed_ms 81.324172, mbm_total_delta_bytes 1061429248, mbm_local_delta_bytes 1059897344, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="563" text-anchor="middle" fill="#f8fafc">12.16 GiB/s</text>
+<text class="small" x="1586.5" y="575" text-anchor="middle" fill="#f8fafc">50%</text>
+<rect x="1644" y="552" width="109" height="27" fill="rgb(31,114,231)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 14, cpu 60, bandwidth_mib_s 13037.811329, target 40%, elapsed_ms 64.938526, mbm_total_delta_bytes 887783424, mbm_local_delta_bytes 886882304, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="563" text-anchor="middle" fill="#f8fafc">12.73 GiB/s</text>
+<text class="small" x="1698.5" y="575" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1756" y="552" width="109" height="27" fill="rgb(32,86,215)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 15, cpu 62, bandwidth_mib_s 9106.867072, target 30%, elapsed_ms 76.719235, mbm_total_delta_bytes 732610560, mbm_local_delta_bytes 732340224, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="563" text-anchor="middle" fill="#f8fafc">8.89 GiB/s</text>
+<text class="small" x="1810.5" y="575" text-anchor="middle" fill="#f8fafc">30%</text>
+<text x="8" y="593">s1900</text>
+<text class="small" x="8" y="606">63.86 GiB/s</text>
+<rect x="76" y="582" width="109" height="27" fill="rgb(31,84,212)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 0, cpu 32, bandwidth_mib_s 8803.359990, target 30%, elapsed_ms 63.959954, mbm_total_delta_bytes 590413824, mbm_local_delta_bytes 588881920, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="593" text-anchor="middle" fill="#f8fafc">8.60 GiB/s</text>
+<text class="small" x="130.5" y="605" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="188" y="582" width="109" height="27" fill="rgb(32,85,214)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 1, cpu 34, bandwidth_mib_s 8991.111009, target 30%, elapsed_ms 60.961251, mbm_total_delta_bytes 574734336, mbm_local_delta_bytes 574373888, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="593" text-anchor="middle" fill="#f8fafc">8.78 GiB/s</text>
+<text class="small" x="242.5" y="605" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="300" y="582" width="109" height="27" fill="rgb(28,75,199)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 2, cpu 36, bandwidth_mib_s 7581.018650, target 40%, elapsed_ms 72.833014, mbm_total_delta_bytes 578969600, mbm_local_delta_bytes 578158592, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="593" text-anchor="middle" fill="#f8fafc">7.40 GiB/s</text>
+<text class="small" x="354.5" y="605" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="412" y="582" width="109" height="27" fill="rgb(15,158,219)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 3, cpu 38, bandwidth_mib_s 18765.587261, target 50%, elapsed_ms 65.262829, mbm_total_delta_bytes 1284186112, mbm_local_delta_bytes 1284997120, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="593" text-anchor="middle" fill="#0f172a">18.33 GiB/s</text>
+<text class="small" x="466.5" y="605" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="524" y="582" width="109" height="27" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 4, cpu 40, bandwidth_mib_s 65071.351917, target 100%, elapsed_ms 78.804120, mbm_total_delta_bytes 5376983040, mbm_local_delta_bytes 5376262144, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="593" text-anchor="middle" fill="#f8fafc">63.55 GiB/s</text>
+<text class="small" x="578.5" y="605" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="582" width="109" height="27" fill="rgb(232,69,32)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 5, cpu 42, bandwidth_mib_s 64357.905456, target 100%, elapsed_ms 82.899805, mbm_total_delta_bytes 5594423296, mbm_local_delta_bytes 5588836352, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="593" text-anchor="middle" fill="#f8fafc">62.85 GiB/s</text>
+<text class="small" x="690.5" y="605" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="582" width="109" height="27" fill="rgb(229,62,33)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 6, cpu 44, bandwidth_mib_s 65397.194226, target 100%, elapsed_ms 79.495598, mbm_total_delta_bytes 5451325440, mbm_local_delta_bytes 5456551936, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="593" text-anchor="middle" fill="#f8fafc">63.86 GiB/s</text>
+<text class="small" x="802.5" y="605" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="582" width="109" height="27" fill="rgb(231,68,32)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 7, cpu 46, bandwidth_mib_s 64478.427668, target 100%, elapsed_ms 82.666214, mbm_total_delta_bytes 5589106688, mbm_local_delta_bytes 5586673664, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="593" text-anchor="middle" fill="#f8fafc">62.97 GiB/s</text>
+<text class="small" x="914.5" y="605" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="582" width="109" height="27" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 8, cpu 48, bandwidth_mib_s 64890.147038, target 100%, elapsed_ms 81.629183, mbm_total_delta_bytes 5554233344, mbm_local_delta_bytes 5557387264, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="593" text-anchor="middle" fill="#f8fafc">63.37 GiB/s</text>
+<text class="small" x="1026.5" y="605" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="582" width="109" height="27" fill="rgb(229,62,33)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 9, cpu 18, bandwidth_mib_s 65362.875661, target 100%, elapsed_ms 79.179718, mbm_total_delta_bytes 5426814976, mbm_local_delta_bytes 5434834944, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="593" text-anchor="middle" fill="#f8fafc">63.83 GiB/s</text>
+<text class="small" x="1138.5" y="605" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="582" width="109" height="27" fill="rgb(231,68,32)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 10, cpu 52, bandwidth_mib_s 64488.505562, target 100%, elapsed_ms 82.654628, mbm_total_delta_bytes 5589196800, mbm_local_delta_bytes 5586132992, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="593" text-anchor="middle" fill="#f8fafc">62.98 GiB/s</text>
+<text class="small" x="1250.5" y="605" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="582" width="109" height="27" fill="rgb(231,67,32)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 11, cpu 54, bandwidth_mib_s 64635.289690, target 100%, elapsed_ms 82.384489, mbm_total_delta_bytes 5583609856, mbm_local_delta_bytes 5581987840, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="593" text-anchor="middle" fill="#f8fafc">63.12 GiB/s</text>
+<text class="small" x="1362.5" y="605" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="582" width="109" height="27" fill="rgb(17,152,220)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 12, cpu 56, bandwidth_mib_s 18034.021021, target 50%, elapsed_ms 74.252887, mbm_total_delta_bytes 1404125184, mbm_local_delta_bytes 1403494400, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="593" text-anchor="middle" fill="#0f172a">17.61 GiB/s</text>
+<text class="small" x="1474.5" y="605" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1532" y="582" width="109" height="27" fill="rgb(19,146,222)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 13, cpu 58, bandwidth_mib_s 17298.616924, target 50%, elapsed_ms 80.012719, mbm_total_delta_bytes 1451343872, mbm_local_delta_bytes 1448910848, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="593" text-anchor="middle" fill="#0f172a">16.89 GiB/s</text>
+<text class="small" x="1586.5" y="605" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1644" y="582" width="109" height="27" fill="rgb(30,80,207)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 14, cpu 60, bandwidth_mib_s 8333.756626, target 40%, elapsed_ms 61.964665, mbm_total_delta_bytes 541483008, mbm_local_delta_bytes 541212672, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="593" text-anchor="middle" fill="#f8fafc">8.14 GiB/s</text>
+<text class="small" x="1698.5" y="605" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1756" y="582" width="109" height="27" fill="rgb(29,79,204)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 15, cpu 62, bandwidth_mib_s 8079.133637, target 30%, elapsed_ms 73.107893, mbm_total_delta_bytes 619339776, mbm_local_delta_bytes 618078208, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="593" text-anchor="middle" fill="#f8fafc">7.89 GiB/s</text>
+<text class="small" x="1810.5" y="605" text-anchor="middle" fill="#f8fafc">30%</text>
+<text x="8" y="623">s2000</text>
+<text class="small" x="8" y="636">64.05 GiB/s</text>
+<rect x="76" y="612" width="109" height="27" fill="rgb(32,87,217)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 0, cpu 32, bandwidth_mib_s 9281.736650, target 30%, elapsed_ms 61.885644, mbm_total_delta_bytes 602308608, mbm_local_delta_bytes 601767936, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="130.5" y="623" text-anchor="middle" fill="#f8fafc">9.06 GiB/s</text>
+<text class="small" x="130.5" y="635" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="188" y="612" width="109" height="27" fill="rgb(32,86,216)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 1, cpu 34, bandwidth_mib_s 9173.945148, target 30%, elapsed_ms 63.755627, mbm_total_delta_bytes 613302272, mbm_local_delta_bytes 612851712, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="242.5" y="623" text-anchor="middle" fill="#f8fafc">8.96 GiB/s</text>
+<text class="small" x="242.5" y="635" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="300" y="612" width="109" height="27" fill="rgb(28,75,199)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 2, cpu 36, bandwidth_mib_s 7512.826417, target 40%, elapsed_ms 70.142543, mbm_total_delta_bytes 552566784, mbm_local_delta_bytes 552296448, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="354.5" y="623" text-anchor="middle" fill="#f8fafc">7.34 GiB/s</text>
+<text class="small" x="354.5" y="635" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="412" y="612" width="109" height="27" fill="rgb(16,156,219)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 3, cpu 38, bandwidth_mib_s 18531.001756, target 50%, elapsed_ms 66.613034, mbm_total_delta_bytes 1294368768, mbm_local_delta_bytes 1295360000, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="466.5" y="623" text-anchor="middle" fill="#0f172a">18.10 GiB/s</text>
+<text class="small" x="466.5" y="635" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="524" y="612" width="109" height="27" fill="rgb(229,63,33)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 4, cpu 40, bandwidth_mib_s 65249.569568, target 100%, elapsed_ms 74.412488, mbm_total_delta_bytes 5091237888, mbm_local_delta_bytes 5098807296, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="578.5" y="623" text-anchor="middle" fill="#f8fafc">63.72 GiB/s</text>
+<text class="small" x="578.5" y="635" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="612" width="109" height="27" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 5, cpu 42, bandwidth_mib_s 65045.565244, target 100%, elapsed_ms 79.511810, mbm_total_delta_bytes 5423120384, mbm_local_delta_bytes 5417353216, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="690.5" y="623" text-anchor="middle" fill="#f8fafc">63.52 GiB/s</text>
+<text class="small" x="690.5" y="635" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="612" width="109" height="27" fill="rgb(229,61,33)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 6, cpu 44, bandwidth_mib_s 65508.819635, target 100%, elapsed_ms 78.348706, mbm_total_delta_bytes 5381849088, mbm_local_delta_bytes 5384011776, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="802.5" y="623" text-anchor="middle" fill="#f8fafc">63.97 GiB/s</text>
+<text class="small" x="802.5" y="635" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="612" width="109" height="27" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 7, cpu 46, bandwidth_mib_s 65083.860744, target 100%, elapsed_ms 79.458423, mbm_total_delta_bytes 5422669824, mbm_local_delta_bytes 5415550976, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="914.5" y="623" text-anchor="middle" fill="#f8fafc">63.56 GiB/s</text>
+<text class="small" x="914.5" y="635" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="612" width="109" height="27" fill="rgb(229,63,33)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 8, cpu 48, bandwidth_mib_s 65208.253418, target 100%, elapsed_ms 78.929929, mbm_total_delta_bytes 5396897792, mbm_local_delta_bytes 5396357120, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1026.5" y="623" text-anchor="middle" fill="#f8fafc">63.68 GiB/s</text>
+<text class="small" x="1026.5" y="635" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="612" width="109" height="27" fill="rgb(228,60,33)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 9, cpu 18, bandwidth_mib_s 65590.671624, target 100%, elapsed_ms 78.138255, mbm_total_delta_bytes 5374099456, mbm_local_delta_bytes 5375180800, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1138.5" y="623" text-anchor="middle" fill="#f8fafc">64.05 GiB/s</text>
+<text class="small" x="1138.5" y="635" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="612" width="109" height="27" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 10, cpu 52, bandwidth_mib_s 64992.216782, target 100%, elapsed_ms 79.505674, mbm_total_delta_bytes 5418254336, mbm_local_delta_bytes 5413478400, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1250.5" y="623" text-anchor="middle" fill="#f8fafc">63.47 GiB/s</text>
+<text class="small" x="1250.5" y="635" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="612" width="109" height="27" fill="rgb(230,66,32)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 11, cpu 54, bandwidth_mib_s 64850.373808, target 100%, elapsed_ms 79.763057, mbm_total_delta_bytes 5423931392, mbm_local_delta_bytes 5420236800, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1362.5" y="623" text-anchor="middle" fill="#f8fafc">63.33 GiB/s</text>
+<text class="small" x="1362.5" y="635" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="612" width="109" height="27" fill="rgb(17,152,220)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 12, cpu 56, bandwidth_mib_s 18003.549947, target 50%, elapsed_ms 72.631509, mbm_total_delta_bytes 1371144192, mbm_local_delta_bytes 1371774976, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1474.5" y="623" text-anchor="middle" fill="#0f172a">17.58 GiB/s</text>
+<text class="small" x="1474.5" y="635" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1532" y="612" width="109" height="27" fill="rgb(19,146,222)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 13, cpu 58, bandwidth_mib_s 17302.501741, target 50%, elapsed_ms 77.908712, mbm_total_delta_bytes 1413496832, mbm_local_delta_bytes 1411784704, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1586.5" y="623" text-anchor="middle" fill="#0f172a">16.90 GiB/s</text>
+<text class="small" x="1586.5" y="635" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1644" y="612" width="109" height="27" fill="rgb(30,80,206)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 14, cpu 60, bandwidth_mib_s 8228.893616, target 40%, elapsed_ms 60.080791, mbm_total_delta_bytes 518414336, mbm_local_delta_bytes 518324224, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1698.5" y="623" text-anchor="middle" fill="#f8fafc">8.04 GiB/s</text>
+<text class="small" x="1698.5" y="635" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1756" y="612" width="109" height="27" fill="rgb(31,82,209)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 15, cpu 62, bandwidth_mib_s 8563.004422, target 30%, elapsed_ms 70.241300, mbm_total_delta_bytes 630693888, mbm_local_delta_bytes 628891648, mbm_remote_delta_bytes -1</title></rect>
+<text class="small" x="1810.5" y="623" text-anchor="middle" fill="#f8fafc">8.36 GiB/s</text>
+<text class="small" x="1810.5" y="635" text-anchor="middle" fill="#f8fafc">30%</text>
+</svg>

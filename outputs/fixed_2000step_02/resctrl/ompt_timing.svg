@@ -1,0 +1,1021 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1644 674">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:monospace;font-size:11px}.small{font-size:9px}</style>
+<text x="12" y="20">OMPT resctrl timing, max=182.951 ms, color=0-182.951 ms, max_target=100%</text>
+<text class="small" x="124.000" y="34" text-anchor="middle">t0</text>
+<text class="small" x="220.000" y="34" text-anchor="middle">t1</text>
+<text class="small" x="316.000" y="34" text-anchor="middle">t2</text>
+<text class="small" x="412.000" y="34" text-anchor="middle">t3</text>
+<text class="small" x="508.000" y="34" text-anchor="middle">t4</text>
+<text class="small" x="604.000" y="34" text-anchor="middle">t5</text>
+<text class="small" x="700.000" y="34" text-anchor="middle">t6</text>
+<text class="small" x="796.000" y="34" text-anchor="middle">t7</text>
+<text class="small" x="892.000" y="34" text-anchor="middle">t8</text>
+<text class="small" x="988.000" y="34" text-anchor="middle">t9</text>
+<text class="small" x="1084.000" y="34" text-anchor="middle">t10</text>
+<text class="small" x="1180.000" y="34" text-anchor="middle">t11</text>
+<text class="small" x="1276.000" y="34" text-anchor="middle">t12</text>
+<text class="small" x="1372.000" y="34" text-anchor="middle">t13</text>
+<text class="small" x="1468.000" y="34" text-anchor="middle">t14</text>
+<text class="small" x="1564.000" y="34" text-anchor="middle">t15</text>
+<text x="8" y="53.000">s100</text>
+<text class="small" x="8" y="66.000">171.76 ms</text>
+<rect x="76.00" y="42.00" width="93.00" height="27.00" fill="rgb(22,190,145)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 0, cpu 32, target 40%, elapsed 77.142610 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="53.000000" text-anchor="middle" fill="#0f172a">77.14 ms</text>
+<text class="small" x="122.50" y="65.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="172.00" y="42.00" width="93.00" height="27.00" fill="rgb(33,196,100)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 1, cpu 34, target 40%, elapsed 89.858841 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="53.000000" text-anchor="middle" fill="#0f172a">89.86 ms</text>
+<text class="small" x="218.50" y="65.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="268.00" y="42.00" width="93.00" height="27.00" fill="rgb(30,195,112)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 2, cpu 36, target 40%, elapsed 86.533231 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="53.000000" text-anchor="middle" fill="#0f172a">86.53 ms</text>
+<text class="small" x="314.50" y="65.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="364.00" y="42.00" width="93.00" height="27.00" fill="rgb(83,199,77)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 3, cpu 6, target 40%, elapsed 98.979983 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="53.000000" text-anchor="middle" fill="#0f172a">98.98 ms</text>
+<text class="small" x="410.50" y="65.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="460.00" y="42.00" width="93.00" height="27.00" fill="rgb(241,94,26)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 4, cpu 8, target 100%, elapsed 161.522083 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="53.000000" text-anchor="middle" fill="#0f172a">161.52 ms</text>
+<text class="small" x="506.50" y="65.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="556.00" y="42.00" width="93.00" height="27.00" fill="rgb(237,83,29)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 5, cpu 10, target 100%, elapsed 165.830913 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="53.000000" text-anchor="middle" fill="#f8fafc">165.83 ms</text>
+<text class="small" x="602.50" y="65.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="652.00" y="42.00" width="93.00" height="27.00" fill="rgb(231,67,32)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 6, cpu 44, target 100%, elapsed 171.764151 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="53.000000" text-anchor="middle" fill="#f8fafc">171.76 ms</text>
+<text class="small" x="698.50" y="65.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748.00" y="42.00" width="93.00" height="27.00" fill="rgb(235,77,30)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 7, cpu 14, target 100%, elapsed 168.313534 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="53.000000" text-anchor="middle" fill="#f8fafc">168.31 ms</text>
+<text class="small" x="794.50" y="65.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="844.00" y="42.00" width="93.00" height="27.00" fill="rgb(237,82,29)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 8, cpu 48, target 100%, elapsed 166.230142 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="53.000000" text-anchor="middle" fill="#f8fafc">166.23 ms</text>
+<text class="small" x="890.50" y="65.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="940.00" y="42.00" width="93.00" height="27.00" fill="rgb(242,96,26)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 9, cpu 50, target 100%, elapsed 161.028819 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="53.000000" text-anchor="middle" fill="#0f172a">161.03 ms</text>
+<text class="small" x="986.50" y="65.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1036.00" y="42.00" width="93.00" height="27.00" fill="rgb(236,80,29)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 10, cpu 20, target 100%, elapsed 166.998035 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="53.000000" text-anchor="middle" fill="#f8fafc">167.00 ms</text>
+<text class="small" x="1082.50" y="65.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1132.00" y="42.00" width="93.00" height="27.00" fill="rgb(236,81,29)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 11, cpu 22, target 100%, elapsed 166.435016 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="53.000000" text-anchor="middle" fill="#f8fafc">166.44 ms</text>
+<text class="small" x="1178.50" y="65.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1228.00" y="42.00" width="93.00" height="27.00" fill="rgb(26,193,127)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 12, cpu 56, target 50%, elapsed 82.147077 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="53.000000" text-anchor="middle" fill="#0f172a">82.15 ms</text>
+<text class="small" x="1274.50" y="65.00" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1324.00" y="42.00" width="93.00" height="27.00" fill="rgb(22,191,143)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 13, cpu 58, target 50%, elapsed 77.939786 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="53.000000" text-anchor="middle" fill="#0f172a">77.94 ms</text>
+<text class="small" x="1370.50" y="65.00" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1420.00" y="42.00" width="93.00" height="27.00" fill="rgb(69,198,82)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 14, cpu 60, target 40%, elapsed 96.820033 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="53.000000" text-anchor="middle" fill="#0f172a">96.82 ms</text>
+<text class="small" x="1466.50" y="65.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1516.00" y="42.00" width="93.00" height="27.00" fill="rgb(44,197,91)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 15, cpu 62, target 40%, elapsed 93.046768 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="53.000000" text-anchor="middle" fill="#0f172a">93.05 ms</text>
+<text class="small" x="1562.50" y="65.00" text-anchor="middle" fill="#0f172a">40%</text>
+<text x="8" y="83.00">s200</text>
+<text class="small" x="8" y="96.00">180.40 ms</text>
+<rect x="76.00" y="72.00" width="93.00" height="27.00" fill="rgb(132,200,61)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 0, cpu 32, target 30%, elapsed 106.410939 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="83.000000" text-anchor="middle" fill="#0f172a">106.41 ms</text>
+<text class="small" x="122.50" y="95.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="72.00" width="93.00" height="27.00" fill="rgb(238,204,25)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 1, cpu 34, target 30%, elapsed 122.629359 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="83.000000" text-anchor="middle" fill="#0f172a">122.63 ms</text>
+<text class="small" x="218.50" y="95.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="268.00" y="72.00" width="93.00" height="27.00" fill="rgb(206,203,36)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 2, cpu 36, target 30%, elapsed 117.679230 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="83.000000" text-anchor="middle" fill="#0f172a">117.68 ms</text>
+<text class="small" x="314.50" y="95.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="364.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,173,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 3, cpu 38, target 30%, elapsed 134.639682 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="83.000000" text-anchor="middle" fill="#0f172a">134.64 ms</text>
+<text class="small" x="410.50" y="95.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="460.00" y="72.00" width="93.00" height="27.00" fill="rgb(235,78,30)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 4, cpu 8, target 100%, elapsed 167.805454 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="83.000000" text-anchor="middle" fill="#f8fafc">167.81 ms</text>
+<text class="small" x="506.50" y="95.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="556.00" y="72.00" width="93.00" height="27.00" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 5, cpu 10, target 100%, elapsed 172.606997 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="83.000000" text-anchor="middle" fill="#f8fafc">172.61 ms</text>
+<text class="small" x="602.50" y="95.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="652.00" y="72.00" width="93.00" height="27.00" fill="rgb(223,45,37)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 6, cpu 44, target 100%, elapsed 180.402793 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="83.000000" text-anchor="middle" fill="#f8fafc">180.40 ms</text>
+<text class="small" x="698.50" y="95.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748.00" y="72.00" width="93.00" height="27.00" fill="rgb(228,60,33)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 7, cpu 14, target 100%, elapsed 174.509479 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="83.000000" text-anchor="middle" fill="#f8fafc">174.51 ms</text>
+<text class="small" x="794.50" y="95.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="844.00" y="72.00" width="93.00" height="27.00" fill="rgb(230,66,32)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 8, cpu 48, target 100%, elapsed 172.485039 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="83.000000" text-anchor="middle" fill="#f8fafc">172.49 ms</text>
+<text class="small" x="890.50" y="95.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="940.00" y="72.00" width="93.00" height="27.00" fill="rgb(236,82,29)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 9, cpu 18, target 100%, elapsed 166.399507 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="83.000000" text-anchor="middle" fill="#f8fafc">166.40 ms</text>
+<text class="small" x="986.50" y="95.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1036.00" y="72.00" width="93.00" height="27.00" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 10, cpu 20, target 100%, elapsed 172.723905 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="83.000000" text-anchor="middle" fill="#f8fafc">172.72 ms</text>
+<text class="small" x="1082.50" y="95.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1132.00" y="72.00" width="93.00" height="27.00" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 11, cpu 54, target 100%, elapsed 172.545883 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="83.000000" text-anchor="middle" fill="#f8fafc">172.55 ms</text>
+<text class="small" x="1178.50" y="95.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1228.00" y="72.00" width="93.00" height="27.00" fill="rgb(249,118,22)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 12, cpu 24, target 30%, elapsed 152.711974 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="83.000000" text-anchor="middle" fill="#0f172a">152.71 ms</text>
+<text class="small" x="1274.50" y="95.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1324.00" y="72.00" width="93.00" height="27.00" fill="rgb(249,128,22)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 13, cpu 58, target 30%, elapsed 149.317302 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="83.000000" text-anchor="middle" fill="#0f172a">149.32 ms</text>
+<text class="small" x="1370.50" y="95.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1420.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,176,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 14, cpu 60, target 30%, elapsed 133.663247 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="83.000000" text-anchor="middle" fill="#0f172a">133.66 ms</text>
+<text class="small" x="1466.50" y="95.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1516.00" y="72.00" width="93.00" height="27.00" fill="rgb(250,192,21)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 15, cpu 62, target 30%, elapsed 128.449835 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="83.000000" text-anchor="middle" fill="#0f172a">128.45 ms</text>
+<text class="small" x="1562.50" y="95.00" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="113.00">s300</text>
+<text class="small" x="8" y="126.00">174.34 ms</text>
+<rect x="76.00" y="102.00" width="93.00" height="27.00" fill="rgb(131,200,61)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 0, cpu 32, target 30%, elapsed 106.313612 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="113.000000" text-anchor="middle" fill="#0f172a">106.31 ms</text>
+<text class="small" x="122.50" y="125.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="102.00" width="93.00" height="27.00" fill="rgb(239,204,25)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 1, cpu 34, target 30%, elapsed 122.691503 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="113.000000" text-anchor="middle" fill="#0f172a">122.69 ms</text>
+<text class="small" x="218.50" y="125.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="268.00" y="102.00" width="93.00" height="27.00" fill="rgb(205,203,36)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 2, cpu 4, target 30%, elapsed 117.518717 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="113.000000" text-anchor="middle" fill="#0f172a">117.52 ms</text>
+<text class="small" x="314.50" y="125.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="364.00" y="102.00" width="93.00" height="27.00" fill="rgb(250,174,21)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 3, cpu 38, target 30%, elapsed 134.372705 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="113.000000" text-anchor="middle" fill="#0f172a">134.37 ms</text>
+<text class="small" x="410.50" y="125.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="460.00" y="102.00" width="93.00" height="27.00" fill="rgb(235,79,30)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 4, cpu 8, target 100%, elapsed 167.404510 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="113.000000" text-anchor="middle" fill="#f8fafc">167.40 ms</text>
+<text class="small" x="506.50" y="125.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="556.00" y="102.00" width="93.00" height="27.00" fill="rgb(231,67,32)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 5, cpu 10, target 100%, elapsed 171.885787 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="113.000000" text-anchor="middle" fill="#f8fafc">171.89 ms</text>
+<text class="small" x="602.50" y="125.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="652.00" y="102.00" width="93.00" height="27.00" fill="rgb(236,81,29)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 6, cpu 44, target 100%, elapsed 166.509688 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="113.000000" text-anchor="middle" fill="#f8fafc">166.51 ms</text>
+<text class="small" x="698.50" y="125.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748.00" y="102.00" width="93.00" height="27.00" fill="rgb(229,61,33)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 7, cpu 14, target 100%, elapsed 174.338442 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="113.000000" text-anchor="middle" fill="#f8fafc">174.34 ms</text>
+<text class="small" x="794.50" y="125.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="844.00" y="102.00" width="93.00" height="27.00" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 8, cpu 48, target 100%, elapsed 172.648384 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="113.000000" text-anchor="middle" fill="#f8fafc">172.65 ms</text>
+<text class="small" x="890.50" y="125.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="940.00" y="102.00" width="93.00" height="27.00" fill="rgb(237,83,29)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 9, cpu 18, target 100%, elapsed 165.802220 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="113.000000" text-anchor="middle" fill="#f8fafc">165.80 ms</text>
+<text class="small" x="986.50" y="125.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1036.00" y="102.00" width="93.00" height="27.00" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 10, cpu 20, target 100%, elapsed 172.810502 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="113.000000" text-anchor="middle" fill="#f8fafc">172.81 ms</text>
+<text class="small" x="1082.50" y="125.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1132.00" y="102.00" width="93.00" height="27.00" fill="rgb(231,67,32)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 11, cpu 54, target 100%, elapsed 172.070678 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="113.000000" text-anchor="middle" fill="#f8fafc">172.07 ms</text>
+<text class="small" x="1178.50" y="125.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1228.00" y="102.00" width="93.00" height="27.00" fill="rgb(249,120,22)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 12, cpu 24, target 30%, elapsed 152.182630 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="113.000000" text-anchor="middle" fill="#0f172a">152.18 ms</text>
+<text class="small" x="1274.50" y="125.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1324.00" y="102.00" width="93.00" height="27.00" fill="rgb(249,129,22)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 13, cpu 58, target 30%, elapsed 149.228410 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="113.000000" text-anchor="middle" fill="#0f172a">149.23 ms</text>
+<text class="small" x="1370.50" y="125.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1420.00" y="102.00" width="93.00" height="27.00" fill="rgb(250,176,21)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 14, cpu 60, target 30%, elapsed 133.647589 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="113.000000" text-anchor="middle" fill="#0f172a">133.65 ms</text>
+<text class="small" x="1466.50" y="125.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1516.00" y="102.00" width="93.00" height="27.00" fill="rgb(250,192,21)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 15, cpu 62, target 30%, elapsed 128.370199 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="113.000000" text-anchor="middle" fill="#0f172a">128.37 ms</text>
+<text class="small" x="1562.50" y="125.00" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="143.00">s400</text>
+<text class="small" x="8" y="156.00">182.95 ms</text>
+<rect x="76.00" y="132.00" width="93.00" height="27.00" fill="rgb(126,200,63)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 0, cpu 32, target 30%, elapsed 105.446470 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="143.000000" text-anchor="middle" fill="#0f172a">105.45 ms</text>
+<text class="small" x="122.50" y="155.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="132.00" width="93.00" height="27.00" fill="rgb(233,203,27)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 1, cpu 34, target 30%, elapsed 121.769002 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="143.000000" text-anchor="middle" fill="#0f172a">121.77 ms</text>
+<text class="small" x="218.50" y="155.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="268.00" y="132.00" width="93.00" height="27.00" fill="rgb(160,201,51)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 2, cpu 36, target 30%, elapsed 110.741229 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="143.000000" text-anchor="middle" fill="#0f172a">110.74 ms</text>
+<text class="small" x="314.50" y="155.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="364.00" y="132.00" width="93.00" height="27.00" fill="rgb(250,176,21)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 3, cpu 38, target 30%, elapsed 133.530324 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="143.000000" text-anchor="middle" fill="#0f172a">133.53 ms</text>
+<text class="small" x="410.50" y="155.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="460.00" y="132.00" width="93.00" height="27.00" fill="rgb(220,38,38)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 4, cpu 40, target 100%, elapsed 182.951024 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="143.000000" text-anchor="middle" fill="#f8fafc">182.95 ms</text>
+<text class="small" x="506.50" y="155.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="556.00" y="132.00" width="93.00" height="27.00" fill="rgb(233,73,31)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 5, cpu 10, target 100%, elapsed 169.702424 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="143.000000" text-anchor="middle" fill="#f8fafc">169.70 ms</text>
+<text class="small" x="602.50" y="155.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="652.00" y="132.00" width="93.00" height="27.00" fill="rgb(237,84,29)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 6, cpu 44, target 100%, elapsed 165.610515 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="143.000000" text-anchor="middle" fill="#f8fafc">165.61 ms</text>
+<text class="small" x="698.50" y="155.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748.00" y="132.00" width="93.00" height="27.00" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 7, cpu 14, target 100%, elapsed 172.995923 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="143.000000" text-anchor="middle" fill="#f8fafc">173.00 ms</text>
+<text class="small" x="794.50" y="155.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="844.00" y="132.00" width="93.00" height="27.00" fill="rgb(231,68,32)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 8, cpu 48, target 100%, elapsed 171.436196 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="143.000000" text-anchor="middle" fill="#f8fafc">171.44 ms</text>
+<text class="small" x="890.50" y="155.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="940.00" y="132.00" width="93.00" height="27.00" fill="rgb(238,85,28)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 9, cpu 18, target 100%, elapsed 165.022503 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="143.000000" text-anchor="middle" fill="#f8fafc">165.02 ms</text>
+<text class="small" x="986.50" y="155.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1036.00" y="132.00" width="93.00" height="27.00" fill="rgb(232,69,32)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 10, cpu 20, target 100%, elapsed 171.256184 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="143.000000" text-anchor="middle" fill="#f8fafc">171.26 ms</text>
+<text class="small" x="1082.50" y="155.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1132.00" y="132.00" width="93.00" height="27.00" fill="rgb(231,68,32)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 11, cpu 54, target 100%, elapsed 171.387008 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="143.000000" text-anchor="middle" fill="#f8fafc">171.39 ms</text>
+<text class="small" x="1178.50" y="155.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1228.00" y="132.00" width="93.00" height="27.00" fill="rgb(249,118,22)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 12, cpu 24, target 30%, elapsed 152.570903 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="143.000000" text-anchor="middle" fill="#0f172a">152.57 ms</text>
+<text class="small" x="1274.50" y="155.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1324.00" y="132.00" width="93.00" height="27.00" fill="rgb(249,129,22)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 13, cpu 58, target 30%, elapsed 149.224242 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="143.000000" text-anchor="middle" fill="#0f172a">149.22 ms</text>
+<text class="small" x="1370.50" y="155.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1420.00" y="132.00" width="93.00" height="27.00" fill="rgb(250,178,21)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 14, cpu 60, target 30%, elapsed 132.882685 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="143.000000" text-anchor="middle" fill="#0f172a">132.88 ms</text>
+<text class="small" x="1466.50" y="155.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1516.00" y="132.00" width="93.00" height="27.00" fill="rgb(250,194,21)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 15, cpu 62, target 30%, elapsed 127.593486 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="143.000000" text-anchor="middle" fill="#0f172a">127.59 ms</text>
+<text class="small" x="1562.50" y="155.00" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="173.00">s500</text>
+<text class="small" x="8" y="186.00">182.90 ms</text>
+<rect x="76.00" y="162.00" width="93.00" height="27.00" fill="rgb(112,200,68)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 0, cpu 32, target 30%, elapsed 103.387299 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="173.000000" text-anchor="middle" fill="#0f172a">103.39 ms</text>
+<text class="small" x="122.50" y="185.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="162.00" width="93.00" height="27.00" fill="rgb(185,202,43)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 1, cpu 34, target 30%, elapsed 114.431114 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="173.000000" text-anchor="middle" fill="#0f172a">114.43 ms</text>
+<text class="small" x="218.50" y="185.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="268.00" y="162.00" width="93.00" height="27.00" fill="rgb(188,202,42)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 2, cpu 36, target 30%, elapsed 115.001757 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="173.000000" text-anchor="middle" fill="#0f172a">115.00 ms</text>
+<text class="small" x="314.50" y="185.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="364.00" y="162.00" width="93.00" height="27.00" fill="rgb(250,181,21)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 3, cpu 38, target 30%, elapsed 131.849274 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="173.000000" text-anchor="middle" fill="#0f172a">131.85 ms</text>
+<text class="small" x="410.50" y="185.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="460.00" y="162.00" width="93.00" height="27.00" fill="rgb(238,85,28)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 4, cpu 40, target 100%, elapsed 164.914708 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="173.000000" text-anchor="middle" fill="#f8fafc">164.91 ms</text>
+<text class="small" x="506.50" y="185.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="556.00" y="162.00" width="93.00" height="27.00" fill="rgb(222,44,37)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 5, cpu 42, target 100%, elapsed 180.641978 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="173.000000" text-anchor="middle" fill="#f8fafc">180.64 ms</text>
+<text class="small" x="602.50" y="185.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="652.00" y="162.00" width="93.00" height="27.00" fill="rgb(233,71,31)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 6, cpu 44, target 100%, elapsed 170.276999 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="173.000000" text-anchor="middle" fill="#f8fafc">170.28 ms</text>
+<text class="small" x="698.50" y="185.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748.00" y="162.00" width="93.00" height="27.00" fill="rgb(220,38,38)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 7, cpu 46, target 100%, elapsed 182.903128 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="173.000000" text-anchor="middle" fill="#f8fafc">182.90 ms</text>
+<text class="small" x="794.50" y="185.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="844.00" y="162.00" width="93.00" height="27.00" fill="rgb(233,74,31)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 8, cpu 48, target 100%, elapsed 169.431588 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="173.000000" text-anchor="middle" fill="#f8fafc">169.43 ms</text>
+<text class="small" x="890.50" y="185.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="940.00" y="162.00" width="93.00" height="27.00" fill="rgb(243,98,25)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 9, cpu 18, target 100%, elapsed 159.970227 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="173.000000" text-anchor="middle" fill="#0f172a">159.97 ms</text>
+<text class="small" x="986.50" y="185.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1036.00" y="162.00" width="93.00" height="27.00" fill="rgb(236,82,29)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 10, cpu 20, target 100%, elapsed 166.373920 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="173.000000" text-anchor="middle" fill="#f8fafc">166.37 ms</text>
+<text class="small" x="1082.50" y="185.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1132.00" y="162.00" width="93.00" height="27.00" fill="rgb(221,40,38)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 11, cpu 54, target 100%, elapsed 182.122841 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="173.000000" text-anchor="middle" fill="#f8fafc">182.12 ms</text>
+<text class="small" x="1178.50" y="185.00" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1228.00" y="162.00" width="93.00" height="27.00" fill="rgb(249,128,22)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 12, cpu 24, target 30%, elapsed 149.473503 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="173.000000" text-anchor="middle" fill="#0f172a">149.47 ms</text>
+<text class="small" x="1274.50" y="185.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1324.00" y="162.00" width="93.00" height="27.00" fill="rgb(249,134,22)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 13, cpu 58, target 30%, elapsed 147.391095 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="173.000000" text-anchor="middle" fill="#0f172a">147.39 ms</text>
+<text class="small" x="1370.50" y="185.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1420.00" y="162.00" width="93.00" height="27.00" fill="rgb(250,185,21)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 14, cpu 60, target 30%, elapsed 130.564080 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="173.000000" text-anchor="middle" fill="#0f172a">130.56 ms</text>
+<text class="small" x="1466.50" y="185.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1516.00" y="162.00" width="93.00" height="27.00" fill="rgb(250,202,21)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 15, cpu 62, target 30%, elapsed 124.970089 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="173.000000" text-anchor="middle" fill="#0f172a">124.97 ms</text>
+<text class="small" x="1562.50" y="185.00" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="203.00">s600</text>
+<text class="small" x="8" y="216.00">160.12 ms</text>
+<rect x="76.00" y="192.00" width="93.00" height="27.00" fill="rgb(91,199,75)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 0, cpu 32, target 30%, elapsed 100.184246 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="203.000000" text-anchor="middle" fill="#0f172a">100.18 ms</text>
+<text class="small" x="122.50" y="215.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="192.00" width="93.00" height="27.00" fill="rgb(204,203,37)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 1, cpu 34, target 30%, elapsed 117.363139 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="203.000000" text-anchor="middle" fill="#0f172a">117.36 ms</text>
+<text class="small" x="218.50" y="215.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="268.00" y="192.00" width="93.00" height="27.00" fill="rgb(175,202,46)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 2, cpu 36, target 30%, elapsed 112.956013 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="203.000000" text-anchor="middle" fill="#0f172a">112.96 ms</text>
+<text class="small" x="314.50" y="215.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="364.00" y="192.00" width="93.00" height="27.00" fill="rgb(250,188,21)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 3, cpu 38, target 30%, elapsed 129.780438 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="203.000000" text-anchor="middle" fill="#0f172a">129.78 ms</text>
+<text class="small" x="410.50" y="215.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="460.00" y="192.00" width="93.00" height="27.00" fill="rgb(248,112,23)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 4, cpu 40, target 100%, elapsed 154.941298 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="203.000000" text-anchor="middle" fill="#0f172a">154.94 ms</text>
+<text class="small" x="506.50" y="215.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="556.00" y="192.00" width="93.00" height="27.00" fill="rgb(244,103,25)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 5, cpu 42, target 100%, elapsed 158.306085 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="203.000000" text-anchor="middle" fill="#0f172a">158.31 ms</text>
+<text class="small" x="602.50" y="215.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="652.00" y="192.00" width="93.00" height="27.00" fill="rgb(249,117,22)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 6, cpu 44, target 100%, elapsed 153.074824 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="203.000000" text-anchor="middle" fill="#0f172a">153.07 ms</text>
+<text class="small" x="698.50" y="215.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="748.00" y="192.00" width="93.00" height="27.00" fill="rgb(243,98,26)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 7, cpu 46, target 100%, elapsed 160.118483 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="203.000000" text-anchor="middle" fill="#0f172a">160.12 ms</text>
+<text class="small" x="794.50" y="215.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="844.00" y="192.00" width="93.00" height="27.00" fill="rgb(244,101,25)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 8, cpu 48, target 100%, elapsed 158.890099 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="203.000000" text-anchor="middle" fill="#0f172a">158.89 ms</text>
+<text class="small" x="890.50" y="215.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="940.00" y="192.00" width="93.00" height="27.00" fill="rgb(249,120,22)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 9, cpu 50, target 100%, elapsed 151.935093 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="203.000000" text-anchor="middle" fill="#0f172a">151.94 ms</text>
+<text class="small" x="986.50" y="215.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1036.00" y="192.00" width="93.00" height="27.00" fill="rgb(244,103,25)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 10, cpu 52, target 100%, elapsed 158.358273 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="203.000000" text-anchor="middle" fill="#0f172a">158.36 ms</text>
+<text class="small" x="1082.50" y="215.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1132.00" y="192.00" width="93.00" height="27.00" fill="rgb(244,102,25)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 11, cpu 54, target 100%, elapsed 158.682675 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="203.000000" text-anchor="middle" fill="#0f172a">158.68 ms</text>
+<text class="small" x="1178.50" y="215.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1228.00" y="192.00" width="93.00" height="27.00" fill="rgb(145,201,57)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 12, cpu 24, target 40%, elapsed 108.322529 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="203.000000" text-anchor="middle" fill="#0f172a">108.32 ms</text>
+<text class="small" x="1274.50" y="215.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1324.00" y="192.00" width="93.00" height="27.00" fill="rgb(249,139,22)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 13, cpu 58, target 30%, elapsed 145.799838 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="203.000000" text-anchor="middle" fill="#0f172a">145.80 ms</text>
+<text class="small" x="1370.50" y="215.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1420.00" y="192.00" width="93.00" height="27.00" fill="rgb(250,192,21)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 14, cpu 60, target 30%, elapsed 128.216810 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="203.000000" text-anchor="middle" fill="#0f172a">128.22 ms</text>
+<text class="small" x="1466.50" y="215.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1516.00" y="192.00" width="93.00" height="27.00" fill="rgb(233,203,27)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 15, cpu 62, target 30%, elapsed 121.783365 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="203.000000" text-anchor="middle" fill="#0f172a">121.78 ms</text>
+<text class="small" x="1562.50" y="215.00" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="233.00">s700</text>
+<text class="small" x="8" y="246.00">153.60 ms</text>
+<rect x="76.00" y="222.00" width="93.00" height="27.00" fill="rgb(80,198,79)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 0, cpu 32, target 30%, elapsed 98.418902 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="233.000000" text-anchor="middle" fill="#0f172a">98.42 ms</text>
+<text class="small" x="122.50" y="245.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="222.00" width="93.00" height="27.00" fill="rgb(189,202,42)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 1, cpu 34, target 30%, elapsed 115.055395 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="233.000000" text-anchor="middle" fill="#0f172a">115.06 ms</text>
+<text class="small" x="218.50" y="245.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="268.00" y="222.00" width="93.00" height="27.00" fill="rgb(165,201,50)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 2, cpu 36, target 30%, elapsed 111.496202 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="233.000000" text-anchor="middle" fill="#0f172a">111.50 ms</text>
+<text class="small" x="314.50" y="245.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="364.00" y="222.00" width="93.00" height="27.00" fill="rgb(250,192,21)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 3, cpu 38, target 30%, elapsed 128.415652 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="233.000000" text-anchor="middle" fill="#0f172a">128.42 ms</text>
+<text class="small" x="410.50" y="245.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="460.00" y="222.00" width="93.00" height="27.00" fill="rgb(249,130,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 4, cpu 40, target 100%, elapsed 148.760091 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="233.000000" text-anchor="middle" fill="#0f172a">148.76 ms</text>
+<text class="small" x="506.50" y="245.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="556.00" y="222.00" width="93.00" height="27.00" fill="rgb(249,122,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 5, cpu 42, target 100%, elapsed 151.371429 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="233.000000" text-anchor="middle" fill="#0f172a">151.37 ms</text>
+<text class="small" x="602.50" y="245.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="652.00" y="222.00" width="93.00" height="27.00" fill="rgb(249,137,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 6, cpu 44, target 100%, elapsed 146.384425 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="233.000000" text-anchor="middle" fill="#0f172a">146.38 ms</text>
+<text class="small" x="698.50" y="245.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="748.00" y="222.00" width="93.00" height="27.00" fill="rgb(249,115,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 7, cpu 46, target 100%, elapsed 153.598898 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="233.000000" text-anchor="middle" fill="#0f172a">153.60 ms</text>
+<text class="small" x="794.50" y="245.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="844.00" y="222.00" width="93.00" height="27.00" fill="rgb(249,120,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 8, cpu 48, target 100%, elapsed 152.064214 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="233.000000" text-anchor="middle" fill="#0f172a">152.06 ms</text>
+<text class="small" x="890.50" y="245.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="940.00" y="222.00" width="93.00" height="27.00" fill="rgb(249,139,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 9, cpu 50, target 100%, elapsed 145.785703 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="233.000000" text-anchor="middle" fill="#0f172a">145.79 ms</text>
+<text class="small" x="986.50" y="245.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1036.00" y="222.00" width="93.00" height="27.00" fill="rgb(249,121,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 10, cpu 52, target 100%, elapsed 151.632666 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="233.000000" text-anchor="middle" fill="#0f172a">151.63 ms</text>
+<text class="small" x="1082.50" y="245.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1132.00" y="222.00" width="93.00" height="27.00" fill="rgb(249,119,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 11, cpu 54, target 100%, elapsed 152.361316 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="233.000000" text-anchor="middle" fill="#0f172a">152.36 ms</text>
+<text class="small" x="1178.50" y="245.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1228.00" y="222.00" width="93.00" height="27.00" fill="rgb(147,201,56)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 12, cpu 24, target 40%, elapsed 108.633837 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="233.000000" text-anchor="middle" fill="#0f172a">108.63 ms</text>
+<text class="small" x="1274.50" y="245.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1324.00" y="222.00" width="93.00" height="27.00" fill="rgb(124,200,64)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 13, cpu 58, target 40%, elapsed 105.177505 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="233.000000" text-anchor="middle" fill="#0f172a">105.18 ms</text>
+<text class="small" x="1370.50" y="245.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1420.00" y="222.00" width="93.00" height="27.00" fill="rgb(250,195,21)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 14, cpu 60, target 30%, elapsed 127.503626 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="233.000000" text-anchor="middle" fill="#0f172a">127.50 ms</text>
+<text class="small" x="1466.50" y="245.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1516.00" y="222.00" width="93.00" height="27.00" fill="rgb(214,203,33)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 15, cpu 62, target 30%, elapsed 118.930443 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="233.000000" text-anchor="middle" fill="#0f172a">118.93 ms</text>
+<text class="small" x="1562.50" y="245.00" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="263.00">s800</text>
+<text class="small" x="8" y="276.00">148.08 ms</text>
+<rect x="76.00" y="252.00" width="93.00" height="27.00" fill="rgb(68,198,83)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 0, cpu 32, target 30%, elapsed 96.607080 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="263.000000" text-anchor="middle" fill="#0f172a">96.61 ms</text>
+<text class="small" x="122.50" y="275.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="252.00" width="93.00" height="27.00" fill="rgb(176,202,46)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 1, cpu 34, target 30%, elapsed 113.167714 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="263.000000" text-anchor="middle" fill="#0f172a">113.17 ms</text>
+<text class="small" x="218.50" y="275.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="268.00" y="252.00" width="93.00" height="27.00" fill="rgb(113,200,67)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 2, cpu 36, target 30%, elapsed 103.593996 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="263.000000" text-anchor="middle" fill="#0f172a">103.59 ms</text>
+<text class="small" x="314.50" y="275.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="364.00" y="252.00" width="93.00" height="27.00" fill="rgb(250,196,21)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 3, cpu 6, target 30%, elapsed 126.906043 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="263.000000" text-anchor="middle" fill="#0f172a">126.91 ms</text>
+<text class="small" x="410.50" y="275.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="460.00" y="252.00" width="93.00" height="27.00" fill="rgb(249,144,22)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 4, cpu 40, target 100%, elapsed 144.284360 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="263.000000" text-anchor="middle" fill="#0f172a">144.28 ms</text>
+<text class="small" x="506.50" y="275.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="556.00" y="252.00" width="93.00" height="27.00" fill="rgb(249,136,22)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 5, cpu 42, target 100%, elapsed 146.914454 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="263.000000" text-anchor="middle" fill="#0f172a">146.91 ms</text>
+<text class="small" x="602.50" y="275.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="652.00" y="252.00" width="93.00" height="27.00" fill="rgb(249,151,22)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 6, cpu 44, target 100%, elapsed 141.853131 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="263.000000" text-anchor="middle" fill="#0f172a">141.85 ms</text>
+<text class="small" x="698.50" y="275.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="748.00" y="252.00" width="93.00" height="27.00" fill="rgb(249,132,22)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 7, cpu 46, target 100%, elapsed 148.077391 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="263.000000" text-anchor="middle" fill="#0f172a">148.08 ms</text>
+<text class="small" x="794.50" y="275.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="844.00" y="252.00" width="93.00" height="27.00" fill="rgb(249,138,22)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 8, cpu 48, target 100%, elapsed 146.076584 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="263.000000" text-anchor="middle" fill="#0f172a">146.08 ms</text>
+<text class="small" x="890.50" y="275.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="940.00" y="252.00" width="93.00" height="27.00" fill="rgb(249,156,22)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 9, cpu 50, target 100%, elapsed 140.207680 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="263.000000" text-anchor="middle" fill="#0f172a">140.21 ms</text>
+<text class="small" x="986.50" y="275.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1036.00" y="252.00" width="93.00" height="27.00" fill="rgb(249,137,22)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 10, cpu 52, target 100%, elapsed 146.456355 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="263.000000" text-anchor="middle" fill="#0f172a">146.46 ms</text>
+<text class="small" x="1082.50" y="275.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1132.00" y="252.00" width="93.00" height="27.00" fill="rgb(249,137,22)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 11, cpu 54, target 100%, elapsed 146.557850 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="263.000000" text-anchor="middle" fill="#0f172a">146.56 ms</text>
+<text class="small" x="1178.50" y="275.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1228.00" y="252.00" width="93.00" height="27.00" fill="rgb(145,201,56)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 12, cpu 24, target 40%, elapsed 108.428625 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="263.000000" text-anchor="middle" fill="#0f172a">108.43 ms</text>
+<text class="small" x="1274.50" y="275.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1324.00" y="252.00" width="93.00" height="27.00" fill="rgb(121,200,65)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 13, cpu 58, target 40%, elapsed 104.779218 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="263.000000" text-anchor="middle" fill="#0f172a">104.78 ms</text>
+<text class="small" x="1370.50" y="275.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1420.00" y="252.00" width="93.00" height="27.00" fill="rgb(250,200,21)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 14, cpu 60, target 30%, elapsed 125.631589 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="263.000000" text-anchor="middle" fill="#0f172a">125.63 ms</text>
+<text class="small" x="1466.50" y="275.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1516.00" y="252.00" width="93.00" height="27.00" fill="rgb(200,202,38)" stroke="#334155" stroke-width="0.35"><title>step 800, heat_update, thread 15, cpu 62, target 30%, elapsed 116.775178 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="263.000000" text-anchor="middle" fill="#0f172a">116.78 ms</text>
+<text class="small" x="1562.50" y="275.00" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="293.00">s900</text>
+<text class="small" x="8" y="306.00">148.48 ms</text>
+<rect x="76.00" y="282.00" width="93.00" height="27.00" fill="rgb(60,198,85)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 0, cpu 32, target 30%, elapsed 95.441310 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="293.000000" text-anchor="middle" fill="#0f172a">95.44 ms</text>
+<text class="small" x="122.50" y="305.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="282.00" width="93.00" height="27.00" fill="rgb(171,201,48)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 1, cpu 34, target 30%, elapsed 112.292325 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="293.000000" text-anchor="middle" fill="#0f172a">112.29 ms</text>
+<text class="small" x="218.50" y="305.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="268.00" y="282.00" width="93.00" height="27.00" fill="rgb(153,201,54)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 2, cpu 36, target 30%, elapsed 109.609539 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="293.000000" text-anchor="middle" fill="#0f172a">109.61 ms</text>
+<text class="small" x="314.50" y="305.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="364.00" y="282.00" width="93.00" height="27.00" fill="rgb(236,204,26)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 3, cpu 38, target 30%, elapsed 122.218445 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="293.000000" text-anchor="middle" fill="#0f172a">122.22 ms</text>
+<text class="small" x="410.50" y="305.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="460.00" y="282.00" width="93.00" height="27.00" fill="rgb(249,142,22)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 4, cpu 40, target 100%, elapsed 144.875986 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="293.000000" text-anchor="middle" fill="#0f172a">144.88 ms</text>
+<text class="small" x="506.50" y="305.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="556.00" y="282.00" width="93.00" height="27.00" fill="rgb(249,137,22)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 5, cpu 42, target 100%, elapsed 146.483035 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="293.000000" text-anchor="middle" fill="#0f172a">146.48 ms</text>
+<text class="small" x="602.50" y="305.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="652.00" y="282.00" width="93.00" height="27.00" fill="rgb(249,154,22)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 6, cpu 44, target 100%, elapsed 140.778759 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="293.000000" text-anchor="middle" fill="#0f172a">140.78 ms</text>
+<text class="small" x="698.50" y="305.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="748.00" y="282.00" width="93.00" height="27.00" fill="rgb(249,131,22)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 7, cpu 46, target 100%, elapsed 148.484577 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="293.000000" text-anchor="middle" fill="#0f172a">148.48 ms</text>
+<text class="small" x="794.50" y="305.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="844.00" y="282.00" width="93.00" height="27.00" fill="rgb(249,138,22)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 8, cpu 48, target 100%, elapsed 146.124987 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="293.000000" text-anchor="middle" fill="#0f172a">146.12 ms</text>
+<text class="small" x="890.50" y="305.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="940.00" y="282.00" width="93.00" height="27.00" fill="rgb(249,159,22)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 9, cpu 18, target 100%, elapsed 139.233868 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="293.000000" text-anchor="middle" fill="#0f172a">139.23 ms</text>
+<text class="small" x="986.50" y="305.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1036.00" y="282.00" width="93.00" height="27.00" fill="rgb(249,138,22)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 10, cpu 52, target 100%, elapsed 146.111900 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="293.000000" text-anchor="middle" fill="#0f172a">146.11 ms</text>
+<text class="small" x="1082.50" y="305.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1132.00" y="282.00" width="93.00" height="27.00" fill="rgb(249,137,22)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 11, cpu 54, target 100%, elapsed 146.599766 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="293.000000" text-anchor="middle" fill="#0f172a">146.60 ms</text>
+<text class="small" x="1178.50" y="305.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1228.00" y="282.00" width="93.00" height="27.00" fill="rgb(144,201,57)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 12, cpu 24, target 40%, elapsed 108.269157 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="293.000000" text-anchor="middle" fill="#0f172a">108.27 ms</text>
+<text class="small" x="1274.50" y="305.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1324.00" y="282.00" width="93.00" height="27.00" fill="rgb(117,200,66)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 13, cpu 58, target 40%, elapsed 104.159664 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="293.000000" text-anchor="middle" fill="#0f172a">104.16 ms</text>
+<text class="small" x="1370.50" y="305.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1420.00" y="282.00" width="93.00" height="27.00" fill="rgb(250,204,21)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 14, cpu 60, target 30%, elapsed 124.385622 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="293.000000" text-anchor="middle" fill="#0f172a">124.39 ms</text>
+<text class="small" x="1466.50" y="305.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1516.00" y="282.00" width="93.00" height="27.00" fill="rgb(192,202,41)" stroke="#334155" stroke-width="0.35"><title>step 900, heat_update, thread 15, cpu 62, target 30%, elapsed 115.603042 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="293.000000" text-anchor="middle" fill="#0f172a">115.60 ms</text>
+<text class="small" x="1562.50" y="305.00" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="323.00">s1000</text>
+<text class="small" x="8" y="336.00">138.32 ms</text>
+<rect x="76.00" y="312.00" width="93.00" height="27.00" fill="rgb(46,197,90)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 0, cpu 32, target 30%, elapsed 93.340097 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="323.000000" text-anchor="middle" fill="#0f172a">93.34 ms</text>
+<text class="small" x="122.50" y="335.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="312.00" width="93.00" height="27.00" fill="rgb(156,201,53)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 1, cpu 34, target 30%, elapsed 110.001857 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="323.000000" text-anchor="middle" fill="#0f172a">110.00 ms</text>
+<text class="small" x="218.50" y="335.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="268.00" y="312.00" width="93.00" height="27.00" fill="rgb(141,200,58)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 2, cpu 36, target 30%, elapsed 107.841482 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="323.000000" text-anchor="middle" fill="#0f172a">107.84 ms</text>
+<text class="small" x="314.50" y="335.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="364.00" y="312.00" width="93.00" height="27.00" fill="rgb(248,204,22)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 3, cpu 38, target 30%, elapsed 124.177364 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="323.000000" text-anchor="middle" fill="#0f172a">124.18 ms</text>
+<text class="small" x="410.50" y="335.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="460.00" y="312.00" width="93.00" height="27.00" fill="rgb(250,170,21)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 4, cpu 40, target 100%, elapsed 135.600175 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="323.000000" text-anchor="middle" fill="#0f172a">135.60 ms</text>
+<text class="small" x="506.50" y="335.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="556.00" y="312.00" width="93.00" height="27.00" fill="rgb(250,164,21)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 5, cpu 42, target 100%, elapsed 137.553881 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="323.000000" text-anchor="middle" fill="#0f172a">137.55 ms</text>
+<text class="small" x="602.50" y="335.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="652.00" y="312.00" width="93.00" height="27.00" fill="rgb(250,183,21)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 6, cpu 44, target 100%, elapsed 131.400338 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="323.000000" text-anchor="middle" fill="#0f172a">131.40 ms</text>
+<text class="small" x="698.50" y="335.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="748.00" y="312.00" width="93.00" height="27.00" fill="rgb(250,162,21)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 7, cpu 46, target 100%, elapsed 138.317111 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="323.000000" text-anchor="middle" fill="#0f172a">138.32 ms</text>
+<text class="small" x="794.50" y="335.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="844.00" y="312.00" width="93.00" height="27.00" fill="rgb(250,167,21)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 8, cpu 48, target 100%, elapsed 136.575361 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="323.000000" text-anchor="middle" fill="#0f172a">136.58 ms</text>
+<text class="small" x="890.50" y="335.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="940.00" y="312.00" width="93.00" height="27.00" fill="rgb(250,184,21)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 9, cpu 18, target 100%, elapsed 130.892916 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="323.000000" text-anchor="middle" fill="#0f172a">130.89 ms</text>
+<text class="small" x="986.50" y="335.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1036.00" y="312.00" width="93.00" height="27.00" fill="rgb(250,163,21)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 10, cpu 52, target 100%, elapsed 137.887916 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="323.000000" text-anchor="middle" fill="#0f172a">137.89 ms</text>
+<text class="small" x="1082.50" y="335.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1132.00" y="312.00" width="93.00" height="27.00" fill="rgb(250,165,21)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 11, cpu 54, target 100%, elapsed 137.230011 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="323.000000" text-anchor="middle" fill="#0f172a">137.23 ms</text>
+<text class="small" x="1178.50" y="335.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1228.00" y="312.00" width="93.00" height="27.00" fill="rgb(140,200,58)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 12, cpu 24, target 40%, elapsed 107.710676 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="323.000000" text-anchor="middle" fill="#0f172a">107.71 ms</text>
+<text class="small" x="1274.50" y="335.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1324.00" y="312.00" width="93.00" height="27.00" fill="rgb(118,200,66)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 13, cpu 58, target 40%, elapsed 104.216967 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="323.000000" text-anchor="middle" fill="#0f172a">104.22 ms</text>
+<text class="small" x="1370.50" y="335.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1420.00" y="312.00" width="93.00" height="27.00" fill="rgb(237,204,25)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 14, cpu 60, target 30%, elapsed 122.466738 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="323.000000" text-anchor="middle" fill="#0f172a">122.47 ms</text>
+<text class="small" x="1466.50" y="335.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="1516.00" y="312.00" width="93.00" height="27.00" fill="rgb(177,202,46)" stroke="#334155" stroke-width="0.35"><title>step 1000, heat_update, thread 15, cpu 62, target 30%, elapsed 113.246141 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="323.000000" text-anchor="middle" fill="#0f172a">113.25 ms</text>
+<text class="small" x="1562.50" y="335.00" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="353.00">s1100</text>
+<text class="small" x="8" y="366.00">126.48 ms</text>
+<rect x="76.00" y="342.00" width="93.00" height="27.00" fill="rgb(33,196,99)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 0, cpu 32, target 30%, elapsed 89.988002 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="353.000000" text-anchor="middle" fill="#0f172a">89.99 ms</text>
+<text class="small" x="122.50" y="365.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="342.00" width="93.00" height="27.00" fill="rgb(131,200,61)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 1, cpu 34, target 30%, elapsed 106.259773 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="353.000000" text-anchor="middle" fill="#0f172a">106.26 ms</text>
+<text class="small" x="218.50" y="365.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="268.00" y="342.00" width="93.00" height="27.00" fill="rgb(128,200,62)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 2, cpu 36, target 30%, elapsed 105.740134 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="353.000000" text-anchor="middle" fill="#0f172a">105.74 ms</text>
+<text class="small" x="314.50" y="365.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="364.00" y="342.00" width="93.00" height="27.00" fill="rgb(32,196,102)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 3, cpu 38, target 40%, elapsed 89.148421 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="353.000000" text-anchor="middle" fill="#0f172a">89.15 ms</text>
+<text class="small" x="410.50" y="365.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="460.00" y="342.00" width="93.00" height="27.00" fill="rgb(242,204,24)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 4, cpu 40, target 100%, elapsed 123.146566 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="353.000000" text-anchor="middle" fill="#0f172a">123.15 ms</text>
+<text class="small" x="506.50" y="365.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="556.00" y="342.00" width="93.00" height="27.00" fill="rgb(250,201,21)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 5, cpu 42, target 100%, elapsed 125.405591 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="353.000000" text-anchor="middle" fill="#0f172a">125.41 ms</text>
+<text class="small" x="602.50" y="365.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="652.00" y="342.00" width="93.00" height="27.00" fill="rgb(221,203,31)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 6, cpu 44, target 100%, elapsed 119.971067 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="353.000000" text-anchor="middle" fill="#0f172a">119.97 ms</text>
+<text class="small" x="698.50" y="365.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="748.00" y="342.00" width="93.00" height="27.00" fill="rgb(250,198,21)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 7, cpu 46, target 100%, elapsed 126.483589 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="353.000000" text-anchor="middle" fill="#0f172a">126.48 ms</text>
+<text class="small" x="794.50" y="365.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="844.00" y="342.00" width="93.00" height="27.00" fill="rgb(248,204,22)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 8, cpu 48, target 100%, elapsed 124.058893 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="353.000000" text-anchor="middle" fill="#0f172a">124.06 ms</text>
+<text class="small" x="890.50" y="365.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="940.00" y="342.00" width="93.00" height="27.00" fill="rgb(217,203,32)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 9, cpu 18, target 100%, elapsed 119.358901 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="353.000000" text-anchor="middle" fill="#0f172a">119.36 ms</text>
+<text class="small" x="986.50" y="365.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1036.00" y="342.00" width="93.00" height="27.00" fill="rgb(250,203,21)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 10, cpu 52, target 100%, elapsed 124.614440 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="353.000000" text-anchor="middle" fill="#0f172a">124.61 ms</text>
+<text class="small" x="1082.50" y="365.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1132.00" y="342.00" width="93.00" height="27.00" fill="rgb(250,204,21)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 11, cpu 54, target 100%, elapsed 124.534032 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="353.000000" text-anchor="middle" fill="#0f172a">124.53 ms</text>
+<text class="small" x="1178.50" y="365.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1228.00" y="342.00" width="93.00" height="27.00" fill="rgb(138,200,59)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 12, cpu 24, target 40%, elapsed 107.358261 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="353.000000" text-anchor="middle" fill="#0f172a">107.36 ms</text>
+<text class="small" x="1274.50" y="365.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1324.00" y="342.00" width="93.00" height="27.00" fill="rgb(118,200,66)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 13, cpu 58, target 40%, elapsed 104.225524 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="353.000000" text-anchor="middle" fill="#0f172a">104.23 ms</text>
+<text class="small" x="1370.50" y="365.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1420.00" y="342.00" width="93.00" height="27.00" fill="rgb(30,195,110)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 14, cpu 60, target 40%, elapsed 86.911213 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="353.000000" text-anchor="middle" fill="#0f172a">86.91 ms</text>
+<text class="small" x="1466.50" y="365.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1516.00" y="342.00" width="93.00" height="27.00" fill="rgb(154,201,53)" stroke="#334155" stroke-width="0.35"><title>step 1100, heat_update, thread 15, cpu 62, target 30%, elapsed 109.807226 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="353.000000" text-anchor="middle" fill="#0f172a">109.81 ms</text>
+<text class="small" x="1562.50" y="365.00" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="383.00">s1200</text>
+<text class="small" x="8" y="396.00">123.10 ms</text>
+<rect x="76.00" y="372.00" width="93.00" height="27.00" fill="rgb(31,196,105)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 0, cpu 32, target 30%, elapsed 88.451157 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="383.000000" text-anchor="middle" fill="#0f172a">88.45 ms</text>
+<text class="small" x="122.50" y="395.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="372.00" width="93.00" height="27.00" fill="rgb(121,200,65)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 1, cpu 34, target 30%, elapsed 104.736846 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="383.000000" text-anchor="middle" fill="#0f172a">104.74 ms</text>
+<text class="small" x="218.50" y="395.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="268.00" y="372.00" width="93.00" height="27.00" fill="rgb(123,200,64)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 2, cpu 36, target 30%, elapsed 105.057264 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="383.000000" text-anchor="middle" fill="#0f172a">105.06 ms</text>
+<text class="small" x="314.50" y="395.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="364.00" y="372.00" width="93.00" height="27.00" fill="rgb(32,196,103)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 3, cpu 38, target 40%, elapsed 88.968032 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="383.000000" text-anchor="middle" fill="#0f172a">88.97 ms</text>
+<text class="small" x="410.50" y="395.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="460.00" y="372.00" width="93.00" height="27.00" fill="rgb(228,203,29)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 4, cpu 40, target 100%, elapsed 121.009806 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="383.000000" text-anchor="middle" fill="#0f172a">121.01 ms</text>
+<text class="small" x="506.50" y="395.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="556.00" y="372.00" width="93.00" height="27.00" fill="rgb(241,204,24)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 5, cpu 42, target 100%, elapsed 123.096080 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="383.000000" text-anchor="middle" fill="#0f172a">123.10 ms</text>
+<text class="small" x="602.50" y="395.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="652.00" y="372.00" width="93.00" height="27.00" fill="rgb(207,203,35)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 6, cpu 44, target 100%, elapsed 117.889670 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="383.000000" text-anchor="middle" fill="#0f172a">117.89 ms</text>
+<text class="small" x="698.50" y="395.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="748.00" y="372.00" width="93.00" height="27.00" fill="rgb(240,204,25)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 7, cpu 46, target 100%, elapsed 122.812236 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="383.000000" text-anchor="middle" fill="#0f172a">122.81 ms</text>
+<text class="small" x="794.50" y="395.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="844.00" y="372.00" width="93.00" height="27.00" fill="rgb(234,203,26)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 8, cpu 48, target 100%, elapsed 122.014831 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="383.000000" text-anchor="middle" fill="#0f172a">122.01 ms</text>
+<text class="small" x="890.50" y="395.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="940.00" y="372.00" width="93.00" height="27.00" fill="rgb(197,202,39)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 9, cpu 18, target 100%, elapsed 116.353014 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="383.000000" text-anchor="middle" fill="#0f172a">116.35 ms</text>
+<text class="small" x="986.50" y="395.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1036.00" y="372.00" width="93.00" height="27.00" fill="rgb(234,203,26)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 10, cpu 52, target 100%, elapsed 121.957810 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="383.000000" text-anchor="middle" fill="#0f172a">121.96 ms</text>
+<text class="small" x="1082.50" y="395.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1132.00" y="372.00" width="93.00" height="27.00" fill="rgb(234,203,26)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 11, cpu 54, target 100%, elapsed 121.935914 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="383.000000" text-anchor="middle" fill="#0f172a">121.94 ms</text>
+<text class="small" x="1178.50" y="395.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1228.00" y="372.00" width="93.00" height="27.00" fill="rgb(137,200,59)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 12, cpu 24, target 40%, elapsed 107.145033 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="383.000000" text-anchor="middle" fill="#0f172a">107.15 ms</text>
+<text class="small" x="1274.50" y="395.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1324.00" y="372.00" width="93.00" height="27.00" fill="rgb(115,200,67)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 13, cpu 58, target 40%, elapsed 103.814994 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="383.000000" text-anchor="middle" fill="#0f172a">103.81 ms</text>
+<text class="small" x="1370.50" y="395.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1420.00" y="372.00" width="93.00" height="27.00" fill="rgb(30,195,112)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 14, cpu 60, target 40%, elapsed 86.447773 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="383.000000" text-anchor="middle" fill="#0f172a">86.45 ms</text>
+<text class="small" x="1466.50" y="395.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1516.00" y="372.00" width="93.00" height="27.00" fill="rgb(146,201,56)" stroke="#334155" stroke-width="0.35"><title>step 1200, heat_update, thread 15, cpu 62, target 30%, elapsed 108.579967 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="383.000000" text-anchor="middle" fill="#0f172a">108.58 ms</text>
+<text class="small" x="1562.50" y="395.00" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="413.00">s1300</text>
+<text class="small" x="8" y="426.00">111.72 ms</text>
+<rect x="76.00" y="402.00" width="93.00" height="27.00" fill="rgb(29,194,115)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 0, cpu 32, target 30%, elapsed 85.620228 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="413.000000" text-anchor="middle" fill="#0f172a">85.62 ms</text>
+<text class="small" x="122.50" y="425.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="402.00" width="93.00" height="27.00" fill="rgb(97,199,73)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 1, cpu 34, target 30%, elapsed 101.142464 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="413.000000" text-anchor="middle" fill="#0f172a">101.14 ms</text>
+<text class="small" x="218.50" y="425.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="268.00" y="402.00" width="93.00" height="27.00" fill="rgb(108,199,69)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 2, cpu 36, target 30%, elapsed 102.721182 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="413.000000" text-anchor="middle" fill="#0f172a">102.72 ms</text>
+<text class="small" x="314.50" y="425.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="364.00" y="402.00" width="93.00" height="27.00" fill="rgb(31,195,107)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 3, cpu 38, target 40%, elapsed 87.885406 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="413.000000" text-anchor="middle" fill="#0f172a">87.89 ms</text>
+<text class="small" x="410.50" y="425.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="460.00" y="402.00" width="93.00" height="27.00" fill="rgb(152,201,54)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 4, cpu 40, target 100%, elapsed 109.437578 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="413.000000" text-anchor="middle" fill="#0f172a">109.44 ms</text>
+<text class="small" x="506.50" y="425.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="556.00" y="402.00" width="93.00" height="27.00" fill="rgb(164,201,50)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 5, cpu 42, target 100%, elapsed 111.334518 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="413.000000" text-anchor="middle" fill="#0f172a">111.33 ms</text>
+<text class="small" x="602.50" y="425.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="652.00" y="402.00" width="93.00" height="27.00" fill="rgb(121,200,65)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 6, cpu 44, target 100%, elapsed 104.765167 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="413.000000" text-anchor="middle" fill="#0f172a">104.77 ms</text>
+<text class="small" x="698.50" y="425.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="748.00" y="402.00" width="93.00" height="27.00" fill="rgb(167,201,49)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 7, cpu 46, target 100%, elapsed 111.724931 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="413.000000" text-anchor="middle" fill="#0f172a">111.72 ms</text>
+<text class="small" x="794.50" y="425.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="844.00" y="402.00" width="93.00" height="27.00" fill="rgb(157,201,52)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 8, cpu 48, target 100%, elapsed 110.286584 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="413.000000" text-anchor="middle" fill="#0f172a">110.29 ms</text>
+<text class="small" x="890.50" y="425.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="940.00" y="402.00" width="93.00" height="27.00" fill="rgb(118,200,66)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 9, cpu 50, target 100%, elapsed 104.227705 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="413.000000" text-anchor="middle" fill="#0f172a">104.23 ms</text>
+<text class="small" x="986.50" y="425.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1036.00" y="402.00" width="93.00" height="27.00" fill="rgb(159,201,52)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 10, cpu 52, target 100%, elapsed 110.471975 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="413.000000" text-anchor="middle" fill="#0f172a">110.47 ms</text>
+<text class="small" x="1082.50" y="425.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1132.00" y="402.00" width="93.00" height="27.00" fill="rgb(166,201,49)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 11, cpu 54, target 100%, elapsed 111.640684 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="413.000000" text-anchor="middle" fill="#0f172a">111.64 ms</text>
+<text class="small" x="1178.50" y="425.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1228.00" y="402.00" width="93.00" height="27.00" fill="rgb(140,200,58)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 12, cpu 24, target 40%, elapsed 107.594219 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="413.000000" text-anchor="middle" fill="#0f172a">107.59 ms</text>
+<text class="small" x="1274.50" y="425.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1324.00" y="402.00" width="93.00" height="27.00" fill="rgb(114,200,67)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 13, cpu 58, target 40%, elapsed 103.649963 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="413.000000" text-anchor="middle" fill="#0f172a">103.65 ms</text>
+<text class="small" x="1370.50" y="425.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1420.00" y="402.00" width="93.00" height="27.00" fill="rgb(28,194,118)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 14, cpu 60, target 40%, elapsed 84.645333 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="413.000000" text-anchor="middle" fill="#0f172a">84.65 ms</text>
+<text class="small" x="1466.50" y="425.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1516.00" y="402.00" width="93.00" height="27.00" fill="rgb(124,200,64)" stroke="#334155" stroke-width="0.35"><title>step 1300, heat_update, thread 15, cpu 62, target 30%, elapsed 105.156462 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="413.000000" text-anchor="middle" fill="#0f172a">105.16 ms</text>
+<text class="small" x="1562.50" y="425.00" text-anchor="middle" fill="#0f172a">30%</text>
+<text x="8" y="443.00">s1400</text>
+<text class="small" x="8" y="456.00">108.57 ms</text>
+<rect x="76.00" y="432.00" width="93.00" height="27.00" fill="rgb(27,193,122)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 0, cpu 32, target 30%, elapsed 83.713406 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="443.000000" text-anchor="middle" fill="#0f172a">83.71 ms</text>
+<text class="small" x="122.50" y="455.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="432.00" width="93.00" height="27.00" fill="rgb(18,189,160)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 1, cpu 34, target 40%, elapsed 72.980723 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="443.000000" text-anchor="middle" fill="#0f172a">72.98 ms</text>
+<text class="small" x="218.50" y="455.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="268.00" y="432.00" width="93.00" height="27.00" fill="rgb(19,189,159)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 2, cpu 36, target 40%, elapsed 73.328385 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="443.000000" text-anchor="middle" fill="#0f172a">73.33 ms</text>
+<text class="small" x="314.50" y="455.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="364.00" y="432.00" width="93.00" height="27.00" fill="rgb(28,194,120)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 3, cpu 38, target 40%, elapsed 84.356689 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="443.000000" text-anchor="middle" fill="#0f172a">84.36 ms</text>
+<text class="small" x="410.50" y="455.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="460.00" y="432.00" width="93.00" height="27.00" fill="rgb(116,200,66)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 4, cpu 40, target 100%, elapsed 103.928482 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="443.000000" text-anchor="middle" fill="#0f172a">103.93 ms</text>
+<text class="small" x="506.50" y="455.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="556.00" y="432.00" width="93.00" height="27.00" fill="rgb(131,200,61)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 5, cpu 42, target 100%, elapsed 106.226187 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="443.000000" text-anchor="middle" fill="#0f172a">106.23 ms</text>
+<text class="small" x="602.50" y="455.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="652.00" y="432.00" width="93.00" height="27.00" fill="rgb(93,199,74)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 6, cpu 44, target 100%, elapsed 100.426195 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="443.000000" text-anchor="middle" fill="#0f172a">100.43 ms</text>
+<text class="small" x="698.50" y="455.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="748.00" y="432.00" width="93.00" height="27.00" fill="rgb(132,200,61)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 7, cpu 46, target 100%, elapsed 106.483910 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="443.000000" text-anchor="middle" fill="#0f172a">106.48 ms</text>
+<text class="small" x="794.50" y="455.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="844.00" y="432.00" width="93.00" height="27.00" fill="rgb(122,200,64)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 8, cpu 48, target 100%, elapsed 104.954330 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="443.000000" text-anchor="middle" fill="#0f172a">104.95 ms</text>
+<text class="small" x="890.50" y="455.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="940.00" y="432.00" width="93.00" height="27.00" fill="rgb(91,199,75)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 9, cpu 18, target 100%, elapsed 100.124709 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="443.000000" text-anchor="middle" fill="#0f172a">100.12 ms</text>
+<text class="small" x="986.50" y="455.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1036.00" y="432.00" width="93.00" height="27.00" fill="rgb(124,200,64)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 10, cpu 52, target 100%, elapsed 105.215920 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="443.000000" text-anchor="middle" fill="#0f172a">105.22 ms</text>
+<text class="small" x="1082.50" y="455.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1132.00" y="432.00" width="93.00" height="27.00" fill="rgb(146,201,56)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 11, cpu 54, target 100%, elapsed 108.566187 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="443.000000" text-anchor="middle" fill="#0f172a">108.57 ms</text>
+<text class="small" x="1178.50" y="455.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1228.00" y="432.00" width="93.00" height="27.00" fill="rgb(24,192,135)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 12, cpu 24, target 50%, elapsed 79.929096 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="443.000000" text-anchor="middle" fill="#0f172a">79.93 ms</text>
+<text class="small" x="1274.50" y="455.00" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1324.00" y="432.00" width="93.00" height="27.00" fill="rgb(20,190,151)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 13, cpu 58, target 50%, elapsed 75.536511 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="443.000000" text-anchor="middle" fill="#0f172a">75.54 ms</text>
+<text class="small" x="1370.50" y="455.00" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1420.00" y="432.00" width="93.00" height="27.00" fill="rgb(27,193,122)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 14, cpu 60, target 40%, elapsed 83.570919 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="443.000000" text-anchor="middle" fill="#0f172a">83.57 ms</text>
+<text class="small" x="1466.50" y="455.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1516.00" y="432.00" width="93.00" height="27.00" fill="rgb(21,190,150)" stroke="#334155" stroke-width="0.35"><title>step 1400, heat_update, thread 15, cpu 62, target 40%, elapsed 75.917389 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="443.000000" text-anchor="middle" fill="#0f172a">75.92 ms</text>
+<text class="small" x="1562.50" y="455.00" text-anchor="middle" fill="#0f172a">40%</text>
+<text x="8" y="473.00">s1500</text>
+<text class="small" x="8" y="486.00">104.50 ms</text>
+<rect x="76.00" y="462.00" width="93.00" height="27.00" fill="rgb(25,192,130)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 0, cpu 32, target 30%, elapsed 81.364567 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="473.000000" text-anchor="middle" fill="#0f172a">81.36 ms</text>
+<text class="small" x="122.50" y="485.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="462.00" width="93.00" height="27.00" fill="rgb(17,188,165)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 1, cpu 2, target 40%, elapsed 71.569860 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="473.000000" text-anchor="middle" fill="#0f172a">71.57 ms</text>
+<text class="small" x="218.50" y="485.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="268.00" y="462.00" width="93.00" height="27.00" fill="rgb(19,189,158)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 2, cpu 36, target 40%, elapsed 73.551917 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="473.000000" text-anchor="middle" fill="#0f172a">73.55 ms</text>
+<text class="small" x="314.50" y="485.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="364.00" y="462.00" width="93.00" height="27.00" fill="rgb(30,195,111)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 3, cpu 38, target 40%, elapsed 86.811194 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="473.000000" text-anchor="middle" fill="#0f172a">86.81 ms</text>
+<text class="small" x="410.50" y="485.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="460.00" y="462.00" width="93.00" height="27.00" fill="rgb(73,198,81)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 4, cpu 40, target 100%, elapsed 97.411532 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="473.000000" text-anchor="middle" fill="#0f172a">97.41 ms</text>
+<text class="small" x="506.50" y="485.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="556.00" y="462.00" width="93.00" height="27.00" fill="rgb(90,199,75)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 5, cpu 42, target 100%, elapsed 99.944672 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="473.000000" text-anchor="middle" fill="#0f172a">99.94 ms</text>
+<text class="small" x="602.50" y="485.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="652.00" y="462.00" width="93.00" height="27.00" fill="rgb(70,198,82)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 6, cpu 44, target 100%, elapsed 97.026065 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="473.000000" text-anchor="middle" fill="#0f172a">97.03 ms</text>
+<text class="small" x="698.50" y="485.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="748.00" y="462.00" width="93.00" height="27.00" fill="rgb(90,199,75)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 7, cpu 46, target 100%, elapsed 99.966667 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="473.000000" text-anchor="middle" fill="#0f172a">99.97 ms</text>
+<text class="small" x="794.50" y="485.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="844.00" y="462.00" width="93.00" height="27.00" fill="rgb(80,198,78)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 8, cpu 48, target 100%, elapsed 98.516658 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="473.000000" text-anchor="middle" fill="#0f172a">98.52 ms</text>
+<text class="small" x="890.50" y="485.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="940.00" y="462.00" width="93.00" height="27.00" fill="rgb(50,198,89)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 9, cpu 50, target 100%, elapsed 93.876959 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="473.000000" text-anchor="middle" fill="#0f172a">93.88 ms</text>
+<text class="small" x="986.50" y="485.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1036.00" y="462.00" width="93.00" height="27.00" fill="rgb(86,199,76)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 10, cpu 52, target 100%, elapsed 99.454658 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="473.000000" text-anchor="middle" fill="#0f172a">99.45 ms</text>
+<text class="small" x="1082.50" y="485.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1132.00" y="462.00" width="93.00" height="27.00" fill="rgb(87,199,76)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 11, cpu 54, target 100%, elapsed 99.508632 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="473.000000" text-anchor="middle" fill="#0f172a">99.51 ms</text>
+<text class="small" x="1178.50" y="485.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1228.00" y="462.00" width="93.00" height="27.00" fill="rgb(24,192,135)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 12, cpu 24, target 50%, elapsed 79.908053 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="473.000000" text-anchor="middle" fill="#0f172a">79.91 ms</text>
+<text class="small" x="1274.50" y="485.00" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1324.00" y="462.00" width="93.00" height="27.00" fill="rgb(119,200,65)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 13, cpu 58, target 40%, elapsed 104.497993 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="473.000000" text-anchor="middle" fill="#0f172a">104.50 ms</text>
+<text class="small" x="1370.50" y="485.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1420.00" y="462.00" width="93.00" height="27.00" fill="rgb(26,193,127)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 14, cpu 60, target 40%, elapsed 82.234119 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="473.000000" text-anchor="middle" fill="#0f172a">82.23 ms</text>
+<text class="small" x="1466.50" y="485.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1516.00" y="462.00" width="93.00" height="27.00" fill="rgb(19,189,155)" stroke="#334155" stroke-width="0.35"><title>step 1500, heat_update, thread 15, cpu 62, target 40%, elapsed 74.316480 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="473.000000" text-anchor="middle" fill="#0f172a">74.32 ms</text>
+<text class="small" x="1562.50" y="485.00" text-anchor="middle" fill="#0f172a">40%</text>
+<text x="8" y="503.00">s1600</text>
+<text class="small" x="8" y="516.00">94.44 ms</text>
+<rect x="76.00" y="492.00" width="93.00" height="27.00" fill="rgb(22,190,145)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 0, cpu 32, target 30%, elapsed 77.161095 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="503.000000" text-anchor="middle" fill="#0f172a">77.16 ms</text>
+<text class="small" x="122.50" y="515.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="492.00" width="93.00" height="27.00" fill="rgb(15,187,175)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 1, cpu 34, target 40%, elapsed 68.949503 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="503.000000" text-anchor="middle" fill="#0f172a">68.95 ms</text>
+<text class="small" x="218.50" y="515.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="268.00" y="492.00" width="93.00" height="27.00" fill="rgb(14,186,178)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 2, cpu 36, target 40%, elapsed 68.058124 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="503.000000" text-anchor="middle" fill="#0f172a">68.06 ms</text>
+<text class="small" x="314.50" y="515.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="364.00" y="492.00" width="93.00" height="27.00" fill="rgb(29,194,115)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 3, cpu 38, target 40%, elapsed 85.727628 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="503.000000" text-anchor="middle" fill="#0f172a">85.73 ms</text>
+<text class="small" x="410.50" y="515.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="460.00" y="492.00" width="93.00" height="27.00" fill="rgb(34,197,95)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 4, cpu 40, target 100%, elapsed 91.212841 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="503.000000" text-anchor="middle" fill="#0f172a">91.21 ms</text>
+<text class="small" x="506.50" y="515.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="556.00" y="492.00" width="93.00" height="27.00" fill="rgb(45,197,90)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 5, cpu 42, target 100%, elapsed 93.228325 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="503.000000" text-anchor="middle" fill="#0f172a">93.23 ms</text>
+<text class="small" x="602.50" y="515.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="652.00" y="492.00" width="93.00" height="27.00" fill="rgb(31,195,107)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 6, cpu 44, target 100%, elapsed 87.816318 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="503.000000" text-anchor="middle" fill="#0f172a">87.82 ms</text>
+<text class="small" x="698.50" y="515.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="748.00" y="492.00" width="93.00" height="27.00" fill="rgb(47,197,90)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 7, cpu 46, target 100%, elapsed 93.387369 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="503.000000" text-anchor="middle" fill="#0f172a">93.39 ms</text>
+<text class="small" x="794.50" y="515.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="844.00" y="492.00" width="93.00" height="27.00" fill="rgb(53,198,87)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 8, cpu 48, target 100%, elapsed 94.438524 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="503.000000" text-anchor="middle" fill="#0f172a">94.44 ms</text>
+<text class="small" x="890.50" y="515.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="940.00" y="492.00" width="93.00" height="27.00" fill="rgb(32,196,104)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 9, cpu 50, target 100%, elapsed 88.695528 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="503.000000" text-anchor="middle" fill="#0f172a">88.70 ms</text>
+<text class="small" x="986.50" y="515.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1036.00" y="492.00" width="93.00" height="27.00" fill="rgb(39,197,92)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 10, cpu 52, target 100%, elapsed 92.264179 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="503.000000" text-anchor="middle" fill="#0f172a">92.26 ms</text>
+<text class="small" x="1082.50" y="515.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1132.00" y="492.00" width="93.00" height="27.00" fill="rgb(44,197,91)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 11, cpu 54, target 100%, elapsed 93.033911 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="503.000000" text-anchor="middle" fill="#0f172a">93.03 ms</text>
+<text class="small" x="1178.50" y="515.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1228.00" y="492.00" width="93.00" height="27.00" fill="rgb(25,192,133)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 12, cpu 24, target 50%, elapsed 80.556221 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="503.000000" text-anchor="middle" fill="#0f172a">80.56 ms</text>
+<text class="small" x="1274.50" y="515.00" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1324.00" y="492.00" width="93.00" height="27.00" fill="rgb(21,190,147)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 13, cpu 58, target 50%, elapsed 76.753893 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="503.000000" text-anchor="middle" fill="#0f172a">76.75 ms</text>
+<text class="small" x="1370.50" y="515.00" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1420.00" y="492.00" width="93.00" height="27.00" fill="rgb(26,192,130)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 14, cpu 60, target 40%, elapsed 81.493405 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="503.000000" text-anchor="middle" fill="#0f172a">81.49 ms</text>
+<text class="small" x="1466.50" y="515.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1516.00" y="492.00" width="93.00" height="27.00" fill="rgb(17,188,164)" stroke="#334155" stroke-width="0.35"><title>step 1600, heat_update, thread 15, cpu 62, target 40%, elapsed 72.037396 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="503.000000" text-anchor="middle" fill="#0f172a">72.04 ms</text>
+<text class="small" x="1562.50" y="515.00" text-anchor="middle" fill="#0f172a">40%</text>
+<text x="8" y="533.00">s1700</text>
+<text class="small" x="8" y="546.00">90.64 ms</text>
+<rect x="76.00" y="522.00" width="93.00" height="27.00" fill="rgb(20,190,151)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 0, cpu 32, target 30%, elapsed 75.546526 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="533.000000" text-anchor="middle" fill="#0f172a">75.55 ms</text>
+<text class="small" x="122.50" y="545.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="522.00" width="93.00" height="27.00" fill="rgb(14,186,179)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 1, cpu 34, target 40%, elapsed 67.692348 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="533.000000" text-anchor="middle" fill="#0f172a">67.69 ms</text>
+<text class="small" x="218.50" y="545.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="268.00" y="522.00" width="93.00" height="27.00" fill="rgb(17,188,164)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 2, cpu 36, target 40%, elapsed 71.958556 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="533.000000" text-anchor="middle" fill="#0f172a">71.96 ms</text>
+<text class="small" x="314.50" y="545.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="364.00" y="522.00" width="93.00" height="27.00" fill="rgb(25,192,130)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 3, cpu 38, target 40%, elapsed 81.357858 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="533.000000" text-anchor="middle" fill="#0f172a">81.36 ms</text>
+<text class="small" x="410.50" y="545.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="460.00" y="522.00" width="93.00" height="27.00" fill="rgb(32,196,103)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 4, cpu 40, target 100%, elapsed 88.921415 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="533.000000" text-anchor="middle" fill="#0f172a">88.92 ms</text>
+<text class="small" x="506.50" y="545.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="556.00" y="522.00" width="93.00" height="27.00" fill="rgb(33,196,98)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 5, cpu 42, target 100%, elapsed 90.246025 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="533.000000" text-anchor="middle" fill="#0f172a">90.25 ms</text>
+<text class="small" x="602.50" y="545.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="652.00" y="522.00" width="93.00" height="27.00" fill="rgb(29,194,115)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 6, cpu 44, target 100%, elapsed 85.501973 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="533.000000" text-anchor="middle" fill="#0f172a">85.50 ms</text>
+<text class="small" x="698.50" y="545.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="748.00" y="522.00" width="93.00" height="27.00" fill="rgb(33,197,97)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 7, cpu 46, target 100%, elapsed 90.642586 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="533.000000" text-anchor="middle" fill="#0f172a">90.64 ms</text>
+<text class="small" x="794.50" y="545.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="844.00" y="522.00" width="93.00" height="27.00" fill="rgb(32,196,101)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 8, cpu 48, target 100%, elapsed 89.599889 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="533.000000" text-anchor="middle" fill="#0f172a">89.60 ms</text>
+<text class="small" x="890.50" y="545.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="940.00" y="522.00" width="93.00" height="27.00" fill="rgb(31,195,106)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 9, cpu 50, target 100%, elapsed 88.105662 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="533.000000" text-anchor="middle" fill="#0f172a">88.11 ms</text>
+<text class="small" x="986.50" y="545.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1036.00" y="522.00" width="93.00" height="27.00" fill="rgb(32,196,102)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 10, cpu 52, target 100%, elapsed 89.374766 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="533.000000" text-anchor="middle" fill="#0f172a">89.37 ms</text>
+<text class="small" x="1082.50" y="545.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1132.00" y="522.00" width="93.00" height="27.00" fill="rgb(33,196,98)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 11, cpu 54, target 100%, elapsed 90.248917 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="533.000000" text-anchor="middle" fill="#0f172a">90.25 ms</text>
+<text class="small" x="1178.50" y="545.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1228.00" y="522.00" width="93.00" height="27.00" fill="rgb(25,192,134)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 12, cpu 24, target 50%, elapsed 80.426850 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="533.000000" text-anchor="middle" fill="#0f172a">80.43 ms</text>
+<text class="small" x="1274.50" y="545.00" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1324.00" y="522.00" width="93.00" height="27.00" fill="rgb(22,190,146)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 13, cpu 58, target 50%, elapsed 76.859440 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="533.000000" text-anchor="middle" fill="#0f172a">76.86 ms</text>
+<text class="small" x="1370.50" y="545.00" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1420.00" y="522.00" width="93.00" height="27.00" fill="rgb(25,192,132)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 14, cpu 60, target 40%, elapsed 80.931592 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="533.000000" text-anchor="middle" fill="#0f172a">80.93 ms</text>
+<text class="small" x="1466.50" y="545.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1516.00" y="522.00" width="93.00" height="27.00" fill="rgb(17,188,166)" stroke="#334155" stroke-width="0.35"><title>step 1700, heat_update, thread 15, cpu 62, target 40%, elapsed 71.244553 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="533.000000" text-anchor="middle" fill="#0f172a">71.24 ms</text>
+<text class="small" x="1562.50" y="545.00" text-anchor="middle" fill="#0f172a">40%</text>
+<text x="8" y="563.00">s1800</text>
+<text class="small" x="8" y="576.00">88.21 ms</text>
+<rect x="76.00" y="552.00" width="93.00" height="27.00" fill="rgb(19,189,157)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 0, cpu 32, target 30%, elapsed 73.916864 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="563.000000" text-anchor="middle" fill="#0f172a">73.92 ms</text>
+<text class="small" x="122.50" y="575.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="552.00" width="93.00" height="27.00" fill="rgb(12,185,185)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 1, cpu 34, target 40%, elapsed 66.008575 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="563.000000" text-anchor="middle" fill="#0f172a">66.01 ms</text>
+<text class="small" x="218.50" y="575.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="268.00" y="552.00" width="93.00" height="27.00" fill="rgb(17,188,167)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 2, cpu 36, target 40%, elapsed 71.178433 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="563.000000" text-anchor="middle" fill="#0f172a">71.18 ms</text>
+<text class="small" x="314.50" y="575.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="364.00" y="552.00" width="93.00" height="27.00" fill="rgb(28,194,118)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 3, cpu 38, target 40%, elapsed 84.833806 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="563.000000" text-anchor="middle" fill="#0f172a">84.83 ms</text>
+<text class="small" x="410.50" y="575.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="460.00" y="552.00" width="93.00" height="27.00" fill="rgb(29,194,114)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 4, cpu 40, target 100%, elapsed 85.783675 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="563.000000" text-anchor="middle" fill="#0f172a">85.78 ms</text>
+<text class="small" x="506.50" y="575.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="556.00" y="552.00" width="93.00" height="27.00" fill="rgb(31,195,107)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 5, cpu 42, target 100%, elapsed 87.887738 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="563.000000" text-anchor="middle" fill="#0f172a">87.89 ms</text>
+<text class="small" x="602.50" y="575.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="652.00" y="552.00" width="93.00" height="27.00" fill="rgb(27,193,124)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 6, cpu 44, target 100%, elapsed 83.114321 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="563.000000" text-anchor="middle" fill="#0f172a">83.11 ms</text>
+<text class="small" x="698.50" y="575.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="748.00" y="552.00" width="93.00" height="27.00" fill="rgb(31,196,106)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 7, cpu 46, target 100%, elapsed 88.208266 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="563.000000" text-anchor="middle" fill="#0f172a">88.21 ms</text>
+<text class="small" x="794.50" y="575.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="844.00" y="552.00" width="93.00" height="27.00" fill="rgb(30,195,111)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 8, cpu 48, target 100%, elapsed 86.594532 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="563.000000" text-anchor="middle" fill="#0f172a">86.59 ms</text>
+<text class="small" x="890.50" y="575.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="940.00" y="552.00" width="93.00" height="27.00" fill="rgb(27,193,125)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 9, cpu 18, target 100%, elapsed 82.915347 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="563.000000" text-anchor="middle" fill="#0f172a">82.92 ms</text>
+<text class="small" x="986.50" y="575.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1036.00" y="552.00" width="93.00" height="27.00" fill="rgb(30,195,110)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 10, cpu 52, target 100%, elapsed 86.987853 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="563.000000" text-anchor="middle" fill="#0f172a">86.99 ms</text>
+<text class="small" x="1082.50" y="575.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1132.00" y="552.00" width="93.00" height="27.00" fill="rgb(31,195,107)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 11, cpu 54, target 100%, elapsed 87.800726 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="563.000000" text-anchor="middle" fill="#0f172a">87.80 ms</text>
+<text class="small" x="1178.50" y="575.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1228.00" y="552.00" width="93.00" height="27.00" fill="rgb(24,192,134)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 12, cpu 24, target 50%, elapsed 80.209645 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="563.000000" text-anchor="middle" fill="#0f172a">80.21 ms</text>
+<text class="small" x="1274.50" y="575.00" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1324.00" y="552.00" width="93.00" height="27.00" fill="rgb(22,190,146)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 13, cpu 58, target 50%, elapsed 76.921462 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="563.000000" text-anchor="middle" fill="#0f172a">76.92 ms</text>
+<text class="small" x="1370.50" y="575.00" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1420.00" y="552.00" width="93.00" height="27.00" fill="rgb(24,192,136)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 14, cpu 60, target 40%, elapsed 79.709612 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="563.000000" text-anchor="middle" fill="#0f172a">79.71 ms</text>
+<text class="small" x="1466.50" y="575.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1516.00" y="552.00" width="93.00" height="27.00" fill="rgb(14,186,179)" stroke="#334155" stroke-width="0.35"><title>step 1800, heat_update, thread 15, cpu 62, target 40%, elapsed 67.829155 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="563.000000" text-anchor="middle" fill="#0f172a">67.83 ms</text>
+<text class="small" x="1562.50" y="575.00" text-anchor="middle" fill="#0f172a">40%</text>
+<text x="8" y="593.00">s1900</text>
+<text class="small" x="8" y="606.00">84.09 ms</text>
+<rect x="76.00" y="582.00" width="93.00" height="27.00" fill="rgb(17,188,166)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 0, cpu 32, target 30%, elapsed 71.448604 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="593.000000" text-anchor="middle" fill="#0f172a">71.45 ms</text>
+<text class="small" x="122.50" y="605.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="582.00" width="93.00" height="27.00" fill="rgb(11,185,190)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 1, cpu 34, target 40%, elapsed 64.694890 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="593.000000" text-anchor="middle" fill="#0f172a">64.69 ms</text>
+<text class="small" x="218.50" y="605.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="268.00" y="582.00" width="93.00" height="27.00" fill="rgb(16,187,170)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 2, cpu 36, target 40%, elapsed 70.216133 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="593.000000" text-anchor="middle" fill="#0f172a">70.22 ms</text>
+<text class="small" x="314.50" y="605.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="364.00" y="582.00" width="93.00" height="27.00" fill="rgb(11,185,191)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 3, cpu 38, target 50%, elapsed 64.519296 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="593.000000" text-anchor="middle" fill="#0f172a">64.52 ms</text>
+<text class="small" x="410.50" y="605.00" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="460.00" y="582.00" width="93.00" height="27.00" fill="rgb(26,193,127)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 4, cpu 40, target 100%, elapsed 82.132569 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="593.000000" text-anchor="middle" fill="#0f172a">82.13 ms</text>
+<text class="small" x="506.50" y="605.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="556.00" y="582.00" width="93.00" height="27.00" fill="rgb(27,193,122)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 5, cpu 10, target 100%, elapsed 83.764377 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="593.000000" text-anchor="middle" fill="#0f172a">83.76 ms</text>
+<text class="small" x="602.50" y="605.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="652.00" y="582.00" width="93.00" height="27.00" fill="rgb(25,192,133)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 6, cpu 44, target 100%, elapsed 80.534194 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="593.000000" text-anchor="middle" fill="#0f172a">80.53 ms</text>
+<text class="small" x="698.50" y="605.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="748.00" y="582.00" width="93.00" height="27.00" fill="rgb(28,194,120)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 7, cpu 46, target 100%, elapsed 84.092193 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="593.000000" text-anchor="middle" fill="#0f172a">84.09 ms</text>
+<text class="small" x="794.50" y="605.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="844.00" y="582.00" width="93.00" height="27.00" fill="rgb(26,193,126)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 8, cpu 48, target 100%, elapsed 82.597474 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="593.000000" text-anchor="middle" fill="#0f172a">82.60 ms</text>
+<text class="small" x="890.50" y="605.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="940.00" y="582.00" width="93.00" height="27.00" fill="rgb(25,192,132)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 9, cpu 50, target 100%, elapsed 80.995894 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="593.000000" text-anchor="middle" fill="#0f172a">81.00 ms</text>
+<text class="small" x="986.50" y="605.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1036.00" y="582.00" width="93.00" height="27.00" fill="rgb(27,193,125)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 10, cpu 52, target 100%, elapsed 82.830145 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="593.000000" text-anchor="middle" fill="#0f172a">82.83 ms</text>
+<text class="small" x="1082.50" y="605.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1132.00" y="582.00" width="93.00" height="27.00" fill="rgb(27,193,122)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 11, cpu 54, target 100%, elapsed 83.653741 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="593.000000" text-anchor="middle" fill="#0f172a">83.65 ms</text>
+<text class="small" x="1178.50" y="605.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1228.00" y="582.00" width="93.00" height="27.00" fill="rgb(25,192,134)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 12, cpu 24, target 50%, elapsed 80.322077 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="593.000000" text-anchor="middle" fill="#0f172a">80.32 ms</text>
+<text class="small" x="1274.50" y="605.00" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1324.00" y="582.00" width="93.00" height="27.00" fill="rgb(22,190,146)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 13, cpu 58, target 50%, elapsed 76.956501 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="593.000000" text-anchor="middle" fill="#0f172a">76.96 ms</text>
+<text class="small" x="1370.50" y="605.00" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1420.00" y="582.00" width="93.00" height="27.00" fill="rgb(23,191,139)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 14, cpu 60, target 40%, elapsed 78.849646 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="593.000000" text-anchor="middle" fill="#0f172a">78.85 ms</text>
+<text class="small" x="1466.50" y="605.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1516.00" y="582.00" width="93.00" height="27.00" fill="rgb(13,186,181)" stroke="#334155" stroke-width="0.35"><title>step 1900, heat_update, thread 15, cpu 62, target 40%, elapsed 67.254840 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="593.000000" text-anchor="middle" fill="#0f172a">67.25 ms</text>
+<text class="small" x="1562.50" y="605.00" text-anchor="middle" fill="#0f172a">40%</text>
+<text x="8" y="623.00">s2000</text>
+<text class="small" x="8" y="636.00">81.91 ms</text>
+<rect x="76.00" y="612.00" width="93.00" height="27.00" fill="rgb(14,186,179)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 0, cpu 32, target 30%, elapsed 67.748455 ms, applied yes</title></rect>
+<text class="small" x="122.500000" y="623.000000" text-anchor="middle" fill="#0f172a">67.75 ms</text>
+<text class="small" x="122.50" y="635.00" text-anchor="middle" fill="#0f172a">30%</text>
+<rect x="172.00" y="612.00" width="93.00" height="27.00" fill="rgb(10,184,196)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 1, cpu 34, target 40%, elapsed 62.873299 ms, applied yes</title></rect>
+<text class="small" x="218.500000" y="623.000000" text-anchor="middle" fill="#0f172a">62.87 ms</text>
+<text class="small" x="218.50" y="635.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="268.00" y="612.00" width="93.00" height="27.00" fill="rgb(13,186,182)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 2, cpu 36, target 40%, elapsed 66.971530 ms, applied yes</title></rect>
+<text class="small" x="314.500000" y="623.000000" text-anchor="middle" fill="#0f172a">66.97 ms</text>
+<text class="small" x="314.50" y="635.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="364.00" y="612.00" width="93.00" height="27.00" fill="rgb(11,185,191)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 3, cpu 38, target 50%, elapsed 64.409882 ms, applied yes</title></rect>
+<text class="small" x="410.500000" y="623.000000" text-anchor="middle" fill="#0f172a">64.41 ms</text>
+<text class="small" x="410.50" y="635.00" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="460.00" y="612.00" width="93.00" height="27.00" fill="rgb(24,192,136)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 4, cpu 40, target 100%, elapsed 79.677127 ms, applied yes</title></rect>
+<text class="small" x="506.500000" y="623.000000" text-anchor="middle" fill="#0f172a">79.68 ms</text>
+<text class="small" x="506.50" y="635.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="556.00" y="612.00" width="93.00" height="27.00" fill="rgb(25,192,131)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 5, cpu 10, target 100%, elapsed 81.026955 ms, applied yes</title></rect>
+<text class="small" x="602.500000" y="623.000000" text-anchor="middle" fill="#0f172a">81.03 ms</text>
+<text class="small" x="602.50" y="635.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="652.00" y="612.00" width="93.00" height="27.00" fill="rgb(25,192,133)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 6, cpu 44, target 100%, elapsed 80.510122 ms, applied yes</title></rect>
+<text class="small" x="698.500000" y="623.000000" text-anchor="middle" fill="#0f172a">80.51 ms</text>
+<text class="small" x="698.50" y="635.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="748.00" y="612.00" width="93.00" height="27.00" fill="rgb(26,193,128)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 7, cpu 46, target 100%, elapsed 81.914812 ms, applied yes</title></rect>
+<text class="small" x="794.500000" y="623.000000" text-anchor="middle" fill="#0f172a">81.91 ms</text>
+<text class="small" x="794.50" y="635.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="844.00" y="612.00" width="93.00" height="27.00" fill="rgb(24,192,136)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 8, cpu 48, target 100%, elapsed 79.877873 ms, applied yes</title></rect>
+<text class="small" x="890.500000" y="623.000000" text-anchor="middle" fill="#0f172a">79.88 ms</text>
+<text class="small" x="890.50" y="635.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="940.00" y="612.00" width="93.00" height="27.00" fill="rgb(24,191,138)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 9, cpu 50, target 100%, elapsed 79.238060 ms, applied yes</title></rect>
+<text class="small" x="986.500000" y="623.000000" text-anchor="middle" fill="#0f172a">79.24 ms</text>
+<text class="small" x="986.50" y="635.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1036.00" y="612.00" width="93.00" height="27.00" fill="rgb(25,192,133)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 10, cpu 52, target 100%, elapsed 80.504860 ms, applied yes</title></rect>
+<text class="small" x="1082.500000" y="623.000000" text-anchor="middle" fill="#0f172a">80.50 ms</text>
+<text class="small" x="1082.50" y="635.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1132.00" y="612.00" width="93.00" height="27.00" fill="rgb(25,192,131)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 11, cpu 54, target 100%, elapsed 81.047434 ms, applied yes</title></rect>
+<text class="small" x="1178.500000" y="623.000000" text-anchor="middle" fill="#0f172a">81.05 ms</text>
+<text class="small" x="1178.50" y="635.00" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1228.00" y="612.00" width="93.00" height="27.00" fill="rgb(18,189,161)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 12, cpu 24, target 60%, elapsed 72.815039 ms, applied yes</title></rect>
+<text class="small" x="1274.500000" y="623.000000" text-anchor="middle" fill="#0f172a">72.82 ms</text>
+<text class="small" x="1274.50" y="635.00" text-anchor="middle" fill="#0f172a">60%</text>
+<rect x="1324.00" y="612.00" width="93.00" height="27.00" fill="rgb(22,190,146)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 13, cpu 58, target 50%, elapsed 76.951739 ms, applied yes</title></rect>
+<text class="small" x="1370.500000" y="623.000000" text-anchor="middle" fill="#0f172a">76.95 ms</text>
+<text class="small" x="1370.50" y="635.00" text-anchor="middle" fill="#0f172a">50%</text>
+<rect x="1420.00" y="612.00" width="93.00" height="27.00" fill="rgb(22,191,144)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 14, cpu 60, target 40%, elapsed 77.382570 ms, applied yes</title></rect>
+<text class="small" x="1466.500000" y="623.000000" text-anchor="middle" fill="#0f172a">77.38 ms</text>
+<text class="small" x="1466.50" y="635.00" text-anchor="middle" fill="#0f172a">40%</text>
+<rect x="1516.00" y="612.00" width="93.00" height="27.00" fill="rgb(11,185,191)" stroke="#334155" stroke-width="0.35"><title>step 2000, heat_update, thread 15, cpu 62, target 40%, elapsed 64.482543 ms, applied yes</title></rect>
+<text class="small" x="1562.500000" y="623.000000" text-anchor="middle" fill="#0f172a">64.48 ms</text>
+<text class="small" x="1562.50" y="635.00" text-anchor="middle" fill="#0f172a">40%</text>
+</svg>
