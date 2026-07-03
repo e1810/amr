@@ -32,6 +32,7 @@ bool control_available();
 
 AssignmentResult assign_current_thread_l3(int slot, int requested_ways);
 AssignmentResult assign_current_thread_l3_mask(int slot, const std::string &requested_mask);
+AssignmentResult assign_current_thread_monitor_all();
 AssignmentResult assign_current_thread_monitor_l3(int slot, int requested_ways);
 AssignmentResult assign_current_thread_monitor_l3_mask(int slot, const std::string &requested_mask);
 bool release_task(pid_t tid);

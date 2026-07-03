@@ -1,0 +1,371 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 284">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:monospace;font-size:11px}.small{font-size:9px}</style>
+<text x="12" y="20">OMPT resctrl LLC occupancy, max=80.78 MiB, color=0-80.78 MiB</text>
+<text class="small" x="132" y="34" text-anchor="middle">t0</text>
+<text class="small" x="244" y="34" text-anchor="middle">t1</text>
+<text class="small" x="356" y="34" text-anchor="middle">t2</text>
+<text class="small" x="468" y="34" text-anchor="middle">t3</text>
+<text class="small" x="580" y="34" text-anchor="middle">t4</text>
+<text class="small" x="692" y="34" text-anchor="middle">t5</text>
+<text class="small" x="804" y="34" text-anchor="middle">t6</text>
+<text class="small" x="916" y="34" text-anchor="middle">t7</text>
+<text class="small" x="1028" y="34" text-anchor="middle">t8</text>
+<text class="small" x="1140" y="34" text-anchor="middle">t9</text>
+<text class="small" x="1252" y="34" text-anchor="middle">t10</text>
+<text class="small" x="1364" y="34" text-anchor="middle">t11</text>
+<text class="small" x="1476" y="34" text-anchor="middle">t12</text>
+<text class="small" x="1588" y="34" text-anchor="middle">t13</text>
+<text class="small" x="1700" y="34" text-anchor="middle">t14</text>
+<text class="small" x="1812" y="34" text-anchor="middle">t15</text>
+<text x="8" y="53">s100</text>
+<text class="small" x="8" y="66">80.78 MiB</text>
+<rect x="76" y="42" width="109" height="27" fill="rgb(13,36,141)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 0, cpu 0, llc_occupancy_mib 2.320312, target 40%, start_llc_occupancy_bytes 450560, end_llc_occupancy_bytes 2433024, llc_occupancy_delta_bytes 386760704</title></rect>
+<text class="small" x="130.5" y="53" text-anchor="middle" fill="#f8fafc">2.32 MiB</text>
+<text class="small" x="130.5" y="65" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="188" y="42" width="109" height="27" fill="rgb(13,36,141)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 1, cpu 2, llc_occupancy_mib 2.320312, target 40%, start_llc_occupancy_bytes 0, end_llc_occupancy_bytes 2433024, llc_occupancy_delta_bytes 349814784</title></rect>
+<text class="small" x="242.5" y="53" text-anchor="middle" fill="#f8fafc">2.32 MiB</text>
+<text class="small" x="242.5" y="65" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="300" y="42" width="109" height="27" fill="rgb(13,36,141)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 2, cpu 4, llc_occupancy_mib 2.320312, target 40%, start_llc_occupancy_bytes 360448, end_llc_occupancy_bytes 2433024, llc_occupancy_delta_bytes 336838656</title></rect>
+<text class="small" x="354.5" y="53" text-anchor="middle" fill="#f8fafc">2.32 MiB</text>
+<text class="small" x="354.5" y="65" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="412" y="42" width="109" height="27" fill="rgb(13,36,141)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 3, cpu 38, llc_occupancy_mib 2.320312, target 40%, start_llc_occupancy_bytes 0, end_llc_occupancy_bytes 2433024, llc_occupancy_delta_bytes 327106560</title></rect>
+<text class="small" x="466.5" y="53" text-anchor="middle" fill="#f8fafc">2.32 MiB</text>
+<text class="small" x="466.5" y="65" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="524" y="42" width="109" height="27" fill="rgb(220,39,38)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 4, cpu 8, llc_occupancy_mib 80.695312, target 100%, start_llc_occupancy_bytes 2342912, end_llc_occupancy_bytes 84615168, llc_occupancy_delta_bytes 84615168</title></rect>
+<text class="small" x="578.5" y="53" text-anchor="middle" fill="#f8fafc">80.70 MiB</text>
+<text class="small" x="578.5" y="65" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="42" width="109" height="27" fill="rgb(220,39,38)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 5, cpu 10, llc_occupancy_mib 80.695312, target 100%, start_llc_occupancy_bytes 180224, end_llc_occupancy_bytes 84615168, llc_occupancy_delta_bytes 88940544</title></rect>
+<text class="small" x="690.5" y="53" text-anchor="middle" fill="#f8fafc">80.70 MiB</text>
+<text class="small" x="690.5" y="65" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="42" width="109" height="27" fill="rgb(221,40,38)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 6, cpu 12, llc_occupancy_mib 80.523438, target 100%, start_llc_occupancy_bytes 1802240, end_llc_occupancy_bytes 84434944, llc_occupancy_delta_bytes 77316096</title></rect>
+<text class="small" x="802.5" y="53" text-anchor="middle" fill="#f8fafc">80.52 MiB</text>
+<text class="small" x="802.5" y="65" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="42" width="109" height="27" fill="rgb(220,38,38)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 7, cpu 46, llc_occupancy_mib 80.781250, target 100%, start_llc_occupancy_bytes 991232, end_llc_occupancy_bytes 84705280, llc_occupancy_delta_bytes 87138304</title></rect>
+<text class="small" x="914.5" y="53" text-anchor="middle" fill="#f8fafc">80.78 MiB</text>
+<text class="small" x="914.5" y="65" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="42" width="109" height="27" fill="rgb(220,39,38)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 8, cpu 16, llc_occupancy_mib 80.609375, target 100%, start_llc_occupancy_bytes 2433024, end_llc_occupancy_bytes 84525056, llc_occupancy_delta_bytes 84795392</title></rect>
+<text class="small" x="1026.5" y="53" text-anchor="middle" fill="#f8fafc">80.61 MiB</text>
+<text class="small" x="1026.5" y="65" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="42" width="109" height="27" fill="rgb(221,42,37)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 9, cpu 18, llc_occupancy_mib 80.179688, target 100%, start_llc_occupancy_bytes 0, end_llc_occupancy_bytes 84074496, llc_occupancy_delta_bytes 70377472</title></rect>
+<text class="small" x="1138.5" y="53" text-anchor="middle" fill="#f8fafc">80.18 MiB</text>
+<text class="small" x="1138.5" y="65" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="42" width="109" height="27" fill="rgb(220,39,38)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 10, cpu 20, llc_occupancy_mib 80.609375, target 100%, start_llc_occupancy_bytes 450560, end_llc_occupancy_bytes 84525056, llc_occupancy_delta_bytes 86147072</title></rect>
+<text class="small" x="1250.5" y="53" text-anchor="middle" fill="#f8fafc">80.61 MiB</text>
+<text class="small" x="1250.5" y="65" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="42" width="109" height="27" fill="rgb(220,39,38)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 11, cpu 22, llc_occupancy_mib 80.695312, target 100%, start_llc_occupancy_bytes 360448, end_llc_occupancy_bytes 84615168, llc_occupancy_delta_bytes 78397440</title></rect>
+<text class="small" x="1362.5" y="53" text-anchor="middle" fill="#f8fafc">80.70 MiB</text>
+<text class="small" x="1362.5" y="65" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="42" width="109" height="27" fill="rgb(13,36,141)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 12, cpu 24, llc_occupancy_mib 2.320312, target 40%, start_llc_occupancy_bytes 270336, end_llc_occupancy_bytes 2433024, llc_occupancy_delta_bytes 346841088</title></rect>
+<text class="small" x="1474.5" y="53" text-anchor="middle" fill="#f8fafc">2.32 MiB</text>
+<text class="small" x="1474.5" y="65" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1532" y="42" width="109" height="27" fill="rgb(13,36,141)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 13, cpu 26, llc_occupancy_mib 2.320312, target 40%, start_llc_occupancy_bytes 811008, end_llc_occupancy_bytes 2433024, llc_occupancy_delta_bytes 341434368</title></rect>
+<text class="small" x="1586.5" y="53" text-anchor="middle" fill="#f8fafc">2.32 MiB</text>
+<text class="small" x="1586.5" y="65" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1644" y="42" width="109" height="27" fill="rgb(13,36,141)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 14, cpu 28, llc_occupancy_mib 2.320312, target 40%, start_llc_occupancy_bytes 180224, end_llc_occupancy_bytes 2433024, llc_occupancy_delta_bytes 342876160</title></rect>
+<text class="small" x="1698.5" y="53" text-anchor="middle" fill="#f8fafc">2.32 MiB</text>
+<text class="small" x="1698.5" y="65" text-anchor="middle" fill="#f8fafc">40%</text>
+<rect x="1756" y="42" width="109" height="27" fill="rgb(13,36,141)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 15, cpu 30, llc_occupancy_mib 2.320312, target 40%, start_llc_occupancy_bytes 270336, end_llc_occupancy_bytes 2433024, llc_occupancy_delta_bytes 380633088</title></rect>
+<text class="small" x="1810.5" y="53" text-anchor="middle" fill="#f8fafc">2.32 MiB</text>
+<text class="small" x="1810.5" y="65" text-anchor="middle" fill="#f8fafc">40%</text>
+<text x="8" y="83">s200</text>
+<text class="small" x="8" y="96">77.86 MiB</text>
+<rect x="76" y="72" width="109" height="27" fill="rgb(16,42,150)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 0, cpu 32, llc_occupancy_mib 3.351562, target 30%, start_llc_occupancy_bytes 991232, end_llc_occupancy_bytes 3514368, llc_occupancy_delta_bytes 241500160</title></rect>
+<text class="small" x="130.5" y="83" text-anchor="middle" fill="#f8fafc">3.35 MiB</text>
+<text class="small" x="130.5" y="95" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="188" y="72" width="109" height="27" fill="rgb(16,42,151)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 1, cpu 34, llc_occupancy_mib 3.437500, target 30%, start_llc_occupancy_bytes 360448, end_llc_occupancy_bytes 3604480, llc_occupancy_delta_bytes 242581504</title></rect>
+<text class="small" x="242.5" y="83" text-anchor="middle" fill="#f8fafc">3.44 MiB</text>
+<text class="small" x="242.5" y="95" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="300" y="72" width="109" height="27" fill="rgb(15,41,148)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 2, cpu 36, llc_occupancy_mib 3.179688, target 30%, start_llc_occupancy_bytes 811008, end_llc_occupancy_bytes 3334144, llc_occupancy_delta_bytes 234561536</title></rect>
+<text class="small" x="354.5" y="83" text-anchor="middle" fill="#f8fafc">3.18 MiB</text>
+<text class="small" x="354.5" y="95" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="412" y="72" width="109" height="27" fill="rgb(16,42,150)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 3, cpu 38, llc_occupancy_mib 3.351562, target 30%, start_llc_occupancy_bytes 811008, end_llc_occupancy_bytes 3514368, llc_occupancy_delta_bytes 233029632</title></rect>
+<text class="small" x="466.5" y="83" text-anchor="middle" fill="#f8fafc">3.35 MiB</text>
+<text class="small" x="466.5" y="95" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="524" y="72" width="109" height="27" fill="rgb(227,55,34)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 4, cpu 40, llc_occupancy_mib 77.859375, target 100%, start_llc_occupancy_bytes 69566464, end_llc_occupancy_bytes 81641472, llc_occupancy_delta_bytes 8650752</title></rect>
+<text class="small" x="578.5" y="83" text-anchor="middle" fill="#f8fafc">77.86 MiB</text>
+<text class="small" x="578.5" y="95" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="72" width="109" height="27" fill="rgb(228,60,34)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 5, cpu 42, llc_occupancy_mib 77.171875, target 100%, start_llc_occupancy_bytes 69926912, end_llc_occupancy_bytes 80920576, llc_occupancy_delta_bytes -4415488</title></rect>
+<text class="small" x="690.5" y="83" text-anchor="middle" fill="#f8fafc">77.17 MiB</text>
+<text class="small" x="690.5" y="95" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="72" width="109" height="27" fill="rgb(229,63,33)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 6, cpu 44, llc_occupancy_mib 76.656250, target 100%, start_llc_occupancy_bytes 69656576, end_llc_occupancy_bytes 80379904, llc_occupancy_delta_bytes -5046272</title></rect>
+<text class="small" x="802.5" y="83" text-anchor="middle" fill="#f8fafc">76.66 MiB</text>
+<text class="small" x="802.5" y="95" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="72" width="109" height="27" fill="rgb(228,58,34)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 7, cpu 46, llc_occupancy_mib 77.429688, target 100%, start_llc_occupancy_bytes 69656576, end_llc_occupancy_bytes 81190912, llc_occupancy_delta_bytes -3694592</title></rect>
+<text class="small" x="914.5" y="83" text-anchor="middle" fill="#f8fafc">77.43 MiB</text>
+<text class="small" x="914.5" y="95" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="72" width="109" height="27" fill="rgb(228,61,33)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 8, cpu 48, llc_occupancy_mib 77.000000, target 100%, start_llc_occupancy_bytes 69926912, end_llc_occupancy_bytes 80740352, llc_occupancy_delta_bytes -4595712</title></rect>
+<text class="small" x="1026.5" y="83" text-anchor="middle" fill="#f8fafc">77.00 MiB</text>
+<text class="small" x="1026.5" y="95" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="72" width="109" height="27" fill="rgb(228,60,33)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 9, cpu 50, llc_occupancy_mib 77.085938, target 100%, start_llc_occupancy_bytes 69566464, end_llc_occupancy_bytes 80830464, llc_occupancy_delta_bytes -4956160</title></rect>
+<text class="small" x="1138.5" y="83" text-anchor="middle" fill="#f8fafc">77.09 MiB</text>
+<text class="small" x="1138.5" y="95" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="72" width="109" height="27" fill="rgb(227,56,34)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 10, cpu 52, llc_occupancy_mib 77.687500, target 100%, start_llc_occupancy_bytes 69836800, end_llc_occupancy_bytes 81461248, llc_occupancy_delta_bytes 7028736</title></rect>
+<text class="small" x="1250.5" y="83" text-anchor="middle" fill="#f8fafc">77.69 MiB</text>
+<text class="small" x="1250.5" y="95" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="72" width="109" height="27" fill="rgb(227,55,34)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 11, cpu 54, llc_occupancy_mib 77.859375, target 100%, start_llc_occupancy_bytes 69566464, end_llc_occupancy_bytes 81641472, llc_occupancy_delta_bytes -1982464</title></rect>
+<text class="small" x="1362.5" y="83" text-anchor="middle" fill="#f8fafc">77.86 MiB</text>
+<text class="small" x="1362.5" y="95" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="72" width="109" height="27" fill="rgb(15,41,148)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 12, cpu 56, llc_occupancy_mib 3.179688, target 30%, start_llc_occupancy_bytes 0, end_llc_occupancy_bytes 3334144, llc_occupancy_delta_bytes 228974592</title></rect>
+<text class="small" x="1474.5" y="83" text-anchor="middle" fill="#f8fafc">3.18 MiB</text>
+<text class="small" x="1474.5" y="95" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1532" y="72" width="109" height="27" fill="rgb(15,41,149)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 13, cpu 58, llc_occupancy_mib 3.265625, target 30%, start_llc_occupancy_bytes 0, end_llc_occupancy_bytes 3424256, llc_occupancy_delta_bytes 240508928</title></rect>
+<text class="small" x="1586.5" y="83" text-anchor="middle" fill="#f8fafc">3.27 MiB</text>
+<text class="small" x="1586.5" y="95" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1644" y="72" width="109" height="27" fill="rgb(15,41,149)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 14, cpu 60, llc_occupancy_mib 3.265625, target 30%, start_llc_occupancy_bytes 360448, end_llc_occupancy_bytes 3424256, llc_occupancy_delta_bytes 240508928</title></rect>
+<text class="small" x="1698.5" y="83" text-anchor="middle" fill="#f8fafc">3.27 MiB</text>
+<text class="small" x="1698.5" y="95" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1756" y="72" width="109" height="27" fill="rgb(15,40,148)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 15, cpu 62, llc_occupancy_mib 3.093750, target 30%, start_llc_occupancy_bytes 0, end_llc_occupancy_bytes 3244032, llc_occupancy_delta_bytes 239337472</title></rect>
+<text class="small" x="1810.5" y="83" text-anchor="middle" fill="#f8fafc">3.09 MiB</text>
+<text class="small" x="1810.5" y="95" text-anchor="middle" fill="#f8fafc">30%</text>
+<text x="8" y="113">s300</text>
+<text class="small" x="8" y="126">78.55 MiB</text>
+<rect x="76" y="102" width="109" height="27" fill="rgb(17,46,156)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 0, cpu 32, llc_occupancy_mib 4.039062, target 30%, start_llc_occupancy_bytes 8830976, end_llc_occupancy_bytes 4235264, llc_occupancy_delta_bytes 234741760</title></rect>
+<text class="small" x="130.5" y="113" text-anchor="middle" fill="#f8fafc">4.04 MiB</text>
+<text class="small" x="130.5" y="125" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="188" y="102" width="109" height="27" fill="rgb(17,46,156)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 1, cpu 34, llc_occupancy_mib 4.039062, target 30%, start_llc_occupancy_bytes 8830976, end_llc_occupancy_bytes 4235264, llc_occupancy_delta_bytes 236093440</title></rect>
+<text class="small" x="242.5" y="113" text-anchor="middle" fill="#f8fafc">4.04 MiB</text>
+<text class="small" x="242.5" y="125" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="300" y="102" width="109" height="27" fill="rgb(17,46,156)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 2, cpu 36, llc_occupancy_mib 4.039062, target 30%, start_llc_occupancy_bytes 8830976, end_llc_occupancy_bytes 4235264, llc_occupancy_delta_bytes 233480192</title></rect>
+<text class="small" x="354.5" y="113" text-anchor="middle" fill="#f8fafc">4.04 MiB</text>
+<text class="small" x="354.5" y="125" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="412" y="102" width="109" height="27" fill="rgb(17,46,156)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 3, cpu 38, llc_occupancy_mib 4.039062, target 30%, start_llc_occupancy_bytes 8830976, end_llc_occupancy_bytes 4235264, llc_occupancy_delta_bytes 229875712</title></rect>
+<text class="small" x="466.5" y="113" text-anchor="middle" fill="#f8fafc">4.04 MiB</text>
+<text class="small" x="466.5" y="125" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="524" y="102" width="109" height="27" fill="rgb(226,54,35)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 4, cpu 40, llc_occupancy_mib 78.117188, target 100%, start_llc_occupancy_bytes 76324864, end_llc_occupancy_bytes 81911808, llc_occupancy_delta_bytes 6488064</title></rect>
+<text class="small" x="578.5" y="113" text-anchor="middle" fill="#f8fafc">78.12 MiB</text>
+<text class="small" x="578.5" y="125" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="102" width="109" height="27" fill="rgb(226,53,35)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 5, cpu 42, llc_occupancy_mib 78.203125, target 100%, start_llc_occupancy_bytes 76865536, end_llc_occupancy_bytes 82001920, llc_occupancy_delta_bytes 90112</title></rect>
+<text class="small" x="690.5" y="113" text-anchor="middle" fill="#f8fafc">78.20 MiB</text>
+<text class="small" x="690.5" y="125" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="102" width="109" height="27" fill="rgb(227,55,34)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 6, cpu 44, llc_occupancy_mib 77.859375, target 100%, start_llc_occupancy_bytes 76865536, end_llc_occupancy_bytes 81641472, llc_occupancy_delta_bytes -630784</title></rect>
+<text class="small" x="802.5" y="113" text-anchor="middle" fill="#f8fafc">77.86 MiB</text>
+<text class="small" x="802.5" y="125" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="102" width="109" height="27" fill="rgb(226,54,35)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 7, cpu 46, llc_occupancy_mib 78.117188, target 100%, start_llc_occupancy_bytes 76865536, end_llc_occupancy_bytes 81911808, llc_occupancy_delta_bytes 1531904</title></rect>
+<text class="small" x="914.5" y="113" text-anchor="middle" fill="#f8fafc">78.12 MiB</text>
+<text class="small" x="914.5" y="125" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="102" width="109" height="27" fill="rgb(226,53,35)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 8, cpu 48, llc_occupancy_mib 78.289062, target 100%, start_llc_occupancy_bytes 76865536, end_llc_occupancy_bytes 82092032, llc_occupancy_delta_bytes 630784</title></rect>
+<text class="small" x="1026.5" y="113" text-anchor="middle" fill="#f8fafc">78.29 MiB</text>
+<text class="small" x="1026.5" y="125" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="102" width="109" height="27" fill="rgb(226,53,35)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 9, cpu 50, llc_occupancy_mib 78.203125, target 100%, start_llc_occupancy_bytes 76865536, end_llc_occupancy_bytes 82001920, llc_occupancy_delta_bytes -630784</title></rect>
+<text class="small" x="1138.5" y="113" text-anchor="middle" fill="#f8fafc">78.20 MiB</text>
+<text class="small" x="1138.5" y="125" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="102" width="109" height="27" fill="rgb(225,51,35)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 10, cpu 52, llc_occupancy_mib 78.546875, target 100%, start_llc_occupancy_bytes 76865536, end_llc_occupancy_bytes 82362368, llc_occupancy_delta_bytes 1441792</title></rect>
+<text class="small" x="1250.5" y="113" text-anchor="middle" fill="#f8fafc">78.55 MiB</text>
+<text class="small" x="1250.5" y="125" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="102" width="109" height="27" fill="rgb(226,54,35)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 11, cpu 54, llc_occupancy_mib 78.117188, target 100%, start_llc_occupancy_bytes 76865536, end_llc_occupancy_bytes 81911808, llc_occupancy_delta_bytes -1622016</title></rect>
+<text class="small" x="1362.5" y="113" text-anchor="middle" fill="#f8fafc">78.12 MiB</text>
+<text class="small" x="1362.5" y="125" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="102" width="109" height="27" fill="rgb(17,46,156)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 12, cpu 56, llc_occupancy_mib 4.039062, target 30%, start_llc_occupancy_bytes 8830976, end_llc_occupancy_bytes 4235264, llc_occupancy_delta_bytes 234020864</title></rect>
+<text class="small" x="1474.5" y="113" text-anchor="middle" fill="#f8fafc">4.04 MiB</text>
+<text class="small" x="1474.5" y="125" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1532" y="102" width="109" height="27" fill="rgb(17,46,156)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 13, cpu 58, llc_occupancy_mib 4.039062, target 30%, start_llc_occupancy_bytes 8830976, end_llc_occupancy_bytes 4235264, llc_occupancy_delta_bytes 233390080</title></rect>
+<text class="small" x="1586.5" y="113" text-anchor="middle" fill="#f8fafc">4.04 MiB</text>
+<text class="small" x="1586.5" y="125" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1644" y="102" width="109" height="27" fill="rgb(17,45,154)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 14, cpu 60, llc_occupancy_mib 3.867188, target 30%, start_llc_occupancy_bytes 8830976, end_llc_occupancy_bytes 4055040, llc_occupancy_delta_bytes 233750528</title></rect>
+<text class="small" x="1698.5" y="113" text-anchor="middle" fill="#f8fafc">3.87 MiB</text>
+<text class="small" x="1698.5" y="125" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1756" y="102" width="109" height="27" fill="rgb(17,46,156)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 15, cpu 62, llc_occupancy_mib 4.039062, target 30%, start_llc_occupancy_bytes 8830976, end_llc_occupancy_bytes 4235264, llc_occupancy_delta_bytes 236544000</title></rect>
+<text class="small" x="1810.5" y="113" text-anchor="middle" fill="#f8fafc">4.04 MiB</text>
+<text class="small" x="1810.5" y="125" text-anchor="middle" fill="#f8fafc">30%</text>
+<text x="8" y="143">s400</text>
+<text class="small" x="8" y="156">76.57 MiB</text>
+<rect x="76" y="132" width="109" height="27" fill="rgb(24,66,185)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 0, cpu 0, llc_occupancy_mib 7.304688, target 30%, start_llc_occupancy_bytes 15499264, end_llc_occupancy_bytes 7659520, llc_occupancy_delta_bytes 224829440</title></rect>
+<text class="small" x="130.5" y="143" text-anchor="middle" fill="#f8fafc">7.30 MiB</text>
+<text class="small" x="130.5" y="155" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="188" y="132" width="109" height="27" fill="rgb(24,66,185)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 1, cpu 34, llc_occupancy_mib 7.304688, target 30%, start_llc_occupancy_bytes 15499264, end_llc_occupancy_bytes 7659520, llc_occupancy_delta_bytes 216268800</title></rect>
+<text class="small" x="242.5" y="143" text-anchor="middle" fill="#f8fafc">7.30 MiB</text>
+<text class="small" x="242.5" y="155" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="300" y="132" width="109" height="27" fill="rgb(24,64,183)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 2, cpu 36, llc_occupancy_mib 7.046875, target 30%, start_llc_occupancy_bytes 15589376, end_llc_occupancy_bytes 7389184, llc_occupancy_delta_bytes 218882048</title></rect>
+<text class="small" x="354.5" y="143" text-anchor="middle" fill="#f8fafc">7.05 MiB</text>
+<text class="small" x="354.5" y="155" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="412" y="132" width="109" height="27" fill="rgb(25,66,186)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 3, cpu 38, llc_occupancy_mib 7.390625, target 30%, start_llc_occupancy_bytes 15499264, end_llc_occupancy_bytes 7749632, llc_occupancy_delta_bytes 221224960</title></rect>
+<text class="small" x="466.5" y="143" text-anchor="middle" fill="#f8fafc">7.39 MiB</text>
+<text class="small" x="466.5" y="155" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="524" y="132" width="109" height="27" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 4, cpu 40, llc_occupancy_mib 76.398438, target 100%, start_llc_occupancy_bytes 69746688, end_llc_occupancy_bytes 80109568, llc_occupancy_delta_bytes 5677056</title></rect>
+<text class="small" x="578.5" y="143" text-anchor="middle" fill="#f8fafc">76.40 MiB</text>
+<text class="small" x="578.5" y="155" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="132" width="109" height="27" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 5, cpu 42, llc_occupancy_mib 76.398438, target 100%, start_llc_occupancy_bytes 68755456, end_llc_occupancy_bytes 80109568, llc_occupancy_delta_bytes -180224</title></rect>
+<text class="small" x="690.5" y="143" text-anchor="middle" fill="#f8fafc">76.40 MiB</text>
+<text class="small" x="690.5" y="155" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="132" width="109" height="27" fill="rgb(231,67,32)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 6, cpu 44, llc_occupancy_mib 75.882812, target 100%, start_llc_occupancy_bytes 69025792, end_llc_occupancy_bytes 79568896, llc_occupancy_delta_bytes -901120</title></rect>
+<text class="small" x="802.5" y="143" text-anchor="middle" fill="#f8fafc">75.88 MiB</text>
+<text class="small" x="802.5" y="155" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="132" width="109" height="27" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 7, cpu 46, llc_occupancy_mib 76.484375, target 100%, start_llc_occupancy_bytes 69746688, end_llc_occupancy_bytes 80199680, llc_occupancy_delta_bytes 6217728</title></rect>
+<text class="small" x="914.5" y="143" text-anchor="middle" fill="#f8fafc">76.48 MiB</text>
+<text class="small" x="914.5" y="155" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="132" width="109" height="27" fill="rgb(229,63,33)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 8, cpu 48, llc_occupancy_mib 76.570312, target 100%, start_llc_occupancy_bytes 69296128, end_llc_occupancy_bytes 80289792, llc_occupancy_delta_bytes 360448</title></rect>
+<text class="small" x="1026.5" y="143" text-anchor="middle" fill="#f8fafc">76.57 MiB</text>
+<text class="small" x="1026.5" y="155" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="132" width="109" height="27" fill="rgb(230,66,32)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 9, cpu 50, llc_occupancy_mib 76.140625, target 100%, start_llc_occupancy_bytes 69296128, end_llc_occupancy_bytes 79839232, llc_occupancy_delta_bytes -1081344</title></rect>
+<text class="small" x="1138.5" y="143" text-anchor="middle" fill="#f8fafc">76.14 MiB</text>
+<text class="small" x="1138.5" y="155" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="132" width="109" height="27" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 10, cpu 52, llc_occupancy_mib 76.484375, target 100%, start_llc_occupancy_bytes 69746688, end_llc_occupancy_bytes 80199680, llc_occupancy_delta_bytes 6938624</title></rect>
+<text class="small" x="1250.5" y="143" text-anchor="middle" fill="#f8fafc">76.48 MiB</text>
+<text class="small" x="1250.5" y="155" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="132" width="109" height="27" fill="rgb(230,65,32)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 11, cpu 54, llc_occupancy_mib 76.312500, target 100%, start_llc_occupancy_bytes 69746688, end_llc_occupancy_bytes 80019456, llc_occupancy_delta_bytes -360448</title></rect>
+<text class="small" x="1362.5" y="143" text-anchor="middle" fill="#f8fafc">76.31 MiB</text>
+<text class="small" x="1362.5" y="155" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="132" width="109" height="27" fill="rgb(24,66,185)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 12, cpu 56, llc_occupancy_mib 7.304688, target 30%, start_llc_occupancy_bytes 15228928, end_llc_occupancy_bytes 7659520, llc_occupancy_delta_bytes 226631680</title></rect>
+<text class="small" x="1474.5" y="143" text-anchor="middle" fill="#f8fafc">7.30 MiB</text>
+<text class="small" x="1474.5" y="155" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1532" y="132" width="109" height="27" fill="rgb(25,66,186)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 13, cpu 58, llc_occupancy_mib 7.390625, target 30%, start_llc_occupancy_bytes 15499264, end_llc_occupancy_bytes 7749632, llc_occupancy_delta_bytes 225820672</title></rect>
+<text class="small" x="1586.5" y="143" text-anchor="middle" fill="#f8fafc">7.39 MiB</text>
+<text class="small" x="1586.5" y="155" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1644" y="132" width="109" height="27" fill="rgb(25,66,186)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 14, cpu 60, llc_occupancy_mib 7.390625, target 30%, start_llc_occupancy_bytes 15409152, end_llc_occupancy_bytes 7749632, llc_occupancy_delta_bytes 226631680</title></rect>
+<text class="small" x="1698.5" y="143" text-anchor="middle" fill="#f8fafc">7.39 MiB</text>
+<text class="small" x="1698.5" y="155" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1756" y="132" width="109" height="27" fill="rgb(24,66,185)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 15, cpu 62, llc_occupancy_mib 7.304688, target 30%, start_llc_occupancy_bytes 15228928, end_llc_occupancy_bytes 7659520, llc_occupancy_delta_bytes 226902016</title></rect>
+<text class="small" x="1810.5" y="143" text-anchor="middle" fill="#f8fafc">7.30 MiB</text>
+<text class="small" x="1810.5" y="155" text-anchor="middle" fill="#f8fafc">30%</text>
+<text x="8" y="173">s500</text>
+<text class="small" x="8" y="186">79.23 MiB</text>
+<rect x="76" y="162" width="109" height="27" fill="rgb(18,48,159)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 0, cpu 32, llc_occupancy_mib 4.382812, target 30%, start_llc_occupancy_bytes 10993664, end_llc_occupancy_bytes 4595712, llc_occupancy_delta_bytes 234291200</title></rect>
+<text class="small" x="130.5" y="173" text-anchor="middle" fill="#f8fafc">4.38 MiB</text>
+<text class="small" x="130.5" y="185" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="188" y="162" width="109" height="27" fill="rgb(18,49,160)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 1, cpu 34, llc_occupancy_mib 4.468750, target 30%, start_llc_occupancy_bytes 10903552, end_llc_occupancy_bytes 4685824, llc_occupancy_delta_bytes 232669184</title></rect>
+<text class="small" x="242.5" y="173" text-anchor="middle" fill="#f8fafc">4.47 MiB</text>
+<text class="small" x="242.5" y="185" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="300" y="162" width="109" height="27" fill="rgb(18,48,159)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 2, cpu 36, llc_occupancy_mib 4.382812, target 30%, start_llc_occupancy_bytes 11083776, end_llc_occupancy_bytes 4595712, llc_occupancy_delta_bytes 233390080</title></rect>
+<text class="small" x="354.5" y="173" text-anchor="middle" fill="#f8fafc">4.38 MiB</text>
+<text class="small" x="354.5" y="185" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="412" y="162" width="109" height="27" fill="rgb(18,48,159)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 3, cpu 38, llc_occupancy_mib 4.382812, target 30%, start_llc_occupancy_bytes 11083776, end_llc_occupancy_bytes 4595712, llc_occupancy_delta_bytes 229965824</title></rect>
+<text class="small" x="466.5" y="173" text-anchor="middle" fill="#f8fafc">4.38 MiB</text>
+<text class="small" x="466.5" y="185" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="524" y="162" width="109" height="27" fill="rgb(224,50,36)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 4, cpu 40, llc_occupancy_mib 78.804688, target 100%, start_llc_occupancy_bytes 74432512, end_llc_occupancy_bytes 82632704, llc_occupancy_delta_bytes 1261568</title></rect>
+<text class="small" x="578.5" y="173" text-anchor="middle" fill="#f8fafc">78.80 MiB</text>
+<text class="small" x="578.5" y="185" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="162" width="109" height="27" fill="rgb(224,50,36)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 5, cpu 42, llc_occupancy_mib 78.804688, target 100%, start_llc_occupancy_bytes 74342400, end_llc_occupancy_bytes 82632704, llc_occupancy_delta_bytes 270336</title></rect>
+<text class="small" x="690.5" y="173" text-anchor="middle" fill="#f8fafc">78.80 MiB</text>
+<text class="small" x="690.5" y="185" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="162" width="109" height="27" fill="rgb(226,53,35)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 6, cpu 44, llc_occupancy_mib 78.203125, target 100%, start_llc_occupancy_bytes 74342400, end_llc_occupancy_bytes 82001920, llc_occupancy_delta_bytes -2613248</title></rect>
+<text class="small" x="802.5" y="173" text-anchor="middle" fill="#f8fafc">78.20 MiB</text>
+<text class="small" x="802.5" y="185" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="162" width="109" height="27" fill="rgb(223,47,36)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 7, cpu 46, llc_occupancy_mib 79.234375, target 100%, start_llc_occupancy_bytes 74342400, end_llc_occupancy_bytes 83083264, llc_occupancy_delta_bytes 1531904</title></rect>
+<text class="small" x="914.5" y="173" text-anchor="middle" fill="#f8fafc">79.23 MiB</text>
+<text class="small" x="914.5" y="185" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="162" width="109" height="27" fill="rgb(225,51,35)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 8, cpu 48, llc_occupancy_mib 78.632812, target 100%, start_llc_occupancy_bytes 74432512, end_llc_occupancy_bytes 82452480, llc_occupancy_delta_bytes 4145152</title></rect>
+<text class="small" x="1026.5" y="173" text-anchor="middle" fill="#f8fafc">78.63 MiB</text>
+<text class="small" x="1026.5" y="185" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="162" width="109" height="27" fill="rgb(225,52,35)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 9, cpu 50, llc_occupancy_mib 78.375000, target 100%, start_llc_occupancy_bytes 74342400, end_llc_occupancy_bytes 82182144, llc_occupancy_delta_bytes -2433024</title></rect>
+<text class="small" x="1138.5" y="173" text-anchor="middle" fill="#f8fafc">78.38 MiB</text>
+<text class="small" x="1138.5" y="185" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="162" width="109" height="27" fill="rgb(225,50,35)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 10, cpu 52, llc_occupancy_mib 78.718750, target 100%, start_llc_occupancy_bytes 74342400, end_llc_occupancy_bytes 82542592, llc_occupancy_delta_bytes 720896</title></rect>
+<text class="small" x="1250.5" y="173" text-anchor="middle" fill="#f8fafc">78.72 MiB</text>
+<text class="small" x="1250.5" y="185" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="162" width="109" height="27" fill="rgb(225,50,35)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 11, cpu 54, llc_occupancy_mib 78.718750, target 100%, start_llc_occupancy_bytes 74432512, end_llc_occupancy_bytes 82542592, llc_occupancy_delta_bytes -1982464</title></rect>
+<text class="small" x="1362.5" y="173" text-anchor="middle" fill="#f8fafc">78.72 MiB</text>
+<text class="small" x="1362.5" y="185" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="162" width="109" height="27" fill="rgb(18,49,160)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 12, cpu 56, llc_occupancy_mib 4.468750, target 30%, start_llc_occupancy_bytes 10903552, end_llc_occupancy_bytes 4685824, llc_occupancy_delta_bytes 233750528</title></rect>
+<text class="small" x="1474.5" y="173" text-anchor="middle" fill="#f8fafc">4.47 MiB</text>
+<text class="small" x="1474.5" y="185" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1532" y="162" width="109" height="27" fill="rgb(18,48,159)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 13, cpu 58, llc_occupancy_mib 4.382812, target 30%, start_llc_occupancy_bytes 11083776, end_llc_occupancy_bytes 4595712, llc_occupancy_delta_bytes 227262464</title></rect>
+<text class="small" x="1586.5" y="173" text-anchor="middle" fill="#f8fafc">4.38 MiB</text>
+<text class="small" x="1586.5" y="185" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1644" y="162" width="109" height="27" fill="rgb(18,48,159)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 14, cpu 60, llc_occupancy_mib 4.382812, target 30%, start_llc_occupancy_bytes 10993664, end_llc_occupancy_bytes 4595712, llc_occupancy_delta_bytes 233029632</title></rect>
+<text class="small" x="1698.5" y="173" text-anchor="middle" fill="#f8fafc">4.38 MiB</text>
+<text class="small" x="1698.5" y="185" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1756" y="162" width="109" height="27" fill="rgb(18,48,159)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 15, cpu 62, llc_occupancy_mib 4.382812, target 30%, start_llc_occupancy_bytes 11083776, end_llc_occupancy_bytes 4595712, llc_occupancy_delta_bytes 236093440</title></rect>
+<text class="small" x="1810.5" y="173" text-anchor="middle" fill="#f8fafc">4.38 MiB</text>
+<text class="small" x="1810.5" y="185" text-anchor="middle" fill="#f8fafc">30%</text>
+<text x="8" y="203">s600</text>
+<text class="small" x="8" y="216">74.85 MiB</text>
+<rect x="76" y="192" width="109" height="27" fill="rgb(22,60,177)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 0, cpu 32, llc_occupancy_mib 6.445312, target 30%, start_llc_occupancy_bytes 11714560, end_llc_occupancy_bytes 6758400, llc_occupancy_delta_bytes 190406656</title></rect>
+<text class="small" x="130.5" y="203" text-anchor="middle" fill="#f8fafc">6.45 MiB</text>
+<text class="small" x="130.5" y="215" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="188" y="192" width="109" height="27" fill="rgb(23,61,179)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 1, cpu 34, llc_occupancy_mib 6.617188, target 30%, start_llc_occupancy_bytes 11894784, end_llc_occupancy_bytes 6938624, llc_occupancy_delta_bytes 185090048</title></rect>
+<text class="small" x="242.5" y="203" text-anchor="middle" fill="#f8fafc">6.62 MiB</text>
+<text class="small" x="242.5" y="215" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="300" y="192" width="109" height="27" fill="rgb(23,61,179)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 2, cpu 36, llc_occupancy_mib 6.617188, target 30%, start_llc_occupancy_bytes 12075008, end_llc_occupancy_bytes 6938624, llc_occupancy_delta_bytes 179683328</title></rect>
+<text class="small" x="354.5" y="203" text-anchor="middle" fill="#f8fafc">6.62 MiB</text>
+<text class="small" x="354.5" y="215" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="412" y="192" width="109" height="27" fill="rgb(23,61,179)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 3, cpu 38, llc_occupancy_mib 6.617188, target 30%, start_llc_occupancy_bytes 11714560, end_llc_occupancy_bytes 6938624, llc_occupancy_delta_bytes 185450496</title></rect>
+<text class="small" x="466.5" y="203" text-anchor="middle" fill="#f8fafc">6.62 MiB</text>
+<text class="small" x="466.5" y="215" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="524" y="192" width="109" height="27" fill="rgb(233,73,31)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 4, cpu 40, llc_occupancy_mib 74.851562, target 100%, start_llc_occupancy_bytes 72450048, end_llc_occupancy_bytes 78487552, llc_occupancy_delta_bytes 6848512</title></rect>
+<text class="small" x="578.5" y="203" text-anchor="middle" fill="#f8fafc">74.85 MiB</text>
+<text class="small" x="578.5" y="215" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="192" width="109" height="27" fill="rgb(234,74,30)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 5, cpu 10, llc_occupancy_mib 74.679688, target 100%, start_llc_occupancy_bytes 72359936, end_llc_occupancy_bytes 78307328, llc_occupancy_delta_bytes 720896</title></rect>
+<text class="small" x="690.5" y="203" text-anchor="middle" fill="#f8fafc">74.68 MiB</text>
+<text class="small" x="690.5" y="215" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="748" y="192" width="109" height="27" fill="rgb(236,80,29)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 6, cpu 44, llc_occupancy_mib 73.734375, target 100%, start_llc_occupancy_bytes 72450048, end_llc_occupancy_bytes 77316096, llc_occupancy_delta_bytes -1351680</title></rect>
+<text class="small" x="802.5" y="203" text-anchor="middle" fill="#f8fafc">73.73 MiB</text>
+<text class="small" x="802.5" y="215" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="860" y="192" width="109" height="27" fill="rgb(233,73,31)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 7, cpu 46, llc_occupancy_mib 74.851562, target 100%, start_llc_occupancy_bytes 72269824, end_llc_occupancy_bytes 78487552, llc_occupancy_delta_bytes 8290304</title></rect>
+<text class="small" x="914.5" y="203" text-anchor="middle" fill="#f8fafc">74.85 MiB</text>
+<text class="small" x="914.5" y="215" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="192" width="109" height="27" fill="rgb(233,73,31)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 8, cpu 48, llc_occupancy_mib 74.851562, target 100%, start_llc_occupancy_bytes 72450048, end_llc_occupancy_bytes 78487552, llc_occupancy_delta_bytes 2703360</title></rect>
+<text class="small" x="1026.5" y="203" text-anchor="middle" fill="#f8fafc">74.85 MiB</text>
+<text class="small" x="1026.5" y="215" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="192" width="109" height="27" fill="rgb(236,81,29)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 9, cpu 50, llc_occupancy_mib 73.562500, target 100%, start_llc_occupancy_bytes 72540160, end_llc_occupancy_bytes 77135872, llc_occupancy_delta_bytes 180224</title></rect>
+<text class="small" x="1138.5" y="203" text-anchor="middle" fill="#f8fafc">73.56 MiB</text>
+<text class="small" x="1138.5" y="215" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1196" y="192" width="109" height="27" fill="rgb(234,75,30)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 10, cpu 20, llc_occupancy_mib 74.593750, target 100%, start_llc_occupancy_bytes 71999488, end_llc_occupancy_bytes 78217216, llc_occupancy_delta_bytes 5136384</title></rect>
+<text class="small" x="1250.5" y="203" text-anchor="middle" fill="#f8fafc">74.59 MiB</text>
+<text class="small" x="1250.5" y="215" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="192" width="109" height="27" fill="rgb(234,75,30)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 11, cpu 54, llc_occupancy_mib 74.593750, target 100%, start_llc_occupancy_bytes 72450048, end_llc_occupancy_bytes 78217216, llc_occupancy_delta_bytes -450560</title></rect>
+<text class="small" x="1362.5" y="203" text-anchor="middle" fill="#f8fafc">74.59 MiB</text>
+<text class="small" x="1362.5" y="215" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="192" width="109" height="27" fill="rgb(23,62,180)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 12, cpu 56, llc_occupancy_mib 6.703125, target 30%, start_llc_occupancy_bytes 11714560, end_llc_occupancy_bytes 7028736, llc_occupancy_delta_bytes 188784640</title></rect>
+<text class="small" x="1474.5" y="203" text-anchor="middle" fill="#f8fafc">6.70 MiB</text>
+<text class="small" x="1474.5" y="215" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1532" y="192" width="109" height="27" fill="rgb(23,61,179)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 13, cpu 58, llc_occupancy_mib 6.617188, target 30%, start_llc_occupancy_bytes 11714560, end_llc_occupancy_bytes 6938624, llc_occupancy_delta_bytes 190046208</title></rect>
+<text class="small" x="1586.5" y="203" text-anchor="middle" fill="#f8fafc">6.62 MiB</text>
+<text class="small" x="1586.5" y="215" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1644" y="192" width="109" height="27" fill="rgb(23,62,180)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 14, cpu 60, llc_occupancy_mib 6.703125, target 30%, start_llc_occupancy_bytes 12075008, end_llc_occupancy_bytes 7028736, llc_occupancy_delta_bytes 181485568</title></rect>
+<text class="small" x="1698.5" y="203" text-anchor="middle" fill="#f8fafc">6.70 MiB</text>
+<text class="small" x="1698.5" y="215" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1756" y="192" width="109" height="27" fill="rgb(22,60,177)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 15, cpu 62, llc_occupancy_mib 6.445312, target 30%, start_llc_occupancy_bytes 11714560, end_llc_occupancy_bytes 6758400, llc_occupancy_delta_bytes 191037440</title></rect>
+<text class="small" x="1810.5" y="203" text-anchor="middle" fill="#f8fafc">6.45 MiB</text>
+<text class="small" x="1810.5" y="215" text-anchor="middle" fill="#f8fafc">30%</text>
+<text x="8" y="233">s700</text>
+<text class="small" x="8" y="246">71.93 MiB</text>
+<rect x="76" y="222" width="109" height="27" fill="rgb(30,81,209)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 0, cpu 32, llc_occupancy_mib 9.968750, target 30%, start_llc_occupancy_bytes 14688256, end_llc_occupancy_bytes 10452992, llc_occupancy_delta_bytes 188694528</title></rect>
+<text class="small" x="130.5" y="233" text-anchor="middle" fill="#f8fafc">9.97 MiB</text>
+<text class="small" x="130.5" y="245" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="188" y="222" width="109" height="27" fill="rgb(30,81,208)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 1, cpu 34, llc_occupancy_mib 9.882812, target 30%, start_llc_occupancy_bytes 14688256, end_llc_occupancy_bytes 10362880, llc_occupancy_delta_bytes 194371584</title></rect>
+<text class="small" x="242.5" y="233" text-anchor="middle" fill="#f8fafc">9.88 MiB</text>
+<text class="small" x="242.5" y="245" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="300" y="222" width="109" height="27" fill="rgb(30,80,207)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 2, cpu 36, llc_occupancy_mib 9.796875, target 30%, start_llc_occupancy_bytes 14688256, end_llc_occupancy_bytes 10272768, llc_occupancy_delta_bytes 193740800</title></rect>
+<text class="small" x="354.5" y="233" text-anchor="middle" fill="#f8fafc">9.80 MiB</text>
+<text class="small" x="354.5" y="245" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="412" y="222" width="109" height="27" fill="rgb(30,81,208)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 3, cpu 38, llc_occupancy_mib 9.882812, target 30%, start_llc_occupancy_bytes 14688256, end_llc_occupancy_bytes 10362880, llc_occupancy_delta_bytes 190136320</title></rect>
+<text class="small" x="466.5" y="233" text-anchor="middle" fill="#f8fafc">9.88 MiB</text>
+<text class="small" x="466.5" y="245" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="524" y="222" width="109" height="27" fill="rgb(241,93,27)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 4, cpu 40, llc_occupancy_mib 71.500000, target 100%, start_llc_occupancy_bytes 70828032, end_llc_occupancy_bytes 74973184, llc_occupancy_delta_bytes 720896</title></rect>
+<text class="small" x="578.5" y="233" text-anchor="middle" fill="#f8fafc">71.50 MiB</text>
+<text class="small" x="578.5" y="245" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="636" y="222" width="109" height="27" fill="rgb(241,94,26)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 5, cpu 42, llc_occupancy_mib 71.328125, target 100%, start_llc_occupancy_bytes 70737920, end_llc_occupancy_bytes 74792960, llc_occupancy_delta_bytes -901120</title></rect>
+<text class="small" x="690.5" y="233" text-anchor="middle" fill="#0f172a">71.33 MiB</text>
+<text class="small" x="690.5" y="245" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="748" y="222" width="109" height="27" fill="rgb(242,95,26)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 6, cpu 44, llc_occupancy_mib 71.156250, target 100%, start_llc_occupancy_bytes 70737920, end_llc_occupancy_bytes 74612736, llc_occupancy_delta_bytes -2793472</title></rect>
+<text class="small" x="802.5" y="233" text-anchor="middle" fill="#0f172a">71.16 MiB</text>
+<text class="small" x="802.5" y="245" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="860" y="222" width="109" height="27" fill="rgb(241,93,27)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 7, cpu 46, llc_occupancy_mib 71.500000, target 100%, start_llc_occupancy_bytes 70737920, end_llc_occupancy_bytes 74973184, llc_occupancy_delta_bytes 450560</title></rect>
+<text class="small" x="914.5" y="233" text-anchor="middle" fill="#f8fafc">71.50 MiB</text>
+<text class="small" x="914.5" y="245" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="972" y="222" width="109" height="27" fill="rgb(240,91,27)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 8, cpu 48, llc_occupancy_mib 71.929688, target 100%, start_llc_occupancy_bytes 70377472, end_llc_occupancy_bytes 75423744, llc_occupancy_delta_bytes 540672</title></rect>
+<text class="small" x="1026.5" y="233" text-anchor="middle" fill="#f8fafc">71.93 MiB</text>
+<text class="small" x="1026.5" y="245" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1084" y="222" width="109" height="27" fill="rgb(242,95,26)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 9, cpu 50, llc_occupancy_mib 71.156250, target 100%, start_llc_occupancy_bytes 70287360, end_llc_occupancy_bytes 74612736, llc_occupancy_delta_bytes -3424256</title></rect>
+<text class="small" x="1138.5" y="233" text-anchor="middle" fill="#0f172a">71.16 MiB</text>
+<text class="small" x="1138.5" y="245" text-anchor="middle" fill="#0f172a">100%</text>
+<rect x="1196" y="222" width="109" height="27" fill="rgb(241,93,27)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 10, cpu 20, llc_occupancy_mib 71.585938, target 100%, start_llc_occupancy_bytes 70737920, end_llc_occupancy_bytes 75063296, llc_occupancy_delta_bytes 1261568</title></rect>
+<text class="small" x="1250.5" y="233" text-anchor="middle" fill="#f8fafc">71.59 MiB</text>
+<text class="small" x="1250.5" y="245" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1308" y="222" width="109" height="27" fill="rgb(240,91,27)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 11, cpu 54, llc_occupancy_mib 71.843750, target 100%, start_llc_occupancy_bytes 70828032, end_llc_occupancy_bytes 75333632, llc_occupancy_delta_bytes -2252800</title></rect>
+<text class="small" x="1362.5" y="233" text-anchor="middle" fill="#f8fafc">71.84 MiB</text>
+<text class="small" x="1362.5" y="245" text-anchor="middle" fill="#f8fafc">100%</text>
+<rect x="1420" y="222" width="109" height="27" fill="rgb(30,81,208)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 12, cpu 56, llc_occupancy_mib 9.882812, target 30%, start_llc_occupancy_bytes 14598144, end_llc_occupancy_bytes 10362880, llc_occupancy_delta_bytes 194101248</title></rect>
+<text class="small" x="1474.5" y="233" text-anchor="middle" fill="#f8fafc">9.88 MiB</text>
+<text class="small" x="1474.5" y="245" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1532" y="222" width="109" height="27" fill="rgb(29,78,203)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 13, cpu 58, llc_occupancy_mib 9.367188, target 30%, start_llc_occupancy_bytes 14688256, end_llc_occupancy_bytes 9822208, llc_occupancy_delta_bytes 173015040</title></rect>
+<text class="small" x="1586.5" y="233" text-anchor="middle" fill="#f8fafc">9.37 MiB</text>
+<text class="small" x="1586.5" y="245" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1644" y="222" width="109" height="27" fill="rgb(30,80,207)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 14, cpu 60, llc_occupancy_mib 9.796875, target 30%, start_llc_occupancy_bytes 14688256, end_llc_occupancy_bytes 10272768, llc_occupancy_delta_bytes 193560576</title></rect>
+<text class="small" x="1698.5" y="233" text-anchor="middle" fill="#f8fafc">9.80 MiB</text>
+<text class="small" x="1698.5" y="245" text-anchor="middle" fill="#f8fafc">30%</text>
+<rect x="1756" y="222" width="109" height="27" fill="rgb(30,81,208)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 15, cpu 62, llc_occupancy_mib 9.882812, target 30%, start_llc_occupancy_bytes 14688256, end_llc_occupancy_bytes 10362880, llc_occupancy_delta_bytes 189145088</title></rect>
+<text class="small" x="1810.5" y="233" text-anchor="middle" fill="#f8fafc">9.88 MiB</text>
+<text class="small" x="1810.5" y="245" text-anchor="middle" fill="#f8fafc">30%</text>
+</svg>

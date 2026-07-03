@@ -21,6 +21,7 @@ struct TimingRow {
     int thread_id = 0;
     int team_size = 0;
     double elapsed_ms = 0.0;
+    double region_wall_ms = 0.0;
     int cpu_id = -1;
     double target_value = 0.0;
     std::string resource_kind;
@@ -216,10 +217,14 @@ double bytes_to_mib(long long bytes) {
 }
 
 double memory_bandwidth_mib_s(const TimingRow &row) {
-    if (!row.mon_valid || row.elapsed_ms <= 0.0 || row.mon_mbm_total_delta_bytes < 0) {
+    const double denominator_ms =
+        row.resource_kind == "monitor" && row.region_wall_ms > 0.0
+            ? row.region_wall_ms
+            : row.elapsed_ms;
+    if (!row.mon_valid || denominator_ms <= 0.0 || row.mon_mbm_total_delta_bytes < 0) {
         return -1.0;
     }
-    return bytes_to_mib(row.mon_mbm_total_delta_bytes) * 1000.0 / row.elapsed_ms;
+    return bytes_to_mib(row.mon_mbm_total_delta_bytes) * 1000.0 / denominator_ms;
 }
 
 double llc_occupancy_mib(const TimingRow &row) {
@@ -585,6 +590,7 @@ int main(int argc, char **argv) {
         row.thread_id = int_field(f, columns, "thread_id", 3);
         row.team_size = int_field(f, columns, "team_size", 4);
         row.elapsed_ms = double_field(f, columns, "elapsed_ms", 8);
+        row.region_wall_ms = double_field(f, columns, "region_wall_ms", 18);
         row.region_label = amr_region_label(row.region_id);
         row.cpu_id = int_field(f, columns, "cpu_id", 10);
         row.resource_kind = has_resource_kind ? field_or(f, columns, "resource_kind", 17) : "mba";
@@ -725,6 +731,7 @@ int main(int argc, char **argv) {
     const auto bandwidth_detail = [](const TimingRow &row) {
         std::ostringstream detail;
         detail << ", elapsed_ms " << std::fixed << std::setprecision(6) << row.elapsed_ms
+               << ", region_wall_ms " << row.region_wall_ms
                << ", mbm_total_delta_bytes " << row.mon_mbm_total_delta_bytes
                << ", mbm_local_delta_bytes " << row.mon_mbm_local_delta_bytes
                << ", mbm_remote_delta_bytes " << row.mon_mbm_remote_delta_bytes;

@@ -248,6 +248,10 @@ std::string group_name_for_mask(int ways, std::uint64_t mask) {
            "_m" + hex_mask(mask);
 }
 
+std::string group_name_for_monitor_all() {
+    return configured_prefix + "_all";
+}
+
 std::string group_path_for_name(const std::string &group_name) {
     return join_path(configured_root, group_name);
 }
@@ -424,6 +428,41 @@ AssignmentResult assign_current_thread_l3_mask(int slot, const std::string &requ
     result.mask = hex_mask(mask);
     result.group_name = group_name_for_mask(ways, mask);
     if (!ensure_group_locked(result.group_name, ways, mask)) {
+        return result;
+    }
+
+    const auto assigned = assigned_group_by_tid.find(result.tid);
+    if (assigned != assigned_group_by_tid.end() && assigned->second == result.group_name) {
+        result.applied = true;
+        return result;
+    }
+
+    result.applied = write_tid_to_tasks(join_path(group_path_for_name(result.group_name), "tasks"),
+                                        result.tid);
+    if (result.applied) {
+        assigned_group_by_tid[result.tid] = result.group_name;
+    }
+    return result;
+}
+
+AssignmentResult assign_current_thread_monitor_all() {
+    AssignmentResult result;
+    result.cpu = current_cpu();
+    result.tid = current_tid();
+
+    std::lock_guard<std::mutex> lock(cat_mutex);
+    if (!cached_info_valid) {
+        cached_info = build_l3_info_locked(1);
+        cached_info_valid = true;
+    }
+    if (!cached_info.available || result.tid <= 0) {
+        return result;
+    }
+
+    result.ways = cached_info.max_cbm_bits;
+    result.mask = hex_mask(cached_info.cbm_mask);
+    result.group_name = group_name_for_monitor_all();
+    if (!ensure_group_directory_locked(result.group_name)) {
         return result;
     }
 

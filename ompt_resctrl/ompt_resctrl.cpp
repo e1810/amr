@@ -88,6 +88,10 @@ struct ParallelEvent {
     std::vector<std::int64_t> monitor_start_mbm_remote_bytes;
     std::vector<std::int64_t> monitor_end_mbm_remote_bytes;
     std::vector<std::int64_t> monitor_mbm_remote_delta_bytes;
+    std::mutex monitor_event_mutex;
+    bool monitor_event_active = false;
+    std::string monitor_event_group_name;
+    resctrl_mon::Sample monitor_event_start;
 };
 
 struct L3ThreadTarget {
@@ -409,6 +413,10 @@ bool uses_cat_resctrl_groups() {
     return resource_kind == ResourceKind::Cat || resource_kind == ResourceKind::Monitor;
 }
 
+bool uses_aggregate_monitor_group() {
+    return resource_kind == ResourceKind::Monitor;
+}
+
 
 void set_first_counter(std::vector<std::int64_t> *values,
                        std::size_t slot,
@@ -510,6 +518,23 @@ void record_monitor_begin(ParallelEvent *event, unsigned int thread_num) {
         return;
     }
 
+    if (uses_aggregate_monitor_group()) {
+        std::lock_guard<std::mutex> lock(event->monitor_event_mutex);
+        if (event->monitor_event_active) {
+            return;
+        }
+        const std::string group_name =
+            slot < event->resctrl_group_name.size() ? event->resctrl_group_name[slot] : std::string();
+        const resctrl_mon::Sample sample = resctrl_mon::sample_group(group_name);
+        if (!sample.valid) {
+            return;
+        }
+        event->monitor_event_group_name = group_name;
+        event->monitor_event_start = sample;
+        event->monitor_event_active = true;
+        return;
+    }
+
     const std::string group_name =
         slot < event->resctrl_group_name.size() ? event->resctrl_group_name[slot] : std::string();
     const resctrl_mon::Sample sample = group_name.empty()
@@ -606,6 +631,80 @@ void record_monitor_end(ParallelEvent *event, unsigned int thread_num) {
                       end.mbm_remote_bytes);
 }
 
+std::int64_t counter_delta(std::int64_t begin, std::int64_t end) {
+    return begin >= 0 && end >= 0 ? end - begin : -1;
+}
+
+void record_aggregate_monitor_end(ParallelEvent *event, int team_size) {
+    if (!event || !event->monitor_enabled || !uses_aggregate_monitor_group()) {
+        return;
+    }
+
+    std::lock_guard<std::mutex> lock(event->monitor_event_mutex);
+    if (!event->monitor_event_active || event->monitor_event_group_name.empty()) {
+        return;
+    }
+    event->monitor_event_active = false;
+
+    const resctrl_mon::Sample begin = event->monitor_event_start;
+    const resctrl_mon::Sample end = resctrl_mon::sample_group(event->monitor_event_group_name);
+    if (!end.valid) {
+        return;
+    }
+
+    for (int tid = 0; tid < team_size; ++tid) {
+        const std::size_t slot = static_cast<std::size_t>(tid);
+        if (slot >= event->monitor_valid.size()) {
+            continue;
+        }
+
+        event->monitor_valid[slot] = 1;
+        if (slot < event->monitor_l3_domains.size()) {
+            event->monitor_l3_domains[slot] = std::max(begin.domain_count, end.domain_count);
+        }
+        if (slot < event->monitor_start_llc_occupancy_bytes.size()) {
+            event->monitor_start_llc_occupancy_bytes[slot] = begin.llc_occupancy_bytes;
+        }
+        if (slot < event->monitor_end_llc_occupancy_bytes.size()) {
+            event->monitor_end_llc_occupancy_bytes[slot] = end.llc_occupancy_bytes;
+        }
+        if (slot < event->monitor_llc_occupancy_delta_bytes.size()) {
+            event->monitor_llc_occupancy_delta_bytes[slot] =
+                counter_delta(begin.llc_occupancy_bytes, end.llc_occupancy_bytes);
+        }
+        if (slot < event->monitor_start_mbm_total_bytes.size()) {
+            event->monitor_start_mbm_total_bytes[slot] = begin.mbm_total_bytes;
+        }
+        if (slot < event->monitor_end_mbm_total_bytes.size()) {
+            event->monitor_end_mbm_total_bytes[slot] = end.mbm_total_bytes;
+        }
+        if (slot < event->monitor_mbm_total_delta_bytes.size()) {
+            event->monitor_mbm_total_delta_bytes[slot] =
+                counter_delta(begin.mbm_total_bytes, end.mbm_total_bytes);
+        }
+        if (slot < event->monitor_start_mbm_local_bytes.size()) {
+            event->monitor_start_mbm_local_bytes[slot] = begin.mbm_local_bytes;
+        }
+        if (slot < event->monitor_end_mbm_local_bytes.size()) {
+            event->monitor_end_mbm_local_bytes[slot] = end.mbm_local_bytes;
+        }
+        if (slot < event->monitor_mbm_local_delta_bytes.size()) {
+            event->monitor_mbm_local_delta_bytes[slot] =
+                counter_delta(begin.mbm_local_bytes, end.mbm_local_bytes);
+        }
+        if (slot < event->monitor_start_mbm_remote_bytes.size()) {
+            event->monitor_start_mbm_remote_bytes[slot] = begin.mbm_remote_bytes;
+        }
+        if (slot < event->monitor_end_mbm_remote_bytes.size()) {
+            event->monitor_end_mbm_remote_bytes[slot] = end.mbm_remote_bytes;
+        }
+        if (slot < event->monitor_mbm_remote_delta_bytes.size()) {
+            event->monitor_mbm_remote_delta_bytes[slot] =
+                counter_delta(begin.mbm_remote_bytes, end.mbm_remote_bytes);
+        }
+    }
+}
+
 void record_thread_end(ParallelEvent *event, unsigned int thread_num) {
     if (!has_thread_slot(event, thread_num)) {
         return;
@@ -619,7 +718,9 @@ void record_thread_end(ParallelEvent *event, unsigned int thread_num) {
     record_cache_counter_end(event, thread_num);
     event->end_ms[slot] = now_ms();
     event->elapsed_ms[slot] += event->end_ms[slot] - event->current_start_ms[slot];
-    record_monitor_end(event, thread_num);
+    if (!uses_aggregate_monitor_group()) {
+        record_monitor_end(event, thread_num);
+    }
     event->work_started[slot] = 0;
 }
 
@@ -740,14 +841,8 @@ void apply_target_to_thread(ParallelEvent *event, unsigned int thread_num) {
         }
     } else if (resource_kind == ResourceKind::Monitor) {
         if (monitor_group_enabled) {
-            const std::string target_mask =
-                slot < event->target_l3_mask.size() ? event->target_l3_mask[slot] : std::string();
             const resctrl_cat::AssignmentResult assignment =
-                target_mask.empty()
-                    ? resctrl_cat::assign_current_thread_monitor_l3(
-                          static_cast<int>(slot),
-                          slot < event->target_l3_ways.size() ? event->target_l3_ways[slot] : requested_l3_ways)
-                    : resctrl_cat::assign_current_thread_monitor_l3_mask(static_cast<int>(slot), target_mask);
+                resctrl_cat::assign_current_thread_monitor_all();
             cpu = assignment.cpu;
             tid = assignment.tid;
             applied = assignment.applied;
@@ -1223,6 +1318,7 @@ void on_parallel_end(ompt_data_t *parallel_data,
 
     const int team_size = event_team_size(*event);
     event->region_wall_ms = compute_region_wall_ms(*event, team_size);
+    record_aggregate_monitor_end(event, team_size);
     reset_touched_resources(*event, team_size);
     update_region_history(*event, team_size);
 
@@ -1280,9 +1376,12 @@ int ompt_initialize(ompt_function_lookup_t lookup,
         }
         cat_control_enabled = resource_kind == ResourceKind::Cat && cat_info.available;
         monitor_group_enabled = resource_kind == ResourceKind::Monitor && cat_info.available;
-        effective_l3_ways = resctrl_cat::effective_ways(requested_l3_ways);
-        effective_l3_mask = resctrl_cat::mask_for_ways_text(requested_l3_ways);
-        unrestricted_l3_ways = cat_info.max_cbm_bits > 0 ? cat_info.max_cbm_bits : effective_l3_ways;
+        const int requested_effective_l3_ways = resctrl_cat::effective_ways(requested_l3_ways);
+        const std::string requested_effective_l3_mask =
+            resctrl_cat::mask_for_ways_text(requested_l3_ways);
+        unrestricted_l3_ways = cat_info.max_cbm_bits > 0
+                                  ? cat_info.max_cbm_bits
+                                  : requested_effective_l3_ways;
         unrestricted_l3_mask = resctrl_cat::mask_for_ways_text(unrestricted_l3_ways);
         const char *unrestricted_mask_env = std::getenv("AMR_RESCTRL_CAT_UNRESTRICTED_L3_MASK");
         if (unrestricted_mask_env && unrestricted_mask_env[0] != '\0') {
@@ -1292,6 +1391,14 @@ int ompt_initialize(ompt_function_lookup_t lookup,
                 unrestricted_l3_ways = mask_ways;
             }
         }
+        effective_l3_ways = resource_kind == ResourceKind::Monitor
+                                ? (cat_info.max_cbm_bits > 0
+                                       ? cat_info.max_cbm_bits
+                                       : requested_effective_l3_ways)
+                                : requested_effective_l3_ways;
+        effective_l3_mask = resource_kind == ResourceKind::Monitor
+                                ? resctrl_cat::mask_for_ways_text(effective_l3_ways)
+                                : requested_effective_l3_mask;
         unrestricted_l3_threads = env_thread_list("AMR_RESCTRL_CAT_UNRESTRICTED_THREADS");
         unrestricted_l3_threads_text = thread_list_text(unrestricted_l3_threads);
         l3_thread_targets =
@@ -1384,18 +1491,13 @@ int ompt_initialize(ompt_function_lookup_t lookup,
     } else if (resource_kind == ResourceKind::Monitor) {
         std::fprintf(stderr,
                      "[AMR-RESCTRL] enabled, writing %s every %d execution(s) per region, "
-                     "resource monitor, requested L3 ways %d, effective L3 ways %d, "
-                     "group mask %s, thread group masks %s, unrestricted threads %s group ways %d mask %s, "
-                     "sticky %s, group assign %s, monitor %s, cleanup %s, root %s, group prefix %s\n",
+                     "resource monitor, aggregate group, effective L3 ways %d, "
+                     "group mask %s, sticky %s, group assign %s, monitor %s, cleanup %s, "
+                     "root %s, group prefix %s\n",
                      output_path ? output_path : "ompt_resctrl/ompt_regions.csv",
                      output_exec_interval,
-                     requested_l3_ways,
                      effective_l3_ways,
                      effective_l3_mask.c_str(),
-                     l3_thread_targets_text.c_str(),
-                     unrestricted_l3_threads_text.c_str(),
-                     unrestricted_l3_ways,
-                     unrestricted_l3_mask.c_str(),
                      cat_sticky_assignments ? "enabled" : "disabled",
                      monitor_group_enabled ? "enabled" : "disabled",
                      monitor_configured ? "enabled" : "disabled",

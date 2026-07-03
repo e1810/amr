@@ -1,0 +1,491 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2166 414">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:monospace;font-size:11px}.small{font-size:9px}</style>
+<text x="12" y="20">OMPT resctrl LLC cache counts, max_hit=4.9M, max_miss=8.0M, color=0-8.0M</text>
+<text class="small" x="12" y="35">top: hit count, bottom: miss count</text>
+<text class="small" x="150" y="40" text-anchor="middle">t0</text>
+<text class="small" x="278" y="40" text-anchor="middle">t1</text>
+<text class="small" x="406" y="40" text-anchor="middle">t2</text>
+<text class="small" x="534" y="40" text-anchor="middle">t3</text>
+<text class="small" x="662" y="40" text-anchor="middle">t4</text>
+<text class="small" x="790" y="40" text-anchor="middle">t5</text>
+<text class="small" x="918" y="40" text-anchor="middle">t6</text>
+<text class="small" x="1046" y="40" text-anchor="middle">t7</text>
+<text class="small" x="1174" y="40" text-anchor="middle">t8</text>
+<text class="small" x="1302" y="40" text-anchor="middle">t9</text>
+<text class="small" x="1430" y="40" text-anchor="middle">t10</text>
+<text class="small" x="1558" y="40" text-anchor="middle">t11</text>
+<text class="small" x="1686" y="40" text-anchor="middle">t12</text>
+<text class="small" x="1814" y="40" text-anchor="middle">t13</text>
+<text class="small" x="1942" y="40" text-anchor="middle">t14</text>
+<text class="small" x="2070" y="40" text-anchor="middle">t15</text>
+<text x="8" y="58">s100</text>
+<text class="small" x="8" y="73">H 4.9M</text>
+<text class="small" x="8" y="86">M 7.7M</text>
+<rect x="86" y="46" width="125" height="22" fill="rgb(29,119,229)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 0, cpu 32, references 3942910, hits 1591235, misses 2351675, miss_rate_pct 59.643, target 40%, metric hits</title></rect>
+<rect x="86" y="68" width="125" height="22" fill="rgb(11,169,216)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 0, cpu 32, references 3942910, hits 1591235, misses 2351675, miss_rate_pct 59.643, target 40%, metric misses</title></rect>
+<text class="small" x="148.5" y="59" text-anchor="middle" fill="#f8fafc">H 1.6M</text>
+<text class="small" x="148.5" y="81" text-anchor="middle" fill="#0f172a">M 2.4M</text>
+<rect x="214" y="46" width="125" height="22" fill="rgb(22,140,224)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 1, cpu 34, references 4258567, hits 1903235, misses 2355332, miss_rate_pct 55.308, target 40%, metric hits</title></rect>
+<rect x="214" y="68" width="125" height="22" fill="rgb(11,169,216)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 1, cpu 34, references 4258567, hits 1903235, misses 2355332, miss_rate_pct 55.308, target 40%, metric misses</title></rect>
+<text class="small" x="276.5" y="59" text-anchor="middle" fill="#0f172a">H 1.9M</text>
+<text class="small" x="276.5" y="81" text-anchor="middle" fill="#0f172a">M 2.4M</text>
+<rect x="342" y="46" width="125" height="22" fill="rgb(7,183,207)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 2, cpu 36, references 4591631, hits 2609418, misses 1982213, miss_rate_pct 43.170, target 40%, metric hits</title></rect>
+<rect x="342" y="68" width="125" height="22" fill="rgb(20,145,222)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 2, cpu 36, references 4591631, hits 2609418, misses 1982213, miss_rate_pct 43.170, target 40%, metric misses</title></rect>
+<text class="small" x="404.5" y="59" text-anchor="middle" fill="#0f172a">H 2.6M</text>
+<text class="small" x="404.5" y="81" text-anchor="middle" fill="#0f172a">M 2.0M</text>
+<rect x="470" y="46" width="125" height="22" fill="rgb(11,185,191)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 3, cpu 6, references 4999796, hits 2809992, misses 2189804, miss_rate_pct 43.798, target 40%, metric hits</title></rect>
+<rect x="470" y="68" width="125" height="22" fill="rgb(15,158,219)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 3, cpu 6, references 4999796, hits 2809992, misses 2189804, miss_rate_pct 43.798, target 40%, metric misses</title></rect>
+<text class="small" x="532.5" y="59" text-anchor="middle" fill="#0f172a">H 2.8M</text>
+<text class="small" x="532.5" y="81" text-anchor="middle" fill="#0f172a">M 2.2M</text>
+<rect x="598" y="46" width="125" height="22" fill="rgb(178,202,45)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 4, cpu 8, references 11893170, hits 4948257, misses 6944913, miss_rate_pct 58.394, target 100%, metric hits</title></rect>
+<rect x="598" y="68" width="125" height="22" fill="rgb(244,101,25)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 4, cpu 8, references 11893170, hits 4948257, misses 6944913, miss_rate_pct 58.394, target 100%, metric misses</title></rect>
+<text class="small" x="660.5" y="59" text-anchor="middle" fill="#0f172a">H 4.9M</text>
+<text class="small" x="660.5" y="81" text-anchor="middle" fill="#0f172a">M 6.9M</text>
+<rect x="726" y="46" width="125" height="22" fill="rgb(106,199,70)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 5, cpu 42, references 11905780, hits 4466613, misses 7439167, miss_rate_pct 62.484, target 100%, metric hits</title></rect>
+<rect x="726" y="68" width="125" height="22" fill="rgb(232,71,31)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 5, cpu 42, references 11905780, hits 4466613, misses 7439167, miss_rate_pct 62.484, target 100%, metric misses</title></rect>
+<text class="small" x="788.5" y="59" text-anchor="middle" fill="#0f172a">H 4.5M</text>
+<text class="small" x="788.5" y="81" text-anchor="middle" fill="#f8fafc">M 7.4M</text>
+<rect x="854" y="46" width="125" height="22" fill="rgb(71,198,81)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 6, cpu 12, references 11466469, hits 4237389, misses 7229080, miss_rate_pct 63.045, target 100%, metric hits</title></rect>
+<rect x="854" y="68" width="125" height="22" fill="rgb(237,83,29)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 6, cpu 12, references 11466469, hits 4237389, misses 7229080, miss_rate_pct 63.045, target 100%, metric misses</title></rect>
+<text class="small" x="916.5" y="59" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="916.5" y="81" text-anchor="middle" fill="#f8fafc">M 7.2M</text>
+<rect x="982" y="46" width="125" height="22" fill="rgb(103,199,71)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 7, cpu 46, references 11952011, hits 4451592, misses 7500419, miss_rate_pct 62.754, target 100%, metric hits</title></rect>
+<rect x="982" y="68" width="125" height="22" fill="rgb(231,67,32)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 7, cpu 46, references 11952011, hits 4451592, misses 7500419, miss_rate_pct 62.754, target 100%, metric misses</title></rect>
+<text class="small" x="1044.5" y="59" text-anchor="middle" fill="#0f172a">H 4.5M</text>
+<text class="small" x="1044.5" y="81" text-anchor="middle" fill="#f8fafc">M 7.5M</text>
+<rect x="1110" y="46" width="125" height="22" fill="rgb(79,198,79)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 8, cpu 16, references 11838498, hits 4292091, misses 7546407, miss_rate_pct 63.745, target 100%, metric hits</title></rect>
+<rect x="1110" y="68" width="125" height="22" fill="rgb(230,64,33)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 8, cpu 16, references 11838498, hits 4292091, misses 7546407, miss_rate_pct 63.745, target 100%, metric misses</title></rect>
+<text class="small" x="1172.5" y="59" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="1172.5" y="81" text-anchor="middle" fill="#f8fafc">M 7.5M</text>
+<rect x="1238" y="46" width="125" height="22" fill="rgb(67,198,83)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 9, cpu 18, references 11353863, hits 4211109, misses 7142754, miss_rate_pct 62.910, target 100%, metric hits</title></rect>
+<rect x="1238" y="68" width="125" height="22" fill="rgb(239,89,27)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 9, cpu 18, references 11353863, hits 4211109, misses 7142754, miss_rate_pct 62.910, target 100%, metric misses</title></rect>
+<text class="small" x="1300.5" y="59" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1300.5" y="81" text-anchor="middle" fill="#f8fafc">M 7.1M</text>
+<rect x="1366" y="46" width="125" height="22" fill="rgb(57,198,86)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 10, cpu 52, references 11797920, hits 4143300, misses 7654620, miss_rate_pct 64.881, target 100%, metric hits</title></rect>
+<rect x="1366" y="68" width="125" height="22" fill="rgb(227,58,34)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 10, cpu 52, references 11797920, hits 4143300, misses 7654620, miss_rate_pct 64.881, target 100%, metric misses</title></rect>
+<text class="small" x="1428.5" y="59" text-anchor="middle" fill="#0f172a">H 4.1M</text>
+<text class="small" x="1428.5" y="81" text-anchor="middle" fill="#f8fafc">M 7.7M</text>
+<rect x="1494" y="46" width="125" height="22" fill="rgb(56,198,86)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 11, cpu 22, references 11763799, hits 4139253, misses 7624546, miss_rate_pct 64.814, target 100%, metric hits</title></rect>
+<rect x="1494" y="68" width="125" height="22" fill="rgb(228,60,34)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 11, cpu 22, references 11763799, hits 4139253, misses 7624546, miss_rate_pct 64.814, target 100%, metric misses</title></rect>
+<text class="small" x="1556.5" y="59" text-anchor="middle" fill="#0f172a">H 4.1M</text>
+<text class="small" x="1556.5" y="81" text-anchor="middle" fill="#f8fafc">M 7.6M</text>
+<rect x="1622" y="46" width="125" height="22" fill="rgb(16,156,219)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 12, cpu 24, references 5182217, hits 2152491, misses 3029726, miss_rate_pct 58.464, target 50%, metric hits</title></rect>
+<rect x="1622" y="68" width="125" height="22" fill="rgb(15,187,173)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 12, cpu 24, references 5182217, hits 2152491, misses 3029726, miss_rate_pct 58.464, target 50%, metric misses</title></rect>
+<text class="small" x="1684.5" y="59" text-anchor="middle" fill="#0f172a">H 2.2M</text>
+<text class="small" x="1684.5" y="81" text-anchor="middle" fill="#0f172a">M 3.0M</text>
+<rect x="1750" y="46" width="125" height="22" fill="rgb(37,100,235)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 13, cpu 58, references 4617355, hits 1290027, misses 3327328, miss_rate_pct 72.061, target 50%, metric hits</title></rect>
+<rect x="1750" y="68" width="125" height="22" fill="rgb(21,190,148)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 13, cpu 58, references 4617355, hits 1290027, misses 3327328, miss_rate_pct 72.061, target 50%, metric misses</title></rect>
+<text class="small" x="1812.5" y="59" text-anchor="middle" fill="#f8fafc">H 1.3M</text>
+<text class="small" x="1812.5" y="81" text-anchor="middle" fill="#0f172a">M 3.3M</text>
+<rect x="1878" y="46" width="125" height="22" fill="rgb(33,109,232)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 14, cpu 28, references 4993821, hits 1423356, misses 3570465, miss_rate_pct 71.498, target 50%, metric hits</title></rect>
+<rect x="1878" y="68" width="125" height="22" fill="rgb(26,193,129)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 14, cpu 28, references 4993821, hits 1423356, misses 3570465, miss_rate_pct 71.498, target 50%, metric misses</title></rect>
+<text class="small" x="1940.5" y="59" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="1940.5" y="81" text-anchor="middle" fill="#0f172a">M 3.6M</text>
+<rect x="2006" y="46" width="125" height="22" fill="rgb(33,109,232)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 15, cpu 30, references 4881527, hits 1433553, misses 3447974, miss_rate_pct 70.633, target 50%, metric hits</title></rect>
+<rect x="2006" y="68" width="125" height="22" fill="rgb(23,191,139)" stroke="#334155" stroke-width="0.35"><title>step 100, heat_update, thread 15, cpu 30, references 4881527, hits 1433553, misses 3447974, miss_rate_pct 70.633, target 50%, metric misses</title></rect>
+<text class="small" x="2068.5" y="59" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="2068.5" y="81" text-anchor="middle" fill="#0f172a">M 3.4M</text>
+<text x="8" y="106">s200</text>
+<text class="small" x="8" y="121">H 4.9M</text>
+<text class="small" x="8" y="134">M 7.9M</text>
+<rect x="86" y="94" width="125" height="22" fill="rgb(30,118,230)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 0, cpu 32, references 3883779, hits 1576045, misses 2307734, miss_rate_pct 59.420, target 30%, metric hits</title></rect>
+<rect x="86" y="116" width="125" height="22" fill="rgb(12,166,216)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 0, cpu 32, references 3883779, hits 1576045, misses 2307734, miss_rate_pct 59.420, target 30%, metric misses</title></rect>
+<text class="small" x="148.5" y="107" text-anchor="middle" fill="#f8fafc">H 1.6M</text>
+<text class="small" x="148.5" y="129" text-anchor="middle" fill="#0f172a">M 2.3M</text>
+<rect x="214" y="94" width="125" height="22" fill="rgb(25,132,226)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 1, cpu 34, references 3957446, hits 1782613, misses 2174833, miss_rate_pct 54.955, target 30%, metric hits</title></rect>
+<rect x="214" y="116" width="125" height="22" fill="rgb(15,157,219)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 1, cpu 34, references 3957446, hits 1782613, misses 2174833, miss_rate_pct 54.955, target 30%, metric misses</title></rect>
+<text class="small" x="276.5" y="107" text-anchor="middle" fill="#f8fafc">H 1.8M</text>
+<text class="small" x="276.5" y="129" text-anchor="middle" fill="#0f172a">M 2.2M</text>
+<rect x="342" y="94" width="125" height="22" fill="rgb(7,182,210)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 2, cpu 36, references 4522859, hits 2580247, misses 1942612, miss_rate_pct 42.951, target 30%, metric hits</title></rect>
+<rect x="342" y="116" width="125" height="22" fill="rgb(21,142,223)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 2, cpu 36, references 4522859, hits 2580247, misses 1942612, miss_rate_pct 42.951, target 30%, metric misses</title></rect>
+<text class="small" x="404.5" y="107" text-anchor="middle" fill="#0f172a">H 2.6M</text>
+<text class="small" x="404.5" y="129" text-anchor="middle" fill="#0f172a">M 1.9M</text>
+<rect x="470" y="94" width="125" height="22" fill="rgb(10,184,196)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 3, cpu 6, references 4900620, hits 2751517, misses 2149103, miss_rate_pct 43.854, target 30%, metric hits</title></rect>
+<rect x="470" y="116" width="125" height="22" fill="rgb(16,156,219)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 3, cpu 6, references 4900620, hits 2751517, misses 2149103, miss_rate_pct 43.854, target 30%, metric misses</title></rect>
+<text class="small" x="532.5" y="107" text-anchor="middle" fill="#0f172a">H 2.8M</text>
+<text class="small" x="532.5" y="129" text-anchor="middle" fill="#0f172a">M 2.1M</text>
+<rect x="598" y="94" width="125" height="22" fill="rgb(172,201,47)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 4, cpu 8, references 12238296, hits 4907390, misses 7330906, miss_rate_pct 59.901, target 100%, metric hits</title></rect>
+<rect x="598" y="116" width="125" height="22" fill="rgb(235,77,30)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 4, cpu 8, references 12238296, hits 4907390, misses 7330906, miss_rate_pct 59.901, target 100%, metric misses</title></rect>
+<text class="small" x="660.5" y="107" text-anchor="middle" fill="#0f172a">H 4.9M</text>
+<text class="small" x="660.5" y="129" text-anchor="middle" fill="#f8fafc">M 7.3M</text>
+<rect x="726" y="94" width="125" height="22" fill="rgb(102,199,71)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 5, cpu 42, references 12261640, hits 4445077, misses 7816563, miss_rate_pct 63.748, target 100%, metric hits</title></rect>
+<rect x="726" y="116" width="125" height="22" fill="rgb(224,48,36)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 5, cpu 42, references 12261640, hits 4445077, misses 7816563, miss_rate_pct 63.748, target 100%, metric misses</title></rect>
+<text class="small" x="788.5" y="107" text-anchor="middle" fill="#0f172a">H 4.4M</text>
+<text class="small" x="788.5" y="129" text-anchor="middle" fill="#f8fafc">M 7.8M</text>
+<rect x="854" y="94" width="125" height="22" fill="rgb(84,199,77)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 6, cpu 12, references 11782631, hits 4323372, misses 7459259, miss_rate_pct 63.307, target 100%, metric hits</title></rect>
+<rect x="854" y="116" width="125" height="22" fill="rgb(232,69,31)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 6, cpu 12, references 11782631, hits 4323372, misses 7459259, miss_rate_pct 63.307, target 100%, metric misses</title></rect>
+<text class="small" x="916.5" y="107" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="916.5" y="129" text-anchor="middle" fill="#f8fafc">M 7.5M</text>
+<rect x="982" y="94" width="125" height="22" fill="rgb(72,198,81)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 7, cpu 46, references 11964673, hits 4240716, misses 7723957, miss_rate_pct 64.556, target 100%, metric hits</title></rect>
+<rect x="982" y="116" width="125" height="22" fill="rgb(226,54,35)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 7, cpu 46, references 11964673, hits 4240716, misses 7723957, miss_rate_pct 64.556, target 100%, metric misses</title></rect>
+<text class="small" x="1044.5" y="107" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1044.5" y="129" text-anchor="middle" fill="#f8fafc">M 7.7M</text>
+<rect x="1110" y="94" width="125" height="22" fill="rgb(84,199,77)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 8, cpu 16, references 12189529, hits 4320302, misses 7869227, miss_rate_pct 64.557, target 100%, metric hits</title></rect>
+<rect x="1110" y="116" width="125" height="22" fill="rgb(223,45,37)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 8, cpu 16, references 12189529, hits 4320302, misses 7869227, miss_rate_pct 64.557, target 100%, metric misses</title></rect>
+<text class="small" x="1172.5" y="107" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="1172.5" y="129" text-anchor="middle" fill="#f8fafc">M 7.9M</text>
+<rect x="1238" y="94" width="125" height="22" fill="rgb(73,198,81)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 9, cpu 18, references 11672649, hits 4253280, misses 7419369, miss_rate_pct 63.562, target 100%, metric hits</title></rect>
+<rect x="1238" y="116" width="125" height="22" fill="rgb(233,72,31)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 9, cpu 18, references 11672649, hits 4253280, misses 7419369, miss_rate_pct 63.562, target 100%, metric misses</title></rect>
+<text class="small" x="1300.5" y="107" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="1300.5" y="129" text-anchor="middle" fill="#f8fafc">M 7.4M</text>
+<rect x="1366" y="94" width="125" height="22" fill="rgb(34,197,94)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 10, cpu 52, references 11902116, hits 3989078, misses 7913038, miss_rate_pct 66.484, target 100%, metric hits</title></rect>
+<rect x="1366" y="116" width="125" height="22" fill="rgb(222,42,37)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 10, cpu 52, references 11902116, hits 3989078, misses 7913038, miss_rate_pct 66.484, target 100%, metric misses</title></rect>
+<text class="small" x="1428.5" y="107" text-anchor="middle" fill="#0f172a">H 4.0M</text>
+<text class="small" x="1428.5" y="129" text-anchor="middle" fill="#f8fafc">M 7.9M</text>
+<rect x="1494" y="94" width="125" height="22" fill="rgb(67,198,83)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 11, cpu 22, references 12130659, hits 4209514, misses 7921145, miss_rate_pct 65.299, target 100%, metric hits</title></rect>
+<rect x="1494" y="116" width="125" height="22" fill="rgb(221,42,37)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 11, cpu 22, references 12130659, hits 4209514, misses 7921145, miss_rate_pct 65.299, target 100%, metric misses</title></rect>
+<text class="small" x="1556.5" y="107" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1556.5" y="129" text-anchor="middle" fill="#f8fafc">M 7.9M</text>
+<rect x="1622" y="94" width="125" height="22" fill="rgb(20,145,222)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 12, cpu 24, references 4861424, hits 1991741, misses 2869683, miss_rate_pct 59.030, target 30%, metric hits</title></rect>
+<rect x="1622" y="116" width="125" height="22" fill="rgb(12,185,186)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 12, cpu 24, references 4861424, hits 1991741, misses 2869683, miss_rate_pct 59.030, target 30%, metric misses</title></rect>
+<text class="small" x="1684.5" y="107" text-anchor="middle" fill="#0f172a">H 2.0M</text>
+<text class="small" x="1684.5" y="129" text-anchor="middle" fill="#0f172a">M 2.9M</text>
+<rect x="1750" y="94" width="125" height="22" fill="rgb(35,105,233)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 13, cpu 58, references 4746437, hits 1368725, misses 3377712, miss_rate_pct 71.163, target 30%, metric hits</title></rect>
+<rect x="1750" y="116" width="125" height="22" fill="rgb(22,191,144)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 13, cpu 58, references 4746437, hits 1368725, misses 3377712, miss_rate_pct 71.163, target 30%, metric misses</title></rect>
+<text class="small" x="1812.5" y="107" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="1812.5" y="129" text-anchor="middle" fill="#0f172a">M 3.4M</text>
+<rect x="1878" y="94" width="125" height="22" fill="rgb(34,106,233)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 14, cpu 28, references 4763450, hits 1383003, misses 3380447, miss_rate_pct 70.966, target 30%, metric hits</title></rect>
+<rect x="1878" y="116" width="125" height="22" fill="rgb(22,191,144)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 14, cpu 28, references 4763450, hits 1383003, misses 3380447, miss_rate_pct 70.966, target 30%, metric misses</title></rect>
+<text class="small" x="1940.5" y="107" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="1940.5" y="129" text-anchor="middle" fill="#0f172a">M 3.4M</text>
+<rect x="2006" y="94" width="125" height="22" fill="rgb(34,108,232)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 15, cpu 30, references 4651323, hits 1417299, misses 3234024, miss_rate_pct 69.529, target 30%, metric hits</title></rect>
+<rect x="2006" y="116" width="125" height="22" fill="rgb(19,189,156)" stroke="#334155" stroke-width="0.35"><title>step 200, heat_update, thread 15, cpu 30, references 4651323, hits 1417299, misses 3234024, miss_rate_pct 69.529, target 30%, metric misses</title></rect>
+<text class="small" x="2068.5" y="107" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="2068.5" y="129" text-anchor="middle" fill="#0f172a">M 3.2M</text>
+<text x="8" y="154">s300</text>
+<text class="small" x="8" y="169">H 4.9M</text>
+<text class="small" x="8" y="182">M 8.0M</text>
+<rect x="86" y="142" width="125" height="22" fill="rgb(30,119,230)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 0, cpu 32, references 3881739, hits 1578940, misses 2302799, miss_rate_pct 59.324, target 30%, metric hits</title></rect>
+<rect x="86" y="164" width="125" height="22" fill="rgb(12,166,217)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 0, cpu 32, references 3881739, hits 1578940, misses 2302799, miss_rate_pct 59.324, target 30%, metric misses</title></rect>
+<text class="small" x="148.5" y="155" text-anchor="middle" fill="#f8fafc">H 1.6M</text>
+<text class="small" x="148.5" y="177" text-anchor="middle" fill="#0f172a">M 2.3M</text>
+<rect x="214" y="142" width="125" height="22" fill="rgb(25,131,226)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 1, cpu 34, references 3916897, hits 1767918, misses 2148979, miss_rate_pct 54.864, target 30%, metric hits</title></rect>
+<rect x="214" y="164" width="125" height="22" fill="rgb(16,156,219)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 1, cpu 34, references 3916897, hits 1767918, misses 2148979, miss_rate_pct 54.864, target 30%, metric misses</title></rect>
+<text class="small" x="276.5" y="155" text-anchor="middle" fill="#f8fafc">H 1.8M</text>
+<text class="small" x="276.5" y="177" text-anchor="middle" fill="#0f172a">M 2.1M</text>
+<rect x="342" y="142" width="125" height="22" fill="rgb(10,184,196)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 2, cpu 36, references 4877970, hits 2744610, misses 2133360, miss_rate_pct 43.735, target 30%, metric hits</title></rect>
+<rect x="342" y="164" width="125" height="22" fill="rgb(16,155,220)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 2, cpu 36, references 4877970, hits 2744610, misses 2133360, miss_rate_pct 43.735, target 30%, metric misses</title></rect>
+<text class="small" x="404.5" y="155" text-anchor="middle" fill="#0f172a">H 2.7M</text>
+<text class="small" x="404.5" y="177" text-anchor="middle" fill="#0f172a">M 2.1M</text>
+<rect x="470" y="142" width="125" height="22" fill="rgb(7,182,210)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 3, cpu 38, references 4537388, hits 2582261, misses 1955127, miss_rate_pct 43.089, target 30%, metric hits</title></rect>
+<rect x="470" y="164" width="125" height="22" fill="rgb(21,143,223)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 3, cpu 38, references 4537388, hits 2582261, misses 1955127, miss_rate_pct 43.089, target 30%, metric misses</title></rect>
+<text class="small" x="532.5" y="155" text-anchor="middle" fill="#0f172a">H 2.6M</text>
+<text class="small" x="532.5" y="177" text-anchor="middle" fill="#0f172a">M 2.0M</text>
+<rect x="598" y="142" width="125" height="22" fill="rgb(172,201,47)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 4, cpu 8, references 12229267, hits 4909277, misses 7319990, miss_rate_pct 59.856, target 100%, metric hits</title></rect>
+<rect x="598" y="164" width="125" height="22" fill="rgb(235,78,30)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 4, cpu 8, references 12229267, hits 4909277, misses 7319990, miss_rate_pct 59.856, target 100%, metric misses</title></rect>
+<text class="small" x="660.5" y="155" text-anchor="middle" fill="#0f172a">H 4.9M</text>
+<text class="small" x="660.5" y="177" text-anchor="middle" fill="#f8fafc">M 7.3M</text>
+<rect x="726" y="142" width="125" height="22" fill="rgb(103,199,71)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 5, cpu 42, references 12256584, hits 4448912, misses 7807672, miss_rate_pct 63.702, target 100%, metric hits</title></rect>
+<rect x="726" y="164" width="125" height="22" fill="rgb(224,48,36)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 5, cpu 42, references 12256584, hits 4448912, misses 7807672, miss_rate_pct 63.702, target 100%, metric misses</title></rect>
+<text class="small" x="788.5" y="155" text-anchor="middle" fill="#0f172a">H 4.4M</text>
+<text class="small" x="788.5" y="177" text-anchor="middle" fill="#f8fafc">M 7.8M</text>
+<rect x="854" y="142" width="125" height="22" fill="rgb(76,198,80)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 6, cpu 12, references 11780243, hits 4268978, misses 7511265, miss_rate_pct 63.762, target 100%, metric hits</title></rect>
+<rect x="854" y="164" width="125" height="22" fill="rgb(231,66,32)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 6, cpu 12, references 11780243, hits 4268978, misses 7511265, miss_rate_pct 63.762, target 100%, metric misses</title></rect>
+<text class="small" x="916.5" y="155" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="916.5" y="177" text-anchor="middle" fill="#f8fafc">M 7.5M</text>
+<rect x="982" y="142" width="125" height="22" fill="rgb(70,198,82)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 7, cpu 46, references 11855722, hits 4231515, misses 7624207, miss_rate_pct 64.308, target 100%, metric hits</title></rect>
+<rect x="982" y="164" width="125" height="22" fill="rgb(228,60,34)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 7, cpu 46, references 11855722, hits 4231515, misses 7624207, miss_rate_pct 64.308, target 100%, metric misses</title></rect>
+<text class="small" x="1044.5" y="155" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1044.5" y="177" text-anchor="middle" fill="#f8fafc">M 7.6M</text>
+<rect x="1110" y="142" width="125" height="22" fill="rgb(85,199,77)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 8, cpu 16, references 12186280, hits 4327220, misses 7859060, miss_rate_pct 64.491, target 100%, metric hits</title></rect>
+<rect x="1110" y="164" width="125" height="22" fill="rgb(223,45,36)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 8, cpu 16, references 12186280, hits 4327220, misses 7859060, miss_rate_pct 64.491, target 100%, metric misses</title></rect>
+<text class="small" x="1172.5" y="155" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="1172.5" y="177" text-anchor="middle" fill="#f8fafc">M 7.9M</text>
+<rect x="1238" y="142" width="125" height="22" fill="rgb(71,198,81)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 9, cpu 18, references 11668160, hits 4239750, misses 7428410, miss_rate_pct 63.664, target 100%, metric hits</title></rect>
+<rect x="1238" y="164" width="125" height="22" fill="rgb(233,71,31)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 9, cpu 18, references 11668160, hits 4239750, misses 7428410, miss_rate_pct 63.664, target 100%, metric misses</title></rect>
+<text class="small" x="1300.5" y="155" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1300.5" y="177" text-anchor="middle" fill="#f8fafc">M 7.4M</text>
+<rect x="1366" y="142" width="125" height="22" fill="rgb(62,198,85)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 10, cpu 52, references 12157246, hits 4175736, misses 7981510, miss_rate_pct 65.652, target 100%, metric hits</title></rect>
+<rect x="1366" y="164" width="125" height="22" fill="rgb(220,38,38)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 10, cpu 52, references 12157246, hits 4175736, misses 7981510, miss_rate_pct 65.652, target 100%, metric misses</title></rect>
+<text class="small" x="1428.5" y="155" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1428.5" y="177" text-anchor="middle" fill="#f8fafc">M 8.0M</text>
+<rect x="1494" y="142" width="125" height="22" fill="rgb(66,198,83)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 11, cpu 22, references 12127639, hits 4204944, misses 7922695, miss_rate_pct 65.328, target 100%, metric hits</title></rect>
+<rect x="1494" y="164" width="125" height="22" fill="rgb(221,42,37)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 11, cpu 22, references 12127639, hits 4204944, misses 7922695, miss_rate_pct 65.328, target 100%, metric misses</title></rect>
+<text class="small" x="1556.5" y="155" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1556.5" y="177" text-anchor="middle" fill="#f8fafc">M 7.9M</text>
+<rect x="1622" y="142" width="125" height="22" fill="rgb(18,149,221)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 12, cpu 24, references 4879213, hits 2050202, misses 2829011, miss_rate_pct 57.981, target 30%, metric hits</title></rect>
+<rect x="1622" y="164" width="125" height="22" fill="rgb(11,185,189)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 12, cpu 24, references 4879213, hits 2050202, misses 2829011, miss_rate_pct 57.981, target 30%, metric misses</title></rect>
+<text class="small" x="1684.5" y="155" text-anchor="middle" fill="#0f172a">H 2.1M</text>
+<text class="small" x="1684.5" y="177" text-anchor="middle" fill="#0f172a">M 2.8M</text>
+<rect x="1750" y="142" width="125" height="22" fill="rgb(35,105,233)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 13, cpu 58, references 4772813, hits 1372868, misses 3399945, miss_rate_pct 71.236, target 40%, metric hits</title></rect>
+<rect x="1750" y="164" width="125" height="22" fill="rgb(22,191,143)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 13, cpu 58, references 4772813, hits 1372868, misses 3399945, miss_rate_pct 71.236, target 40%, metric misses</title></rect>
+<text class="small" x="1812.5" y="155" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="1812.5" y="177" text-anchor="middle" fill="#0f172a">M 3.4M</text>
+<rect x="1878" y="142" width="125" height="22" fill="rgb(35,104,234)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 14, cpu 28, references 4783238, hits 1358460, misses 3424778, miss_rate_pct 71.600, target 40%, metric hits</title></rect>
+<rect x="1878" y="164" width="125" height="22" fill="rgb(23,191,140)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 14, cpu 28, references 4783238, hits 1358460, misses 3424778, miss_rate_pct 71.600, target 40%, metric misses</title></rect>
+<text class="small" x="1940.5" y="155" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="1940.5" y="177" text-anchor="middle" fill="#0f172a">M 3.4M</text>
+<rect x="2006" y="142" width="125" height="22" fill="rgb(33,109,232)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 15, cpu 30, references 4656002, hits 1427569, misses 3228433, miss_rate_pct 69.339, target 30%, metric hits</title></rect>
+<rect x="2006" y="164" width="125" height="22" fill="rgb(19,189,157)" stroke="#334155" stroke-width="0.35"><title>step 300, heat_update, thread 15, cpu 30, references 4656002, hits 1427569, misses 3228433, miss_rate_pct 69.339, target 30%, metric misses</title></rect>
+<text class="small" x="2068.5" y="155" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="2068.5" y="177" text-anchor="middle" fill="#0f172a">M 3.2M</text>
+<text x="8" y="202">s400</text>
+<text class="small" x="8" y="217">H 4.9M</text>
+<text class="small" x="8" y="230">M 8.0M</text>
+<rect x="86" y="190" width="125" height="22" fill="rgb(30,119,230)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 0, cpu 32, references 3888564, hits 1582324, misses 2306240, miss_rate_pct 59.308, target 30%, metric hits</title></rect>
+<rect x="86" y="212" width="125" height="22" fill="rgb(12,166,216)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 0, cpu 32, references 3888564, hits 1582324, misses 2306240, miss_rate_pct 59.308, target 30%, metric misses</title></rect>
+<text class="small" x="148.5" y="203" text-anchor="middle" fill="#f8fafc">H 1.6M</text>
+<text class="small" x="148.5" y="225" text-anchor="middle" fill="#0f172a">M 2.3M</text>
+<rect x="214" y="190" width="125" height="22" fill="rgb(25,132,226)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 1, cpu 34, references 3983820, hits 1785295, misses 2198525, miss_rate_pct 55.186, target 30%, metric hits</title></rect>
+<rect x="214" y="212" width="125" height="22" fill="rgb(15,159,218)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 1, cpu 34, references 3983820, hits 1785295, misses 2198525, miss_rate_pct 55.186, target 30%, metric misses</title></rect>
+<text class="small" x="276.5" y="203" text-anchor="middle" fill="#f8fafc">H 1.8M</text>
+<text class="small" x="276.5" y="225" text-anchor="middle" fill="#0f172a">M 2.2M</text>
+<rect x="342" y="190" width="125" height="22" fill="rgb(10,184,196)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 2, cpu 36, references 4889847, hits 2749133, misses 2140714, miss_rate_pct 43.779, target 30%, metric hits</title></rect>
+<rect x="342" y="212" width="125" height="22" fill="rgb(16,155,219)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 2, cpu 36, references 4889847, hits 2749133, misses 2140714, miss_rate_pct 43.779, target 30%, metric misses</title></rect>
+<text class="small" x="404.5" y="203" text-anchor="middle" fill="#0f172a">H 2.7M</text>
+<text class="small" x="404.5" y="225" text-anchor="middle" fill="#0f172a">M 2.1M</text>
+<rect x="470" y="190" width="125" height="22" fill="rgb(10,184,196)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 3, cpu 38, references 4905290, hits 2749950, misses 2155340, miss_rate_pct 43.939, target 30%, metric hits</title></rect>
+<rect x="470" y="212" width="125" height="22" fill="rgb(16,156,219)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 3, cpu 38, references 4905290, hits 2749950, misses 2155340, miss_rate_pct 43.939, target 30%, metric misses</title></rect>
+<text class="small" x="532.5" y="203" text-anchor="middle" fill="#0f172a">H 2.7M</text>
+<text class="small" x="532.5" y="225" text-anchor="middle" fill="#0f172a">M 2.2M</text>
+<rect x="598" y="190" width="125" height="22" fill="rgb(168,201,49)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 4, cpu 8, references 12203087, hits 4882252, misses 7320835, miss_rate_pct 59.992, target 100%, metric hits</title></rect>
+<rect x="598" y="212" width="125" height="22" fill="rgb(235,78,30)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 4, cpu 8, references 12203087, hits 4882252, misses 7320835, miss_rate_pct 59.992, target 100%, metric misses</title></rect>
+<text class="small" x="660.5" y="203" text-anchor="middle" fill="#0f172a">H 4.9M</text>
+<text class="small" x="660.5" y="225" text-anchor="middle" fill="#f8fafc">M 7.3M</text>
+<rect x="726" y="190" width="125" height="22" fill="rgb(105,199,70)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 5, cpu 42, references 12230938, hits 4460559, misses 7770379, miss_rate_pct 63.531, target 100%, metric hits</title></rect>
+<rect x="726" y="212" width="125" height="22" fill="rgb(225,51,35)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 5, cpu 42, references 12230938, hits 4460559, misses 7770379, miss_rate_pct 63.531, target 100%, metric misses</title></rect>
+<text class="small" x="788.5" y="203" text-anchor="middle" fill="#0f172a">H 4.5M</text>
+<text class="small" x="788.5" y="225" text-anchor="middle" fill="#f8fafc">M 7.8M</text>
+<rect x="854" y="190" width="125" height="22" fill="rgb(83,199,77)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 6, cpu 12, references 11751138, hits 4319608, misses 7431530, miss_rate_pct 63.241, target 100%, metric hits</title></rect>
+<rect x="854" y="212" width="125" height="22" fill="rgb(232,71,31)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 6, cpu 12, references 11751138, hits 4319608, misses 7431530, miss_rate_pct 63.241, target 100%, metric misses</title></rect>
+<text class="small" x="916.5" y="203" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="916.5" y="225" text-anchor="middle" fill="#f8fafc">M 7.4M</text>
+<rect x="982" y="190" width="125" height="22" fill="rgb(61,198,85)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 7, cpu 46, references 11788137, hits 4169622, misses 7618515, miss_rate_pct 64.629, target 100%, metric hits</title></rect>
+<rect x="982" y="212" width="125" height="22" fill="rgb(228,60,33)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 7, cpu 46, references 11788137, hits 4169622, misses 7618515, miss_rate_pct 64.629, target 100%, metric misses</title></rect>
+<text class="small" x="1044.5" y="203" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1044.5" y="225" text-anchor="middle" fill="#f8fafc">M 7.6M</text>
+<rect x="1110" y="190" width="125" height="22" fill="rgb(86,199,76)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 8, cpu 16, references 12160051, hits 4336828, misses 7823223, miss_rate_pct 64.335, target 100%, metric hits</title></rect>
+<rect x="1110" y="212" width="125" height="22" fill="rgb(224,48,36)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 8, cpu 16, references 12160051, hits 4336828, misses 7823223, miss_rate_pct 64.335, target 100%, metric misses</title></rect>
+<text class="small" x="1172.5" y="203" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="1172.5" y="225" text-anchor="middle" fill="#f8fafc">M 7.8M</text>
+<rect x="1238" y="190" width="125" height="22" fill="rgb(58,198,86)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 9, cpu 18, references 11643234, hits 4148192, misses 7495042, miss_rate_pct 64.373, target 100%, metric hits</title></rect>
+<rect x="1238" y="212" width="125" height="22" fill="rgb(231,67,32)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 9, cpu 18, references 11643234, hits 4148192, misses 7495042, miss_rate_pct 64.373, target 100%, metric misses</title></rect>
+<text class="small" x="1300.5" y="203" text-anchor="middle" fill="#0f172a">H 4.1M</text>
+<text class="small" x="1300.5" y="225" text-anchor="middle" fill="#f8fafc">M 7.5M</text>
+<rect x="1366" y="190" width="125" height="22" fill="rgb(60,198,85)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 10, cpu 52, references 12123504, hits 4163346, misses 7960158, miss_rate_pct 65.659, target 100%, metric hits</title></rect>
+<rect x="1366" y="212" width="125" height="22" fill="rgb(220,39,38)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 10, cpu 52, references 12123504, hits 4163346, misses 7960158, miss_rate_pct 65.659, target 100%, metric misses</title></rect>
+<text class="small" x="1428.5" y="203" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1428.5" y="225" text-anchor="middle" fill="#f8fafc">M 8.0M</text>
+<rect x="1494" y="190" width="125" height="22" fill="rgb(66,198,83)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 11, cpu 22, references 12095788, hits 4203513, misses 7892275, miss_rate_pct 65.248, target 100%, metric hits</title></rect>
+<rect x="1494" y="212" width="125" height="22" fill="rgb(222,43,37)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 11, cpu 22, references 12095788, hits 4203513, misses 7892275, miss_rate_pct 65.248, target 100%, metric misses</title></rect>
+<text class="small" x="1556.5" y="203" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1556.5" y="225" text-anchor="middle" fill="#f8fafc">M 7.9M</text>
+<rect x="1622" y="190" width="125" height="22" fill="rgb(18,151,221)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 12, cpu 24, references 4885146, hits 2070115, misses 2815031, miss_rate_pct 57.624, target 30%, metric hits</title></rect>
+<rect x="1622" y="212" width="125" height="22" fill="rgb(11,185,191)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 12, cpu 24, references 4885146, hits 2070115, misses 2815031, miss_rate_pct 57.624, target 30%, metric misses</title></rect>
+<text class="small" x="1684.5" y="203" text-anchor="middle" fill="#0f172a">H 2.1M</text>
+<text class="small" x="1684.5" y="225" text-anchor="middle" fill="#0f172a">M 2.8M</text>
+<rect x="1750" y="190" width="125" height="22" fill="rgb(34,106,233)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 13, cpu 58, references 4790416, hits 1385912, misses 3404504, miss_rate_pct 71.069, target 40%, metric hits</title></rect>
+<rect x="1750" y="212" width="125" height="22" fill="rgb(23,191,142)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 13, cpu 58, references 4790416, hits 1385912, misses 3404504, miss_rate_pct 71.069, target 40%, metric misses</title></rect>
+<text class="small" x="1812.5" y="203" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="1812.5" y="225" text-anchor="middle" fill="#0f172a">M 3.4M</text>
+<rect x="1878" y="190" width="125" height="22" fill="rgb(35,104,234)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 14, cpu 28, references 4790805, hits 1358309, misses 3432496, miss_rate_pct 71.648, target 40%, metric hits</title></rect>
+<rect x="1878" y="212" width="125" height="22" fill="rgb(23,191,140)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 14, cpu 28, references 4790805, hits 1358309, misses 3432496, miss_rate_pct 71.648, target 40%, metric misses</title></rect>
+<text class="small" x="1940.5" y="203" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="1940.5" y="225" text-anchor="middle" fill="#0f172a">M 3.4M</text>
+<rect x="2006" y="190" width="125" height="22" fill="rgb(35,105,233)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 15, cpu 30, references 4672064, hits 1375244, misses 3296820, miss_rate_pct 70.565, target 40%, metric hits</title></rect>
+<rect x="2006" y="212" width="125" height="22" fill="rgb(20,190,151)" stroke="#334155" stroke-width="0.35"><title>step 400, heat_update, thread 15, cpu 30, references 4672064, hits 1375244, misses 3296820, miss_rate_pct 70.565, target 40%, metric misses</title></rect>
+<text class="small" x="2068.5" y="203" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="2068.5" y="225" text-anchor="middle" fill="#0f172a">M 3.3M</text>
+<text x="8" y="250">s500</text>
+<text class="small" x="8" y="265">H 4.7M</text>
+<text class="small" x="8" y="278">M 7.8M</text>
+<rect x="86" y="238" width="125" height="22" fill="rgb(30,119,230)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 0, cpu 32, references 3885509, hits 1581530, misses 2303979, miss_rate_pct 59.297, target 30%, metric hits</title></rect>
+<rect x="86" y="260" width="125" height="22" fill="rgb(12,166,217)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 0, cpu 32, references 3885509, hits 1581530, misses 2303979, miss_rate_pct 59.297, target 30%, metric misses</title></rect>
+<text class="small" x="148.5" y="251" text-anchor="middle" fill="#f8fafc">H 1.6M</text>
+<text class="small" x="148.5" y="273" text-anchor="middle" fill="#0f172a">M 2.3M</text>
+<rect x="214" y="238" width="125" height="22" fill="rgb(22,138,224)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 1, cpu 34, references 4180065, hits 1882694, misses 2297371, miss_rate_pct 54.960, target 30%, metric hits</title></rect>
+<rect x="214" y="260" width="125" height="22" fill="rgb(12,165,217)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 1, cpu 34, references 4180065, hits 1882694, misses 2297371, miss_rate_pct 54.960, target 30%, metric misses</title></rect>
+<text class="small" x="276.5" y="251" text-anchor="middle" fill="#f8fafc">H 1.9M</text>
+<text class="small" x="276.5" y="273" text-anchor="middle" fill="#0f172a">M 2.3M</text>
+<rect x="342" y="238" width="125" height="22" fill="rgb(10,184,195)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 2, cpu 36, references 4886025, hits 2760711, misses 2125314, miss_rate_pct 43.498, target 30%, metric hits</title></rect>
+<rect x="342" y="260" width="125" height="22" fill="rgb(16,154,220)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 2, cpu 36, references 4886025, hits 2760711, misses 2125314, miss_rate_pct 43.498, target 30%, metric misses</title></rect>
+<text class="small" x="404.5" y="251" text-anchor="middle" fill="#0f172a">H 2.8M</text>
+<text class="small" x="404.5" y="273" text-anchor="middle" fill="#0f172a">M 2.1M</text>
+<rect x="470" y="238" width="125" height="22" fill="rgb(10,184,195)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 3, cpu 38, references 4896709, hits 2761386, misses 2135323, miss_rate_pct 43.607, target 30%, metric hits</title></rect>
+<rect x="470" y="260" width="125" height="22" fill="rgb(16,155,220)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 3, cpu 38, references 4896709, hits 2761386, misses 2135323, miss_rate_pct 43.607, target 30%, metric misses</title></rect>
+<text class="small" x="532.5" y="251" text-anchor="middle" fill="#0f172a">H 2.8M</text>
+<text class="small" x="532.5" y="273" text-anchor="middle" fill="#0f172a">M 2.1M</text>
+<rect x="598" y="238" width="125" height="22" fill="rgb(136,200,59)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 4, cpu 40, references 11512173, hits 4672500, misses 6839673, miss_rate_pct 59.413, target 100%, metric hits</title></rect>
+<rect x="598" y="260" width="125" height="22" fill="rgb(246,107,24)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 4, cpu 40, references 11512173, hits 4672500, misses 6839673, miss_rate_pct 59.413, target 100%, metric misses</title></rect>
+<text class="small" x="660.5" y="251" text-anchor="middle" fill="#0f172a">H 4.7M</text>
+<text class="small" x="660.5" y="273" text-anchor="middle" fill="#0f172a">M 6.8M</text>
+<rect x="726" y="238" width="125" height="22" fill="rgb(100,199,72)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 5, cpu 42, references 12066486, hits 4431517, misses 7634969, miss_rate_pct 63.274, target 100%, metric hits</title></rect>
+<rect x="726" y="260" width="125" height="22" fill="rgb(228,59,34)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 5, cpu 42, references 12066486, hits 4431517, misses 7634969, miss_rate_pct 63.274, target 100%, metric misses</title></rect>
+<text class="small" x="788.5" y="251" text-anchor="middle" fill="#0f172a">H 4.4M</text>
+<text class="small" x="788.5" y="273" text-anchor="middle" fill="#f8fafc">M 7.6M</text>
+<rect x="854" y="238" width="125" height="22" fill="rgb(80,198,79)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 6, cpu 12, references 11577646, hits 4293792, misses 7283854, miss_rate_pct 62.913, target 100%, metric hits</title></rect>
+<rect x="854" y="260" width="125" height="22" fill="rgb(236,80,29)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 6, cpu 12, references 11577646, hits 4293792, misses 7283854, miss_rate_pct 62.913, target 100%, metric misses</title></rect>
+<text class="small" x="916.5" y="251" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="916.5" y="273" text-anchor="middle" fill="#f8fafc">M 7.3M</text>
+<rect x="982" y="238" width="125" height="22" fill="rgb(101,199,71)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 7, cpu 46, references 12096666, hits 4434597, misses 7662069, miss_rate_pct 63.340, target 100%, metric hits</title></rect>
+<rect x="982" y="260" width="125" height="22" fill="rgb(227,57,34)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 7, cpu 46, references 12096666, hits 4434597, misses 7662069, miss_rate_pct 63.340, target 100%, metric misses</title></rect>
+<text class="small" x="1044.5" y="251" text-anchor="middle" fill="#0f172a">H 4.4M</text>
+<text class="small" x="1044.5" y="273" text-anchor="middle" fill="#f8fafc">M 7.7M</text>
+<rect x="1110" y="238" width="125" height="22" fill="rgb(85,199,77)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 8, cpu 16, references 11994245, hits 4327127, misses 7667118, miss_rate_pct 63.923, target 100%, metric hits</title></rect>
+<rect x="1110" y="260" width="125" height="22" fill="rgb(227,57,34)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 8, cpu 16, references 11994245, hits 4327127, misses 7667118, miss_rate_pct 63.923, target 100%, metric misses</title></rect>
+<text class="small" x="1172.5" y="251" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="1172.5" y="273" text-anchor="middle" fill="#f8fafc">M 7.7M</text>
+<rect x="1238" y="238" width="125" height="22" fill="rgb(66,198,83)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 9, cpu 18, references 11473020, hits 4206827, misses 7266193, miss_rate_pct 63.333, target 100%, metric hits</title></rect>
+<rect x="1238" y="260" width="125" height="22" fill="rgb(236,81,29)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 9, cpu 18, references 11473020, hits 4206827, misses 7266193, miss_rate_pct 63.333, target 100%, metric misses</title></rect>
+<text class="small" x="1300.5" y="251" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1300.5" y="273" text-anchor="middle" fill="#f8fafc">M 7.3M</text>
+<rect x="1366" y="238" width="125" height="22" fill="rgb(57,198,86)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 10, cpu 52, references 11959170, hits 4146712, misses 7812458, miss_rate_pct 65.326, target 100%, metric hits</title></rect>
+<rect x="1366" y="260" width="125" height="22" fill="rgb(224,48,36)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 10, cpu 52, references 11959170, hits 4146712, misses 7812458, miss_rate_pct 65.326, target 100%, metric misses</title></rect>
+<text class="small" x="1428.5" y="251" text-anchor="middle" fill="#0f172a">H 4.1M</text>
+<text class="small" x="1428.5" y="273" text-anchor="middle" fill="#f8fafc">M 7.8M</text>
+<rect x="1494" y="238" width="125" height="22" fill="rgb(68,198,83)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 11, cpu 22, references 11934852, hits 4214222, misses 7720630, miss_rate_pct 64.690, target 100%, metric hits</title></rect>
+<rect x="1494" y="260" width="125" height="22" fill="rgb(226,54,35)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 11, cpu 22, references 11934852, hits 4214222, misses 7720630, miss_rate_pct 64.690, target 100%, metric misses</title></rect>
+<text class="small" x="1556.5" y="251" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1556.5" y="273" text-anchor="middle" fill="#f8fafc">M 7.7M</text>
+<rect x="1622" y="238" width="125" height="22" fill="rgb(18,150,221)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 12, cpu 24, references 4885194, hits 2062285, misses 2822909, miss_rate_pct 57.785, target 30%, metric hits</title></rect>
+<rect x="1622" y="260" width="125" height="22" fill="rgb(11,185,190)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 12, cpu 24, references 4885194, hits 2062285, misses 2822909, miss_rate_pct 57.785, target 30%, metric misses</title></rect>
+<text class="small" x="1684.5" y="251" text-anchor="middle" fill="#0f172a">H 2.1M</text>
+<text class="small" x="1684.5" y="273" text-anchor="middle" fill="#0f172a">M 2.8M</text>
+<rect x="1750" y="238" width="125" height="22" fill="rgb(34,106,233)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 13, cpu 58, references 4786899, hits 1386447, misses 3400452, miss_rate_pct 71.037, target 40%, metric hits</title></rect>
+<rect x="1750" y="260" width="125" height="22" fill="rgb(22,191,142)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 13, cpu 58, references 4786899, hits 1386447, misses 3400452, miss_rate_pct 71.037, target 40%, metric misses</title></rect>
+<text class="small" x="1812.5" y="251" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="1812.5" y="273" text-anchor="middle" fill="#0f172a">M 3.4M</text>
+<rect x="1878" y="238" width="125" height="22" fill="rgb(35,104,234)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 14, cpu 28, references 4791774, hits 1353912, misses 3437862, miss_rate_pct 71.745, target 40%, metric hits</title></rect>
+<rect x="1878" y="260" width="125" height="22" fill="rgb(23,191,139)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 14, cpu 28, references 4791774, hits 1353912, misses 3437862, miss_rate_pct 71.745, target 40%, metric misses</title></rect>
+<text class="small" x="1940.5" y="251" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="1940.5" y="273" text-anchor="middle" fill="#0f172a">M 3.4M</text>
+<rect x="2006" y="238" width="125" height="22" fill="rgb(35,105,233)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 15, cpu 30, references 4666947, hits 1371041, misses 3295906, miss_rate_pct 70.622, target 40%, metric hits</title></rect>
+<rect x="2006" y="260" width="125" height="22" fill="rgb(20,190,151)" stroke="#334155" stroke-width="0.35"><title>step 500, heat_update, thread 15, cpu 30, references 4666947, hits 1371041, misses 3295906, miss_rate_pct 70.622, target 40%, metric misses</title></rect>
+<text class="small" x="2068.5" y="251" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="2068.5" y="273" text-anchor="middle" fill="#0f172a">M 3.3M</text>
+<text x="8" y="298">s600</text>
+<text class="small" x="8" y="313">H 4.8M</text>
+<text class="small" x="8" y="326">M 7.4M</text>
+<rect x="86" y="286" width="125" height="22" fill="rgb(29,120,229)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 0, cpu 32, references 3889541, hits 1603498, misses 2286043, miss_rate_pct 58.774, target 30%, metric hits</title></rect>
+<rect x="86" y="308" width="125" height="22" fill="rgb(13,165,217)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 0, cpu 32, references 3889541, hits 1603498, misses 2286043, miss_rate_pct 58.774, target 30%, metric misses</title></rect>
+<text class="small" x="148.5" y="299" text-anchor="middle" fill="#f8fafc">H 1.6M</text>
+<text class="small" x="148.5" y="321" text-anchor="middle" fill="#0f172a">M 2.3M</text>
+<rect x="214" y="286" width="125" height="22" fill="rgb(22,140,224)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 1, cpu 34, references 4196295, hits 1910536, misses 2285759, miss_rate_pct 54.471, target 30%, metric hits</title></rect>
+<rect x="214" y="308" width="125" height="22" fill="rgb(13,165,217)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 1, cpu 34, references 4196295, hits 1910536, misses 2285759, miss_rate_pct 54.471, target 30%, metric misses</title></rect>
+<text class="small" x="276.5" y="299" text-anchor="middle" fill="#0f172a">H 1.9M</text>
+<text class="small" x="276.5" y="321" text-anchor="middle" fill="#0f172a">M 2.3M</text>
+<rect x="342" y="286" width="125" height="22" fill="rgb(10,184,193)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 2, cpu 4, references 4905298, hits 2782262, misses 2123036, miss_rate_pct 43.280, target 30%, metric hits</title></rect>
+<rect x="342" y="308" width="125" height="22" fill="rgb(16,154,220)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 2, cpu 4, references 4905298, hits 2782262, misses 2123036, miss_rate_pct 43.280, target 30%, metric misses</title></rect>
+<text class="small" x="404.5" y="299" text-anchor="middle" fill="#0f172a">H 2.8M</text>
+<text class="small" x="404.5" y="321" text-anchor="middle" fill="#0f172a">M 2.1M</text>
+<rect x="470" y="286" width="125" height="22" fill="rgb(7,183,207)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 3, cpu 38, references 4606940, hits 2613246, misses 1993694, miss_rate_pct 43.276, target 30%, metric hits</title></rect>
+<rect x="470" y="308" width="125" height="22" fill="rgb(20,146,222)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 3, cpu 38, references 4606940, hits 2613246, misses 1993694, miss_rate_pct 43.276, target 30%, metric misses</title></rect>
+<text class="small" x="532.5" y="299" text-anchor="middle" fill="#0f172a">H 2.6M</text>
+<text class="small" x="532.5" y="321" text-anchor="middle" fill="#0f172a">M 2.0M</text>
+<rect x="598" y="286" width="125" height="22" fill="rgb(160,201,51)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 4, cpu 40, references 11473592, hits 4830316, misses 6643276, miss_rate_pct 57.901, target 100%, metric hits</title></rect>
+<rect x="598" y="308" width="125" height="22" fill="rgb(249,119,22)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 4, cpu 40, references 11473592, hits 4830316, misses 6643276, miss_rate_pct 57.901, target 100%, metric misses</title></rect>
+<text class="small" x="660.5" y="299" text-anchor="middle" fill="#0f172a">H 4.8M</text>
+<text class="small" x="660.5" y="321" text-anchor="middle" fill="#0f172a">M 6.6M</text>
+<rect x="726" y="286" width="125" height="22" fill="rgb(104,199,70)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 5, cpu 42, references 11656087, hits 4453742, misses 7202345, miss_rate_pct 61.790, target 100%, metric hits</title></rect>
+<rect x="726" y="308" width="125" height="22" fill="rgb(238,85,28)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 5, cpu 42, references 11656087, hits 4453742, misses 7202345, miss_rate_pct 61.790, target 100%, metric misses</title></rect>
+<text class="small" x="788.5" y="299" text-anchor="middle" fill="#0f172a">H 4.5M</text>
+<text class="small" x="788.5" y="321" text-anchor="middle" fill="#f8fafc">M 7.2M</text>
+<rect x="854" y="286" width="125" height="22" fill="rgb(47,197,90)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 6, cpu 44, references 10838105, hits 4076150, misses 6761955, miss_rate_pct 62.391, target 100%, metric hits</title></rect>
+<rect x="854" y="308" width="125" height="22" fill="rgb(248,112,23)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 6, cpu 44, references 10838105, hits 4076150, misses 6761955, miss_rate_pct 62.391, target 100%, metric misses</title></rect>
+<text class="small" x="916.5" y="299" text-anchor="middle" fill="#0f172a">H 4.1M</text>
+<text class="small" x="916.5" y="321" text-anchor="middle" fill="#0f172a">M 6.8M</text>
+<rect x="982" y="286" width="125" height="22" fill="rgb(103,199,71)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 7, cpu 46, references 11680615, hits 4452170, misses 7228445, miss_rate_pct 61.884, target 100%, metric hits</title></rect>
+<rect x="982" y="308" width="125" height="22" fill="rgb(237,83,29)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 7, cpu 46, references 11680615, hits 4452170, misses 7228445, miss_rate_pct 61.884, target 100%, metric misses</title></rect>
+<text class="small" x="1044.5" y="299" text-anchor="middle" fill="#0f172a">H 4.5M</text>
+<text class="small" x="1044.5" y="321" text-anchor="middle" fill="#f8fafc">M 7.2M</text>
+<rect x="1110" y="286" width="125" height="22" fill="rgb(86,199,76)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 8, cpu 16, references 11575768, hits 4338579, misses 7237189, miss_rate_pct 62.520, target 100%, metric hits</title></rect>
+<rect x="1110" y="308" width="125" height="22" fill="rgb(237,83,29)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 8, cpu 16, references 11575768, hits 4338579, misses 7237189, miss_rate_pct 62.520, target 100%, metric misses</title></rect>
+<text class="small" x="1172.5" y="299" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="1172.5" y="321" text-anchor="middle" fill="#f8fafc">M 7.2M</text>
+<rect x="1238" y="286" width="125" height="22" fill="rgb(64,198,84)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 9, cpu 18, references 11095966, hits 4193406, misses 6902560, miss_rate_pct 62.208, target 100%, metric hits</title></rect>
+<rect x="1238" y="308" width="125" height="22" fill="rgb(245,103,24)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 9, cpu 18, references 11095966, hits 4193406, misses 6902560, miss_rate_pct 62.208, target 100%, metric misses</title></rect>
+<text class="small" x="1300.5" y="299" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1300.5" y="321" text-anchor="middle" fill="#0f172a">M 6.9M</text>
+<rect x="1366" y="286" width="125" height="22" fill="rgb(56,198,87)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 10, cpu 52, references 11539939, hits 4135265, misses 7404674, miss_rate_pct 64.166, target 100%, metric hits</title></rect>
+<rect x="1366" y="308" width="125" height="22" fill="rgb(233,73,31)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 10, cpu 52, references 11539939, hits 4135265, misses 7404674, miss_rate_pct 64.166, target 100%, metric misses</title></rect>
+<text class="small" x="1428.5" y="299" text-anchor="middle" fill="#0f172a">H 4.1M</text>
+<text class="small" x="1428.5" y="321" text-anchor="middle" fill="#f8fafc">M 7.4M</text>
+<rect x="1494" y="286" width="125" height="22" fill="rgb(70,198,82)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 11, cpu 22, references 11514640, hits 4231457, misses 7283183, miss_rate_pct 63.252, target 100%, metric hits</title></rect>
+<rect x="1494" y="308" width="125" height="22" fill="rgb(236,80,29)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 11, cpu 22, references 11514640, hits 4231457, misses 7283183, miss_rate_pct 63.252, target 100%, metric misses</title></rect>
+<text class="small" x="1556.5" y="299" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1556.5" y="321" text-anchor="middle" fill="#f8fafc">M 7.3M</text>
+<rect x="1622" y="286" width="125" height="22" fill="rgb(18,150,221)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 12, cpu 24, references 4890060, hits 2063252, misses 2826808, miss_rate_pct 57.807, target 30%, metric hits</title></rect>
+<rect x="1622" y="308" width="125" height="22" fill="rgb(11,185,190)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 12, cpu 24, references 4890060, hits 2063252, misses 2826808, miss_rate_pct 57.807, target 30%, metric misses</title></rect>
+<text class="small" x="1684.5" y="299" text-anchor="middle" fill="#0f172a">H 2.1M</text>
+<text class="small" x="1684.5" y="321" text-anchor="middle" fill="#0f172a">M 2.8M</text>
+<rect x="1750" y="286" width="125" height="22" fill="rgb(34,106,233)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 13, cpu 58, references 4786712, hits 1382751, misses 3403961, miss_rate_pct 71.113, target 40%, metric hits</title></rect>
+<rect x="1750" y="308" width="125" height="22" fill="rgb(23,191,142)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 13, cpu 58, references 4786712, hits 1382751, misses 3403961, miss_rate_pct 71.113, target 40%, metric misses</title></rect>
+<text class="small" x="1812.5" y="299" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="1812.5" y="321" text-anchor="middle" fill="#0f172a">M 3.4M</text>
+<rect x="1878" y="286" width="125" height="22" fill="rgb(35,103,234)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 14, cpu 28, references 4780847, hits 1339396, misses 3441451, miss_rate_pct 71.984, target 40%, metric hits</title></rect>
+<rect x="1878" y="308" width="125" height="22" fill="rgb(23,191,139)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 14, cpu 28, references 4780847, hits 1339396, misses 3441451, miss_rate_pct 71.984, target 40%, metric misses</title></rect>
+<text class="small" x="1940.5" y="299" text-anchor="middle" fill="#f8fafc">H 1.3M</text>
+<text class="small" x="1940.5" y="321" text-anchor="middle" fill="#0f172a">M 3.4M</text>
+<rect x="2006" y="286" width="125" height="22" fill="rgb(35,105,233)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 15, cpu 30, references 4667626, hits 1364730, misses 3302896, miss_rate_pct 70.762, target 40%, metric hits</title></rect>
+<rect x="2006" y="308" width="125" height="22" fill="rgb(21,190,150)" stroke="#334155" stroke-width="0.35"><title>step 600, heat_update, thread 15, cpu 30, references 4667626, hits 1364730, misses 3302896, miss_rate_pct 70.762, target 40%, metric misses</title></rect>
+<text class="small" x="2068.5" y="299" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="2068.5" y="321" text-anchor="middle" fill="#0f172a">M 3.3M</text>
+<text x="8" y="346">s700</text>
+<text class="small" x="8" y="361">H 4.9M</text>
+<text class="small" x="8" y="374">M 6.8M</text>
+<rect x="86" y="334" width="125" height="22" fill="rgb(28,123,228)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 0, cpu 32, references 3894259, hits 1639971, misses 2254288, miss_rate_pct 57.887, target 30%, metric hits</title></rect>
+<rect x="86" y="356" width="125" height="22" fill="rgb(13,163,217)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 0, cpu 32, references 3894259, hits 1639971, misses 2254288, miss_rate_pct 57.887, target 30%, metric misses</title></rect>
+<text class="small" x="148.5" y="347" text-anchor="middle" fill="#f8fafc">H 1.6M</text>
+<text class="small" x="148.5" y="369" text-anchor="middle" fill="#0f172a">M 2.3M</text>
+<rect x="214" y="334" width="125" height="22" fill="rgb(21,142,223)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 1, cpu 34, references 4200098, hits 1944665, misses 2255433, miss_rate_pct 53.700, target 30%, metric hits</title></rect>
+<rect x="214" y="356" width="125" height="22" fill="rgb(13,163,217)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 1, cpu 34, references 4200098, hits 1944665, misses 2255433, miss_rate_pct 53.700, target 30%, metric misses</title></rect>
+<text class="small" x="276.5" y="347" text-anchor="middle" fill="#0f172a">H 1.9M</text>
+<text class="small" x="276.5" y="369" text-anchor="middle" fill="#0f172a">M 2.3M</text>
+<rect x="342" y="334" width="125" height="22" fill="rgb(8,183,205)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 2, cpu 36, references 4576664, hits 2644287, misses 1932377, miss_rate_pct 42.222, target 30%, metric hits</title></rect>
+<rect x="342" y="356" width="125" height="22" fill="rgb(21,142,223)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 2, cpu 36, references 4576664, hits 2644287, misses 1932377, miss_rate_pct 42.222, target 30%, metric misses</title></rect>
+<text class="small" x="404.5" y="347" text-anchor="middle" fill="#0f172a">H 2.6M</text>
+<text class="small" x="404.5" y="369" text-anchor="middle" fill="#0f172a">M 1.9M</text>
+<rect x="470" y="334" width="125" height="22" fill="rgb(6,182,211)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 3, cpu 38, references 4474541, hits 2571980, misses 1902561, miss_rate_pct 42.520, target 30%, metric hits</title></rect>
+<rect x="470" y="356" width="125" height="22" fill="rgb(22,140,224)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 3, cpu 38, references 4474541, hits 2571980, misses 1902561, miss_rate_pct 42.520, target 30%, metric misses</title></rect>
+<text class="small" x="532.5" y="347" text-anchor="middle" fill="#0f172a">H 2.6M</text>
+<text class="small" x="532.5" y="369" text-anchor="middle" fill="#0f172a">M 1.9M</text>
+<rect x="598" y="334" width="125" height="22" fill="rgb(176,202,46)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 4, cpu 8, references 11060448, hits 4933070, misses 6127378, miss_rate_pct 55.399, target 100%, metric hits</title></rect>
+<rect x="598" y="356" width="125" height="22" fill="rgb(249,155,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 4, cpu 8, references 11060448, hits 4933070, misses 6127378, miss_rate_pct 55.399, target 100%, metric misses</title></rect>
+<text class="small" x="660.5" y="347" text-anchor="middle" fill="#0f172a">H 4.9M</text>
+<text class="small" x="660.5" y="369" text-anchor="middle" fill="#0f172a">M 6.1M</text>
+<rect x="726" y="334" width="125" height="22" fill="rgb(104,199,70)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 5, cpu 42, references 11098688, hits 4454756, misses 6643932, miss_rate_pct 59.862, target 100%, metric hits</title></rect>
+<rect x="726" y="356" width="125" height="22" fill="rgb(249,119,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 5, cpu 42, references 11098688, hits 4454756, misses 6643932, miss_rate_pct 59.862, target 100%, metric misses</title></rect>
+<text class="small" x="788.5" y="347" text-anchor="middle" fill="#0f172a">H 4.5M</text>
+<text class="small" x="788.5" y="369" text-anchor="middle" fill="#0f172a">M 6.6M</text>
+<rect x="854" y="334" width="125" height="22" fill="rgb(36,197,93)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 6, cpu 44, references 10160924, hits 4001104, misses 6159820, miss_rate_pct 60.623, target 100%, metric hits</title></rect>
+<rect x="854" y="356" width="125" height="22" fill="rgb(249,153,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 6, cpu 44, references 10160924, hits 4001104, misses 6159820, miss_rate_pct 60.623, target 100%, metric misses</title></rect>
+<text class="small" x="916.5" y="347" text-anchor="middle" fill="#0f172a">H 4.0M</text>
+<text class="small" x="916.5" y="369" text-anchor="middle" fill="#0f172a">M 6.2M</text>
+<rect x="982" y="334" width="125" height="22" fill="rgb(104,199,70)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 7, cpu 46, references 11132214, hits 4454886, misses 6677328, miss_rate_pct 59.982, target 100%, metric hits</title></rect>
+<rect x="982" y="356" width="125" height="22" fill="rgb(249,117,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 7, cpu 46, references 11132214, hits 4454886, misses 6677328, miss_rate_pct 59.982, target 100%, metric misses</title></rect>
+<text class="small" x="1044.5" y="347" text-anchor="middle" fill="#0f172a">H 4.5M</text>
+<text class="small" x="1044.5" y="369" text-anchor="middle" fill="#0f172a">M 6.7M</text>
+<rect x="1110" y="334" width="125" height="22" fill="rgb(82,199,78)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 8, cpu 16, references 11030066, hits 4312769, misses 6717297, miss_rate_pct 60.900, target 100%, metric hits</title></rect>
+<rect x="1110" y="356" width="125" height="22" fill="rgb(249,114,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 8, cpu 16, references 11030066, hits 4312769, misses 6717297, miss_rate_pct 60.900, target 100%, metric misses</title></rect>
+<text class="small" x="1172.5" y="347" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="1172.5" y="369" text-anchor="middle" fill="#0f172a">M 6.7M</text>
+<rect x="1238" y="334" width="125" height="22" fill="rgb(66,198,83)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 9, cpu 18, references 10601170, hits 4205563, misses 6395607, miss_rate_pct 60.329, target 100%, metric hits</title></rect>
+<rect x="1238" y="356" width="125" height="22" fill="rgb(249,137,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 9, cpu 18, references 10601170, hits 4205563, misses 6395607, miss_rate_pct 60.329, target 100%, metric misses</title></rect>
+<text class="small" x="1300.5" y="347" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1300.5" y="369" text-anchor="middle" fill="#0f172a">M 6.4M</text>
+<rect x="1366" y="334" width="125" height="22" fill="rgb(61,198,85)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 10, cpu 52, references 10998537, hits 4172355, misses 6826182, miss_rate_pct 62.064, target 100%, metric hits</title></rect>
+<rect x="1366" y="356" width="125" height="22" fill="rgb(246,108,24)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 10, cpu 52, references 10998537, hits 4172355, misses 6826182, miss_rate_pct 62.064, target 100%, metric misses</title></rect>
+<text class="small" x="1428.5" y="347" text-anchor="middle" fill="#0f172a">H 4.2M</text>
+<text class="small" x="1428.5" y="369" text-anchor="middle" fill="#0f172a">M 6.8M</text>
+<rect x="1494" y="334" width="125" height="22" fill="rgb(78,198,79)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 11, cpu 22, references 10971384, hits 4280177, misses 6691207, miss_rate_pct 60.988, target 100%, metric hits</title></rect>
+<rect x="1494" y="356" width="125" height="22" fill="rgb(249,116,22)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 11, cpu 22, references 10971384, hits 4280177, misses 6691207, miss_rate_pct 60.988, target 100%, metric misses</title></rect>
+<text class="small" x="1556.5" y="347" text-anchor="middle" fill="#0f172a">H 4.3M</text>
+<text class="small" x="1556.5" y="369" text-anchor="middle" fill="#0f172a">M 6.7M</text>
+<rect x="1622" y="334" width="125" height="22" fill="rgb(16,155,219)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 12, cpu 24, references 4900973, hits 2140059, misses 2760914, miss_rate_pct 56.334, target 30%, metric hits</title></rect>
+<rect x="1622" y="356" width="125" height="22" fill="rgb(10,184,195)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 12, cpu 24, references 4900973, hits 2140059, misses 2760914, miss_rate_pct 56.334, target 30%, metric misses</title></rect>
+<text class="small" x="1684.5" y="347" text-anchor="middle" fill="#0f172a">H 2.1M</text>
+<text class="small" x="1684.5" y="369" text-anchor="middle" fill="#0f172a">M 2.8M</text>
+<rect x="1750" y="334" width="125" height="22" fill="rgb(34,106,233)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 13, cpu 58, references 4784566, hits 1391272, misses 3393294, miss_rate_pct 70.922, target 40%, metric hits</title></rect>
+<rect x="1750" y="356" width="125" height="22" fill="rgb(22,191,143)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 13, cpu 58, references 4784566, hits 1391272, misses 3393294, miss_rate_pct 70.922, target 40%, metric misses</title></rect>
+<text class="small" x="1812.5" y="347" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="1812.5" y="369" text-anchor="middle" fill="#0f172a">M 3.4M</text>
+<rect x="1878" y="334" width="125" height="22" fill="rgb(35,103,234)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 14, cpu 28, references 4780355, hits 1341943, misses 3438412, miss_rate_pct 71.928, target 40%, metric hits</title></rect>
+<rect x="1878" y="356" width="125" height="22" fill="rgb(23,191,139)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 14, cpu 28, references 4780355, hits 1341943, misses 3438412, miss_rate_pct 71.928, target 40%, metric misses</title></rect>
+<text class="small" x="1940.5" y="347" text-anchor="middle" fill="#f8fafc">H 1.3M</text>
+<text class="small" x="1940.5" y="369" text-anchor="middle" fill="#0f172a">M 3.4M</text>
+<rect x="2006" y="334" width="125" height="22" fill="rgb(35,105,233)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 15, cpu 30, references 4665184, hits 1365805, misses 3299379, miss_rate_pct 70.723, target 40%, metric hits</title></rect>
+<rect x="2006" y="356" width="125" height="22" fill="rgb(21,190,151)" stroke="#334155" stroke-width="0.35"><title>step 700, heat_update, thread 15, cpu 30, references 4665184, hits 1365805, misses 3299379, miss_rate_pct 70.723, target 40%, metric misses</title></rect>
+<text class="small" x="2068.5" y="347" text-anchor="middle" fill="#f8fafc">H 1.4M</text>
+<text class="small" x="2068.5" y="369" text-anchor="middle" fill="#0f172a">M 3.3M</text>
+</svg>
